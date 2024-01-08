@@ -154,15 +154,44 @@
     ]
   },
   {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "Project description",
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
     "section": "",
-    "text": "To be posted.",
+    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
     "crumbs": [
-      "Project",
-      "Description"
+      "Computing",
+      "Access"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\nTO DO: Add schedule table.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "course-faq.html",
@@ -209,43 +238,80 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
     "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "text": "To be posted.",
     "crumbs": [
-      "Computing",
-      "Cheatsheets"
+      "Project",
+      "Description"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Hello",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\nTO DO: Add schedule table.",
+    "text": "This lab will introduce you to the course and get you set up for the computing workflow.",
     "crumbs": [
-      "Course information",
-      "Schedule"
+      "Labs",
+      "Lab 0"
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
+    "objectID": "labs/lab-0.html#access-r-and-rstudio",
+    "href": "labs/lab-0.html#access-r-and-rstudio",
+    "title": "Lab 0 - Hello",
+    "section": "Access R and RStudio",
+    "text": "Access R and RStudio\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1",
     "crumbs": [
-      "Computing",
-      "Access"
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#create-a-github-account",
+    "href": "labs/lab-0.html#create-a-github-account",
+    "title": "Lab 0 - Hello",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#set-up-your-ssh-key",
+    "href": "labs/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0 - Hello",
+    "section": "Set up your SSH key",
+    "text": "Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. It will begin with “ssh-rsa….” R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#configure-git",
+    "href": "labs/lab-0.html#configure-git",
+    "title": "Lab 0 - Hello",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package. (And we also need to install a package called gert just for this step.)\nType the following lines of code in the console in RStudio filling in your name and the email address associated with your GitHub account.\n\ndevtools::install_github(\"r-lib/gert\")\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n  )\n\nFor example, mine would be\n\ndevtools::install_github(\"r-lib/gert\")\n\nusethis::use_git_config(\n  user.name = \"Mine Çetinkaya-Rundel\", \n  user.email = \"cetinkaya.mine@gmail.com\"\n  )\n\nYou are now ready interact with GitHub via RStudio!",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#footnotes",
+    "href": "labs/lab-0.html#footnotes",
+    "title": "Lab 0 - Hello",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
     ]
   },
   {
