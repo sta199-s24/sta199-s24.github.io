@@ -97,15 +97,15 @@ Because these AEs are for practice, they will be graded based on completion, i.e
 
 ### Labs
 
-In homework, you will apply what you've learned during lecture and lab to complete data analysis tasks. You may discuss lab assignments with other students; however, lab should be completed and submitted individually. Similar to lab assignments, homework must be typed up using Quarto and GitHub and submitted as a PDF in Gradescope.
+In labs, you will apply what you've learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the PDF output of the lab must be submitted on Gradescope by the deadline.
 
-Homework assignments are due at 8 am ET on the indicated due date (generally the Monday after the lab).
+Labs are due at 8 am ET on the indicated due date (generally the Monday after the lab).
 
 *The lowest lab grade will be dropped at the end of the semester.*
 
 ### Exams
 
-There will be two exams in this course. Each exam will include a closed-notes in-class component and an open-note take-home component. Through these exams you have the opportunity to demonstrate what you’ve learned in the course thus far. The exams will focus on both conceptual understanding of the content and application through analysis and computational tasks. The content of the exam will be related to the content in reading assignments, lectures, application exercises, homework, and lab assignments. More detail about the exams will be given during the semester.
+There will be two exams in this course. Each exam will include a closed-notes in-class component and an open-note take-home component. Through these exams you have the opportunity to demonstrate what you’ve learned in the course thus far. The exams will focus on both conceptual understanding of the content and application through analysis and computational tasks. The content of the exam will be related to the content in videos and reading assignments, lectures, application exercises, and labs. More detail about the exams will be given during the semester.
 
 ### Project
 
@@ -147,7 +147,7 @@ Your success on this course depends very much on you and the effort you put into
 
 1.  Complete all the preparation work before class.
 
-2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the TAs, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you’re not sure about the homework, ask. If you hear something on the news that sounds related to what we discussed, ask. If the reading is confusing, ask.
+2.  Ask questions. As often as you can. In class, out of class. Ask me, ask the TAs, ask your friends, ask the person sitting next to you. This will help you more than anything else. If you get a question wrong on an assessment, ask us why. If you’re not sure about the lab, ask. If you hear something on the news that sounds related to what we discussed, ask. If the reading is confusing, ask.
 
 3.  Do the readings.
 
@@ -163,7 +163,7 @@ Your success on this course depends very much on you and the effort you put into
 
 Please abide by the following as you work on assignments in this course:
 
--   You may discuss individual homework and lab assignments with other students; however, you may not directly share (or copy) code or write up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write up with another team. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
+-   You may discuss lab assignments with other students; however, you may not directly share (or copy) code or write up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write up with another team. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
 -   You may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.
 -   **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
 -   **Use of artificial intelligence (AI)**: You should treat AI tools, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:^[2](https://sta210-fa23.netlify.app/syllabus#fn2)^ (1) *Cognitive dimension:* Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning. (2) *Ethical dimension***:** Students using AI should be transparent about their use and make sure it aligns with academic integrity.
