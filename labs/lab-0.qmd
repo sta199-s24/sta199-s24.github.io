@@ -1,0 +1,115 @@
+---
+title: "Lab 0 - Hello"
+categories: "Lab"
+execute:
+  eval: false
+---
+
+This lab will introduce you to the course and get you set up for the computing workflow.
+
+# `Hello, World!`
+
+You may have heard/seen this phrase, `Hello, World!`, elsewhere before. It's usually the first thing you learn in programming – to learn to write a computer program to print this sentence to screen. Things will be different in this course, as it's not a programming, but a data science course. So, starting tomorrow in class, you'll learn to use a computer program (called R) to work with data.
+
+But today, we need to set you up for success! Let's first briefly review the components of the computational toolkit for the course:
+
+1.  R: The programming language you'll learn in this course.
+
+2.  RStudio: The piece of software (a.k.a. the integrated development environment, IDE) you'll use to write R code in.
+
+::: callout-note
+R is the name of the programming language itself and RStudio is a convenient interface.
+:::
+
+3.  Quarto: The tool you'll use to create reproducible computational documents that contain both your narrative (i.e., words in English) and your code (i.e., code in R). Every piece of assignment you hand in will be a Quarto document.
+
+::: callout-note
+You might be familiar with word processors like MS Word or Google Docs. We will not be using these in this class. Instead, the words you would write in such a document as well as the code will go into a Quarto document, and when you *render* the document (more on what this means later) you will get a document out that has your words, your code, and the output of that code. Everything in one place, beautifully formatted!
+:::
+
+4.  Git: Version control system.
+5.  GitHub: A web hosting service for the Git version control system that also allows for transparent collaboration between team members.
+
+::: callout-note
+Git is a version control system (like "Track Changes" features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).
+:::
+
+## Access R and RStudio
+
+-   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
+-   Click `STA198-199` to log into the Docker container. You should now see the RStudio environment.
+
+Go to <https://cmgr.oit.duke.edu/containers> and under *Reservations available* click on *reserve STA 198-199* to reserve a container for yourself.
+
+::: callout-note
+A container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.
+:::
+
+Once you've reserved the container you'll see that it will show up under *My reservations*.
+
+To launch your container click on it under My reservations, then click *Login*, and then *Start*.[^1]
+
+[^1]: Yes, it's too many steps. I don't know why! But it works, and you'll get used to it. Trust me, it beats downloading and installing everything you need on your computers!
+
+## Create a GitHub account
+
+Go to <https://github.com/> and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.[^2]
+
+[^2]: GitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.
+
+::: callout-note
+You'll need to choose a user name. I recommend reviewing the user name advice at <https://happygitwithr.com/github-acct#username-advice> before choosing a username.
+:::
+
+::: callout-important
+If you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.
+:::
+
+## Set up your SSH key
+
+You will authenticate GitHub using SSH (Secure Shell Protocol – it doesn't really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
+
+::: callout-note
+You only need to do this authentication process one time on a single system.
+:::
+
+-   Go back to your RStudio container and type `credentials::ssh_setup_github()` into your console.
+-   R will ask "No SSH key found. Generate one now?" You should click 1 for yes.
+-   You will generate a key. It will begin with "ssh-rsa...." R will then ask "Would you like to open a browser now?" You should click 1 for yes.
+-   You may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., `sta199`).
+
+You can find more detailed instructions [here](https://github.com/DukeStatSci/github_auth_guide) if you're interested.
+
+## Configure Git
+
+There is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.
+
+To do so, you will use the `use_git_config()` function from the `usethis` package. (And we also need to install a package called `gert` just for this step.)
+
+Type the following lines of code in the **console** in RStudio filling in your name and the email address associated with your GitHub account.
+
+```{r}
+devtools::install_github("r-lib/gert")
+
+usethis::use_git_config(
+  user.name = "Your name", 
+  user.email = "Email associated with your GitHub account"
+  )
+```
+
+For example, mine would be
+
+```{r}
+devtools::install_github("r-lib/gert")
+
+usethis::use_git_config(
+  user.name = "Mine Çetinkaya-Rundel", 
+  user.email = "cetinkaya.mine@gmail.com"
+  )
+```
+
+You are now ready interact with GitHub via RStudio!
+
+# Hello STA 199!
+
+Fill out the course "Getting to know you" survey. We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.
