@@ -69,6 +69,10 @@ website:
             text: Description
           - href: project-tips-resources.qmd
             text: Tips + resources
+      - section: "Labs"
+        contents:
+          - href: labs/lab-0.qmd
+            text: Lab 0
 
   page-footer:
     right: 'This page is built with [{{< fa heart >}}]{style="color: #FFBE98;"} and [Quarto](https://quarto.org/).'
