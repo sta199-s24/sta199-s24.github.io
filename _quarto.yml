@@ -1,0 +1,93 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "STA 199"
+  description: "Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024."
+  site-url: "https://sta199-s24.github.io/"
+
+  repo-url: https://github.com/sta199-s24/sta199-s24.github.io/
+  repo-actions: [edit, issue]
+
+  open-graph: true
+  twitter-card:
+    creator: "@minebocek"
+    image: "images/twitter-card.png"
+
+  sidebar:
+    background: "#3A5883" # Pantone Chambray Blue - Spring 2024, darkened to pass contrast checks
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/sta199-s24/sta199-s24.github.io
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://cmgr.oit.duke.edu/containers
+        text: "RStudio Containers"
+      - icon: person-fill
+        text: "Canvas"
+        menu:
+          - text: Gradescope - Update link
+            url: https://google.com
+          - text: Gradebook - Update link
+            url: https://google.com
+
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Course information"
+        contents:
+          - href: course-overview.qmd
+            text: Overview
+          - href: course-syllabus.qmd
+            text: Syllabus
+          - href: course-support.qmd
+            text: Support
+          - href: course-team.qmd
+            text: Teaching team
+          - href: index.qmd
+            text: Schedule
+          - href: course-links.qmd
+            text: Useful links
+          - href: course-faq.qmd
+            text: FAQ
+      - section: "Computing"
+        contents:
+          - href: computing-access.qmd
+            text: Access
+          - href: computing-troubleshooting.qmd
+            text: Troubleshooting
+          - href: computing-cheatsheets.qmd
+            text: Cheatsheets
+      - section: "Project"
+        contents:
+          - href: project-description.qmd
+            text: Description
+          - href: project-tips-resources.qmd
+            text: Tips + resources
+
+  page-footer:
+    right: 'This page is built with [{{< fa heart >}}]{style="color: #FFBE98;"} and [Quarto](https://quarto.org/).'
+    left: "&copy; Copyright 2024, Mine Çetinkaya-Rundel"
+    background: "#3A5883" # Pantone Chambray Blue - Spring 2024, darkened to pass contrast checks
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/sta199.scss]
+      dark: [cosmo, style/sta199.scss, style/dark.scss]
+    linkcolor: "#3A5883" # Pantone Chambray Blue - Spring 2024, darkened to pass contrast checks
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto
+
+editor: visual

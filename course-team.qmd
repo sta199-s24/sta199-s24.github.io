@@ -1,0 +1,39 @@
+---
+title: "Teaching team"
+---
+
+## Instructor
+
+![](images/team/mine.png){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" width="200"}
+
+[**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.
+
+| Office hours | Location     |
+|--------------|--------------|
+| TBA          | Old Chem 213 |
+
+**TO DO: Update OH**
+
+## Teaching assistants
+
+**TO DO: Do we add Mary here or make a separate section?**
+
+**TO DO: Update TA names and roles**
+
+| Name | Role | Lab section |
+|------|------|-------------|
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+|      |      |             |
+
+For office hours, please see [STA 199 - Office Hours](https://docs.google.com/spreadsheets/d/1Jgujcf6xor-63a_qfltwfMkHQtaBJHtUetd-rEpXljw/edit#gid=0) sheet.
+
+**TO DO: Add link to sheet**

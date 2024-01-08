@@ -1,0 +1,77 @@
+---
+title: "STA 199: Introduction to Data Science and Statistical Thinking"
+execute: 
+  freeze: false
+---
+
+This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
+
+**TO DO: Add schedule table.**
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+
+library(googlesheets4)
+library(gt)
+library(tidyverse)
+gs4_deauth()
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1VvyWuppOFLLJHHhoA1vTf7kuehWZ0nTaXI10fPsrzSk/edit?usp=sharing")
+```
+
+```{r}
+#| echo: false
+#| eval: false
+
+d |>
+  select(-dow) |>
+  mutate(
+    date = as.Date(date)
+  ) |>
+  gt() |>
+  fmt_date(date, date_style = 31) |>
+  sub_missing(columns = c(week, topic, prepare, materials, due), missing_text = "") |>
+  cols_align(
+    align = "center", 
+    columns = c(week)
+    ) |>
+  cols_align(
+    align = "right", 
+    columns = c(date)
+    ) |>
+  cols_align(
+    align = "left", 
+    columns = c(topic, prepare, materials, due)
+    ) |>
+  tab_style(
+    style = cell_borders(
+      sides = "right",
+      color = "#D3D3D3",
+      style = "solid"
+    ),
+    locations = cells_body(
+      columns = c(date, topic, prepare, materials)
+    )
+  ) |>
+  fmt_markdown(
+    columns = c(topic, prepare, materials, due)
+  ) |>
+  cols_width(
+    week ~ px(45),
+    date ~ px(100), 
+    topic ~ px(300),
+    prepare ~ px(250),
+    materials ~ px(90),
+    due ~ px(185)
+  ) |>
+  cols_label_with(fn = function(x) {
+      janitor::make_clean_names(x, case = "title") |>
+        toupper() |>
+        stringr::str_replace_all("^|$", "**") |>
+        md()
+    }) |>
+  tab_options(table.font.size = 13) |>
+  opt_row_striping()
+```
