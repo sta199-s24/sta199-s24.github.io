@@ -1,6 +1,6 @@
 ---
 title: "STA 199 - Introduction to Data Science and Statistical Thinking"
-subtitle: "Fall 2023"
+subtitle: "Spring 2024"
 format:
   html: default
   pdf: default
@@ -10,10 +10,9 @@ format:
 
 All books are **freely available online**.
 
-|                                                                         |                                      |                                   |                                                                                                                                  |
-|-------------------------------------------------------------------------|--------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [R for Data Science, 2e](https://r4ds.hadley.nz/)                       | Wickham, Çetinkaya-Rundel, Grolemund | O'Reilly, 2nd edition, 2023       | Hard copy available [on Amazon](https://www.amazon.com/dp/1492097403?&tag=hadlwick-20)                                           |
-| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin             | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
+-   [R for Data Science, 2e](https://r4ds.hadley.nz/), Wickham, Çetinkaya-Rundel, Grolemund. O'Reilly, 2nd edition, 2023. Hard copy available [on Amazon](https://www.amazon.com/dp/1492097403?&tag=hadlwick-20).
+
+-   [Introduction to Modern Statistics](https://openintro-ims.netlify.app/), Çetinkaya-Rundel, Hardin. OpenIntro Inc., 2nd Edition, 2023. Hard copy of 1st edition available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/), 2nd edition currently only available online. (Either edition will work for this course.)
 
 ## Course learning objectives
 
@@ -63,7 +62,7 @@ Announcements will be emailed through Canvas Announcements periodically. Please 
 
 -   If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
 -   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the course discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
+-   Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://edstem.org/us/courses/50730/discussion/). There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
 
 Check out the [Help](/help/) tab for more resources.
 
@@ -151,7 +150,7 @@ Your success on this course depends very much on you and the effort you put into
 
 3.  Do the readings.
 
-4.  Do the lab.The earlier you start, the better. It’s not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example).
+4.  Do the lab. The earlier you start, the better. It’s not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example).
 
 5.  Don’t procrastinate. The content builds upon what was taught in previous weeks, so if something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, etc. Don’t let the week end with unanswered questions. But if you find yourself falling behind and not knowing where to begin asking, come to office hours and work with a member of the teaching team to help you identify a good (re)starting point.
 
@@ -173,7 +172,7 @@ Please abide by the following as you work on assignments in this course:
 
 If you are unsure if the use of a particular resource complies with the academic honesty policy, please ask a member of the teaching team.
 
-Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects,and more).Ignoring these requirements is a violation of the Duke Community Standard. Any questions and/or concerns regarding academic integrity can be directed to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu).
+Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects,and more). Ignoring these requirements is a violation of the Duke Community Standard. Any questions and/or concerns regarding academic integrity can be directed to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu).
 
 Any violations in academic honesty standards as outlined in the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) and those specific to this course will automatically result in a 0 for the assignment/assessment as well as further reduction in the course grade (e.g., a letter grade reduction in your overall course grade) and will be reported to the [Office of Student Conduct](https://studentaffairs.duke.edu/conduct) for further action.
 
