@@ -11,7 +11,7 @@ format:
 All books are **freely available online**.
 
 |                                                                         |                                      |                                   |                                                                                                                                  |
-|-----------------|-----------------|-----------------|----------------------|
+|---------------|--------------|--------------|-----------------------------|
 | [R for Data Science, 2e](https://r4ds.hadley.nz/)                       | Wickham, Çetinkaya-Rundel, Grolemund | O'Reilly, 2nd edition, 2023       | Hard copy available [on Amazon](https://www.amazon.com/dp/1492097403?&tag=hadlwick-20)                                           |
 | [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin             | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
 
@@ -151,7 +151,7 @@ Your success on this course depends very much on you and the effort you put into
 
 3.  Do the readings.
 
-4.  Do the lab.The earlier you start, the better. It’s not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example).
+4.  Do the lab. The earlier you start, the better. It’s not enough to just mechanically plow through the exercises. You should ask yourself how these exercises relate to earlier material, and imagine how they might be changed (to make questions for an exam, for example).
 
 5.  Don’t procrastinate. The content builds upon what was taught in previous weeks, so if something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, etc. Don’t let the week end with unanswered questions. But if you find yourself falling behind and not knowing where to begin asking, come to office hours and work with a member of the teaching team to help you identify a good (re)starting point.
 
@@ -173,7 +173,7 @@ Please abide by the following as you work on assignments in this course:
 
 If you are unsure if the use of a particular resource complies with the academic honesty policy, please ask a member of the teaching team.
 
-Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects,and more).Ignoring these requirements is a violation of the Duke Community Standard. Any questions and/or concerns regarding academic integrity can be directed to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu).
+Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects,and more). Ignoring these requirements is a violation of the Duke Community Standard. Any questions and/or concerns regarding academic integrity can be directed to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu).
 
 Any violations in academic honesty standards as outlined in the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) and those specific to this course will automatically result in a 0 for the assignment/assessment as well as further reduction in the course grade (e.g., a letter grade reduction in your overall course grade) and will be reported to the [Office of Student Conduct](https://studentaffairs.duke.edu/conduct) for further action.
 
