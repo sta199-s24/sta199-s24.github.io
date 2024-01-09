@@ -49,7 +49,7 @@ d |>
       style = "solid"
     ),
     locations = cells_body(
-      columns = c(date, topic)
+      columns = c(date, topic, prepare, materials)
     )
   ) |>
   fmt_markdown(
