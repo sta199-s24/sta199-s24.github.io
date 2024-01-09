@@ -11,7 +11,7 @@ format:
 All books are **freely available online**.
 
 |                                                                         |                                      |                                   |                                                                                                                                  |
-|-----------------|-----------------|-----------------|----------------------|
+|-------------------------------------------------------------------------|--------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | [R for Data Science, 2e](https://r4ds.hadley.nz/)                       | Wickham, Çetinkaya-Rundel, Grolemund | O'Reilly, 2nd edition, 2023       | Hard copy available [on Amazon](https://www.amazon.com/dp/1492097403?&tag=hadlwick-20)                                           |
 | [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin             | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
 
