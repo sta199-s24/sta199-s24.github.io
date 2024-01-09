@@ -89,6 +89,7 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
+    highlight-style: a11y-dark
 
 execute:
   freeze: auto
