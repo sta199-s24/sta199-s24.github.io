@@ -1,11 +1,11 @@
 ---
-title: "Lab 0 - Hello"
+title: "Lab 0 - Hello, World and STA 199!"
 categories: "Lab"
 execute:
   eval: false
 ---
 
-This lab will introduce you to the course and get you set up for the computing workflow.
+This lab will set you up for the computing workflow and give you an opportunity to introduce yourselves to each other and the teaching team.
 
 # `Hello, World!`
 
