@@ -8,32 +8,46 @@ title: "Teaching team"
 
 [**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.
 
-| Office hours | Location     |
-|--------------|--------------|
-| TBA          | Old Chem 213 |
-
-**TO DO: Update OH**
+| Office hours                                               | Location     |
+|------------------------------------------------------------|--------------|
+| Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111  |
+| Thursdays 2-3 pm                                           | Old Chem 213 |
 
 ## Teaching assistants
 
-**TO DO: Do we add Mary here or make a separate section?**
+::: callout-caution
+Office hours for TAs to be posted soon!
+:::
 
-**TO DO: Update TA names and roles**
+|                |                   |                            |
+|----------------|-------------------|----------------------------|
+| **First name** | **Last name**     | **Lab Section**            |
+| Chris          | Oswald            | M 8:30AM - 9:45AM          |
+| Jasmine        | Wang              | M 8:30AM - 9:45AM          |
+| Betsy          | Bersson (Head TA) | M 10:05AM - 11:20AM        |
+| Mert           | Bildirici         | M 10:05AM - 11:20AM        |
+| Will           | Tirone            | M 11:45AM - 1:00PM         |
+| Krish          | Bansal            | M 11:45AM - 1:00PM         |
+| Caitrin        | Murphy            | M 1:25PM - 2:40PM (Sec 4)  |
+| Avery          | Hodges            | M 1:25PM - 2:40PM (Sec 4)  |
+| Jon            | Campbell          | M 1:25PM - 2:40PM (Sec 11) |
+| Foxx           | Hart              | M 1:25PM - 2:40PM (Sec 11) |
+| Netra          | Mittal            | M 3:05PM - 4:20PM          |
+| Alexa          | Fahrer            | M 3:05PM - 4:20PM          |
+| Devin          | Johnson           | M 4:40PM - 5:55PM (Sec 6)  |
+| Konnie         | Huang             | M 4:40PM - 5:55PM (Sec 6)  |
+| Li             | Fan               | M 4:40PM - 5:55PM (Sec 7)  |
+| Kelly          | Huang             | M 4:40PM - 5:55PM (Sec 7)  |
+| Leah           | Johnson           |                            |
+| Lisa           | Zhang             |                            |
+| Miles          | King              |                            |
+| Noah           | Obuya             |                            |
 
-| Name | Role | Lab section |
-|------|------|-------------|
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
-|      |      |             |
+```{=html}
+<!--
+For office hours, please see [STA 199 - Office Hours](https://docs.google.com/spreadsheets/d/1Mw69d1Ro-_G1Y8x7FH1wqCI04bxLpVOJ7gp8QSFGJBU/edit?usp=sharing) sheet.
+-->
+```
+## Course coordinator
 
-For office hours, please see [STA 199 - Office Hours](https://docs.google.com/spreadsheets/d/1Jgujcf6xor-63a_qfltwfMkHQtaBJHtUetd-rEpXljw/edit#gid=0) sheet.
-
-**TO DO: Add link to sheet**
+Dr. Mary Knox (she/her) is the course coordinator for this course. You can reach out to her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding missed work, extensions, etc. as well as registration questions.

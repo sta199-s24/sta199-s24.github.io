@@ -70,15 +70,15 @@ Check out the [Help](/help/) tab for more resources.
 
 If there is a question that's not appropriate for the public forum, you are welcome to email me directly. **If you email me, please include "STA 199" in the subject line.** Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
-## **Lectures and labs**
+## Lectures and labs
 
 Lectures and labs are designed to be interactive, so you gain experience applying new concepts and learning from each other. My role as instructor is to introduce you to new methods, tools, and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. You are expected to prepare for class by completing assigned readings, attend all lecture and lab sessions, and meaningfully contribute to in-class exercises and discussion. Additionally, some lectures will feature application exercises that will be graded based on completing what we do in class.
 
 You are expected to bring a laptop, tablet, or Chromebook to each class so that you can participate in the in-class exercises. Please make sure your device is fully charged before you come to class, as the number of outlets in the classroom will not be sufficient to accommodate everyone.
 
-**TO DO: Say something about classes being recorded.**
+Lectures will be recorded and posted on Panopto (link to be shared when available) however lecture attendance is mandatory. The recordings are for catching up with classes you miss due to illness, etc. You will *not* get the most out of this class if you're not present and actively participating in it -- this is true for lectures and labs.
 
-## **Teams**
+## Teams
 
 You will be assigned to a team early on in the semester. You are encouraged to sit with your teammates in lecture and you will also work with them in some of the lab sessions. All team members are expected to contribute equally to the completion of the project, and you will be asked to evaluate your team members throughout the semester. Failure to adequately contribute to any component of the project will result in a penalty to your mark relative to the team’s overall mark.
 
@@ -90,7 +90,7 @@ You will be assessed based on five components: application exercises, labs, exam
 
 ### Application exercises
 
-Parts of some lectures will be dedicated to working on Application Exercises (AEs). These exercises which give you an opportunity to practice apply the statistical concepts and code introduced in the prepare assignment. These AEs are due by the end of the week (of the corresponding lecture period). To submit the AEs all you need to do is to push your work to your GitHub repo. **TO DO: Add specific time.**
+Parts of some lectures will be dedicated to working on Application Exercises (AEs). These exercises which give you an opportunity to practice apply the statistical concepts and code introduced in the prepare assignment. These AEs are due by the end of the week of the corresponding lecture period (Sunday at midnight). To submit the AEs all you need to do is to push your work to your GitHub repo.
 
 Because these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of at least 80% of AEs will result in full credit for AEs in the final course grade.
 
@@ -140,7 +140,7 @@ The final letter grade will be determined based on the following thresholds:
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
 
-## **Five tips for success**
+## Five tips for success
 
 Your success on this course depends very much on you and the effort you put into it. The course has been organized so that the burden of learning is on you. Your TAs and I will help you be providing you with materials and answering questions and setting a pace, but for this to work you must do the following:
 
@@ -203,25 +203,12 @@ Regrade requests must be submitted on Gradescope within a week of when an assign
 -   **Inclement weather:** In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.  Asynchronous catch-up methods may apply.
 -   **Religious accommodations:** Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: <https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays>.
 
-*Note: If you've read this far in the syllabus, email me a picture of your pet if you have one or your favourite meme!*
-
-**TO DO: Maybe we have them post on Discussions instead of emailing me to get them started?**
+*Note: If you've read this far in the syllabus, post a picture of your pet if you have one or your favourite meme on ed in [this thread](https://edstem.org/us/courses/50730/discussion/4105253)!*
 
 ## Important dates
 
-**TO DO: Update dates for this semester!**
-
--   **Aug 29:** Classes begin
--   **Sep 9:** Drop/add ends
--   **Sep 29:** Exam 1 released
--   **Oct 3:** Exam 1 due (at 2pm)
--   **Oct 10-11**: Fall break
--   **Nov 11**: Last day to withdraw with W
--   **Nov 17:** Exam 2 released
--   **Nov 21:** Exam 2 due (at 2pm)
--   **Nov 23-25:** Thanksgiving recess
--   **Dec 9**: Classes end
--   **Dec 10-13**: Reading period
--   **Dec 14-19**: Final exams
+::: callout-caution
+Dates for this semester to be added soon!
+:::
 
 For more important dates, see the full [Duke Academic Calendar](https://registrar.duke.edu/fall-2022-academic-calendar).

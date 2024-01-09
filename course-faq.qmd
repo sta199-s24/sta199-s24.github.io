@@ -22,11 +22,10 @@ The short answer is, I'd rather you didn't, to save yourself some headache. But,
 
 If you want to take this path, here is what you need to do:
 
--   Download and install R 4.2.1: <https://cran.r-project.org/>
--   Download and install the preview build of RStudio: <https://www.rstudio.com/products/rstudio/download/preview/>
+-   Download and install R 4.3.2: <https://cran.r-project.org/>
+-   Download and install RStudio: <https://posit.co/download/rstudio-desktop/>
+-   Install Quarto 1.4: <https://quarto.org/docs/download/prerelease.html>
 -   Install Git: <https://happygitwithr.com/install-git.html>
 -   Install any necessary packages with `install.packages("___")`
 
 And I'd like to reiterate again that successful installation of these software is **not** a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that [here](/computing-access.html).
-
-**TO DO: Update version numbers.**
