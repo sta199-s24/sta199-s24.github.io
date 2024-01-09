@@ -1,6 +1,6 @@
 ---
 title: "STA 199 - Introduction to Data Science and Statistical Thinking"
-subtitle: "Fall 2023"
+subtitle: "Spring 2024"
 format:
   html: default
   pdf: default
@@ -63,7 +63,7 @@ Announcements will be emailed through Canvas Announcements periodically. Please 
 
 -   If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
 -   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the course discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
+-   Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://edstem.org/us/courses/50730/discussion/). There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
 
 Check out the [Help](/help/) tab for more resources.
 
