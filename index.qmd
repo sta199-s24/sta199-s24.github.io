@@ -20,7 +20,6 @@ d <- read_sheet("https://docs.google.com/spreadsheets/d/1XBJwiTSZ9uYwLzTjEs-0lHF
 
 ```{r}
 #| echo: false
-#| eval: false
 
 d |>
   select(-dow, -admin_notes, -number) |>
@@ -56,12 +55,12 @@ d |>
     columns = c(topic, prepare, materials, notes)
   ) |>
   cols_width(
-    week ~ px(50),
+    week ~ px(45),
     date ~ px(100), 
     session ~ px(70), 
     topic ~ px(300),
-    prepare ~ px(300),
-    materials ~ px(300),
+    prepare ~ px(200),
+    materials ~ px(200),
     notes ~ px(200)
   ) |>
   cols_label_with(fn = function(x) {
