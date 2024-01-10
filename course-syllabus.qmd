@@ -128,6 +128,8 @@ The final course grade will be calculated as follows:
 | Exam 2                | 20%        |
 | Application Exercises | 5%         |
 
+While there are no specific points allocated to attendance, we will be recording your attendance in periodically throughout the semester, and this information will be used as "extra credit" if you're in between two grades and a minor bump would help,
+
 The final letter grade will be determined based on the following thresholds:
 
 | Letter Grade | Final Course Grade |
