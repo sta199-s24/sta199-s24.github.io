@@ -112,6 +112,8 @@ More detail about the exams will be given during the semester.
 
 The purpose of the project is to apply what you've learned throughout the semester to analyze an interesting data-driven research question. The project will be completed with in teams, and each team will present their work in the last lab session of the semester. The write-up will be due on the same day.
 
+*You cannot pass this course if you have not completed the project.*
+
 More information about the project will be provided during the semester.
 
 ## Grading
@@ -120,12 +122,11 @@ The final course grade will be calculated as follows:
 
 | Category              | Percentage |
 |-----------------------|------------|
-| Labs                  | 40%        |
-| Project               | 15%        |
+| Labs                  | 35%        |
+| Project               | 20%        |
 | Exam 1                | 20%        |
 | Exam 2                | 20%        |
-| Application Exercises | 2.5%       |
-| Teamwork              | 2.5%       |
+| Application Exercises | 5%         |
 
 The final letter grade will be determined based on the following thresholds:
 
