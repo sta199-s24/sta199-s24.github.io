@@ -25,10 +25,10 @@ d |>
   filter(!is.na(session)) |>
   select(-dow, -admin_notes, -number, -session) |>
   mutate(date = as.Date(date)) |>
-  relocate(notes, .after = materials) |>
+  relocate(due, .after = materials) |>
   gt() |>
   fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, prepare, topic, materials, notes), missing_text = "") |>
+  sub_missing(columns = c(week, prepare, topic, materials, due), missing_text = "") |>
   cols_align(
     align = "center", 
     columns = c(week)
@@ -39,7 +39,7 @@ d |>
   ) |>
   cols_align(
     align = "left", 
-    columns = c(topic, prepare, materials, notes)
+    columns = c(topic, prepare, materials, due)
   ) |>
   tab_style(
     style = cell_borders(
@@ -52,7 +52,7 @@ d |>
     )
   ) |>
   fmt_markdown(
-    columns = c(topic, prepare, materials, notes)
+    columns = c(topic, prepare, materials, due)
   ) |>
   cols_width(
     week ~ px(45),
@@ -60,7 +60,7 @@ d |>
     prepare ~ px(100),
     topic ~ px(300),
     materials ~ px(150),
-    notes ~ px(300)
+    due ~ px(300)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>
