@@ -112,6 +112,14 @@ usethis::use_git_config(
 
 You are now ready interact with GitHub via RStudio!
 
+::: {.callout-tip collapse="true"}
+## Need a recap? Watch this video!
+
+The following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.
+
+{{< video https://youtu.be/3lONVzFw680 >}}
+:::
+
 # Hello STA 199!
 
 Fill out the course "Getting to know you" survey on Canvas: <https://canvas.duke.edu/courses/26106/quizzes/16228>.
