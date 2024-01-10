@@ -165,44 +165,59 @@
     ]
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
+    "objectID": "labs/lab-5.html",
+    "href": "labs/lab-5.html",
+    "title": "Lab 5 - TBA",
     "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
+    "text": "To be posted.",
     "crumbs": [
-      "Computing",
-      "Access"
+      "Labs",
+      "Lab 5"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - TBA",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nSESSION\nTOPIC\nPREPARE\nMATERIALS\nNOTES\n\n\n\n\n1\nWed, Jan 10\nLab\nHello, World and STA 199!\n\n\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\nLec\nWelcome to STA 199\n\n\n\n\n\n\n\n\n2\nMon, Jan 15\n-\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\n\n\nTue, Jan 16\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Jan 18\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n3\nMon, Jan 22\nLab\nWork on Lab 1\n\n\n\n\n\n\n\n\n\n\nTue, Jan 23\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Jan 25\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n4\nMon, Jan 29\nLab\nWork on Lab 2\n\n\n\n\nLab 1 due at 8 am\n\n\n\n\nTue, Jan 30\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Feb 1\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n5\nMon, Feb 5\nLab\nWork on Lab 3\n\n\n\n\nLab 2 due at 8 am\n\n\n\n\nTue, Feb 6\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Feb 8\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n6\nMon, Feb 12\nLab\nWork on Exam 1 Review\n\n\n\n\nLab 3 due at 8 am\n\n\n\n\nTue, Feb 13\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Feb 15\nLec\nExam 1 - In class + Take home released\n\n\n\n\n\n\n\n\n7\nMon, Feb 19\nLab\nWork on project milestone 1 - Working collaboratively\n\n\n\n\nExam 1 take home due at 8 am\n\n\n\n\nTue, Feb 20\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Feb 22\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n8\nMon, Feb 26\nLab\nWork on Lab 4\n\n\n\n\nProject milestone 1 due at 8 am\n\n\n\n\nTue, Feb 27\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Feb 29\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n9\nMon, Mar 4\nLab\nWork on Lab 5\n\n\n\n\nLab 4 due at 8 am\n\n\n\n\nTue, Mar 5\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Mar 7\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n10\nMon, Mar 11\n-\nNo lab - Spring Break\n\n\n\n\n\n\n\n\n\n\nTue, Mar 12\n-\nNo lecture - Spring Break\n\n\n\n\n\n\n\n\n\n\nThu, Mar 14\n-\nNo lecture - Spring Break\n\n\n\n\n\n\n\n\n11\nMon, Mar 18\nLab\nWork on project milestone 2 - Project proposals\n\n\n\n\nLab 5 due at 8 am\n\n\n\n\nTue, Mar 19\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Mar 21\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n12\nMon, Mar 25\nLab\nWork on Lab 6\n\n\n\n\nProject milestone 2 due at 8 am\n\n\n\n\nTue, Mar 26\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Mar 28\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n13\nMon, Apr 1\nLab\nWork on Exam 2 Review\n\n\n\n\nLab 6 due at 8 am\n\n\n\n\nTue, Apr 2\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Apr 4\nLec\nExam 2 - In class + Take home released\n\n\n\n\n\n\n\n\n14\nMon, Apr 8\nLab\nWork on Lab 7\n\n\n\n\nExam 2 take home due at 8 am\n\n\n\n\nTue, Apr 9\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Apr 11\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n15\nMon, Apr 15\nLab\nWork on project milestone 3 - Peer review\n\n\n\n\nLab 7 due at 8 am  Project milestone 3 due at the end of lab session\n\n\n\n\nTue, Apr 16\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n\n\nThu, Apr 18\nLec\nTopic TBA\n\n\n\n\n\n\n\n\n16\nMon, Apr 22\nLab\nWork on project milestone 4 - Project presentations\n\n\n\n\nProject presentations + writeup due at the beginning of lab session\n\n\n\n\nTue, Apr 23\nLec\nLast lecture - Topic TBA",
+    "text": "To be posted.",
     "crumbs": [
-      "Course information",
-      "Schedule"
+      "Labs",
+      "Lab 4"
     ]
   },
   {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
+    "objectID": "labs/lab-7.html",
+    "href": "labs/lab-7.html",
+    "title": "Lab 7 - TBA",
     "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "text": "To be posted.",
     "crumbs": [
-      "Computing",
-      "Cheatsheets"
+      "Labs",
+      "Lab 7"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1 - TBA",
     "section": "",
-    "text": "About this site"
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Project",
+      "Description"
+    ]
   },
   {
     "objectID": "course-faq.html",
@@ -249,14 +264,76 @@
     ]
   },
   {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "Project description",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n\n\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n\n\nMeet the toolkit\n\n\n\n\n\n\n\n\nThu, Jan 18\n\n\nGrammar of graphics\n\n\n\n\n\n\n3\nMon, Jan 22\n\n\nLab 1: Hello R\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n\n\nVisualizing various types of data\n\n\n\n\n\n\n\n\nThu, Jan 25\n\n\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n\n\nLab 2: Topic TBA\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n\n\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n\n\nWorking with multiple data frames\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Topic TBA\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n\n\nTidying data\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes [On Zoom]\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2 - TBA",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
-      "Project",
-      "Description"
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-6.html",
+    "href": "labs/lab-6.html",
+    "title": "Lab 6 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 6"
     ]
   },
   {
@@ -352,7 +429,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\n\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\n\nGradescope\n🔗 on Canvas\n\n\n\nGradebook\n🔗 on Canvas\n\n\n\nOffice hours\n🔗 on Google docs\n\n\n\nClass recording request form\n🔗 on Google forms\n\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
+    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nEd Discussion\n🔗 on Canvas\n\n\nGradescope\n🔗 on Canvas\n\n\nGradebook\n🔗 on Canvas\n\n\nOffice hours\n🔗 on Google docs (to be posted)\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
     "crumbs": [
       "Course information",
       "Useful links"
