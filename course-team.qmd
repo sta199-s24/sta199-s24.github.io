@@ -9,15 +9,11 @@ title: "Teaching team"
 [**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.
 
 | Office hours                                               | Location     |
-|------------------------------------------------------------|--------------|
+|-------------------------------------------------------|-----------------|
 | Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111  |
 | Thursdays 2-3 pm                                           | Old Chem 213 |
 
 ## Teaching assistants
-
-::: callout-caution
-Office hours for TAs to be posted soon!
-:::
 
 |                |                   |                            |
 |----------------|-------------------|----------------------------|
@@ -43,11 +39,8 @@ Office hours for TAs to be posted soon!
 | Miles          | King              |                            |
 | Noah           | Obuya             |                            |
 
-```{=html}
-<!--
 For office hours, please see [STA 199 - Office Hours](https://docs.google.com/spreadsheets/d/1Mw69d1Ro-_G1Y8x7FH1wqCI04bxLpVOJ7gp8QSFGJBU/edit?usp=sharing) sheet.
--->
-```
+
 ## Course coordinator
 
 Dr. Mary Knox (she/her) is the course coordinator for this course. You can reach out to her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding missed work, extensions, etc. as well as registration questions.
