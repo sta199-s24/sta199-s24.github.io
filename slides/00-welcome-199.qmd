@@ -184,7 +184,7 @@ All linked from the course website:
 
 -   GitHub organization: [github.com/sta199-s24](https://github.com/sta199-s24)
 -   RStudio containers: [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers)
--   Communication: Slack
+-   Communication: Ed Discussion
 -   Assignment submission and feedback: Gradescope
 
 ## Activities {.smaller}
