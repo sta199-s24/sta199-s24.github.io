@@ -7,7 +7,7 @@ Under this heading you'll find an entry called *Container Manager (CMGR Coursewo
 
 -   If the status shows something other than `Operational`, this means there is a known incident with the containers.
     Check back later to see if it's been resolved.
-    If there's a deadline coming up soon, post on the course Slack to let us know that there's an issue.
+    If there's a deadline coming up soon, post on the Ed Discussions to let us know that there's an issue.
     We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly.
     Note: We don't anticipate this to happen regularly, the systems are Operational a huge majority of the time!
 

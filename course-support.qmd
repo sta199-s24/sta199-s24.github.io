@@ -19,17 +19,17 @@ Make a pledge to stop by office hours at least once during the first three weeks
 If you truly have no questions to ask, just stop by and say hi and introduce yourself.
 You can find a list of everyone's office hours [here](/course-team.html).
 
-## Slack
+## Ed Discussion
 
 Have a question that can't wait for office hours?
 Prefer to write out your question in detail rather than asking in person?
-The course Slack is the best venue for these!
-There is a chance another student has already asked a similar question, so please check the other posts on Slack before asking a new question.
+The course discussion forum, Ed Discussion, is the best venue for these!
+There is a chance another student has already asked a similar question, so please check the other posts on before asking a new question.
 If you know the answer to a question that is posted, I encourage you to respond!
 
 ## Email
 
-Please refrain from emailing any course content questions (those should go to Slack), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.).
+Please refrain from emailing any course content questions (those should go to Ed Discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.).
 For such matters, you may email Dr. Mine Çetinkaya-Rundel at [mc301\@duke.edu](mailto:mc301@duke.edu).
 
 If there is a question that's not appropriate for the public forum, you are welcome to email me directly.
@@ -77,6 +77,6 @@ For technical help with Canvas or Zoom, contact the Duke OIT Service Desk at [oi
 You can also access the self-service help documentation for Zoom [here](https://oit.duke.edu/help/articles/kb0029318) and for Canvas [here](https://Canvas-duke.screenstepslive.com/s/Canvas_support).
 
 Note that we will be making minimal use of Canvas in this course (primarily for announcements and grade book).
-All assignment submission will take place on GitHub and conversation on Slack.
+All assignment submission will take place on GitHub and conversation on Ed Discussion.
 
 Zoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.
