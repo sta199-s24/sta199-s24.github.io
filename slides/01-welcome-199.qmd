@@ -1,0 +1,307 @@
+---
+title: "Welcome to STA 199"
+subtitle: "Lecture 1"
+date: "January 11, 2024"
+format: revealjs
+---
+
+# Hello world!
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+## Meet the prof
+
+::: columns
+::: {.column width="50%"}
+Dr. Mine Çetinkaya-Rundel
+
+Professor of the Practice
+
+Old Chem 213
+:::
+
+::: {.column width="50%"}
+![](images/01/mine.png){fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" fig-align="center"}
+:::
+:::
+
+## Meet the course team {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Betsy Bersson (Head TA)
+-   Chris Oswald
+-   Jasmine Wang
+-   Mert Bildirici
+-   Will Tirone
+-   Krish Bansal
+-   Caitrin Murphy
+-   Avery Hodges
+-   Jon Campbell
+:::
+
+::: {.column width="50%"}
+-   Foxx Hart
+-   Netra MittalAlexa Fahrer
+-   Devin Johnson
+-   Konnie Huang
+-   Li Fan
+-   Kelly Huang
+-   Leah Johnson
+-   Lisa Zhang
+-   Miles King
+-   Noah Obuya
+:::
+:::
+
+## Meet each other!
+
+```{r}
+#| echo: false
+
+countdown_fullscreen(minutes = 3)
+```
+
+## Meet data science
+
+-   Data science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.
+
+-   We're going to learn to do this in a `tidy` way -- more on that later!
+
+-   This is a course on introduction to data science, with an emphasis on statistical thinking.
+
+# Software
+
+## Excel - not...
+
+![](images/01/excel.png){fig-alt="An Excel window with data about countries" fig-align="center"}
+
+## R
+
+![](images/01/r.png){fig-alt="An R shell" fig-align="center"}
+
+## RStudio
+
+![](images/01/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
+
+# Data science life cycle
+
+## Data science life cycle
+
+![](images/01/data-science-cycle/data-science-cycle.001.png){fig-alt="Data science life cycle"}
+
+## Import
+
+![](images/01/data-science-cycle/data-science-cycle.002.png){fig-alt="Data science life cycle, with import highlighted"}
+
+## Tidy + transform
+
+![](images/01/data-science-cycle/data-science-cycle.003.png){fig-alt="Data science life cycle, with tidy and transform highlighted"}
+
+## Visualize
+
+![](images/01/data-science-cycle/data-science-cycle.004.png){fig-alt="Data science life cycle, with visualize highlighted"}
+
+## Model
+
+![](images/01/data-science-cycle/data-science-cycle.005.png){fig-alt="Data science life cycle, with model highlighted"}
+
+## Understand
+
+![](images/01/data-science-cycle/data-science-cycle.006.png){fig-alt="Data science life cycle, with understand highlighted"}
+
+## 
+
+::: columns
+::: {.column width="50%"}
+```{r echo=FALSE, out.width="75%", fig.align="left"}
+knitr::include_graphics("images/01/google-trend-index.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r echo=FALSE, out.width="90%", fig.align="right"}
+knitr::include_graphics("images/01/data-science-cycle/data-science-cycle.006.png")
+```
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+travel <- tribble(
+  ~date,              ~season,
+  "23 January 2017",  "winter",
+  "4 March 2017",     "spring",
+  "14 June 2017",     "summer",
+  "1 September 2017", "fall",
+  "...", "..."
+)
+travel
+```
+:::
+:::
+
+## Communicate
+
+![](images/01/data-science-cycle/data-science-cycle.007.png){fig-alt="Data science life cycle, with communicate highlighted"}
+
+## Understand + communicate
+
+![](images/01/data-science-cycle/data-science-cycle.008.png){fig-alt="Data science life cycle, with understand and communicate highlighted"}
+
+## Program
+
+![](images/01/data-science-cycle/data-science-cycle.009.png){fig-alt="Data science life cycle, with program highlighted"}
+
+# Let's dive in!
+
+## Application exercise
+
+::: appex
+Or more like demo for today...
+
+📋 [github.com/sta199-s24/](https://github.com/sta199-s24/ae-00-unvotes/)[ae-00-unvotes](https://github.com/sta199-s24/ae-00-unvotes)
+:::
+
+# Course overview
+
+## Homepage
+
+<https://sta199-s24.github.io/>
+
+-   All course materials
+-   Links to Canvas, GitHub, RStudio containers, etc.
+-   Let's take a tour!
+
+## Course toolkit
+
+All linked from the course website:
+
+-   GitHub organization: [github.com/sta199-s24](https://github.com/sta199-s24)
+-   RStudio containers: [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers)
+-   Communication: Slack
+-   Assignment submission and feedback: Gradescope
+
+## Activities {.smaller}
+
+-   Introduce new content and prepare for lectures by watching the videos and completing the readings
+-   Attend and actively participate in lectures and labs, office hours, team meetings
+-   Practice applying statistical concepts and computing with application exercises during lecture, graded for completion
+-   Put together what you've learned to analyze real-world data
+    -   Lab assignments x 7
+    -   Exams x 2
+    -   Term project presented in the last lab session
+
+## Cadence
+
+::: incremental
+-   **Labs:** Start and make large progress on Monday in lab section, finish up by Monday 8 am of the next week
+-   **Exams:** Exam first in class, then take-home
+-   **Project:** Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class
+:::
+
+## Teams
+
+-   Team assignments
+    -   Assigned by me
+    -   Application exercises, labs, and project
+    -   Peer evaluation during teamwork and after completion
+-   Expectations and roles
+    -   Everyone is expected to contribute equal *effort*
+    -   Everyone is expected to understand *all* code turned in
+    -   Individual contribution evaluated by peer evaluation, commits, etc.
+
+## Grading {.smaller}
+
+| Category              | Percentage |
+|-----------------------|------------|
+| Labs                  | 35%        |
+| Project               | 20%        |
+| Exam 1                | 20%        |
+| Exam 2                | 20%        |
+| Application Exercises | 5%         |
+
+While there are no specific points allocated to attendance, we will be recording your attendance in periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help,
+
+See [course syllabus](https://sta199-f22-1.github.io/course-syllabus.html) for how the final letter grade will be determined.
+
+## Support
+
+-   Attend office hours
+-   Ask and answer questions on the discussion forum
+-   Reserve email for questions on personal matters and/or grades
+-   Read the [course support](https://sta199-f22-1.github.io/course-support.html) page
+
+## Announcements
+
+-   Posted on Canvas (Announcements tool) and sent via email, be sure to check both regularly
+-   I'll assume that you've read an announcement by the next "business" day
+-   I'll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform
+
+## Diversity + inclusion {.smaller}
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+
+::: incremental
+-   Please let me know your preferred name and pronouns on the Getting to know you survey.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors, and deans are excellent resources.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+:::
+
+## Accessibility
+
+-   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
+
+-   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+
+# Course policies
+
+## Late work, waivers, regrades policy
+
+-   We have policies!
+-   Read about them on the [course syllabus](https://sta199-f22-1.github.io/course-syllabus.html) and refer back to them when you need it
+
+## Collaboration policy
+
+-   Only work that is clearly assigned as team work should be completed collaboratively.
+
+-   Homeworks must be completed individually. You may **not** directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.
+
+-   Exams must be completed individually. You may **not** discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer.
+
+## Sharing / reusing code policy
+
+-   We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted
+
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
+
+## Academic integrity
+
+> To uphold the Duke Community Standard:
+>
+> -   I will not lie, cheat, or steal in my academic endeavors;
+>
+> -   I will conduct myself honorably in all my endeavors; and
+>
+> -   I will act if the Standard is compromised.
+
+## Most importantly!
+
+Ask if you're not sure if something violates a policy!
+
+## This week's tasks
+
+-   Get a GitHub account if you don't have one (some advice for choosing a username [here](https://happygitwithr.com/github-acct.html#username-advice "Happy Git with R"))
+-   Complete the Getting to know you survey if you haven't yet done so!
+-   Read the syllabus
+
+## Midori says...
+
+[![](images/01/midori.jpeg){fig-alt="Picture of my cat, Midori, with a speech bubble that says \"Read the syllabus and make Mine happy!\"" fig-align="center" width="700"}](https://sta199-f22-1.github.io/course-syllabus.html)
