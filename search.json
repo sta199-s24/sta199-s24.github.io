@@ -143,197 +143,270 @@
     ]
   },
   {
-    "objectID": "project-tips-resources.html",
-    "href": "project-tips-resources.html",
-    "title": "Project tips + resources",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Project",
-      "Tips + resources"
-    ]
+    "objectID": "slides/01-welcome-199.html#meet-the-prof",
+    "href": "slides/01-welcome-199.html#meet-the-prof",
+    "title": "Welcome to STA 199",
+    "section": "Meet the prof",
+    "text": "Meet the prof\n\n\nDr. Mine Çetinkaya-Rundel\nProfessor of the Practice\nOld Chem 213"
   },
   {
-    "objectID": "computing-troubleshooting.html",
-    "href": "computing-troubleshooting.html",
-    "title": "Computing troubleshooting",
-    "section": "",
-    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\n\nAnother approach is to request a restart of your container. To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.",
-    "crumbs": [
-      "Computing",
-      "Troubleshooting"
-    ]
+    "objectID": "slides/01-welcome-199.html#meet-the-course-team",
+    "href": "slides/01-welcome-199.html#meet-the-course-team",
+    "title": "Welcome to STA 199",
+    "section": "Meet the course team",
+    "text": "Meet the course team\n\n\n\nMary Knox (Course coordinator)\nBetsy Bersson (Head TA)\nChris Oswald\nJasmine Wang\nMert Bildirici\nWill Tirone\nKrish Bansal\nCaitrin Murphy\nAvery Hodges\nJon Campbell\n\n\n\nFoxx Hart\nNetra MittalAlexa Fahrer\nDevin Johnson\nKonnie Huang\nLi Fan\nKelly Huang\nLeah Johnson\nLisa Zhang\nMiles King\nNoah Obuya"
   },
   {
-    "objectID": "labs/lab-5.html",
-    "href": "labs/lab-5.html",
-    "title": "Lab 5 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 5"
-    ]
+    "objectID": "slides/01-welcome-199.html#meet-each-other",
+    "href": "slides/01-welcome-199.html#meet-each-other",
+    "title": "Welcome to STA 199",
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\n\n\n−+\n03:00"
   },
   {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
+    "objectID": "slides/01-welcome-199.html#meet-data-science",
+    "href": "slides/01-welcome-199.html#meet-data-science",
+    "title": "Welcome to STA 199",
+    "section": "Meet data science",
+    "text": "Meet data science\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.\nWe’re going to learn to do this in a tidy way – more on that later!\nThis is a course on introduction to data science, with an emphasis on statistical thinking."
   },
   {
-    "objectID": "labs/lab-7.html",
-    "href": "labs/lab-7.html",
-    "title": "Lab 7 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 7"
-    ]
+    "objectID": "slides/01-welcome-199.html#excel---not",
+    "href": "slides/01-welcome-199.html#excel---not",
+    "title": "Welcome to STA 199",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
   },
   {
-    "objectID": "labs/lab-1.html",
-    "href": "labs/lab-1.html",
-    "title": "Lab 1 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
+    "objectID": "slides/01-welcome-199.html#r",
+    "href": "slides/01-welcome-199.html#r",
+    "title": "Welcome to STA 199",
+    "section": "R",
+    "text": "R"
   },
   {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "Project description",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
+    "objectID": "slides/01-welcome-199.html#rstudio",
+    "href": "slides/01-welcome-199.html#rstudio",
+    "title": "Welcome to STA 199",
+    "section": "RStudio",
+    "text": "RStudio"
   },
   {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
+    "objectID": "slides/01-welcome-199.html#data-science-life-cycle-1",
+    "href": "slides/01-welcome-199.html#data-science-life-cycle-1",
+    "title": "Welcome to STA 199",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#import",
+    "href": "slides/01-welcome-199.html#import",
+    "title": "Welcome to STA 199",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#tidy-transform",
+    "href": "slides/01-welcome-199.html#tidy-transform",
+    "title": "Welcome to STA 199",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#visualize",
+    "href": "slides/01-welcome-199.html#visualize",
+    "title": "Welcome to STA 199",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#model",
+    "href": "slides/01-welcome-199.html#model",
+    "title": "Welcome to STA 199",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#understand",
+    "href": "slides/01-welcome-199.html#understand",
+    "title": "Welcome to STA 199",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#section",
+    "href": "slides/01-welcome-199.html#section",
+    "title": "Welcome to STA 199",
     "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "text": "# A tibble: 5 × 2\n  date             season\n  &lt;chr&gt;            &lt;chr&gt; \n1 23 January 2017  winter\n2 4 March 2017     spring\n3 14 June 2017     summer\n4 1 September 2017 fall  \n5 ...              ..."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#communicate",
+    "href": "slides/01-welcome-199.html#communicate",
+    "title": "Welcome to STA 199",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#understand-communicate",
+    "href": "slides/01-welcome-199.html#understand-communicate",
+    "title": "Welcome to STA 199",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#program",
+    "href": "slides/01-welcome-199.html#program",
+    "title": "Welcome to STA 199",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#application-exercise",
+    "href": "slides/01-welcome-199.html#application-exercise",
+    "title": "Welcome to STA 199",
+    "section": "Application exercise",
+    "text": "Application exercise\n\nOr more like demo for today…\n📋 github.com/sta199-s24/ae-00-unvotes"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#homepage",
+    "href": "slides/01-welcome-199.html#homepage",
+    "title": "Welcome to STA 199",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-s24.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc.\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#course-toolkit",
+    "href": "slides/01-welcome-199.html#course-toolkit",
+    "title": "Welcome to STA 199",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s24\nRStudio containers: cmgr.oit.duke.edu/containers\nCommunication: Slack\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#activities",
+    "href": "slides/01-welcome-199.html#activities",
+    "title": "Welcome to STA 199",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPut together what you’ve learned to analyze real-world data\n\nLab assignments x 7\nExams x 2\nTerm project presented in the last lab session"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#cadence",
+    "href": "slides/01-welcome-199.html#cadence",
+    "title": "Welcome to STA 199",
+    "section": "Cadence",
+    "text": "Cadence\n\n\nLabs: Start and make large progress on Monday in lab section, finish up by Monday 8 am of the next week\nExams: Exam first in class, then take-home\nProject: Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#teams",
+    "href": "slides/01-welcome-199.html#teams",
+    "title": "Welcome to STA 199",
+    "section": "Teams",
+    "text": "Teams\n\nTeam assignments\n\nAssigned by me\nApplication exercises, labs, and project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#grading",
+    "href": "slides/01-welcome-199.html#grading",
+    "title": "Welcome to STA 199",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nLabs\n35%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\n\nWhile there are no specific points allocated to attendance, we will be recording your attendance in periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help,\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#support",
+    "href": "slides/01-welcome-199.html#support",
+    "title": "Welcome to STA 199",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#announcements",
+    "href": "slides/01-welcome-199.html#announcements",
+    "title": "Welcome to STA 199",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#diversity-inclusion",
+    "href": "slides/01-welcome-199.html#diversity-inclusion",
+    "title": "Welcome to STA 199",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors, and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#accessibility",
+    "href": "slides/01-welcome-199.html#accessibility",
+    "title": "Welcome to STA 199",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#late-work-waivers-regrades-policy",
+    "href": "slides/01-welcome-199.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to STA 199",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#collaboration-policy",
+    "href": "slides/01-welcome-199.html#collaboration-policy",
+    "title": "Welcome to STA 199",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#sharing-reusing-code-policy",
+    "href": "slides/01-welcome-199.html#sharing-reusing-code-policy",
+    "title": "Welcome to STA 199",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#academic-integrity",
+    "href": "slides/01-welcome-199.html#academic-integrity",
+    "title": "Welcome to STA 199",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#most-importantly",
+    "href": "slides/01-welcome-199.html#most-importantly",
+    "title": "Welcome to STA 199",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#this-weeks-tasks",
+    "href": "slides/01-welcome-199.html#this-weeks-tasks",
+    "title": "Welcome to STA 199",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#midori-says",
+    "href": "slides/01-welcome-199.html#midori-says",
+    "title": "Welcome to STA 199",
+    "section": "Midori says…",
+    "text": "Midori says…\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.",
     "crumbs": [
       "Course information",
-      "FAQ"
+      "Overview"
     ]
   },
   {
-    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nBiological Sciences 111\nTue & Thur 11:45 am - 1:00 pm\n\n\nLab 01\nPerkins LINK 071 (Classroom 5)\nMon 8:30 - 9:45 am\n\n\nLab 02\nPerkins LINK 071 (Classroom 5)\nMon 10:05 - 11:20 am\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nMon 11:45 am - 1:00 pm\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nMon 1:25 - 2:40 pm\n\n\nLab 05\nPerkins LINK 087 (Classroom 3)\nMon 3:05 - 4:20 pm\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nMon 4:40 - 5:55 pm\n\n\nLab 07\nOld Chemistry 003\nMon 4:40 - 5:55 pm\n\n\nLab 11\nPerkins LINK 071 (Classroom 5)\nMon 1:25 - 2:40 pm",
     "crumbs": [
       "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.3.2: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.4: https://quarto.org/docs/download/prerelease.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
-    "crumbs": [
-      "Computing",
-      "Cheatsheets"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n\n\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n\n\nMeet the toolkit\n\n\n\n\n\n\n\n\nThu, Jan 18\n\n\nGrammar of graphics\n\n\n\n\n\n\n3\nMon, Jan 22\n\n\nLab 1: Hello R\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n\n\nVisualizing various types of data\n\n\n\n\n\n\n\n\nThu, Jan 25\n\n\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n\n\nLab 2: Topic TBA\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n\n\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n\n\nWorking with multiple data frames\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Topic TBA\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n\n\nTidying data\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes [On Zoom]\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
-    "crumbs": [
-      "Computing",
-      "Access"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html",
-    "href": "labs/lab-2.html",
-    "title": "Lab 2 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-6.html",
-    "href": "labs/lab-6.html",
-    "title": "Lab 6 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 6"
+      "Overview"
     ]
   },
   {
@@ -403,25 +476,197 @@
     ]
   },
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Course overview",
+    "objectID": "labs/lab-6.html",
+    "href": "labs/lab-6.html",
+    "title": "Lab 6 - TBA",
     "section": "",
-    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.",
+    "text": "To be posted.",
     "crumbs": [
-      "Course information",
-      "Overview"
+      "Labs",
+      "Lab 6"
     ]
   },
   {
-    "objectID": "course-overview.html#class-meetings",
-    "href": "course-overview.html#class-meetings",
-    "title": "Course overview",
-    "section": "Class meetings",
-    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nBiological Sciences 111\nTue & Thur 11:45 am - 1:00 pm\n\n\nLab 01\nPerkins LINK 071 (Classroom 5)\nMon 8:30 - 9:45 am\n\n\nLab 02\nPerkins LINK 071 (Classroom 5)\nMon 10:05 - 11:20 am\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nMon 11:45 am - 1:00 pm\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nMon 1:25 - 2:40 pm\n\n\nLab 05\nPerkins LINK 087 (Classroom 3)\nMon 3:05 - 4:20 pm\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nMon 4:40 - 5:55 pm\n\n\nLab 07\nOld Chemistry 003\nMon 4:40 - 5:55 pm\n\n\nLab 11\nPerkins LINK 071 (Classroom 5)\nMon 1:25 - 2:40 pm",
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n\n\nMeet the toolkit\n\n\n\n\n\n\n\n\nThu, Jan 18\n\n\nGrammar of graphics\n\n\n\n\n\n\n3\nMon, Jan 22\n\n\nLab 1: Hello R\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n\n\nVisualizing various types of data\n\n\n\n\n\n\n\n\nThu, Jan 25\n\n\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n\n\nLab 2: Topic TBA\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n\n\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n\n\nWorking with multiple data frames\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Topic TBA\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n\n\nTidying data\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes [On Zoom]\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
     "crumbs": [
       "Course information",
-      "Overview"
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.3.2: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.4: https://quarto.org/docs/download/prerelease.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Project",
+      "Description"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-7.html",
+    "href": "labs/lab-7.html",
+    "title": "Lab 7 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-5.html",
+    "href": "labs/lab-5.html",
+    "title": "Lab 5 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "computing-troubleshooting.html",
+    "href": "computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\n\nAnother approach is to request a restart of your container. To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.",
+    "crumbs": [
+      "Computing",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "project-tips-resources.html",
+    "href": "project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Project",
+      "Tips + resources"
     ]
   },
   {
