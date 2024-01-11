@@ -290,25 +290,32 @@
     "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPut together what you’ve learned to analyze real-world data\n\nLab assignments x 7\nExams x 2\nTerm project presented in the last lab session"
   },
   {
-    "objectID": "slides/01-welcome-199.html#cadence",
-    "href": "slides/01-welcome-199.html#cadence",
+    "objectID": "slides/01-welcome-199.html#exams",
+    "href": "slides/01-welcome-199.html#exams",
     "title": "Welcome to STA 199",
-    "section": "Cadence",
-    "text": "Cadence\n\n\nLabs: Start and make large progress on Monday in lab section, finish up by Monday 8 am of the next week\nExams: Exam first in class, then take-home\nProject: Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class"
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#project",
+    "href": "slides/01-welcome-199.html#project",
+    "title": "Welcome to STA 199",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class."
   },
   {
     "objectID": "slides/01-welcome-199.html#teams",
     "href": "slides/01-welcome-199.html#teams",
     "title": "Welcome to STA 199",
     "section": "Teams",
-    "text": "Teams\n\nTeam assignments\n\nAssigned by me\nApplication exercises, labs, and project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
   },
   {
     "objectID": "slides/01-welcome-199.html#grading",
     "href": "slides/01-welcome-199.html#grading",
     "title": "Welcome to STA 199",
     "section": "Grading",
-    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nLabs\n35%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\n\nWhile there are no specific points allocated to attendance, we will be recording your attendance in periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help,\nSee course syllabus for how the final letter grade will be determined."
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nLabs\n35%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\n\nNo specific points allocated to attendance, but attendance will be recorded periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help.\nSee course syllabus for how the final letter grade will be determined."
   },
   {
     "objectID": "slides/01-welcome-199.html#support",
