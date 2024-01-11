@@ -198,20 +198,43 @@ All linked from the course website:
     -   Exams x 2
     -   Term project presented in the last lab session
 
-## Cadence
+## Exams
 
-::: incremental
--   **Labs:** Start and make large progress on Monday in lab section, finish up by Monday 8 am of the next week
--   **Exams:** Exam first in class, then take-home
--   **Project:** Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class
+-   Two exams, each 20%
+
+-   Each exam comprised of two parts:
+
+    -   In class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, **must be prepared by you**) – 70% of the grade
+
+    -   Take home: The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade
+
+::: callout-caution
+Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.
+:::
+
+## Project
+
+-   Dataset of your choice, method of your choice
+
+-   Teamwork
+
+-   Presentation and write-up
+
+-   Presentations in the last lab
+
+-   Interim deadlines, peer review on content, peer evaluation for team contribution
+
+-   Some lab sessions allocated to working on projects, doing peer review, getting feedback from TAs
+
+::: callout-caution
+Final presentation date cannot be changed. If you can’t present on that date, you should drop this class.
 :::
 
 ## Teams
 
--   Team assignments
-    -   Assigned by me
-    -   Application exercises, labs, and project
-    -   Peer evaluation during teamwork and after completion
+-   Assigned by me
+-   Project
+-   Peer evaluation during teamwork and after completion
 -   Expectations and roles
     -   Everyone is expected to contribute equal *effort*
     -   Everyone is expected to understand *all* code turned in
@@ -227,7 +250,7 @@ All linked from the course website:
 | Exam 2                | 20%        |
 | Application Exercises | 5%         |
 
-While there are no specific points allocated to attendance, we will be recording your attendance in periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help,
+No specific points allocated to attendance, but attendance will be recorded periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help.
 
 See [course syllabus](https://sta199-f22-1.github.io/course-syllabus.html) for how the final letter grade will be determined.
 
