@@ -33,6 +33,7 @@ Old Chem 213
 
 ::: columns
 ::: {.column width="50%"}
+-   Mary Knox (Course coordinator)
 -   Betsy Bersson (Head TA)
 -   Chris Oswald
 -   Jasmine Wang
@@ -63,7 +64,7 @@ Old Chem 213
 ```{r}
 #| echo: false
 
-countdown_fullscreen(minutes = 3)
+countdown(minutes = 3, font_size = "5rem")
 ```
 
 ## Meet data science
@@ -172,7 +173,7 @@ Or more like demo for today...
 
 ## Homepage
 
-<https://sta199-s24.github.io/>
+[https://sta199-s24.github.io](https://sta199-s24.github.io/){.uri}
 
 -   All course materials
 -   Links to Canvas, GitHub, RStudio containers, etc.
