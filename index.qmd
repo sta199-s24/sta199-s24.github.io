@@ -57,10 +57,10 @@ d |>
   cols_width(
     week ~ px(45),
     date ~ px(100), 
-    prepare ~ px(100),
-    topic ~ px(300),
+    prepare ~ px(200),
+    topic ~ px(250),
     materials ~ px(150),
-    due ~ px(300)
+    due ~ px(150)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>

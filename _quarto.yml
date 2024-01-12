@@ -22,15 +22,21 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/sta199-s24/sta199-s24.github.io
+        href: https://github.com/sta199-s24
         text: "GitHub organization"
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers
-        text: "RStudio Containers"
+        text: "RStudio containers"
+      - icon: life-preserver
+        href: https://docs.google.com/spreadsheets/d/1Mw69d1Ro-_G1Y8x7FH1wqCI04bxLpVOJ7gp8QSFGJBU/edit#gid=0
+        text: "Office hours"
       - icon: chat-dots-fill
         href: https://edstem.org/us/courses/50730/discussion/
-        text: "Ed Discussion"
-      - icon: person-fill
+        text: "Ed"
+      - icon: camera-reels-fill
+        href: https://duke.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06aa7a7d-e332-4dec-9de9-b0cf0101d289
+        text: Class recordings
+      - icon: check-square-fill
         text: "Canvas"
         menu:
           - text: Gradescope
