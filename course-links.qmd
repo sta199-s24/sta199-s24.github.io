@@ -2,36 +2,40 @@
 title: "Useful links"
 ---
 
-+----------------------------+-----------------------------------------------------------------------------+
-| RStudio containers         | 🔗 on [Duke Container Manager](https://cmgr.oit.duke.edu/containers)        |
-+----------------------------+-----------------------------------------------------------------------------+
-| Course GitHub organization | 🔗 on [GitHub](https://sta199-s24.github.io/)                               |
-+----------------------------+-----------------------------------------------------------------------------+
-| Ed Discussion              | 🔗 on [Canvas](https://edstem.org/us/courses/50730/discussion/)             |
-+----------------------------+-----------------------------------------------------------------------------+
-| Gradescope                 | 🔗 on [Canvas](https://canvas.duke.edu/courses/26106/external_tools/181)    |
-+----------------------------+-----------------------------------------------------------------------------+
-| Gradebook                  | 🔗 on [Canvas](https://canvas.duke.edu/courses/26106/gradebook)             |
-+----------------------------+-----------------------------------------------------------------------------+
-| Office hours               | 🔗 on Google docs (to be posted)                                            |
-+----------------------------+-----------------------------------------------------------------------------+
-| Texbooks                   | 🔗 [R for Data Science](https://r4ds.hadley.nz/)                            |
-|                            |                                                                             |
-|                            | 🔗 [Introduction to Modern Statistics](https://openintro-ims2.netlify.app/) |
-+----------------------------+-----------------------------------------------------------------------------+
-| Package documentation      | 🔗 ggplot2: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)         |
-|                            |                                                                             |
-|                            | 🔗 dplyr: [dplyr.tidyverse.org](https://dplyr.tidyverse.org/)               |
-|                            |                                                                             |
-|                            | 🔗 tidyr: [tidyr.tidyverse.org](https://tidyr.tidyverse.org/)               |
-|                            |                                                                             |
-|                            | 🔗 forcats: [forcats.tidyverse.org](https://forcats.tidyverse.org/)         |
-|                            |                                                                             |
-|                            | 🔗 stringr: [stringr.tidyverse.org](https://stringr.tidyverse.org/)         |
-|                            |                                                                             |
-|                            | 🔗 lubridate: [lubridate.tidyverse.org](https://lubridate.tidyverse.org/)   |
-|                            |                                                                             |
-|                            | 🔗 readr: [readr.tidyverse.org](https://readr.tidyverse.org/)               |
-|                            |                                                                             |
-|                            | 🔗 readxl: [readxl.tidyverse.org](https://readxl.tidyverse.org/)            |
-+----------------------------+-----------------------------------------------------------------------------+
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|                            |                                                                                                                       |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Course GitHub organization | 🔗 on [GitHub](https://sta199-s24.github.io/)                                                                         |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| RStudio containers         | 🔗 on [Duke Container Manager](https://cmgr.oit.duke.edu/containers)                                                  |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Office hours               | 🔗 on [Google Sheets](https://docs.google.com/spreadsheets/d/1Mw69d1Ro-_G1Y8x7FH1wqCI04bxLpVOJ7gp8QSFGJBU/edit#gid=0) |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Ed Discussion              | 🔗 on [Canvas](https://edstem.org/us/courses/50730/discussion/)                                                       |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Class recordings           | 🔗 on [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06aa7a7d-e332-4dec-9de9-b0cf0101d289)    |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Gradescope                 | 🔗 on [Canvas](https://canvas.duke.edu/courses/26106/external_tools/181)                                              |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Gradebook                  | 🔗 on [Canvas](https://canvas.duke.edu/courses/26106/gradebook)                                                       |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Texbooks                   | 🔗 [R for Data Science](https://r4ds.hadley.nz/)                                                                      |
+|                            |                                                                                                                       |
+|                            | 🔗 [Introduction to Modern Statistics](https://openintro-ims2.netlify.app/)                                           |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Package documentation      | 🔗 ggplot2: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)                                                   |
+|                            |                                                                                                                       |
+|                            | 🔗 dplyr: [dplyr.tidyverse.org](https://dplyr.tidyverse.org/)                                                         |
+|                            |                                                                                                                       |
+|                            | 🔗 tidyr: [tidyr.tidyverse.org](https://tidyr.tidyverse.org/)                                                         |
+|                            |                                                                                                                       |
+|                            | 🔗 forcats: [forcats.tidyverse.org](https://forcats.tidyverse.org/)                                                   |
+|                            |                                                                                                                       |
+|                            | 🔗 stringr: [stringr.tidyverse.org](https://stringr.tidyverse.org/)                                                   |
+|                            |                                                                                                                       |
+|                            | 🔗 lubridate: [lubridate.tidyverse.org](https://lubridate.tidyverse.org/)                                             |
+|                            |                                                                                                                       |
+|                            | 🔗 readr: [readr.tidyverse.org](https://readr.tidyverse.org/)                                                         |
+|                            |                                                                                                                       |
+|                            | 🔗 readxl: [readxl.tidyverse.org](https://readxl.tidyverse.org/)                                                      |
++----------------------------+-----------------------------------------------------------------------------------------------------------------------+
