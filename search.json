@@ -26,7 +26,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\nFirst name\nLast name\nLab Section\n\n\nChris\nOswald\nM 8:30AM - 9:45AM\n\n\nJasmine\nWang\nM 8:30AM - 9:45AM\n\n\nBetsy\nBersson (Head TA)\nM 10:05AM - 11:20AM\n\n\nMert\nBildirici\nM 10:05AM - 11:20AM\n\n\nWill\nTirone\nM 11:45AM - 1:00PM\n\n\nKrish\nBansal\nM 11:45AM - 1:00PM\n\n\nCaitrin\nMurphy\nM 1:25PM - 2:40PM (Sec 4)\n\n\nAvery\nHodges\nM 1:25PM - 2:40PM (Sec 4)\n\n\nJon\nCampbell\nM 1:25PM - 2:40PM (Sec 11)\n\n\nFoxx\nHart\nM 1:25PM - 2:40PM (Sec 11)\n\n\nNetra\nMittal\nM 3:05PM - 4:20PM\n\n\nAlexa\nFahrer\nM 3:05PM - 4:20PM\n\n\nDevin\nJohnson\nM 4:40PM - 5:55PM (Sec 6)\n\n\nKonnie\nHuang\nM 4:40PM - 5:55PM (Sec 6)\n\n\nLi\nFan\nM 4:40PM - 5:55PM (Sec 7)\n\n\nKelly\nHuang\nM 4:40PM - 5:55PM (Sec 7)\n\n\nLeah\nJohnson\n\n\n\nLisa\nZhang\n\n\n\nMiles\nKing\n\n\n\nNoah\nObuya\n\n\n\n\nFor office hours, please see STA 199 - Office Hours sheet.",
+    "text": "Teaching assistants\n\n\n\n\n\n\n\n\n\n\nFirst name\nLast name\nLab Section\n\n\n\nChris\nOswald\nM 8:30AM - 9:45AM (Sec 1)\n\n\n\nJasmine\nWang\nM 8:30AM - 9:45AM (Sec 1)\n\n\n\nBetsy\nBersson (Head TA)\nM 10:05AM - 11:20AM (Sec 2)\n\n\n\nMert\nBildirici\nM 10:05AM - 11:20AM (Sec 2)\n\n\n\nWill\nTirone\nM 11:45AM - 1:00PM (Sec 3)\n\n\n\nKrish\nBansal\nM 11:45AM - 1:00PM (Sec 3)\n\n\n\nCaitrin\nMurphy\nM 1:25PM - 2:40PM (Sec 4)\n\n\n\nAvery\nHodges\nM 1:25PM - 2:40PM (Sec 4)\n\n\n\nJon\nCampbell\nM 1:25PM - 2:40PM (Sec 11)\n\n\n\nFoxx\nHart\nM 1:25PM - 2:40PM (Sec 11)\n\n\n\nNetra\nMittal\nM 3:05PM - 4:20PM (Sec 5)\n\n\n\nAlexa\nFahrer\nM 3:05PM - 4:20PM (Sec 5)\n\n\n\nDevin\nJohnson\nM 4:40PM - 5:55PM (Sec 6)\n\n\n\nKonnie\nHuang\nM 4:40PM - 5:55PM (Sec 6)\n\n\n\nLi\nFan\nM 4:40PM - 5:55PM (Sec 7)\n\n\n\nKelly\nHuang\nM 4:40PM - 5:55PM (Sec 7)\n\n\n\nLeah\nJohnson\n\n\n\n\nLisa\nZhang\n\n\n\n\nMiles\nKing\n\n\n\n\nNoah\nObuya\n\n\n\n\nFor office hours, please see STA 199 - Office Hours sheet.",
     "crumbs": [
       "Course information",
       "Teaching team"
@@ -37,7 +37,7 @@
     "href": "course-team.html#course-coordinator",
     "title": "Teaching team",
     "section": "Course coordinator",
-    "text": "Course coordinator\nDr. Mary Knox (she/her) is the course coordinator for this course. You can reach out to her (at mary.knox@duke.edu) with any questions regarding missed work, extensions, etc. as well as registration questions.",
+    "text": "Course coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course. You can reach out to her (at mary.knox@duke.edu) with any questions regarding missed work, extensions, etc. as well as registration questions.",
     "crumbs": [
       "Course information",
       "Teaching team"
@@ -702,7 +702,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nEd Discussion\n🔗 on Canvas\n\n\nGradescope\n🔗 on Canvas\n\n\nGradebook\n🔗 on Canvas\n\n\nOffice hours\n🔗 on Google docs (to be posted)\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
+    "text": "Course GitHub organization\n🔗 on GitHub\n\n\nRStudio containers\n🔗 on Duke Container Manager\n\n\nOffice hours\n🔗 on Google Sheets\n\n\nEd Discussion\n🔗 on Canvas\n\n\nClass recordings\n🔗 on Panopto\n\n\nGradescope\n🔗 on Canvas\n\n\nGradebook\n🔗 on Canvas\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
     "crumbs": [
       "Course information",
       "Useful links"
