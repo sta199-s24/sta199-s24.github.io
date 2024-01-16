@@ -111,6 +111,7 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    code-link: true
     mainfont: "Atkinson Hyperlegible"
     highlight-style: a11y-dark
 
