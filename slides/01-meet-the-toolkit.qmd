@@ -5,6 +5,16 @@ date: "January 16, 2024"
 format: revealjs
 ---
 
+# Warm-up
+
+## Announcements
+
+-   If you have not yet completed the Getting to know you survey, please do so asap!
+
+-   If you have not yet accepted the invite to join the course GitHub Organization (I'm looking at 41 of you as of this morning!), please do so asap!
+
+-   Office hours + locations linked at <https://sta199-s24.github.io/course-team.html>, come say hi to me or any of the TAs!
+
 # From last time...
 
 ## Course homepage
@@ -192,12 +202,11 @@ Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
 
 Sit back and enjoy the show!
 :::
-
 :::
 
 ::: {.column width="50%"}
 ::: appex
-**Option 2:** 
+**Option 2:**
 
 Clone the corresponding application exercise repo and follow along.
 
@@ -288,12 +297,11 @@ dataframe$var_name
 
 Sit back and enjoy the show!
 :::
-
 :::
 
 ::: {.column width="50%"}
 ::: appex
-**Option 2:** 
+**Option 2:**
 
 Clone the corresponding application exercise repo (if you haven't yet done so) and follow along.
 
@@ -432,7 +440,7 @@ What happens? Why the error?
 ## Tour: Git + GitHub
 
 ::: demo
-**Just one option for now:** 
+**Just one option for now:**
 
 Sit back and enjoy the show!
 :::
