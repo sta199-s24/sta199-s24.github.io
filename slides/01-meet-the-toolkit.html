@@ -7,12 +7,14 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.542">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-01-11">
-  <title>STA 199 - Welcome to STA 199</title>
+  <meta name="dcterms.date" content="2024-01-16">
+  <title>STA 199 - Meet the toolkit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -323,11 +390,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Welcome to STA 199">
-<meta property="og:description" content="Lecture 0">
+<meta property="og:title" content="STA 199 - Meet the toolkit">
+<meta property="og:description" content="Lecture 1">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Welcome to STA 199">
-<meta name="twitter:description" content="Lecture 0">
+<meta name="twitter:title" content="STA 199 - Meet the toolkit">
+<meta name="twitter:description" content="Lecture 1">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -337,8 +404,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Welcome to STA 199</h1>
-  <p class="subtitle">Lecture 0</p>
+  <h1 class="title">Meet the toolkit</h1>
+  <p class="subtitle">Lecture 1</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -351,7 +418,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-01-11</p>
+  <p class="date">2024-01-16</p>
 </section>
 <section>
 <section id="from-last-time" class="title-slide slide level1 center">
@@ -405,9 +472,406 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="most-importantly" class="slide level2">
 <h2>Most importantly!</h2>
 <p>Ask if you’re not sure if something violates a policy!</p>
+</section>
+<section id="five-tips-for-success" class="slide level2">
+<h2>Five tips for success</h2>
+<ol type="1">
+<li><p>Complete all the preparation work before class.</p></li>
+<li><p>Ask questions.</p></li>
+<li><p>Do the readings.</p></li>
+<li><p>Do the lab.</p></li>
+<li><p>Don’t procrastinate – at least on a weekly basis!</p></li>
+</ol>
 </section></section>
-<section id="next" class="title-slide slide level1 center">
-<h1>next</h1>
+<section>
+<section id="course-toolkit" class="title-slide slide level1 center">
+<h1>Course toolkit</h1>
+
+</section>
+<section id="course-toolkit-1" class="slide level2 smaller">
+<h2>Course toolkit</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Course operation</strong></p>
+<ul>
+<li>Materials: <a href="https://sta199-s24.github.io/">sta199-s24.github.io</a></li>
+<li>Submission: Gradescope</li>
+<li>Discussion: Ed Discussion</li>
+<li>Gradebook: Canvas</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Doing data science</strong></p>
+<ul>
+<li>Computing:
+<ul>
+<li>R</li>
+<li>RStudio</li>
+<li>tidyverse</li>
+<li>Quarto</li>
+</ul></li>
+<li>Version control and collaboration:
+<ul>
+<li>Git</li>
+<li>GitHub</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="toolkit-computing" class="title-slide slide level1 center">
+<h1>Toolkit: Computing</h1>
+
+</section>
+<section id="learning-goals" class="slide level2 smaller">
+<h2>Learning goals</h2>
+<p>By the end of the course, you will be able to…</p>
+<div>
+<ul>
+<li class="fragment">gain insight from data</li>
+<li class="fragment">gain insight from data, <strong>reproducibly</strong></li>
+<li class="fragment">gain insight from data, reproducibly, <strong>using modern programming tools and techniques</strong></li>
+<li class="fragment">gain insight from data, reproducibly <strong>and collaboratively</strong>, using modern programming tools and techniques</li>
+<li class="fragment">gain insight from data, reproducibly <strong>(with literate programming and version control)</strong> and collaboratively, using modern programming tools and techniques</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="reproducible-data-analysis" class="title-slide slide level1 center">
+<h1>Reproducible data analysis</h1>
+
+</section>
+<section id="reproducibility-checklist" class="slide level2 smaller">
+<h2>Reproducibility checklist</h2>
+<div class="question">
+<p>What does it mean for a data analysis to be “reproducible”?</p>
+</div>
+<div class="fragment">
+<p><strong>Short-term goals:</strong></p>
+<ul>
+<li>Are the tables and figures reproducible from the code and data?</li>
+<li>Does the code actually do what you think it does?</li>
+<li>In addition to what was done, is it clear <em>why</em> it was done?</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Long-term goals:</strong></p>
+<ul>
+<li>Can the code be used for other data?</li>
+<li>Can you extend the code to do other things?</li>
+</ul>
+</div>
+</section>
+<section id="toolkit-for-reproducibility" class="slide level2">
+<h2>Toolkit for reproducibility</h2>
+<ul>
+<li>Scriptability <span class="math inline">\(\rightarrow\)</span> R</li>
+<li>Literate programming (code, narrative, output in one place) <span class="math inline">\(\rightarrow\)</span> Quarto</li>
+<li>Version control <span class="math inline">\(\rightarrow\)</span> Git / GitHub</li>
+</ul>
+</section></section>
+<section>
+<section id="r-and-rstudio" class="title-slide slide level1 center">
+<h1>R and RStudio</h1>
+
+</section>
+<section id="r-and-rstudio-1" class="slide level2 smaller">
+<h2>R and RStudio</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/02/r-logo.png" class="quarto-figure quarto-figure-center" alt="R logo"></p>
+</figure>
+</div>
+<ul>
+<li>R is an open-source statistical <strong>programming language</strong></li>
+<li>R is also an environment for statistical computing and graphics</li>
+<li>It’s easily extensible with <em>packages</em></li>
+</ul>
+</div><div class="column fragment" style="width:50%;">
+<p><img data-src="images/02/rstudio-logo.png" alt="RStudio logo"></p>
+<ul>
+<li>RStudio is a convenient interface for R called an <strong>IDE</strong> (integrated development environment), e.g.&nbsp;<em>“I write R code in the RStudio IDE”</em></li>
+<li>RStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="r-vs.-rstudio" class="slide level2">
+<h2>R vs.&nbsp;RStudio</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://moderndive.com/1-getting-started.html"><img data-src="images/02/r_vs_rstudio.png" class="quarto-figure quarto-figure-center" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://moderndive.com/1-getting-started.html">Modern Dive</a>.</p>
+</div></aside></section>
+<section id="r-packages" class="slide level2">
+<h2>R packages</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Packages</strong>: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup></p></li>
+<li class="fragment"><p>As of 15 January 2023, there are 20,252 R packages available on <strong>CRAN</strong> (the Comprehensive R Archive Network)<sup>2</sup></p></li>
+<li class="fragment"><p>We’re going to work with a small (but important) subset of these!</p></li>
+</ul>
+</div>
+
+<aside><div>
+<p><sup>1</sup> Wickham and Bryan, <a href="https://r-pkgs.org/">R Packages</a>.</p>
+<p><sup>2</sup> <a href="https://cran.r-project.org/web/packages/">CRAN contributed packages</a>.</p>
+</div></aside></section>
+<section id="tour-r-rstudio" class="slide level2 smaller">
+<h2>Tour: R + RStudio</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="demo">
+<p><strong>Option 1:</strong></p>
+<p>Sit back and enjoy the show!</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="appex">
+<p><strong>Option 2:</strong></p>
+<p>Clone the corresponding application exercise repo and follow along.</p>
+<p><i class="fa-solid fa-laptop" aria-label="laptop"></i> <code>ae-01-meet-the-penguins</code></p>
+<p>Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="tour-recap-r-rstudio" class="slide level2">
+<h2>Tour recap: R + RStudio</h2>
+
+<img data-src="images/02/tour-r-rstudio.png" class="r-stretch"></section>
+<section id="a-short-list-for-now-of-r-essentials" class="slide level2">
+<h2>A short list (for now) of R essentials</h2>
+<ul>
+<li>Functions are (most often) verbs, followed by what they will be applied to in parentheses:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">do_this</span>(to_this)</span>
+<span id="cb1-2"><a></a><span class="fu">do_that</span>(to_this, to_that, with_those)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<ul>
+<li>Packages are installed with the <code>install.packages()</code> function and loaded with the <code>library</code> function, once per session:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(package_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="r-essentials-continued" class="slide level2">
+<h2>R essentials (continued)</h2>
+<ul>
+<li>Columns (variables) in data frames are accessed with <code>$</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>dataframe<span class="sc">$</span>var_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<ul>
+<li>Object documentation can be accessed with <code>?</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>?mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="tidyverse" class="slide level2">
+<h2>tidyverse</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://tidyverse.org"><img data-src="images/02/tidyverse.png" alt="Hex logos for dplyr, ggplot2, forcats, tibble, readr, stringr, tidyr, and purrr"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="https://www.tidyverse.org/">tidyverse.org</a></p>
+<ul>
+<li>The <strong>tidyverse</strong> is an opinionated collection of R packages designed for data science</li>
+<li>All packages share an underlying philosophy and a common grammar</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="quarto" class="title-slide slide level1 center">
+<h1>Quarto</h1>
+
+</section>
+<section id="quarto-1" class="slide level2">
+<h2>Quarto</h2>
+<div>
+<ul>
+<li class="fragment">Fully reproducible reports – each time you render the analysis is ran from the beginning</li>
+<li class="fragment">Code goes in chunks narrative goes outside of chunks</li>
+<li class="fragment">A visual editor for a familiar / Google docs-like editing experience</li>
+</ul>
+</div>
+</section>
+<section id="tour-quarto" class="slide level2 smaller">
+<h2>Tour: Quarto</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="demo">
+<p><strong>Option 1:</strong></p>
+<p>Sit back and enjoy the show!</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="appex">
+<p><strong>Option 2:</strong></p>
+<p>Clone the corresponding application exercise repo (if you haven’t yet done so) and follow along.</p>
+<p><i class="fa-solid fa-laptop" aria-label="laptop"></i> <code>ae-01-meet-the-penguins</code></p>
+<p>Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="tour-recap-quarto" class="slide level2">
+<h2>Tour recap: Quarto</h2>
+
+<img data-src="images/02/tour-quarto.png" class="quarto-figure quarto-figure-center r-stretch" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk."></section>
+<section id="environments" class="slide level2">
+<h2>Environments</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>The environment of your Quarto document is separate from the Console!</p>
+</div>
+</div>
+</div>
+<p>Remember this, and expect it to bite you a few times as you’re learning to work with Quarto!</p>
+</section>
+<section id="environments-1" class="slide level2">
+<h2>Environments</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>First, run the following in the console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb5-2"><a></a>x <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="question fragment">
+<p>All looks good, eh?</p>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<p>Then, add the following in an R chunk in your Quarto document</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="question fragment">
+<p>What happens? Why the error?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="how-will-we-use-quarto" class="slide level2">
+<h2>How will we use Quarto?</h2>
+<ul>
+<li>Every application exercise, lab, project, etc. is an Quarto document</li>
+<li>You’ll always have a template Quarto document to start with</li>
+<li>The amount of scaffolding in the template will decrease over the semester</li>
+</ul>
+</section>
+<section id="whats-with-all-the-hexes" class="slide level2">
+<h2>What’s with all the hexes?</h2>
+
+<img data-src="images/02/hexes.jpeg" class="quarto-figure quarto-figure-center r-stretch" alt="Hex logos for many packages"></section>
+<section id="your-turn" class="slide level2 smaller">
+<h2>Your turn!</h2>
+<div class="appex">
+<p><code>ae-01-meet-the-penguins</code></p>
+<ul>
+<li>Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-meet-the-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</li>
+<li>Open and render the Quarto document <code>ae-01-meet-the-penguins.qmd</code>, review the document, and fill in the blanks.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="toolkit-version-control-and-collaboration" class="title-slide slide level1 center">
+<h1>Toolkit: Version control and collaboration</h1>
+
+</section>
+<section id="git-and-github" class="slide level2 smaller">
+<h2>Git and GitHub</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/02/git-logo.png" class="quarto-figure quarto-figure-center" alt="Git logo" width="200"></p>
+</figure>
+</div>
+<ul>
+<li>Git is a version control system – like “Track Changes” features from Microsoft Word, on steroids</li>
+<li>It’s not the only version control system, but it’s a very popular one</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/02/github-logo.png" class="quarto-figure quarto-figure-center" alt="GitHub logo" width="200"></p>
+</figure>
+</div>
+<ul>
+<li><p>GitHub is the home for your Git-based projects on the internet – like DropBox but much, much better</p></li>
+<li><p>We will use GitHub as a platform for web hosting and collaboration (and as our course management system!)</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="versioning---done-badly" class="slide level2">
+<h2>Versioning - done badly</h2>
+
+<img data-src="images/02/phd_comics_vc.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="versioning---done-better" class="slide level2">
+<h2>Versioning - done better</h2>
+
+<img data-src="images/02/lego-steps.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="versioning---done-even-better" class="slide level2">
+<h2>Versioning - done even better</h2>
+<h3 id="with-human-readable-messages">with human readable messages</h3>
+
+<img data-src="images/02/lego-steps-commit-messages.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-01.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-1" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-02.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-2" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-03.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-3" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-04.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="git-and-github-tips" class="slide level2 smaller">
+<h2>Git and GitHub tips</h2>
+<div>
+<ul>
+<li class="fragment">There are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.</li>
+<li class="fragment">We will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.</li>
+<li class="fragment">There is a great resource for working with git and R: <a href="http://happygitwithr.com/">happygitwithr.com</a>. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help.</li>
+</ul>
+</div>
+</section>
+<section id="tour-git-github" class="slide level2">
+<h2>Tour: Git + GitHub</h2>
+<div class="demo">
+<p><strong>Just one option for now:</strong></p>
+<p>Sit back and enjoy the show!</p>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo.png" class="slide-logo"></p>
@@ -415,7 +879,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p><a href="https://sta199-s24.github.io/">🔗 sta199-s24.github.io</a></p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -628,6 +1092,44 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
