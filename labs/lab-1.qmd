@@ -146,14 +146,13 @@ Remember that continuing to develop a sound workflow for reproducible data analy
 
 ## Exercise 1
 
-Visualize the distribution of population density of counties using first a histogram (with an appropriate binwidth), then a box plot, and then a density plot. Make sure to set informative titles and axis labels for each of your plots. Then, using information as needed from these plots, describe the shape of the distribution of population density of counties and comment on any potential outliers.
+Visualize the distribution of population density of counties using first a histogram (with an appropriate binwidth) and then with a box plot. Make sure to set informative titles and axis labels for each of your plots. Then, using information as needed from these plots, describe the shape of the distribution of population density of counties and comment on any potential outliers, making sure you identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer interactively to identify the outliers, you do not have to write code.
 
 ::: callout-note
 For more details and code examples for each of these plots, see the relevant reference pages:
 
 -   [histograms](https://ggplot2.tidyverse.org/reference/geom_histogram.html)
 -   [box plots](https://ggplot2.tidyverse.org/reference/geom_boxplot.html)
--   [density plots](https://ggplot2.tidyverse.org/reference/geom_density.html)
 :::
 
 ::: render-commit-push
