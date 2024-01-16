@@ -279,10 +279,10 @@ To submit your assignment:
 
 Each exercise will be graded on the following scale:
 
-|     |                                                                                |
+|     |                                                                                        |
 |-----|-------------------------------------------------------|
-| 4   | Response shows proficiency                                                     |
-| 3   | Response shows understanding                                                   |
-| 2   | Response shows effort                                                          |
-| 1   | Response does not show sufficient effort or understanding and/or is incomplete |
-| 0   | No attempt                                                                     |
+| 4   | Response shows proficiency                                                             |
+| 3   | Response shows understanding                                                           |
+| 2   | Response shows effort                                                                  |
+| 1   | Response does not show sufficient effort or understanding and/or is largely incomplete |
+| 0   | No attempt                                                                             |
