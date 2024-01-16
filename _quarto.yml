@@ -34,7 +34,7 @@ website:
         href: https://edstem.org/us/courses/50730/discussion/
         text: "Ed"
       - icon: camera-reels-fill
-        href: https://duke.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06aa7a7d-e332-4dec-9de9-b0cf0101d289
+        href: https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=b5b29027-7084-40bf-9a2f-b0cf0100bb98
         text: "Class recordings"
       - icon: check-square-fill
         text: "Canvas"
