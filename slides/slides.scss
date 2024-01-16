@@ -2,6 +2,8 @@
 
 // fonts
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+
 
 $font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
 $presentation-heading-color: #3A5883;
@@ -55,6 +57,16 @@ details>summary {
   padding: 0.5em;
   background: #a4b9da;
 }
+
+.reveal .slide .demo {
+  border-left: 3px solid #3a7d83;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #a8d5d9;
+}
+
+
 
 .reveal pre code {
   width: 1000px;
