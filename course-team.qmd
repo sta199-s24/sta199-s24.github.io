@@ -8,36 +8,61 @@ title: "Teaching team"
 
 [**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.
 
-| Office hours                                               | Location     |
-|----------------------------------------------------|--------------------|
-| Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111  |
-| Thursdays 2-3 pm                                           | Old Chem 213 |
++------------------------------------------------------------+-----------------+
+| Office hours                                               | Location        |
++============================================================+=================+
+| Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111     |
++------------------------------------------------------------+-----------------+
+| Thursdays 2-3 pm                                           | Old Chem 213    |
++------------------------------------------------------------+-----------------+
 
 ## Teaching assistants
 
-|                                          |                |                   |                                         |
-|-----------------------|----------------|----------------|---------------------------------------------------|
-|                                          | **First name** | **Last name**     | **Role**                                |
-| ![](images/team/chris.png){width="80"}   | Chris          | Oswald            | Lab leader: M 8:30AM - 9:45AM (Sec 1)   |
-| ![](images/team/jasmine.png){width="80"} | Jasmine        | Wang              | Lab helper: M 8:30AM - 9:45AM (Sec 1)   |
-| ![](images/team/betsy.png){width="80"}   | Betsy          | Bersson (Head TA) | Lab leader: M 10:05AM - 11:20AM (Sec 2) |
-| ![](images/team/mert.png){width="80"}    | Mert           | Bildirici         | Lab helper: M 10:05AM - 11:20AM (Sec 2) |
-| ![](images/team/will.png){width="80"}    | Will           | Tirone            | Lab leader: M 11:45AM - 1:00PM (Sec 3)  |
-| ![](images/team/krish.png){width="80"}   | Krish          | Bansal            | Lab helper: M 11:45AM - 1:00PM (Sec 3)  |
-| ![](images/team/caitrin.png){width="80"} | Caitrin        | Murphy            | Lab leader: M 1:25PM - 2:40PM (Sec 4)   |
-| ![](images/team/avery.png){width="80"}   | Avery          | Hodges            | Lab helper: M 1:25PM - 2:40PM (Sec 4)   |
-| ![](images/team/jon.png){width="80"}     | Jon            | Campbell          | Lab leader: M 1:25PM - 2:40PM (Sec 11)  |
-| ![](images/team/foxx.png){width="80"}    | Foxx           | Hart              | Lab helper: M 1:25PM - 2:40PM (Sec 11)  |
-| ![](images/team/netra.png){width="80"}   | Netra          | Mittal            | Lab leader: M 3:05PM - 4:20PM (Sec 5)   |
-| ![](images/team/alexa.png){width="80"}   | Alexa          | Fahrer            | Lab helper: M 3:05PM - 4:20PM (Sec 5)   |
-| ![](images/team/devin.png){width="80"}   | Devin          | Johnson           | Lab leader: M 4:40PM - 5:55PM (Sec 6)   |
-| ![](images/team/konnie.png){width="80"}  | Konnie         | Huang             | Lab helper: M 4:40PM - 5:55PM (Sec 6)   |
-| ![](images/team/li.png){width="80"}      | Li             | Fan               | Lab leader: M 4:40PM - 5:55PM (Sec 7)   |
-| ![](images/team/kelly.png){width="80"}   | Kelly          | Huang             | Lab helper: M 4:40PM - 5:55PM (Sec 7)   |
-| ![](images/team/leah.png){width="80"}    | Leah           | Johnson           |                                         |
-| ![](images/team/lisa.png){width="80"}    | Lisa           | Zhang             | Lecture helper                          |
-| ![](images/team/miles.png){width="80"}   | Miles          | King              | Lecture helper                          |
-| ![](images/team/noah.png){width="80"}    | Noah           | Obuya             |                                         |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+|                                          | **First name** | **Last name** | **Role**                                           |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/chris.png){width="80"}   | Chris          | Oswald        | Lab leader: M 8:30AM - 9:45AM (Sec 1)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/jasmine.png){width="80"} | Jasmine        | Wang          | Lab helper: M 8:30AM - 9:45AM (Sec 1)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/betsy.png){width="80"}   | Betsy          | Bersson       | Head TA                                            |
+|                                          |                |               |                                                    |
+|                                          |                |               | Lab leader: M 10:05AM - 11:20AM (Sec 2)            |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/mert.png){width="80"}    | Mert           | Bildirici     | Lab helper: M 10:05AM - 11:20AM (Sec 2)            |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/will.png){width="80"}    | Will           | Tirone        | Lab leader: M 11:45AM - 1:00PM (Sec 3)             |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/krish.png){width="80"}   | Krish          | Bansal        | Lab helper: M 11:45AM - 1:00PM (Sec 3)             |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/caitrin.png){width="80"} | Caitrin        | Murphy        | Lab leader: M 1:25PM - 2:40PM (Sec 4)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/avery.png){width="80"}   | Avery          | Hodges        | Lab helper: M 1:25PM - 2:40PM (Sec 4)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/jon.png){width="80"}     | Jon            | Campbell      | Lab leader: M 1:25PM - 2:40PM (Sec 11)             |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/foxx.png){width="80"}    | Foxx           | Hart          | Lab helper: M 1:25PM - 2:40PM (Sec 11)             |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/netra.png){width="80"}   | Netra          | Mittal        | Lab leader: M 3:05PM - 4:20PM (Sec 5)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/alexa.png){width="80"}   | Alexa          | Fahrer        | Lab helper: M 3:05PM - 4:20PM (Sec 5)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/devin.png){width="80"}   | Devin          | Johnson       | Lab leader: M 4:40PM - 5:55PM (Sec 6)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/konnie.png){width="80"}  | Konnie         | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 6)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/li.png){width="80"}      | Li             | Fan           | Lab leader: M 4:40PM - 5:55PM (Sec 7)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/kelly.png){width="80"}   | Kelly          | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 7)              |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/leah.png){width="80"}    | Leah           | Johnson       |                                                    |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/lisa.png){width="80"}    | Lisa           | Zhang         | Lecture helper                                     |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/miles.png){width="80"}   | Miles          | King          | Lecture helper                                     |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
+| ![](images/team/noah.png){width="80"}    | Noah           | Obuya         |                                                    |
++------------------------------------------+----------------+---------------+----------------------------------------------------+
 
 : {tbl-colwidths="\[15,15,20,50\]"}
 
