@@ -20,19 +20,25 @@ library(countdown)
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
 ## Announcements
 
--   ...
+-   Lab 1 on Monday – go to your assigned lab
 
-## From last time: Your turn! {.smaller}
+## From the survey {.smaller}
 
-::: appex
-`ae-01-meet-the-penguins`
+-   Almost half of the class mentioned being nervous about coding – you're not alone! 💙
 
--   If you haven't done so on Tuesday: Go to the [course GitHub organization](https://github.com/sta199-s24) and clone [`ae-01-meet-the-penguins`](https://github.com/sta199-s24/ae-01-meet-the-penguins) to [your container](https://cmgr.oit.duke.edu/containers).
--   Open and render the Quarto document `ae-01-meet-the-penguins.qmd`, review the document, and fill in the blanks.
-:::
+-   A good number of students mentioned being nervous about being new to stats + data science – you're also not alone! 💜
+
+-   Visibility of text on slides: Cranked up font size! 💛
+
+-   About exams: No coding on the in class (time-limited) exam + there will be practice exams
+
+-   About teams: Peer evaluations + milestones throughout semester
+
+-   Grading criteria: Scale of 0-4 for each exercise on lab + more details in lab instructions
+
+-   Hardware: Code running on university containers
 
 # Toolkit: Version control and collaboration
 
@@ -40,14 +46,14 @@ library(countdown)
 
 ::: columns
 ::: {.column width="50%"}
-![](images/02/git-logo.png){fig-alt="Git logo" fig-align="center" width="200"}
+![](images/02/git-logo.png){fig-alt="Git logo" fig-align="center" width="150"}
 
 -   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
 -   It's not the only version control system, but it's a very popular one
 :::
 
 ::: {.column width="50%"}
-![](images/02/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="200"}
+![](images/02/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="150"}
 
 -   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
 
@@ -112,7 +118,6 @@ Discuss the following for the visualization.
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
 ```{r}
 #| echo: false
 
@@ -125,7 +130,7 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 :::
 :::
 
-## `ae-02-bechdel-dataviz`
+## `ae-02-bechdel-dataviz` {.smaller}
 
 ::: appex
 -   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae` repo (repo name will be suffixed with your GitHub name).
