@@ -13,6 +13,14 @@ format: revealjs
 library(countdown)
 ```
 
+## While you wait...
+
+**Questions from the prepare materials?**
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+
 ## Announcements
 
 -   ...
@@ -98,16 +106,12 @@ Sit back and enjoy the show!
 ## Examining data visualization {.smaller}
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="60%"}
 Discuss the following for the visualization.
 
--   What is the visualization trying to show?
-
--   What is effective, i.e. what is done well?
-
--   What is ineffective, i.e. what could be improved?
-
--   What are you curious about after looking at the visualization?
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
 
 ```{r}
 #| echo: false
@@ -116,17 +120,10 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![Source: [Twitter](https://twitter.com/reina_sabah/status/1291509085855260672)](images/03/female-heights.png){fig-align="center"}
 :::
 :::
-
-## Questions from the prepare materials?
-
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
-```
-# Application exercise
 
 ## `ae-02-bechdel-dataviz`
 
