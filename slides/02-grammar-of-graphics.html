@@ -7,14 +7,12 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.542">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-01-16">
-  <title>STA 199 - Meet the toolkit</title>
+  <meta name="dcterms.date" content="2024-01-18">
+  <title>STA 199 - Grammar of graphics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,11 +388,13 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Meet the toolkit">
-<meta property="og:description" content="Lecture 1">
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+<meta property="og:title" content="STA 199 - Grammar of graphics">
+<meta property="og:description" content="Lecture 2">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Meet the toolkit">
-<meta name="twitter:description" content="Lecture 1">
+<meta name="twitter:title" content="STA 199 - Grammar of graphics">
+<meta name="twitter:description" content="Lecture 2">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -404,8 +404,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Meet the toolkit</h1>
-  <p class="subtitle">Lecture 1</p>
+  <h1 class="title">Grammar of graphics</h1>
+  <p class="subtitle">Lecture 2</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -418,390 +418,174 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-01-16</p>
+  <p class="date">2024-01-18</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
-<h1>Warm-up</h1>
+<h1>Warm up</h1>
 
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>If you have not yet completed the Getting to know you survey, please do so asap!</p></li>
-<li><p>If you have not yet accepted the invite to join the course GitHub Organization (I’m looking at 41 of you as of this morning!), please do so asap!</p></li>
-<li><p>Office hours + locations linked at <a href="https://sta199-s24.github.io/course-team.html" class="uri">https://sta199-s24.github.io/course-team.html</a>, come say hi to me or any of the TAs!</p></li>
+<li>…</li>
 </ul>
+</section>
+<section id="from-last-time-your-turn" class="slide level2 smaller">
+<h2>From last time: Your turn!</h2>
+<div class="appex">
+<p><code>ae-01-meet-the-penguins</code></p>
+<ul>
+<li>If you haven’t done so on Tuesday: Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-meet-the-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</li>
+<li>Open and render the Quarto document <code>ae-01-meet-the-penguins.qmd</code>, review the document, and fill in the blanks.</li>
+</ul>
+</div>
 </section></section>
 <section>
-<section id="from-last-time" class="title-slide slide level1 center">
-<h1>From last time…</h1>
+<section id="toolkit-version-control-and-collaboration" class="title-slide slide level1 center">
+<h1>Toolkit: Version control and collaboration</h1>
 
 </section>
-<section id="course-homepage" class="slide level2">
-<h2>Course homepage</h2>
-<p>Let’s take a tour!</p>
-</section>
-<section id="collaboration-policy" class="slide level2">
-<h2>Collaboration policy</h2>
-<ul>
-<li><p>Only work that is clearly assigned as team work should be completed collaboratively.</p></li>
-<li><p>Homeworks must be completed individually. You may <strong>not</strong> directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.</p></li>
-<li><p>Exams must be completed individually. You may <strong>not</strong> discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer.</p></li>
-</ul>
-</section>
-<section id="sharing-reusing-code-policy" class="slide level2">
-<h2>Sharing / reusing code policy</h2>
-<ul>
-<li><p>We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted</p></li>
-<li><p>Unless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g.&nbsp;RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).</p></li>
-<li><p>Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source</p></li>
-</ul>
-</section>
-<section id="use-of-generative-ai" class="slide level2 smaller">
-<h2>Use of generative AI</h2>
-<ul>
-<li><p>Treat generative AI, such as ChatGPT, the same as other online resources.</p></li>
-<li><p>Guiding principles:</p>
-<ul>
-<li><p>(1) <em>Cognitive dimension:</em> Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.</p></li>
-<li><p>(2) <em>Ethical dimension</em><strong>:</strong> Students using AI should be transparent about their use and make sure it aligns with academic integrity.</p></li>
-</ul></li>
-<li><p><strong>✅ AI tools for code:</strong> You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. See the syllabus for guidelines for citing AI-generated content.</p></li>
-<li><p><strong>❌ AI tools for narrative:</strong> Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.</p></li>
-</ul>
-</section>
-<section id="academic-integrity" class="slide level2">
-<h2>Academic integrity</h2>
-<blockquote>
-<p>To uphold the Duke Community Standard:</p>
-<ul>
-<li><p>I will not lie, cheat, or steal in my academic endeavors;</p></li>
-<li><p>I will conduct myself honorably in all my endeavors; and</p></li>
-<li><p>I will act if the Standard is compromised.</p></li>
-</ul>
-</blockquote>
-</section>
-<section id="most-importantly" class="slide level2">
-<h2>Most importantly!</h2>
-<p>Ask if you’re not sure if something violates a policy!</p>
-</section>
-<section id="five-tips-for-success" class="slide level2">
-<h2>Five tips for success</h2>
-<ol type="1">
-<li><p>Complete all the preparation work before class.</p></li>
-<li><p>Ask questions.</p></li>
-<li><p>Do the readings.</p></li>
-<li><p>Do the lab.</p></li>
-<li><p>Don’t procrastinate – at least on a weekly basis!</p></li>
-</ol>
-</section></section>
-<section>
-<section id="course-toolkit" class="title-slide slide level1 center">
-<h1>Course toolkit</h1>
-
-</section>
-<section id="course-toolkit-1" class="slide level2 smaller">
-<h2>Course toolkit</h2>
+<section id="git-and-github" class="slide level2 smaller">
+<h2>Git and GitHub</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Course operation</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/02/git-logo.png" class="quarto-figure quarto-figure-center" alt="Git logo" width="200"></p>
+</figure>
+</div>
 <ul>
-<li>Materials: <a href="https://sta199-s24.github.io/">sta199-s24.github.io</a></li>
-<li>Submission: Gradescope</li>
-<li>Discussion: Ed Discussion</li>
-<li>Gradebook: Canvas</li>
+<li>Git is a version control system – like “Track Changes” features from Microsoft Word, on steroids</li>
+<li>It’s not the only version control system, but it’s a very popular one</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>Doing data science</strong></p>
-<ul>
-<li>Computing:
-<ul>
-<li>R</li>
-<li>RStudio</li>
-<li>tidyverse</li>
-<li>Quarto</li>
-</ul></li>
-<li>Version control and collaboration:
-<ul>
-<li>Git</li>
-<li>GitHub</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section></section>
-<section>
-<section id="toolkit-computing" class="title-slide slide level1 center">
-<h1>Toolkit: Computing</h1>
-
-</section>
-<section id="learning-goals" class="slide level2 smaller">
-<h2>Learning goals</h2>
-<p>By the end of the course, you will be able to…</p>
-<div>
-<ul>
-<li class="fragment">gain insight from data</li>
-<li class="fragment">gain insight from data, <strong>reproducibly</strong></li>
-<li class="fragment">gain insight from data, reproducibly, <strong>using modern programming tools and techniques</strong></li>
-<li class="fragment">gain insight from data, reproducibly <strong>and collaboratively</strong>, using modern programming tools and techniques</li>
-<li class="fragment">gain insight from data, reproducibly <strong>(with literate programming and version control)</strong> and collaboratively, using modern programming tools and techniques</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="reproducible-data-analysis" class="title-slide slide level1 center">
-<h1>Reproducible data analysis</h1>
-
-</section>
-<section id="reproducibility-checklist" class="slide level2 smaller">
-<h2>Reproducibility checklist</h2>
-<div class="question">
-<p>What does it mean for a data analysis to be “reproducible”?</p>
-</div>
-<div class="fragment">
-<p><strong>Short-term goals:</strong></p>
-<ul>
-<li>Are the tables and figures reproducible from the code and data?</li>
-<li>Does the code actually do what you think it does?</li>
-<li>In addition to what was done, is it clear <em>why</em> it was done?</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Long-term goals:</strong></p>
-<ul>
-<li>Can the code be used for other data?</li>
-<li>Can you extend the code to do other things?</li>
-</ul>
-</div>
-</section>
-<section id="toolkit-for-reproducibility" class="slide level2">
-<h2>Toolkit for reproducibility</h2>
-<ul>
-<li>Scriptability <span class="math inline">\(\rightarrow\)</span> R</li>
-<li>Literate programming (code, narrative, output in one place) <span class="math inline">\(\rightarrow\)</span> Quarto</li>
-<li>Version control <span class="math inline">\(\rightarrow\)</span> Git / GitHub</li>
-</ul>
-</section></section>
-<section>
-<section id="r-and-rstudio" class="title-slide slide level1 center">
-<h1>R and RStudio</h1>
-
-</section>
-<section id="r-and-rstudio-1" class="slide level2 smaller">
-<h2>R and RStudio</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/02/r-logo.png" class="quarto-figure quarto-figure-center" alt="R logo"></p>
+<p><img data-src="images/02/github-logo.png" class="quarto-figure quarto-figure-center" alt="GitHub logo" width="200"></p>
 </figure>
 </div>
 <ul>
-<li>R is an open-source statistical <strong>programming language</strong></li>
-<li>R is also an environment for statistical computing and graphics</li>
-<li>It’s easily extensible with <em>packages</em></li>
-</ul>
-</div><div class="column fragment" style="width:50%;">
-<p><img data-src="images/02/rstudio-logo.png" alt="RStudio logo"></p>
-<ul>
-<li>RStudio is a convenient interface for R called an <strong>IDE</strong> (integrated development environment), e.g.&nbsp;<em>“I write R code in the RStudio IDE”</em></li>
-<li>RStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists</li>
+<li><p>GitHub is the home for your Git-based projects on the internet – like DropBox but much, much better</p></li>
+<li><p>We will use GitHub as a platform for web hosting and collaboration (and as our course management system!)</p></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="r-vs.-rstudio" class="slide level2">
-<h2>R vs.&nbsp;RStudio</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://moderndive.com/1-getting-started.html"><img data-src="images/02/r_vs_rstudio.png" class="quarto-figure quarto-figure-center" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
-</figure>
-</div>
+<section id="versioning---done-badly" class="slide level2">
+<h2>Versioning - done badly</h2>
 
-<aside><div>
-<p>Source: <a href="https://moderndive.com/1-getting-started.html">Modern Dive</a>.</p>
-</div></aside></section>
-<section id="r-packages" class="slide level2">
-<h2>R packages</h2>
+<img data-src="images/02/phd_comics_vc.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="versioning---done-better" class="slide level2">
+<h2>Versioning - done better</h2>
+
+<img data-src="images/02/lego-steps.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="versioning---done-even-better" class="slide level2">
+<h2>Versioning - done even better</h2>
+<h3 id="with-human-readable-messages">with human readable messages</h3>
+
+<img data-src="images/02/lego-steps-commit-messages.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-01.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-1" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-02.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-2" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-03.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="how-will-we-use-git-and-github-3" class="slide level2">
+<h2>How will we use Git and GitHub?</h2>
+
+<img data-src="images/02/whole-game-04.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="git-and-github-tips" class="slide level2 smaller">
+<h2>Git and GitHub tips</h2>
 <div>
 <ul>
-<li class="fragment"><p><strong>Packages</strong>: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup></p></li>
-<li class="fragment"><p>As of 15 January 2023, there are 20,252 R packages available on <strong>CRAN</strong> (the Comprehensive R Archive Network)<sup>2</sup></p></li>
-<li class="fragment"><p>We’re going to work with a small (but important) subset of these!</p></li>
+<li class="fragment">There are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.</li>
+<li class="fragment">We will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.</li>
+<li class="fragment">There is a great resource for working with git and R: <a href="http://happygitwithr.com/">happygitwithr.com</a>. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help.</li>
 </ul>
 </div>
-
-<aside><div>
-<p><sup>1</sup> Wickham and Bryan, <a href="https://r-pkgs.org/">R Packages</a>.</p>
-<p><sup>2</sup> <a href="https://cran.r-project.org/web/packages/">CRAN contributed packages</a>.</p>
-</div></aside></section>
-<section id="tour-r-rstudio" class="slide level2 smaller">
-<h2>Tour: R + RStudio</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+</section>
+<section id="tour-git-github" class="slide level2">
+<h2>Tour: Git + GitHub</h2>
 <div class="demo">
-<p><strong>Option 1:</strong></p>
+<p><strong>Just one option for now:</strong></p>
 <p>Sit back and enjoy the show!</p>
 </div>
-</div><div class="column" style="width:50%;">
-<div class="appex">
-<p><strong>Option 2:</strong></p>
-<p>Clone the corresponding application exercise repo and follow along.</p>
-<p><i class="fa-solid fa-laptop" aria-label="laptop"></i> <code>ae-01-meet-the-penguins</code></p>
-<p>Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="tour-recap-r-rstudio" class="slide level2">
-<h2>Tour recap: R + RStudio</h2>
-
-<img data-src="images/02/tour-r-rstudio.png" class="r-stretch"></section>
-<section id="a-short-list-for-now-of-r-essentials" class="slide level2">
-<h2>A short list (for now) of R essentials</h2>
-<ul>
-<li>Functions are (most often) verbs, followed by what they will be applied to in parentheses:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">do_this</span>(to_this)</span>
-<span id="cb1-2"><a></a><span class="fu">do_that</span>(to_this, to_that, with_those)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<ul>
-<li>Packages are installed with the <code>install.packages()</code> function and loaded with the <code>library</code> function, once per session:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
-<span id="cb2-2"><a></a><span class="fu">library</span>(package_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="r-essentials-continued" class="slide level2">
-<h2>R essentials (continued)</h2>
-<ul>
-<li>Columns (variables) in data frames are accessed with <code>$</code>:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>dataframe<span class="sc">$</span>var_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<ul>
-<li>Object documentation can be accessed with <code>?</code></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>?mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="tidyverse" class="slide level2">
-<h2>tidyverse</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="https://tidyverse.org"><img data-src="images/02/tidyverse.png" alt="Hex logos for dplyr, ggplot2, forcats, tibble, readr, stringr, tidyr, and purrr"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="https://www.tidyverse.org/">tidyverse.org</a></p>
-<ul>
-<li>The <strong>tidyverse</strong> is an opinionated collection of R packages designed for data science</li>
-<li>All packages share an underlying philosophy and a common grammar</li>
-</ul>
-</div>
-</div>
 </section></section>
 <section>
-<section id="quarto" class="title-slide slide level1 center">
-<h1>Quarto</h1>
+<section id="data-visualization" class="title-slide slide level1 center">
+<h1>Data visualization</h1>
 
 </section>
-<section id="quarto-1" class="slide level2">
-<h2>Quarto</h2>
-<div>
-<ul>
-<li class="fragment">Fully reproducible reports – each time you render the analysis is ran from the beginning</li>
-<li class="fragment">Code goes in chunks narrative goes outside of chunks</li>
-<li class="fragment">A visual editor for a familiar / Google docs-like editing experience</li>
-</ul>
-</div>
-</section>
-<section id="tour-quarto" class="slide level2 smaller">
-<h2>Tour: Quarto</h2>
+<section id="examining-data-visualization" class="slide level2 smaller">
+<h2>Examining data visualization</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="demo">
-<p><strong>Option 1:</strong></p>
-<p>Sit back and enjoy the show!</p>
+<p>Discuss the following for the visualization.</p>
+<ul>
+<li><p>What is the visualization trying to show?</p></li>
+<li><p>What is effective, i.e.&nbsp;what is done well?</p></li>
+<li><p>What is ineffective, i.e.&nbsp;what could be improved?</p></li>
+<li><p>What are you curious about after looking at the visualization?</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c7fd5bae" data-update-every="1" tabindex="0" style="bottom:0;left:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="appex">
-<p><strong>Option 2:</strong></p>
-<p>Clone the corresponding application exercise repo (if you haven’t yet done so) and follow along.</p>
-<p><i class="fa-solid fa-laptop" aria-label="laptop"></i> <code>ae-01-meet-the-penguins</code></p>
-<p>Go to the <a href="https://github.com/sta199-s24">course GitHub organization</a> and clone <a href="https://github.com/sta199-s24/ae-01-penguins"><code>ae-01-meet-the-penguins</code></a> to <a href="https://cmgr.oit.duke.edu/containers">your container</a>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="tour-recap-quarto" class="slide level2">
-<h2>Tour recap: Quarto</h2>
-
-<img data-src="images/02/tour-quarto.png" class="quarto-figure quarto-figure-center r-stretch" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk."></section>
-<section id="environments" class="slide level2">
-<h2>Environments</h2>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>The environment of your Quarto document is separate from the Console!</p>
-</div>
-</div>
-</div>
-<p>Remember this, and expect it to bite you a few times as you’re learning to work with Quarto!</p>
-</section>
-<section id="environments-1" class="slide level2">
-<h2>Environments</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>First, run the following in the console:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb5-2"><a></a>x <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<div class="question fragment">
-<p>All looks good, eh?</p>
-</div>
-</div><div class="column fragment" style="width:50%;">
-<p>Then, add the following in an R chunk in your Quarto document</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="sc">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<div class="question fragment">
-<p>What happens? Why the error?</p>
-</div>
-</div>
-</div>
-</section>
-<section id="how-will-we-use-quarto" class="slide level2">
-<h2>How will we use Quarto?</h2>
-<ul>
-<li>Every application exercise, lab, project, etc. is an Quarto document</li>
-<li>You’ll always have a template Quarto document to start with</li>
-<li>The amount of scaffolding in the template will decrease over the semester</li>
-</ul>
-</section>
-<section id="whats-with-all-the-hexes" class="slide level2">
-<h2>What’s with all the hexes?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/02/hexes.jpeg" class="quarto-figure quarto-figure-center" alt="Hex logos for many packages"></p>
+<p><img data-src="images/03/female-heights.png" class="quarto-figure quarto-figure-center"></p>
+<figcaption>Source: <a href="https://twitter.com/reina_sabah/status/1291509085855260672">Twitter</a></figcaption>
 </figure>
 </div>
+</div>
+</div>
+</section>
+<section id="questions-from-the-prepare-materials" class="slide level2">
+<h2>Questions from the prepare materials?</h2>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</section></section>
+<section>
+<section id="application-exercise" class="title-slide slide level1 center">
+<h1>Application exercise</h1>
+
+</section>
+<section id="ae-02-bechdel-dataviz" class="slide level2">
+<h2><code>ae-02-bechdel-dataviz</code></h2>
+<div class="appex">
+<ul>
+<li>Go to the course <a href="https://github.com/sta199-f22-1">GitHub org</a> and find your <code>ae</code> repo (repo name will be suffixed with your GitHub name).</li>
+<li>Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</li>
+<li>Render, commit, and push your edits by the AE deadline (end of this week)</li>
+</ul>
+</div>
+</section>
+<section id="recap-of-ae" class="slide level2 smaller">
+<h2>Recap of AE</h2>
+<ul>
+<li>Construct plots with <code>ggplot()</code>.</li>
+<li>Layers of ggplots are separated by <code>+</code>s.</li>
+<li>The formula is (almost) always as follows:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">geom_XXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Aesthetic attributes of a geometries (color, size, transparency, etc.) can be <strong>map</strong>ped to variables in the data or <strong>set</strong> by the user, e.g.&nbsp;<code>color = binary</code> vs.&nbsp;<code>color = "pink"</code>.</li>
+<li>Use <code>facet_wrap()</code> when faceting (creating small multiples) by one variable and <code>facet_grid()</code> when faceting by two variables.</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo.png" class="slide-logo"></p>
