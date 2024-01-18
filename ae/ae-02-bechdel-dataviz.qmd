@@ -1,0 +1,299 @@
+---
+title: "AE 02: Bechdel + data visualization"
+editor: visual
+---
+
+In this mini analysis we work with the data used in the FiveThirtyEight story titled ["The Dollar-And-Cents Case Against Hollywood's Exclusion of Women"](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/).
+
+This analysis is about the [Bechdel test](https://en.wikipedia.org/wiki/Bechdel_test), a measure of the representation of women in fiction.
+
+## Getting started
+
+### Packages
+
+We start with loading the packages we'll use: **tidyverse** for majority of the analysis and **scales** for pretty plot labels later on.
+
+```{r}
+#| label: load-packages
+#| warning: false
+
+library(tidyverse)
+library(scales)
+```
+
+### Data
+
+The data are stored as a CSV (comma separated values) file in the `data` folder of your repository. Let's read it from there and save it as an object called `bechdel`.
+
+```{r}
+#| label: read-data
+#| message: false
+
+bechdel <- read_csv("data/bechdel.csv")
+```
+
+::: callout-note
+This a modified version of the `bechdel` dataset from the previous application exercise. It's been modified to include some new variables derived from existing variables as well as to limit the scope of the data to movies released between 1990 and 2013. For now we're not going to discuss how these modifications were made (that's next week's topic) but if you're curious, you can find the data prep script in the `data/` folder of your repo. Don't spend too long trying to decipher it, wait till next week when you have the right tools to do so!
+:::
+
+### Get to know the data
+
+We can use the `glimpse` function to get an overview (or "glimpse") of the data.
+
+```{r}
+#| label: glimpse
+
+# add code here
+```
+
+-   What does each observation (row) in the data set represent?
+
+Each observation represents a **\_\_\_**.
+
+-   How many observations (rows) are in the data set?
+
+There are `r nrow(bechdel)` movies in the dataset.
+
+-   How many variables (columns) are in the data set?
+
+There are `___` columns in the dataset.
+
+### Variables of interest
+
+The variables we'll focus on are the following:
+
+-   `budget_2013`: Budget in 2013 inflation adjusted dollars.
+-   `gross_2013`: Gross (US and international combined) in 2013 inflation adjusted dollars.
+-   `roi`: Return on investment, calculated as the ratio of the gross to budget.
+-   `clean_test`: Bechdel test result:
+    -   `ok` = passes test
+    -   `dubious`
+    -   `men` = women only talk about men
+    -   `notalk` = women don't talk to each other
+    -   `nowomen` = fewer than two women
+-   `binary`: Bechdel Test PASS vs FAIL binary
+
+We will also use the `year` of release in data prep and `title` of movie to take a deeper look at some outliers.
+
+There are a few other variables in the dataset, but we won't be using them in this analysis.
+
+## Visualizing data with `ggplot2`
+
+**ggplot2** is the package and `ggplot()` is the function in this package that is used to create a plot.
+
+-   `ggplot()` creates the initial base coordinate system, and we will add layers to that base. We first specify the data set we will use with `data = bechdel`.
+
+```{r}
+#| label: plot-base
+
+ggplot(data = bechdel)
+```
+
+-   The `mapping` argument is paired with an aesthetic (`aes()`), which tells us how the variables in our data set should be mapped to the visual properties of the graph.
+
+```{r}
+#| label: plot-aesthetic-mapping
+
+ggplot(
+  data = bechdel, 
+  mapping = aes(x = budget_2013, y = gross_2013)
+)
+```
+
+As we previously mentioned, we often omit the names of the first two arguments in R functions. So you'll often see this written as:
+
+```{r}
+#| label: plot-simplified-call
+
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013))
+```
+
+Note that the result is exactly the same.
+
+-   The `geom_xx` function specifies the type of plot we want to use to represent the data. In the code below, we use `geom_point` which creates a plot where each observation is represented by a point.
+
+```{r}
+#| label: plot-point
+
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +
+  geom_point()
+```
+
+Note that this results in a warning as well. What does the warning mean?
+
+## Gross revenue vs. budget
+
+### Step 1 - Your turn
+
+Modify the following plot to change the color of all points to a different color.
+
+::: callout-tip
+See <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf> for many color options you can use by name in R or use the [hex code](https://en.wikipedia.org/wiki/Web_colors) for a color of your choice.
+:::
+
+```{r}
+#| label: plot-point-color
+
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +
+  geom_point(color = "deepskyblue3") 
+```
+
+### Step 2 - Your turn
+
+Add labels for the title and x and y axes.
+
+```{r}
+#| label: plot-labels
+
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013))+
+  geom_point(color = "deepskyblue3") + 
+  labs(
+    x = "___", 
+    y = "___", 
+    title = "___"
+  )
+```
+
+### Step 3 - Your turn
+
+An `aes`thetic is a visual property of one of the objects in your plot. Commonly used aesthetic options are:
+
+-   color
+-   fill
+-   shape
+-   size
+-   alpha (transparency)
+
+Modify the plot below, so the `color` of the points is based on the variable `binary`.
+
+```{r}
+#| label: plot-aes-color
+
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +
+  geom_point() + 
+  labs(
+    x = "Budget (in 2013 $)", 
+    y = "Gross revenue (in 2013 $)", 
+    title = "Gross revenue vs. budget, by ___"
+  )
+```
+
+### Step 4 - Your turn
+
+Expand on your plot from the previous step to make the size of your points based on `roi`.
+
+```{r}
+#| label: plot-aes-size
+
+# add code here
+```
+
+### Step 5 - Your turn
+
+Expand on your plot from the previous step to make the transparency (`alpha`) of the points 0.5.
+
+```{r}
+#| label: plot-aes-alpha
+
+# add code here
+```
+
+### Step 6 - Your turn
+
+Expand on your plot from the previous step by using `facet_wrap` to display the association between budget and gross for different values of `clean_test`.
+
+```{r}
+#| label: plot-facet-wrap
+
+# add code here
+```
+
+### Step 7 - Demo
+
+Improve your plot from the previous step by making the x and y scales more legible.
+
+::: callout-tip
+Make use of the [**scales**](https://scales.r-lib.org/) package, specifically the `scale_x_continuous()` and `scale_y_continuous()` functions.
+:::
+
+```{r}
+#| label: plot-scales
+
+# add code here
+```
+
+### Step 8 - Your turn
+
+Expand on your plot from the previous step by using `facet_grid` to display the association between budget and gross for different combinations of `clean_test` and `binary`. Comment on whether this was a useful update.
+
+```{r}
+#| label: plot-facet-grid
+
+# add code here
+```
+
+Add comment here...
+
+### Step 9 - Demo
+
+What other improvements could we make to this plot?
+
+```{r}
+#| label: plot-improve
+
+# add code here
+```
+
+### Render, commit, and push
+
+1.  If you made any changes since the last render, render again to get the final version of the AE.
+
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using a simple and informative message.
+
+3.  Use the **green arrow** to push your changes to your repo on GitHub.
+
+4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
+
+## Return-on-investment
+
+Finally, let's take a look at return-on-investment (ROI).
+
+### Step 1 - Your turn
+
+Create side-by-side box plots of `roi` by `clean_test` where the boxes are colored by `binary`.
+
+```{r}
+#| label: roi-zoom
+
+# add code here
+```
+
+What are those movies with *very* high returns on investment?
+
+```{r}
+bechdel |>
+  filter(roi > 400) |>
+  select(title, roi, budget_2013, gross_2013, year, clean_test)
+```
+
+### Step 2 - Demo
+
+Expand on your plot from the previous step to zoom in on movies with `roi < ___` to get a better view of how the medians across the categories compare.
+
+```{r}
+#| label: roi-test-zoom
+
+# add code here
+```
+
+What does this plot say about return-on-investment on movies that pass the Bechdel test?
+
+### Render, commit, and push
+
+1.  If you made any changes since the last render, render again to get the final version of the AE.
+
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using a simple and informative message.
+
+3.  Use the **green arrow** to push your changes to your repo on GitHub.
+
+4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
