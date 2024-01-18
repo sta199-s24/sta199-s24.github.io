@@ -1,5 +1,5 @@
 ---
-title: "Lab 0 - Hello R!"
+title: "Lab 1 - Hello R!"
 categories: "Lab"
 execute:
   eval: false
