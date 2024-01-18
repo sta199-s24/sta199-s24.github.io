@@ -343,14 +343,14 @@
     "href": "slides/02-grammar-of-graphics.html#announcements",
     "title": "Grammar of graphics",
     "section": "Announcements",
-    "text": "Announcements\n\n…"
+    "text": "Announcements\n\nLab 1 on Monday – go to your assigned lab"
   },
   {
-    "objectID": "slides/02-grammar-of-graphics.html#from-last-time-your-turn",
-    "href": "slides/02-grammar-of-graphics.html#from-last-time-your-turn",
+    "objectID": "slides/02-grammar-of-graphics.html#from-the-survey",
+    "href": "slides/02-grammar-of-graphics.html#from-the-survey",
     "title": "Grammar of graphics",
-    "section": "From last time: Your turn!",
-    "text": "From last time: Your turn!\n\nae-01-meet-the-penguins\n\nIf you haven’t done so on Tuesday: Go to the course GitHub organization and clone ae-01-meet-the-penguins to your container.\nOpen and render the Quarto document ae-01-meet-the-penguins.qmd, review the document, and fill in the blanks."
+    "section": "From the survey",
+    "text": "From the survey\n\nAlmost half of the class mentioned being nervous about coding – you’re not alone! 💙\nA good number of students mentioned being nervous about being new to stats + data science – you’re also not alone! 💜\nVisibility of text on slides: Cranked up font size! 💛\nAbout exams: No coding on the in class (time-limited) exam + there will be practice exams\nAbout teams: Peer evaluations + milestones throughout semester\nGrading criteria: Scale of 0-4 for each exercise on lab + more details in lab instructions\nHardware: Code running on university containers"
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#git-and-github",
