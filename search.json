@@ -572,84 +572,84 @@
   {
     "objectID": "labs/lab-1-draft.html",
     "href": "labs/lab-1-draft.html",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "",
     "text": "This lab will introduce you to the course computing workflow. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAn additional goal is to reinforce Git and GitHub, the version control, web hosting, and collaboration systems that we will be using throughout the course.\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands."
   },
   {
     "objectID": "labs/lab-1-draft.html#log-in-to-rstudio",
     "href": "labs/lab-1-draft.html#log-in-to-rstudio",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Log in to RStudio",
     "text": "Log in to RStudio\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment."
   },
   {
     "objectID": "labs/lab-1-draft.html#clone-the-repo-start-new-rstudio-project",
     "href": "labs/lab-1-draft.html#clone-the-repo-start-new-rstudio-project",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Clone the repo & start new RStudio project",
     "text": "Clone the repo & start new RStudio project\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-1. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-0.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab."
   },
   {
     "objectID": "labs/lab-1-draft.html#r-and-r-studio",
     "href": "labs/lab-1-draft.html#r-and-r-studio",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "R and R Studio",
     "text": "R and R Studio\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file."
   },
   {
     "objectID": "labs/lab-1-draft.html#yaml",
     "href": "labs/lab-1-draft.html#yaml",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "YAML",
     "text": "YAML\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document."
   },
   {
     "objectID": "labs/lab-1-draft.html#committing-changes",
     "href": "labs/lab-1-draft.html#committing-changes",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Committing changes",
     "text": "Committing changes\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!"
   },
   {
     "objectID": "labs/lab-1-draft.html#push-changes",
     "href": "labs/lab-1-draft.html#push-changes",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Push changes",
     "text": "Push changes\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push."
   },
   {
     "objectID": "labs/lab-1-draft.html#exercise-1",
     "href": "labs/lab-1-draft.html#exercise-1",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Exercise 1",
     "text": "Exercise 1\nVisualize the distribution of population density of counties using first a histogram (with an appropriate binwidth) and then with a box plot. Make sure to set informative titles and axis labels for each of your plots. Then, using information as needed from these plots, describe the shape of the distribution of population density of counties and comment on any potential outliers, making sure you identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer interactively to identify the outliers, you do not have to write code.\n\n\n\n\n\n\nNote\n\n\n\nFor more details and code examples for each of these plots, see the relevant reference pages:\n\nhistograms\nbox plots\n\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Ex 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward."
   },
   {
     "objectID": "labs/lab-1-draft.html#exercise-2",
     "href": "labs/lab-1-draft.html#exercise-2",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Exercise 2",
     "text": "Exercise 2\nThis exercise has two parts. Part (a) asks you to create a single plot and identify states with shapes and colors and part (b) asks you to create separate plots (small multiples) to identify states.\n\nCreate a scatterplot of the percentage of people with a college degree (percollege) versus percentage below poverty (percbelowpoverty) where the color and shape of points are determined by state. Then, describe what you observe in this plot, making sure to include similarities and differences in the patterns across states.\nNow, let’s examine the relationship between the same two variables, using a separate plot for each state. Label the axes and give the plot a title. Use geom_smooth() with the argument se = FALSE to add a smooth curve fit to the data. Which plot do you prefer - this plot or the plot in Ex 2? Briefly explain your choice.\n\n\n\n\n\n\nNote\n\n\n\nse = FALSE removes the confidence bands around the line. These bands show the uncertainty around the smooth curve. We’ll discuss uncertainty around estimates later in the course and bring these bands back then.\n\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Ex 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward."
   },
   {
     "objectID": "labs/lab-1-draft.html#exercise-3",
     "href": "labs/lab-1-draft.html#exercise-3",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Exercise 3",
     "text": "Exercise 3\nDo some states have counties that tend to be geographically larger than others?\nTo explore this question, create side-by-side boxplots of area (area) of a county based on state (state). Describe what you observe from the plot. Which state has the single largest county? How do you know based on the plot?\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nOnce again, make sure to commit and push all changed files so that your Git pane is empty afterwards."
   },
   {
     "objectID": "labs/lab-1-draft.html#exercise-4",
     "href": "labs/lab-1-draft.html#exercise-4",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Exercise 4",
     "text": "Exercise 4\nDo some states have a higher percentage of their counties located in a metropolitan area?\nCreate a segmented bar chart with one bar per state and the bar filled with colors according to the value of metro – one color indicating Yes and the other color indicating No for whether a county is considered to a metro area. The y axis of the segmented barplot should range from 0 to 1, indicating proportions. Describe the distribution of metro across states based on this plot.\n\n\n\n\n\n\nHint\n\n\n\nFor this exercise, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini preview. This pipeline creates a new variable called metro based on the value of the existing variable called inmetro. If the value of inmetro is equal to 1 (inmetro == 1), it sets the value of metro to \"Yes\", and if not, it sets the value of metro to \"No\". The resulting data frame is assigned back to midwest, overwriting the existing midwest data frame with a version that includes the new metro variable.\n\nmidwest &lt;- midwest |&gt;\n  mutate(metro = if_else(inmetro == 1, \"Yes\", \"No\"))\n\n\n\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nAnd once again, make sure to commit and push all changed files so that your Git pane is empty afterwards. We keep repeating this because it’s important, and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions."
   },
   {
     "objectID": "labs/lab-1-draft.html#exercise-5",
     "href": "labs/lab-1-draft.html#exercise-5",
-    "title": "Lab 0 - Hello R!",
+    "title": "Lab 1 - Hello R!",
     "section": "Exercise 5",
     "text": "Exercise 5\nRecreate the plot below, and then give it a title. Finally, interpret the visualization, making sure you identify at least one county that is a clear outlier in Wisconsin (WI) by name in your narrative. You can use the data viewer interactively to identify them, you do not have to write code.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\nThe ggplot2 reference for themes will be helpful in determining the theme.\nThe size of the points is 2.\nThe transparency (alpha) of the points is 0.5.\nYou can put line breaks in labels with \\n.\n\n\n\n\nRender, commit, and push your final changes to GitHub with a meaningful commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterwards."
   },
