@@ -23,6 +23,7 @@ library(countdown)
 ## Announcements
 
 -   Lab 1 on Monday – go to your assigned lab
+-   Catch up with the prepare materials
 
 ## From the survey {.smaller}
 
