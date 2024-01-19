@@ -272,16 +272,15 @@ To submit your assignment:
 -   Click on your *STA 199* course.
 -   Click on the assignment, and you'll be prompted to submit it.
 -   Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be "checked").
--   Select the first page of your .pdf submission to be associated with the *"Workflow & formatting"* question.
 
 # Grading
 
 Each exercise will be graded on the following scale:
 
-|     |                                                                                        |
-|-------------|-----------------------------------------------------------|
-| 4   | Response shows proficiency                                                             |
-| 3   | Response shows understanding                                                           |
-| 2   | Response shows effort                                                                  |
-| 1   | Response does not show sufficient effort or understanding and/or is largely incomplete |
-| 0   | No attempt                                                                             |
+|     |                                                                                         |
+|------------|--------------------------------------------------------|
+| 4   | Response shows proficiency and addresses large majority of rubric items.                |
+| 3   | Response shows understanding and addresses majority of rubric items.                    |
+| 2   | Response shows effort and misses majority of rubric items.                              |
+| 1   | Response does not show sufficient effort or understanding and/or is largely incomplete. |
+| 0   | No attempt.                                                                             |
