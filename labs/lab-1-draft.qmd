@@ -51,7 +51,7 @@ By the end of the lab, you will...
 
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 
--   Click *lab-0.qmd* to open the template Quarto file. This is where you will write up your code and narrative for the lab.
+-   Click *lab-1.qmd* to open the template Quarto file. This is where you will write up your code and narrative for the lab.
 
 ## R and R Studio
 
@@ -279,7 +279,7 @@ To submit your assignment:
 Each exercise will be graded on the following scale:
 
 |     |                                                                                        |
-|-----|-------------------------------------------------------|
+|-------------|-----------------------------------------------------------|
 | 4   | Response shows proficiency                                                             |
 | 3   | Response shows understanding                                                           |
 | 2   | Response shows effort                                                                  |
