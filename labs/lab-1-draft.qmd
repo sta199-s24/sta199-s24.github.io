@@ -313,7 +313,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 # Submission
 
-Once you are finished with the lab, you will your final PDF document to Gradescope.
+Once you are finished with the lab, you will submit your final PDF document to Gradescope.
 
 ::: callout-warning
 Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.
@@ -335,7 +335,7 @@ To submit your assignment:
 Each exercise will be graded on the following scale:
 
 |     |                                                                                         |
-|-----|-----------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 | 4   | Response shows proficiency and addresses large majority of rubric items.                |
 | 3   | Response shows understanding and addresses majority of rubric items.                    |
 | 2   | Response shows effort and misses majority of rubric items.                              |
