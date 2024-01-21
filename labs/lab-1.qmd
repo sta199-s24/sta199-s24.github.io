@@ -218,8 +218,11 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ### Question 3
 
-Create a scatterplot of the percentage of people with a college degree (`percollege`) versus percentage below poverty (`percbelowpoverty`) where the color and shape of points are determined by `state`.
-Then, describe what you observe in this plot, making sure to include similarities and differences in the patterns across states.
+Create a scatterplot of the percentage below poverty (`percbelowpoverty` on the y-axis) versus percentage of people with a college degree (`percollege` on the x-axis), where the color [**and**]{.underline} shape of points are determined by `state`.
+Make sure to set informative titles, axis, and legend labels for your plot.
+First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative.
+You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them.
+Then, comment on whether you can identify how this relationship varies across states.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 3".
@@ -229,9 +232,9 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ### Question 4
 
-Now, let's examine the relationship between the same two variables, using a separate plot for each state, i.e., with faceting with `facet_wrap()`.
-Label the axes and give the plot a title.
-Use `geom_smooth()` with the argument `se = FALSE` to add a smooth curve fit to the data.
+Now, let's examine the relationship between the same two variables, once again using different colors and shapes to represent each state, and using a separate plot for each state, i.e., with faceting with `facet_wrap()`.
+In addition to points (`geom_point()`), represent the data with a smooth curve fit to the data with `geom_smooth()`, with the argument `se = FALSE`.
+Make sure to set informative titles, axis, and legend labels for your plot.
 Which plot do you prefer - this plot or the plot in Question 3?
 Briefly explain your choice.
 
@@ -252,9 +255,11 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 *Do some states have counties that tend to be geographically larger than others?*
 
 To explore this question, create side-by-side boxplots of area (`area`) of a county based on state (`state`).
-Describe what you observe from the plot.
+How do typical county area sizes compare across states?
+How do variabilities of county sizes compare across states?
 Which state has the single largest county?
-How can you tell this based on the plot?
+Identify the name of this county.
+You can use the data viewer to identify it interactively, you do not have to write code.
 
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
@@ -268,7 +273,8 @@ Once again, make sure to commit and push all changed files so that your Git pane
 
 Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of `metro` – one color indicating `Yes` and the other color indicating `No` for whether a county is considered to be a metro area.
 The y axis of the segmented barplot should range from 0 to 1, indicating proportions.
-Describe the distribution of `metro` across states based on this plot.
+Compare the percentage of counties in metro areas across the states based on this plot.
+Make sure to supplement your narrative with rough estimates of these percentages.
 
 ::: callout-tip
 ## Hint
@@ -308,15 +314,15 @@ You can use the data viewer to identify them interactively, you do not have to w
 
 ggplot(
   midwest,
-  aes(x = percbelowpoverty, y = percollege, color = percwhite)
+  aes(x = percollege, y = percbelowpoverty, color = percwhite)
 ) +
   geom_point(size = 2, alpha = 0.5) +
   facet_wrap(~state) +
   theme_minimal() +
   labs(
     title = "ADD TITLE",
-    x = "% below poverty line",
-    y = "% college educated",
+    x = "% college educated",
+    y = "% below poverty line",
     color = "% white"
   )
 ```
