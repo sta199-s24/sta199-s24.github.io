@@ -636,7 +636,7 @@ Note
 </section>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Create a scatterplot of the percentage of people with a college degree (<code>percollege</code>) versus percentage below poverty (<code>percbelowpoverty</code>) where the color and shape of points are determined by <code>state</code>. Then, describe what you observe in this plot, making sure to include similarities and differences in the patterns across states.</p>
+<p>Create a scatterplot of the percentage below poverty (<code>percbelowpoverty</code> on the y-axis) versus percentage of people with a college degree (<code>percollege</code> on the x-axis), where the color <u><strong>and</strong></u> shape of points are determined by <code>state</code>. Make sure to set informative titles, axis, and legend labels for your plot. First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them. Then, comment on whether you can identify how this relationship varies across states.</p>
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
@@ -644,7 +644,7 @@ Note
 </section>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
-<p>Now, let’s examine the relationship between the same two variables, using a separate plot for each state, i.e., with faceting with <code>facet_wrap()</code>. Label the axes and give the plot a title. Use <code>geom_smooth()</code> with the argument <code>se = FALSE</code> to add a smooth curve fit to the data. Which plot do you prefer - this plot or the plot in Question 3? Briefly explain your choice.</p>
+<p>Now, let’s examine the relationship between the same two variables, once again using different colors and shapes to represent each state, and using a separate plot for each state, i.e., with faceting with <code>facet_wrap()</code>. In addition to points (<code>geom_point()</code>), represent the data with a smooth curve fit to the data with <code>geom_smooth()</code>, with the argument <code>se = FALSE</code>. Make sure to set informative titles, axis, and legend labels for your plot. Which plot do you prefer - this plot or the plot in Question 3? Briefly explain your choice.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -666,7 +666,7 @@ Note
 <section id="question-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
 <p><em>Do some states have counties that tend to be geographically larger than others?</em></p>
-<p>To explore this question, create side-by-side boxplots of area (<code>area</code>) of a county based on state (<code>state</code>). Describe what you observe from the plot. Which state has the single largest county? How can you tell this based on the plot?</p>
+<p>To explore this question, create side-by-side boxplots of area (<code>area</code>) of a county based on state (<code>state</code>). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.</p>
 <div class="render-commit-push">
 <p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
 <p>Once again, make sure to commit and push all changed files so that your Git pane is empty afterwards.</p>
@@ -675,7 +675,7 @@ Note
 <section id="question-6" class="level3">
 <h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
 <p><em>Do some states have a higher percentage of their counties located in a metropolitan area?</em></p>
-<p>Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of <code>metro</code> – one color indicating <code>Yes</code> and the other color indicating <code>No</code> for whether a county is considered to be a metro area. The y axis of the segmented barplot should range from 0 to 1, indicating proportions. Describe the distribution of <code>metro</code> across states based on this plot.</p>
+<p>Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of <code>metro</code> – one color indicating <code>Yes</code> and the other color indicating <code>No</code> for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -695,12 +695,12 @@ Hint
 </div>
 <div class="render-commit-push">
 <p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
-<p>And once again, make sure to commit and push all changed files so that your Git pane is empty afterwards. We keep repeating this because it’s important, and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions.</p>
+<p>And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions.</p>
 </div>
 </section>
 <section id="question-7" class="level3">
 <h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
-<p>Recreate the plot below, and then give it a title. Finally, interpret the visualization, making sure you identify at least one county that is a clear outlier in Wisconsin (WI) by name in your narrative. You can use the data viewer to identify them interactively, you do not have to write code.</p>
+<p>Recreate the plot below, and then give it a title. Then, identify at least one county that is a clear outlier in Wisconsin (WI) by name. You can use the data viewer to identify them interactively, you do not have to write code. Comment on the population composition of this county by investigating the percentage of other races living there.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -758,11 +758,11 @@ Hint
 <section id="question-8" class="level3">
 <h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
 <p>First, guess what the relationship between population density and land area might be – positive? negative? no relationship?</p>
-<p>Then, make a scatter plot of population density (<code>density</code>) vs.&nbsp;land area in miles-squared (<code>land_area_mi2</code>). Describe the relationship. Was your guess correct? If not, can you think about any factors you might not have considered that cause this relationship?</p>
+<p>Then, make a scatter plot of population density (<code>density</code> on the y-axis) vs.&nbsp;land area in miles-squared (<code>land_area_mi2</code> on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?</p>
 </section>
 <section id="question-9" class="level3">
 <h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
-<p>Now make a scatter plot of population density (<code>density</code>) vs.&nbsp;land area in meters-squared (<code>land_area_m2</code>). Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different. Explain why.</p>
+<p>Now make a scatter plot of population density (<code>density</code> on the y-axis) vs.&nbsp;land area in meters-squared (<code>land_area_m2</code> on the x-axis). Make sure to set an informative title and axis labels for your plot. Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different. Explain why.</p>
 </section>
 <section id="question-10" class="level3">
 <h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
