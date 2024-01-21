@@ -272,7 +272,7 @@ Once again, make sure to commit and push all changed files so that your Git pane
 *Do some states have a higher percentage of their counties located in a metropolitan area?*
 
 Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of `metro` – one color indicating `Yes` and the other color indicating `No` for whether a county is considered to be a metro area.
-The y axis of the segmented barplot should range from 0 to 1, indicating proportions.
+The y-axis of the segmented barplot should range from 0 to 1, indicating proportions.
 Compare the percentage of counties in metro areas across the states based on this plot.
 Make sure to supplement your narrative with rough estimates of these percentages.
 
@@ -297,16 +297,17 @@ midwest <- midwest |>
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
 
-And once again, make sure to commit and push all changed files so that your Git pane is empty afterwards.
-We keep repeating this because it's important, and because we see students forget to do this.
+And once again, make sure to commit and push all changed files so that your Git pane is empty afterward.
+We keep repeating this because it's important and because we see students forget to do this.
 So take a moment to make sure you're following along with the version control instructions.
 :::
 
 ### Question 7
 
 Recreate the plot below, and then give it a title.
-Finally, interpret the visualization, making sure you identify at least one county that is a clear outlier in Wisconsin (WI) by name in your narrative.
+Then, identify at least one county that is a clear outlier in Wisconsin (WI) by name.
 You can use the data viewer to identify them interactively, you do not have to write code.
+Comment on the population composition of this county by investigating the percentage of other races living there.
 
 ```{r}
 #| eval: true
@@ -378,14 +379,15 @@ First, guess what the relationship between population density and land area migh
 negative?
 no relationship?
 
-Then, make a scatter plot of population density (`density`) vs. land area in miles-squared (`land_area_mi2`).
+Then, make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis).
+Make sure to set an informative title and axis labels for your plot.
 Describe the relationship.
 Was your guess correct?
-If not, can you think about any factors you might not have considered that cause this relationship?
 
 ### Question 9
 
-Now make a scatter plot of population density (`density`) vs. land area in meters-squared (`land_area_m2`).
+Now make a scatter plot of population density (`density` on the y-axis) vs. land area in meters-squared (`land_area_m2` on the x-axis).
+Make sure to set an informative title and axis labels for your plot.
 Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different.
 Explain why.
 
