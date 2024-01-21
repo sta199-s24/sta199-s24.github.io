@@ -357,17 +357,11 @@ This will read the CSV (comma separated values) file from the `data` folder and 
 The variables in the dataset and their descriptions are as follows:
 
 -   `county`: Name of county.
-
 -   `state_abb`: State abbreviation (NC).
-
 -   `state_name`: State name (North Carolina).
-
 -   `land_area_m2`: Land area of county in meters-squared, based on the 2020 census.
-
 -   `land_area_mi2`: Land area of county in miles-squared, based on the 2020 census.
-
 -   `population`: Population of county, based on the 2020 census.
-
 -   `density`: Population density calculated as population divided by land area in miles-squared.
 
 In addition to being more recent and more relevant, this dataset is also more complete in the sense that we know the units of population density: people per mile-squared!
@@ -402,7 +396,7 @@ Otherwise, you'll get a 0 on this question.[^2]
 
 ## Submission
 
-Once you are finished with the lab, you will your final PDF document to Gradescope.
+Once you are finished with the lab, you will submit your final PDF document to Gradescope.
 
 ::: callout-warning
 Before you wrap up the assignment, make sure all of your documents are updated on your GitHub repo.
@@ -438,17 +432,12 @@ The lab is graded out of a total of 40 points.
 On Questions 1 through 9, you can earn up to 4 points on each question:
 
 -   4: Response shows proficiency and addresses all or almost all of the rubric items.
-
 -   3: Response shows understanding and addresses majority of the rubric items.
-
 -   2: Response shows effort and misses majority of rubric items.
-
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
-
 -   0: No attempt.
 
 On Question 10, you can earn either 0 or 4 points for selecting questions and pages on Gradescope:
 
 -   4: Selected questions and pages on Gradescope.
-
 -   0: Did not select some or all questions and pages on Gradescope.
