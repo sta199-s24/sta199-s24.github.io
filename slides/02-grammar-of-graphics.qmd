@@ -27,11 +27,14 @@ library(countdown)
 
 ## From the survey {.smaller}
 
--   Almost half of the class mentioned being nervous about coding – you're not alone! 💙
+-   Almost half of the class mentioned being nervous about coding – you're not alone!
+    💙
 
--   A good number of students mentioned being nervous about being new to stats + data science – you're also not alone! 💜
+-   A good number of students mentioned being nervous about being new to stats + data science – you're also not alone!
+    💜
 
--   Visibility of text on slides: Cranked up font size! 💛
+-   Visibility of text on slides: Cranked up font size!
+    💛
 
 -   About exams: No coding on the in class (time-limited) exam + there will be practice exams
 
@@ -47,14 +50,14 @@ library(countdown)
 
 ::: columns
 ::: {.column width="50%"}
-![](images/02/git-logo.png){fig-alt="Git logo" fig-align="center" width="150"}
+![](images/git-logo.png){fig-alt="Git logo" fig-align="center" width="150"}
 
 -   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
 -   It's not the only version control system, but it's a very popular one
 :::
 
 ::: {.column width="50%"}
-![](images/02/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="150"}
+![](images/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="150"}
 
 -   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
 
@@ -64,33 +67,33 @@ library(countdown)
 
 ## Versioning - done badly
 
-![](images/02/phd_comics_vc.gif){fig-align="center"}
+![](images/phd_comics_vc.gif){fig-align="center"}
 
 ## Versioning - done better
 
-![](images/02/lego-steps.png){fig-align="center"}
+![](images/lego-steps.png){fig-align="center"}
 
 ## Versioning - done even better
 
 ### with human readable messages
 
-![](images/02/lego-steps-commit-messages.png){fig-align="center"}
+![](images/lego-steps-commit-messages.png){fig-align="center"}
 
 ## How will we use Git and GitHub?
 
-![](images/02/whole-game-01.png){fig-align="center"}
+![](images/whole-game-01.png){fig-align="center"}
 
 ## How will we use Git and GitHub?
 
-![](images/02/whole-game-02.png){fig-align="center"}
+![](images/whole-game-02.png){fig-align="center"}
 
 ## How will we use Git and GitHub?
 
-![](images/02/whole-game-03.png){fig-align="center"}
+![](images/whole-game-03.png){fig-align="center"}
 
 ## How will we use Git and GitHub?
 
-![](images/02/whole-game-04.png){fig-align="center"}
+![](images/whole-game-04.png){fig-align="center"}
 
 ## Git and GitHub tips {.smaller}
 
@@ -127,7 +130,7 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 :::
 
 ::: {.column width="40%"}
-![Source: [Twitter](https://twitter.com/reina_sabah/status/1291509085855260672)](images/03/female-heights.png){fig-align="center"}
+![Source: [Twitter](https://twitter.com/reina_sabah/status/1291509085855260672)](images/female-heights.png){fig-align="center"}
 :::
 :::
 

@@ -25,7 +25,7 @@ Old Chem 213
 :::
 
 ::: {.column width="50%"}
-![](images/01/mine.png){fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" fig-align="center"}
+![](images/mine.png){fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" fig-align="center"}
 :::
 :::
 
@@ -79,54 +79,54 @@ countdown(minutes = 3, font_size = "5rem")
 
 ## Excel - not...
 
-![](images/01/excel.png){fig-alt="An Excel window with data about countries" fig-align="center"}
+![](images/excel.png){fig-alt="An Excel window with data about countries" fig-align="center"}
 
 ## R
 
-![](images/01/r.png){fig-alt="An R shell" fig-align="center"}
+![](images/r.png){fig-alt="An R shell" fig-align="center"}
 
 ## RStudio
 
-![](images/01/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
+![](images/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
 
 # Data science life cycle
 
 ## Data science life cycle
 
-![](images/01/data-science-cycle/data-science-cycle.001.png){fig-alt="Data science life cycle"}
+![](images/data-science-cycle/data-science-cycle.001.png){fig-alt="Data science life cycle"}
 
 ## Import
 
-![](images/01/data-science-cycle/data-science-cycle.002.png){fig-alt="Data science life cycle, with import highlighted"}
+![](images/data-science-cycle/data-science-cycle.002.png){fig-alt="Data science life cycle, with import highlighted"}
 
 ## Tidy + transform
 
-![](images/01/data-science-cycle/data-science-cycle.003.png){fig-alt="Data science life cycle, with tidy and transform highlighted"}
+![](images/data-science-cycle/data-science-cycle.003.png){fig-alt="Data science life cycle, with tidy and transform highlighted"}
 
 ## Visualize
 
-![](images/01/data-science-cycle/data-science-cycle.004.png){fig-alt="Data science life cycle, with visualize highlighted"}
+![](images/data-science-cycle/data-science-cycle.004.png){fig-alt="Data science life cycle, with visualize highlighted"}
 
 ## Model
 
-![](images/01/data-science-cycle/data-science-cycle.005.png){fig-alt="Data science life cycle, with model highlighted"}
+![](images/data-science-cycle/data-science-cycle.005.png){fig-alt="Data science life cycle, with model highlighted"}
 
 ## Understand
 
-![](images/01/data-science-cycle/data-science-cycle.006.png){fig-alt="Data science life cycle, with understand highlighted"}
+![](images/data-science-cycle/data-science-cycle.006.png){fig-alt="Data science life cycle, with understand highlighted"}
 
 ## 
 
 ::: columns
 ::: {.column width="50%"}
 ```{r echo=FALSE, out.width="75%", fig.align="left"}
-knitr::include_graphics("images/01/google-trend-index.png")
+knitr::include_graphics("images/google-trend-index.png")
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r echo=FALSE, out.width="90%", fig.align="right"}
-knitr::include_graphics("images/01/data-science-cycle/data-science-cycle.006.png")
+knitr::include_graphics("images/data-science-cycle/data-science-cycle.006.png")
 ```
 
 ```{r}
@@ -149,15 +149,15 @@ travel
 
 ## Communicate
 
-![](images/01/data-science-cycle/data-science-cycle.007.png){fig-alt="Data science life cycle, with communicate highlighted"}
+![](images/data-science-cycle/data-science-cycle.007.png){fig-alt="Data science life cycle, with communicate highlighted"}
 
 ## Understand + communicate
 
-![](images/01/data-science-cycle/data-science-cycle.008.png){fig-alt="Data science life cycle, with understand and communicate highlighted"}
+![](images/data-science-cycle/data-science-cycle.008.png){fig-alt="Data science life cycle, with understand and communicate highlighted"}
 
 ## Program
 
-![](images/01/data-science-cycle/data-science-cycle.009.png){fig-alt="Data science life cycle, with program highlighted"}
+![](images/data-science-cycle/data-science-cycle.009.png){fig-alt="Data science life cycle, with program highlighted"}
 
 # Let's dive in!
 
@@ -203,12 +203,14 @@ All linked from the course website:
 
 -   Each exam comprised of two parts:
 
-    -   In class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, **must be prepared by you**) – 70% of the grade
+    -   In class: 75 minute in-class exam.
+        Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, **must be prepared by you**) – 70% of the grade
 
     -   Take home: The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade
 
 ::: callout-caution
-Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.
+Exam dates cannot be changed and no make-up exams will be given.
+If you can’t take the exams on these dates, you should drop this class.
 :::
 
 ## Project {.smaller}
@@ -226,7 +228,9 @@ Exam dates cannot be changed and no make-up exams will be given. If you can’t 
 -   Some lab sessions allocated to working on projects, doing peer review, getting feedback from TAs
 
 ::: callout-caution
-Final presentation date cannot be changed. If you can’t present on that date, you should drop this class. You must complete the project to pass this class.
+Final presentation date cannot be changed.
+If you can’t present on that date, you should drop this class.
+You must complete the project to pass this class.
 :::
 
 ## Teams
@@ -280,7 +284,8 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
 
--   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+-   I am committed to making all course materials accessible and I'm always learning how to do this better.
+    If any course component is not accessible to you in any way, please don't hesitate to let me know.
 
 # Course policies
 
@@ -311,4 +316,4 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ## Midori says...
 
-[![](images/01/midori.jpeg){fig-alt="Picture of my cat, Midori, with a speech bubble that says \"Read the syllabus and make Mine happy!\"" fig-align="center" width="700"}](https://sta199-f22-1.github.io/course-syllabus.html)
+[![](images/midori.jpeg){fig-alt="Picture of my cat, Midori, with a speech bubble that says \"Read the syllabus and make Mine happy!\"" fig-align="center" width="700"}](https://sta199-f22-1.github.io/course-syllabus.html)
