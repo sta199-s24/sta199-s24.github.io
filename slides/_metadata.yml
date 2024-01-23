@@ -8,7 +8,7 @@ format:
     transition: fade
     slide-number: true
     chalkboard: true
-    highlight: a11y-dark
+    highlight-style: a11y-dark
 editor: visual
 execute:
   freeze: auto
