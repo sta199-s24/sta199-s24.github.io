@@ -34,6 +34,7 @@ ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
 ## Announcements
 
 -   AEs this week should be submitted by midnight on Sunday. To "submit", commit and push at least once to your `ae` repo for each application exercise this week.
+-   If you email me, please put STA 199 in the subject.
 
 # From last time
 
@@ -618,14 +619,12 @@ ggplot(
 :::
 :::
 
-
 ## Weights of penguins {.smaller}
 
 ::: panel-tabset
 ## Question
 
 ::: task
-
 ::: columns
 ::: {.column width="70%"}
 ```{r}
@@ -649,11 +648,12 @@ ggplot(
 #| echo: false
 ```
 :::
+
 ::: {.column width="30%"}
 TRUE / FALSE
 
-- The distribution of penguin weights in this sample is left skewed.
-- The distribution of penguin weights in this sample is unimodal.
+-   The distribution of penguin weights in this sample is left skewed.
+-   The distribution of penguin weights in this sample is unimodal.
 :::
 :::
 :::
@@ -665,20 +665,19 @@ TRUE / FALSE
 ```
 :::
 
-
 # Bivariate analysis
 
 ## Bivariate analysis
 
 Analyzing the relationship between two variables:
 
-- Numerical + numerical: scatterplot
+-   Numerical + numerical: scatterplot
 
-- Numerical + categorical: side-by-side box plots, violin plots, etc.
+-   Numerical + categorical: side-by-side box plots, violin plots, etc.
 
-- Categorical + categorical: stacked bar plots
+-   Categorical + categorical: stacked bar plots
 
-- Using an aesthetic (e.g., fill, color, shape, etc.) or facets to represent the second variable in any plot
+-   Using an aesthetic (e.g., fill, color, shape, etc.) or facets to represent the second variable in any plot
 
 ## Side-by-side box plots
 
