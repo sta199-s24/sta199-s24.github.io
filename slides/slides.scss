@@ -9,8 +9,10 @@ $font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
 $presentation-heading-color: #3A5883;
 $presentation-title-slide-text-align: "left";
 $link-color: #3A5883;
-$code-block-font-size: 0.8em;
-$presentation-font-size-root: 50px;
+$code-color: #3A5883;
+$code-block-font-size: 0.6em;
+$presentation-font-size-root: 45px;
+$presentation-h2-font-size: 1.2em;
 
 /*-- scss:rules --*/
 
@@ -66,8 +68,6 @@ details>summary {
   padding: 0.5em;
   background: #a8d5d9;
 }
-
-
 
 .reveal pre code {
   width: 1000px;
