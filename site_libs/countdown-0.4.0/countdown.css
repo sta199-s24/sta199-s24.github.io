@@ -2,7 +2,7 @@
   background: inherit;
   position: absolute;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1;
   border-color: #ddd;
   border-width: 3px;
@@ -30,7 +30,7 @@
   padding: 0;
 }
 .countdown-digits {
-  color: #325b74;
+  color: inherit;
 }
 .countdown.running {
   border-color: #2A9B59FF;
