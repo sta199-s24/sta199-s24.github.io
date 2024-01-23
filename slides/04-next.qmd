@@ -1,0 +1,1035 @@
+---
+title: "Visualizing various types of data"
+subtitle: "Lecture 3"
+date: "January 23, 2024"
+format: revealjs
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+
+library(countdown)
+ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
+```
+
+## While you wait...
+
+**Questions from the prepare materials?**
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Questions from last time {.smaller}
+
+-   **Is there any code in the videos that is not in the readings?** Yes and no.
+    There is no substantial functionality introduced in the videos that is not also in the readings, however the examples in the videos are different than the ones in the reading.
+
+-   **What are all of the `geom`s we need to know?** You don't need to "memorize" or even "know" all o the geoms available in the ggplot2 package, but you can find a list of them on the [ggplot2 cheat sheet](https://ggplot2.tidyverse.org/#cheatsheet) or on the [reference page](https://ggplot2.tidyverse.org/reference/index.html#geoms).
+
+-   **Could you please clarify what situations it would be appropriate to use each geom function?** Today's topic!
+    And think about it as "what plot should I make for which type of variable".
+
+## Announcements
+
+-   AEs this week should be submitted by midnight on Sunday. To "submit", commit and push at least once to your `ae` repo for each application exercise this week.
+-   If you email me, please put STA 199 in the subject.
+
+# From last time
+
+## `ae-02-bechdel-dataviz` {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**If you were in class last Thursday:**
+
+*and followed along with the application exercise...*
+
+Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+If there are any uncommitted files, commit them so you can start with a clean slate.
+:::
+
+::: {.column width="50%"}
+**If you missed class last Thursday:**
+
+*or didn't follow along with the application exercise...*
+
+Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae` repo.
+Clone the repo in your container, open the Quarto document called `ae-02-bechdel`.
+:::
+:::
+
+## Recap of AE {.smaller}
+
+-   Construct plots with `ggplot()`.
+-   Layers of ggplots are separated by `+`s.
+-   The formula is (almost) always as follows:
+
+```{r}
+#| eval: false
+
+ggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +
+  geom_XXX()
+```
+
+-   Aesthetic attributes of a geometries (color, size, transparency, etc.) can be **map**ped to variables in the data or **set** by the user, e.g. `color = binary` vs. `color = "pink"`.
+-   Use `facet_wrap()` when faceting (creating small multiples) by one variable and `facet_grid()` when faceting by two variables.
+
+# Visualizing various types of data
+
+## Identifying variable types {.smaller}
+
+::: panel-tabset
+## Question
+
+::: poll
+Identify the type of each of the following variables.
+
+-   Favorite food
+-   Number of classes you’re taking this semester
+-   Zip code
+-   Age
+:::
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 500px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+## The way data is displayed matters
+
+::: poll
+What do these three plots show?
+:::
+
+![](images/bar-plot-meme.png){fig-align="center"}
+
+::: aside
+Source: [#barbarplots](https://cogtales.wordpress.com/2016/06/06/congratulations-barbarplots/)
+:::
+
+## Visualizing `penguins` {.smaller}
+
+::: columns
+::: {.column width="70%"}
+::: {style="font-size: 20px;"}
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(ggthemes)
+
+penguins
+```
+:::
+:::
+
+::: {.column width="30%"}
+![](images/penguins.png){fig-align="center"}
+:::
+:::
+
+::: aside
+Artwork by \@allison_horst.
+:::
+
+# Univariate analysis
+
+## Univariate analysis
+
+Analyzing a single variable:
+
+-   Numerical: histogram, box plot, density plot, etc.
+
+-   Categorical: bar plot, pie chart, etc.
+
+## Histogram - Step 1
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-hist-1
+#| fig-show: hide
+
+ggplot(
+  penguins
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-hist-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Histogram - Step 2
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-hist-2
+#| fig-show: hide
+#| code-line-numbers: "3"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-hist-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Histogram - Step 3
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-hist-3
+#| fig-show: hide
+#| code-line-numbers: "5"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_histogram()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-hist-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Histogram - Step 4
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-hist-4
+#| fig-show: hide
+#| code-line-numbers: "6"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_histogram(
+    binwidth = 250
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-hist-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Histogram - Step 5
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-hist-5
+#| fig-show: hide
+#| code-line-numbers: "8-12"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_histogram(
+    binwidth = 250
+  ) +
+  labs(
+    title = "Weights of penguins",
+    x = "Weight (grams)",
+    y = "Count"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-hist-5
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Boxplot - Step 1
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box-1
+#| fig-show: hide
+
+ggplot(
+  penguins
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-box-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Boxplot - Step 2
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box-2
+#| fig-show: hide
+#| code-line-numbers: "3"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-box-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Boxplot - Step 3
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box-3
+#| fig-show: hide
+#| code-line-numbers: "5"
+
+ggplot(
+  penguins,
+  aes(y = body_mass_g)
+  ) +
+  geom_boxplot()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-box-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Boxplot - Step 4
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box-4
+#| fig-show: hide
+#| code-line-numbers: "3"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_boxplot()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-box-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Boxplot - Step 5
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box-5
+#| fig-show: hide
+#| code-line-numbers: "6-9"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_boxplot() +
+  labs(
+    x = "Weight (grams)",
+    y = NULL
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-box-5
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 1
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-1
+#| fig-show: hide
+
+ggplot(
+  penguins
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 2
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-2
+#| fig-show: hide
+#| code-line-numbers: "3"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 3
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-3
+#| fig-show: hide
+#| code-line-numbers: "5"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_density()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 4
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-4
+#| fig-show: hide
+#| code-line-numbers: "6"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_density(
+    fill = "darkslategray1"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 5
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-5
+#| fig-show: hide
+#| code-line-numbers: "7"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_density(
+    fill = "darkslategray1",
+    linewidth = 2
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-5
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 6
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-6
+#| fig-show: hide
+#| code-line-numbers: "8"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_density(
+    fill = "darkslategray1",
+    linewidth = 2,
+    color = "darkorchid3"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-6
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plot - Step 7
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-7
+#| fig-show: hide
+#| code-line-numbers: "9"
+
+ggplot(
+  penguins,
+  aes(x = body_mass_g)
+  ) +
+  geom_density(
+    fill = "darkslategray1",
+    linewidth = 2,
+    color = "darkorchid3",
+    alpha = 0.5
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-7
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Weights of penguins {.smaller}
+
+::: panel-tabset
+## Question
+
+::: task
+::: columns
+::: {.column width="70%"}
+```{r}
+#| ref.label: penguins-hist-5
+#| fig-width: 6
+#| fig.asp: 0.35
+#| echo: false
+```
+
+```{r}
+#| ref.label: penguins-box-3
+#| fig-width: 6
+#| fig.asp: 0.25
+#| echo: false
+```
+
+```{r}
+#| ref.label: penguins-density-7
+#| fig-width: 6
+#| fig.asp: 0.25
+#| echo: false
+```
+:::
+
+::: {.column width="30%"}
+TRUE / FALSE
+
+-   The distribution of penguin weights in this sample is left skewed.
+-   The distribution of penguin weights in this sample is unimodal.
+:::
+:::
+:::
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 500px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+# Bivariate analysis
+
+## Bivariate analysis
+
+Analyzing the relationship between two variables:
+
+-   Numerical + numerical: scatterplot
+
+-   Numerical + categorical: side-by-side box plots, violin plots, etc.
+
+-   Categorical + categorical: stacked bar plots
+
+-   Using an aesthetic (e.g., fill, color, shape, etc.) or facets to represent the second variable in any plot
+
+## Side-by-side box plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-side-by-side-box-1
+#| fig-show: hide
+#| code-line-numbers: "|2|3-6|4|5|8"
+ 
+ggplot(
+  penguins,
+  aes(
+    x = body_mass_g,
+    y = species
+    )
+  ) +
+  geom_boxplot()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-side-by-side-box-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-color-1
+#| fig-show: hide
+#| code-line-numbers: "|4|5|8"
+
+ggplot(
+  penguins,
+  aes(
+    x = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_density()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-color-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-color-2
+#| fig-show: hide
+#| code-line-numbers: "6"
+
+ggplot(
+  penguins,
+  aes(
+    x = body_mass_g,
+    color = species,
+    fill = species
+    )
+  ) +
+  geom_density()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-color-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-color-3
+#| fig-show: hide
+#| code-line-numbers: "10"
+
+ggplot(
+  penguins,
+  aes(
+    x = body_mass_g,
+    color = species,
+    fill = species
+    )
+  ) +
+  geom_density(
+    alpha = 0.5
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-color-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Density plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density-color-4
+#| fig-show: hide
+#| code-line-numbers: "12-14"
+
+ggplot(
+  penguins,
+  aes(
+    x = body_mass_g,
+    color = species,
+    fill = species
+    )
+  ) +
+  geom_density(
+    alpha = 0.5
+  ) +
+  theme(
+    legend.position = "bottom"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-density-color-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Violin plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-1
+#| fig-show: hide
+#| code-line-numbers: "|4|5|8"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-2
+#| fig-show: hide
+#| code-line-numbers: "9"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin() +
+  geom_point()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-3
+#| fig-show: hide
+#| code-line-numbers: "9"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin() +
+  geom_jitter()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-4
+#| fig-show: hide
+#| code-line-numbers: "6"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-5
+#| fig-show: hide
+#| code-line-numbers: "11-13"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter() +
+  theme(
+    legend.position = "none"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-5
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-6
+#| fig-show: hide
+#| code-line-numbers: "14"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter() +
+  theme(
+    legend.position = "none"
+  ) +
+  scale_color_colorblind()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-6
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
