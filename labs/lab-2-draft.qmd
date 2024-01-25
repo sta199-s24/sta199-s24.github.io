@@ -104,8 +104,8 @@ You can read documentation for the data set, including variable definitions by t
 
 ### Question 1
 
-Calculate the number of counties in each state and display your results in descending order of number of counties, and how many?
-Which state has the highest number of counties?
+Calculate the number of counties in each state and display your results in descending order of number of counties,
+Which state has the highest number of counties, and how many?
 Then, display your results in ascending order.
 Which state has the lowest number of counties, and how many?
 
@@ -157,9 +157,9 @@ the county with the highest population density.
 b\.
 the counties with a population density higher than 25,000.
 
-Answer using a single data wrangling pipeline for each part.
-Your response should be a data frame with one row and five columns: county name, state name, population density, total population, and area, in this order.
-If your response has multiple rows, it the data frame should be arranged in descending order of population density.
+Answer using a single data wrangling pipeline.
+Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order.
+If your response has multiple rows, the data frame should be arranged in descending order of population density.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 3".
