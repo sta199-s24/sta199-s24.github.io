@@ -2,7 +2,9 @@
 title: "Data visualization overview"
 subtitle: "Lecture 4"
 date: "January 25, 2024"
-format: revealjs
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/discussion/4185738)"
 editor_options: 
   chunk_output_type: console
 ---
@@ -27,6 +29,24 @@ ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
+## Announcements {.smaller}
+
+-   Lab 1 due Monday morning at 8 am.
+
+    -   My office hours today after class + 2-3 pm in Old Chem 213
+
+    -   Lots of TA office hours, including over the weekend
+
+    -   Submitting late and want to use your one-time waiver?
+        Email our course coordinator [Dr. Mary Knox](https://sta199-s24.github.io/course-team.html#course-coordinator).
+
+-   AEs this week should be submitted by midnight on Sunday.
+    To "submit", commit and push at least once to your `ae` repo for each application exercise this week.
+
+-   Pilot: Ed Discussion threads for lecture, linked at the bottom of each slide.
+
+![](images/ed-discussion-01-25.png){fig-align="center"}
+
 ## Questions from last time {.smaller}
 
 **Many of the questions in Lab 1 are subjective. How does that work?**
@@ -102,6 +122,15 @@ ggplot(midwest, aes(x = popdensity)) +
 
 **What are some situations where waffle plots are better than pie charts?**
 
+Let's take a look at an example...
+
+## 🥧 or 🧇?
+
+::: panel-tabset
+## Question
+
+Which of the following is a better representation for the number of counties in each `midwest`ern state?
+
 ::: columns
 ::: {.column width="50%"}
 ```{r}
@@ -116,8 +145,7 @@ ggplot(data = n_counties, aes(x = "", y = n, fill = state)) +
   geom_bar(stat = "identity", color = "black") + 
   scale_fill_colorblind(guide = guide_legend(reverse = TRUE)) +
   coord_polar("y") +
-  theme_void() +
-  labs(title = "Number of counties", fill = "State")
+  theme_void()
 ```
 :::
 
@@ -146,10 +174,55 @@ ggplot(
 :::
 :::
 
-## Announcements
+## Vote
 
--   AEs this week should be submitted by midnight on Sunday. To "submit", commit and push at least once to your `ae` repo for each application exercise this week.
--   ...
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+## 🥧 or 🧇 or {{< fa table >}}? {.smaller}
+
+::: panel-tabset
+## Question
+
+Which of the following is a better representation for the number of counties in each `midwest`ern state?
+
+::: columns
+::: {.column width="30%"}
+```{r}
+#| ref.label: pie
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+
+::: {.column width="30%"}
+```{r}
+#| ref.label: waffle
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| label: table
+
+midwest |> 
+  count(state, sort = TRUE)
+```
+:::
+:::
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+:::
 
 # From last time
 
