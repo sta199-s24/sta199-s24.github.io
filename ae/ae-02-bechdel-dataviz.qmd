@@ -23,7 +23,8 @@ library(scales)
 
 ### Data
 
-The data are stored as a CSV (comma separated values) file in the `data` folder of your repository. Let's read it from there and save it as an object called `bechdel`.
+The data are stored as a CSV (comma separated values) file in the `data` folder of your repository.
+Let's read it from there and save it as an object called `bechdel`.
 
 ```{r}
 #| label: read-data
@@ -96,7 +97,8 @@ ggplot(
 )
 ```
 
-As we previously mentioned, we often omit the names of the first two arguments in R functions. So you'll often see this written as:
+As we previously mentioned, we often omit the names of the first two arguments in R functions.
+So you'll often see this written as:
 
 ```{r}
 #| label: plot-simplified-call
@@ -115,7 +117,8 @@ ggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +
   geom_point()
 ```
 
-Note that this results in a warning as well. What does the warning mean?
+Note that this results in a warning as well.
+What does the warning mean?
 
 ## Gross revenue vs. budget
 
@@ -152,7 +155,8 @@ ggplot(bechdel, aes(x = budget_2013, y = gross_2013))+
 
 ### Step 3 - Your turn
 
-An `aes`thetic is a visual property of one of the objects in your plot. Commonly used aesthetic options are:
+An `aes`thetic is a visual property of one of the objects in your plot.
+Commonly used aesthetic options are:
 
 -   color
 -   fill
@@ -220,7 +224,8 @@ Make use of the [**scales**](https://scales.r-lib.org/) package, specifically th
 
 ### Step 8 - Your turn
 
-Expand on your plot from the previous step by using `facet_grid` to display the association between budget and gross for different combinations of `clean_test` and `binary`. Comment on whether this was a useful update.
+Expand on your plot from the previous step by using `facet_grid` to display the association between budget and gross for different combinations of `clean_test` and `binary`.
+Comment on whether this was a useful update.
 
 ```{r}
 #| label: plot-facet-grid
@@ -244,11 +249,13 @@ What other improvements could we make to this plot?
 
 1.  If you made any changes since the last render, render again to get the final version of the AE.
 
-2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using a simple and informative message.
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes).
+    Commit the changes you made using a simple and informative message.
 
 3.  Use the **green arrow** to push your changes to your repo on GitHub.
 
-4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
+4.  Check your repo on GitHub and see the updated files.
+    Once your updated files are in your repo on GitHub, you're good to go!
 
 ## Return-on-investment
 
@@ -288,8 +295,10 @@ What does this plot say about return-on-investment on movies that pass the Bechd
 
 1.  If you made any changes since the last render, render again to get the final version of the AE.
 
-2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using a simple and informative message.
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes).
+    Commit the changes you made using a simple and informative message.
 
 3.  Use the **green arrow** to push your changes to your repo on GitHub.
 
-4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
+4.  Check your repo on GitHub and see the updated files.
+    Once your updated files are in your repo on GitHub, you're good to go!

@@ -3,7 +3,7 @@
 // fonts
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 $font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
 $presentation-heading-color: #3A5883;
@@ -70,5 +70,10 @@ details>summary {
 }
 
 .reveal pre code {
-  width: 1000px;
+  width: 1100px;
+}
+
+.reveal .hand {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.2em
 }

@@ -1,0 +1,553 @@
+---
+title: "Data visualization overview"
+subtitle: "Lecture 4"
+date: "January 25, 2024"
+format: revealjs
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+
+library(countdown)
+library(waffle)
+library(ggthemes)
+library(tidyverse)
+
+ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
+```
+
+## While you wait...
+
+**Questions from the prepare materials?**
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Questions from last time {.smaller}
+
+**Many of the questions in Lab 1 are subjective. How does that work?**
+
+> identify at least one outlier
+
+```{r}
+#| label: popdensity-boxplot-1
+#| fig-width: 5
+#| fig-height: 3
+#| echo: false
+#| eval: true
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_boxplot() +
+  labs(
+    title = "Population densities of midwest counties",
+    x = "Population density"
+  )
+```
+
+## Questions from last time {.smaller}
+
+**Many of the questions in Lab 1 are subjective. How does that work?**
+
+> identify at least one outlier ✅
+
+```{r}
+#| label: popdensity-boxplot-2
+#| fig-width: 5
+#| fig-height: 3
+#| echo: false
+#| eval: true
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_boxplot() +
+  labs(
+    title = "Population densities of midwest counties",
+    x = "Population density"
+  ) +
+  annotate(
+    "rect", xmin = 3800, xmax = 90000, 
+    ymin = -0.05, ymax = 0.05, alpha = 0.2, fill = "green"
+  )
+```
+
+## Questions from last time {.smaller}
+
+**Many of the questions in Lab 1 are subjective. How does that work?**
+
+> identify at least one outlier ❌
+
+```{r}
+#| label: popdensity-boxplot-3
+#| fig-width: 5
+#| fig-height: 3
+#| echo: false
+#| eval: true
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_boxplot() +
+  labs(
+    title = "Population densities of midwest counties",
+    x = "Population density"
+  ) +
+  annotate(
+    "rect", xmin = -50, xmax = 4300, 
+    ymin = -0.40, ymax = 0.40, alpha = 0.2, fill = "red"
+  )
+```
+
+## Questions from last time {.smaller}
+
+**What are some situations where waffle plots are better than pie charts?**
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: pie
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+
+n_counties <- midwest |> count(state)
+
+ggplot(data = n_counties, aes(x = "", y = n, fill = state)) +
+  geom_bar(stat = "identity", color = "black") + 
+  scale_fill_colorblind(guide = guide_legend(reverse = TRUE)) +
+  coord_polar("y") +
+  theme_void() +
+  labs(title = "Number of counties", fill = "State")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| label: waffle
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+
+ggplot(
+  n_counties,
+  aes(fill = state, values = n)
+  ) +
+  geom_waffle(
+    n_rows = 25,
+    size = 0.33, 
+    colour = "white",
+    flip = TRUE
+  ) +
+  coord_equal() +
+  theme_enhance_waffle() +
+  theme_void() +
+  scale_fill_colorblind(guide = guide_legend(reverse = TRUE))
+```
+:::
+:::
+
+## Announcements
+
+-   AEs this week should be submitted by midnight on Sunday. To "submit", commit and push at least once to your `ae` repo for each application exercise this week.
+-   ...
+
+# From last time
+
+## Packages
+
+```{r}
+library(palmerpenguins)
+library(tidyverse)
+library(ggthemes)
+```
+
+## Bivariate analysis {.smaller}
+
+::: panel-tabset
+## Plot
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-box
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+
+# Side-by-side box plots
+ggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +
+  geom_boxplot(alpha = 0.5, show.legend = FALSE) +
+  scale_fill_colorblind() +
+  labs(
+    x = "Body mass (grams)", y = "Species",
+    title = "Side-by-side box plots"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| label: penguins-density
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+
+# Density plots
+ggplot(penguins, aes(x = body_mass_g, fill = species)) +
+  geom_density(alpha = 0.5) +
+  theme(legend.position = "bottom") +
+  scale_fill_colorblind() +
+  labs(
+    x = "Body mass (grams)", y = "Density",
+    fill = "Species", title = "Density plots"
+  )
+```
+:::
+:::
+
+## Code
+
+```{r}
+#| ref.label: penguins-box
+#| fig-show: hide
+```
+
+```{r}
+#| ref.label: penguins-density
+#| fig-show: hide
+```
+:::
+
+## Violin plots
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-1
+#| fig-show: hide
+#| code-line-numbers: "|4|5|8"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-1
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-2
+#| fig-show: hide
+#| code-line-numbers: "9"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin() +
+  geom_point()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-2
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-3
+#| fig-show: hide
+#| code-line-numbers: "9"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g
+    )
+  ) +
+  geom_violin() +
+  geom_jitter()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-3
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-4
+#| fig-show: hide
+#| code-line-numbers: "5-6"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-4
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-5
+#| fig-show: hide
+#| code-line-numbers: "11-13"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter() +
+  theme(
+    legend.position = "none"
+  )
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-5
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+## Multiple geoms + aesthetics {.smaller}
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| label: penguins-violin-6
+#| fig-show: hide
+#| code-line-numbers: "14"
+
+ggplot(
+  penguins,
+  aes(
+    x = species,
+    y = body_mass_g,
+    color = species
+    )
+  ) +
+  geom_violin() +
+  geom_jitter() +
+  theme(
+    legend.position = "none"
+  ) +
+  scale_color_colorblind()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| ref.label: penguins-violin-6
+#| echo: false
+#| fig-width: 5
+#| fig-asp: 0.8
+```
+:::
+:::
+
+# Multivariate analysis
+
+## Bechdel {.smaller}
+
+Load the Bechdel test data with `read_csv()`:
+
+```{r}
+#| label: load-bechdel
+#| message: false
+
+bechdel <- read_csv("https://sta199-s24.github.io/data/bechdel.csv")
+```
+
+. . .
+
+<br>
+
+View the column `names()` of the `bechdel` data:
+
+```{r}
+#| label: names-bechdel
+
+names(bechdel)
+```
+
+## ROI by test result {.smaller}
+
+::: question
+What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?
+:::
+
+```{r}
+#| label: roi-test-binary-box
+#| fig-width: 8
+#| fig-asp: 0.4
+
+ggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +
+  geom_boxplot()
+```
+
+## Movies with high ROI {.smaller}
+
+::: question
+What are the movies with highest ROI?
+:::
+
+```{r}
+bechdel |>
+  filter(roi > 400) |>
+  select(title, roi, budget_2013, gross_2013, year, clean_test)
+```
+
+## ROI by test result {.smaller}
+
+::: question
+**Zoom in:** What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?
+:::
+
+```{r}
+#| label: roi-test-binary-box-zoom
+#| fig-width: 8
+#| fig-asp: 0.4
+#| code-line-numbers: "|3"
+
+ggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +
+  geom_boxplot() +
+  coord_cartesian(xlim = c(0, 15))
+```
+
+## Sneak preview...
+
+<br> <br>
+
+::: hand
+to next week's data wrangling pipelines...
+:::
+
+## Median ROI
+
+```{r}
+#| label: median-roi
+#| code-line-numbers: "|2"
+
+bechdel |>
+  summarize(median_roi = median(roi, na.rm = TRUE))
+```
+
+## Median ROI by test result
+
+```{r}
+#| label: median-roi-test
+#| code-line-numbers: "|2|3"
+
+bechdel |>
+  group_by(clean_test) |>
+  summarize(median_roi = median(roi, na.rm = TRUE))
+```
+
+## ROI by test result – zoom in {.smaller}
+
+::: question
+What does this plot say about return-on-investment on movies that pass the Bechdel test?
+:::
+
+```{r}
+#| label: roi-test-binary-box-zoom-vline
+#| fig-width: 9
+#| fig-asp: 0.4
+
+ggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +
+  geom_boxplot() +
+  coord_cartesian(xlim = c(0, 15)) +
+  geom_vline(xintercept = 4.21, linetype = "dashed")
+```
+
+# Application exercise
+
+## `ae-03-duke-forest` {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**If you've been here for a while:**
+
+*and following along with the application exercises...*
+
+Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+If there are any uncommitted files, commit them, and then click **Pull**.
+:::
+
+::: {.column width="50%"}
+**If you've new:**
+
+*or haven't been following along with the application exercises...*
+
+Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae` repo.
+Clone the repo in your container, open the Quarto document called `ae-03-duke-forest`.
+:::
+:::
