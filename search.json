@@ -858,156 +858,26 @@
     ]
   },
   {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3 - TBA",
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - TBA",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Labs",
-      "Lab 3"
+      "Lab 4"
     ]
   },
   {
-    "objectID": "labs/lab-2.html",
-    "href": "labs/lab-2.html",
-    "title": "Lab 2 - TBA",
+    "objectID": "labs/lab-7.html",
+    "href": "labs/lab-7.html",
+    "title": "Lab 7 - TBA",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Labs",
-      "Lab 2"
+      "Lab 7"
     ]
-  },
-  {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
-    "crumbs": [
-      "Computing",
-      "Access"
-    ]
-  },
-  {
-    "objectID": "project-description.html",
-    "href": "project-description.html",
-    "title": "Project description",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.3.2: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.4: https://quarto.org/docs/download/prerelease.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
-    "crumbs": [
-      "Course information",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
-    "crumbs": [
-      "Computing",
-      "Cheatsheets"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n📗 r4ds - chp 5\nTidying data\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "ae/ae-02-bechdel-dataviz.html",
-    "href": "ae/ae-02-bechdel-dataviz.html",
-    "title": "AE 02: Bechdel + data visualization",
-    "section": "",
-    "text": "In this mini analysis we work with the data used in the FiveThirtyEight story titled “The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women”.\nThis analysis is about the Bechdel test, a measure of the representation of women in fiction."
-  },
-  {
-    "objectID": "ae/ae-02-bechdel-dataviz.html#getting-started",
-    "href": "ae/ae-02-bechdel-dataviz.html#getting-started",
-    "title": "AE 02: Bechdel + data visualization",
-    "section": "Getting started",
-    "text": "Getting started\n\nPackages\nWe start with loading the packages we’ll use: tidyverse for majority of the analysis and scales for pretty plot labels later on.\n\nlibrary(tidyverse)\nlibrary(scales)\n\n\n\nData\nThe data are stored as a CSV (comma separated values) file in the data folder of your repository. Let’s read it from there and save it as an object called bechdel.\n\nbechdel &lt;- read_csv(\"https://sta199-s24.github.io/data/bechdel.csv\")\n\n\n\nGet to know the data\nWe can use the glimpse function to get an overview (or “glimpse”) of the data.\n\n# add code here\n\n\nWhat does each observation (row) in the data set represent?\n\nEach observation represents a ___.\n\nHow many observations (rows) are in the data set?\n\nThere are 1615 movies in the dataset.\n\nHow many variables (columns) are in the data set?\n\nThere are ___ columns in the dataset.\n\n\nVariables of interest\nThe variables we’ll focus on are the following:\n\nbudget_2013: Budget in 2013 inflation adjusted dollars.\ngross_2013: Gross (US and international combined) in 2013 inflation adjusted dollars.\nroi: Return on investment, calculated as the ratio of the gross to budget.\nclean_test: Bechdel test result:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\nbinary: Bechdel Test PASS vs FAIL binary\n\nWe will also use the year of release in data prep and title of movie to take a deeper look at some outliers.\nThere are a few other variables in the dataset, but we won’t be using them in this analysis."
-  },
-  {
-    "objectID": "ae/ae-02-bechdel-dataviz.html#visualizing-data-with-ggplot2",
-    "href": "ae/ae-02-bechdel-dataviz.html#visualizing-data-with-ggplot2",
-    "title": "AE 02: Bechdel + data visualization",
-    "section": "Visualizing data with ggplot2",
-    "text": "Visualizing data with ggplot2\nggplot2 is the package and ggplot() is the function in this package that is used to create a plot.\n\nggplot() creates the initial base coordinate system, and we will add layers to that base. We first specify the data set we will use with data = bechdel.\n\n\nggplot(data = bechdel)\n\n\n\n\n\n\n\n\n\nThe mapping argument is paired with an aesthetic (aes()), which tells us how the variables in our data set should be mapped to the visual properties of the graph.\n\n\nggplot(\n  data = bechdel, \n  mapping = aes(x = budget_2013, y = gross_2013)\n)\n\n\n\n\n\n\n\n\nAs we previously mentioned, we often omit the names of the first two arguments in R functions. So you’ll often see this written as:\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013))\n\n\n\n\n\n\n\n\nNote that the result is exactly the same.\n\nThe geom_xx function specifies the type of plot we want to use to represent the data. In the code below, we use geom_point which creates a plot where each observation is represented by a point.\n\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point()\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\nNote that this results in a warning as well. What does the warning mean?"
-  },
-  {
-    "objectID": "ae/ae-02-bechdel-dataviz.html#gross-revenue-vs.-budget",
-    "href": "ae/ae-02-bechdel-dataviz.html#gross-revenue-vs.-budget",
-    "title": "AE 02: Bechdel + data visualization",
-    "section": "Gross revenue vs. budget",
-    "text": "Gross revenue vs. budget\n\nStep 1 - Your turn\nModify the following plot to change the color of all points to a different color.\n\n\n\n\n\n\nTip\n\n\n\nSee http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf for many color options you can use by name in R or use the hex code for a color of your choice.\n\n\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point(color = \"deepskyblue3\") \n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 2 - Your turn\nAdd labels for the title and x and y axes.\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013))+\n  geom_point(color = \"deepskyblue3\") + \n  labs(\n    x = \"___\", \n    y = \"___\", \n    title = \"___\"\n  )\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 3 - Your turn\nAn aesthetic is a visual property of one of the objects in your plot. Commonly used aesthetic options are:\n\ncolor\nfill\nshape\nsize\nalpha (transparency)\n\nModify the plot below, so the color of the points is based on the variable binary.\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point() + \n  labs(\n    x = \"Budget (in 2013 $)\", \n    y = \"Gross revenue (in 2013 $)\", \n    title = \"Gross revenue vs. budget, by ___\"\n  )\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 4 - Your turn\nExpand on your plot from the previous step to make the size of your points based on roi.\n\n# add code here\n\n\n\nStep 5 - Your turn\nExpand on your plot from the previous step to make the transparency (alpha) of the points 0.5.\n\n# add code here\n\n\n\nStep 6 - Your turn\nExpand on your plot from the previous step by using facet_wrap to display the association between budget and gross for different values of clean_test.\n\n# add code here\n\n\n\nStep 7 - Demo\nImprove your plot from the previous step by making the x and y scales more legible.\n\n\n\n\n\n\nTip\n\n\n\nMake use of the scales package, specifically the scale_x_continuous() and scale_y_continuous() functions.\n\n\n\n# add code here\n\n\n\nStep 8 - Your turn\nExpand on your plot from the previous step by using facet_grid to display the association between budget and gross for different combinations of clean_test and binary. Comment on whether this was a useful update.\n\n# add code here\n\nAdd comment here…\n\n\nStep 9 - Demo\nWhat other improvements could we make to this plot?\n\n# add code here\n\n\n\nRender, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using a simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
-  },
-  {
-    "objectID": "ae/ae-02-bechdel-dataviz.html#return-on-investment",
-    "href": "ae/ae-02-bechdel-dataviz.html#return-on-investment",
-    "title": "AE 02: Bechdel + data visualization",
-    "section": "Return-on-investment",
-    "text": "Return-on-investment\nFinally, let’s take a look at return-on-investment (ROI).\n\nStep 1 - Your turn\nCreate side-by-side box plots of roi by clean_test where the boxes are colored by binary.\n\n# add code here\n\nWhat are those movies with very high returns on investment?\n\nbechdel |&gt;\n  filter(roi &gt; 400) |&gt;\n  select(title, roi, budget_2013, gross_2013, year, clean_test)\n\n# A tibble: 3 × 6\n  title                     roi budget_2013 gross_2013  year clean_test\n  &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     \n1 Paranormal Activity      671.      505595  339424558  2007 dubious   \n2 The Blair Witch Project  648.      839077  543776715  1999 ok        \n3 El Mariachi              583.       11622    6778946  1992 nowomen   \n\n\n\n\nStep 2 - Demo\nExpand on your plot from the previous step to zoom in on movies with roi &lt; ___ to get a better view of how the medians across the categories compare.\n\n# add code here\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nRender, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using a simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
   },
   {
     "objectID": "labs/lab-1.html",
@@ -1120,26 +990,226 @@
     ]
   },
   {
-    "objectID": "labs/lab-7.html",
-    "href": "labs/lab-7.html",
-    "title": "Lab 7 - TBA",
+    "objectID": "ae/ae-02-bechdel-dataviz.html",
+    "href": "ae/ae-02-bechdel-dataviz.html",
+    "title": "AE 02: Bechdel + data visualization",
     "section": "",
-    "text": "To be posted.",
+    "text": "In this mini analysis we work with the data used in the FiveThirtyEight story titled “The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women”.\nThis analysis is about the Bechdel test, a measure of the representation of women in fiction."
+  },
+  {
+    "objectID": "ae/ae-02-bechdel-dataviz.html#getting-started",
+    "href": "ae/ae-02-bechdel-dataviz.html#getting-started",
+    "title": "AE 02: Bechdel + data visualization",
+    "section": "Getting started",
+    "text": "Getting started\n\nPackages\nWe start with loading the packages we’ll use: tidyverse for majority of the analysis and scales for pretty plot labels later on.\n\nlibrary(tidyverse)\nlibrary(scales)\n\n\n\nData\nThe data are stored as a CSV (comma separated values) file in the data folder of your repository. Let’s read it from there and save it as an object called bechdel.\n\nbechdel &lt;- read_csv(\"https://sta199-s24.github.io/data/bechdel.csv\")\n\n\n\nGet to know the data\nWe can use the glimpse function to get an overview (or “glimpse”) of the data.\n\n# add code here\n\n\nWhat does each observation (row) in the data set represent?\n\nEach observation represents a ___.\n\nHow many observations (rows) are in the data set?\n\nThere are 1615 movies in the dataset.\n\nHow many variables (columns) are in the data set?\n\nThere are ___ columns in the dataset.\n\n\nVariables of interest\nThe variables we’ll focus on are the following:\n\nbudget_2013: Budget in 2013 inflation adjusted dollars.\ngross_2013: Gross (US and international combined) in 2013 inflation adjusted dollars.\nroi: Return on investment, calculated as the ratio of the gross to budget.\nclean_test: Bechdel test result:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\nbinary: Bechdel Test PASS vs FAIL binary\n\nWe will also use the year of release in data prep and title of movie to take a deeper look at some outliers.\nThere are a few other variables in the dataset, but we won’t be using them in this analysis."
+  },
+  {
+    "objectID": "ae/ae-02-bechdel-dataviz.html#visualizing-data-with-ggplot2",
+    "href": "ae/ae-02-bechdel-dataviz.html#visualizing-data-with-ggplot2",
+    "title": "AE 02: Bechdel + data visualization",
+    "section": "Visualizing data with ggplot2",
+    "text": "Visualizing data with ggplot2\nggplot2 is the package and ggplot() is the function in this package that is used to create a plot.\n\nggplot() creates the initial base coordinate system, and we will add layers to that base. We first specify the data set we will use with data = bechdel.\n\n\nggplot(data = bechdel)\n\n\n\n\n\n\n\n\n\nThe mapping argument is paired with an aesthetic (aes()), which tells us how the variables in our data set should be mapped to the visual properties of the graph.\n\n\nggplot(\n  data = bechdel, \n  mapping = aes(x = budget_2013, y = gross_2013)\n)\n\n\n\n\n\n\n\n\nAs we previously mentioned, we often omit the names of the first two arguments in R functions. So you’ll often see this written as:\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013))\n\n\n\n\n\n\n\n\nNote that the result is exactly the same.\n\nThe geom_xx function specifies the type of plot we want to use to represent the data. In the code below, we use geom_point which creates a plot where each observation is represented by a point.\n\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point()\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\nNote that this results in a warning as well. What does the warning mean?"
+  },
+  {
+    "objectID": "ae/ae-02-bechdel-dataviz.html#gross-revenue-vs.-budget",
+    "href": "ae/ae-02-bechdel-dataviz.html#gross-revenue-vs.-budget",
+    "title": "AE 02: Bechdel + data visualization",
+    "section": "Gross revenue vs. budget",
+    "text": "Gross revenue vs. budget\n\nStep 1 - Your turn\nModify the following plot to change the color of all points to a different color.\n\n\n\n\n\n\nTip\n\n\n\nSee http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf for many color options you can use by name in R or use the hex code for a color of your choice.\n\n\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point(color = \"deepskyblue3\") \n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 2 - Your turn\nAdd labels for the title and x and y axes.\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013))+\n  geom_point(color = \"deepskyblue3\") + \n  labs(\n    x = \"___\", \n    y = \"___\", \n    title = \"___\"\n  )\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 3 - Your turn\nAn aesthetic is a visual property of one of the objects in your plot. Commonly used aesthetic options are:\n\ncolor\nfill\nshape\nsize\nalpha (transparency)\n\nModify the plot below, so the color of the points is based on the variable binary.\n\nggplot(bechdel, aes(x = budget_2013, y = gross_2013)) +\n  geom_point() + \n  labs(\n    x = \"Budget (in 2013 $)\", \n    y = \"Gross revenue (in 2013 $)\", \n    title = \"Gross revenue vs. budget, by ___\"\n  )\n\nWarning: Removed 15 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nStep 4 - Your turn\nExpand on your plot from the previous step to make the size of your points based on roi.\n\n# add code here\n\n\n\nStep 5 - Your turn\nExpand on your plot from the previous step to make the transparency (alpha) of the points 0.5.\n\n# add code here\n\n\n\nStep 6 - Your turn\nExpand on your plot from the previous step by using facet_wrap to display the association between budget and gross for different values of clean_test.\n\n# add code here\n\n\n\nStep 7 - Demo\nImprove your plot from the previous step by making the x and y scales more legible.\n\n\n\n\n\n\nTip\n\n\n\nMake use of the scales package, specifically the scale_x_continuous() and scale_y_continuous() functions.\n\n\n\n# add code here\n\n\n\nStep 8 - Your turn\nExpand on your plot from the previous step by using facet_grid to display the association between budget and gross for different combinations of clean_test and binary. Comment on whether this was a useful update.\n\n# add code here\n\nAdd comment here…\n\n\nStep 9 - Demo\nWhat other improvements could we make to this plot?\n\n# add code here\n\n\n\nRender, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using a simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
+  },
+  {
+    "objectID": "ae/ae-02-bechdel-dataviz.html#return-on-investment",
+    "href": "ae/ae-02-bechdel-dataviz.html#return-on-investment",
+    "title": "AE 02: Bechdel + data visualization",
+    "section": "Return-on-investment",
+    "text": "Return-on-investment\nFinally, let’s take a look at return-on-investment (ROI).\n\nStep 1 - Your turn\nCreate side-by-side box plots of roi by clean_test where the boxes are colored by binary.\n\n# add code here\n\nWhat are those movies with very high returns on investment?\n\nbechdel |&gt;\n  filter(roi &gt; 400) |&gt;\n  select(title, roi, budget_2013, gross_2013, year, clean_test)\n\n# A tibble: 3 × 6\n  title                     roi budget_2013 gross_2013  year clean_test\n  &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     \n1 Paranormal Activity      671.      505595  339424558  2007 dubious   \n2 The Blair Witch Project  648.      839077  543776715  1999 ok        \n3 El Mariachi              583.       11622    6778946  1992 nowomen   \n\n\n\n\nStep 2 - Demo\nExpand on your plot from the previous step to zoom in on movies with roi &lt; ___ to get a better view of how the medians across the categories compare.\n\n# add code here\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nRender, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using a simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n📗 r4ds - chp 5\nTidying data\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
     "crumbs": [
-      "Labs",
-      "Lab 7"
+      "Course information",
+      "Schedule"
     ]
   },
   {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - TBA",
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.3.2: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.4: https://quarto.org/docs/download/prerelease.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
+    "crumbs": [
+      "Course information",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Project",
+      "Description"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course.",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2 - TBA",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Labs",
-      "Lab 4"
+      "Lab 2"
     ]
+  },
+  {
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2-draft.html",
+    "href": "labs/lab-2-draft.html",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "In this lab you’ll continue to hone your data science workflow as well as bring together what you learned so far in the course (data visualization) with what’s coming up (data wrangling).\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed Lab 0 and Lab 1 and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review them before starting with this one.\n\n\n\n\nBy the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#learning-objectives",
+    "href": "labs/lab-2-draft.html#learning-objectives",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "By the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub"
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#getting-started",
+    "href": "labs/lab-2-draft.html#getting-started",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "Go to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#packages",
+    "href": "labs/lab-2-draft.html#packages",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error)."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#guidelines",
+    "href": "labs/lab-2-draft.html#guidelines",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#part-1",
+    "href": "labs/lab-2-draft.html#part-1",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Part 1",
+    "text": "Part 1\nBack to the Midwest!\nIn this part you will revisit and build on some of your findings from Lab 1, where you explored the midwest data frame. Remember that this data frame is bundled with the ggplot2 package and is automatically loaded when you load the tidyverse package. As a refresher, the data contains demographic characteristics of counties in the Midwest region of the United States. You can read documentation for the data set, including variable definitions by typing ?midwest in the Console or searching for midwest in the Help pane.\n\nQuestion 1\nCalculate the number of counties in each state and display your results in descending order of number of counties, and how many? Which state has the highest number of counties? Then, display your results in ascending order. Which state has the lowest number of counties, and how many?\n\n\n\n\n\n\nNote\n\n\n\nThe number of counties in a state can change over time, so the values you see in this output may not be true today.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 2\nWhile in a given state two counties can’t have the same name, across states some county names might be shared. Discover the most popular county names by counting how many times each name occurs in the dataset and displaying the results in order of descending counts.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 3\nReturn to the following box plot of population densities where you were asked to identify at least one outlier.\n\n\n\n\n\n\n\n\n\nIn this question part, we want you to revisit this box plot and identify\na. the county with the highest population density.\nb. the counties with a population density higher than 25,000.\nAnswer using a single data wrangling pipeline for each part. Your response should be a data frame with one row and five columns: county name, state name, population density, total population, and area, in this order. If your response has multiple rows, it the data frame should be arranged in descending order of population density.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 4\nIn Lab 1 you were also asked to describe the distribution of population densities. The following is one acceptable description that touches on shape, center, and spread of this distribution. Calculate the values that should go into the blanks.\n\nThe distribution of population density of counties is unimodal and extremely right-skewed. A typical Midwestern county has population density of ____ per unit area. The middle 50% of the counties have population densities between ___ to ___.\n\n\n\n\n\n\n\nTip\n\n\n\nThink about which measures of center and spread are appropriate for skewed distributions.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 5\nAnother visualization from Lab 1 was the following that showed the proportion of urban counties in each state.\n\n\n\n\n\n\n\n\n\nCalculate these proportions in a single data pipeline.\n\n\n\n\n\n\nTip\n\n\n\nRemember, you’ll first need to create a new variable called metro which takes on the value Yes if the value of inmetro is 1, and No otherwise. You can refer to Lab 1 if you need a refresher on how to do this.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 5”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 6\nReturn to the following scatter plot of percentage below poverty vs. percentage of people with a college degree, where the color and shape of points are determined by state where you were asked to identify at least one county that is a clear outlier by name.\n\n\n\n\n\n\n\n\n\na. In a single pipeline, identify the observations marked in red squares in the plot above. Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nb. Create a new variable in midwest called potential_outlier. This variable should take on the value:\n\nYes if the point is one the ones you identified in part a, i.e., one of the points marked in red squares in the plot above.\nNo otherwise.\n\nThen, display the updated midwest data frame, with county, state, percentage below poverty, percentage college educated, potential_outlier as the selected variables, arranged in ascending order of potential_outlier.\nc. Recreate the visualization above, i.e. a scatterplot of percentage below poverty vs. percentage of people with a college degree, however color the points by the newly created potential_outlier variable instead of state.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 6”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 7\nIn a single pipeline, calculate the total population for each state, and display the results in descending order of total population. Which Midwestern state is most populous? Which is the least populous?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 8\nCalculate the average percentage below poverty for each state and save the resulting data frame as state_poverty with the columns state and mean_percbelowpoverty.\nFirst, display the state_poverty data frame in descending order of mean_percbelowpoverty. Which state has the highest average percentage below poverty across its counties?\nThen, display it in ascending order of mean_percbelowpoverty. Which state has the lowest average percentage below poverty across its counties?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 8”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#part-2",
+    "href": "labs/lab-2-draft.html#part-2",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Part 2",
+    "text": "Part 2\n\nQuestion 9\nAll about group_by():\nSuppose we have the following tiny data frame:\n\ndf &lt;- tibble(\n  x = 1:5,\n  y = c(\"a\", \"b\", \"a\", \"a\", \"b\"),\n  z = c(\"K\", \"K\", \"L\", \"L\", \"K\")\n)\ndf\n\na. What does the following code chunk do? Run it and analyze the result and articulate in words what group_by() does.\n\ndf |&gt;\n  group_by(y)\n\nb. What does the following code chunk do? Run it and analyze the result and articulate in words what arrange() does. Also comment on how it’s different from the group_by() in part (a)?\n\ndf |&gt;\n  arrange(y)\n\nc. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does.\n\ndf |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\n\nd. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does. Then, comment on what the message says.\n\ndf |&gt;\n  group_by(y, z) |&gt;\n  summarize(mean_x = mean(x))\n\ne. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does. How is the output different from the one in part (d).\n\ndf |&gt;\n  group_by(y, z) |&gt;\n  summarize(mean_x = mean(x), .groups = \"drop\")\n\nf. What do the following pipelines do? Run both and analyze their results and articulate in words what each pipeline does. How are the outputs of the two pipelines different?\n\ndf |&gt;\n  group_by(y, z) |&gt;\n  summarize(mean_x = mean(x))\n\ndf |&gt;\n  group_by(y, z) |&gt;\n  mutate(mean_x = mean(x))\n\n\nRender, commit, and push your changes to GitHub with an appropriate commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 10\nDid you select your pages on Gradescope? You don’t need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you’ll get full points on this question. Otherwise, you’ll get a 0 on this question.2"
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#submission",
+    "href": "labs/lab-2-draft.html#submission",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Submission",
+    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope"
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#grading",
+    "href": "labs/lab-2-draft.html#grading",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Grading",
+    "text": "Grading\nThe lab is graded out of a total of 40 points.\nOn Questions 1 through 9, you can earn up to 4 points on each question:\n\n4: Response shows proficiency and addresses all or almost all of the rubric items.\n3: Response shows understanding and addresses majority of the rubric items.\n2: Response shows effort and misses majority of rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.\n\nOn Question 10, you can earn either 0 or 4 points for selecting questions and pages on Gradescope:\n\n4: Selected questions and pages on Gradescope.\n0: Did not select some or all questions and pages on Gradescope."
+  },
+  {
+    "objectID": "labs/lab-2-draft.html#footnotes",
+    "href": "labs/lab-2-draft.html#footnotes",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎"
   },
   {
     "objectID": "labs/lab-5.html",
