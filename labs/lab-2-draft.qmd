@@ -157,8 +157,8 @@ the county with the highest population density.
 b\.
 the counties with a population density higher than 25,000.
 
-Answer using a single data wrangling pipeline for each part.
-Your response should be a data frame with one row and five columns: county name, state name, population density, total population, and area, in this order.
+Answer using a single data wrangling pipeline.
+Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order.
 If your response has multiple rows, it the data frame should be arranged in descending order of population density.
 
 ::: render-commit-push
