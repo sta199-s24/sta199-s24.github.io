@@ -143,277 +143,193 @@
     ]
   },
   {
-    "objectID": "slides/04-next.html#while-you-wait",
-    "href": "slides/04-next.html#while-you-wait",
-    "title": "Visualizing various types of data",
-    "section": "While you wait…",
-    "text": "While you wait…\nQuestions from the prepare materials?"
-  },
-  {
-    "objectID": "slides/04-next.html#questions-from-last-time",
-    "href": "slides/04-next.html#questions-from-last-time",
-    "title": "Visualizing various types of data",
-    "section": "Questions from last time",
-    "text": "Questions from last time\n\nIs there any code in the videos that is not in the readings? Yes and no. There is no substantial functionality introduced in the videos that is not also in the readings, however the examples in the videos are different than the ones in the reading.\nWhat are all of the geoms we need to know? You don’t need to “memorize” or even “know” all o the geoms available in the ggplot2 package, but you can find a list of them on the ggplot2 cheat sheet or on the reference page.\nCould you please clarify what situations it would be appropriate to use each geom function? Today’s topic! And think about it as “what plot should I make for which type of variable”."
-  },
-  {
-    "objectID": "slides/04-next.html#announcements",
-    "href": "slides/04-next.html#announcements",
-    "title": "Visualizing various types of data",
+    "objectID": "slides/01-meet-the-toolkit.html#announcements",
+    "href": "slides/01-meet-the-toolkit.html#announcements",
+    "title": "Meet the toolkit",
     "section": "Announcements",
-    "text": "Announcements\n\nAEs this week should be submitted by midnight on Sunday. To “submit”, commit and push at least once to your ae repo for each application exercise this week.\nIf you email me, please put STA 199 in the subject."
+    "text": "Announcements\n\nIf you have not yet completed the Getting to know you survey, please do so asap!\nIf you have not yet accepted the invite to join the course GitHub Organization (I’m looking at 41 of you as of this morning!), please do so asap!\nOffice hours + locations linked at https://sta199-s24.github.io/course-team.html, come say hi to me or any of the TAs!"
   },
   {
-    "objectID": "slides/04-next.html#ae-02-bechdel-dataviz",
-    "href": "slides/04-next.html#ae-02-bechdel-dataviz",
-    "title": "Visualizing various types of data",
-    "section": "ae-02-bechdel-dataviz",
-    "text": "ae-02-bechdel-dataviz\n\n\nIf you were in class last Thursday:\nand followed along with the application exercise…\nGo to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae. If there are any uncommitted files, commit them so you can start with a clean slate.\n\nIf you missed class last Thursday:\nor didn’t follow along with the application exercise…\nGo to the course GitHub org and find your ae repo. Clone the repo in your container, open the Quarto document called ae-02-bechdel."
+    "objectID": "slides/01-meet-the-toolkit.html#course-homepage",
+    "href": "slides/01-meet-the-toolkit.html#course-homepage",
+    "title": "Meet the toolkit",
+    "section": "Course homepage",
+    "text": "Course homepage\nLet’s take a tour!"
   },
   {
-    "objectID": "slides/04-next.html#recap-of-ae",
-    "href": "slides/04-next.html#recap-of-ae",
-    "title": "Visualizing various types of data",
-    "section": "Recap of AE",
-    "text": "Recap of AE\n\nConstruct plots with ggplot().\nLayers of ggplots are separated by +s.\nThe formula is (almost) always as follows:\n\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n\nAesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user, e.g. color = binary vs. color = \"pink\".\nUse facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables."
+    "objectID": "slides/01-meet-the-toolkit.html#collaboration-policy",
+    "href": "slides/01-meet-the-toolkit.html#collaboration-policy",
+    "title": "Meet the toolkit",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
   },
   {
-    "objectID": "slides/04-next.html#identifying-variable-types",
-    "href": "slides/04-next.html#identifying-variable-types",
-    "title": "Visualizing various types of data",
-    "section": "Identifying variable types",
-    "text": "Identifying variable types\n\nQuestionVote\n\n\n\nIdentify the type of each of the following variables.\n\nFavorite food\nNumber of classes you’re taking this semester\nZip code\nAge"
+    "objectID": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
+    "href": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
+    "title": "Meet the toolkit",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
   },
   {
-    "objectID": "slides/04-next.html#the-way-data-is-displayed-matters",
-    "href": "slides/04-next.html#the-way-data-is-displayed-matters",
-    "title": "Visualizing various types of data",
-    "section": "The way data is displayed matters",
-    "text": "The way data is displayed matters\n\nWhat do these three plots show?\n\n\n\n\n\n\n\n\nSource: #barbarplots"
+    "objectID": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
+    "href": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
+    "title": "Meet the toolkit",
+    "section": "Use of generative AI",
+    "text": "Use of generative AI\n\nTreat generative AI, such as ChatGPT, the same as other online resources.\nGuiding principles:\n\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. See the syllabus for guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you."
   },
   {
-    "objectID": "slides/04-next.html#visualizing-penguins",
-    "href": "slides/04-next.html#visualizing-penguins",
-    "title": "Visualizing various types of data",
-    "section": "Visualizing penguins",
-    "text": "Visualizing penguins\n\n\n\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(ggthemes)\n\npenguins\n\n# A tibble: 344 × 8\n   species island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year\n   &lt;fct&gt;   &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torgers…           39.1          18.7               181        3750 male   2007\n 2 Adelie  Torgers…           39.5          17.4               186        3800 fema…  2007\n 3 Adelie  Torgers…           40.3          18                 195        3250 fema…  2007\n 4 Adelie  Torgers…           NA            NA                  NA          NA &lt;NA&gt;   2007\n 5 Adelie  Torgers…           36.7          19.3               193        3450 fema…  2007\n 6 Adelie  Torgers…           39.3          20.6               190        3650 male   2007\n 7 Adelie  Torgers…           38.9          17.8               181        3625 fema…  2007\n 8 Adelie  Torgers…           39.2          19.6               195        4675 male   2007\n 9 Adelie  Torgers…           34.1          18.1               193        3475 &lt;NA&gt;   2007\n10 Adelie  Torgers…           42            20.2               190        4250 &lt;NA&gt;   2007\n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by @allison_horst."
+    "objectID": "slides/01-meet-the-toolkit.html#academic-integrity",
+    "href": "slides/01-meet-the-toolkit.html#academic-integrity",
+    "title": "Meet the toolkit",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
   },
   {
-    "objectID": "slides/04-next.html#univariate-analysis-1",
-    "href": "slides/04-next.html#univariate-analysis-1",
-    "title": "Visualizing various types of data",
-    "section": "Univariate analysis",
-    "text": "Univariate analysis\nAnalyzing a single variable:\n\nNumerical: histogram, box plot, density plot, etc.\nCategorical: bar plot, pie chart, etc."
+    "objectID": "slides/01-meet-the-toolkit.html#most-importantly",
+    "href": "slides/01-meet-the-toolkit.html#most-importantly",
+    "title": "Meet the toolkit",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
   },
   {
-    "objectID": "slides/04-next.html#histogram---step-1",
-    "href": "slides/04-next.html#histogram---step-1",
-    "title": "Visualizing various types of data",
-    "section": "Histogram - Step 1",
-    "text": "Histogram - Step 1\n\n\n\nggplot(\n  penguins\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#five-tips-for-success",
+    "href": "slides/01-meet-the-toolkit.html#five-tips-for-success",
+    "title": "Meet the toolkit",
+    "section": "Five tips for success",
+    "text": "Five tips for success\n\nComplete all the preparation work before class.\nAsk questions.\nDo the readings.\nDo the lab.\nDon’t procrastinate – at least on a weekly basis!"
   },
   {
-    "objectID": "slides/04-next.html#histogram---step-2",
-    "href": "slides/04-next.html#histogram---step-2",
-    "title": "Visualizing various types of data",
-    "section": "Histogram - Step 2",
-    "text": "Histogram - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "href": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "title": "Meet the toolkit",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-s24.github.io\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
   },
   {
-    "objectID": "slides/04-next.html#histogram---step-3",
-    "href": "slides/04-next.html#histogram---step-3",
-    "title": "Visualizing various types of data",
-    "section": "Histogram - Step 3",
-    "text": "Histogram - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram()"
+    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit.html#learning-goals",
+    "title": "Meet the toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
   },
   {
-    "objectID": "slides/04-next.html#histogram---step-4",
-    "href": "slides/04-next.html#histogram---step-4",
-    "title": "Visualizing various types of data",
-    "section": "Histogram - Step 4",
-    "text": "Histogram - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "title": "Meet the toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
   },
   {
-    "objectID": "slides/04-next.html#histogram---step-5",
-    "href": "slides/04-next.html#histogram---step-5",
-    "title": "Visualizing various types of data",
-    "section": "Histogram - Step 5",
-    "text": "Histogram - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  ) +\n  labs(\n    title = \"Weights of penguins\",\n    x = \"Weight (grams)\",\n    y = \"Count\"\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "title": "Meet the toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
   },
   {
-    "objectID": "slides/04-next.html#boxplot---step-1",
-    "href": "slides/04-next.html#boxplot---step-1",
-    "title": "Visualizing various types of data",
-    "section": "Boxplot - Step 1",
-    "text": "Boxplot - Step 1\n\n\n\nggplot(\n  penguins\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "title": "Meet the toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
-    "objectID": "slides/04-next.html#boxplot---step-2",
-    "href": "slides/04-next.html#boxplot---step-2",
-    "title": "Visualizing various types of data",
-    "section": "Boxplot - Step 2",
-    "text": "Boxplot - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "title": "Meet the toolkit",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
   },
   {
-    "objectID": "slides/04-next.html#boxplot---step-3",
-    "href": "slides/04-next.html#boxplot---step-3",
-    "title": "Visualizing various types of data",
-    "section": "Boxplot - Step 3",
-    "text": "Boxplot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(y = body_mass_g)\n  ) +\n  geom_boxplot()"
+    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
+    "href": "slides/01-meet-the-toolkit.html#r-packages",
+    "title": "Meet the toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 15 January 2023, there are 20,252 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
   },
   {
-    "objectID": "slides/04-next.html#boxplot---step-4",
-    "href": "slides/04-next.html#boxplot---step-4",
-    "title": "Visualizing various types of data",
-    "section": "Boxplot - Step 4",
-    "text": "Boxplot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot()"
+    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo and follow along.\n ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
   },
   {
-    "objectID": "slides/04-next.html#boxplot---step-5",
-    "href": "slides/04-next.html#boxplot---step-5",
-    "title": "Visualizing various types of data",
-    "section": "Boxplot - Step 5",
-    "text": "Boxplot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot() +\n  labs(\n    x = \"Weight (grams)\",\n    y = NULL\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-1",
-    "href": "slides/04-next.html#density-plot---step-1",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 1",
-    "text": "Density plot - Step 1\n\n\n\nggplot(\n  penguins\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "title": "Meet the toolkit",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-2",
-    "href": "slides/04-next.html#density-plot---step-2",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 2",
-    "text": "Density plot - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "title": "Meet the toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-3",
-    "href": "slides/04-next.html#density-plot---step-3",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 3",
-    "text": "Density plot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density()"
+    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit.html#tidyverse",
+    "title": "Meet the toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-4",
-    "href": "slides/04-next.html#density-plot---step-4",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 4",
-    "text": "Density plot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\"\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "title": "Meet the toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-5",
-    "href": "slides/04-next.html#density-plot---step-5",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 5",
-    "text": "Density plot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo (if you haven’t yet done so) and follow along.\n ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-6",
-    "href": "slides/04-next.html#density-plot---step-6",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 6",
-    "text": "Density plot - Step 6\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\"\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
   },
   {
-    "objectID": "slides/04-next.html#density-plot---step-7",
-    "href": "slides/04-next.html#density-plot---step-7",
-    "title": "Visualizing various types of data",
-    "section": "Density plot - Step 7",
-    "text": "Density plot - Step 7\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\",\n    alpha = 0.5\n  )"
+    "objectID": "slides/01-meet-the-toolkit.html#environments",
+    "href": "slides/01-meet-the-toolkit.html#environments",
+    "title": "Meet the toolkit",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
   },
   {
-    "objectID": "slides/04-next.html#weights-of-penguins",
-    "href": "slides/04-next.html#weights-of-penguins",
-    "title": "Visualizing various types of data",
-    "section": "Weights of penguins",
-    "text": "Weights of penguins\n\nQuestionVote\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTRUE / FALSE\n\nThe distribution of penguin weights in this sample is left skewed.\nThe distribution of penguin weights in this sample is unimodal."
+    "objectID": "slides/01-meet-the-toolkit.html#environments-1",
+    "href": "slides/01-meet-the-toolkit.html#environments-1",
+    "title": "Meet the toolkit",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
   },
   {
-    "objectID": "slides/04-next.html#bivariate-analysis-1",
-    "href": "slides/04-next.html#bivariate-analysis-1",
-    "title": "Visualizing various types of data",
-    "section": "Bivariate analysis",
-    "text": "Bivariate analysis\nAnalyzing the relationship between two variables:\n\nNumerical + numerical: scatterplot\nNumerical + categorical: side-by-side box plots, violin plots, etc.\nCategorical + categorical: stacked bar plots\nUsing an aesthetic (e.g., fill, color, shape, etc.) or facets to represent the second variable in any plot"
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "title": "Meet the toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
-    "objectID": "slides/04-next.html#side-by-side-box-plots",
-    "href": "slides/04-next.html#side-by-side-box-plots",
-    "title": "Visualizing various types of data",
-    "section": "Side-by-side box plots",
-    "text": "Side-by-side box plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    y = species\n    )\n  ) +\n  geom_boxplot()"
-  },
-  {
-    "objectID": "slides/04-next.html#density-plots",
-    "href": "slides/04-next.html#density-plots",
-    "title": "Visualizing various types of data",
-    "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_density()"
-  },
-  {
-    "objectID": "slides/04-next.html#density-plots-1",
-    "href": "slides/04-next.html#density-plots-1",
-    "title": "Visualizing various types of data",
-    "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density()"
-  },
-  {
-    "objectID": "slides/04-next.html#density-plots-2",
-    "href": "slides/04-next.html#density-plots-2",
-    "title": "Visualizing various types of data",
-    "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  )"
-  },
-  {
-    "objectID": "slides/04-next.html#density-plots-3",
-    "href": "slides/04-next.html#density-plots-3",
-    "title": "Visualizing various types of data",
-    "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  ) +\n  theme(\n    legend.position = \"bottom\"\n  )"
-  },
-  {
-    "objectID": "slides/04-next.html#violin-plots",
-    "href": "slides/04-next.html#violin-plots",
-    "title": "Visualizing various types of data",
-    "section": "Violin plots",
-    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()"
-  },
-  {
-    "objectID": "slides/04-next.html#multiple-geoms",
-    "href": "slides/04-next.html#multiple-geoms",
-    "title": "Visualizing various types of data",
-    "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()"
-  },
-  {
-    "objectID": "slides/04-next.html#multiple-geoms-1",
-    "href": "slides/04-next.html#multiple-geoms-1",
-    "title": "Visualizing various types of data",
-    "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
-  },
-  {
-    "objectID": "slides/04-next.html#multiple-geoms-aesthetics",
-    "href": "slides/04-next.html#multiple-geoms-aesthetics",
-    "title": "Visualizing various types of data",
-    "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
-  },
-  {
-    "objectID": "slides/04-next.html#multiple-geoms-aesthetics-1",
-    "href": "slides/04-next.html#multiple-geoms-aesthetics-1",
-    "title": "Visualizing various types of data",
-    "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )"
-  },
-  {
-    "objectID": "slides/04-next.html#multiple-geoms-aesthetics-2",
-    "href": "slides/04-next.html#multiple-geoms-aesthetics-2",
-    "title": "Visualizing various types of data",
-    "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+    "objectID": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
+    "href": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
+    "title": "Meet the toolkit",
+    "section": "What’s with all the hexes?",
+    "text": "What’s with all the hexes?\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
   },
   {
     "objectID": "slides/00-welcome-199.html#meet-the-prof",
@@ -1029,7 +945,7 @@
     "href": "index.html",
     "title": "STA 199: Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n\n\n\n\n\n\n4\nMon, Jan 29\n📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n📗 r4ds - chp 5\nTidying data\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n🖥️ slides 04  ⌨️ ae 03\n\n\n\n\n4\nMon, Jan 29\n📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n\n\n\n\n\n\n\n\nThu, Feb 1\n📗 r4ds - chp 5\nTidying data\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n\n\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -1305,196 +1221,399 @@
     "href": "slides/03-visualizing-data.html#multiple-geoms-aesthetics-2",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+    "text": "Multiple geoms + aesthetics\n::: columns ::: {.column width=“50%”}\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n:::— title: “Visualizing various types of data” subtitle: “Lecture 3” date: “January 23, 2024” format: revealjs"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#announcements",
-    "href": "slides/01-meet-the-toolkit.html#announcements",
-    "title": "Meet the toolkit",
+    "objectID": "slides/03-visualizing-data.html#while-you-wait-1",
+    "href": "slides/03-visualizing-data.html#while-you-wait-1",
+    "title": "Visualizing various types of data",
+    "section": "While you wait…",
+    "text": "While you wait…\nQuestions from the prepare materials?"
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#questions-from-last-time-1",
+    "href": "slides/03-visualizing-data.html#questions-from-last-time-1",
+    "title": "Visualizing various types of data",
+    "section": "Questions from last time",
+    "text": "Questions from last time\n\nIs there any code in the videos that is not in the readings? Yes and no. There is no substantial functionality introduced in the videos that is not also in the readings, however the examples in the videos are different than the ones in the reading.\nWhat are all of the geoms we need to know? You don’t need to “memorize” or even “know” all o the geoms available in the ggplot2 package, but you can find a list of them on the ggplot2 cheat sheet or on the reference page.\nCould you please clarify what situations it would be appropriate to use each geom function? Today’s topic! And think about it as “what plot should I make for which type of variable”."
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#announcements-1",
+    "href": "slides/03-visualizing-data.html#announcements-1",
+    "title": "Visualizing various types of data",
     "section": "Announcements",
-    "text": "Announcements\n\nIf you have not yet completed the Getting to know you survey, please do so asap!\nIf you have not yet accepted the invite to join the course GitHub Organization (I’m looking at 41 of you as of this morning!), please do so asap!\nOffice hours + locations linked at https://sta199-s24.github.io/course-team.html, come say hi to me or any of the TAs!"
+    "text": "Announcements\n\nAEs this week should be submitted by midnight on Sunday. To “submit”, commit and push at least once to your ae repo for each application exercise this week.\nIf you email me, please put STA 199 in the subject."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#course-homepage",
-    "href": "slides/01-meet-the-toolkit.html#course-homepage",
-    "title": "Meet the toolkit",
-    "section": "Course homepage",
-    "text": "Course homepage\nLet’s take a tour!"
+    "objectID": "slides/03-visualizing-data.html#ae-02-bechdel-dataviz",
+    "href": "slides/03-visualizing-data.html#ae-02-bechdel-dataviz",
+    "title": "Visualizing various types of data",
+    "section": "ae-02-bechdel-dataviz",
+    "text": "ae-02-bechdel-dataviz\n\n\nIf you were in class last Thursday:\nand followed along with the application exercise…\nGo to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae. If there are any uncommitted files, commit them so you can start with a clean slate.\n\nIf you missed class last Thursday:\nor didn’t follow along with the application exercise…\nGo to the course GitHub org and find your ae repo. Clone the repo in your container, open the Quarto document called ae-02-bechdel."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#collaboration-policy",
-    "href": "slides/01-meet-the-toolkit.html#collaboration-policy",
-    "title": "Meet the toolkit",
-    "section": "Collaboration policy",
-    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+    "objectID": "slides/03-visualizing-data.html#recap-of-ae",
+    "href": "slides/03-visualizing-data.html#recap-of-ae",
+    "title": "Visualizing various types of data",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nConstruct plots with ggplot().\nLayers of ggplots are separated by +s.\nThe formula is (almost) always as follows:\n\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n\nAesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user, e.g. color = binary vs. color = \"pink\".\nUse facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
-    "href": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
-    "title": "Meet the toolkit",
-    "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+    "objectID": "slides/03-visualizing-data.html#identifying-variable-types",
+    "href": "slides/03-visualizing-data.html#identifying-variable-types",
+    "title": "Visualizing various types of data",
+    "section": "Identifying variable types",
+    "text": "Identifying variable types\n\nQuestionVote\n\n\n\nIdentify the type of each of the following variables.\n\nFavorite food\nNumber of classes you’re taking this semester\nZip code\nAge"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
-    "href": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
-    "title": "Meet the toolkit",
-    "section": "Use of generative AI",
-    "text": "Use of generative AI\n\nTreat generative AI, such as ChatGPT, the same as other online resources.\nGuiding principles:\n\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. See the syllabus for guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you."
+    "objectID": "slides/03-visualizing-data.html#the-way-data-is-displayed-matters",
+    "href": "slides/03-visualizing-data.html#the-way-data-is-displayed-matters",
+    "title": "Visualizing various types of data",
+    "section": "The way data is displayed matters",
+    "text": "The way data is displayed matters\n\nWhat do these three plots show?\n\n\n\n\n\n\n\n\nSource: #barbarplots"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#academic-integrity",
-    "href": "slides/01-meet-the-toolkit.html#academic-integrity",
-    "title": "Meet the toolkit",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+    "objectID": "slides/03-visualizing-data.html#visualizing-penguins",
+    "href": "slides/03-visualizing-data.html#visualizing-penguins",
+    "title": "Visualizing various types of data",
+    "section": "Visualizing penguins",
+    "text": "Visualizing penguins\n\n\n\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(ggthemes)\n\npenguins\n\n# A tibble: 344 × 8\n   species island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year\n   &lt;fct&gt;   &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torgers…           39.1          18.7               181        3750 male   2007\n 2 Adelie  Torgers…           39.5          17.4               186        3800 fema…  2007\n 3 Adelie  Torgers…           40.3          18                 195        3250 fema…  2007\n 4 Adelie  Torgers…           NA            NA                  NA          NA &lt;NA&gt;   2007\n 5 Adelie  Torgers…           36.7          19.3               193        3450 fema…  2007\n 6 Adelie  Torgers…           39.3          20.6               190        3650 male   2007\n 7 Adelie  Torgers…           38.9          17.8               181        3625 fema…  2007\n 8 Adelie  Torgers…           39.2          19.6               195        4675 male   2007\n 9 Adelie  Torgers…           34.1          18.1               193        3475 &lt;NA&gt;   2007\n10 Adelie  Torgers…           42            20.2               190        4250 &lt;NA&gt;   2007\n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\nArtwork by @allison_horst."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#most-importantly",
-    "href": "slides/01-meet-the-toolkit.html#most-importantly",
-    "title": "Meet the toolkit",
-    "section": "Most importantly!",
-    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+    "objectID": "slides/03-visualizing-data.html#univariate-analysis-1",
+    "href": "slides/03-visualizing-data.html#univariate-analysis-1",
+    "title": "Visualizing various types of data",
+    "section": "Univariate analysis",
+    "text": "Univariate analysis\nAnalyzing a single variable:\n\nNumerical: histogram, box plot, density plot, etc.\nCategorical: bar plot, pie chart, etc."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#five-tips-for-success",
-    "href": "slides/01-meet-the-toolkit.html#five-tips-for-success",
-    "title": "Meet the toolkit",
-    "section": "Five tips for success",
-    "text": "Five tips for success\n\nComplete all the preparation work before class.\nAsk questions.\nDo the readings.\nDo the lab.\nDon’t procrastinate – at least on a weekly basis!"
+    "objectID": "slides/03-visualizing-data.html#histogram---step-1",
+    "href": "slides/03-visualizing-data.html#histogram---step-1",
+    "title": "Visualizing various types of data",
+    "section": "Histogram - Step 1",
+    "text": "Histogram - Step 1\n\n\n\nggplot(\n  penguins\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit-1",
-    "href": "slides/01-meet-the-toolkit.html#course-toolkit-1",
-    "title": "Meet the toolkit",
-    "section": "Course toolkit",
-    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-s24.github.io\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
+    "objectID": "slides/03-visualizing-data.html#histogram---step-2",
+    "href": "slides/03-visualizing-data.html#histogram---step-2",
+    "title": "Visualizing various types of data",
+    "section": "Histogram - Step 2",
+    "text": "Histogram - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
-    "href": "slides/01-meet-the-toolkit.html#learning-goals",
-    "title": "Meet the toolkit",
-    "section": "Learning goals",
-    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+    "objectID": "slides/03-visualizing-data.html#histogram---step-3",
+    "href": "slides/03-visualizing-data.html#histogram---step-3",
+    "title": "Visualizing various types of data",
+    "section": "Histogram - Step 3",
+    "text": "Histogram - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram()"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
-    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
-    "title": "Meet the toolkit",
-    "section": "Reproducibility checklist",
-    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+    "objectID": "slides/03-visualizing-data.html#histogram---step-4",
+    "href": "slides/03-visualizing-data.html#histogram---step-4",
+    "title": "Visualizing various types of data",
+    "section": "Histogram - Step 4",
+    "text": "Histogram - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
-    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
-    "title": "Meet the toolkit",
-    "section": "Toolkit for reproducibility",
-    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+    "objectID": "slides/03-visualizing-data.html#histogram---step-5",
+    "href": "slides/03-visualizing-data.html#histogram---step-5",
+    "title": "Visualizing various types of data",
+    "section": "Histogram - Step 5",
+    "text": "Histogram - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  ) +\n  labs(\n    title = \"Weights of penguins\",\n    x = \"Weight (grams)\",\n    y = \"Count\"\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
-    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
-    "title": "Meet the toolkit",
-    "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "objectID": "slides/03-visualizing-data.html#boxplot---step-1",
+    "href": "slides/03-visualizing-data.html#boxplot---step-1",
+    "title": "Visualizing various types of data",
+    "section": "Boxplot - Step 1",
+    "text": "Boxplot - Step 1\n\n\n\nggplot(\n  penguins\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
-    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
-    "title": "Meet the toolkit",
-    "section": "R vs. RStudio",
-    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+    "objectID": "slides/03-visualizing-data.html#boxplot---step-2",
+    "href": "slides/03-visualizing-data.html#boxplot---step-2",
+    "title": "Visualizing various types of data",
+    "section": "Boxplot - Step 2",
+    "text": "Boxplot - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
-    "href": "slides/01-meet-the-toolkit.html#r-packages",
-    "title": "Meet the toolkit",
-    "section": "R packages",
-    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 15 January 2023, there are 20,252 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+    "objectID": "slides/03-visualizing-data.html#boxplot---step-3",
+    "href": "slides/03-visualizing-data.html#boxplot---step-3",
+    "title": "Visualizing various types of data",
+    "section": "Boxplot - Step 3",
+    "text": "Boxplot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(y = body_mass_g)\n  ) +\n  geom_boxplot()"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
-    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
-    "title": "Meet the toolkit",
-    "section": "Tour: R + RStudio",
-    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo and follow along.\n ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
+    "objectID": "slides/03-visualizing-data.html#boxplot---step-4",
+    "href": "slides/03-visualizing-data.html#boxplot---step-4",
+    "title": "Visualizing various types of data",
+    "section": "Boxplot - Step 4",
+    "text": "Boxplot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot()"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
-    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
-    "title": "Meet the toolkit",
-    "section": "Tour recap: R + RStudio",
-    "text": "Tour recap: R + RStudio"
+    "objectID": "slides/03-visualizing-data.html#boxplot---step-5",
+    "href": "slides/03-visualizing-data.html#boxplot---step-5",
+    "title": "Visualizing various types of data",
+    "section": "Boxplot - Step 5",
+    "text": "Boxplot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot() +\n  labs(\n    x = \"Weight (grams)\",\n    y = NULL\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
-    "href": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
-    "title": "Meet the toolkit",
-    "section": "A short list (for now) of R essentials",
-    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-1",
+    "href": "slides/03-visualizing-data.html#density-plot---step-1",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 1",
+    "text": "Density plot - Step 1\n\n\n\nggplot(\n  penguins\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued",
-    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued",
-    "title": "Meet the toolkit",
-    "section": "R essentials (continued)",
-    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-2",
+    "href": "slides/03-visualizing-data.html#density-plot---step-2",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 2",
+    "text": "Density plot - Step 2\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
-    "href": "slides/01-meet-the-toolkit.html#tidyverse",
-    "title": "Meet the toolkit",
-    "section": "tidyverse",
-    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-3",
+    "href": "slides/03-visualizing-data.html#density-plot---step-3",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 3",
+    "text": "Density plot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density()"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
-    "href": "slides/01-meet-the-toolkit.html#quarto-1",
-    "title": "Meet the toolkit",
-    "section": "Quarto",
-    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-4",
+    "href": "slides/03-visualizing-data.html#density-plot---step-4",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 4",
+    "text": "Density plot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\"\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
-    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
-    "title": "Meet the toolkit",
-    "section": "Tour: Quarto",
-    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo (if you haven’t yet done so) and follow along.\n ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-5",
+    "href": "slides/03-visualizing-data.html#density-plot---step-5",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 5",
+    "text": "Density plot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
-    "href": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
-    "title": "Meet the toolkit",
-    "section": "Tour recap: Quarto",
-    "text": "Tour recap: Quarto"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-6",
+    "href": "slides/03-visualizing-data.html#density-plot---step-6",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 6",
+    "text": "Density plot - Step 6\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\"\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#environments",
-    "href": "slides/01-meet-the-toolkit.html#environments",
-    "title": "Meet the toolkit",
-    "section": "Environments",
-    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+    "objectID": "slides/03-visualizing-data.html#density-plot---step-7",
+    "href": "slides/03-visualizing-data.html#density-plot---step-7",
+    "title": "Visualizing various types of data",
+    "section": "Density plot - Step 7",
+    "text": "Density plot - Step 7\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\",\n    alpha = 0.5\n  )"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#environments-1",
-    "href": "slides/01-meet-the-toolkit.html#environments-1",
-    "title": "Meet the toolkit",
-    "section": "Environments",
-    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+    "objectID": "slides/03-visualizing-data.html#weights-of-penguins",
+    "href": "slides/03-visualizing-data.html#weights-of-penguins",
+    "title": "Visualizing various types of data",
+    "section": "Weights of penguins",
+    "text": "Weights of penguins\n\nQuestionVote\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTRUE / FALSE\n\nThe distribution of penguin weights in this sample is left skewed.\nThe distribution of penguin weights in this sample is unimodal."
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
-    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
-    "title": "Meet the toolkit",
-    "section": "How will we use Quarto?",
-    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+    "objectID": "slides/03-visualizing-data.html#bivariate-analysis-1",
+    "href": "slides/03-visualizing-data.html#bivariate-analysis-1",
+    "title": "Visualizing various types of data",
+    "section": "Bivariate analysis",
+    "text": "Bivariate analysis\nAnalyzing the relationship between two variables:\n\nNumerical + numerical: scatterplot\nNumerical + categorical: side-by-side box plots, violin plots, etc.\nCategorical + categorical: stacked bar plots\nUsing an aesthetic (e.g., fill, color, shape, etc.) or facets to represent the second variable in any plot"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
-    "href": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
-    "title": "Meet the toolkit",
-    "section": "What’s with all the hexes?",
-    "text": "What’s with all the hexes?\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+    "objectID": "slides/03-visualizing-data.html#side-by-side-box-plots",
+    "href": "slides/03-visualizing-data.html#side-by-side-box-plots",
+    "title": "Visualizing various types of data",
+    "section": "Side-by-side box plots",
+    "text": "Side-by-side box plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    y = species\n    )\n  ) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#density-plots",
+    "href": "slides/03-visualizing-data.html#density-plots",
+    "title": "Visualizing various types of data",
+    "section": "Density plots",
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_density()"
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#density-plots-1",
+    "href": "slides/03-visualizing-data.html#density-plots-1",
+    "title": "Visualizing various types of data",
+    "section": "Density plots",
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density()"
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#density-plots-2",
+    "href": "slides/03-visualizing-data.html#density-plots-2",
+    "title": "Visualizing various types of data",
+    "section": "Density plots",
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  )"
+  },
+  {
+    "objectID": "slides/03-visualizing-data.html#density-plots-3",
+    "href": "slides/03-visualizing-data.html#density-plots-3",
+    "title": "Visualizing various types of data",
+    "section": "Density plots",
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  ) +\n  theme(\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#while-you-wait",
+    "href": "slides/04-dataviz-overview.html#while-you-wait",
+    "title": "Data visualization overview",
+    "section": "While you wait…",
+    "text": "While you wait…\nQuestions from the prepare materials?"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#questions-from-last-time",
+    "href": "slides/04-dataviz-overview.html#questions-from-last-time",
+    "title": "Data visualization overview",
+    "section": "Questions from last time",
+    "text": "Questions from last time\nMany of the questions in Lab 1 are subjective. How does that work?\n\nidentify at least one outlier"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#questions-from-last-time-1",
+    "href": "slides/04-dataviz-overview.html#questions-from-last-time-1",
+    "title": "Data visualization overview",
+    "section": "Questions from last time",
+    "text": "Questions from last time\nMany of the questions in Lab 1 are subjective. How does that work?\n\nidentify at least one outlier ✅"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#questions-from-last-time-2",
+    "href": "slides/04-dataviz-overview.html#questions-from-last-time-2",
+    "title": "Data visualization overview",
+    "section": "Questions from last time",
+    "text": "Questions from last time\nMany of the questions in Lab 1 are subjective. How does that work?\n\nidentify at least one outlier ❌"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#questions-from-last-time-3",
+    "href": "slides/04-dataviz-overview.html#questions-from-last-time-3",
+    "title": "Data visualization overview",
+    "section": "Questions from last time",
+    "text": "Questions from last time\nWhat are some situations where waffle plots are better than pie charts?"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#announcements",
+    "href": "slides/04-dataviz-overview.html#announcements",
+    "title": "Data visualization overview",
+    "section": "Announcements",
+    "text": "Announcements\n\nAEs this week should be submitted by midnight on Sunday. To “submit”, commit and push at least once to your ae repo for each application exercise this week.\n…"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#packages",
+    "href": "slides/04-dataviz-overview.html#packages",
+    "title": "Data visualization overview",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggthemes)"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#bivariate-analysis",
+    "href": "slides/04-dataviz-overview.html#bivariate-analysis",
+    "title": "Data visualization overview",
+    "section": "Bivariate analysis",
+    "text": "Bivariate analysis\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Side-by-side box plots\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_boxplot(alpha = 0.5, show.legend = FALSE) +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Species\",\n    title = \"Side-by-side box plots\"\n  )\n\n\n# Density plots\nggplot(penguins, aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.5) +\n  theme(legend.position = \"bottom\") +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Density\",\n    fill = \"Species\", title = \"Density plots\"\n  )"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#violin-plots",
+    "href": "slides/04-dataviz-overview.html#violin-plots",
+    "title": "Data visualization overview",
+    "section": "Violin plots",
+    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#multiple-geoms",
+    "href": "slides/04-dataviz-overview.html#multiple-geoms",
+    "title": "Data visualization overview",
+    "section": "Multiple geoms",
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#multiple-geoms-1",
+    "href": "slides/04-dataviz-overview.html#multiple-geoms-1",
+    "title": "Data visualization overview",
+    "section": "Multiple geoms",
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
+    "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
+    "title": "Data visualization overview",
+    "section": "Multiple geoms + aesthetics",
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
+    "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
+    "title": "Data visualization overview",
+    "section": "Multiple geoms + aesthetics",
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
+    "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
+    "title": "Data visualization overview",
+    "section": "Multiple geoms + aesthetics",
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#bechdel",
+    "href": "slides/04-dataviz-overview.html#bechdel",
+    "title": "Data visualization overview",
+    "section": "Bechdel",
+    "text": "Bechdel\nLoad the Bechdel test data with read_csv():\n\nbechdel &lt;- read_csv(\"https://sta199-s24.github.io/data/bechdel.csv\")\n\n\n\nView the column names() of the bechdel data:\n\nnames(bechdel)\n\n[1] \"title\"       \"year\"        \"gross_2013\"  \"budget_2013\" \"roi\"         \"binary\"     \n[7] \"clean_test\""
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#roi-by-test-result",
+    "href": "slides/04-dataviz-overview.html#roi-by-test-result",
+    "title": "Data visualization overview",
+    "section": "ROI by test result",
+    "text": "ROI by test result\n\nWhat about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#movies-with-high-roi",
+    "href": "slides/04-dataviz-overview.html#movies-with-high-roi",
+    "title": "Data visualization overview",
+    "section": "Movies with high ROI",
+    "text": "Movies with high ROI\n\nWhat are the movies with highest ROI?\n\n\nbechdel |&gt;\n  filter(roi &gt; 400) |&gt;\n  select(title, roi, budget_2013, gross_2013, year, clean_test)\n\n# A tibble: 3 × 6\n  title                     roi budget_2013 gross_2013  year clean_test\n  &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     \n1 Paranormal Activity      671.      505595  339424558  2007 dubious   \n2 The Blair Witch Project  648.      839077  543776715  1999 ok        \n3 El Mariachi              583.       11622    6778946  1992 nowomen"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#roi-by-test-result-1",
+    "href": "slides/04-dataviz-overview.html#roi-by-test-result-1",
+    "title": "Data visualization overview",
+    "section": "ROI by test result",
+    "text": "ROI by test result\n\nZoom in: What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15))"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#sneak-preview",
+    "href": "slides/04-dataviz-overview.html#sneak-preview",
+    "title": "Data visualization overview",
+    "section": "Sneak preview…",
+    "text": "Sneak preview…\n \n\nto next week’s data wrangling pipelines…"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#median-roi",
+    "href": "slides/04-dataviz-overview.html#median-roi",
+    "title": "Data visualization overview",
+    "section": "Median ROI",
+    "text": "Median ROI\n\nbechdel |&gt;\n  summarize(median_roi = median(roi, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  median_roi\n       &lt;dbl&gt;\n1       3.91"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#median-roi-by-test-result",
+    "href": "slides/04-dataviz-overview.html#median-roi-by-test-result",
+    "title": "Data visualization overview",
+    "section": "Median ROI by test result",
+    "text": "Median ROI by test result\n\nbechdel |&gt;\n  group_by(clean_test) |&gt;\n  summarize(median_roi = median(roi, na.rm = TRUE))\n\n# A tibble: 5 × 2\n  clean_test median_roi\n  &lt;chr&gt;           &lt;dbl&gt;\n1 dubious          3.80\n2 men              3.96\n3 notalk           3.69\n4 nowomen          3.27\n5 ok               4.21"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#roi-by-test-result-zoom-in",
+    "href": "slides/04-dataviz-overview.html#roi-by-test-result-zoom-in",
+    "title": "Data visualization overview",
+    "section": "ROI by test result – zoom in",
+    "text": "ROI by test result – zoom in\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15)) +\n  geom_vline(xintercept = 4.21, linetype = \"dashed\")"
+  },
+  {
+    "objectID": "slides/04-dataviz-overview.html#ae-03-duke-forest",
+    "href": "slides/04-dataviz-overview.html#ae-03-duke-forest",
+    "title": "Data visualization overview",
+    "section": "ae-03-duke-forest",
+    "text": "ae-03-duke-forest\n\n\nIf you’ve been here for a while:\nand following along with the application exercises…\nGo to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae. If there are any uncommitted files, commit them, and then click Pull.\n\nIf you’ve new:\nor haven’t been following along with the application exercises…\nGo to the course GitHub org and find your ae repo. Clone the repo in your container, open the Quarto document called ae-03-duke-forest.\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
   },
   {
     "objectID": "course-links.html",
