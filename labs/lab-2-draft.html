@@ -667,8 +667,10 @@ Tip
 </div>
 </div>
 </div>
-<p>a. In a single pipeline, identify the observations marked in red squares in the plot above. Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.</p>
-<p>b. Create a new variable in <code>midwest</code> called <code>potential_outlier</code>. This variable should take on the value:</p>
+<p>a. In a single pipeline, identify the observations marked in the orange square on the upper left corner. Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.</p>
+<p>b. In a single pipeline, identify the observations marked in the red square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.</p>
+<p>c. Bring your answers from part (a) and part (b) together! In a single pipeline, and a single <code>filter()</code> statement, identify the observations marked in the red and orange square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.</p>
+<p>d. Create a new variable in <code>midwest</code> called <code>potential_outlier</code>. This variable should take on the value:</p>
 <ul>
 <li><p><code>Yes</code> if the point is one the ones you identified in part a, i.e., one of the points marked in red squares in the plot above.</p></li>
 <li><p><code>No</code> otherwise.</p></li>
@@ -691,8 +693,7 @@ Tip
 <section id="question-8" class="level3">
 <h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
 <p>Calculate the average percentage below poverty for each state and save the resulting data frame as <code>state_poverty</code> with the columns <code>state</code> and <code>mean_percbelowpoverty</code>.</p>
-<p>First, display the <code>state_poverty</code> data frame in descending order of <code>mean_percbelowpoverty</code>. Which state has the highest average percentage below poverty across its counties?</p>
-<p>Then, display it in ascending order of <code>mean_percbelowpoverty</code>. Which state has the lowest average percentage below poverty across its counties?</p>
+<p>Then, in a new pipeline, display the <code>state_poverty</code> data frame in ascending order of <code>mean_percbelowpoverty</code>. Which state has the lowest average percentage below poverty across its counties? Which state has the highest average percentage below poverty across its counties?</p>
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 8”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
