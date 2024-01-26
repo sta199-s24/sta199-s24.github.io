@@ -124,6 +124,29 @@ While in a given state two counties can't have the same name, across states some
 A classmate says "Look at that, there is a county called \_\_\_ in each state in this dataset!" In a single pipeline, discover all counties that could fill in the blank.
 Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.
 
+::: callout-tip
+You will want to use the `filter()` function in your answer, which requires a logical condition to describe what you want to filter for.
+For example `filter(x > 2)` means filter for values of `x` greater than 2, `filter(y <= 3)` means filter for values of y less than or equal to 3.
+
+The table below is a summary of logical operators and how to articulate them in R.
+
+| operator      | definition                |
+|---------------|---------------------------|
+| `<`           | less than                 |
+| `<=`          | less than or equal to     |
+| `>`           | greater than              |
+| `>=`          | greater than or equal to  |
+| `==`          | exactly equal to          |
+| `!=`          | not equal to              |
+| `x & y`       | `x` AND `y`               |
+| `x` \| `y`    | `x` OR `y`                |
+| `is.na(x)`    | test if `x` is `NA`       |
+| `!is.na(x)`   | test if `x` is not `NA`   |
+| `x %in% y`    | test if `x` is in `y`     |
+| `!(x %in% y)` | test if `x` is not in `y` |
+| `!x`          | not `x`                   |
+:::
+
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 2".
 
