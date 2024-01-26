@@ -425,7 +425,7 @@ How are the outputs of the two pipelines different?
 
 df |>
   group_by(var_2, var_3) |>
-  summarize(mean_var_1 = mean(var_1))
+  summarize(mean_var_1 = mean(var_1), .groups = "drop")
 
 df |>
   group_by(var_2, var_3) |>
