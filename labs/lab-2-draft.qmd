@@ -104,10 +104,9 @@ You can read documentation for the data set, including variable definitions by t
 
 ### Question 1
 
-Calculate the number of counties in each state and display your results in descending order of number of counties,
-Which state has the highest number of counties, and how many?
-Then, display your results in ascending order.
-Which state has the lowest number of counties, and how many?
+Calculate the number of counties in each state and display your results in descending order of number of counties.
+Which state has the highest number of counties, and how many? 
+Which state has the lowest number, and how many?
 
 ::: callout-note
 The number of counties in a state can change over time, so the values you see in this output may not be true today.
