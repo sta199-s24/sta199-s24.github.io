@@ -576,6 +576,82 @@ Note
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>While in a given state two counties can’t have the same name, across states some county names might be shared. A classmate says “Look at that, there is a county called ___ in each state in this dataset!” In a single pipeline, discover all counties that could fill in the blank. Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will want to use the <code>filter()</code> function in your answer, which requires a logical condition to describe what you want to filter for. For example <code>filter(x &gt; 2)</code> means filter for values of <code>x</code> greater than 2, <code>filter(y &lt;= 3)</code> means filter for values of y less than or equal to 3.</p>
+<p>The table below is a summary of logical operators and how to articulate them in R.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>operator</th>
+<th>definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;</code></td>
+<td>less than</td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>less than or equal to</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>greater than</td>
+</tr>
+<tr class="even">
+<td><code>&gt;=</code></td>
+<td>greater than or equal to</td>
+</tr>
+<tr class="odd">
+<td><code>==</code></td>
+<td>exactly equal to</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>not equal to</td>
+</tr>
+<tr class="odd">
+<td><code>x &amp; y</code></td>
+<td><code>x</code> AND <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>x</code>&nbsp;|&nbsp;<code>y</code></td>
+<td><code>x</code> OR <code>y</code></td>
+</tr>
+<tr class="odd">
+<td><code>is.na(x)</code></td>
+<td>test if <code>x</code> is <code>NA</code></td>
+</tr>
+<tr class="even">
+<td><code>!is.na(x)</code></td>
+<td>test if <code>x</code> is not <code>NA</code></td>
+</tr>
+<tr class="odd">
+<td><code>x %in% y</code></td>
+<td>test if <code>x</code> is in <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>!(x %in% y)</code></td>
+<td>test if <code>x</code> is not in <code>y</code></td>
+</tr>
+<tr class="odd">
+<td><code>!x</code></td>
+<td>not <code>x</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
