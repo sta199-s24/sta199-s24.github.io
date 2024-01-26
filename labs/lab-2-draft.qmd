@@ -175,8 +175,8 @@ The following is one acceptable description that touches on shape, center, and s
 Calculate the values that should go into the blanks.
 
 > The distribution of population density of counties is unimodal and extremely right-skewed.
-> A typical Midwestern county has population density of \_\_\_\_ per unit area.
-> The middle 50% of the counties have population densities between \_\_\_ to \_\_\_.
+> A typical Midwestern county has population density of \_\_\_\_ people per unit area.
+> The middle 50% of the counties have population densities between \_\_\_  to \_\_\_ people per unit area.
 
 ::: callout-tip
 Think about which measures of center and spread are appropriate for skewed distributions.
