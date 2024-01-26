@@ -254,22 +254,31 @@ ggplot(
   ) +
   annotate(
     geom = "point",
-    x = 7.35, y = 48.5, color = "red", shape = "square open", 
-    size = 5, stroke = 2, fill = "pink"
+    x = 7.35, y = 48.5, color = "orange", shape = "square open", 
+    size = 4.5, stroke = 2
   ) +
   annotate(
     geom = "point",
     x = 45, y = 10.2, color = "red", shape = "square open", 
-    size = 25, stroke = 2, fill = "pink"
+    size = 25, stroke = 2
   ) +
   theme_minimal()
 ```
 
 a\.
-In a single pipeline, identify the observations marked in red squares in the plot above.
+In a single pipeline, identify the observations marked in the orange square on the upper left corner.
 Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.
 
 b\.
+In a single pipeline, identify the observations marked in the red square in the plot above.
+Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.
+
+c\.
+Bring your answers from part (a) and part (b) together!
+In a single pipeline, and a single `filter()` statement, identify the observations marked in the red and orange square in the plot above.
+Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.
+
+d\.
 Create a new variable in `midwest` called `potential_outlier`.
 This variable should take on the value:
 
@@ -304,11 +313,9 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 Calculate the average percentage below poverty for each state and save the resulting data frame as `state_poverty` with the columns `state` and `mean_percbelowpoverty`.
 
-First, display the `state_poverty` data frame in descending order of `mean_percbelowpoverty`.
-Which state has the highest average percentage below poverty across its counties?
-
-Then, display it in ascending order of `mean_percbelowpoverty`.
+Then, in a new pipeline, display the `state_poverty` data frame in ascending order of `mean_percbelowpoverty`.
 Which state has the lowest average percentage below poverty across its counties?
+Which state has the highest average percentage below poverty across its counties?
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 8".
