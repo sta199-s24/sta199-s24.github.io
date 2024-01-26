@@ -121,7 +121,8 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 ### Question 2
 
 While in a given state two counties can't have the same name, across states some county names might be shared.
-Discover the most popular county names by counting how many times each name occurs in the dataset and displaying the results in order of descending counts.
+In a single pipeline, discover the most popular county names by counting how many times each name occurs in the dataset and displaying the results in order of descending counts.
+Then, in a separate pipeline, discover which states these counties with most popular names are in.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 2".
