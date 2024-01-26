@@ -123,6 +123,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 While in a given state two counties can't have the same name, across states some county names might be shared.
 A classmate says "Look at that, there is a county called ___ in each state in this dataset!"
 In a single pipeline, discover all counties that could fill in the blank.
+Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 2".
