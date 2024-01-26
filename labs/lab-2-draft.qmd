@@ -105,7 +105,7 @@ You can read documentation for the data set, including variable definitions by t
 ### Question 1
 
 Calculate the number of counties in each state and display your results in descending order of number of counties.
-Which state has the highest number of counties, and how many? 
+Which state has the highest number of counties, and how many?
 Which state has the lowest number, and how many?
 
 ::: callout-note
@@ -121,8 +121,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 ### Question 2
 
 While in a given state two counties can't have the same name, across states some county names might be shared.
-A classmate says "Look at that, there is a county called ___ in each state in this dataset!"
-In a single pipeline, discover all counties that could fill in the blank.
+A classmate says "Look at that, there is a county called \_\_\_ in each state in this dataset!" In a single pipeline, discover all counties that could fill in the blank.
 Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.
 
 ::: render-commit-push
@@ -150,13 +149,15 @@ ggplot(midwest, aes(x = popdensity)) +
   )
 ```
 
-In this question part, we want you to revisit this box plot and identify the counties described in each part.  
+In this question part, we want you to revisit this box plot and identify the counties described in each part.
 
 a\.
-The counties with a population density higher than 25,000. Your code must use the `filter()` function.
+The counties with a population density higher than 25,000.
+Your code must use the `filter()` function.
 
 b\.
-The county with the highest population density. Your code must use the `max()` function.
+The county with the highest population density.
+Your code must use the `max()` function.
 
 Answer using a single data wrangling pipeline for each part.
 Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order.
@@ -176,7 +177,7 @@ Calculate the values that should go into the blanks.
 
 > The distribution of population density of counties is unimodal and extremely right-skewed.
 > A typical Midwestern county has population density of \_\_\_\_ people per unit area.
-> The middle 50% of the counties have population densities between \_\_\_  to \_\_\_ people per unit area.
+> The middle 50% of the counties have population densities between \_\_\_ to \_\_\_ people per unit area.
 
 ::: callout-tip
 Think about which measures of center and spread are appropriate for skewed distributions.
@@ -254,12 +255,12 @@ ggplot(
   annotate(
     geom = "point",
     x = 7.35, y = 48.5, color = "red", shape = "square open", 
-    size = 6, stroke = 2, fill = "pink"
+    size = 5, stroke = 2, fill = "pink"
   ) +
   annotate(
     geom = "point",
-    x = 45, y = 10, color = "red", shape = "square open", 
-    size = 30, stroke = 2, fill = "pink"
+    x = 45, y = 10.2, color = "red", shape = "square open", 
+    size = 25, stroke = 2, fill = "pink"
   ) +
   theme_minimal()
 ```
