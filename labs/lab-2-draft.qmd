@@ -472,7 +472,7 @@ The lab is graded out of a total of 40 points.
 
 On Questions 1 through 9, you can earn up to 4 points on each question:
 
--   4: Response shows proficiency and addresses all or almost all of the rubric items.
+-   4: Response shows excellent understanding and addresses all or almost all of the rubric items.
 -   3: Response shows understanding and addresses most of the rubric items.
 -   2: Response shows effort and misses many of the rubric items.
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
