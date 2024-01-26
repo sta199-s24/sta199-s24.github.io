@@ -150,15 +150,15 @@ ggplot(midwest, aes(x = popdensity)) +
   )
 ```
 
-In this question part, we want you to revisit this box plot and identify
+In this question part, we want you to revisit this box plot and identify the counties described in each part.  
 
 a\.
-the county with the highest population density.
+The counties with a population density higher than 25,000. Your code must use the `filter()` function.
 
 b\.
-the counties with a population density higher than 25,000.
+The county with the highest population density. Your code must use the `max()` function.
 
-Answer using a single data wrangling pipeline.
+Answer using a single data wrangling pipeline for each part.
 Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order.
 If your response has multiple rows, the data frame should be arranged in descending order of population density.
 
