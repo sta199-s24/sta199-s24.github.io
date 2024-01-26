@@ -435,17 +435,23 @@ Make sure you have:
 
 ## Grading
 
-The lab is graded out of a total of 40 points.
+The lab is graded out of a total of 50 points.
 
-On Questions 1 through 9, you can earn up to 4 points on each question:
+On Questions 1 through 9, you can earn up to 5 points on each question:
 
--   4: Response shows excellent understanding and addresses all or almost all of the rubric items.
--   3: Response shows understanding and addresses most of the rubric items.
+-   5: Response shows excellent understanding and addresses all or almost all of the rubric items.
+
+-   4: Response shows good understanding and addresses most of the rubric items.
+
+-   3: Response shows understanding and addresses a majority of the rubric items.
+
 -   2: Response shows effort and misses many of the rubric items.
+
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
+
 -   0: No attempt.
 
-On Question 10, you can earn either 0 or 4 points for selecting questions and pages on Gradescope:
+On Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:
 
--   4: Selected questions and pages on Gradescope.
+-   5: Selected questions and pages on Gradescope.
 -   0: Did not select some or all questions and pages on Gradescope.

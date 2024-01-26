@@ -299,9 +299,20 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ### Question 7
 
-In a single pipeline, calculate the total population for each state, and display the results in descending order of total population.
-Which Midwestern state is most populous?
-Which is the least populous?
+a\.
+In a single pipeline, calculate the total population for each state and save the resulting data frame as `state_population` and display it in descending order of total population.
+
+b\.
+Then, in a separate pipeline, calculate the proportion of the total population in each state and, once again, display the results in descending order of proportion of population.
+
+::: callout-tip
+In answering parts (a) and (b), you'll create two new variables, one for total population and other for proportion of total proportion.
+Make sure to give them "reasonable" names – short but evocative.
+:::
+
+c\.
+Which Midwestern state is most populous and what percent of the Midwest population lives there?
+Which is the least populous and what percent lives there?
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 7".
@@ -325,42 +336,45 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ## Part 2
 
+**All about `group_by()`!**
+
 ### Question 9
 
-All about `group_by()`:
-
-Suppose we have the following tiny data frame:
+Suppose we have the following data frame:
 
 ```{r}
+#| eval: true
+
 df <- tibble(
-  x = 1:5,
-  y = c("a", "b", "a", "a", "b"),
-  z = c("K", "K", "L", "L", "K")
+  var_1 = c(10, 20, 30, 40, 50),
+  var_2 = c("Pizza", "Burger", "Pizza", "Pizza", "Burger"),
+  var_3 = c("Apple", "Apple", "Pear", "Pear", "Banana")
 )
+
 df
 ```
 
 a\.
 What does the following code chunk do?
-Run it and analyze the result and articulate in words what `group_by()` does.
+Run it and analyze the result and articulate in words what `arrange()` does.
 
 ```{r}
 #| eval: false
 
 df |>
-  group_by(y)
+  arrange(var_2)
 ```
 
 b\.
 What does the following code chunk do?
-Run it and analyze the result and articulate in words what `arrange()` does.
-Also comment on how it's different from the `group_by()` in part (a)?
+Run it and analyze the result and articulate in words what `group_by()` does.
+Also comment on how it's different from the `arrange()` in part (a)?
 
 ```{r}
 #| eval: false
 
 df |>
-  arrange(y)
+  group_by(var_2)
 ```
 
 c\.
@@ -371,8 +385,8 @@ Run it and analyze the result and articulate in words what the pipeline does.
 #| eval: false
 
 df |>
-  group_by(y) |>
-  summarize(mean_x = mean(x))
+  group_by(var_2) |>
+  summarize(mean_var_1 = mean(var_1))
 ```
 
 d\.
@@ -384,8 +398,8 @@ Then, comment on what the message says.
 #| eval: false
 
 df |>
-  group_by(y, z) |>
-  summarize(mean_x = mean(x))
+  group_by(var_2, var_3) |>
+  summarize(mean_var_1 = mean(var_1))
 ```
 
 e\.
@@ -397,8 +411,8 @@ How is the output different from the one in part (d).
 #| eval: false
 
 df |>
-  group_by(y, z) |>
-  summarize(mean_x = mean(x), .groups = "drop")
+  group_by(var_2, var_3) |>
+  summarize(mean_var_1 = mean(var_1), .groups = "drop")
 ```
 
 f\.
@@ -410,12 +424,12 @@ How are the outputs of the two pipelines different?
 #| eval: false
 
 df |>
-  group_by(y, z) |>
-  summarize(mean_x = mean(x))
+  group_by(var_2, var_3) |>
+  summarize(mean_var_1 = mean(var_1))
 
 df |>
-  group_by(y, z) |>
-  mutate(mean_x = mean(x))
+  group_by(var_2, var_3) |>
+  mutate(mean_var_1 = mean(var_1))
 ```
 
 ::: render-commit-push
@@ -468,17 +482,23 @@ Make sure you have:
 
 ## Grading
 
-The lab is graded out of a total of 40 points.
+The lab is graded out of a total of 50 points.
 
-On Questions 1 through 9, you can earn up to 4 points on each question:
+On Questions 1 through 9, you can earn up to 5 points on each question:
 
--   4: Response shows excellent understanding and addresses all or almost all of the rubric items.
--   3: Response shows understanding and addresses most of the rubric items.
+-   5: Response shows excellent understanding and addresses all or almost all of the rubric items.
+
+-   4: Response shows good understanding and addresses most of the rubric items.
+
+-   3: Response shows understanding and addresses a majority of the rubric items.
+
 -   2: Response shows effort and misses many of the rubric items.
+
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
+
 -   0: No attempt.
 
-On Question 10, you can earn either 0 or 4 points for selecting questions and pages on Gradescope:
+On Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:
 
--   4: Selected questions and pages on Gradescope.
+-   5: Selected questions and pages on Gradescope.
 -   0: Did not select some or all questions and pages on Gradescope.
