@@ -305,7 +305,7 @@ d\.
 Create a new variable in `midwest` called `potential_outlier`.
 This variable should take on the value:
 
--   `Yes` if the point is one the ones you identified in part a, i.e., one of the points marked in red squares in the plot above.
+-   `Yes` if the point is one the ones you identified in part (c), i.e., one of the points marked in the squares in the plot above.
 
 -   `No` otherwise.
 
