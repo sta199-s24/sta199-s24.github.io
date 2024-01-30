@@ -1,0 +1,261 @@
+---
+title: "AE 04: NYC flights + data wrangling"
+editor: visual
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(nycflights13)
+```
+
+## Exercise 1
+
+**Your turn:** Fill in the blanks:
+
+The `flights` data frame has \_\_\_ rows.
+Each row represents a \_\_\_.
+
+## Exercise 2
+
+**Your turn:** What are the names of the variables in `flights`.
+
+```{r}
+#| label: column-names
+
+# add code here
+```
+
+## Exercise 3 - `select()`
+
+-   Demo: Make a data frame that only contains the variables `dep_delay` and `arr_delay`.
+
+```{r}
+#| label: select-vars
+
+# add code here
+```
+
+-   Demo: Make a data frame that keeps every variable except `dep_delay`.
+
+```{r}
+#| label: exclude-vars
+
+# add code here
+```
+
+-   Demo: Make a data frame that includes all variables between `year` through `dep_delay` (inclusive). These are all variables that provide information about the departure of each flight.
+
+```{r}
+#| label: include-range
+
+# add code here
+```
+
+-   Demo: Use the `select` helper `contains()` to make a data frame that includes the variables associated with the arrival, i.e., contains the string `"arr\_"` in the name.
+
+```{r}
+#| label: arr-vars
+
+# add code here
+```
+
+## Exercise 4 - `slice()`
+
+-   Demo: Display the first five rows of the `flights` data frame.
+
+```{r}
+#| label: slice
+
+# add code here
+```
+
+-   Demo: Display the last two rows of the `flights` data frame.
+
+```{r}
+#| label: last-two
+
+# add code here
+```
+
+## Exercise 5 - `arrange()`
+
+-   Demo: Let's arrange the data by departure delay, so the flights with the shortest departure delays will be at the top of the data frame.
+
+```{r}
+#| label: arrange-delays
+
+# add code here
+```
+
+-   Question: What does it mean for the `dep_delay` to have a negative value?
+
+Add your response here.
+
+-   Demo: Arrange the data by descending departure delay, so the flights with the longest departure delays will be at the top.
+
+```{r}
+#| label: arrange-delays-desc
+
+# add code here
+```
+
+-   **Your turn:** Create a data frame that only includes the plane tail number (`tailnum`), carrier (`carrier`), and departure delay for the flight with the longest departure delay. What is the plane tail number (`tailnum`) for this flight?
+
+```{r}
+#| label: longest-delay
+
+# add code here
+```
+
+## Exercise 6 - `filter()`
+
+-   Demo: Filter for all rows where the destination airport is RDU.
+
+```{r}
+#| label: rdu
+
+# add code here
+```
+
+-   Demo: Filter for all rows where the destination airport is RDU and the arrival delay is less than 0.
+
+```{r}
+#| label: rdu-ontime
+
+# add code here
+```
+
+-   **Your turn:** Describe what the code is doing in words.
+
+Add response here.
+
+```{r}
+#| label: nc-early
+
+flights |>
+  filter(
+    dest %in% c("RDU", "GSO"),
+    arr_delay < 0 | dep_delay < 0
+  )
+```
+
+**Hint:** Logical operators in R:
+
+| operator      | definition                                               |
+|:--------------|:---------------------------------------------------------|
+| `<`           | is less than?                                            |
+| `<=`          | is less than or equal to?                                |
+| `>`           | is greater than?                                         |
+| `>=`          | is greater than or equal to?                             |
+| `==`          | is exactly equal to?                                     |
+| `!=`          | is not equal to?                                         |
+| `x & y`       | is x AND y?                                              |
+| `x \| y`      | is x OR y?                                               |
+| `is.na(x)`    | is x NA?                                                 |
+| `!is.na(x)`   | is x not NA?                                             |
+| `x %in% y`    | is x in y?                                               |
+| `!(x %in% y)` | is x not in y?                                           |
+| `!x`          | is not x? (only makes sense if `x` is `TRUE` or `FALSE`) |
+
+## Exercise 7 - `count()`
+
+-   Demo: Create a frequency table of the destination locations for flights from New York.
+
+```{r}
+#| label: count-dest
+
+# add code here
+```
+
+-   Demo: In which month was there the fewest number of flights? How many flights were there in that month?
+
+```{r}
+#| label: count-month
+
+# add code here
+```
+
+-   **Your turn:** On which date (month + day) was there the largest number of flights? How many flights were there on that day?
+
+```{r}
+#| label: count-date
+
+# add code here
+```
+
+## Exercise 8 - `mutate()`
+
+-   Demo: Convert `air_time` (minutes in the air) to hours and then create a new variable, `mph`, the miles per hour of the flight.
+
+```{r}
+#| label: calculate-mph
+
+# add code here
+```
+
+-   **Your turn:** First, count the number of flights each month, and then calculate the proportion of flights in each month. What proportion of flights take place in July?
+
+```{r}
+#| label: months-prop
+
+# add code here
+```
+
+-   Demo: Create a new variable, `rdu_bound`, which indicates whether the flight is to RDU or not. Then, for each departure airport (`origin`), calculate what proportion of flights originating from that airport are to RDU.
+
+```{r}
+#| label: rdu-origin-prop
+
+# add code here
+```
+
+## Exercise 9 - `summarize()`
+
+-   Demo: Find mean arrival delay for all flights.
+
+```{r}
+#| label: find-arrival-delay
+
+# add code here
+```
+
+## Exercise 10 - `group_by()`
+
+-   Demo: Find mean arrival delay for for each month.
+
+```{r}
+#| label: mean-arr-delay-month
+
+# add code here
+```
+
+-   **Your turn:** What is the median departure delay for each airports around NYC (`origin`)? Which airport has the shortest median departure delay?
+
+```{r}
+#| label: median-dep-dely-origin
+
+# add code here
+```
+
+# Additional Practice
+
+Try these on your own, either in class if you finish early, or after class.
+
+1.  Create a new dataset that only contains flights that do not have a missing departure time. Include the columns `year`, `month`, `day`, `dep_time`, `dep_delay`, and `dep_delay_hours` (the departure delay in hours). *Hint: Note you may need to use `mutate()` to make one or more of these variables.*
+
+```{r}
+#| label: add-practice-1
+
+# add code here
+```
+
+2.  For each airplane (uniquely identified by `tailnum`), use a `group_by()` paired with `summarize()` to find the sample size, mean, and standard deviation of flight distances. Then include only the top 5 and bottom 5 airplanes in terms of mean distance traveled per flight in the final data frame.
+
+```{r}
+#| label: add-practice-2
+
+# add code here
+```

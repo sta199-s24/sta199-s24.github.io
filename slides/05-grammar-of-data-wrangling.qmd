@@ -1,0 +1,391 @@
+---
+title: "Grammar of data wrangling"
+subtitle: "Lecture 5"
+date: "January 30, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+## While you wait for class to begin...
+
+-   Go to your `ae` repo, click *Pull* to get today's application exercise to get ready for later.
+
+-   Questions from the prepare materials?
+
+    ```{=html}
+    <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+    ```
+
+## Asking good questions {.smaller}
+
+-   Post content questions on Ed Discussion
+
+<!-- -->
+
+-   If you have a coding question always provide the code, and if relevant, the error
+
+-   If this feels impossible, don't fret it, it's ok to ask questions without the code too!
+    Just more efficient with it...
+
+-   Title your thread in a way that can help others (e.g., "Q7" vs. "error with `mutate()` function in "Lab 1 - Q7")
+
+-   Check for previous questions
+
+## Coding style + workflow
+
+::: incremental
+-   Avoid long lines of code.
+
+    -   We should be able to see [all]{.underline} of your code in the PDF document you submit.
+
+-   Label code chunks.
+
+    -   Do **not** put spaces in the code-chunk `label`s.
+
+-   Render, commit, and push regularly.
+
+    -   Think about it like clicking to save regularly as you type a report.
+:::
+
+## Lab 1
+
+![](images/lab-1-commits.png){fig-align="center"}
+
+# Data frames and `tibble`s
+
+## NYC Flights
+
+-   To demonstrate data wrangling we will use `flights`, a tibble in the **nycflights13** R package.
+
+-   The data set includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2013.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(nycflights13)
+```
+
+## `flights` -- dimensions
+
+-   Number of rows:
+
+```{r}
+nrow(flights)
+```
+
+. . .
+
+-   Number of columns:
+
+```{r}
+ncol(flights)
+```
+
+## `flights` -- first look {.smaller}
+
+::: panel-tabset
+## `glimpse()`
+
+```{r}
+#| label: glimpse-data
+
+glimpse(flights)
+```
+
+## `names()`
+
+```{r}
+#| label: column-names
+
+names(flights)
+```
+
+## `head()`
+
+```{r}
+#| label: explore-data
+
+head(flights)
+```
+:::
+
+## `tibble` vs. data frame
+
+::: incremental
+-  **tibble**: an opinionated version of the `R` data frame
+-  All tibbles are data frames, but not all data frames are tibbles!
+- Two main differences between a tibble and a data frame:
+    -   Printing
+    -   Stricter subsetting
+:::
+
+## Printing {.smaller}
+
+::: panel-tabset
+## `tibble`
+
+Display first 10 rows and all of the columns that fit on the screen will display, along with the type of each column.
+
+```{r}
+#| label: tibble-print
+
+flights
+```
+
+## `data.frame`
+
+(Attempt to) display all of the data, or die (crash) tryin (if the dataset is too large)!
+
+```{r}
+#| label: data-frame-print
+
+cars
+```
+:::
+
+## Stricter subsetting
+
+::: panel-tabset
+## `tibble`
+
+Warning + `NULL` if variable not found.
+
+```{r}
+#| label: tibble-subset
+
+flights$apple
+```
+
+## `data.frame`
+
+Only `NULL` if variable not found.
+
+```{r}
+#| label: data-frame-subset
+
+cars$apple
+```
+:::
+
+# Data wrangling with `dplyr`
+
+## dplyr
+
+Primary package in the tidyverse for data wrangling
+
+::: columns
+::: {.column width="50%"}
+[dplyr.tidyverse.org](https://dplyr.tidyverse.org)
+
+```{=html}
+<iframe width=600 height=375 src="https://dplyr.tidyverse.org/" title="dplyr home page"></iframe>
+```
+:::
+
+::: {.column width="50%"}
+[Cheat sheet](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
+
+[![](images/dplyr-cheat-sheet.png)](https://rstudio.github.io/cheatsheets/html/data-transformation.html)
+:::
+:::
+
+## Row operations
+
+-   `slice()`: chooses rows based on location
+-   `filter()`:chooses rows based on column values
+-   `arrange()`: changes the order of the rows
+-   `sample_n()`: take a random subset of the rows
+
+## `slice()` {.smaller}
+
+Display the first five rows of `flights`:
+
+```{r}
+#| label: slice
+#| code-line-numbers: "|1|2"
+
+flights |>      # <1>   
+  slice(1:5)    # <2>
+```
+
+1.  Take the `flights` data frame, **and then**,
+2.  Slice its first five rows
+
+## `filter()` {.smaller}
+
+Filter for flights to RDU in `flights`:
+
+```{r}
+#| label: filter
+#| code-line-numbers: "|1|2"
+
+flights |>                 # <1>   
+  filter(dest == "RDU")    # <2>
+```
+
+1.  Take the `flights` data frame, **and then**,
+2.  Filter for rows where `dest` *is equal to* `RDU`
+
+## The pipe
+
+::: incremental
+-   The **pipe**, `|>`, is an operator (a tool) for passing information from one process to another.
+
+-   Use `|>` mainly in data pipelines to pass the output of the previous line of code as the first input of the next line of code.
+
+-   When reading code "in English", say "and then" whenever you see a pipe.
+:::
+
+## Delayed flights to RDU
+
+::: demo
+Which airline is the most delayed, on average, arriving in RDU from a New York City airport?
+:::
+
+. . .
+
+**Goal:**
+
+```{r}
+#| echo: false
+#| ref.label: pipe-5
+```
+
+## The pipe, in action {.smaller}
+
+```{r}
+#| label: pipe-1
+
+flights # <1>
+```
+1. Take the flights data frame
+
+
+## The pipe, in action {.smaller}
+
+```{r}
+#| label: pipe-2
+
+flights |>               # <1>
+  filter(dest == "RDU")  # <2>
+```
+1. Take the flights data frame,
+2. **and then** filter for flights going to RDU
+
+## The pipe, in action {.smaller}
+
+```{r}
+#| label: pipe-3
+
+flights |>                  # <1>
+  filter(dest == "RDU") |>  # <2>
+  group_by(carrier)         # <3>
+```
+1. Take the flights data frame,
+2. **and then** filter for flights going to RDU,
+3. **and then** group by carrier
+
+## The pipe, in action {.smaller}
+
+```{r}
+#| label: pipe-4
+
+flights |>                  # <1>
+  filter(dest == "RDU") |>  # <2>
+  group_by(carrier) |>      # <3>
+  summarize(mean_arr_delay = mean(arr_delay, na.rm = TRUE)) # <4>
+```
+1. Take the flights data frame,
+2. **and then** filter for flights going to RDU,
+3. **and then** group by carrier,
+4. **and then** calculate the mean arrival delay for each carrier
+
+## The pipe, in action {.smaller}
+
+```{r}
+#| label: pipe-5
+
+flights |>                  # <1>
+  filter(dest == "RDU") |>  # <2>
+  group_by(carrier) |>      # <3>
+  summarize(mean_arr_delay = mean(arr_delay, na.rm = TRUE)) |> # <4>
+  arrange(desc(mean_arr_delay)) # <5>
+```
+1. Take the flights data frame,
+2. **and then** filter for flights going to RDU,
+3. **and then** group by carrier,
+4. **and then** calculate the mean arrival delay for each carrier,
+5. **and then** arrange in descending order of mean arrival delay. 
+
+## Column operations
+
+-   `select()`: changes whether or not a column is included.
+-   `rename()`: changes the name of columns.
+-   `mutate()`: changes the values of columns and creates new columns.
+
+## Groups of rows
+
+-   `summarize()`: collapses a group into a single row.
+-   `count()`: count unique values of one or more variables.
+-   `group_by()`: perform calculations separately for each value of a variable
+
+# Application exercise
+
+## `ae-04-flights-wrangling`
+
+::: appex
+-   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+
+-   If there are any uncommitted files, commit them, and then click **Pull**.
+
+-   Open the file called `ae-04-flights-wrangling.qmd` and render it.
+:::
+
+## Recap: pipe {.smaller}
+
+-   The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.
+
+```{r}
+sum(1, 2)
+1 |> 
+  sum(2)
+```
+
+-   Always use a line break after the pipe, and indent the next line of code.
+    -   Just like always use a line break between layers of ggplots, after `+`, and indent the next line.
+
+## Recap: logical operators {.smaller}
+
+| operator      | definition                   |
+|:--------------|:-----------------------------|
+| `<`           | is less than?                |
+| `<=`          | is less than or equal to?    |
+| `>`           | is greater than?             |
+| `>=`          | is greater than or equal to? |
+| `==`          | is exactly equal to?         |
+| `!=`          | is not equal to?             |
+
+## Recap: logical operators {.smaller}
+
+| operator      | definition                   |
+|:--------------|:-----------------------------|
+| `x & y`       | is x AND y?                  |
+| `x \| y`      | is x OR y?                   |
+| `is.na(x)`    | is x NA?                     |
+| `!is.na(x)`   | is x not NA?                 |
+| `x %in% y`    | is x in y?                   |
+| `!(x %in% y)` | is x not in y?               |
+| `!x`          | is not x? (only makes sense if `x` is `TRUE` or `FALSE`) |
