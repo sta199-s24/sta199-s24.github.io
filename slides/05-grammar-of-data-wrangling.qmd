@@ -4,7 +4,7 @@ subtitle: "Lecture 5"
 date: "January 30, 2024"
 format: 
   revealjs:
-    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/)"
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/discussion/4223179)"
 editor_options: 
   chunk_output_type: console
 ---
