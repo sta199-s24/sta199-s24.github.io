@@ -1357,6 +1357,17 @@
       ],
       "Hash": "8d1938040a05566f4f7a14af4feadd6b"
     },
+    "nycflights13": {
+      "Package": "nycflights13",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "tibble"
+      ],
+      "Hash": "61eb941328b49a62d7f9816dfed7d959"
+    },
     "openintro": {
       "Package": "openintro",
       "Version": "2.4.0",
@@ -2082,6 +2093,16 @@
         "Rcpp"
       ],
       "Hash": "119d19da480e873f72241ff6962ffd83"
+    },
+    "unvotes": {
+      "Package": "unvotes",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "71608579c8b607fb79c7468c1cf090b3"
     },
     "usdata": {
       "Package": "usdata",
