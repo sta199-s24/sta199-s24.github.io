@@ -1348,14 +1348,14 @@
     "href": "slides/06-tidying-data.html#tidy-data",
     "title": "Tidying data",
     "section": "Tidy data",
-    "text": "Tidy data\n…"
+    "text": "Tidy data\n\n“Tidy datasets are easy to manipulate, model and visualise, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table.”\nTidy Data, https://vita.had.co.nz/papers/tidy-data.pdf\n\n\nNote: “easy to manipulate” = “straightforward to manipulate”"
   },
   {
     "objectID": "slides/06-tidying-data.html#goal",
     "href": "slides/06-tidying-data.html#goal",
     "title": "Tidying data",
     "section": "Goal",
-    "text": "Goal"
+    "text": "Goal\nVisualize StatSci majors over the years!"
   },
   {
     "objectID": "slides/06-tidying-data.html#data",
@@ -1365,11 +1365,11 @@
     "text": "Data\n\nstatsci &lt;- read_csv(\"https://sta199-s24.github.io/data/statsci.csv\")\nstatsci\n\n# A tibble: 4 × 14\n  degree      `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020` `2021`\n  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 Statistica…     NA      1     NA     NA      4      4      1     NA     NA      1      2\n2 Statistica…      2      2      4      1      3      6      3      4      4      1     NA\n3 Statistica…      2      6      1     NA      5      6      6      8      8     17     16\n4 Statistica…      5      9      4     13     10     17     24     21     26     27     35\n# ℹ 2 more variables: `2022` &lt;dbl&gt;, `2023` &lt;dbl&gt;\n\n\n\n\nThe first column (variable) is the degree, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).\nThe remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023."
   },
   {
-    "objectID": "slides/06-tidying-data.html#think",
-    "href": "slides/06-tidying-data.html#think",
+    "objectID": "slides/06-tidying-data.html#lets-plan",
+    "href": "slides/06-tidying-data.html#lets-plan",
     "title": "Tidying data",
-    "section": "Think…",
-    "text": "Think…\n\nTake a look at the plot we aim to make and sketch the data frame we need to make the plot. Determine what each row and each column of the data frame should be. Hint: We need data to be in columns to map to aesthetic elements of the plot."
+    "section": "Let’s plan!",
+    "text": "Let’s plan!\n\nTake a look at the plot we aim to make and sketch the data frame we need to make the plot. Determine what each row and each column of the data frame should be. Hint: We need data to be in columns to map to aesthetic elements of the plot."
   },
   {
     "objectID": "slides/06-tidying-data.html#ae-05-majors-tidying",
