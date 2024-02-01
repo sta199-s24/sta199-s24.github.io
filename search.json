@@ -772,6 +772,531 @@
     "text": "Midori says…\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
   },
   {
+    "objectID": "slides/06-tidying-data.html#while-you-wait-for-class-to-begin",
+    "href": "slides/06-tidying-data.html#while-you-wait-for-class-to-begin",
+    "title": "Tidying data",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\n\nGo to your ae repo, click Pull to get today’s application exercise to get ready for later.\nQuestions from the prepare materials?"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#announcements",
+    "href": "slides/06-tidying-data.html#announcements",
+    "title": "Tidying data",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 2 due Monday, 8 am"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#ae-04-flights-wrangling",
+    "href": "slides/06-tidying-data.html#ae-04-flights-wrangling",
+    "title": "Tidying data",
+    "section": "ae-04-flights-wrangling",
+    "text": "ae-04-flights-wrangling\n\n\nGo to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae.\nOpen the file called ae-04-flights-wrangling.qmd and render it."
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-pipe",
+    "href": "slides/06-tidying-data.html#recap-pipe",
+    "title": "Tidying data",
+    "section": "Recap: pipe",
+    "text": "Recap: pipe\n\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3\n\n1 |&gt; \n  sum(2)\n\n[1] 3\n\n\n\nAlways use a line break after the pipe, and indent the next line of code.\n\nJust like always use a line break between layers of ggplots, after +, and indent the next line."
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-logical-operators",
+    "href": "slides/06-tidying-data.html#recap-logical-operators",
+    "title": "Tidying data",
+    "section": "Recap: logical operators",
+    "text": "Recap: logical operators\n\n\n\noperator\ndefinition\n\n\n\n\n&lt;\nis less than?\n\n\n&lt;=\nis less than or equal to?\n\n\n&gt;\nis greater than?\n\n\n&gt;=\nis greater than or equal to?\n\n\n==\nis exactly equal to?\n\n\n!=\nis not equal to?"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-logical-operators-1",
+    "href": "slides/06-tidying-data.html#recap-logical-operators-1",
+    "title": "Tidying data",
+    "section": "Recap: logical operators",
+    "text": "Recap: logical operators\n\n\n\n\n\n\n\noperator\ndefinition\n\n\n\n\nx & y\nis x AND y?\n\n\nx \\| y\nis x OR y?\n\n\nis.na(x)\nis x NA?\n\n\n!is.na(x)\nis x not NA?\n\n\nx %in% y\nis x in y?\n\n\n!(x %in% y)\nis x not in y?\n\n\n!x\nis not x? (only makes sense if x is TRUE or FALSE)"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-assignment",
+    "href": "slides/06-tidying-data.html#recap-assignment",
+    "title": "Tidying data",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n…"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#ae-05-majors-tidying",
+    "href": "slides/06-tidying-data.html#ae-05-majors-tidying",
+    "title": "Tidying data",
+    "section": "ae-05-majors-tidying",
+    "text": "ae-05-majors-tidying\n\n\nGo to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae.\nIf there are any uncommitted files, commit them, and then click Pull.\nOpen the file called ae-05-majors-tidying.qmd and render it."
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-pivoting",
+    "href": "slides/06-tidying-data.html#recap-pivoting",
+    "title": "Tidying data",
+    "section": "Recap: pivoting",
+    "text": "Recap: pivoting\n\n\nData sets can’t be labeled as wide or long but they can be made wider or longer for a certain analysis that requires a certain format\nWhen pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the pivot_longer() function.\nYou can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.\n\n\n\n\n\n\n🔗 sta199-s24.github.io  ·  ❓ Ask on Ed"
+  },
+  {
+    "objectID": "labs/lab-6.html",
+    "href": "labs/lab-6.html",
+    "title": "Lab 6 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "labs/lab-7.html",
+    "href": "labs/lab-7.html",
+    "title": "Lab 7 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "",
+    "text": "This lab will set you up for the computing workflow and give you an opportunity to introduce yourselves to each other and the teaching team.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#access-r-and-rstudio",
+    "href": "labs/lab-0.html#access-r-and-rstudio",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "Access R and RStudio",
+    "text": "Access R and RStudio\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#create-a-github-account",
+    "href": "labs/lab-0.html#create-a-github-account",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#set-up-your-ssh-key",
+    "href": "labs/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "Set up your SSH key",
+    "text": "Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. It will begin with “ssh-rsa….” R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#configure-git",
+    "href": "labs/lab-0.html#configure-git",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"Mine Çetinkaya-Rundel\", \n  user.email = \"cetinkaya.mine@gmail.com\"\n)\n\nYou are now ready interact with GitHub via RStudio!\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-0.html#footnotes",
+    "href": "labs/lab-0.html#footnotes",
+    "title": "Lab 0 - Hello, World and STA 199!",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#ed-discussion",
+    "href": "course-support.html#ed-discussion",
+    "title": "Course support",
+    "section": "Ed Discussion",
+    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course discussion forum, Ed Discussion, is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Ed Discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times.  Duke encourages all students to access these resources.\n\nCAPS: Duke Counseling & Pyschological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nDuWell: (919) 681-8421, provides Moments of Mindfulness (stress management and resilience building) and meditation programming to assist students in developing a daily emotional well-being practice. To see schedules for programs please see https://studentaffairs.duke.edu/duwell. All are welcome and no experience necessary.\nDukeReach: Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance: http://studentaffairs.duke.edu/dukereach.\nTimelyCare: (formerly known as Blue Devils Care) An online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling: https://bluedevilscare.duke.edu.\nTwo-Click Support: Duke Student Government and DukeReach partnership that connects students to help in just two clicks: https://bit.ly/TwoClickSupport.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#course-costs",
+    "href": "course-support.html#course-costs",
+    "title": "Course support",
+    "section": "Course costs",
+    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.\nDukeLIFE offers course materials assistance for eligible students. Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
+    "href": "course-support.html#assistance-with-zoom-or-canvas",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Canvas",
+    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub and conversation on Ed Discussion.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n🖥️ slides 04  ⌨️ ae 03\n\n\n\n\n4\nMon, Jan 29\n🎥 Grammar of data wrangling  📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n🎥 Working with a single data frame  📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n🖥️ slides 05  ⌨️ ae 04\n\n\n\n\n\n\nThu, Feb 1\n🎥 Tidying data  📗 r4ds - chp 5\nTidying data\n🖥️ slides 06  ⌨️ ae 05\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n🎥 Working with multiple data frames  📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n🎥 Data types  🎥 Data classes  📗 r4ds - chp 16\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "This lab will introduce you to the course computing workflow. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\n\n\n\n\n\n\nNote\n\n\n\nR is the name of the programming language itself and RStudio is a convenient interface, commonly referred to as an integrated development environment or an IDE, for short.\n\n\nAn additional goal is to reinforce Git and GitHub, the version control, web hosting, and collaboration systems that we will be using throughout the course.\n\n\n\n\n\n\nNote\n\n\n\nGit is a version control system (like “Track Changes” features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).\n\n\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\n\n\n\n\n\n\nWarning\n\n\n\nThis lab assumes that you have already completed Lab 0. If you have not, please go back and do that first before proceeding.\n\n\n\n\nBy the end of the lab, you will…\n\nBe familiar with the workflow using R, RStudio, Git, and GitHub\nGain practice writing a reproducible report using Quarto\nPractice version control using Git and GitHub\nBe able to create data visualizations using ggplot2\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-1. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-1.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file.\n\n\n\n\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document.\n\n\n\n\n\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!\n\n\n\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push.\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nThe rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\ndplyr: for data wrangling\nforcats: for dealing with factors\nggplot2: for data visualization\nlubridate: for dealing with dates\npurrr: for iteration with functional programming\nreadr: for reading and writing data\nstringr: for string manipulation\ntibble: for modern, tidy data frames\ntidyr: for data tidying and rectangling\n\nThe message that’s printed when you load the package tells you which versions of these packages are loaded as well as any conflicts they may have introduced, e.g., the filter() function from dplyr has now masked (overwritten) the filter() function available in base R (and that’s ok, we’ll use dplyr::filter() anyway).\nYou can now Render your template document and see the results.\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#learning-objectives",
+    "href": "labs/lab-1.html#learning-objectives",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "By the end of the lab, you will…\n\nBe familiar with the workflow using R, RStudio, Git, and GitHub\nGain practice writing a reproducible report using Quarto\nPractice version control using Git and GitHub\nBe able to create data visualizations using ggplot2",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#getting-started",
+    "href": "labs/lab-1.html#getting-started",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "Go to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-1. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-1.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file.\n\n\n\n\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document.\n\n\n\n\n\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!\n\n\n\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#packages",
+    "href": "labs/lab-1.html#packages",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nThe rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\ndplyr: for data wrangling\nforcats: for dealing with factors\nggplot2: for data visualization\nlubridate: for dealing with dates\npurrr: for iteration with functional programming\nreadr: for reading and writing data\nstringr: for string manipulation\ntibble: for modern, tidy data frames\ntidyr: for data tidying and rectangling\n\nThe message that’s printed when you load the package tells you which versions of these packages are loaded as well as any conflicts they may have introduced, e.g., the filter() function from dplyr has now masked (overwritten) the filter() function available in base R (and that’s ok, we’ll use dplyr::filter() anyway).\nYou can now Render your template document and see the results.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#guidelines",
+    "href": "labs/lab-1.html#guidelines",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#part-1",
+    "href": "labs/lab-1.html#part-1",
+    "title": "Lab 1 - Data visualization",
+    "section": "Part 1",
+    "text": "Part 1\nLet’s take a trip to the Midwest!\nWe will use the midwest data frame for this lab. It is part of the ggplot2 R package, so the midwest data set is automatically loaded when you load the tidyverse package.\nThe data contains demographic characteristics of counties in the Midwest region of the United States.\nBecause the data set is part of the ggplot2 package, you can read documentation for the data set, including variable definitions by typing ?midwest in the Console or searching for midwest in the Help pane.\n\nQuestion 1\nVisualize the distribution of population density of counties using a histogram with geom_histogram() with four separate binwidths: a binwidth of 100, a binwidth of 1,000, a binwidth of 10,000, and a binwidth of 100,000. For example, you can create the first plot with:\n\nggplot(midwest, aes(x = popdensity)) +\n  geom_histogram(binwidth = 100) +\n  labs(\n    x = \"Population density\",\n    y = \"Count\",\n    title = \"Population density of midwesten counties\",\n    subtitle = \"Binwidth = 100\"\n  )\n\nYou will need to make four different histograms. Make sure to set informative titles and axis labels for each of your plots. Then, comment on which binwidth is most appropriate for these data and why.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 2\nVisualize the distribution of population density of counties again, this time using a boxplot with geom_boxplot(). Make sure to set informative titles and axis labels for your plot. Then, using information as needed from the box plot as well as the histogram from Question 1, describe the distribution of population density of counties and comment on any potential outliers, making sure to identify at least one county that is a clear outlier by name in your narrative and commenting on whether it makes sense to you that this county is an outlier. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 3\nCreate a scatterplot of the percentage below poverty (percbelowpoverty on the y-axis) versus percentage of people with a college degree (percollege on the x-axis), where the color and shape of points are determined by state. Make sure to set informative titles, axis, and legend labels for your plot. First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them. Then, comment on whether you can identify how this relationship varies across states.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 4\nNow, let’s examine the relationship between the same two variables, once again using different colors and shapes to represent each state, and using a separate plot for each state, i.e., with faceting with facet_wrap(). In addition to points (geom_point()), represent the data with a smooth curve fit to the data with geom_smooth(), with the argument se = FALSE. Make sure to set informative titles, axis, and legend labels for your plot. Which plot do you prefer - this plot or the plot in Question 3? Briefly explain your choice.\n\n\n\n\n\n\nNote\n\n\n\nse = FALSE removes the confidence bands around the line. These bands show the uncertainty around the smooth curve. We’ll discuss uncertainty around estimates later in the course and bring these bands back then.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 5\nDo some states have counties that tend to be geographically larger than others?\nTo explore this question, create side-by-side boxplots of area (area) of a county based on state (state). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nOnce again, make sure to commit and push all changed files so that your Git pane is empty afterwards.\n\n\n\nQuestion 6\nDo some states have a higher percentage of their counties located in a metropolitan area?\nCreate a segmented bar chart with one bar per state and the bar filled with colors according to the value of metro – one color indicating Yes and the other color indicating No for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.\n\n\n\n\n\n\nHint\n\n\n\nFor this question, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini-preview. This pipeline creates a new variable called metro based on the value of the existing variable called inmetro. If the value of inmetro is equal to 1 (inmetro == 1), it sets the value of metro to \"Yes\", and if not, it sets the value of metro to \"No\". The resulting data frame is assigned back to midwest, overwriting the existing midwest data frame with a version that includes the new metro variable.\n\nmidwest &lt;- midwest |&gt;\n  mutate(metro = if_else(inmetro == 1, \"Yes\", \"No\"))\n\n\n\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nAnd once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions.\n\n\n\nQuestion 7\nRecreate the plot below, and then give it a title. Then, identify at least one county that is a clear outlier in Wisconsin (WI) by name. You can use the data viewer to identify them interactively, you do not have to write code. Comment on the population composition of this county by investigating the percentage of other races living there.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\nThe ggplot2 reference for themes will be helpful in determining the theme.\nThe size of the points is 2.\nThe transparency (alpha) of the points is 0.5.\nYou can put line breaks in labels with \\n.\n\n\n\n\nRender, commit, and push your final changes to GitHub with a meaningful commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterwards.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#part-2",
+    "href": "labs/lab-1.html#part-2",
+    "title": "Lab 1 - Data visualization",
+    "section": "Part 2",
+    "text": "Part 2\nEnough about the Midwest!\nIn this part we will use a new, more recent, and potentially more relevant dataset on counties in North Carolina.\nThis dataset is stored in a file called nc-county.csv in the data folder of your project/repository.\nYou can read this file into R with the following code:\n\nnc_county &lt;- read_csv(\"data/nc-county.csv\")\n\nThis will read the CSV (comma separated values) file from the data folder and store the dataset as a data frame called nc_county in R.\nThe variables in the dataset and their descriptions are as follows:\n\ncounty: Name of county.\nstate_abb: State abbreviation (NC).\nstate_name: State name (North Carolina).\nland_area_m2: Land area of county in meters-squared, based on the 2020 census.\nland_area_mi2: Land area of county in miles-squared, based on the 2020 census.\npopulation: Population of county, based on the 2020 census.\ndensity: Population density calculated as population divided by land area in miles-squared.\n\nIn addition to being more recent and more relevant, this dataset is also more complete in the sense that we know the units of population density: people per mile-squared!\n\nQuestion 8\nFirst, guess what the relationship between population density and land area might be – positive? negative? no relationship?\nThen, make a scatter plot of population density (density on the y-axis) vs. land area in miles-squared (land_area_mi2 on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?\n\n\nQuestion 9\nNow make a scatter plot of population density (density on the y-axis) vs. land area in meters-squared (land_area_m2 on the x-axis). Make sure to set an informative title and axis labels for your plot. Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different. Explain why.\n\n\nQuestion 10\nDid you select your pages on Gradescope? You don’t need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you’ll get full points on this question. Otherwise, you’ll get a 0 on this question.2",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#submission",
+    "href": "labs/lab-1.html#submission",
+    "title": "Lab 1 - Data visualization",
+    "section": "Submission",
+    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#grading",
+    "href": "labs/lab-1.html#grading",
+    "title": "Lab 1 - Data visualization",
+    "section": "Grading",
+    "text": "Grading\nThe lab is graded out of a total of 50 points.\nOn Questions 1 through 9, you can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.\n\nOn Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:\n\n5: Selected questions and pages on Gradescope.\n0: Did not select some or all questions and pages on Gradescope.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#footnotes",
+    "href": "labs/lab-1.html#footnotes",
+    "title": "Lab 1 - Data visualization",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "In this lab you’ll continue to hone your data science workflow as well as bring together what you learned so far in the course (data visualization) with what’s coming up (data wrangling).\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed Lab 0 and Lab 1 and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review them before starting with this one.\n\n\n\n\nBy the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#learning-objectives",
+    "href": "labs/lab-2.html#learning-objectives",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "By the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#getting-started",
+    "href": "labs/lab-2.html#getting-started",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "Go to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#packages",
+    "href": "labs/lab-2.html#packages",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#guidelines",
+    "href": "labs/lab-2.html#guidelines",
+    "title": "Lab 2 - Data wrangling",
+    "section": "",
+    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#part-1",
+    "href": "labs/lab-2.html#part-1",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Part 1",
+    "text": "Part 1\nBack to the Midwest!\nIn this part you will revisit and build on some of your findings from Lab 1, where you explored the midwest data frame. Remember that this data frame is bundled with the ggplot2 package and is automatically loaded when you load the tidyverse package. As a refresher, the data contains demographic characteristics of counties in the Midwest region of the United States. You can read documentation for the data set, including variable definitions by typing ?midwest in the Console or searching for midwest in the Help pane.\n\nQuestion 1\nCalculate the number of counties in each state and display your results in descending order of number of counties. Which state has the highest number of counties, and how many? Which state has the lowest number, and how many?\n\n\n\n\n\n\nNote\n\n\n\nThe number of counties in a state can change over time, so the values you see in this output may not be true today.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 2\nWhile in a given state two counties can’t have the same name, across states some county names might be shared. A classmate says “Look at that, there is a county called ___ in each state in this dataset!” In a single pipeline, discover all counties that could fill in the blank. Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.\n\n\n\n\n\n\nTip\n\n\n\nYou will want to use the filter() function in your answer, which requires a logical condition to describe what you want to filter for. For example filter(x &gt; 2) means filter for values of x greater than 2, filter(y &lt;= 3) means filter for values of y less than or equal to 3.\nThe table below is a summary of logical operators and how to articulate them in R.\n\n\n\noperator\ndefinition\n\n\n\n\n&lt;\nless than\n\n\n&lt;=\nless than or equal to\n\n\n&gt;\ngreater than\n\n\n&gt;=\ngreater than or equal to\n\n\n==\nexactly equal to\n\n\n!=\nnot equal to\n\n\nx & y\nx AND y\n\n\nx | y\nx OR y\n\n\nis.na(x)\ntest if x is NA\n\n\n!is.na(x)\ntest if x is not NA\n\n\nx %in% y\ntest if x is in y\n\n\n!(x %in% y)\ntest if x is not in y\n\n\n!x\nnot x\n\n\n\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 3\nReturn to the following box plot of population densities where you were asked to identify at least one outlier.\n\n\n\n\n\n\n\n\n\nIn this question part, we want you to revisit this box plot and identify the counties described in each part.\na. The counties with a population density higher than 25,000. Your code must use the filter() function.\nb. The county with the highest population density. Your code must use the max() function.\nAnswer using a single data wrangling pipeline for each part. Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order. If your response has multiple rows, the data frame should be arranged in descending order of population density.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 4\nIn Lab 1 you were also asked to describe the distribution of population densities. The following is one acceptable description that touches on shape, center, and spread of this distribution. Calculate the values that should go into the blanks.\n\nThe distribution of population density of counties is unimodal and extremely right-skewed. A typical Midwestern county has population density of ____ people per unit area. The middle 50% of the counties have population densities between ___ to ___ people per unit area.\n\n\n\n\n\n\n\nTip\n\n\n\nThink about which measures of center and spread are appropriate for skewed distributions.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 5\nAnother visualization from Lab 1 was the following that showed the proportion of urban counties in each state.\n\n\n\n\n\n\n\n\n\nCalculate these proportions in a single data pipeline.\n\n\n\n\n\n\nTip\n\n\n\nRemember, you’ll first need to create a new variable called metro which takes on the value Yes if the value of inmetro is 1, and No otherwise. You can refer to Lab 1 if you need a refresher on how to do this.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 5”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 6\nReturn to the following scatter plot of percentage below poverty vs. percentage of people with a college degree, where the color and shape of points are determined by state where you were asked to identify at least one county that is a clear outlier by name.\n\n\n\n\n\n\n\n\n\na. In a single pipeline, identify the observations marked in the orange square on the upper left corner. Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nb. In a single pipeline, identify the observations marked in the red square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nc. Bring your answers from part (a) and part (b) together! In a single pipeline, and a single filter() statement, identify the observations marked in the red and orange square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nd. Create a new variable in midwest called potential_outlier. This variable should take on the value:\n\nYes if the point is one the ones you identified in part (c), i.e., one of the points marked in the squares in the plot above.\nNo otherwise.\n\nThen, display the updated midwest data frame, with county, state, percentage below poverty, percentage college educated, potential_outlier as the selected variables, arranged in ascending order of potential_outlier.\nc. Recreate the visualization above, i.e. a scatterplot of percentage below poverty vs. percentage of people with a college degree, however color the points by the newly created potential_outlier variable instead of state.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 6”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 7\na. In a single pipeline, calculate the total population for each state and save the resulting data frame as state_population and display it in descending order of total population.\nb. Then, in a separate pipeline, calculate the proportion of the total population in each state and, once again, display the results in descending order of proportion of population.\n\n\n\n\n\n\nTip\n\n\n\nIn answering parts (a) and (b), you’ll create two new variables, one for total population and other for proportion of total proportion. Make sure to give them “reasonable” names – short but evocative.\n\n\nc. Which Midwestern state is most populous and what percent of the Midwest population lives there? Which is the least populous and what percent lives there?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 8\nCalculate the average percentage below poverty for each state and save the resulting data frame as state_poverty with the columns state and mean_percbelowpoverty.\nThen, in a new pipeline, display the state_poverty data frame in ascending order of mean_percbelowpoverty. Which state has the lowest average percentage below poverty across its counties? Which state has the highest average percentage below poverty across its counties?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 8”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#part-2",
+    "href": "labs/lab-2.html#part-2",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Part 2",
+    "text": "Part 2\nAll about group_by()!\n\nQuestion 9\nSuppose we have the following data frame:\n\ndf &lt;- tibble(\n  var_1 = c(10, 20, 30, 40, 50),\n  var_2 = c(\"Pizza\", \"Burger\", \"Pizza\", \"Pizza\", \"Burger\"),\n  var_3 = c(\"Apple\", \"Apple\", \"Pear\", \"Pear\", \"Banana\")\n)\n\ndf\n\n# A tibble: 5 × 3\n  var_1 var_2  var_3 \n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; \n1    10 Pizza  Apple \n2    20 Burger Apple \n3    30 Pizza  Pear  \n4    40 Pizza  Pear  \n5    50 Burger Banana\n\n\na. What does the following code chunk do? Run it and analyze the result and articulate in words what arrange() does.\n\ndf |&gt;\n  arrange(var_2)\n\nb. What does the following code chunk do? Run it and analyze the result and articulate in words what group_by() does. Also comment on how it’s different from the arrange() in part (a)?\n\ndf |&gt;\n  group_by(var_2)\n\nc. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does.\n\ndf |&gt;\n  group_by(var_2) |&gt;\n  summarize(mean_var_1 = mean(var_1))\n\nd. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does. Then, comment on what the message says.\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1))\n\ne. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does, especially mentioning what the .groups argument does. How is the output different from the one in part (d).\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1), .groups = \"drop\")\n\nf. What do the following pipelines do? Run both and analyze their results and articulate in words what each pipeline does. How are the outputs of the two pipelines different?\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1), .groups = \"drop\")\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  mutate(mean_var_1 = mean(var_1))\n\n\nRender, commit, and push your changes to GitHub with an appropriate commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 10\nDid you select your pages on Gradescope? You don’t need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you’ll get full points on this question. Otherwise, you’ll get a 0 on this question.2",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#submission",
+    "href": "labs/lab-2.html#submission",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Submission",
+    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#grading",
+    "href": "labs/lab-2.html#grading",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Grading",
+    "text": "Grading\nThe lab is graded out of a total of 50 points.\nOn Questions 1 through 9, you can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.\n\nOn Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:\n\n5: Selected questions and pages on Gradescope.\n0: Did not select some or all questions and pages on Gradescope.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#footnotes",
+    "href": "labs/lab-2.html#footnotes",
+    "title": "Lab 2 - Data wrangling",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-5.html",
+    "href": "labs/lab-5.html",
+    "title": "Lab 5 - TBA",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
+  },
+  {
     "objectID": "slides/05-grammar-of-data-wrangling.html#while-you-wait-for-class-to-begin",
     "href": "slides/05-grammar-of-data-wrangling.html#while-you-wait-for-class-to-begin",
     "title": "Grammar of data wrangling",
@@ -959,468 +1484,6 @@
     "title": "Grammar of data wrangling",
     "section": "Recap: logical operators",
     "text": "Recap: logical operators\n\n\n\n\n\n\n\noperator\ndefinition\n\n\n\n\nx & y\nis x AND y?\n\n\nx \\| y\nis x OR y?\n\n\nis.na(x)\nis x NA?\n\n\n!is.na(x)\nis x not NA?\n\n\nx %in% y\nis x in y?\n\n\n!(x %in% y)\nis x not in y?\n\n\n!x\nis not x? (only makes sense if x is TRUE or FALSE)\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io  ·  ❓ Ask on Ed"
-  },
-  {
-    "objectID": "labs/lab-5.html",
-    "href": "labs/lab-5.html",
-    "title": "Lab 5 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 5"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html",
-    "href": "labs/lab-2.html",
-    "title": "Lab 2 - Data wrangling",
-    "section": "",
-    "text": "In this lab you’ll continue to hone your data science workflow as well as bring together what you learned so far in the course (data visualization) with what’s coming up (data wrangling).\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed Lab 0 and Lab 1 and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review them before starting with this one.\n\n\n\n\nBy the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#learning-objectives",
-    "href": "labs/lab-2.html#learning-objectives",
-    "title": "Lab 2 - Data wrangling",
-    "section": "",
-    "text": "By the end of the lab, you will…\n\nBe able to create transform data using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#getting-started",
-    "href": "labs/lab-2.html#getting-started",
-    "title": "Lab 2 - Data wrangling",
-    "section": "",
-    "text": "Go to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-2.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-2.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#packages",
-    "href": "labs/lab-2.html#packages",
-    "title": "Lab 2 - Data wrangling",
-    "section": "",
-    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nRemember: The rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#guidelines",
-    "href": "labs/lab-2.html#guidelines",
-    "title": "Lab 2 - Data wrangling",
-    "section": "",
-    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#part-1",
-    "href": "labs/lab-2.html#part-1",
-    "title": "Lab 2 - Data wrangling",
-    "section": "Part 1",
-    "text": "Part 1\nBack to the Midwest!\nIn this part you will revisit and build on some of your findings from Lab 1, where you explored the midwest data frame. Remember that this data frame is bundled with the ggplot2 package and is automatically loaded when you load the tidyverse package. As a refresher, the data contains demographic characteristics of counties in the Midwest region of the United States. You can read documentation for the data set, including variable definitions by typing ?midwest in the Console or searching for midwest in the Help pane.\n\nQuestion 1\nCalculate the number of counties in each state and display your results in descending order of number of counties. Which state has the highest number of counties, and how many? Which state has the lowest number, and how many?\n\n\n\n\n\n\nNote\n\n\n\nThe number of counties in a state can change over time, so the values you see in this output may not be true today.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 2\nWhile in a given state two counties can’t have the same name, across states some county names might be shared. A classmate says “Look at that, there is a county called ___ in each state in this dataset!” In a single pipeline, discover all counties that could fill in the blank. Your response should be a data frame with only the county names that could fill in the blank and how many times they appear in the data.\n\n\n\n\n\n\nTip\n\n\n\nYou will want to use the filter() function in your answer, which requires a logical condition to describe what you want to filter for. For example filter(x &gt; 2) means filter for values of x greater than 2, filter(y &lt;= 3) means filter for values of y less than or equal to 3.\nThe table below is a summary of logical operators and how to articulate them in R.\n\n\n\noperator\ndefinition\n\n\n\n\n&lt;\nless than\n\n\n&lt;=\nless than or equal to\n\n\n&gt;\ngreater than\n\n\n&gt;=\ngreater than or equal to\n\n\n==\nexactly equal to\n\n\n!=\nnot equal to\n\n\nx & y\nx AND y\n\n\nx | y\nx OR y\n\n\nis.na(x)\ntest if x is NA\n\n\n!is.na(x)\ntest if x is not NA\n\n\nx %in% y\ntest if x is in y\n\n\n!(x %in% y)\ntest if x is not in y\n\n\n!x\nnot x\n\n\n\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 3\nReturn to the following box plot of population densities where you were asked to identify at least one outlier.\n\n\n\n\n\n\n\n\n\nIn this question part, we want you to revisit this box plot and identify the counties described in each part.\na. The counties with a population density higher than 25,000. Your code must use the filter() function.\nb. The county with the highest population density. Your code must use the max() function.\nAnswer using a single data wrangling pipeline for each part. Your response should be a data frame five columns: county name, state name, population density, total population, and area, in this order. If your response has multiple rows, the data frame should be arranged in descending order of population density.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 4\nIn Lab 1 you were also asked to describe the distribution of population densities. The following is one acceptable description that touches on shape, center, and spread of this distribution. Calculate the values that should go into the blanks.\n\nThe distribution of population density of counties is unimodal and extremely right-skewed. A typical Midwestern county has population density of ____ people per unit area. The middle 50% of the counties have population densities between ___ to ___ people per unit area.\n\n\n\n\n\n\n\nTip\n\n\n\nThink about which measures of center and spread are appropriate for skewed distributions.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 5\nAnother visualization from Lab 1 was the following that showed the proportion of urban counties in each state.\n\n\n\n\n\n\n\n\n\nCalculate these proportions in a single data pipeline.\n\n\n\n\n\n\nTip\n\n\n\nRemember, you’ll first need to create a new variable called metro which takes on the value Yes if the value of inmetro is 1, and No otherwise. You can refer to Lab 1 if you need a refresher on how to do this.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 5”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 6\nReturn to the following scatter plot of percentage below poverty vs. percentage of people with a college degree, where the color and shape of points are determined by state where you were asked to identify at least one county that is a clear outlier by name.\n\n\n\n\n\n\n\n\n\na. In a single pipeline, identify the observations marked in the orange square on the upper left corner. Your answer should be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nb. In a single pipeline, identify the observations marked in the red square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nc. Bring your answers from part (a) and part (b) together! In a single pipeline, and a single filter() statement, identify the observations marked in the red and orange square in the plot above. Your answer should again be a data frame with four variables: county, state, percentage below poverty, and percentage college educated.\nd. Create a new variable in midwest called potential_outlier. This variable should take on the value:\n\nYes if the point is one the ones you identified in part (c), i.e., one of the points marked in the squares in the plot above.\nNo otherwise.\n\nThen, display the updated midwest data frame, with county, state, percentage below poverty, percentage college educated, potential_outlier as the selected variables, arranged in ascending order of potential_outlier.\nc. Recreate the visualization above, i.e. a scatterplot of percentage below poverty vs. percentage of people with a college degree, however color the points by the newly created potential_outlier variable instead of state.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 6”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 7\na. In a single pipeline, calculate the total population for each state and save the resulting data frame as state_population and display it in descending order of total population.\nb. Then, in a separate pipeline, calculate the proportion of the total population in each state and, once again, display the results in descending order of proportion of population.\n\n\n\n\n\n\nTip\n\n\n\nIn answering parts (a) and (b), you’ll create two new variables, one for total population and other for proportion of total proportion. Make sure to give them “reasonable” names – short but evocative.\n\n\nc. Which Midwestern state is most populous and what percent of the Midwest population lives there? Which is the least populous and what percent lives there?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 8\nCalculate the average percentage below poverty for each state and save the resulting data frame as state_poverty with the columns state and mean_percbelowpoverty.\nThen, in a new pipeline, display the state_poverty data frame in ascending order of mean_percbelowpoverty. Which state has the lowest average percentage below poverty across its counties? Which state has the highest average percentage below poverty across its counties?\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 8”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#part-2",
-    "href": "labs/lab-2.html#part-2",
-    "title": "Lab 2 - Data wrangling",
-    "section": "Part 2",
-    "text": "Part 2\nAll about group_by()!\n\nQuestion 9\nSuppose we have the following data frame:\n\ndf &lt;- tibble(\n  var_1 = c(10, 20, 30, 40, 50),\n  var_2 = c(\"Pizza\", \"Burger\", \"Pizza\", \"Pizza\", \"Burger\"),\n  var_3 = c(\"Apple\", \"Apple\", \"Pear\", \"Pear\", \"Banana\")\n)\n\ndf\n\n# A tibble: 5 × 3\n  var_1 var_2  var_3 \n  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; \n1    10 Pizza  Apple \n2    20 Burger Apple \n3    30 Pizza  Pear  \n4    40 Pizza  Pear  \n5    50 Burger Banana\n\n\na. What does the following code chunk do? Run it and analyze the result and articulate in words what arrange() does.\n\ndf |&gt;\n  arrange(var_2)\n\nb. What does the following code chunk do? Run it and analyze the result and articulate in words what group_by() does. Also comment on how it’s different from the arrange() in part (a)?\n\ndf |&gt;\n  group_by(var_2)\n\nc. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does.\n\ndf |&gt;\n  group_by(var_2) |&gt;\n  summarize(mean_var_1 = mean(var_1))\n\nd. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does. Then, comment on what the message says.\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1))\n\ne. What does the following code chunk do? Run it and analyze the result and articulate in words what the pipeline does, especially mentioning what the .groups argument does. How is the output different from the one in part (d).\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1), .groups = \"drop\")\n\nf. What do the following pipelines do? Run both and analyze their results and articulate in words what each pipeline does. How are the outputs of the two pipelines different?\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  summarize(mean_var_1 = mean(var_1), .groups = \"drop\")\n\ndf |&gt;\n  group_by(var_2, var_3) |&gt;\n  mutate(mean_var_1 = mean(var_1))\n\n\nRender, commit, and push your changes to GitHub with an appropriate commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 10\nDid you select your pages on Gradescope? You don’t need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you’ll get full points on this question. Otherwise, you’ll get a 0 on this question.2",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#submission",
-    "href": "labs/lab-2.html#submission",
-    "title": "Lab 2 - Data wrangling",
-    "section": "Submission",
-    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#grading",
-    "href": "labs/lab-2.html#grading",
-    "title": "Lab 2 - Data wrangling",
-    "section": "Grading",
-    "text": "Grading\nThe lab is graded out of a total of 50 points.\nOn Questions 1 through 9, you can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.\n\nOn Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:\n\n5: Selected questions and pages on Gradescope.\n0: Did not select some or all questions and pages on Gradescope.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#footnotes",
-    "href": "labs/lab-2.html#footnotes",
-    "title": "Lab 2 - Data wrangling",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html",
-    "href": "labs/lab-1.html",
-    "title": "Lab 1 - Data visualization",
-    "section": "",
-    "text": "This lab will introduce you to the course computing workflow. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\n\n\n\n\n\n\nNote\n\n\n\nR is the name of the programming language itself and RStudio is a convenient interface, commonly referred to as an integrated development environment or an IDE, for short.\n\n\nAn additional goal is to reinforce Git and GitHub, the version control, web hosting, and collaboration systems that we will be using throughout the course.\n\n\n\n\n\n\nNote\n\n\n\nGit is a version control system (like “Track Changes” features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).\n\n\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\n\n\n\n\n\n\nWarning\n\n\n\nThis lab assumes that you have already completed Lab 0. If you have not, please go back and do that first before proceeding.\n\n\n\n\nBy the end of the lab, you will…\n\nBe familiar with the workflow using R, RStudio, Git, and GitHub\nGain practice writing a reproducible report using Quarto\nPractice version control using Git and GitHub\nBe able to create data visualizations using ggplot2\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-1. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-1.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file.\n\n\n\n\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document.\n\n\n\n\n\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!\n\n\n\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push.\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nThe rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\ndplyr: for data wrangling\nforcats: for dealing with factors\nggplot2: for data visualization\nlubridate: for dealing with dates\npurrr: for iteration with functional programming\nreadr: for reading and writing data\nstringr: for string manipulation\ntibble: for modern, tidy data frames\ntidyr: for data tidying and rectangling\n\nThe message that’s printed when you load the package tells you which versions of these packages are loaded as well as any conflicts they may have introduced, e.g., the filter() function from dplyr has now masked (overwritten) the filter() function available in base R (and that’s ok, we’ll use dplyr::filter() anyway).\nYou can now Render your template document and see the results.\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#learning-objectives",
-    "href": "labs/lab-1.html#learning-objectives",
-    "title": "Lab 1 - Data visualization",
-    "section": "",
-    "text": "By the end of the lab, you will…\n\nBe familiar with the workflow using R, RStudio, Git, and GitHub\nGain practice writing a reproducible report using Quarto\nPractice version control using Git and GitHub\nBe able to create data visualizations using ggplot2",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#getting-started",
-    "href": "labs/lab-1.html#getting-started",
-    "title": "Lab 1 - Data visualization",
-    "section": "",
-    "text": "Go to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-1. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-1.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file.\n\n\n\n\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document.\n\n\n\n\n\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!\n\n\n\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#packages",
-    "href": "labs/lab-1.html#packages",
-    "title": "Lab 1 - Data visualization",
-    "section": "",
-    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\n\n\n\nNote\n\n\n\nThe rendered document will include a message about which packages the tidyverse package is loading along with it. It’s just R being informative, a message does not indicate anything is wrong (it’s not a warning or an error).\n\n\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\ndplyr: for data wrangling\nforcats: for dealing with factors\nggplot2: for data visualization\nlubridate: for dealing with dates\npurrr: for iteration with functional programming\nreadr: for reading and writing data\nstringr: for string manipulation\ntibble: for modern, tidy data frames\ntidyr: for data tidying and rectangling\n\nThe message that’s printed when you load the package tells you which versions of these packages are loaded as well as any conflicts they may have introduced, e.g., the filter() function from dplyr has now masked (overwritten) the filter() function available in base R (and that’s ok, we’ll use dplyr::filter() anyway).\nYou can now Render your template document and see the results.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#guidelines",
-    "href": "labs/lab-1.html#guidelines",
-    "title": "Lab 1 - Data visualization",
-    "section": "",
-    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#part-1",
-    "href": "labs/lab-1.html#part-1",
-    "title": "Lab 1 - Data visualization",
-    "section": "Part 1",
-    "text": "Part 1\nLet’s take a trip to the Midwest!\nWe will use the midwest data frame for this lab. It is part of the ggplot2 R package, so the midwest data set is automatically loaded when you load the tidyverse package.\nThe data contains demographic characteristics of counties in the Midwest region of the United States.\nBecause the data set is part of the ggplot2 package, you can read documentation for the data set, including variable definitions by typing ?midwest in the Console or searching for midwest in the Help pane.\n\nQuestion 1\nVisualize the distribution of population density of counties using a histogram with geom_histogram() with four separate binwidths: a binwidth of 100, a binwidth of 1,000, a binwidth of 10,000, and a binwidth of 100,000. For example, you can create the first plot with:\n\nggplot(midwest, aes(x = popdensity)) +\n  geom_histogram(binwidth = 100) +\n  labs(\n    x = \"Population density\",\n    y = \"Count\",\n    title = \"Population density of midwesten counties\",\n    subtitle = \"Binwidth = 100\"\n  )\n\nYou will need to make four different histograms. Make sure to set informative titles and axis labels for each of your plots. Then, comment on which binwidth is most appropriate for these data and why.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 2\nVisualize the distribution of population density of counties again, this time using a boxplot with geom_boxplot(). Make sure to set informative titles and axis labels for your plot. Then, using information as needed from the box plot as well as the histogram from Question 1, describe the distribution of population density of counties and comment on any potential outliers, making sure to identify at least one county that is a clear outlier by name in your narrative and commenting on whether it makes sense to you that this county is an outlier. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 3\nCreate a scatterplot of the percentage below poverty (percbelowpoverty on the y-axis) versus percentage of people with a college degree (percollege on the x-axis), where the color and shape of points are determined by state. Make sure to set informative titles, axis, and legend labels for your plot. First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them. Then, comment on whether you can identify how this relationship varies across states.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 4\nNow, let’s examine the relationship between the same two variables, once again using different colors and shapes to represent each state, and using a separate plot for each state, i.e., with faceting with facet_wrap(). In addition to points (geom_point()), represent the data with a smooth curve fit to the data with geom_smooth(), with the argument se = FALSE. Make sure to set informative titles, axis, and legend labels for your plot. Which plot do you prefer - this plot or the plot in Question 3? Briefly explain your choice.\n\n\n\n\n\n\nNote\n\n\n\nse = FALSE removes the confidence bands around the line. These bands show the uncertainty around the smooth curve. We’ll discuss uncertainty around estimates later in the course and bring these bands back then.\n\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\n\nQuestion 5\nDo some states have counties that tend to be geographically larger than others?\nTo explore this question, create side-by-side boxplots of area (area) of a county based on state (state). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nOnce again, make sure to commit and push all changed files so that your Git pane is empty afterwards.\n\n\n\nQuestion 6\nDo some states have a higher percentage of their counties located in a metropolitan area?\nCreate a segmented bar chart with one bar per state and the bar filled with colors according to the value of metro – one color indicating Yes and the other color indicating No for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.\n\n\n\n\n\n\nHint\n\n\n\nFor this question, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini-preview. This pipeline creates a new variable called metro based on the value of the existing variable called inmetro. If the value of inmetro is equal to 1 (inmetro == 1), it sets the value of metro to \"Yes\", and if not, it sets the value of metro to \"No\". The resulting data frame is assigned back to midwest, overwriting the existing midwest data frame with a version that includes the new metro variable.\n\nmidwest &lt;- midwest |&gt;\n  mutate(metro = if_else(inmetro == 1, \"Yes\", \"No\"))\n\n\n\n\nNow is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.\nAnd once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions.\n\n\n\nQuestion 7\nRecreate the plot below, and then give it a title. Then, identify at least one county that is a clear outlier in Wisconsin (WI) by name. You can use the data viewer to identify them interactively, you do not have to write code. Comment on the population composition of this county by investigating the percentage of other races living there.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\nThe ggplot2 reference for themes will be helpful in determining the theme.\nThe size of the points is 2.\nThe transparency (alpha) of the points is 0.5.\nYou can put line breaks in labels with \\n.\n\n\n\n\nRender, commit, and push your final changes to GitHub with a meaningful commit message.\nMake sure to commit and push all changed files so that your Git pane is empty afterwards.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#part-2",
-    "href": "labs/lab-1.html#part-2",
-    "title": "Lab 1 - Data visualization",
-    "section": "Part 2",
-    "text": "Part 2\nEnough about the Midwest!\nIn this part we will use a new, more recent, and potentially more relevant dataset on counties in North Carolina.\nThis dataset is stored in a file called nc-county.csv in the data folder of your project/repository.\nYou can read this file into R with the following code:\n\nnc_county &lt;- read_csv(\"data/nc-county.csv\")\n\nThis will read the CSV (comma separated values) file from the data folder and store the dataset as a data frame called nc_county in R.\nThe variables in the dataset and their descriptions are as follows:\n\ncounty: Name of county.\nstate_abb: State abbreviation (NC).\nstate_name: State name (North Carolina).\nland_area_m2: Land area of county in meters-squared, based on the 2020 census.\nland_area_mi2: Land area of county in miles-squared, based on the 2020 census.\npopulation: Population of county, based on the 2020 census.\ndensity: Population density calculated as population divided by land area in miles-squared.\n\nIn addition to being more recent and more relevant, this dataset is also more complete in the sense that we know the units of population density: people per mile-squared!\n\nQuestion 8\nFirst, guess what the relationship between population density and land area might be – positive? negative? no relationship?\nThen, make a scatter plot of population density (density on the y-axis) vs. land area in miles-squared (land_area_mi2 on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?\n\n\nQuestion 9\nNow make a scatter plot of population density (density on the y-axis) vs. land area in meters-squared (land_area_m2 on the x-axis). Make sure to set an informative title and axis labels for your plot. Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different. Explain why.\n\n\nQuestion 10\nDid you select your pages on Gradescope? You don’t need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you’ll get full points on this question. Otherwise, you’ll get a 0 on this question.2",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#submission",
-    "href": "labs/lab-1.html#submission",
-    "title": "Lab 1 - Data visualization",
-    "section": "Submission",
-    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#grading",
-    "href": "labs/lab-1.html#grading",
-    "title": "Lab 1 - Data visualization",
-    "section": "Grading",
-    "text": "Grading\nThe lab is graded out of a total of 50 points.\nOn Questions 1 through 9, you can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.\n\nOn Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:\n\n5: Selected questions and pages on Gradescope.\n0: Did not select some or all questions and pages on Gradescope.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#footnotes",
-    "href": "labs/lab-1.html#footnotes",
-    "title": "Lab 1 - Data visualization",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n🖥️ slides 04  ⌨️ ae 03\n\n\n\n\n4\nMon, Jan 29\n🎥 Grammar of data wrangling  📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n🎥 Working with a single data frame  📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n🖥️ slides 05  ⌨️ ae 04\n\n\n\n\n\n\nThu, Feb 1\n🎥 Tidying data  📗 r4ds - chp 5\nTidying data\n\n\n\n\n\n\n5\nMon, Feb 5\n\n\nLab 3: Exploratory data analysis\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n🎥 Working with multiple data frames  📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n🎥 Data types  🎥 Data classes  📗 r4ds - chp 16\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
-    "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#office-hours",
-    "href": "course-support.html#office-hours",
-    "title": "Course support",
-    "section": "Office hours",
-    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#ed-discussion",
-    "href": "course-support.html#ed-discussion",
-    "title": "Course support",
-    "section": "Ed Discussion",
-    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course discussion forum, Ed Discussion, is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Ed Discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#academic-support",
-    "href": "course-support.html#academic-support",
-    "title": "Course support",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#mental-health-and-wellness",
-    "href": "course-support.html#mental-health-and-wellness",
-    "title": "Course support",
-    "section": "Mental health and wellness",
-    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times.  Duke encourages all students to access these resources.\n\nCAPS: Duke Counseling & Pyschological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nDuWell: (919) 681-8421, provides Moments of Mindfulness (stress management and resilience building) and meditation programming to assist students in developing a daily emotional well-being practice. To see schedules for programs please see https://studentaffairs.duke.edu/duwell. All are welcome and no experience necessary.\nDukeReach: Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance: http://studentaffairs.duke.edu/dukereach.\nTimelyCare: (formerly known as Blue Devils Care) An online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling: https://bluedevilscare.duke.edu.\nTwo-Click Support: Duke Student Government and DukeReach partnership that connects students to help in just two clicks: https://bit.ly/TwoClickSupport.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#course-costs",
-    "href": "course-support.html#course-costs",
-    "title": "Course support",
-    "section": "Course costs",
-    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.\nDukeLIFE offers course materials assistance for eligible students. Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
-    "href": "course-support.html#assistance-with-zoom-or-canvas",
-    "title": "Course support",
-    "section": "Assistance with Zoom or Canvas",
-    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub and conversation on Ed Discussion.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
-    "crumbs": [
-      "Computing",
-      "Cheatsheets"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html",
-    "href": "labs/lab-0.html",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "",
-    "text": "This lab will set you up for the computing workflow and give you an opportunity to introduce yourselves to each other and the teaching team.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html#access-r-and-rstudio",
-    "href": "labs/lab-0.html#access-r-and-rstudio",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "Access R and RStudio",
-    "text": "Access R and RStudio\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html#create-a-github-account",
-    "href": "labs/lab-0.html#create-a-github-account",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html#set-up-your-ssh-key",
-    "href": "labs/lab-0.html#set-up-your-ssh-key",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "Set up your SSH key",
-    "text": "Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. It will begin with “ssh-rsa….” R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html#configure-git",
-    "href": "labs/lab-0.html#configure-git",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "Configure Git",
-    "text": "Configure Git\nThere is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"Mine Çetinkaya-Rundel\", \n  user.email = \"cetinkaya.mine@gmail.com\"\n)\n\nYou are now ready interact with GitHub via RStudio!\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-0.html#footnotes",
-    "href": "labs/lab-0.html#footnotes",
-    "title": "Lab 0 - Hello, World and STA 199!",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "labs/lab-7.html",
-    "href": "labs/lab-7.html",
-    "title": "Lab 7 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 7"
-    ]
-  },
-  {
-    "objectID": "labs/lab-6.html",
-    "href": "labs/lab-6.html",
-    "title": "Lab 6 - TBA",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Labs",
-      "Lab 6"
-    ]
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#while-you-wait",
