@@ -77,9 +77,153 @@ sum(1, 2)
 | `!(x %in% y)` | is x not in y?                                           |
 | `!x`          | is not x? (only makes sense if `x` is `TRUE` or `FALSE`) |
 
-## Recap: assignment
+## Recap: assignment {.smaller}
 
-...
+Let's make a tiny data frame to use as an example:
+
+```{r}
+#| message: false
+
+library(tidyverse)
+df <- tibble(x = c(1, 2, 3, 4, 5), y = c("a", "a", "b", "c", "c"))
+df
+```
+
+## Recap: assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something and show me**
+
+```{r}
+df |>
+  mutate(x = x * 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something and save result**
+
+```{r}
+df <- df |>
+  mutate(x = x * 2)
+df
+```
+:::
+:::
+
+## Recap: assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(x = x * 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, _not_ overwriting original**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df_new <- df |>
+  mutate(x = x * 2)
+df_new
+```
+:::
+:::
+
+## Recap: assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original _when you shouldn't_**
+
+```{r}
+#| code-line-numbers: "5-8"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  group_by(y) |>
+  summarize(mean_x = mean(x))
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, _not_ overwriting original _when you shouldn't_**
+
+```{r}
+#| code-line-numbers: "5-8"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df_summary <- df |>
+  group_by(y) |>
+  summarize(mean_x = mean(x))
+df_summary
+```
+:::
+:::
+
+## Recap: assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**\
+> **_data frame_**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(z = x + 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**\
+> **_column_**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(x = x + 2)
+df
+```
+:::
+:::
 
 # Data tidying
 
@@ -96,7 +240,6 @@ sum(1, 2)
 ```{r}
 #| message: false
 
-library(tidyverse)
 statsci <- read_csv("https://sta199-s24.github.io/data/statsci.csv")
 statsci
 ```
