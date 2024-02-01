@@ -1,0 +1,102 @@
+---
+title: "Tidying data"
+subtitle: "Lecture 6"
+date: "February 1, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/discussion/4223179)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+## While you wait for class to begin...
+
+-   Go to your `ae` repo, click *Pull* to get today's application exercise to get ready for later.
+
+-   Questions from the prepare materials?
+
+    ```{=html}
+    <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+    ```
+
+## Announcements
+
+- Lab 2 due Monday, 8 am
+
+# From last time: Application exercise
+
+## `ae-04-flights-wrangling`
+
+::: appex
+-   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+
+-   Open the file called `ae-04-flights-wrangling.qmd` and render it.
+:::
+
+## Recap: pipe {.smaller}
+
+-   The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.
+
+```{r}
+sum(1, 2)
+1 |> 
+  sum(2)
+```
+
+-   Always use a line break after the pipe, and indent the next line of code.
+    -   Just like always use a line break between layers of ggplots, after `+`, and indent the next line.
+
+## Recap: logical operators {.smaller}
+
+| operator | definition                   |
+|:---------|:-----------------------------|
+| `<`      | is less than?                |
+| `<=`     | is less than or equal to?    |
+| `>`      | is greater than?             |
+| `>=`     | is greater than or equal to? |
+| `==`     | is exactly equal to?         |
+| `!=`     | is not equal to?             |
+
+## Recap: logical operators {.smaller}
+
+| operator      | definition                                               |
+|:--------------|:---------------------------------------------------------|
+| `x & y`       | is x AND y?                                              |
+| `x \| y`      | is x OR y?                                               |
+| `is.na(x)`    | is x NA?                                                 |
+| `!is.na(x)`   | is x not NA?                                             |
+| `x %in% y`    | is x in y?                                               |
+| `!(x %in% y)` | is x not in y?                                           |
+| `!x`          | is not x? (only makes sense if `x` is `TRUE` or `FALSE`) |
+
+## Recap: assignment
+
+...
+
+# Application exercise
+
+## `ae-05-majors-tidying`
+
+::: appex
+-   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+
+-   If there are any uncommitted files, commit them, and then click **Pull**.
+
+-   Open the file called `ae-05-majors-tidying.qmd` and render it.
+:::
+
+## Recap: pivoting {.smaller}
+
+::: incremental
+-   Data sets can't be labeled as *wide* or *long* but they can be made *wider* or *longer* for a certain analysis that requires a certain format
+-   When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the `pivot_longer()` function.
+-   You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.
+:::
