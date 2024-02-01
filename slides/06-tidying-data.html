@@ -561,6 +561,49 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>…</p>
 </section></section>
 <section>
+<section id="data-tidying" class="title-slide slide level1 center">
+<h1>Data tidying</h1>
+
+</section>
+<section id="tidy-data" class="slide level2">
+<h2>Tidy data</h2>
+<p>…</p>
+</section>
+<section id="goal" class="slide level2">
+<h2>Goal</h2>
+
+<img data-src="https://sta199-s24.github.io/images/statsci-plot.png" class="r-stretch"></section>
+<section id="data" class="slide level2 smaller">
+<h2>Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a></a>statsci <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://sta199-s24.github.io/data/statsci.csv"</span>)</span>
+<span id="cb5-3"><a></a>statsci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 14
+  degree      `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020` `2021`
+  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1 Statistica…     NA      1     NA     NA      4      4      1     NA     NA      1      2
+2 Statistica…      2      2      4      1      3      6      3      4      4      1     NA
+3 Statistica…      2      6      1     NA      5      6      6      8      8     17     16
+4 Statistica…      5      9      4     13     10     17     24     21     26     27     35
+# ℹ 2 more variables: `2022` &lt;dbl&gt;, `2023` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li><p>The first column (variable) is the <code>degree</code>, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).</p></li>
+<li><p>The remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023.</p></li>
+</ul>
+</div>
+</section>
+<section id="think" class="slide level2">
+<h2>Think…</h2>
+<div class="question">
+<p>Take a look at the plot we aim to make and sketch the data frame we need to make the plot. Determine what each row and each column of the data frame should be. <em>Hint:</em> We need data to be in columns to map to <code>aes</code>thetic elements of the plot.</p>
+</div>
+</section></section>
+<section>
 <section id="application-exercise" class="title-slide slide level1 center">
 <h1>Application exercise</h1>
 
