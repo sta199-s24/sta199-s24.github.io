@@ -556,9 +556,234 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </tbody>
 </table>
 </section>
-<section id="recap-assignment" class="slide level2">
+<section id="recap-assignment" class="slide level2 smaller">
 <h2>Recap: assignment</h2>
-<p>…</p>
+<p>Let’s make a tiny data frame to use as an example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-2"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>))</span>
+<span id="cb5-3"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     1 a    
+2     2 a    
+3     3 b    
+4     4 c    
+5     5 c    </code></pre>
+</div>
+</div>
+</section>
+<section id="recap-assignment-1" class="slide level2 smaller">
+<h2>Recap: assignment</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something and show me</strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     2 a    
+2     4 a    
+3     6 b    
+4     8 c    
+5    10 c    </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     1 a    
+2     2 a    
+3     3 b    
+4     4 c    
+5     5 c    </code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something and save result</strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb11-3"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     2 a    
+2     4 a    
+3     6 b    
+4     8 c    
+5    10 c    </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recap-assignment-2" class="slide level2 smaller">
+<h2>Recap: assignment</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, overwriting original</strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb13-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb13-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb13-4"><a></a>)</span>
+<span id="cb13-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb13-7"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     2 a    
+2     4 a    
+3     6 b    
+4     8 c    
+5    10 c    </code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, <em>not</em> overwriting original</strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb15-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb15-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb15-4"><a></a>)</span>
+<span id="cb15-5"><a></a>df_new <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb15-6"><a></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb15-7"><a></a>df_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     2 a    
+2     4 a    
+3     6 b    
+4     8 c    
+5    10 c    </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recap-assignment-3" class="slide level2 smaller">
+<h2>Recap: assignment</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, overwriting original <em>when you shouldn’t</em></strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="5-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb17-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb17-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb17-4"><a></a>)</span>
+<span id="cb17-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb17-6"><a></a>  <span class="fu">group_by</span>(y) <span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x))</span>
+<span id="cb17-8"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  y     mean_x
+  &lt;chr&gt;  &lt;dbl&gt;
+1 a        1.5
+2 b        3  
+3 c        4.5</code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, <em>not</em> overwriting original <em>when you shouldn’t</em></strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="5-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb19-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb19-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb19-4"><a></a>)</span>
+<span id="cb19-5"><a></a>df_summary <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb19-6"><a></a>  <span class="fu">group_by</span>(y) <span class="sc">|&gt;</span></span>
+<span id="cb19-7"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_x =</span> <span class="fu">mean</span>(x))</span>
+<span id="cb19-8"><a></a>df_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  y     mean_x
+  &lt;chr&gt;  &lt;dbl&gt;
+1 a        1.5
+2 b        3  
+3 c        4.5</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recap-assignment-4" class="slide level2 smaller">
+<h2>Recap: assignment</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, overwriting original</strong><br>
+<strong><em>data frame</em></strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb21-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb21-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb21-4"><a></a>)</span>
+<span id="cb21-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb21-6"><a></a>  <span class="fu">mutate</span>(<span class="at">z =</span> x <span class="sc">+</span> <span class="dv">2</span>)</span>
+<span id="cb21-7"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+      x y         z
+  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
+1     1 a         3
+2     2 a         4
+3     3 b         5
+4     4 c         6
+5     5 c         7</code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<blockquote>
+<p><strong>Do something, save result, overwriting original</strong><br>
+<strong><em>column</em></strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb23-2"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), </span>
+<span id="cb23-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>)</span>
+<span id="cb23-4"><a></a>)</span>
+<span id="cb23-5"><a></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">mutate</span>(<span class="at">x =</span> x <span class="sc">+</span> <span class="dv">2</span>)</span>
+<span id="cb23-7"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     3 a    
+2     4 a    
+3     5 b    
+4     6 c    
+5     7 c    </code></pre>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="data-tidying" class="title-slide slide level1 center">
@@ -576,9 +801,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data" class="slide level2 smaller">
 <h2>Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-2"><a></a>statsci <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://sta199-s24.github.io/data/statsci.csv"</span>)</span>
-<span id="cb5-3"><a></a>statsci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>statsci <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://sta199-s24.github.io/data/statsci.csv"</span>)</span>
+<span id="cb25-2"><a></a>statsci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 14
   degree      `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020` `2021`

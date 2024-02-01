@@ -1313,7 +1313,35 @@
     "href": "slides/06-tidying-data.html#recap-assignment",
     "title": "Tidying data",
     "section": "Recap: assignment",
-    "text": "Recap: assignment\n…"
+    "text": "Recap: assignment\nLet’s make a tiny data frame to use as an example:\n\nlibrary(tidyverse)\ndf &lt;- tibble(x = c(1, 2, 3, 4, 5), y = c(\"a\", \"a\", \"b\", \"c\", \"c\"))\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-assignment-1",
+    "href": "slides/06-tidying-data.html#recap-assignment-1",
+    "title": "Tidying data",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-assignment-2",
+    "href": "slides/06-tidying-data.html#recap-assignment-2",
+    "title": "Tidying data",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-assignment-3",
+    "href": "slides/06-tidying-data.html#recap-assignment-3",
+    "title": "Tidying data",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+  },
+  {
+    "objectID": "slides/06-tidying-data.html#recap-assignment-4",
+    "href": "slides/06-tidying-data.html#recap-assignment-4",
+    "title": "Tidying data",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting original\ndata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\nDo something, save result, overwriting original\ncolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
   },
   {
     "objectID": "slides/06-tidying-data.html#tidy-data",
@@ -1334,7 +1362,7 @@
     "href": "slides/06-tidying-data.html#data",
     "title": "Tidying data",
     "section": "Data",
-    "text": "Data\n\nlibrary(tidyverse)\nstatsci &lt;- read_csv(\"https://sta199-s24.github.io/data/statsci.csv\")\nstatsci\n\n# A tibble: 4 × 14\n  degree      `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020` `2021`\n  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 Statistica…     NA      1     NA     NA      4      4      1     NA     NA      1      2\n2 Statistica…      2      2      4      1      3      6      3      4      4      1     NA\n3 Statistica…      2      6      1     NA      5      6      6      8      8     17     16\n4 Statistica…      5      9      4     13     10     17     24     21     26     27     35\n# ℹ 2 more variables: `2022` &lt;dbl&gt;, `2023` &lt;dbl&gt;\n\n\n\n\nThe first column (variable) is the degree, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).\nThe remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023."
+    "text": "Data\n\nstatsci &lt;- read_csv(\"https://sta199-s24.github.io/data/statsci.csv\")\nstatsci\n\n# A tibble: 4 × 14\n  degree      `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020` `2021`\n  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 Statistica…     NA      1     NA     NA      4      4      1     NA     NA      1      2\n2 Statistica…      2      2      4      1      3      6      3      4      4      1     NA\n3 Statistica…      2      6      1     NA      5      6      6      8      8     17     16\n4 Statistica…      5      9      4     13     10     17     24     21     26     27     35\n# ℹ 2 more variables: `2022` &lt;dbl&gt;, `2023` &lt;dbl&gt;\n\n\n\n\nThe first column (variable) is the degree, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).\nThe remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023."
   },
   {
     "objectID": "slides/06-tidying-data.html#think",
