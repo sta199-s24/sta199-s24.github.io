@@ -29,7 +29,7 @@ library(countdown)
 
 ## Announcements
 
-- Lab 2 due Monday, 8 am
+-   Lab 2 due Monday, 8 am
 
 # From last time: Application exercise
 
@@ -80,6 +80,40 @@ sum(1, 2)
 ## Recap: assignment
 
 ...
+
+# Data tidying
+
+## Tidy data
+
+...
+
+## Goal
+
+![](https://sta199-s24.github.io/images/statsci-plot.png)
+
+## Data {.smaller}
+
+```{r}
+#| message: false
+
+library(tidyverse)
+statsci <- read_csv("https://sta199-s24.github.io/data/statsci.csv")
+statsci
+```
+
+. . .
+
+-   The first column (variable) is the `degree`, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).
+
+-   The remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023.
+
+## Think...
+
+::: question
+Take a look at the plot we aim to make and sketch the data frame we need to make the plot.
+Determine what each row and each column of the data frame should be.
+*Hint:* We need data to be in columns to map to `aes`thetic elements of the plot.
+:::
 
 # Application exercise
 
