@@ -227,11 +227,19 @@ df
 
 # Data tidying
 
-## Tidy data
+## Tidy data 
 
-...
+> "Tidy datasets are easy to manipulate, model and visualise, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table."
+> 
+> Tidy Data, https://vita.had.co.nz/papers/tidy-data.pdf
+
+. . . 
+
+**Note:** "easy to manipulate" = "straightforward to manipulate"
 
 ## Goal
+
+Visualize StatSci majors over the years!
 
 ![](https://sta199-s24.github.io/images/statsci-plot.png)
 
@@ -250,13 +258,17 @@ statsci
 
 -   The remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2023.
 
-## Think...
+## Let's plan! {.smaller}
 
 ::: question
 Take a look at the plot we aim to make and sketch the data frame we need to make the plot.
 Determine what each row and each column of the data frame should be.
 *Hint:* We need data to be in columns to map to `aes`thetic elements of the plot.
 :::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
 
 # Application exercise
 
