@@ -111,14 +111,15 @@ country_inflation <- read_csv("data/country-inflation.csv")
 
 Get to know the data.
 
-a. `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output.
-How many rows does `country_inflation` have and what does each row represent?
-How many columns does `country_inflation` have and what does each column represent?
+a.  `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output.
+    How many rows does `country_inflation` have and what does each row represent?
+    How many columns does `country_inflation` have and what does each column represent?
 
-b. Display a list of the countries included in the dataset.
+b.  Display a list of the countries included in the dataset.
 
 ::: callout-tip
-A function that can be useful for part (b) is `pull()`. Check out its documentation for examples of usage.
+A function that can be useful for part (b) is `pull()`.
+Check out its documentation for examples of usage.
 :::
 
 ### Question 2
@@ -126,36 +127,39 @@ A function that can be useful for part (b) is `pull()`. Check out its documentat
 Which countries had the top three highest inflation rates in 2021?
 Your output should be a data frame with two columns, `country` and `2021`, with inflation rates in descending order, and three rows for the top three countries.
 Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
-    
+
 ::: callout-tip
 Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `select(`1993`)`.
 :::
 
 ### Question 3
 
-In a single pipeline, 
+In a single pipeline,
 
-- calculate the ratio of the inflation in 2021 and inflation in 1993 for each country and store this information in a new column called `inf_ratio`,
-- arrange the data frame in decreasing order of `inf_ratio`, and
-- select the variables `country` and `inf_ratio` to display as the result of the pipeline.
+-   calculate the ratio of the inflation in 2021 and inflation in 1993 for each country and store this information in a new column called `inf_ratio`,
+-   arrange the data frame in decreasing order of `inf_ratio`, and
+-   select the variables `country` and `inf_ratio` to display as the result of the pipeline.
 
 Do not save this new variable in `inf_ratio`, only calculate and display it so you can answer the following question based on the output of the pipeline.
 
-Which country's inflation change is the largest over this time period? Did inflation increase of decrease between 1993 and 2021 in this country?
+Which country's inflation change is the largest over this time period?
+Did inflation increase of decrease between 1993 and 2021 in this country?
 
 ::: callout-tip
-For this question you'll once again need to use variables whose names are numbers (years) in your pipeline. Make sure to surround the names of such variables with backticks (``` ` ```).
+For this question you'll once again need to use variables whose names are numbers (years) in your pipeline.
+Make sure to surround the names of such variables with backticks (`` ` ``).
 :::
 
 ### Question 4
 
-Reshape (pivot) `country_inflation` such that each row represents a country/year combination, with columns `country`, `year`, and `annual_inflation`. Then, display the resulting data frame and state how many rows and columns it has.
+Reshape (pivot) `country_inflation` such that each row represents a country/year combination, with columns `country`, `year`, and `annual_inflation`.
+Then, display the resulting data frame and state how many rows and columns it has.
 
 Requirements:
 
-- Your code must use one of `pivot_longer()` or `pivot_wider()`. There are other ways you can do this reshaping move in R, but this question requires solving this problem by pivoting.
-- In your `pivot_*()` function, you must use `names_transform = as.numeric` as an argument to transform the variable type to numeric as you pivot the data so that in the resulting data frame the year variable is numeric.
-- The resulting data frame must be saved as something other than `country_inflation` so you (1) can refer to this data frame later in your analysis and (2) do not overwrite `country_inflation`. Use a short but informative name.
+-   Your code must use one of `pivot_longer()` or `pivot_wider()`. There are other ways you can do this reshaping move in R, but this question requires solving this problem by pivoting.
+-   In your `pivot_*()` function, you must use `names_transform = as.numeric` as an argument to transform the variable type to numeric as you pivot the data so that in the resulting data frame the year variable is numeric.
+-   The resulting data frame must be saved as something other than `country_inflation` so you (1) can refer to this data frame later in your analysis and (2) do not overwrite `country_inflation`. Use a short but informative name.
 
 ::: callout-important
 The remaining questions in Part 1 require the use of the pivoted data frame from Question 4.
@@ -167,30 +171,53 @@ Use a separate, single pipeline to answer each of the following questions.
 
 Requirement: Your code must use the `filter()` function for each part, not `arrange()`.
 
-a. What is the highest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.
+a.  What is the highest inflation rate observed between 1993 and 2021?
+    The output of the pipeline should be a data frame with one row and three columns.
+    In addition to code and output, your response should include a single sentence stating the country and year.
 
-b. What is the lowest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.
+b.  What is the lowest inflation rate observed between 1993 and 2021?
+    The output of the pipeline should be a data frame with one row and three columns.
+    In addition to code and output, your response should include a single sentence stating the country and year.
 
-c. Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021? The output of the pipeline should be a data frame with two rows and three columns.
+c.  Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021?
+    The output of the pipeline should be a data frame with two rows and three columns.
 
 ### Question 6
 
-Create a vector called `countries_of_interest` which contains the names of countries you want to visualize the inflation rates for over the years.
-    For example, if these countries are Türkiye and United States, you can express this as follows:
+a\.
+Create a vector called `countries_of_interest` which contains the names of up tp five countries you want to visualize the inflation rates for over the years.
+For example, if these countries are Türkiye and United States, you can express this as follows:
 
 ```{r}
 countries_of_interest <- c("Türkiye", "United States")
 ```
+
+If they are Türkiye, United States, and China, you can express this as follows:
+
+```{r}
+countries_of_interest <- c(
+  "Türkiye", "United States", "China (People's Republic of)"
+)
+```
+
+So on and so forth...
+Then, in 1-2 sentences, state why you chose these countries.
 
 ::: callout-note
 Your `countries_of_interest` should consist of no more than five countries.
 Make sure that the spelling of your countries matches how they appear in the dataset.
 :::
 
+b\.
+In a single pipeline, filter your reshaped dataset to include only the `countries_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with.
+Use a short but informative name.
+
 ### Question 7
 
-In a single pipeline, filter your reshaped dataset to include only the `countries_of_interest` from the previous exercise and create a plot of annual inflation vs. year for these countries.
-    Then, in a few sentences, state why you chose these countries and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.
+Using your data frame from the previous question, create a plot of annual inflation vs. year for these countries.
+Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.
+
+Requirements for the plot:
 
 -   Data should be represented with points as well as lines connecting the points for each country.
 -   Each country should be represented by a different color line.
@@ -243,17 +270,29 @@ Add a column to the `us_inflation` dataset called `description` which has the CP
 
 ### Question 9
 
-Create a vector called `divisions_of_interest` which contains the descriptions or IDs of CPI divisions you want to visualize. Your `divisions_of_interest` should consist of no more than five divisions. If you're using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset.
+a\.
+Create a vector called `divisions_of_interest` which contains the descriptions or IDs of CPI divisions you want to visualize.
+Your `divisions_of_interest` should consist of no more than five divisions.
+If you're using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset.
+Then, in 1-2 sentences, state why you chose these divisions.
+
+::: callout-tip
+Refer back to the guidance provided in [Question 6] if you're not sure how to create this vector.
+:::
+
+b\.
+In a single pipeline, filter your reshaped dataset to include only the `divisions_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with.
+Use a short but informative name.
 
 ### Question 10
 
-In a single pipeline, filter your joined dataset to include only the `divisions_of_interest` from the previous exercise and create a plot of annual inflation vs. year for these divisions. Then, in a few sentences, state why you chose these divisions and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.
+Using your data frame from the previous question, create a plot of annual inflation vs. year for these divisions.
+Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.
 
 -   Data should be represented with points as well as lines connecting the points for each division.
 -   Each division should be represented by a different color.
 -   Axes and legend should be properly labeled.
--   If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically.
-    *Hint:* The `legend.position` and `legend.direction` arguments of the `theme()` functions will be useful.
+-   If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. *Hint:* The `legend.position` and `legend.direction` arguments of the `theme()` functions will be useful.
 
 ```{r}
 ggplot(...) +
@@ -309,7 +348,7 @@ Make sure you have:
 
 The lab is graded out of a total of 50 points.
 
-On Questions 1 through 9, you can earn up to 5 points on each question:
+You can earn up to 5 points on each question:
 
 -   5: Response shows excellent understanding and addresses all or almost all of the rubric items.
 
@@ -322,8 +361,3 @@ On Questions 1 through 9, you can earn up to 5 points on each question:
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
 
 -   0: No attempt.
-
-On Question 10, you can earn either 0 or 5 points for selecting questions and pages on Gradescope:
-
--   5: Selected questions and pages on Gradescope.
--   0: Did not select some or all questions and pages on Gradescope.
