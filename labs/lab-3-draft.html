@@ -382,7 +382,8 @@ window.Quarto = {
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
   </ul></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul class="collapse">
   <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
@@ -391,11 +392,14 @@ window.Quarto = {
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
   <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
   </ul></li>
   <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
   <ul class="collapse">
-  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
   <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a>
   <ul class="collapse">
@@ -541,9 +545,8 @@ Note
 </section>
 <section id="questions" class="level1">
 <h1>Questions</h1>
-</section>
-<section id="part-1" class="level1">
-<h1>Part 1</h1>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
 <p><strong>Inflation across the world</strong></p>
 <p>For this part of the analysis you will work with inflation data from various countries in the world over the last 30 years.</p>
 <div class="cell">
@@ -551,7 +554,24 @@ Note
 </div>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p><code>glimpse()</code> at the <code>country_inflation</code> data frame and answer the following questions based on the output. How many rows does <code>country_inflation</code> have and what does each row represent? How many columns does <code>country_inflation</code> have and what does each column represent? What do the numeric values in the data frame represent?</p>
+<p>Get to know the data.</p>
+<ol type="a">
+<li><p><code>glimpse()</code> at the <code>country_inflation</code> data frame and answer the following questions based on the output. How many rows does <code>country_inflation</code> have and what does each row represent? How many columns does <code>country_inflation</code> have and what does each column represent?</p></li>
+<li><p>Display a list of the countries included in the dataset.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A function that can be useful for part (b) is <code>pull()</code>. Check out its documentation for examples of usage.</p>
+</div>
+</div>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
@@ -572,59 +592,97 @@ Tip
 </section>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Calculate the difference between 2021 inflation rates and 1993 inflation rates. Which country’s inflation change is the largest over this time period?</p>
+<p>In a single pipeline,</p>
+<ul>
+<li>calculate the ratio of the inflation in 2021 and inflation in 1993 for each country and store this information in a new column called <code>inf_ratio</code>,</li>
+<li>arrange the data frame in decreasing order of <code>inf_ratio</code>, and</li>
+<li>select the variables <code>country</code> and <code>inf_ratio</code> to display as the result of the pipeline.</li>
+</ul>
+<p>Do not save this new variable in <code>inf_ratio</code>, only calculate and display it so you can answer the following question based on the output of the pipeline.</p>
+<p>Which country’s inflation change is the largest over this time period? Did inflation increase of decrease between 1993 and 2021 in this country?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For this question you’ll once again need to use variables whose names are numbers (years) in your pipeline. Make sure to surround the names of such variables with backticks (<code>`</code>).</p>
+</div>
+</div>
 </section>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
-<p>Reshape (pivot) <code>country_inflation</code> such that each row represents a country/year combination, with columns <code>country</code>, <code>year</code>, and <code>annual_inflation</code>. Make sure that <code>annual_inflation</code> is a numeric variable. Save the result as a new data frame – you should give it a concise and informative name.</p>
+<p>Reshape (pivot) <code>country_inflation</code> such that each row represents a country/year combination, with columns <code>country</code>, <code>year</code>, and <code>annual_inflation</code>. Then, display the resulting data frame and state how many rows and columns it has.</p>
+<p>Requirements:</p>
+<ul>
+<li>Your code must use one of <code>pivot_longer()</code> or <code>pivot_wider()</code>. There are other ways you can do this reshaping move in R, but this question requires solving this problem by pivoting.</li>
+<li>In your <code>pivot_*()</code> function, you must use <code>names_transform = as.numeric</code> as an argument to transform the variable type to numeric as you pivot the data so that in the resulting data frame the year variable is numeric.</li>
+<li>The resulting data frame must be saved as something other than <code>country_inflation</code> so you (1) can refer to this data frame later in your analysis and (2) do not overwrite <code>country_inflation</code>. Use a short but informative name.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The remaining questions in Part 1 require the use of the pivoted data frame from Question 4.</p>
+</div>
+</div>
 </section>
 <section id="question-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
-<p>Create a vector called <code>countries_of_interest</code> which contains the names of countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:</p>
-<pre><code>::: {.cell}
-
-```{.r .cell-code}
-countries_of_interest &lt;- c("Türkiye", "United States")
-```
-:::
-
-
-::: callout-note
-Your `countries_of_interest` should consist of no more than five countries.
-Make sure that the spelling of your countries matches how they appear in the dataset.
-:::</code></pre>
+<p>Use a separate, single pipeline to answer each of the following questions.</p>
+<p>Requirement: Your code must use the <code>filter()</code> function for each part, not <code>arrange()</code>.</p>
+<ol type="a">
+<li><p>What is the highest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.</p></li>
+<li><p>What is the lowest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.</p></li>
+<li><p>Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021? The output of the pipeline should be a data frame with two rows and three columns.</p></li>
+</ol>
 </section>
 <section id="question-6" class="level3">
 <h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Create a vector called <code>countries_of_interest</code> which contains the names of countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>countries_of_interest <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Türkiye"</span>, <span class="st">"United States"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your <code>countries_of_interest</code> should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.</p>
+</div>
+</div>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
 <p>In a single pipeline, filter your reshaped dataset to include only the <code>countries_of_interest</code> from the previous exercise and create a plot of annual inflation vs.&nbsp;year for these countries. Then, in a few sentences, state why you chose these countries and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.</p>
-<pre><code>-   Data should be represented with points as well as lines connecting the points for each country.
-
--   Each country should be represented by a different color line.
-
--   Axes and legend should be properly labeled.
-
--   The plot should have an appropriate title (and optionally a subtitle).
-
--   Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25).
-    *Hint:* The `label_percent()` function from the scales package will be useful.
-
-
-    ::: {.cell}
-    
-    ```{.r .cell-code}
-    ggplot(...) +
-      ... +
-      scale_y_continuous(labels = label_percent(scale = 1))
-    ```
-    :::</code></pre>
+<ul>
+<li>Data should be represented with points as well as lines connecting the points for each country.</li>
+<li>Each country should be represented by a different color line.</li>
+<li>Axes and legend should be properly labeled.</li>
+<li>The plot should have an appropriate title (and optionally a subtitle).</li>
+</ul>
 <div class="render-commit-push">
 <p>If you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
-<p><br></p>
 </div>
 </section>
 </section>
-<section id="part-2" class="level1">
-<h1>Part 2</h1>
+<section id="part-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
 <p><strong>Inflation in the US</strong></p>
 <p>The OECD defines inflation as follows:</p>
 <blockquote class="blockquote">
@@ -640,49 +698,46 @@ Make sure that the spelling of your countries matches how they appear in the dat
 </ul>
 <p>Let’s load both of these files.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>us_inflation <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/us-inflation.csv"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cpi_divisions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/cpi-divisions.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>us_inflation <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/us-inflation.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>cpi_divisions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/cpi-divisions.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="question-7" class="level3">
-<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
-<p>Add a column to the <code>us_inflation</code> dataset called <code>description</code> which has the CPI division description that matches the <code>cpi_division_id</code>, by joining the two datasets. - Determine which type of join is the most appropriate one and use that.</p>
-<pre><code>-   Note that the two datasets don't have a common variable.
-    Review the help for the join functions to determine how to use the `by` argument when the names of the variables that the datasets should be joined by are different.</code></pre>
-<ol start="6" type="1">
-<li>Create a vector called <code>divisions_of_interest</code> which contains the descriptions or IDs of CPI divisions you want to visualize. Your <code>divisions_of_interest</code> should consist of no more than five divisions. If you’re using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset.</li>
-</ol>
-</section>
 <section id="question-8" class="level3">
 <h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
-<p>In a single pipeline, filter your joined dataset to include only the <code>divisions_of_interest</code> from the previous exercise and create a plot of annual inflation vs.&nbsp;year for these divisions. Then, in a few sentences, state why you chose these divisions and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade. - Data should be represented with points as well as lines connecting the points for each division.</p>
-<pre><code>-   Each division should be represented by a different color.
-
--   Axes and legend should be properly labeled.
-
--   If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically.
-    *Hint:* The `legend.position` and `legend.direction` arguments of the `theme()` functions will be useful.
-
-
-    ::: {.cell}
-    
-    ```{.r .cell-code}
-    ggplot(...) +
-      ... +
-      theme(
-        legend.position = "bottom", 
-        legend.direction = "vertical"
-      )
-    ```
-    :::
-
-
--   The plot should have an appropriate title (and optionally a subtitle).
-
--   Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25).</code></pre>
+<p>Add a column to the <code>us_inflation</code> dataset called <code>description</code> which has the CPI division description that matches the <code>cpi_division_id</code>, by joining the two datasets.</p>
+<ul>
+<li><p>Determine which type of join is the most appropriate one and use that.</p></li>
+<li><p>Note that the two datasets don’t have a common variable. Review the help for the join functions to determine how to use the <code>by</code> argument when the names of the variables that the datasets should be joined by are different.</p></li>
+</ul>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Create a vector called <code>divisions_of_interest</code> which contains the descriptions or IDs of CPI divisions you want to visualize. Your <code>divisions_of_interest</code> should consist of no more than five divisions. If you’re using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset.</p>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>In a single pipeline, filter your joined dataset to include only the <code>divisions_of_interest</code> from the previous exercise and create a plot of annual inflation vs.&nbsp;year for these divisions. Then, in a few sentences, state why you chose these divisions and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.</p>
+<ul>
+<li>Data should be represented with points as well as lines connecting the points for each division.</li>
+<li>Each division should be represented by a different color.</li>
+<li>Axes and legend should be properly labeled.</li>
+<li>If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. <em>Hint:</em> The <code>legend.position</code> and <code>legend.direction</code> arguments of the <code>theme()</code> functions will be useful.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(...) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  ... <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.direction =</span> <span class="st">"vertical"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>The plot should have an appropriate title (and optionally a subtitle).</li>
+<li>Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25).</li>
+</ul>
 <div class="render-commit-push">
 <p>If you haven’t yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
-<p><br></p>
 </div>
+</section>
 </section>
 </section>
 <section id="wrap-up" class="level1">
