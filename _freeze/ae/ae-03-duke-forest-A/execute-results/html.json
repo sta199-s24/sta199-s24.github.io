@@ -1,0 +1,17 @@
+{
+  "hash": "c74b747924beb9b831fcc82c909234f9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AE 03 - Duke Forest\"\nsubtitle: \"Suggested answers\"\ncategories: \n  - Application exercise\n  - Answers\n---\n\n\n::: callout-important\nThese are suggested answers.\nThis document should be used as reference only, it's not designed to be an exhaustive key.\n:::\n\n# Packages\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(openintro)\n```\n:::\n\n\n# Exercise 1\n\nThe distributions of prices of houses with and without garages are fairly similar, with centers around \\$600,000.\nEach distribution has potential outliers on the higher end.\nBased on this visualization, having a garage does not appear to \"make a difference\".\n\n\n::: {.cell}\n\n```{.r .cell-code}\nduke_forest |>\n  mutate(garage = if_else(str_detect(parking, \"Garage\"), \"Garage\", \"No garage\")) |>\n  ggplot(aes(x = price, fill = garage)) +\n  geom_histogram() +\n  facet_wrap(~garage, ncol = 1) +\n  labs(\n    x = \"Price in $\",\n    y = \"\",\n    title = \"Histogram of Price of Homes by Garage or not\",\n    fill = \"Garage or not\"\n  )\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](ae-03-duke-forest-A_files/figure-html/price-garage-1.png){width=672}\n:::\n:::\n\n\n# Exercise 2\n\n-   Claim 1: Yes, there seems to be evidence of a positive relationship between the price of the home and the area of the home.\n-   Claim 2: No, there does not seem to be a relationship between the price and age of the home.\n-   Claim 3: No, there does not seem to be any evidence to suggest that larger more expensive homes are newer than those houses that are cheaper and smaller. Points that are lighter colored (newer homes) are not concentrated on the top right of the plot.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(\n  duke_forest,\n  aes(x = area, y = price, color = year_built)\n) +\n  geom_point(size = 3) +\n  geom_smooth(se = FALSE) +\n  labs(\n    x = \"Area of Home\",\n    y = \"Price of Home\",\n    title = \"Relationship between Price and Area by Year Built\",\n    color = \"Year Built\"\n  )\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: The following aesthetics were dropped during statistical transformation: colour\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](ae-03-duke-forest-A_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "ae-03-duke-forest-A_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

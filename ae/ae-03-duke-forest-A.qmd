@@ -1,0 +1,68 @@
+---
+title: "AE 03 - Duke Forest"
+subtitle: "Suggested answers"
+categories: 
+  - Application exercise
+  - Answers
+---
+
+::: callout-important
+These are suggested answers.
+This document should be used as reference only, it's not designed to be an exhaustive key.
+:::
+
+# Packages
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(openintro)
+```
+
+# Exercise 1
+
+The distributions of prices of houses with and without garages are fairly similar, with centers around \$600,000.
+Each distribution has potential outliers on the higher end.
+Based on this visualization, having a garage does not appear to "make a difference".
+
+```{r}
+#| label: price-garage
+ 
+duke_forest |>
+  mutate(garage = if_else(str_detect(parking, "Garage"), "Garage", "No garage")) |>
+  ggplot(aes(x = price, fill = garage)) +
+  geom_histogram() +
+  facet_wrap(~garage, ncol = 1) +
+  labs(
+    x = "Price in $",
+    y = "",
+    title = "Histogram of Price of Homes by Garage or not",
+    fill = "Garage or not"
+  )
+```
+
+# Exercise 2
+
+-   Claim 1: Yes, there seems to be evidence of a positive relationship between the price of the home and the area of the home.
+-   Claim 2: No, there does not seem to be a relationship between the price and age of the home.
+-   Claim 3: No, there does not seem to be any evidence to suggest that larger more expensive homes are newer than those houses that are cheaper and smaller. Points that are lighter colored (newer homes) are not concentrated on the top right of the plot.
+
+```{r}
+#| fig-height: 4
+#| fig-width: 7
+
+ggplot(
+  duke_forest,
+  aes(x = area, y = price, color = year_built)
+) +
+  geom_point(size = 3) +
+  geom_smooth(se = FALSE) +
+  labs(
+    x = "Area of Home",
+    y = "Price of Home",
+    title = "Relationship between Price and Area by Year Built",
+    color = "Year Built"
+  )
+```
