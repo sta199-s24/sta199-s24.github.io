@@ -1,11 +1,11 @@
 ---
-title: "Lab 3 - Exploratory data analysis"
+title: "Lab 3 - Data tidying and joining"
 categories: "Lab"
 ---
 
 # Introduction
 
-In this lab you'll build the data wrangling and visualization skills you've developed so far and data tidying to your repertoire.
+In this lab you'll build the data wrangling and visualization skills you've developed so far and data tidying and joining to your repertoire.
 
 ::: callout-note
 This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs.
