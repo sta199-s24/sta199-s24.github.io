@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: fd19f288-029b-46cf-8de6-2ffc711e918a
+      url: 'https://mine.quarto.pub/sta-199'
