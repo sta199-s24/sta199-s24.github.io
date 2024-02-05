@@ -129,7 +129,7 @@ Your output should be a data frame with two columns, `country` and `2021`, with 
 Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
 
 ::: callout-tip
-Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `select(`1993`)`.
+Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `select(` `` ` `` `1993` `` ` `` `)`.
 :::
 
 ### Question 3
