@@ -1047,144 +1047,111 @@
   {
     "objectID": "labs/lab-3.html",
     "href": "labs/lab-3.html",
-    "title": "Lab 3 - TBA",
+    "title": "Lab 3 - Data tidying and joining",
     "section": "",
-    "text": "To be posted.",
+    "text": "In this lab you’ll build the data wrangling and visualization skills you’ve developed so far and data tidying and joining to your repertoire.\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.\n\n\n\n\nBy the end of the lab, you will…\n\nBe able to pivot/reshape data using tidyr\nContinue developing your data wrangling skills using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\n\n\n\nLog in to RStudio, clone your lab-3 repo from GitHub, open your lab-3.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-3.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-3.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
     "crumbs": [
       "Labs",
       "Lab 3"
     ]
   },
   {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - TBA",
+    "objectID": "labs/lab-3.html#learning-objectives",
+    "href": "labs/lab-3.html#learning-objectives",
+    "title": "Lab 3 - Data tidying and joining",
     "section": "",
-    "text": "To be posted.",
+    "text": "By the end of the lab, you will…\n\nBe able to pivot/reshape data using tidyr\nContinue developing your data wrangling skills using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub",
     "crumbs": [
       "Labs",
-      "Lab 4"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "computing-cheatsheets.html",
-    "href": "computing-cheatsheets.html",
-    "title": "R cheatsheets",
+    "objectID": "labs/lab-3.html#getting-started",
+    "href": "labs/lab-3.html#getting-started",
+    "title": "Lab 3 - Data tidying and joining",
     "section": "",
-    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "text": "Log in to RStudio, clone your lab-3 repo from GitHub, open your lab-3.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-3.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-3.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.",
     "crumbs": [
-      "Computing",
-      "Cheatsheets"
+      "Labs",
+      "Lab 3"
     ]
   },
   {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
+    "objectID": "labs/lab-3.html#packages",
+    "href": "labs/lab-3.html#packages",
+    "title": "Lab 3 - Data tidying and joining",
     "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
+    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.",
     "crumbs": [
-      "Course information",
-      "Support"
+      "Labs",
+      "Lab 3"
     ]
   },
   {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#office-hours",
-    "href": "course-support.html#office-hours",
-    "title": "Course support",
-    "section": "Office hours",
-    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#ed-discussion",
-    "href": "course-support.html#ed-discussion",
-    "title": "Course support",
-    "section": "Ed Discussion",
-    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course discussion forum, Ed Discussion, is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Ed Discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#academic-support",
-    "href": "course-support.html#academic-support",
-    "title": "Course support",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#mental-health-and-wellness",
-    "href": "course-support.html#mental-health-and-wellness",
-    "title": "Course support",
-    "section": "Mental health and wellness",
-    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times.  Duke encourages all students to access these resources.\n\nCAPS: Duke Counseling & Pyschological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nDuWell: (919) 681-8421, provides Moments of Mindfulness (stress management and resilience building) and meditation programming to assist students in developing a daily emotional well-being practice. To see schedules for programs please see https://studentaffairs.duke.edu/duwell. All are welcome and no experience necessary.\nDukeReach: Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance: http://studentaffairs.duke.edu/dukereach.\nTimelyCare: (formerly known as Blue Devils Care) An online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling: https://bluedevilscare.duke.edu.\nTwo-Click Support: Duke Student Government and DukeReach partnership that connects students to help in just two clicks: https://bit.ly/TwoClickSupport.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#course-costs",
-    "href": "course-support.html#course-costs",
-    "title": "Course support",
-    "section": "Course costs",
-    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.\nDukeLIFE offers course materials assistance for eligible students. Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
-    "href": "course-support.html#assistance-with-zoom-or-canvas",
-    "title": "Course support",
-    "section": "Assistance with Zoom or Canvas",
-    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub and conversation on Ed Discussion.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
+    "objectID": "labs/lab-3.html#guidelines",
+    "href": "labs/lab-3.html#guidelines",
+    "title": "Lab 3 - Data tidying and joining",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02  ✅ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1  ✅ lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)  ✅ ae 02\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n🖥️ slides 04  ⌨️ ae 03  ✅ ae 03\n\n\n\n\n4\nMon, Jan 29\n🎥 Grammar of data wrangling  📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n🎥 Working with a single data frame  📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n🖥️ slides 05  ⌨️ ae 04  ✅ ae 04\n\n\n\n\n\n\nThu, Feb 1\n🎥 Tidying data  📗 r4ds - chp 5\nTidying data\n🖥️ slides 06  ⌨️ ae 05  ✅ ae 05\n\n\n\n\n5\nMon, Feb 5\n🎥 Working with multiple data frames\nLab 3: Data tidying and joining\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n🎥 Data types  🎥 Data classes  📗 r4ds - chp 16\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
+    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.",
     "crumbs": [
-      "Course information",
-      "Schedule"
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#part-1",
+    "href": "labs/lab-3.html#part-1",
+    "title": "Lab 3 - Data tidying and joining",
+    "section": "Part 1",
+    "text": "Part 1\nInflation across the world\nFor this part of the analysis you will work with inflation data from various countries in the world over the last 30 years.\n\ncountry_inflation &lt;- read_csv(\"data/country-inflation.csv\")\n\n\nQuestion 1\nGet to know the data.\n\nglimpse() at the country_inflation data frame and answer the following questions based on the output. How many rows does country_inflation have and what does each row represent? How many columns does country_inflation have and what does each column represent?\nDisplay a list of the countries included in the dataset.\n\n\n\n\n\n\n\nTip\n\n\n\nA function that can be useful for part (b) is pull(). Check out its documentation for examples of usage.\n\n\n\n\nQuestion 2\nWhich countries had the top three highest inflation rates in 2021? Your output should be a data frame with two columns, country and 2021, with inflation rates in descending order, and three rows for the top three countries. Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.\n\n\n\n\n\n\nTip\n\n\n\nColumn names that are numbers are not considered “proper” in R, therefore to select them you’ll need to surround them with backticks, e.g. select(1993).\n\n\n\n\nQuestion 3\nIn a single pipeline,\n\ncalculate the ratio of the inflation in 2021 and inflation in 1993 for each country and store this information in a new column called inf_ratio,\narrange the data frame in decreasing order of inf_ratio, and\nselect the variables country and inf_ratio to display as the result of the pipeline.\n\nDo not save this new variable in inf_ratio, only calculate and display it so you can answer the following question based on the output of the pipeline.\nWhich country’s inflation change is the largest over this time period? Did inflation increase of decrease between 1993 and 2021 in this country?\n\n\n\n\n\n\nTip\n\n\n\nFor this question you’ll once again need to use variables whose names are numbers (years) in your pipeline. Make sure to surround the names of such variables with backticks (`).\n\n\n\n\nQuestion 4\nReshape (pivot) country_inflation such that each row represents a country/year combination, with columns country, year, and annual_inflation. Then, display the resulting data frame and state how many rows and columns it has.\nRequirements:\n\nYour code must use one of pivot_longer() or pivot_wider(). There are other ways you can do this reshaping move in R, but this question requires solving this problem by pivoting.\nIn your pivot_*() function, you must use names_transform = as.numeric as an argument to transform the variable type to numeric as you pivot the data so that in the resulting data frame the year variable is numeric.\nThe resulting data frame must be saved as something other than country_inflation so you (1) can refer to this data frame later in your analysis and (2) do not overwrite country_inflation. Use a short but informative name.\n\n\n\n\n\n\n\nImportant\n\n\n\nThe remaining questions in Part 1 require the use of the pivoted data frame from Question 4.\n\n\n\n\nQuestion 5\nUse a separate, single pipeline to answer each of the following questions.\nRequirement: Your code must use the filter() function for each part, not arrange().\n\nWhat is the highest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.\nWhat is the lowest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.\nPutting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021? The output of the pipeline should be a data frame with two rows and three columns.\n\n\n\nQuestion 6\na. Create a vector called countries_of_interest which contains the names of up tp five countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:\n\ncountries_of_interest &lt;- c(\"Türkiye\", \"United States\")\n\nIf they are Türkiye, United States, and China, you can express this as follows:\n\ncountries_of_interest &lt;- c(\n  \"Türkiye\", \"United States\", \"China (People's Republic of)\"\n)\n\nSo on and so forth… Then, in 1-2 sentences, state why you chose these countries.\n\n\n\n\n\n\nNote\n\n\n\nYour countries_of_interest should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.\n\n\nb. In a single pipeline, filter your reshaped dataset to include only the countries_of_interest from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you’re starting with. Use a short but informative name. Then, find the distinct() countries in the data frame you created.\n\n\n\n\n\n\nTip\n\n\n\nThe number of distinct countries in the filtered data frame you created in part (b) should equal the number of countries you chose in part (a). If it doesn’t, you might have misspelled a country name or made a mistake in how to filter for these countries. Go back and check your code.\n\n\n\n\nQuestion 7\nUsing your data frame from the previous question, create a plot of annual inflation vs. year for these countries. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.\nRequirements for the plot:\n\nData should be represented with points as well as lines connecting the points for each country.\nEach country should be represented by a different color line and different color and shape points.\nAxes and legend should be properly labeled.\nThe plot should have an appropriate title (and optionally a subtitle).\nPlot should be customized in at least one way – you could use a different than default color scale, or different than default theme, or some other customization.\n\n\nIf you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#part-2",
+    "href": "labs/lab-3.html#part-2",
+    "title": "Lab 3 - Data tidying and joining",
+    "section": "Part 2",
+    "text": "Part 2\nInflation in the US\nThe OECD defines inflation as follows:\n\nInflation is a rise in the general level of prices of goods and services that households acquire for the purpose of consumption in an economy over a period of time.\nThe main measure of inflation is the annual inflation rate which is the movement of the Consumer Price Index (CPI) from one month/period to the same month/period of the previous year expressed as percentage over time.\nSource: OECD CPI FAQ\n\nCPI is broken down into 12 divisions such as food, housing, health, etc. Your goal in this part is to create another time series plot of annual inflation, this time for US only.\nThe data you will need to create this visualization is spread across two files:\n\nus-inflation.csv: Annual inflation rate for the US for 12 CPI divisions. Each division is identified by an ID number.\ncpi-divisions.csv: A “lookup table” of CPI division ID numbers and their descriptions.\n\nLet’s load both of these files.\n\nus_inflation &lt;- read_csv(\"data/us-inflation.csv\")\ncpi_divisions &lt;- read_csv(\"data/cpi-divisions.csv\")\n\n\nQuestion 8\na. How many columns and how many rows does the us_inflation dataset have? What are the variables in it? Add a brief (1-2 sentences) narrative summarizing this information.\nb. How many columns and how many rows does the cpi_divisions dataset have? What are the variables in it? Add a brief (1-2 sentences) narrative summarizing this information.\nc. Create a new dataset by joining the us_inflation dataset with the cpi_division_id dataset.\n\nDetermine which type of join is the most appropriate one and use that.\nNote that the two datasets don’t have a common variable. Review the help for the join functions to determine how to use the by argument when the names of the variables that the datasets should be joined by are different.\nUse a short but informative name for the joined dataset, and do not overwrite either of the datasets that go into creating it.\n\nThen, find the number of rows and columns of the resulting dataset and report the names of its columns. Add a brief (1-2 sentences) narrative summarizing this information.\n\n\nQuestion 9\na. Create a vector called divisions_of_interest which contains the descriptions or IDs of CPI divisions you want to visualize. Your divisions_of_interest should consist of no more than five divisions. If you’re using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset. Then, in 1-2 sentences, state why you chose these divisions.\n\n\n\n\n\n\nTip\n\n\n\nRefer back to the guidance provided in Question 6 if you’re not sure how to create this vector.\n\n\nb. In a single pipeline, filter your reshaped dataset to include only the divisions_of_interest from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you’re starting with. Use a short but informative name. Then, find the distinct() countries in the data frame you created.\n\n\nQuestion 10\nUsing your data frame from the previous question, create a plot of annual inflation vs. year for these divisions. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.\n\nData should be represented with points as well as lines connecting the points for each division.\nEach division should be represented by a different color line and different color and shape points.\nAxes and legend should be properly labeled.\nThe plot should have an appropriate title (and optionally a subtitle).\nPlot should be customized in at least one way – you could use a different than default color scale, or different than default theme, or some other customization.\nIf your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. Hint: The legend.position and legend.direction arguments of the theme() functions will be useful.\n\n\nggplot(...) +\n  ... +\n  theme(\n    legend.position = \"bottom\", \n    legend.direction = \"vertical\"\n  )\n\n\nIf you haven’t yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#submission",
+    "href": "labs/lab-3.html#submission",
+    "title": "Lab 3 - Data tidying and joining",
+    "section": "Submission",
+    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#grading",
+    "href": "labs/lab-3.html#grading",
+    "title": "Lab 3 - Data tidying and joining",
+    "section": "Grading",
+    "text": "Grading\nThe lab is graded out of a total of 50 points.\nYou can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#footnotes",
+    "href": "labs/lab-3.html#footnotes",
+    "title": "Lab 3 - Data tidying and joining",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
     ]
   },
   {
@@ -1298,74 +1265,136 @@
     ]
   },
   {
-    "objectID": "labs/lab-3-draft.html",
-    "href": "labs/lab-3-draft.html",
-    "title": "Lab 3 - Data tidying and joining",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "In this lab you’ll build the data wrangling and visualization skills you’ve developed so far and data tidying and joining to your repertoire.\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.\n\n\n\n\nBy the end of the lab, you will…\n\nBe able to pivot/reshape data using tidyr\nContinue developing your data wrangling skills using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\n\n\n\nLog in to RStudio, clone your lab-3 repo from GitHub, open your lab-3.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-3.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-3.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\n\n\nIn this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function.\n\n\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nWed, Jan 10\n\n\nLab 0: Hello, World and STA 199!\n💻 lab 0\n\n\n\n\n\n\nThu, Jan 11\n\n\nWelcome to STA 199\n🖥️ slides 00  ⌨️ ae 00\n\n\n\n\n2\nMon, Jan 15\n\n\nNo lab - Martin Luther King Jr. Day holiday\n\n\n\n\n\n\n\n\nTue, Jan 16\n📗 r4ds - intro  📘 ims - chp 1\nMeet the toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n\n\n\n\n\nThu, Jan 18\n📗 r4ds - chp 1  🎥 Data and visualization  🎥 Visualising data with ggplot2\nGrammar of graphics\n🖥️ slides 02  ⌨️ ae 02  ✅ ae 02\n\n\n\n\n3\nMon, Jan 22\n📗 r4ds - chp 2\nLab 1: Data visualization\n💻 lab 1  ✅ lab 1\n\n\n\n\n\n\nTue, Jan 23\n📘 ims - chp 4  📘 ims - chp 5  🎥 Visualizing numerical data  🎥 Visualizing categorical data\nVisualizing various types of data\n🖥️ slides 03  ⌨️ ae 02 (cont.)  ✅ ae 02\n\n\n\n\n\n\nThu, Jan 25\n📘 ims - chp 6\nData visualization overview\n🖥️ slides 04  ⌨️ ae 03  ✅ ae 03\n\n\n\n\n4\nMon, Jan 29\n🎥 Grammar of data wrangling  📗 r4ds - chp 3.1-3.5\nLab 2: Data wrangling\n💻 lab 2\nLab 1 at 8 am\n\n\n\n\nTue, Jan 30\n🎥 Working with a single data frame  📗 r4ds - chp 3.6-3.7  📗 r4ds - chp 4\nGrammar of data wrangling\n🖥️ slides 05  ⌨️ ae 04  ✅ ae 04\n\n\n\n\n\n\nThu, Feb 1\n🎥 Tidying data  📗 r4ds - chp 5\nTidying data\n🖥️ slides 06  ⌨️ ae 05  ✅ ae 05\n\n\n\n\n5\nMon, Feb 5\n🎥 Working with multiple data frames\nLab 3: Data tidying and joining\n💻 lab 3\nLab 2 at 8 am\n\n\n\n\nTue, Feb 6\n📗 r4ds - chp 19.1-19.3\nWorking with multiple data frames\n\n\n\n\n\n\n\n\nThu, Feb 8\n🎥 Data types  🎥 Data classes  📗 r4ds - chp 16\nData types and classes\n\n\n\n\n\n\n6\nMon, Feb 12\n\n\nWork on Exam 1 Review\n\n\nLab 3 at 8 am\n\n\n\n\nTue, Feb 13\n\n\nImporting and recoding data\n\n\n\n\n\n\n\n\nThu, Feb 15\n\n\nExam 1 - In-class + take-home released\n\n\n\n\n\n\n7\nMon, Feb 19\n\n\nProject milestone 1 - Working collaboratively\n\n\nExam 1 take-home at 8 am\n\n\n\n\nTue, Feb 20\n\n\nWeb scraping\n\n\n\n\n\n\n\n\nThu, Feb 22\n\n\nFunctions + iteration\n\n\n\n\n\n\n8\nMon, Feb 26\n\n\nLab 4: Topic TBA\n💻 lab 4\nProject milestone 1 at 8 am\n\n\n\n\nTue, Feb 27\n\n\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\nThu, Feb 29\n\n\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n9\nMon, Mar 4\n\n\nLab 5: Topic TBA\n💻 lab 5\nLab 4 at 8 am\n\n\n\n\nTue, Mar 5\n\n\nThe language of models\n\n\n\n\n\n\n\n\nThu, Mar 7\n\n\nLinear regression with a single predictor\n\n\n\n\n\n\n10\nMon, Mar 11\n\n\n🌴 No lab - Spring Break\n\n\n\n\n\n\n\n\nTue, Mar 12\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n\n\nThu, Mar 14\n\n\n🌴 No lecture - Spring Break\n\n\n\n\n\n\n11\nMon, Mar 18\n\n\nProject milestone 2 - Project proposals\n\n\nLab 5 at 8 am\n\n\n\n\nTue, Mar 19\n\n\nLinear regression with multiple predictors\n\n\n\n\n\n\n\n\nThu, Mar 21\n\n\nOverfitting and other concerns\n\n\n\n\n\n\n12\nMon, Mar 25\n\n\nLab 6: Topic TBA\n💻 lab 6\nProject milestone 2 at 8 am\n\n\n\n\nTue, Mar 26\n\n\nLogistic regression\n\n\n\n\n\n\n\n\nThu, Mar 28\n\n\nModeling overview\n\n\n\n\n\n\n13\nMon, Apr 1\n\n\nLab 7: Topic TBA\n💻 lab 7\nLab 6 at 8 am\n\n\n\n\nTue, Apr 2\n\n\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\nThu, Apr 4\n\n\nMaking decisions with randomization tests\n\n\n\n\n\n\n14\nMon, Apr 8\n\n\nWork on Exam 2 Review\n\n\nLab 7 at 8 am\n\n\n\n\nTue, Apr 9\n\n\nInference overview\n\n\n\n\n\n\n\n\nThu, Apr 11\n\n\nExam 2 - In-class + take-home released\n\n\n\n\n\n\n15\nMon, Apr 15\n\n\nProject milestone 3 - Peer review\n\n\nExam 2 take-home at 8 am  Project milestone 3 at the end of lab session\n\n\n\n\nTue, Apr 16\n\n\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\nThu, Apr 18\n\n\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n16\nMon, Apr 22\n\n\nProject milestone 4 - Project presentations\n\n\nProject presentations + writeup at the beginning of lab session\n\n\n\n\nTue, Apr 23\n\n\nLooking further: Topic TBA",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
   },
   {
-    "objectID": "labs/lab-3-draft.html#learning-objectives",
-    "href": "labs/lab-3-draft.html#learning-objectives",
-    "title": "Lab 3 - Data tidying and joining",
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
     "section": "",
-    "text": "By the end of the lab, you will…\n\nBe able to pivot/reshape data using tidyr\nContinue developing your data wrangling skills using dplyr\nBuild on your mastery of data visualizations using ggplot2\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub"
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
   },
   {
-    "objectID": "labs/lab-3-draft.html#getting-started",
-    "href": "labs/lab-3-draft.html#getting-started",
-    "title": "Lab 3 - Data tidying and joining",
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#ed-discussion",
+    "href": "course-support.html#ed-discussion",
+    "title": "Course support",
+    "section": "Ed Discussion",
+    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course discussion forum, Ed Discussion, is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Ed Discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times.  Duke encourages all students to access these resources.\n\nCAPS: Duke Counseling & Pyschological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nDuWell: (919) 681-8421, provides Moments of Mindfulness (stress management and resilience building) and meditation programming to assist students in developing a daily emotional well-being practice. To see schedules for programs please see https://studentaffairs.duke.edu/duwell. All are welcome and no experience necessary.\nDukeReach: Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance: http://studentaffairs.duke.edu/dukereach.\nTimelyCare: (formerly known as Blue Devils Care) An online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling: https://bluedevilscare.duke.edu.\nTwo-Click Support: Duke Student Government and DukeReach partnership that connects students to help in just two clicks: https://bit.ly/TwoClickSupport.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#course-costs",
+    "href": "course-support.html#course-costs",
+    "title": "Course support",
+    "section": "Course costs",
+    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.\nDukeLIFE offers course materials assistance for eligible students. Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
+    "href": "course-support.html#assistance-with-zoom-or-canvas",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Canvas",
+    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub and conversation on Ed Discussion.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
     "section": "",
-    "text": "Log in to RStudio, clone your lab-3 repo from GitHub, open your lab-3.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\n\n\n\nGo to the course organization at github.com/sta199-s24 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-3.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\n\n\n\nIn lab-3.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding."
+    "text": "The following cheatsheets come from https://www.rstudio.com/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
   },
   {
-    "objectID": "labs/lab-3-draft.html#packages",
-    "href": "labs/lab-3-draft.html#packages",
-    "title": "Lab 3 - Data tidying and joining",
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - TBA",
     "section": "",
-    "text": "In this lab we will work with the tidyverse package, which is a collection of packages for doing data analysis in a “tidy” way.\n\nlibrary(tidyverse)\n\nRender the document which loads this package with the library() function."
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#guidelines",
-    "href": "labs/lab-3-draft.html#guidelines",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "",
-    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.1\n\n\n\n\n\n\nNote\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment."
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#part-1",
-    "href": "labs/lab-3-draft.html#part-1",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "Part 1",
-    "text": "Part 1\nInflation across the world\nFor this part of the analysis you will work with inflation data from various countries in the world over the last 30 years.\n\ncountry_inflation &lt;- read_csv(\"data/country-inflation.csv\")\n\n\nQuestion 1\nGet to know the data.\n\nglimpse() at the country_inflation data frame and answer the following questions based on the output. How many rows does country_inflation have and what does each row represent? How many columns does country_inflation have and what does each column represent?\nDisplay a list of the countries included in the dataset.\n\n\n\n\n\n\n\nTip\n\n\n\nA function that can be useful for part (b) is pull(). Check out its documentation for examples of usage.\n\n\n\n\nQuestion 2\nWhich countries had the top three highest inflation rates in 2021? Your output should be a data frame with two columns, country and 2021, with inflation rates in descending order, and three rows for the top three countries. Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.\n\n\n\n\n\n\nTip\n\n\n\nColumn names that are numbers are not considered “proper” in R, therefore to select them you’ll need to surround them with backticks, e.g. select(1993).\n\n\n\n\nQuestion 3\nIn a single pipeline,\n\ncalculate the ratio of the inflation in 2021 and inflation in 1993 for each country and store this information in a new column called inf_ratio,\narrange the data frame in decreasing order of inf_ratio, and\nselect the variables country and inf_ratio to display as the result of the pipeline.\n\nDo not save this new variable in inf_ratio, only calculate and display it so you can answer the following question based on the output of the pipeline.\nWhich country’s inflation change is the largest over this time period? Did inflation increase of decrease between 1993 and 2021 in this country?\n\n\n\n\n\n\nTip\n\n\n\nFor this question you’ll once again need to use variables whose names are numbers (years) in your pipeline. Make sure to surround the names of such variables with backticks (`).\n\n\n\n\nQuestion 4\nReshape (pivot) country_inflation such that each row represents a country/year combination, with columns country, year, and annual_inflation. Then, display the resulting data frame and state how many rows and columns it has.\nRequirements:\n\nYour code must use one of pivot_longer() or pivot_wider(). There are other ways you can do this reshaping move in R, but this question requires solving this problem by pivoting.\nIn your pivot_*() function, you must use names_transform = as.numeric as an argument to transform the variable type to numeric as you pivot the data so that in the resulting data frame the year variable is numeric.\nThe resulting data frame must be saved as something other than country_inflation so you (1) can refer to this data frame later in your analysis and (2) do not overwrite country_inflation. Use a short but informative name.\n\n\n\n\n\n\n\nImportant\n\n\n\nThe remaining questions in Part 1 require the use of the pivoted data frame from Question 4.\n\n\n\n\nQuestion 5\nUse a separate, single pipeline to answer each of the following questions.\nRequirement: Your code must use the filter() function for each part, not arrange().\n\nWhat is the highest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.\nWhat is the lowest inflation rate observed between 1993 and 2021? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.\nPutting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2021? The output of the pipeline should be a data frame with two rows and three columns.\n\n\n\nQuestion 6\na. Create a vector called countries_of_interest which contains the names of up tp five countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:\n\ncountries_of_interest &lt;- c(\"Türkiye\", \"United States\")\n\nIf they are Türkiye, United States, and China, you can express this as follows:\n\ncountries_of_interest &lt;- c(\n  \"Türkiye\", \"United States\", \"China (People's Republic of)\"\n)\n\nSo on and so forth… Then, in 1-2 sentences, state why you chose these countries.\n\n\n\n\n\n\nNote\n\n\n\nYour countries_of_interest should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.\n\n\nb. In a single pipeline, filter your reshaped dataset to include only the countries_of_interest from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you’re starting with. Use a short but informative name.\n\n\nQuestion 7\nUsing your data frame from the previous question, create a plot of annual inflation vs. year for these countries. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.\nRequirements for the plot:\n\nData should be represented with points as well as lines connecting the points for each country.\nEach country should be represented by a different color line.\nAxes and legend should be properly labeled.\nThe plot should have an appropriate title (and optionally a subtitle).\n\n\nIf you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#part-2",
-    "href": "labs/lab-3-draft.html#part-2",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "Part 2",
-    "text": "Part 2\nInflation in the US\nThe OECD defines inflation as follows:\n\nInflation is a rise in the general level of prices of goods and services that households acquire for the purpose of consumption in an economy over a period of time.\nThe main measure of inflation is the annual inflation rate which is the movement of the Consumer Price Index (CPI) from one month/period to the same month/period of the previous year expressed as percentage over time.\nSource: OECD CPI FAQ\n\nCPI is broken down into 12 divisions such as food, housing, health, etc. Your goal in this part is to create another time series plot of annual inflation, this time for US only.\nThe data you will need to create this visualization is spread across two files:\n\nus-inflation.csv: Annual inflation rate for the US for 12 CPI divisions. Each division is identified by an ID number.\ncpi-divisions.csv: A “lookup table” of CPI division ID numbers and their descriptions.\n\nLet’s load both of these files.\n\nus_inflation &lt;- read_csv(\"data/us-inflation.csv\")\ncpi_divisions &lt;- read_csv(\"data/cpi-divisions.csv\")\n\n\nQuestion 8\nAdd a column to the us_inflation dataset called description which has the CPI division description that matches the cpi_division_id, by joining the two datasets.\n\nDetermine which type of join is the most appropriate one and use that.\nNote that the two datasets don’t have a common variable. Review the help for the join functions to determine how to use the by argument when the names of the variables that the datasets should be joined by are different.\n\n\n\nQuestion 9\na. Create a vector called divisions_of_interest which contains the descriptions or IDs of CPI divisions you want to visualize. Your divisions_of_interest should consist of no more than five divisions. If you’re using descriptions, make sure that the spelling of your divisions matches how they appear in the dataset. Then, in 1-2 sentences, state why you chose these divisions.\n\n\n\n\n\n\nTip\n\n\n\nRefer back to the guidance provided in Question 6 if you’re not sure how to create this vector.\n\n\nb. In a single pipeline, filter your reshaped dataset to include only the divisions_of_interest from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you’re starting with. Use a short but informative name.\n\n\nQuestion 10\nUsing your data frame from the previous question, create a plot of annual inflation vs. year for these divisions. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.\n\nData should be represented with points as well as lines connecting the points for each division.\nEach division should be represented by a different color.\nAxes and legend should be properly labeled.\nIf your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. Hint: The legend.position and legend.direction arguments of the theme() functions will be useful.\n\n\nggplot(...) +\n  ... +\n  theme(\n    legend.position = \"bottom\", \n    legend.direction = \"vertical\"\n  )\n\n\nThe plot should have an appropriate title (and optionally a subtitle).\nAxis labels for annual inflation should be shown in percentages (e.g., 25% not 25).\n\n\nIf you haven’t yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#submission",
-    "href": "labs/lab-3-draft.html#submission",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "Submission",
-    "text": "Submission\nOnce you are finished with the lab, you will submit your final PDF document to Gradescope.\n\n\n\n\n\n\nWarning\n\n\n\nBefore you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.\nYou must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.\n\n\nTo submit your assignment:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope\nselected pages associated with each question on Gradescope"
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#grading",
-    "href": "labs/lab-3-draft.html#grading",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "Grading",
-    "text": "Grading\nThe lab is graded out of a total of 50 points.\nYou can earn up to 5 points on each question:\n\n5: Response shows excellent understanding and addresses all or almost all of the rubric items.\n4: Response shows good understanding and addresses most of the rubric items.\n3: Response shows understanding and addresses a majority of the rubric items.\n2: Response shows effort and misses many of the rubric items.\n1: Response does not show sufficient effort or understanding and/or is largely incomplete.\n0: No attempt."
-  },
-  {
-    "objectID": "labs/lab-3-draft.html#footnotes",
-    "href": "labs/lab-3-draft.html#footnotes",
-    "title": "Lab 3 - Data tidying and joining",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nRemember, haikus not novellas when writing code!↩︎"
+    "text": "To be posted.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
   },
   {
     "objectID": "labs/lab-0.html",
