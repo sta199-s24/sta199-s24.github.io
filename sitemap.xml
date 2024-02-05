@@ -2,154 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sta199-s24.github.io/course-links.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/about.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/course-faq.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/project-tips-resources.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/computing-access.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/ae/ae-04-flights-wrangling.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s24.github.io/ae/ae-00-unvotes.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/ae/ae-03-duke-forest-A.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/ae/ae-02-bechdel-dataviz.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/ae/ae-03-duke-forest.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/01-meet-the-toolkit.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/04-dataviz-overview.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/02-grammar-of-graphics.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/05-grammar-of-data-wrangling.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-5.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-2.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-3.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-1.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/index.html</loc>
-    <lastmod>2024-02-05T16:17:29.418Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/course-support.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/computing-cheatsheets.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-4.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-0.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-7.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/labs/lab-6.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/06-tidying-data.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/00-welcome-199.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/slides/03-visualizing-data.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/course-syllabus.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/ae/ae-04-wrangling-flights-A.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s24.github.io/ae/ae-05-majors-tidying.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <loc>https://sta199-s24.github.io/ae/ae-06-population-joining-A.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/ae/ae-02-bechdel-dataviz-A.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-05-majors-tidying.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-04-wrangling-flights-A.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/course-syllabus.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/03-visualizing-data.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/00-welcome-199.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/07-joining-data.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/05-grammar-of-data-wrangling.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-5.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-2.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-3.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-1.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/index.html</loc>
+    <lastmod>2024-02-05T17:42:55.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/course-support.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/computing-cheatsheets.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-4.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-0.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-7.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/labs/lab-6.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/06-tidying-data.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/02-grammar-of-graphics.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/04-dataviz-overview.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/slides/01-meet-the-toolkit.html</loc>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-03-duke-forest.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-02-bechdel-dataviz.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-03-duke-forest-A.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s24.github.io/ae/ae-00-unvotes.html</loc>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/ae/ae-01-meet-the-penguins.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/ae/ae-05-majors-tidying-A.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/course-overview.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/course-team.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/project-description.html</loc>
-    <lastmod>2024-02-05T16:17:29.434Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.815Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s24.github.io/computing-troubleshooting.html</loc>
-    <lastmod>2024-02-05T16:17:29.390Z</lastmod>
+    <lastmod>2024-02-05T17:42:55.771Z</lastmod>
   </url>
 </urlset>
