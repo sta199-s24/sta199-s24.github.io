@@ -36,11 +36,11 @@ library(countdown)
 
 ## Study tips for the exam
 
-- Go over lecture materials and application exercises
-- Review labs and feedback you've received so far
-- Do the exercises at the end of readings from both books
-- Do the exam review over (to be posted by the weekend)
-- Go to lab on Monday with questions
+-   Go over lecture materials and application exercises
+-   Review labs and feedback you've received so far
+-   Do the exercises at the end of readings from both books
+-   Do the exam review over (to be posted by the weekend)
+-   Go to lab on Monday with questions
 
 ## Questions from last time {.smaller}
 
@@ -105,11 +105,11 @@ midwest |>
 
 Suppose we want to answer questions like:
 
-> Is there a relationship between \
-> - number of QS courses taken \
-> - having scored a 4 or 5 on the AP stats exam \
-> - motivation for taking course \
-> - ... \
+> Is there a relationship between\
+> - number of QS courses taken\
+> - having scored a 4 or 5 on the AP stats exam\
+> - motivation for taking course\
+> - ...\
 > and performance in this course?"
 
 . . .
@@ -228,14 +228,64 @@ anti_join(x, y)
 :::
 :::
 
+# Example - plane seats
+
+## `nycflights13` & airport capacity {.smaller}
+
+You've previously seen the `flights` data available in the `nycflights13` package which details all flights from one of the 3 major NYC airports in 2013.
+
+Today we would like to answer a specific question - what was the passenger capacity (i.e. maximum number of passengers) that could have flown out of the three airports in 2013?
+
+. . .
+
+To answer this we will need to know how many passenger seats each plane had available - each flight record has a `tailnum` which is a unique identifier for the plane, this can be linked to the `planes` data set which has the number of available seats for each plane. 
+
+## Attempt 1
+
+```{r}
+#| output-location: fragment
+library(nycflights13)
+
+left_join(flights, planes) |>
+  summarize(
+    capacity = sum(seats), 
+    .by = origin
+  )
+```
+
+## Attempt 2
+
+```{r}
+#| output-location: fragment
+left_join(flights, planes) |>
+  summarize(
+    capacity = sum(seats, na.rm = TRUE), 
+    .by = origin
+  )
+```
+
+## Attempt 3
+
+```{r}
+#| output-location: fragment
+left_join(
+  flights, planes,
+  by = c("tailnum" = "tailnum")
+) |>
+  summarize(
+    capacity = sum(seats, na.rm = FALSE), 
+    .by = origin
+  )
+```
+
 # Application exercise
 
 ## Goal
 
 Make a bar plot of total populations of continents, where the input data are:
 
-1. Countries and populations
-2. Countries and continents
+1.  Countries and populations
+2.  Countries and continents
 
 ## `ae-06-population-joining`
 
