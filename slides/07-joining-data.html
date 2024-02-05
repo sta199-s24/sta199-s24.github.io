@@ -800,9 +800,9 @@ and performance in this course?”</p>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">library</span>(nycflights13)</span>
 <span id="cb31-2"><a></a></span>
 <span id="cb31-3"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb31-4"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb31-5"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats), </span>
-<span id="cb31-6"><a></a>    <span class="at">.by =</span> origin</span>
+<span id="cb31-4"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb31-6"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats)</span>
 <span id="cb31-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
@@ -814,8 +814,8 @@ and performance in this course?”</p>
   origin capacity
   &lt;chr&gt;     &lt;int&gt;
 1 EWR          NA
-2 LGA          NA
-3 JFK          NA</code></pre>
+2 JFK          NA
+3 LGA          NA</code></pre>
 </div>
 </div>
 </section>
@@ -823,9 +823,9 @@ and performance in this course?”</p>
 <h2>Attempt 2</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb34-3"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb34-4"><a></a>    <span class="at">.by =</span> origin</span>
+<span id="cb34-2"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb34-4"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb34-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
@@ -837,8 +837,8 @@ and performance in this course?”</p>
   origin capacity
   &lt;chr&gt;     &lt;int&gt;
 1 EWR      345268
-2 LGA       89686
-3 JFK      179412</code></pre>
+2 JFK      179412
+3 LGA       89686</code></pre>
 </div>
 </div>
 </section>
@@ -849,9 +849,9 @@ and performance in this course?”</p>
 <span id="cb37-2"><a></a>  flights, planes,</span>
 <span id="cb37-3"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"tailnum"</span> <span class="ot">=</span> <span class="st">"tailnum"</span>)</span>
 <span id="cb37-4"><a></a>) <span class="sc">|&gt;</span></span>
-<span id="cb37-5"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb37-6"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">FALSE</span>), </span>
-<span id="cb37-7"><a></a>    <span class="at">.by =</span> origin</span>
+<span id="cb37-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb37-6"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb37-7"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb37-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
@@ -860,8 +860,8 @@ and performance in this course?”</p>
   origin capacity
   &lt;chr&gt;     &lt;int&gt;
 1 EWR          NA
-2 LGA          NA
-3 JFK          NA</code></pre>
+2 JFK          NA
+3 LGA          NA</code></pre>
 </div>
 </div>
 </section></section>

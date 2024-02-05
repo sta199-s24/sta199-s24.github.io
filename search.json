@@ -1084,21 +1084,21 @@
     "href": "slides/07-joining-data.html#attempt-1",
     "title": "Joining data",
     "section": "Attempt 1",
-    "text": "Attempt 1\n\nlibrary(nycflights13)\n\nleft_join(flights, planes) |&gt;\n  summarize(\n    capacity = sum(seats), \n    .by = origin\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 LGA          NA\n3 JFK          NA"
+    "text": "Attempt 1\n\nlibrary(nycflights13)\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(\n    capacity = sum(seats)\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 JFK          NA\n3 LGA          NA"
   },
   {
     "objectID": "slides/07-joining-data.html#attempt-2",
     "href": "slides/07-joining-data.html#attempt-2",
     "title": "Joining data",
     "section": "Attempt 2",
-    "text": "Attempt 2\n\nleft_join(flights, planes) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = TRUE), \n    .by = origin\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR      345268\n2 LGA       89686\n3 JFK      179412"
+    "text": "Attempt 2\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = TRUE)\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR      345268\n2 JFK      179412\n3 LGA       89686"
   },
   {
     "objectID": "slides/07-joining-data.html#attempt-3",
     "href": "slides/07-joining-data.html#attempt-3",
     "title": "Joining data",
     "section": "Attempt 3",
-    "text": "Attempt 3\n\nleft_join(\n  flights, planes,\n  by = c(\"tailnum\" = \"tailnum\")\n) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = FALSE), \n    .by = origin\n  )\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 LGA          NA\n3 JFK          NA"
+    "text": "Attempt 3\n\nleft_join(\n  flights, planes,\n  by = c(\"tailnum\" = \"tailnum\")\n) |&gt;\n  group_by(origin) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = FALSE)\n  )\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 JFK          NA\n3 LGA          NA"
   },
   {
     "objectID": "slides/07-joining-data.html#goal",
