@@ -274,7 +274,7 @@ left_join(
 ) |>
   group_by(origin) |>
   summarize(
-    capacity = sum(seats, na.rm = FALSE)
+    capacity = sum(seats, na.rm = TRUE)
   )
 ```
 
