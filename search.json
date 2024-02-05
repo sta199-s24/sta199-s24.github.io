@@ -1073,6 +1073,34 @@
     "text": "anti_join()\n\n\n\n\n\nanti_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
   },
   {
+    "objectID": "slides/07-joining-data.html#nycflights13-airport-capacity",
+    "href": "slides/07-joining-data.html#nycflights13-airport-capacity",
+    "title": "Joining data",
+    "section": "nycflights13 & airport capacity",
+    "text": "nycflights13 & airport capacity\nYou’ve previously seen the flights data available in the nycflights13 package which details all flights from one of the 3 major NYC airports in 2013.\nToday we would like to answer a specific question - what was the passenger capacity (i.e. maximum number of passengers) that could have flown out of the three airports in 2013?\n\nTo answer this we will need to know how many passenger seats each plane had available - each flight record has a tailnum which is a unique identifier for the plane, this can be linked to the planes data set which has the number of available seats for each plane."
+  },
+  {
+    "objectID": "slides/07-joining-data.html#attempt-1",
+    "href": "slides/07-joining-data.html#attempt-1",
+    "title": "Joining data",
+    "section": "Attempt 1",
+    "text": "Attempt 1\n\nlibrary(nycflights13)\n\nleft_join(flights, planes) |&gt;\n  summarize(\n    capacity = sum(seats), \n    .by = origin\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 LGA          NA\n3 JFK          NA"
+  },
+  {
+    "objectID": "slides/07-joining-data.html#attempt-2",
+    "href": "slides/07-joining-data.html#attempt-2",
+    "title": "Joining data",
+    "section": "Attempt 2",
+    "text": "Attempt 2\n\nleft_join(flights, planes) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = TRUE), \n    .by = origin\n  )\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR      345268\n2 LGA       89686\n3 JFK      179412"
+  },
+  {
+    "objectID": "slides/07-joining-data.html#attempt-3",
+    "href": "slides/07-joining-data.html#attempt-3",
+    "title": "Joining data",
+    "section": "Attempt 3",
+    "text": "Attempt 3\n\nleft_join(\n  flights, planes,\n  by = c(\"tailnum\" = \"tailnum\")\n) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = FALSE), \n    .by = origin\n  )\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 LGA          NA\n3 JFK          NA"
+  },
+  {
     "objectID": "slides/07-joining-data.html#goal",
     "href": "slides/07-joining-data.html#goal",
     "title": "Joining data",
