@@ -851,7 +851,7 @@ and performance in this course?”</p>
 <span id="cb37-4"><a></a>) <span class="sc">|&gt;</span></span>
 <span id="cb37-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
 <span id="cb37-6"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb37-7"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb37-7"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb37-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
@@ -859,9 +859,9 @@ and performance in this course?”</p>
 <pre><code># A tibble: 3 × 2
   origin capacity
   &lt;chr&gt;     &lt;int&gt;
-1 EWR          NA
-2 JFK          NA
-3 LGA          NA</code></pre>
+1 EWR    14454251
+2 JFK    13874081
+3 LGA    10522985</code></pre>
 </div>
 </div>
 </section></section>

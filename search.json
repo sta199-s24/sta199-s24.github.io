@@ -1098,7 +1098,7 @@
     "href": "slides/07-joining-data.html#attempt-3",
     "title": "Joining data",
     "section": "Attempt 3",
-    "text": "Attempt 3\n\nleft_join(\n  flights, planes,\n  by = c(\"tailnum\" = \"tailnum\")\n) |&gt;\n  group_by(origin) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = FALSE)\n  )\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 JFK          NA\n3 LGA          NA"
+    "text": "Attempt 3\n\nleft_join(\n  flights, planes,\n  by = c(\"tailnum\" = \"tailnum\")\n) |&gt;\n  group_by(origin) |&gt;\n  summarize(\n    capacity = sum(seats, na.rm = TRUE)\n  )\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR    14454251\n2 JFK    13874081\n3 LGA    10522985"
   },
   {
     "objectID": "slides/07-joining-data.html#goal",
