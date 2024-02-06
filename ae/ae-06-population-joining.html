@@ -106,10 +106,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="STA 199 - AE 06: Joining country populations with continents">
-<meta property="og:description" content="Suggested answers">
+<meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta property="og:site_name" content="STA 199">
 <meta name="twitter:title" content="STA 199 - AE 06: Joining country populations with continents">
-<meta name="twitter:description" content="Suggested answers">
+<meta name="twitter:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta name="twitter:image" content="https://sta199-s24.github.io/ae/images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -354,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/ae/ae-06-population-joining-A.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/ae/ae-06-population-joining.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -362,10 +362,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">AE 06: Joining country populations with continents</h1>
-<p class="subtitle lead">Suggested answers</p>
   <div class="quarto-categories">
     <div class="quarto-category">Application exercise</div>
-    <div class="quarto-category">Answers</div>
   </div>
   </div>
 
@@ -383,19 +381,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These are suggested answers. This document should be used as reference only, it’s not designed to be an exhaustive key.</p>
-</div>
-</div>
 <section id="goal" class="level2">
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <p>Our ultimate goal in this application exercise is to create a bar plot of total populations of continents, where the input data are:</p>
@@ -472,59 +457,27 @@ Important
 <ul>
 <li>Which variable(s) will we use to join the <code>population</code> and <code>continents</code> data frames?</li>
 </ul>
-<p><code>country</code> from <code>population</code> and <code>entity</code> from <code>continents</code></p>
+<p>Add response here.</p>
 <ul>
 <li>We want to create a new data frame that keeps all rows and columns from <code>population</code> and brings in the corresponding information from <code>continents</code>. Which join function should we use?</li>
 </ul>
-<p><code>left_join()</code> with <code>population</code> on the left.</p></li>
+<p>Add response here.</p></li>
 <li><p><strong>Demo:</strong> Join the two data frames and name assign the joined data frame to a new data frame <code>population_continents</code>.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>population_continent <span class="ot">&lt;-</span> population <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(continents, <span class="at">by =</span> <span class="fu">join_by</span>(country <span class="sc">==</span> entity))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Demo:</strong> Take a look at the newly created <code>population_continent</code> data frame. There are some countries that were not in <code>continents</code>. First, identify which countries these are (they will have <code>NA</code> values for <code>continent</code>).</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>population_continent <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(continent))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 6
-  country                   year.x population code  year.y continent
-  &lt;chr&gt;                      &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;    
-1 Congo, Dem. Rep.            2022     99010. &lt;NA&gt;      NA &lt;NA&gt;     
-2 Congo, Rep.                 2022      5970. &lt;NA&gt;      NA &lt;NA&gt;     
-3 Hong Kong SAR, China        2022      7346. &lt;NA&gt;      NA &lt;NA&gt;     
-4 Korea, Dem. People's Rep.   2022     26069. &lt;NA&gt;      NA &lt;NA&gt;     
-5 Korea, Rep.                 2022     51628. &lt;NA&gt;      NA &lt;NA&gt;     
-6 Kyrgyz Republic             2022      6975. &lt;NA&gt;      NA &lt;NA&gt;     </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Demo:</strong> All of these countries are actually in the <code>continents</code> data frame, but under different names. So, let’s clean that data first by updating the country names in the <code>population</code> data frame in a way they will match the <code>continents</code> data frame, and then joining them, using a <code>case_when()</code> statement in <code>mutate()</code>. At the end, check that all countries now have continent information.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>population_continent <span class="ot">&lt;-</span> population <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">case_when</span>(</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Congo, Dem. Rep."</span> <span class="sc">~</span> <span class="st">"Democratic Republic of Congo"</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Congo, Rep."</span> <span class="sc">~</span> <span class="st">"Congo"</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Hong Kong SAR, China"</span> <span class="sc">~</span> <span class="st">"Hong Kong"</span>,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Korea, Dem. People's Rep."</span> <span class="sc">~</span> <span class="st">"North Korea"</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Korea, Rep."</span> <span class="sc">~</span> <span class="st">"South Korea"</span>,</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    country <span class="sc">==</span> <span class="st">"Kyrgyz Republic"</span> <span class="sc">~</span> <span class="st">"Kyrgyzstan"</span>,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">.default =</span> country</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(continents, <span class="at">by =</span> <span class="fu">join_by</span>(country <span class="sc">==</span> entity))</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>population_continent <span class="sc">|&gt;</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(continent))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 0 × 6
-# ℹ 6 variables: country &lt;chr&gt;, year.x &lt;dbl&gt;, population &lt;dbl&gt;, code &lt;chr&gt;,
-#   year.y &lt;dbl&gt;, continent &lt;chr&gt;</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Think out loud:</strong> Which continent do you think has the highest population? Which do you think has the second highest? The lowest?</li>
@@ -534,54 +487,25 @@ Important
 <li><strong>Demo:</strong> Create a new data frame called <code>population_summary</code> that contains a row for each continent and a column for the total population for that continent, in descending order of population. Note that the function for calculating totals in R is <code>sum()</code>.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>population_summary <span class="ot">&lt;-</span> population_continent <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">|&gt;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_pop =</span> <span class="fu">sum</span>(population)) <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Your turn:</strong> Make a bar plot with total population on the y-axis and continent on the x-axis, where the height of each bar represents the total population in that continent.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(population_summary, <span class="fu">aes</span>(<span class="at">x =</span> continent, <span class="at">y =</span> total_pop)) <span class="sc">+</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ae-06-population-joining-A_files/figure-html/population-summary-bar-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Your turn:</strong> Recreate the following plot, which is commonly referred to as a <strong>lollipop plot</strong>. Hint: Start with the points, then try adding the <code>segment</code>s, then add axis labels and <code>caption</code>, and finally, as a stretch goal, update the x scale (which will require a function we haven’t introduced in lectures or labs yet!).</li>
 </ul>
 <p><img src="https://sta199-s24.github.io/images/population-summary-lollipop.png" class="img-fluid"></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(population_summary, <span class="fu">aes</span>()) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_pop, <span class="at">y =</span> continent)) <span class="sc">+</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">y =</span> continent, <span class="at">yend =</span> continent, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> total_pop)) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">1000000</span>, <span class="at">suffix =</span> <span class="st">" bil"</span>)) <span class="sc">+</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total population"</span>,</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Continent"</span>,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"World population"</span>,</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"As of 2022"</span>,</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Data sources: The World Bank and Our World in Data"</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ae-06-population-joining-A_files/figure-html/population-summary-lollipop-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Think out loud:</strong> What additional improvements would you like to make to this plot.</li>
 </ul>
-<p>Answers may vary. Ordering the continents in decreasing order of population.</p>
+<p>Add your response here.</p>
 
 
 </section>
@@ -1126,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/ae/ae-06-population-joining-A.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/ae/ae-06-population-joining.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
