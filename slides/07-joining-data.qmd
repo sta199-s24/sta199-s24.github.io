@@ -39,7 +39,7 @@ library(countdown)
 -   Go over lecture materials and application exercises
 -   Review labs and feedback you've received so far
 -   Do the exercises at the end of readings from both books
--   Do the exam review over (to be posted by the weekend)
+-   Do the exam review over (to be posted on Friday)
 -   Go to lab on Monday with questions
 
 ## Questions from last time {.smaller}
@@ -228,17 +228,21 @@ anti_join(x, y)
 :::
 :::
 
-# Example - plane seats
+# Example: Passenger capacity
 
 ## `nycflights13` & airport capacity {.smaller}
 
 You've previously seen the `flights` data available in the `nycflights13` package which details all flights from one of the 3 major NYC airports in 2013.
 
-Today we would like to answer a specific question - what was the passenger capacity (i.e. maximum number of passengers) that could have flown out of the three airports in 2013?
+Today we would like to answer a specific question:
+
+::: question
+What was the passenger capacity (i.e., maximum number of passengers) that could have flown out of the three airports in 2013?
+:::
 
 . . .
 
-To answer this we will need to know how many passenger seats each plane had available - each flight record has a `tailnum` which is a unique identifier for the plane, this can be linked to the `planes` data set which has the number of available seats for each plane. 
+To answer this we will need to know how many passenger seats each plane had available - each flight record has a `tailnum` which is a unique identifier for the plane, this can be linked to the `planes` data set which has the number of available seats for each plane.
 
 ## Attempt 1
 
@@ -248,9 +252,7 @@ library(nycflights13)
 
 left_join(flights, planes) |>
   group_by(origin) |>
-  summarize(
-    capacity = sum(seats)
-  )
+  summarize(capacity = sum(seats))
 ```
 
 ## Attempt 2
@@ -259,9 +261,7 @@ left_join(flights, planes) |>
 #| output-location: fragment
 left_join(flights, planes) |>
   group_by(origin) |>
-  summarize(
-    capacity = sum(seats, na.rm = TRUE)
-  )
+  summarize(capacity = sum(seats, na.rm = TRUE))
 ```
 
 ## Attempt 3
@@ -273,9 +273,7 @@ left_join(
   by = c("tailnum" = "tailnum")
 ) |>
   group_by(origin) |>
-  summarize(
-    capacity = sum(seats, na.rm = FALSE)
-  )
+  summarize(capacity = sum(seats, na.rm = TRUE))
 ```
 
 # Application exercise
@@ -295,12 +293,4 @@ Make a bar plot of total populations of continents, where the input data are:
 -   If there are any uncommitted files, commit them, and then click **Pull**.
 
 -   Open the file called `ae-06-population-joining.qmd` and render it.
-:::
-
-## Recap: joining {.smaller}
-
-::: incremental
--   to do: add
--   recap
--   bullets
 :::
