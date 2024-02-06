@@ -446,7 +446,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>Go over lecture materials and application exercises</li>
 <li>Review labs and feedback you’ve received so far</li>
 <li>Do the exercises at the end of readings from both books</li>
-<li>Do the exam review over (to be posted by the weekend)</li>
+<li>Do the exam review over (to be posted on Friday)</li>
 <li>Go to lab on Monday with questions</li>
 </ul>
 </section>
@@ -782,14 +782,17 @@ and performance in this course?”</p>
 </div>
 </section></section>
 <section>
-<section id="example---plane-seats" class="title-slide slide level1 center">
-<h1>Example - plane seats</h1>
+<section id="example-passenger-capacity" class="title-slide slide level1 center">
+<h1>Example: Passenger capacity</h1>
 
 </section>
 <section id="nycflights13-airport-capacity" class="slide level2 smaller">
 <h2><code>nycflights13</code> &amp; airport capacity</h2>
 <p>You’ve previously seen the <code>flights</code> data available in the <code>nycflights13</code> package which details all flights from one of the 3 major NYC airports in 2013.</p>
-<p>Today we would like to answer a specific question - what was the passenger capacity (i.e.&nbsp;maximum number of passengers) that could have flown out of the three airports in 2013?</p>
+<p>Today we would like to answer a specific question:</p>
+<div class="question">
+<p>What was the passenger capacity (i.e., maximum number of passengers) that could have flown out of the three airports in 2013?</p>
+</div>
 <div class="fragment">
 <p>To answer this we will need to know how many passenger seats each plane had available - each flight record has a <code>tailnum</code> which is a unique identifier for the plane, this can be linked to the <code>planes</code> data set which has the number of available seats for each plane.</p>
 </div>
@@ -801,9 +804,7 @@ and performance in this course?”</p>
 <span id="cb31-2"><a></a></span>
 <span id="cb31-3"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
 <span id="cb31-4"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb31-6"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats)</span>
-<span id="cb31-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stderr">
@@ -824,9 +825,7 @@ and performance in this course?”</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
 <span id="cb34-2"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb34-4"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb34-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb34-3"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stderr">
@@ -850,9 +849,7 @@ and performance in this course?”</p>
 <span id="cb37-3"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"tailnum"</span> <span class="ot">=</span> <span class="st">"tailnum"</span>)</span>
 <span id="cb37-4"><a></a>) <span class="sc">|&gt;</span></span>
 <span id="cb37-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb37-6"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb37-7"><a></a>    <span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb37-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb37-6"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -885,16 +882,6 @@ and performance in this course?”</p>
 <li><p>Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called <code>ae</code>.</p></li>
 <li><p>If there are any uncommitted files, commit them, and then click <strong>Pull</strong>.</p></li>
 <li><p>Open the file called <code>ae-06-population-joining.qmd</code> and render it.</p></li>
-</ul>
-</div>
-</section>
-<section id="recap-joining" class="slide level2 smaller">
-<h2>Recap: joining</h2>
-<div>
-<ul>
-<li class="fragment">to do: add</li>
-<li class="fragment">recap</li>
-<li class="fragment">bullets</li>
 </ul>
 </div>
 
