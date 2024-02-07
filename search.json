@@ -256,49 +256,49 @@
     "href": "slides/04-dataviz-overview.html#bivariate-analysis",
     "title": "Data visualization overview",
     "section": "Bivariate analysis",
-    "text": "Bivariate analysis\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Side-by-side box plots\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_boxplot(alpha = 0.5, show.legend = FALSE) +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Species\",\n    title = \"Side-by-side box plots\"\n  )\n\n\n# Density plots\nggplot(penguins, aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.5) +\n  theme(legend.position = \"bottom\") +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Density\",\n    fill = \"Species\", title = \"Density plots\"\n  )"
+    "text": "Bivariate analysis\n\nPlotCode\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Side-by-side box plots\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_boxplot(alpha = 0.5, show.legend = FALSE) +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Species\",\n    title = \"Side-by-side box plots\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n# Density plots\nggplot(penguins, aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.5) +\n  theme(legend.position = \"bottom\") +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Density\",\n    fill = \"Species\", title = \"Density plots\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#violin-plots",
     "href": "slides/04-dataviz-overview.html#violin-plots",
     "title": "Data visualization overview",
     "section": "Violin plots",
-    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()"
+    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms",
     "href": "slides/04-dataviz-overview.html#multiple-geoms",
     "title": "Data visualization overview",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()"
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-1",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-1",
     "title": "Data visualization overview",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )"
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()"
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#bechdel",
@@ -312,7 +312,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result",
     "title": "Data visualization overview",
     "section": "ROI by test result",
-    "text": "ROI by test result\n\nWhat about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot()"
+    "text": "ROI by test result\n\nWhat about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot()\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#movies-with-high-roi",
@@ -326,7 +326,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result-1",
     "title": "Data visualization overview",
     "section": "ROI by test result",
-    "text": "ROI by test result\n\nZoom in: What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15))"
+    "text": "ROI by test result\n\nZoom in: What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15))\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#sneak-preview",
@@ -354,7 +354,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result-zoom-in",
     "title": "Data visualization overview",
     "section": "ROI by test result – zoom in",
-    "text": "ROI by test result – zoom in\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15)) +\n  geom_vline(xintercept = 4.21, linetype = \"dashed\")"
+    "text": "ROI by test result – zoom in\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15)) +\n  geom_vline(xintercept = 4.21, linetype = \"dashed\")\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/04-dataviz-overview.html#ae-03-duke-forest",
@@ -2307,42 +2307,42 @@
     "href": "slides/03-visualizing-data.html#violin-plots",
     "title": "Visualizing various types of data",
     "section": "Violin plots",
-    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()"
+    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#multiple-geoms",
     "href": "slides/03-visualizing-data.html#multiple-geoms",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()"
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#multiple-geoms-1",
     "href": "slides/03-visualizing-data.html#multiple-geoms-1",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#multiple-geoms-aesthetics",
     "href": "slides/03-visualizing-data.html#multiple-geoms-aesthetics",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#multiple-geoms-aesthetics-1",
     "href": "slides/03-visualizing-data.html#multiple-geoms-aesthetics-1",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )"
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#multiple-geoms-aesthetics-2",
     "href": "slides/03-visualizing-data.html#multiple-geoms-aesthetics-2",
     "title": "Visualizing various types of data",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n::: columns ::: {.column width=“50%”}\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n:::— title: “Visualizing various types of data” subtitle: “Lecture 3” date: “January 23, 2024” format: revealjs"
+    "text": "Multiple geoms + aesthetics\n::: columns ::: {.column width=“50%”}\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n:::\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n:::— title: “Visualizing various types of data” subtitle: “Lecture 3” date: “January 23, 2024” format: revealjs"
   },
   {
     "objectID": "slides/03-visualizing-data.html#while-you-wait-1",
@@ -2426,21 +2426,21 @@
     "href": "slides/03-visualizing-data.html#histogram---step-3",
     "title": "Visualizing various types of data",
     "section": "Histogram - Step 3",
-    "text": "Histogram - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram()"
+    "text": "Histogram - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`).\n\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#histogram---step-4",
     "href": "slides/03-visualizing-data.html#histogram---step-4",
     "title": "Visualizing various types of data",
     "section": "Histogram - Step 4",
-    "text": "Histogram - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  )"
+    "text": "Histogram - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#histogram---step-5",
     "href": "slides/03-visualizing-data.html#histogram---step-5",
     "title": "Visualizing various types of data",
     "section": "Histogram - Step 5",
-    "text": "Histogram - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  ) +\n  labs(\n    title = \"Weights of penguins\",\n    x = \"Weight (grams)\",\n    y = \"Count\"\n  )"
+    "text": "Histogram - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_histogram(\n    binwidth = 250\n  ) +\n  labs(\n    title = \"Weights of penguins\",\n    x = \"Weight (grams)\",\n    y = \"Count\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#boxplot---step-1",
@@ -2461,21 +2461,21 @@
     "href": "slides/03-visualizing-data.html#boxplot---step-3",
     "title": "Visualizing various types of data",
     "section": "Boxplot - Step 3",
-    "text": "Boxplot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(y = body_mass_g)\n  ) +\n  geom_boxplot()"
+    "text": "Boxplot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(y = body_mass_g)\n  ) +\n  geom_boxplot()\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#boxplot---step-4",
     "href": "slides/03-visualizing-data.html#boxplot---step-4",
     "title": "Visualizing various types of data",
     "section": "Boxplot - Step 4",
-    "text": "Boxplot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot()"
+    "text": "Boxplot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot()\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#boxplot---step-5",
     "href": "slides/03-visualizing-data.html#boxplot---step-5",
     "title": "Visualizing various types of data",
     "section": "Boxplot - Step 5",
-    "text": "Boxplot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot() +\n  labs(\n    x = \"Weight (grams)\",\n    y = NULL\n  )"
+    "text": "Boxplot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_boxplot() +\n  labs(\n    x = \"Weight (grams)\",\n    y = NULL\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plot---step-1",
@@ -2496,42 +2496,42 @@
     "href": "slides/03-visualizing-data.html#density-plot---step-3",
     "title": "Visualizing various types of data",
     "section": "Density plot - Step 3",
-    "text": "Density plot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density()"
+    "text": "Density plot - Step 3\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density()\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plot---step-4",
     "href": "slides/03-visualizing-data.html#density-plot---step-4",
     "title": "Visualizing various types of data",
     "section": "Density plot - Step 4",
-    "text": "Density plot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\"\n  )"
+    "text": "Density plot - Step 4\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plot---step-5",
     "href": "slides/03-visualizing-data.html#density-plot---step-5",
     "title": "Visualizing various types of data",
     "section": "Density plot - Step 5",
-    "text": "Density plot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2\n  )"
+    "text": "Density plot - Step 5\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plot---step-6",
     "href": "slides/03-visualizing-data.html#density-plot---step-6",
     "title": "Visualizing various types of data",
     "section": "Density plot - Step 6",
-    "text": "Density plot - Step 6\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\"\n  )"
+    "text": "Density plot - Step 6\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plot---step-7",
     "href": "slides/03-visualizing-data.html#density-plot---step-7",
     "title": "Visualizing various types of data",
     "section": "Density plot - Step 7",
-    "text": "Density plot - Step 7\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\",\n    alpha = 0.5\n  )"
+    "text": "Density plot - Step 7\n\n\n\nggplot(\n  penguins,\n  aes(x = body_mass_g)\n  ) +\n  geom_density(\n    fill = \"darkslategray1\",\n    linewidth = 2,\n    color = \"darkorchid3\",\n    alpha = 0.5\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#weights-of-penguins",
     "href": "slides/03-visualizing-data.html#weights-of-penguins",
     "title": "Visualizing various types of data",
     "section": "Weights of penguins",
-    "text": "Weights of penguins\n\nQuestionVote\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTRUE / FALSE\n\nThe distribution of penguin weights in this sample is left skewed.\nThe distribution of penguin weights in this sample is unimodal."
+    "text": "Weights of penguins\n\nQuestionVote\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\n\n\n\n\n\nTRUE / FALSE\n\nThe distribution of penguin weights in this sample is left skewed.\nThe distribution of penguin weights in this sample is unimodal."
   },
   {
     "objectID": "slides/03-visualizing-data.html#bivariate-analysis-1",
@@ -2545,35 +2545,35 @@
     "href": "slides/03-visualizing-data.html#side-by-side-box-plots",
     "title": "Visualizing various types of data",
     "section": "Side-by-side box plots",
-    "text": "Side-by-side box plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    y = species\n    )\n  ) +\n  geom_boxplot()"
+    "text": "Side-by-side box plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    y = species\n    )\n  ) +\n  geom_boxplot()\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plots",
     "href": "slides/03-visualizing-data.html#density-plots",
     "title": "Visualizing various types of data",
     "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_density()"
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_density()\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plots-1",
     "href": "slides/03-visualizing-data.html#density-plots-1",
     "title": "Visualizing various types of data",
     "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density()"
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density()\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plots-2",
     "href": "slides/03-visualizing-data.html#density-plots-2",
     "title": "Visualizing various types of data",
     "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  )"
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
   },
   {
     "objectID": "slides/03-visualizing-data.html#density-plots-3",
     "href": "slides/03-visualizing-data.html#density-plots-3",
     "title": "Visualizing various types of data",
     "section": "Density plots",
-    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  ) +\n  theme(\n    legend.position = \"bottom\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
+    "text": "Density plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = body_mass_g,\n    color = species,\n    fill = species\n    )\n  ) +\n  geom_density(\n    alpha = 0.5\n  ) +\n  theme(\n    legend.position = \"bottom\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 sta199-s24.github.io"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#announcements",
