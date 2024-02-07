@@ -1,7 +1,7 @@
 ---
 title: "Joining data"
 subtitle: "Lecture 7"
-date: "February 1, 2024"
+date: "February 6, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
