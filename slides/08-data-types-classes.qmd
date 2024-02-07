@@ -29,9 +29,34 @@ library(tidyverse)
     <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
     ```
 
-# Questions from last time {.smaller}
+# Questions from last time 
 
-## **Pivoting data**
+## **Pivoting data** {.smaller}
+
+```{r}
+#| include: false
+
+patients <- tribble(
+  ~patient_id, ~pulse_1, ~pulse_2, ~pulse_3,
+  "XYZ", 70, 85, 73,
+  "ABC", 90, 95, 102,
+  "DEF", 100, 80, 70
+)
+```
+
+Suppose we have the following patient data:
+
+```{r}
+patients
+```
+
+And we want to know:
+
+-   Average pulse rate for each patient.
+
+-   Trends in pulse rates across measurements.
+
+## **Pivoting data** {.smaller}
 
 ```{r}
 #| include: false
@@ -134,7 +159,7 @@ typeof(`$`) # internal function
 typeof(sum) # primitive function
 ```
 
-## Factors
+## Factors {.smaller}
 
 A `factor` is a vector that can contain only predefined values.
 It is used to store categorical data.
