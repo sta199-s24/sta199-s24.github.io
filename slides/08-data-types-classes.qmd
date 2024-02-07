@@ -29,7 +29,7 @@ library(tidyverse)
     <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
     ```
 
-# Questions from last time 
+# Questions from last time
 
 ## **Pivoting data** {.smaller}
 
