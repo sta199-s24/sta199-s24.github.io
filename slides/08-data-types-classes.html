@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-02-01">
-  <title>STA 199 - Joining data</title>
+  <meta name="dcterms.date" content="2024-02-08">
+  <title>STA 199 - Data types and classes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Joining data">
-<meta property="og:description" content="Lecture 7">
+<meta property="og:title" content="STA 199 - Data types and classes">
+<meta property="og:description" content="Lecture 8">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Joining data">
-<meta name="twitter:description" content="Lecture 7">
+<meta name="twitter:title" content="STA 199 - Data types and classes">
+<meta name="twitter:description" content="Lecture 8">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +402,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Joining data</h1>
-  <p class="subtitle">Lecture 7</p>
+  <h1 class="title">Data types and classes</h1>
+  <p class="subtitle">Lecture 8</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,12 +416,25 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-02-01</p>
+  <p class="date">2024-02-08</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
 <h1>Warm up</h1>
-
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ────────────────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
 </section>
 <section id="while-you-wait-for-class-to-begin" class="slide level2">
 <h2>While you wait for class to begin…</h2>
@@ -430,435 +443,207 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li><p>Questions from the prepare materials?</p>
 <iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe></li>
 </ul>
-</section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Exam 1 in class next week on Thursday – cheat sheet (1 page, both sides, hand-written or typed, must be prepared by you)</li>
-<li>Exam 1 take home starts after class on Thursday, due at 8 am on Monday (open resources, internet, etc., closed to other humans)</li>
-<li>Next week in lab: Exam 1 review – come with questions!</li>
-<li>No new lab assigned next week during exam</li>
-</ul>
-</section>
-<section id="study-tips-for-the-exam" class="slide level2">
-<h2>Study tips for the exam</h2>
-<ul>
-<li>Go over lecture materials and application exercises</li>
-<li>Review labs and feedback you’ve received so far</li>
-<li>Do the exercises at the end of readings from both books</li>
-<li>Do the exam review over (to be posted on Friday)</li>
-<li>Go to lab on Monday with questions</li>
-</ul>
-</section>
-<section id="questions-from-last-time" class="slide level2 smaller">
-<h2>Questions from last time</h2>
-<p><strong>Is there a limit to a tibble size?</strong></p>
-<p>No, a tibble (i.e., a data frame) can be any number of rows or columns. However when you print it, it will only print the first 10 rows and the columns that fit across the screen, document, etc.</p>
-<p>If you want to see more rows and columns, you can</p>
-<ul>
-<li><p>open it in the data viewer with <code>view(df)</code></p></li>
-<li><p>explicitly print more rows with, e.g., <code>df |&gt; print(n = 25)</code></p></li>
-<li><p>explicitly <code>select()</code> or <code>relocate()</code> columns</p></li>
-</ul>
-</section>
-<section id="options-for-a-tibble" class="slide level2 smaller">
-<h2>Options for a tibble</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Default</a></li><li><a href="#tabset-1-2"><code>print()</code></a></li><li><a href="#tabset-1-3"><code>select()</code></a></li><li><a href="#tabset-1-4"><code>relocate()</code></a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>midwest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 437 × 28
-     PID county   state  area poptotal popdensity popwhite popblack popamerindian popasian
-   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;         &lt;int&gt;    &lt;int&gt;
- 1   561 ADAMS    IL    0.052    66090      1271.    63917     1702            98      249
- 2   562 ALEXAND… IL    0.014    10626       759      7054     3496            19       48
- 3   563 BOND     IL    0.022    14991       681.    14477      429            35       16
- 4   564 BOONE    IL    0.017    30806      1812.    29344      127            46      150
- 5   565 BROWN    IL    0.018     5836       324.     5264      547            14        5
- 6   566 BUREAU   IL    0.05     35688       714.    35157       50            65      195
- 7   567 CALHOUN  IL    0.017     5322       313.     5298        1             8       15
- 8   568 CARROLL  IL    0.027    16805       622.    16519      111            30       61
- 9   569 CASS     IL    0.024    13437       560.    13384       16             8       23
-10   570 CHAMPAI… IL    0.058   173025      2983.   146506    16559           331     8033
-# ℹ 427 more rows
-# ℹ 18 more variables: popother &lt;int&gt;, percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;,
-#   percamerindan &lt;dbl&gt;, percasian &lt;dbl&gt;, percother &lt;dbl&gt;, popadults &lt;int&gt;,
-#   perchsd &lt;dbl&gt;, percollege &lt;dbl&gt;, percprof &lt;dbl&gt;, poppovertyknown &lt;int&gt;,
-#   percpovertyknown &lt;dbl&gt;, percbelowpoverty &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;,
-#   percadultpoverty &lt;dbl&gt;, percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;, category &lt;chr&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>midwest <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 437 × 28
-     PID county   state  area poptotal popdensity popwhite popblack popamerindian popasian
-   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;         &lt;int&gt;    &lt;int&gt;
- 1   561 ADAMS    IL    0.052    66090      1271.    63917     1702            98      249
- 2   562 ALEXAND… IL    0.014    10626       759      7054     3496            19       48
- 3   563 BOND     IL    0.022    14991       681.    14477      429            35       16
- 4   564 BOONE    IL    0.017    30806      1812.    29344      127            46      150
- 5   565 BROWN    IL    0.018     5836       324.     5264      547            14        5
- 6   566 BUREAU   IL    0.05     35688       714.    35157       50            65      195
- 7   567 CALHOUN  IL    0.017     5322       313.     5298        1             8       15
- 8   568 CARROLL  IL    0.027    16805       622.    16519      111            30       61
- 9   569 CASS     IL    0.024    13437       560.    13384       16             8       23
-10   570 CHAMPAI… IL    0.058   173025      2983.   146506    16559           331     8033
-11   571 CHRISTI… IL    0.042    34418       819.    34176       82            51       89
-12   572 CLARK    IL    0.03     15921       531.    15842       10            26       36
-13   573 CLAY     IL    0.028    14460       516.    14403        4            17       29
-# ℹ 424 more rows
-# ℹ 18 more variables: popother &lt;int&gt;, percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;,
-#   percamerindan &lt;dbl&gt;, percasian &lt;dbl&gt;, percother &lt;dbl&gt;, popadults &lt;int&gt;,
-#   perchsd &lt;dbl&gt;, percollege &lt;dbl&gt;, percprof &lt;dbl&gt;, poppovertyknown &lt;int&gt;,
-#   percpovertyknown &lt;dbl&gt;, percbelowpoverty &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;,
-#   percadultpoverty &lt;dbl&gt;, percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;, category &lt;chr&gt;</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-3">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>midwest <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">select</span>(county, state, percbelowpoverty, percollege)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 437 × 4
-   county    state percbelowpoverty percollege
-   &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt;
- 1 ADAMS     IL               13.2        19.6
- 2 ALEXANDER IL               32.2        11.2
- 3 BOND      IL               12.1        17.0
- 4 BOONE     IL                7.21       17.3
- 5 BROWN     IL               13.5        14.5
- 6 BUREAU    IL               10.4        18.9
- 7 CALHOUN   IL               15.1        11.9
- 8 CARROLL   IL               11.7        16.2
- 9 CASS      IL               13.9        14.1
-10 CHAMPAIGN IL               15.6        41.3
-# ℹ 427 more rows</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-4">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>midwest <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">relocate</span>(county, state, percbelowpoverty, percollege)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 437 × 28
-   county    state percbelowpoverty percollege   PID  area poptotal popdensity popwhite
-   &lt;chr&gt;     &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;
- 1 ADAMS     IL               13.2        19.6   561 0.052    66090      1271.    63917
- 2 ALEXANDER IL               32.2        11.2   562 0.014    10626       759      7054
- 3 BOND      IL               12.1        17.0   563 0.022    14991       681.    14477
- 4 BOONE     IL                7.21       17.3   564 0.017    30806      1812.    29344
- 5 BROWN     IL               13.5        14.5   565 0.018     5836       324.     5264
- 6 BUREAU    IL               10.4        18.9   566 0.05     35688       714.    35157
- 7 CALHOUN   IL               15.1        11.9   567 0.017     5322       313.     5298
- 8 CARROLL   IL               11.7        16.2   568 0.027    16805       622.    16519
- 9 CASS      IL               13.9        14.1   569 0.024    13437       560.    13384
-10 CHAMPAIGN IL               15.6        41.3   570 0.058   173025      2983.   146506
-# ℹ 427 more rows
-# ℹ 19 more variables: popblack &lt;int&gt;, popamerindian &lt;int&gt;, popasian &lt;int&gt;,
-#   popother &lt;int&gt;, percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;, percamerindan &lt;dbl&gt;,
-#   percasian &lt;dbl&gt;, percother &lt;dbl&gt;, popadults &lt;int&gt;, perchsd &lt;dbl&gt;, percprof &lt;dbl&gt;,
-#   poppovertyknown &lt;int&gt;, percpovertyknown &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;,
-#   percadultpoverty &lt;dbl&gt;, percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;, category &lt;chr&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="from-last-time-pivoting" class="slide level2 smaller">
-<h2>From last time: pivoting</h2>
-<div>
-<ul>
-<li class="fragment">Data sets can’t be labeled as <em>wide</em> or <em>long</em> but they can be made <em>wider</em> or <em>longer</em> for a certain analysis that requires a certain format</li>
-<li class="fragment">When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the <code>pivot_longer()</code> function.</li>
-<li class="fragment">You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.</li>
-</ul>
-</div>
 </section></section>
 <section>
-<section id="joining-datasets" class="title-slide slide level1 center">
-<h1>Joining datasets</h1>
+<section id="questions-from-last-time" class="title-slide slide level1 smaller center">
+<h1>Questions from last time</h1>
 
 </section>
-<section id="why-join" class="slide level2 smaller">
-<h2>Why join?</h2>
-<p>Suppose we want to answer questions like:</p>
-<blockquote>
-<p>Is there a relationship between<br>
-- number of QS courses taken<br>
-- having scored a 4 or 5 on the AP stats exam<br>
-- motivation for taking course<br>
-- …<br>
-and performance in this course?”</p>
-</blockquote>
-<div class="fragment">
-<p>Each of these would require <em>join</em>ing class performance data with an outside data source so we can have all relevant information (columns) in a single data frame.</p>
+<section id="pivoting-data" class="slide level2">
+<h2><strong>Pivoting data</strong></h2>
+<p>Suppose we have the following patient data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>patients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  patient_id pulse_1 pulse_2 pulse_3
+  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 XYZ             70      85      73
+2 ABC             90      95     102
+3 DEF            100      80      70</code></pre>
+</div>
+</div>
+<p>And we want to know:</p>
+<ul>
+<li><p>Average pulse rate for each patient.</p></li>
+<li><p>Trends in pulse rates across measurements.</p></li>
+</ul>
+<p>These require a <em>longer</em> format of the data where all pulse rates are in a single column and another column identifies the measurement number.</p>
+</section>
+<section id="pivoting-data-1" class="slide level2">
+<h2>Pivoting data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>patients_longer <span class="ot">&lt;-</span> patients <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb4-3"><a></a>    <span class="at">cols =</span> <span class="sc">!</span>patient_id,</span>
+<span id="cb4-4"><a></a>    <span class="at">names_to =</span> <span class="st">"measurement"</span>,</span>
+<span id="cb4-5"><a></a>    <span class="at">values_to =</span> <span class="st">"pulse_rate"</span></span>
+<span id="cb4-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-<p>For the next few slides…</p>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="summarizing-pivoted-data" class="slide level2">
+<h2>Summarizing pivoted data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb9-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb9-3"><a></a>  <span class="at">value_x =</span> <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)</span>
-<span id="cb9-4"><a></a>  )</span>
-<span id="cb9-5"><a></a></span>
-<span id="cb9-6"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>patients_longer <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">group_by</span>(patient_id) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_pulse =</span> <span class="fu">mean</span>(pulse_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
-     id value_x
-  &lt;dbl&gt; &lt;chr&gt;  
-1     1 x1     
-2     2 x2     
-3     3 x3     </code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb11-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb11-3"><a></a>  <span class="at">value_y =</span> <span class="fu">c</span>(<span class="st">"y1"</span>, <span class="st">"y2"</span>, <span class="st">"y4"</span>)</span>
-<span id="cb11-4"><a></a>  )</span>
-<span id="cb11-5"><a></a></span>
-<span id="cb11-6"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-     id value_y
-  &lt;dbl&gt; &lt;chr&gt;  
-1     1 y1     
-2     2 y2     
-3     4 y4     </code></pre>
-</div>
-</div>
+  patient_id mean_pulse
+  &lt;chr&gt;           &lt;dbl&gt;
+1 ABC              95.7
+2 DEF              83.3
+3 XYZ              76  </code></pre>
 </div>
 </div>
 </section>
-<section id="left_join" class="slide level2">
-<h2><code>left_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/left-join.gif"></p>
-</div><div class="column" style="width:50%;">
+<section id="visualizing-pivoted-data" class="slide level2">
+<h2>Visualizing pivoted data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">left_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb7-2"><a></a>  patients_longer, </span>
+<span id="cb7-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> measurement, <span class="at">y =</span> pulse_rate, <span class="at">group =</span> patient_id, <span class="at">color =</span> patient_id)</span>
+<span id="cb7-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-5"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-     id value_x value_y
-  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  
-1     1 x1      y1     
-2     2 x2      y2     
-3     3 x3      &lt;NA&gt;   </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="right_join" class="slide level2">
-<h2><code>right_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/right-join.gif"></p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">right_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-     id value_x value_y
-  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  
-1     1 x1      y1     
-2     2 x2      y2     
-3     4 &lt;NA&gt;    y4     </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="full_join" class="slide level2">
-<h2><code>full_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/full-join.gif"></p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">full_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 3
-     id value_x value_y
-  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  
-1     1 x1      y1     
-2     2 x2      y2     
-3     3 x3      &lt;NA&gt;   
-4     4 &lt;NA&gt;    y4     </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="inner_join" class="slide level2">
-<h2><code>inner_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/inner-join.gif"></p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">inner_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-     id value_x value_y
-  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  
-1     1 x1      y1     
-2     2 x2      y2     </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="semi_join" class="slide level2">
-<h2><code>semi_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/semi-join.gif"></p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">semi_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-     id value_x
-  &lt;dbl&gt; &lt;chr&gt;  
-1     1 x1     
-2     2 x2     </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="anti_join" class="slide level2">
-<h2><code>anti_join()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/anti-join.gif"></p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">anti_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-     id value_x
-  &lt;dbl&gt; &lt;chr&gt;  
-1     3 x3     </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section></section>
+<img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="example-passenger-capacity" class="title-slide slide level1 center">
-<h1>Example: Passenger capacity</h1>
+<section id="types-and-classes" class="title-slide slide level1 center">
+<h1>Types and classes</h1>
 
 </section>
-<section id="nycflights13-airport-capacity" class="slide level2 smaller">
-<h2><code>nycflights13</code> &amp; airport capacity</h2>
-<p>You’ve previously seen the <code>flights</code> data available in the <code>nycflights13</code> package which details all flights from one of the 3 major NYC airports in 2013.</p>
-<p>Today we would like to answer a specific question:</p>
-<div class="question">
-<p>What was the passenger capacity (i.e., maximum number of passengers) that could have flown out of the three airports in 2013?</p>
-</div>
-<div class="fragment">
-<p>To answer this we will need to know how many passenger seats each plane had available - each flight record has a <code>tailnum</code> which is a unique identifier for the plane, this can be linked to the <code>planes</code> data set which has the number of available seats for each plane.</p>
-</div>
+<section id="types-and-classes-1" class="slide level2">
+<h2>Types and classes</h2>
+<ul>
+<li><p>Type is how an object is stored in memory, e.g.,</p>
+<ul>
+<li><code>double</code>: a real number stored in double-precision floatint point format.</li>
+<li><code>integer</code>: an integer (positive or negative)</li>
+</ul></li>
+<li><p>Class is metadata about the object that can determine how common functions operate on that object, e.g.,</p>
+<ul>
+<li><code>factor</code></li>
+</ul></li>
+</ul>
 </section>
-<section id="attempt-1" class="slide level2">
-<h2>Attempt 1</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb31-2"><a></a></span>
-<span id="cb31-3"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb31-4"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(year, tailnum)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  origin capacity
-  &lt;chr&gt;     &lt;int&gt;
-1 EWR          NA
-2 JFK          NA
-3 LGA          NA</code></pre>
-</div>
-</div>
-</section>
-<section id="attempt-2" class="slide level2">
-<h2>Attempt 2</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(year, tailnum)`</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  origin capacity
-  &lt;chr&gt;     &lt;int&gt;
-1 EWR      345268
-2 JFK      179412
-3 LGA       89686</code></pre>
+<section id="types-of-vectors" class="slide level2">
+<h2>Types of vectors</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>You’ll commonly encounter:</p>
+<ul>
+<li><code>logical</code></li>
+<li><code>integer</code></li>
+<li><code>double</code></li>
+<li><code>character</code></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>You’ll less commonly encounter:</p>
+<ul>
+<li><code>list</code></li>
+<li><code>NULL</code></li>
+<li><code>complex</code></li>
+<li><code>raw</code></li>
+</ul>
 </div>
 </div>
 </section>
-<section id="attempt-3" class="slide level2">
-<h2>Attempt 3</h2>
+<section id="types-of-functions" class="slide level2">
+<h2>Types of functions</h2>
+<p>Yes, functions have types too, but you don’t need to worry about the differences in the context of doing data science.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">left_join</span>(</span>
-<span id="cb37-2"><a></a>  flights, planes,</span>
-<span id="cb37-3"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"tailnum"</span> <span class="ot">=</span> <span class="st">"tailnum"</span>)</span>
-<span id="cb37-4"><a></a>) <span class="sc">|&gt;</span></span>
-<span id="cb37-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb37-6"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell fragment">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">typeof</span>(mean) <span class="co"># regular function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  origin capacity
-  &lt;chr&gt;     &lt;int&gt;
-1 EWR    14454251
-2 JFK    13874081
-3 LGA    10522985</code></pre>
+<pre><code>[1] "closure"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">typeof</span>(<span class="st">`</span><span class="at">$</span><span class="st">`</span>) <span class="co"># internal function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "special"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">typeof</span>(sum) <span class="co"># primitive function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "builtin"</code></pre>
+</div>
+</div>
+</section>
+<section id="factors" class="slide level2">
+<h2>Factors</h2>
+<p>A <code>factor</code> is a vector that can contain only predefined values. It is used to store categorical data.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"a"</span>))</span>
+<span id="cb14-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] a b b a
+Levels: a b</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "integer"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">attributes</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$levels
+[1] "a" "b"
+
+$class
+[1] "factor"</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/08/factor.png" class="quarto-figure quarto-figure-center" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="other-classes" class="slide level2">
+<h2>Other classes</h2>
+<p>Just a couple of examples…</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Date:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb20-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2024-02-07"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">attributes</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$class
+[1] "Date"</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Date-time:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>now <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"2024-02-08 11:45"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span>
+<span id="cb26-2"><a></a>now</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2024-02-08 11:45:00 EST"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">typeof</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "double"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">attributes</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$class
+[1] "POSIXct" "POSIXt" 
+
+$tzone
+[1] "EST"</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section></section>
@@ -867,21 +652,13 @@ and performance in this course?”</p>
 <h1>Application exercise</h1>
 
 </section>
-<section id="goal" class="slide level2">
-<h2>Goal</h2>
-<p>Make a bar plot of total populations of continents, where the input data are:</p>
-<ol type="1">
-<li>Countries and populations</li>
-<li>Countries and continents</li>
-</ol>
-</section>
-<section id="ae-06-population-joining" class="slide level2">
-<h2><code>ae-06-population-joining</code></h2>
+<section id="ae-07-population-types" class="slide level2">
+<h2><code>ae-07-population-types</code></h2>
 <div class="appex">
 <ul>
 <li><p>Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called <code>ae</code>.</p></li>
 <li><p>If there are any uncommitted files, commit them, and then click <strong>Pull</strong>.</p></li>
-<li><p>Open the file called <code>ae-06-population-joining.qmd</code> and render it.</p></li>
+<li><p>Open the file called <code>ae-07-population-types.qmd</code> and render it.</p></li>
 </ul>
 </div>
 
