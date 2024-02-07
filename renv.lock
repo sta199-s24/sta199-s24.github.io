@@ -1659,6 +1659,22 @@
       ],
       "Hash": "41b847654f567341725473431dd0d5ab"
     },
+    "repr": {
+      "Package": "repr",
+      "Version": "1.1.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "base64enc",
+        "grDevices",
+        "htmltools",
+        "jsonlite",
+        "pillar",
+        "utils"
+      ],
+      "Hash": "fab761ee8f3554a04afef40ac53689f4"
+    },
     "reprex": {
       "Package": "reprex",
       "Version": "2.0.2",
@@ -1834,6 +1850,30 @@
         "utils"
       ],
       "Hash": "f432b3379fb1a47046e253468b6b6b6d"
+    },
+    "skimr": {
+      "Package": "skimr",
+      "Version": "2.1.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "dplyr",
+        "knitr",
+        "magrittr",
+        "pillar",
+        "purrr",
+        "repr",
+        "rlang",
+        "stats",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "vctrs"
+      ],
+      "Hash": "8f138ff2c8fbea9e0a523f6c399c0386"
     },
     "snakecase": {
       "Package": "snakecase",
