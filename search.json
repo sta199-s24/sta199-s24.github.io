@@ -2776,11 +2776,18 @@
     "href": "slides/08-data-types-classes.html#pivoting-data",
     "title": "Data types and classes",
     "section": "Pivoting data",
-    "text": "Pivoting data\nSuppose we have the following patient data:\n\npatients\n\n# A tibble: 3 × 4\n  patient_id pulse_1 pulse_2 pulse_3\n  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 XYZ             70      85      73\n2 ABC             90      95     102\n3 DEF            100      80      70\n\n\nAnd we want to know:\n\nAverage pulse rate for each patient.\nTrends in pulse rates across measurements.\n\nThese require a longer format of the data where all pulse rates are in a single column and another column identifies the measurement number."
+    "text": "Pivoting data\nSuppose we have the following patient data:\n\npatients\n\n# A tibble: 3 × 4\n  patient_id pulse_1 pulse_2 pulse_3\n  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 XYZ             70      85      73\n2 ABC             90      95     102\n3 DEF            100      80      70\n\n\nAnd we want to know:\n\nAverage pulse rate for each patient.\nTrends in pulse rates across measurements."
   },
   {
     "objectID": "slides/08-data-types-classes.html#pivoting-data-1",
     "href": "slides/08-data-types-classes.html#pivoting-data-1",
+    "title": "Data types and classes",
+    "section": "Pivoting data",
+    "text": "Pivoting data\nSuppose we have the following patient data:\n\npatients\n\n# A tibble: 3 × 4\n  patient_id pulse_1 pulse_2 pulse_3\n  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 XYZ             70      85      73\n2 ABC             90      95     102\n3 DEF            100      80      70\n\n\nAnd we want to know:\n\nAverage pulse rate for each patient.\nTrends in pulse rates across measurements.\n\nThese require a longer format of the data where all pulse rates are in a single column and another column identifies the measurement number."
+  },
+  {
+    "objectID": "slides/08-data-types-classes.html#pivoting-data-2",
+    "href": "slides/08-data-types-classes.html#pivoting-data-2",
     "title": "Data types and classes",
     "section": "Pivoting data",
     "text": "Pivoting data\n\npatients_longer &lt;- patients |&gt;\n  pivot_longer(\n    cols = !patient_id,\n    names_to = \"measurement\",\n    values_to = \"pulse_rate\"\n  )"
