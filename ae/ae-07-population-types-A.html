@@ -382,7 +382,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We will use the following two packages in this application exercise.</p>
 <ul>
 <li><strong>tidyverse</strong>: For data import, wrangling, and visualization.</li>
-<li><strong>skimr</strong>: For summarizing the entire data frame at once.</li>
 <li><strong>scales</strong>: For better axis labels.</li>
 </ul>
 <div class="cell">
@@ -474,7 +473,7 @@ Caused by warning:
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cars =</span> <span class="fu">if_else</span>(cars <span class="sc">==</span> <span class="st">"three"</span>, <span class="st">"3"</span>, cars),</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cars =</span> <span class="fu">as.numeric</span>(cars)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
    cars
@@ -484,7 +483,7 @@ Caused by warning:
 3     3</code></pre>
 </div>
 </div></li>
-<li><p>Your turn: First, guess the type of the vector. Then, check if you guessed right. I’ve done the first one for you, you’ll see that it’s helpful to check the type of each element of the vector first.</p>
+<li><p><strong>Your turn:</strong> First, guess the type of the vector. Then, check if you guessed right. I’ve done the first one for you, you’ll see that it’s helpful to check the type of each element of the vector first.</p>
 <ul>
 <li><p><code>c(1, 1L, "C")</code></p>
 <div class="cell">
@@ -599,6 +598,9 @@ Caused by warning:
 <section id="populations-in-continents" class="level2">
 <h2 class="anchored" data-anchor-id="populations-in-continents">Populations in continents</h2>
 <p>In the previous application exercise you joined two datasets (after a bit of data cleaning), and calculated total population in each continent and visualized it.</p>
+<ul>
+<li>First, you loaded the data:</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>continents <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://sta199-s24.github.io/data/continents.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -623,6 +625,9 @@ dbl (2): year, population
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
+<ul>
+<li>Then you cleaned the country names where the spelling in one data frame didn’t match the other, and joined the data sets:</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>population_continent <span class="ot">&lt;-</span> population <span class="sc">|&gt;</span></span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">case_when</span>(</span>
@@ -637,12 +642,18 @@ dbl (2): year, population
 <span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(continents, <span class="at">by =</span> <span class="fu">join_by</span>(country <span class="sc">==</span> entity))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>Then, you calculated total population for each continent.</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>population_summary <span class="ot">&lt;-</span> population_continent <span class="sc">|&gt;</span></span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">|&gt;</span></span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_pop =</span> <span class="fu">sum</span>(population)) <span class="sc">|&gt;</span></span>
 <span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ul>
+<li>And finally, you visualized these data.</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(population_summary, <span class="fu">aes</span>()) <span class="sc">+</span></span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> total_pop, <span class="at">y =</span> continent)) <span class="sc">+</span></span>
