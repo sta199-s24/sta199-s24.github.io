@@ -2,9 +2,6 @@
 title: "AE 07: Types and classes and populations"
 categories: 
   - Application exercise
-editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
 
 ## Packages
@@ -24,69 +21,67 @@ library(scales)
 
 ## Type coercion
 
--   **Demo:** Determine the type of the following vector.
-    And then, change the type to numeric.
+-   **Demo:** Determine the type of the following vector. And then, change the type to numeric.
 
-    ```{r}
-    #| label: typeof-x
+```{r}
+#| label: typeof-x
 
-    x <- c("1", "2", "3")
+x <- c("1", "2", "3")
 
-    # add code here
-    ```
+# add code here
+```
 
--   **Demo:** Once again, determine the type of the following vector.
-    And then, change the type to numeric.
-    What's different than the previous exercise?
+-   **Demo:** Once again, determine the type of the following vector. And then, change the type to numeric. What's different than the previous exercise?
 
-    ```{r}
-    #| label: typeof-y
+```{r}
+#| label: typeof-y
 
-    y <- c("a", "b", "c")
+y <- c("a", "b", "c")
 
-    # add code here
-    ```
+# add code here
+```
 
--   **Demo:** Once again, determine the type of the following vector.
-    And then, change the type to numeric.
-    What's different than the previous exercise?
+-   **Demo:** Once again, determine the type of the following vector. And then, change the type to numeric. What's different than the previous exercise?
 
-    ```{r}
-    #| label: typeof-z
+```{r}
+#| label: typeof-z
 
-    z <- c("1", "2", "three")
+z <- c("1", "2", "three")
 
-    # add code here
-    ```
+# add code here
+```
 
--   **Demo:** Suppose you conducted a survey where you asked people how many cars their household owns collectively.
-    And the answers are as follows:
+-   **Demo:** Suppose you conducted a survey where you asked people how many cars their household owns collectively. And the answers are as follows:
 
-    ```{r}
-    #| label: survey-results
+```{r}
+#| label: survey-results
 
-    survey_results <- tibble(cars = c(1, 2, "three"))
-    survey_results
-    ```
+survey_results <- tibble(cars = c(1, 2, "three"))
+survey_results
+```
 
-    This is annoying because of that third survey taker who just had to go and type out the number instead of providing as a numeric value.
-    So now you need to update the `cars` variable to be numeric.
-    You do the following
+```         
+This is annoying because of that third survey taker who just had to go and type out the number instead of providing as a numeric value.
+So now you need to update the `cars` variable to be numeric.
+You do the following
+```
 
-    ```{r}
-    #| label: survey-results-mutate-1
+```{r}
+#| label: survey-results-mutate-1
 
-    # add code here
-    ```
+# add code here
+```
 
-    And now things are even more annoying because you get a warning `NAs introduced by coercion` that happened while computing `cars = as.numeric(cars)` and the response from the third survey taker is now an `NA` (you lost their data).
-    Fix your `mutate()` call to avoid this warning.
+```         
+And now things are even more annoying because you get a warning `NAs introduced by coercion` that happened while computing `cars = as.numeric(cars)` and the response from the third survey taker is now an `NA` (you lost their data).
+Fix your `mutate()` call to avoid this warning.
+```
 
-    ```{r}
-    #| label: survey-results-mutate-2
+```{r}
+#| label: survey-results-mutate-2
 
-    # add code here
-    ```
+# add code here
+```
 
 -   **Your turn:** First, guess the type of the vector.
     Then, check if you guessed right.
@@ -94,74 +89,82 @@ library(scales)
 
     -   `c(1, 1L, "C")`
 
-        ```{r}
-        v1 <- c(1, 1L, "C")
+```{r}
+v1 <- c(1, 1L, "C")
 
-        # to help you guess
-        typeof(1)
-        typeof(1L)
-        typeof("C")
+# to help you guess
+typeof(1)
+typeof(1L)
+typeof("C")
 
-        # to check after you guess
-        typeof(v1)
-        ```
+# to check after you guess
+typeof(v1)
+```
 
-    -   `c(1L / 0, "A")`
+```         
+-   `c(1L / 0, "A")`
+```
 
-        ```{r}
-        v2 <- c(1L / 0, "A")
+```{r}
+v2 <- c(1L / 0, "A")
 
-        # to help you guess
-        typeof(1L)
-        typeof(0)
-        typeof(1L / 0)
-        typeof("A")
+# to help you guess
+typeof(1L)
+typeof(0)
+typeof(1L / 0)
+typeof("A")
 
-        # to check after you guess
-        typeof(v2)
-        ```
+# to check after you guess
+typeof(v2)
+```
 
-    -   `c(1:3, 5)`
+```         
+- `c(1:3, 5)`
+```
 
-        ```{r}
-        v3 <- c(1:3, 5)
+```{r}
+v3 <- c(1:3, 5)
 
-        # to help you guess
+# to help you guess
 
-        # add code here
+# add code here
 
-        # to check after you guess
+# to check after you guess
 
-        # add code here
-        ```
+# add code here
+```
 
-    -   `c(3, "3+")`
+```         
+-   `c(3, "3+")`
+```
 
-        ```{r}
-        v4 <- c(3, "3+")
+```{r}
+v4 <- c(3, "3+")
 
-        # to help you guess
+# to help you guess
 
-        # add code here
+# add code here
 
-        # to check after you guess
+# to check after you guess
 
-        # add code here
-        ```
+# add code here
+```
 
-    -   `c(NA, TRUE)`
+```         
+-   `c(NA, TRUE)`
+```
 
-        ```{r}
-        v5 <- c(NA, TRUE)
+```{r}
+v5 <- c(NA, TRUE)
 
-        # to help you guess
+# to help you guess
 
-        # add code here
+# add code here
 
-        # to check after you guess
+# to check after you guess
 
-        # add code here
-        ```
+# add code here
+```
 
 ## Populations in continents
 
