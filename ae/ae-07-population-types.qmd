@@ -211,7 +211,7 @@ population_summary <- population_continent |>
 ```{r}
 #| label: visualize
 
-ggplot(population_summary, aes()) +
+ggplot(population_summary) +
   geom_point(aes(x = total_pop, y = continent)) +
   geom_segment(aes(y = continent, yend = continent, x = 0, xend = total_pop)) +
   scale_x_continuous(labels = label_number(scale = 1/1000000, suffix = " bil")) +

@@ -217,7 +217,7 @@ population_summary <- population_continent |>
 ```{r}
 #| label: visualize
 
-ggplot(population_summary, aes()) +
+ggplot(population_summary) +
   geom_point(aes(x = total_pop, y = continent)) +
   geom_segment(aes(y = continent, yend = continent, x = 0, xend = total_pop)) +
   scale_x_continuous(labels = label_number(scale = 1/1000000, suffix = " bil")) +
@@ -242,8 +242,9 @@ Ordering the continents by the value of total population would be better.
 
 population_summary |>
   mutate(continent = fct_reorder(continent, total_pop)) |>
-  ggplot(aes()) +
+  ggplot() +
   geom_point(aes(x = total_pop, y = continent)) +
+  geom_segment(aes(y = continent, yend = continent, x = 0, xend = total_pop)) +
   geom_segment(aes(y = continent, yend = continent, x = 0, xend = total_pop)) +
   scale_x_continuous(labels = label_number(scale = 1/1000000, suffix = " bil")) +
   theme_minimal() +
