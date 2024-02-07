@@ -1,0 +1,237 @@
+---
+title: "AE 07: Types and classes and populations"
+categories: 
+  - Application exercise
+editor: visual
+---
+
+## Packages
+
+We will use the following two packages in this application exercise.
+
+-   **tidyverse**: For data import, wrangling, and visualization.
+-   **scales**: For better axis labels.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(scales)
+```
+
+## Type coercion
+
+-   **Demo:** Determine the type of the following vector.
+    And then, change the type to numeric.
+
+    ```{r}
+    #| label: typeof-x
+
+    x <- c("1", "2", "3")
+    typeof(x)
+
+    as.numeric(x)
+    ```
+
+-   **Demo:** Once again, determine the type of the following vector.
+    And then, change the type to numeric.
+    What's different than the previous exercise?
+
+    ```{r}
+    #| label: typeof-y
+
+    y <- c("a", "b", "c")
+    typeof(y)
+
+    as.numeric(y)
+    ```
+
+-   **Demo:** Once again, determine the type of the following vector.
+    And then, change the type to numeric.
+    What's different than the previous exercise?
+
+    ```{r}
+    #| label: typeof-z
+
+    z <- c("1", "2", "three")
+    typeof(z)
+
+    as.numeric(z)
+    ```
+
+-   **Demo:** Suppose you conducted a survey where you asked people how many cars their household owns collectively.
+    And the answers are as follows:
+
+    ```{r}
+    #| label: survey-results
+
+    survey_results <- tibble(cars = c(1, 2, "three"))
+    survey_results
+    ```
+
+    This is annoying because of that third survey taker who just had to go and type out the number instead of providing as a numeric value.
+    So now you need to update the `cars` variable to be numeric.
+    You do the following
+
+    ```{r}
+    #| label: survey-results-mutate-1
+
+    survey_results |>
+      mutate(cars = as.numeric(cars))
+    ```
+
+    And now things are even more annoying because you get a warning `NAs introduced by coercion` that happened while computing `cars = as.numeric(cars)` and the response from the third survey taker is now an `NA` (you lost their data).
+    Fix your `mutate()` call to avoid this warning.
+
+    ```{r}
+    #| label: survey-results-mutate-2
+
+    survey_results |>
+      mutate(
+        cars = if_else(cars == "three", "3", cars),
+        cars = as.numeric(cars)
+        )
+    ```
+
+-   Your turn: First, guess the type of the vector.
+    Then, check if you guessed right.
+    I've done the first one for you, you'll see that it's helpful to check the type of each element of the vector first.
+
+    -   `c(1, 1L, "C")`
+
+        ```{r}
+        v1 <- c(1, 1L, "C")
+
+        # to help you guess
+        typeof(1)
+        typeof(1L)
+        typeof("C")
+
+        # to check after you guess
+        typeof(v1)
+        ```
+
+    -   `c(1L / 0, "A")`
+
+        ```{r}
+        v2 <- c(1L / 0, "A")
+
+        # to help you guess
+        typeof(1L)
+        typeof(0)
+        typeof(1L / 0)
+        typeof("A")
+
+        # to check after you guess
+        typeof(v2)
+        ```
+
+    -   `c(1:3, 5)`
+
+        ```{r}
+        v3 <- c(1:3, 5)
+
+        # to help you guess
+        typeof(1:3)
+        typeof(5)
+
+        # to check after you guess
+        typeof(v3)
+        ```
+
+    -   `c(3, "3+")`
+
+        ```{r}
+        v4 <- c(3, "3+")
+
+        # to help you guess
+        typeof(3)
+        typeof("3+")
+
+        # to check after you guess
+        typeof(v4)
+        ```
+
+    -   `c(NA, TRUE)`
+
+        ```{r}
+        v5 <- c(NA, TRUE)
+
+        # to help you guess
+        typeof(NA)
+        typeof(TRUE)
+
+        # to check after you guess
+        typeof(v5)
+        ```
+
+## Populations in continents
+
+In the previous application exercise you joined two datasets (after a bit of data cleaning), and calculated total population in each continent and visualized it.
+
+```{r}
+#| label: load-data
+
+continents <- read_csv("https://sta199-s24.github.io/data/continents.csv")
+population <- read_csv("https://sta199-s24.github.io/data/world-pop-2022.csv")
+```
+
+```{r}
+#| label: clean and join
+
+population_continent <- population |>
+  mutate(country = case_when(
+    country == "Congo, Dem. Rep." ~ "Democratic Republic of Congo",
+    country == "Congo, Rep." ~ "Congo",
+    country == "Hong Kong SAR, China" ~ "Hong Kong",
+    country == "Korea, Dem. People's Rep." ~ "North Korea",
+    country == "Korea, Rep." ~ "South Korea",
+    country == "Kyrgyz Republic" ~ "Kyrgyzstan",
+    .default = country
+    )
+  ) |>
+  left_join(continents, by = join_by(country == entity))
+```
+
+```{r}
+#| label: summarize
+
+population_summary <- population_continent |>
+  group_by(continent) |>
+  summarize(total_pop = sum(population)) |>
+  arrange(desc(total_pop))
+```
+
+```{r}
+#| label: visualize
+
+ggplot(population_summary, aes()) +
+  geom_point(aes(x = total_pop, y = continent)) +
+  geom_segment(aes(y = continent, yend = continent, x = 0, xend = total_pop)) +
+  scale_x_continuous(labels = label_number(scale = 1/1000000, suffix = " bil")) +
+  theme_minimal() +
+  labs(
+    x = "Total population",
+    y = "Continent",
+    title = "World population",
+    subtitle = "As of 2022",
+    caption = "Data sources: The World Bank and Our World in Data"
+  )
+```
+
+-   **Question:** Take a look at the visualization. How are the continents ordered? What would be a better order?
+
+Add your response here.
+
+-   **Demo:** Reorder the continents on the y-axis (levels of `continent`) in order of value of total population. You will want to use a function from the **forcats** package, see <https://forcats.tidyverse.org/reference/index.html> for inspiration and help.
+
+```{r}
+#| label: visualize-better
+
+#
+```
+
+-   **Think out loud:** Describe what is happening in the each step of the code chunk above.
+
+Add your response here.

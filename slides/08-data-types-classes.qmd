@@ -1,7 +1,7 @@
 ---
-title: "Joining data"
-subtitle: "Lecture 7"
-date: "February 1, 2024"
+title: "Data types and classes"
+subtitle: "Lecture 8"
+date: "February 8, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
@@ -15,6 +15,7 @@ editor_options:
 #| echo: false
 
 library(countdown)
+library(tidyverse)
 ```
 
 ## While you wait for class to begin...
@@ -27,270 +28,173 @@ library(countdown)
     <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
     ```
 
-## Announcements
+# Questions from last time {.smaller}
 
--   Exam 1 in class next week on Thursday – cheat sheet (1 page, both sides, hand-written or typed, must be prepared by you)
--   Exam 1 take home starts after class on Thursday, due at 8 am on Monday (open resources, internet, etc., closed to other humans)
--   Next week in lab: Exam 1 review – come with questions!
--   No new lab assigned next week during exam
-
-## Study tips for the exam
-
--   Go over lecture materials and application exercises
--   Review labs and feedback you've received so far
--   Do the exercises at the end of readings from both books
--   Do the exam review over (to be posted on Friday)
--   Go to lab on Monday with questions
-
-## Questions from last time {.smaller}
-
-**Is there a limit to a tibble size?**
-
-No, a tibble (i.e., a data frame) can be any number of rows or columns.
-However when you print it, it will only print the first 10 rows and the columns that fit across the screen, document, etc.
-
-If you want to see more rows and columns, you can
-
--   open it in the data viewer with `view(df)`
-
--   explicitly print more rows with, e.g., `df |> print(n = 25)`
-
--   explicitly `select()` or `relocate()` columns
-
-## Options for a tibble {.smaller}
-
-::: panel-tabset
-## Default
+## **Pivoting data**
 
 ```{r}
-#| message: false
+#| include: false
 
-library(tidyverse)
-midwest
+patients <- tribble(
+  ~patient_id, ~pulse_1, ~pulse_2, ~pulse_3,
+  "XYZ", 70, 85, 73,
+  "ABC", 90, 95, 102,
+  "DEF", 100, 80, 70
+)
 ```
 
-## `print()`
+Suppose we have the following patient data:
 
 ```{r}
-midwest |>
-  print(n = 13)
+patients
 ```
 
-## `select()`
+And we want to know:
+
+-   Average pulse rate for each patient.
+
+-   Trends in pulse rates across measurements.
+
+These require a *longer* format of the data where all pulse rates are in a single column and another column identifies the measurement number.
+
+## Pivoting data
 
 ```{r}
-midwest |>
-  select(county, state, percbelowpoverty, percollege)
+patients_longer <- patients |>
+  pivot_longer(
+    cols = !patient_id,
+    names_to = "measurement",
+    values_to = "pulse_rate"
+  )
 ```
 
-## `relocate()`
+## Summarizing pivoted data
 
 ```{r}
-midwest |>
-  relocate(county, state, percbelowpoverty, percollege)
+patients_longer |>
+  group_by(patient_id) |>
+  summarize(mean_pulse = mean(pulse_rate))
 ```
+
+## Visualizing pivoted data
+
+```{r}
+ggplot(
+  patients_longer, 
+  aes(x = measurement, y = pulse_rate, group = patient_id, color = patient_id)
+  ) +
+  geom_line()
+```
+
+# Types and classes
+
+## Types and classes 
+
+-   Type is how an object is stored in memory, e.g.,
+
+    -   `double`: a real number stored in double-precision floatint point format.
+    -   `integer`: an integer (positive or negative)
+
+- Class is metadata about the object that can determine how common functions operate on that object, e.g.,
+
+    -   `factor`
+
+## Types of vectors
+
+::: columns
+::: {.column width="50%"}
+You'll commonly encounter:
+
+-   `logical`
+-   `integer`
+-   `double`
+-   `character`
 :::
 
-## From last time: pivoting {.smaller}
+::: {.column width="50%"}
+You'll less commonly encounter:
 
-::: incremental
--   Data sets can't be labeled as *wide* or *long* but they can be made *wider* or *longer* for a certain analysis that requires a certain format
--   When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the `pivot_longer()` function.
--   You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.
+-   `list`
+-   `NULL`
+-   `complex`
+-   `raw`
+:::
 :::
 
-# Joining datasets
+## Types of functions
 
-## Why join? {.smaller}
+Yes, functions have types too, but you don't need to worry about the differences in the context of doing data science.
 
-Suppose we want to answer questions like:
+```{r}
+typeof(mean) # regular function
 
-> Is there a relationship between\
-> - number of QS courses taken\
-> - having scored a 4 or 5 on the AP stats exam\
-> - motivation for taking course\
-> - ...\
-> and performance in this course?"
+typeof(`$`) # internal function
 
-. . .
+typeof(sum) # primitive function
+```
 
-Each of these would require *join*ing class performance data with an outside data source so we can have all relevant information (columns) in a single data frame.
+## Factors
 
-## Setup
-
-For the next few slides...
+A `factor` is a vector that can contain only predefined values.
+It is used to store categorical data.
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-x <- tibble(
-  id = c(1, 2, 3),
-  value_x = c("x1", "x2", "x3")
-  )
-
+x <- factor(c("a", "b", "b", "a"))
 x
+
+typeof(x)
+
+attributes(x)
 ```
 :::
 
 ::: {.column width="50%"}
-```{r}
-y <- tibble(
-  id = c(1, 2, 4),
-  value_y = c("y1", "y2", "y4")
-  )
-
-y
-```
+![](images/08/factor.png){fig-align="center" width="400"}
 :::
 :::
 
-## `left_join()`
+## Other classes
+
+Just a couple of examples...
 
 ::: columns
 ::: {.column width="50%"}
-![](images/left-join.gif)
+Date:
+
+```{r}
+today <- Sys.Date()
+today
+
+typeof(today)
+
+attributes(today)
+```
 :::
 
 ::: {.column width="50%"}
+Date-time:
+
 ```{r}
-left_join(x, y)
+now <- as.POSIXct("2024-02-08 11:45", tz = "EST")
+now
+
+typeof(now)
+
+attributes(now)
 ```
 :::
 :::
-
-## `right_join()`
-
-::: columns
-::: {.column width="50%"}
-![](images/right-join.gif)
-:::
-
-::: {.column width="50%"}
-```{r}
-right_join(x, y)
-```
-:::
-:::
-
-## `full_join()`
-
-::: columns
-::: {.column width="50%"}
-![](images/full-join.gif)
-:::
-
-::: {.column width="50%"}
-```{r}
-full_join(x, y)
-```
-:::
-:::
-
-## `inner_join()`
-
-::: columns
-::: {.column width="50%"}
-![](images/inner-join.gif)
-:::
-
-::: {.column width="50%"}
-```{r}
-inner_join(x, y)
-```
-:::
-:::
-
-## `semi_join()`
-
-::: columns
-::: {.column width="50%"}
-![](images/semi-join.gif)
-:::
-
-::: {.column width="50%"}
-```{r}
-semi_join(x, y)
-```
-:::
-:::
-
-## `anti_join()`
-
-::: columns
-::: {.column width="50%"}
-![](images/anti-join.gif)
-:::
-
-::: {.column width="50%"}
-```{r}
-anti_join(x, y)
-```
-:::
-:::
-
-# Example: Passenger capacity
-
-## `nycflights13` & airport capacity {.smaller}
-
-You've previously seen the `flights` data available in the `nycflights13` package which details all flights from one of the 3 major NYC airports in 2013.
-
-Today we would like to answer a specific question:
-
-::: question
-What was the passenger capacity (i.e., maximum number of passengers) that could have flown out of the three airports in 2013?
-:::
-
-. . .
-
-To answer this we will need to know how many passenger seats each plane had available - each flight record has a `tailnum` which is a unique identifier for the plane, this can be linked to the `planes` data set which has the number of available seats for each plane.
-
-## Attempt 1
-
-```{r}
-#| output-location: fragment
-library(nycflights13)
-
-left_join(flights, planes) |>
-  group_by(origin) |>
-  summarize(capacity = sum(seats))
-```
-
-## Attempt 2
-
-```{r}
-#| output-location: fragment
-left_join(flights, planes) |>
-  group_by(origin) |>
-  summarize(capacity = sum(seats, na.rm = TRUE))
-```
-
-## Attempt 3
-
-```{r}
-#| output-location: fragment
-left_join(
-  flights, planes,
-  by = c("tailnum" = "tailnum")
-) |>
-  group_by(origin) |>
-  summarize(capacity = sum(seats, na.rm = TRUE))
-```
 
 # Application exercise
 
-## Goal
-
-Make a bar plot of total populations of continents, where the input data are:
-
-1.  Countries and populations
-2.  Countries and continents
-
-## `ae-06-population-joining`
+## `ae-07-population-types`
 
 ::: appex
 -   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
 
 -   If there are any uncommitted files, commit them, and then click **Pull**.
 
--   Open the file called `ae-06-population-joining.qmd` and render it.
+-   Open the file called `ae-07-population-types.qmd` and render it.
 :::
