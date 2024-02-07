@@ -88,14 +88,14 @@ ggplot(
 
 # Types and classes
 
-## Types and classes 
+## Types and classes
 
 -   Type is how an object is stored in memory, e.g.,
 
     -   `double`: a real number stored in double-precision floatint point format.
     -   `integer`: an integer (positive or negative)
 
-- Class is metadata about the object that can determine how common functions operate on that object, e.g.,
+-   Class is metadata about the object that can determine how common functions operate on that object, e.g.,
 
     -   `factor`
 
