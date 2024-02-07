@@ -421,20 +421,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
 <h1>Warm up</h1>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ────────────────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     
-── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-</div>
+
 </section>
 <section id="while-you-wait-for-class-to-begin" class="slide level2">
 <h2>While you wait for class to begin…</h2>
@@ -453,7 +440,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2><strong>Pivoting data</strong></h2>
 <p>Suppose we have the following patient data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>patients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>patients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   patient_id pulse_1 pulse_2 pulse_3
@@ -473,20 +460,20 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="pivoting-data-1" class="slide level2">
 <h2>Pivoting data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>patients_longer <span class="ot">&lt;-</span> patients <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb4-3"><a></a>    <span class="at">cols =</span> <span class="sc">!</span>patient_id,</span>
-<span id="cb4-4"><a></a>    <span class="at">names_to =</span> <span class="st">"measurement"</span>,</span>
-<span id="cb4-5"><a></a>    <span class="at">values_to =</span> <span class="st">"pulse_rate"</span></span>
-<span id="cb4-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>patients_longer <span class="ot">&lt;-</span> patients <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-3"><a></a>    <span class="at">cols =</span> <span class="sc">!</span>patient_id,</span>
+<span id="cb3-4"><a></a>    <span class="at">names_to =</span> <span class="st">"measurement"</span>,</span>
+<span id="cb3-5"><a></a>    <span class="at">values_to =</span> <span class="st">"pulse_rate"</span></span>
+<span id="cb3-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="summarizing-pivoted-data" class="slide level2">
 <h2>Summarizing pivoted data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>patients_longer <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">group_by</span>(patient_id) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_pulse =</span> <span class="fu">mean</span>(pulse_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>patients_longer <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">group_by</span>(patient_id) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_pulse =</span> <span class="fu">mean</span>(pulse_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   patient_id mean_pulse
@@ -500,11 +487,11 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="visualizing-pivoted-data" class="slide level2">
 <h2>Visualizing pivoted data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb7-2"><a></a>  patients_longer, </span>
-<span id="cb7-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> measurement, <span class="at">y =</span> pulse_rate, <span class="at">group =</span> patient_id, <span class="at">color =</span> patient_id)</span>
-<span id="cb7-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb6-2"><a></a>  patients_longer, </span>
+<span id="cb6-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> measurement, <span class="at">y =</span> pulse_rate, <span class="at">group =</span> patient_id, <span class="at">color =</span> patient_id)</span>
+<span id="cb6-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
@@ -553,15 +540,15 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Types of functions</h2>
 <p>Yes, functions have types too, but you don’t need to worry about the differences in the context of doing data science.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">typeof</span>(mean) <span class="co"># regular function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">typeof</span>(mean) <span class="co"># regular function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "closure"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">typeof</span>(<span class="st">`</span><span class="at">$</span><span class="st">`</span>) <span class="co"># internal function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">typeof</span>(<span class="st">`</span><span class="at">$</span><span class="st">`</span>) <span class="co"># internal function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "special"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">typeof</span>(sum) <span class="co"># primitive function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">typeof</span>(sum) <span class="co"># primitive function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "builtin"</code></pre>
 </div>
@@ -573,17 +560,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"a"</span>))</span>
-<span id="cb14-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"a"</span>))</span>
+<span id="cb13-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] a b b a
 Levels: a b</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">attributes</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">attributes</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "a" "b"
@@ -608,16 +595,16 @@ $class
 <div class="column" style="width:50%;">
 <p>Date:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
-<span id="cb20-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb19-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2024-02-07"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">attributes</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">attributes</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$class
 [1] "Date"</code></pre>
@@ -626,16 +613,16 @@ $class
 </div><div class="column" style="width:50%;">
 <p>Date-time:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>now <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"2024-02-08 11:45"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span>
-<span id="cb26-2"><a></a>now</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>now <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"2024-02-08 11:45"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span>
+<span id="cb25-2"><a></a>now</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2024-02-08 11:45:00 EST"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">typeof</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">typeof</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">attributes</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">attributes</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$class
 [1] "POSIXct" "POSIXt" 
