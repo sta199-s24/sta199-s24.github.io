@@ -865,6 +865,13 @@
     ]
   },
   {
+    "objectID": "exam-review/exam-1-review-A.html",
+    "href": "exam-review/exam-1-review-A.html",
+    "title": "Exam 1 Review",
+    "section": "",
+    "text": "b - The blizzard_salary dataset has 409 rows. The salary_type variable is cateogorical. The percent_incr variable is numerical and continuous.\nFigure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.\nc - It’s a value higher than the median for hourly but lower than the mean for salaried.\nb - There is more variability around the mean compared to the hourly distribution.\nb - Pie charts and waffle charts are for categorical data only.\nc - mutate() is used to create or modify a variable.\na - \"Poor\", \"Successful\", \"High\", \"Top\"\nb - Option 2. Shows the proportion of each performance rating for each salary type.\nThere may be some NAs in these two variables that are not visible in the plot.\nThe proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.\nc - filter(salary_type != \"Hourly\" & performance_rating == \"Poor\") - There are 5 observations for “not Hourly” “and” Poor.\na - arrange() - The result is arranged in increasing order of annual_salary, which is the default for arrange().\nc, d, e, f.\nPart 1:\n\nRender: Run all of the code and render all of the text in the document and produce an output.\nCommit: Take a snapshot of your changes in Git with an appropriate message.\nPush: Send your changes off to GitHub.\n\nPart 2: c - Rendering or committing isn’t sufficient to send your changes to your GitHub repository, a push is needed. A pull is also not needed to view the changes in the browser."
+  },
+  {
     "objectID": "computing-troubleshooting.html",
     "href": "computing-troubleshooting.html",
     "title": "Computing troubleshooting",
@@ -2049,6 +2056,97 @@
     ]
   },
   {
+    "objectID": "exam-review/exam-1-review.html",
+    "href": "exam-review/exam-1-review.html",
+    "title": "Exam 1 Review",
+    "section": "",
+    "text": "In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: Blizzard Workers Share Salaries in Revolt Over Pay)\nThe name of the data frame used for this analysis is blizzard_salary and the variables are:\nThe top ten rows of blizzard_salary are shown below:\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-1",
+    "href": "exam-review/exam-1-review.html#question-1",
+    "title": "Exam 1 Review",
+    "section": "Question 1",
+    "text": "Question 1\nWhich of the following is correct?\n\nThe blizzard_salary dataset has 399 rows.\nEach row represents a Blizzard Entertainment worker who filled out the spreadsheet.\nThe salary_type variable is numerical.\nThe percent_incr variable is numerical and discrete."
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-2",
+    "href": "exam-review/exam-1-review.html#question-2",
+    "title": "Exam 1 Review",
+    "section": "Question 2",
+    "text": "Question 2\nFigure 1 (a) and Figure 1 (b) show the distributions of annual salaries of hourly and salaried workers. The two figures show the same data, with the facets organized across rows and across columns. Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers. Explain your reasoning.\n\n\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\nFigure 1: Distribution of annual salaries of Blizzard employees"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-3",
+    "href": "exam-review/exam-1-review.html#question-3",
+    "title": "Exam 1 Review",
+    "section": "Question 3",
+    "text": "Question 3\nSuppose your teammate wrote the following code as part of their analysis of the data.\nThey then printed out the results shown below. Unfortunately one of the numbers got erased from the printout. It’s indicated with _____ below.\n# A tibble: 2 × 3\n  salary_type mean_annual_salary median_annual_salary\n  &lt;chr&gt;                    &lt;dbl&gt;                &lt;dbl&gt;\n1 Hourly                  63003.               54246.\n2 Salaried                90183.               _____\nWhich of the following is the best estimate for that erased value?\n\n30,000\n50,000\n80,000\n100,000"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-4",
+    "href": "exam-review/exam-1-review.html#question-4",
+    "title": "Exam 1 Review",
+    "section": "Question 4",
+    "text": "Question 4\nWhich distribution has a higher standard deviation?\n\nHourly workers\nSalaried workers\nRoughly the same"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-5",
+    "href": "exam-review/exam-1-review.html#question-5",
+    "title": "Exam 1 Review",
+    "section": "Question 5",
+    "text": "Question 5\nWhich of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?\nI.   Box plot\nII.  Density plot\nIII. Pie chart\nIV.  Waffle chart\n\nI\nI and II\nI, II, and III\nIII and IV"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#questions-6-and-7",
+    "href": "exam-review/exam-1-review.html#questions-6-and-7",
+    "title": "Exam 1 Review",
+    "section": "Questions 6 and 7",
+    "text": "Questions 6 and 7\nSuppose you made the bar plot shown in Figure 2 (a) to visualize the distribution of performance_rating and your teammate made the bar plot shown in Figure 2 (b).\n\n\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\nFigure 2: Distribution of performance rating\n\n\n\nYou made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  _1_(performance_rating = fct_relevel(performance_rating, _2_))\n\nQuestion 6: What goes in the first blank?\n\narrange()\nfilter()\nmutate()\nsummarize()\n\nQuestion 7: What goes in the second blank?\n\n\"Poor\", \"Successful\", \"High\", \"Top\"\n\"Successful\", \"High\", \"Top\"\n\"Top\", \"High\", \"Successful\", \"Poor\"\nPoor, Successful, High, Top"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#questions-8-9-and-10",
+    "href": "exam-review/exam-1-review.html#questions-8-9-and-10",
+    "title": "Exam 1 Review",
+    "section": "Questions 8, 9, and 10",
+    "text": "Questions 8, 9, and 10\nFinally, another teammate creates the following two plots.\n\n\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\nFigure 3: Distribution of salary type by performance rating\n\n\n\nQuestion 8: Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type. In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?\nQuestion 9: A friend with a keen eye points out that the number of observations in Figure 3 (a) seems lower than the total number of observations in blizzard_salary. What might be going on here? Explain your reasoning.\nQuestion 10: Below are the proportions of performance ratings for hourly and salaried workers. Place these values in the corresponding segments in Figure 3 (b).\n\n\n# A tibble: 4 × 3\n  performance_rating Hourly Salaried\n  &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;\n1 High                0.2     0.384 \n2 Successful          0.686   0.521 \n3 Top                 0.114   0.0760\n4 Poor                0       0.0190"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#questions-11-and-12",
+    "href": "exam-review/exam-1-review.html#questions-11-and-12",
+    "title": "Exam 1 Review",
+    "section": "Questions 11 and 12",
+    "text": "Questions 11 and 12\nThe table below shows the distribution of salary_type and performance_rating.\n\n\n# A tibble: 2 × 6\n  salary_type  Poor Successful  High   Top  `NA`\n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1 Hourly         NA         24     7     4    28\n2 Salaried        5        137   101    20    83\n\n\nThe pipeline below produces a data frame with a fewer number of rows than blizzard_salary.\n\n\n# A tibble: 5 × 4\n  percent_incr salary_type annual_salary performance_rating\n         &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n1            0 Salaried            80000 Poor              \n2            3 Salaried            83000 Poor              \n3            0 Salaried           116000 Poor              \n4            0 Salaried           135219 Poor              \n5            0 Salaried           147500 Poor              \n\n\nQuestion 11: Which of the following goes in blanks (1) and (2)?\n\n\n\n\n(1)\n(2)\n\n\n\n\na.\n!=\n|\n\n\nb.\n==\n&\n\n\nc.\n!=\n&\n\n\nd.\n==\n|\n\n\n\nQuestion 12: Which function or functions go into blank (3)?\n\narrange()\nmutate()\norder()\nsort()"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-13",
+    "href": "exam-review/exam-1-review.html#question-13",
+    "title": "Exam 1 Review",
+    "section": "Question 13",
+    "text": "Question 13\n\n\nWarning: Removed 39 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\nQuestion 13: You’re reviewing another team’s work and they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers.\n\nThe relationship is positive, having a higher salary results in a higher percent increase. There is one clear outlier.\n\nWhich of the following is/are the most accurate and helpful) peer review note for this interpretation. Choose all that apply.\n\nThe interpretation is complete and perfect, no changes needed!\nThe interpretation doesn’t mention the direction of the relationship.\nThe interpretation doesn’t mention the form of the relationship, which is linear.\nThe interpretation doesn’t mention the strength of the relationship, which is somewhat strong.\nThere isn’t a clear outlier in the plot. If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).\nThe interpretation is causal – we don’t know if the cause of the high percent increase is higher annual salary based on observational data. The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship."
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-14",
+    "href": "exam-review/exam-1-review.html#question-14",
+    "title": "Exam 1 Review",
+    "section": "Question 14",
+    "text": "Question 14"
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#question-15",
+    "href": "exam-review/exam-1-review.html#question-15",
+    "title": "Exam 1 Review",
+    "section": "Question 15",
+    "text": "Question 15\nYou’re working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git. You create a plot and write up a paragraph describing any patterns in it. Then, your teammate says “render, commit, and push”.\nPart 1: What do they mean by each of these three steps. In 1-2 sentences for each, explain in your own words what they mean.\n\nRender:\n\n\nCommit:\n\n\nPush:\n\nPart 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say “I still can’t see your changes in our shared GitHub repo when I look at it in my web browser.” Which of the following answers is the most accurate?\n\nI rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.\nI committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.\nI didn’t yet push my changes, it’s expected that you are not seeing them on GitHub when you look at it in your web browser. Wait until I push, and check again.\nYou need to pull to see my changes on GitHub in the web browser."
+  },
+  {
+    "objectID": "exam-review/exam-1-review.html#bonus",
+    "href": "exam-review/exam-1-review.html#bonus",
+    "title": "Exam 1 Review",
+    "section": "Bonus",
+    "text": "Bonus\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words."
+  },
+  {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
     "title": "STA 199 - Introduction to Data Science and Statistical Thinking",
@@ -2839,7 +2937,7 @@
     "href": "slides/08-data-types-classes.html#other-classes",
     "title": "Data types and classes",
     "section": "Other classes",
-    "text": "Other classes\nJust a couple of examples…\n\n\nDate:\n\ntoday &lt;- Sys.Date()\ntoday\n\n[1] \"2024-02-08\"\n\ntypeof(today)\n\n[1] \"double\"\n\nattributes(today)\n\n$class\n[1] \"Date\"\n\n\n\nDate-time:\n\nnow &lt;- as.POSIXct(\"2024-02-08 11:45\", tz = \"EST\")\nnow\n\n[1] \"2024-02-08 11:45:00 EST\"\n\ntypeof(now)\n\n[1] \"double\"\n\nattributes(now)\n\n$class\n[1] \"POSIXct\" \"POSIXt\" \n\n$tzone\n[1] \"EST\""
+    "text": "Other classes\nJust a couple of examples…\n\n\nDate:\n\ntoday &lt;- Sys.Date()\ntoday\n\n[1] \"2024-02-07\"\n\ntypeof(today)\n\n[1] \"double\"\n\nattributes(today)\n\n$class\n[1] \"Date\"\n\n\n\nDate-time:\n\nnow &lt;- as.POSIXct(\"2024-02-08 11:45\", tz = \"EST\")\nnow\n\n[1] \"2024-02-08 11:45:00 EST\"\n\ntypeof(now)\n\n[1] \"double\"\n\nattributes(now)\n\n$class\n[1] \"POSIXct\" \"POSIXt\" \n\n$tzone\n[1] \"EST\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#ae-07-population-types",
