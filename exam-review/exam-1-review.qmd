@@ -2,10 +2,9 @@
 title: "Exam 1 Review"
 format:
   html: default
+  pdf: default
 execute:
   echo: false
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r}
@@ -85,7 +84,7 @@ Explain your reasoning.
 ```{r}
 #| label: fig-blizzard-hist-1
 #| fig-cap: Option 1
-#| fig-width: 10
+#| fig-width: 8
 #| fig-asp: 0.5
 
 ggplot(blizzard_salary, aes(x = annual_salary)) +
@@ -101,7 +100,7 @@ ggplot(blizzard_salary, aes(x = annual_salary)) +
 ```{r}
 #| label: fig-blizzard-hist-2
 #| fig-cap: Option 2
-#| fig-width: 10
+#| fig-width: 8
 #| fig-asp: 0.3
 
 ggplot(blizzard_salary, aes(x = annual_salary)) +
@@ -117,11 +116,8 @@ ggplot(blizzard_salary, aes(x = annual_salary)) +
 Distribution of annual salaries of Blizzard employees
 :::
 
-::: {.content-visible when-format="pdf"}
-$\vspace{2cm}$
 
 {{< pagebreak >}}
-:::
 
 ## Question 3
 
@@ -161,21 +157,17 @@ c.  80,000
 
 d.  100,000
 
-::: {.content-visible when-format="pdf"}
-$\vspace{2cm}$
-
-{{< pagebreak >}}
-:::
-
 ## Question 4
 
-Which distribution has a higher standard deviation?
+Which distribution of annual salaries has a higher standard deviation?
 
 a.  Hourly workers
 
 b.  Salaried workers
 
 c.  Roughly the same
+
+{{< pagebreak >}}
 
 ## Question 5
 
@@ -195,6 +187,8 @@ b.  I and II
 c.  I, II, and III
 
 d.  III and IV
+
+{{< pagebreak >}}
 
 ## Questions 6 and 7
 
@@ -257,11 +251,9 @@ c.  `"Top", "High", "Successful", "Poor"`
 
 d.  `Poor, Successful, High, Top`
 
-::: {.content-visible when-format="pdf"}
 {{< pagebreak >}}
-:::
 
-## Questions 8, 9, and 10
+## Questions 8 - 10
 
 Finally, another teammate creates the following two plots.
 
@@ -301,10 +293,9 @@ blizzard_salary |>
 **Question 8:** Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type.
 In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?
 
+
 ::: {.content-visible when-format="pdf"}
 $\vspace{2cm}$
-
-{{< pagebreak >}}
 :::
 
 **Question 9:** A friend with a keen eye points out that the number of observations in @fig-salary-performance-rating-1 seems lower than the total number of observations in `blizzard_salary`.
@@ -372,6 +363,11 @@ blizzard_salary |>
 | c\. | `!=`  |  `&`  |
 | d\. | `==`  |  `|`  |
 
+
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
 **Question 12:** Which function or functions go into blank (3)?
 
 a.  `arrange()`
@@ -382,15 +378,26 @@ c.  `order()`
 
 d.  `sort()`
 
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
 ## Question 13
 
+You're reviewing another team's work and they made the following visualization:
+
+
 ```{r}
+#| warning: false
+#| fig-width: 10
+#| fig-asp: 0.6
+
 ggplot(blizzard_salary, aes(x = annual_salary, percent_incr)) +
   geom_point() +
   facet_wrap(~performance_rating)
 ```
 
-**Question 13:** You're reviewing another team's work and they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers.
+And they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:
 
 > The relationship is positive, having a higher salary results in a higher percent increase.
 > There is one clear outlier.
@@ -431,6 +438,8 @@ labs(x="Performance rating", y = "Percent increase")
 
 ```{r}
 #| echo: false
+#| fig-width: 8
+#| fig-asp: 0.4
 
 ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
 labs(x="Performance rating", y = "Percent increase")
@@ -439,17 +448,13 @@ labs(x="Performance rating", y = "Percent increase")
 Part 1: List at least 5 things that should be fixed or improved in the code.
 
 ::: {.content-visible when-format="pdf"}
-$\vspace{2cm}$
-
-{{< pagebreak >}}
+$\vspace{5cm}$
 :::
 
 Part 2: What is the cause of the warning and what does it mean?
 
 
-::: {.content-visible when-format="pdf"}
 {{< pagebreak >}}
-:::
 
 ## Question 15
 
@@ -493,6 +498,3 @@ d.  You need to pull to see my changes on GitHub in the web browser.
 
 Pick a concept we introduced in class so far that you've been struggling with and explain it in your own words.
 
-::: {.content-visible when-format="pdf"}
-$\vspace{2cm}$
-:::
