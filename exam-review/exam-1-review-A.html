@@ -347,6 +347,19 @@ ul.task-list li input[type="checkbox"] {
 <li><p>c - <code>filter(salary_type != "Hourly" &amp; performance_rating == "Poor")</code> - There are 5 observations for <strong>“not Hourly”</strong> <strong>“and”</strong> Poor.</p></li>
 <li><p>a - <code>arrange()</code> - The result is arranged in increasing order of <code>annual_salary</code>, which is the default for <code>arrange()</code>.</p></li>
 <li><p>c, d, e, f.</p></li>
+<li><p>Part 1: The following should be fixed:</p>
+<ul>
+<li><p>There should be a <code>|</code> after <code>#</code> before <code>label</code></p></li>
+<li><p>There should be a <code>:</code> after label, not <code>=</code></p></li>
+<li><p>There shouldn’t be a space in the chunk label, it should be <code>plot-blizzard</code></p></li>
+<li><p>There should be spaces after commas in the code</p></li>
+<li><p>There should be spaces on both sides of <code>=</code> in the code</p></li>
+<li><p>There should be a space before <code>+</code></p></li>
+<li><p><code>geom_boxplot()</code> should be on the next line and indented</p></li>
+<li><p>There should be a <code>+</code> at the end of the <code>geom_boxplot()</code> line</p></li>
+<li><p><code>labs()</code> should be indented</p></li>
+</ul>
+<p>Part 2: The warning is caused by <code>NA</code> in the data. It means that 39 observations were <code>NA</code>s and are not plotted/represented on the plot.</p></li>
 <li><p>Part 1:</p>
 <ol type="1">
 <li>Render: Run all of the code and render all of the text in the document and produce an output.</li>
@@ -354,7 +367,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Push: Send your changes off to GitHub.</li>
 </ol>
 <p>Part 2: c - Rendering or committing isn’t sufficient to send your changes to your GitHub repository, a push is needed. A pull is also not needed to view the changes in the browser.</p></li>
-<li></li>
 </ol>
 
 
