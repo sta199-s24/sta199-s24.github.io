@@ -6,63 +6,62 @@ title: "Teaching team"
 
 ![](img/team/mine.png){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" width="200"}
 
-[**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.
+[**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University.
+Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM.
+Mine also works with RStudio as a Developer Educator.
 
-+------------------------------------------------------------+-----------------+
-| Office hours                                               | Location        |
-+============================================================+=================+
-| Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111     |
-+------------------------------------------------------------+-----------------+
-| Thursdays 2-3 pm                                           | Old Chem 213    |
-+------------------------------------------------------------+-----------------+
+| Office hours                                               | Location     |
+|------------------------------------------------------------|--------------|
+| Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111  |
+| Thursdays 2-3 pm                                           | Old Chem 213 |
 
 ## Teaching assistants
 
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-|                                          | **First name** | **Last name** | **Role**                                                                   |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/chris.png){width="80"}      | Chris          | Oswald        | Lab leader: M 8:30AM - 9:45AM (Sec 1)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/jasmine.png){width="80"}    | Jasmine        | Wang          | Lab helper: M 8:30AM - 9:45AM (Sec 1)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/betsy.png){width="80"}      | Betsy          | Bersson       | Head TA                                                                    |
-|                                          |                |               |                                                                            |
-|                                          |                |               | Lab leader: M 10:05AM - 11:20AM (Sec 2)                                    |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/mert.png){width="80"}       | Mert           | Bildirici     | Lab helper: M 10:05AM - 11:20AM (Sec 2)                                    |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/will.png){width="80"}       | Will           | Tirone        | Lab leader: M 11:45AM - 1:00PM (Sec 3)                                     |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/krish.png){width="80"}      | Krish          | Bansal        | Lab helper: M 11:45AM - 1:00PM (Sec 3)                                     |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/caitrin.png){width="80"}    | Caitrin        | Murphy        | Lab leader: M 1:25PM - 2:40PM (Sec 4)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/avery.png){width="80"}      | Avery          | Hodges        | Lab helper: M 1:25PM - 2:40PM (Sec 4)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/jon.png){width="80"}        | Jon            | Campbell      | Lab leader: M 1:25PM - 2:40PM (Sec 11)                                     |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/foxx.png){width="80"}       | Foxx           | Hart          | Lab helper: M 1:25PM - 2:40PM (Sec 11)                                     |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/netra.png){width="80"}      | Netra          | Mittal        | Lab leader: M 3:05PM - 4:20PM (Sec 5)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/alexa.png){width="80"}      | Alexa          | Fahrer        | Lab helper: M 3:05PM - 4:20PM (Sec 5)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/devin.png){width="80"}      | Devin          | Johnson       | Lab leader: M 4:40PM - 5:55PM (Sec 6)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/konnie.png){width="80"}     | Konnie         | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 6)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/li.png){width="80"}         | Li             | Fan           | Lab leader: M 4:40PM - 5:55PM (Sec 7)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/kelly.png){width="80"}      | Kelly          | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 7)                                      |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/leah.png){width="80"}       | Leah           | Johnson       |                                                                            |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/lisa.png){width="80"}       | Lisa           | Zhang         | Lecture helper                                                             |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/miles.png){width="80"}      | Miles          | King          | Lecture helper                                                             |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
-| ![](img/team/noah.png){width="80"}       | Noah           | Obuya         |                                                                            |
-+------------------------------------------+----------------+---------------+----------------------------------------------------------------------------+
++---------------------------------------+----------------+---------------+-----------------------------------------+
+|                                       | **First name** | **Last name** | **Role**                                |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/chris.png){width="80"}   | Chris          | Oswald        | Lab leader: M 8:30AM - 9:45AM (Sec 1)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/jasmine.png){width="80"} | Jasmine        | Wang          | Lab helper: M 8:30AM - 9:45AM (Sec 1)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/betsy.png){width="80"}   | Betsy          | Bersson       | Head TA                                 |
+|                                       |                |               |                                         |
+|                                       |                |               | Lab leader: M 10:05AM - 11:20AM (Sec 2) |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/mert.png){width="80"}    | Mert           | Bildirici     | Lab helper: M 10:05AM - 11:20AM (Sec 2) |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/will.png){width="80"}    | Will           | Tirone        | Lab leader: M 11:45AM - 1:00PM (Sec 3)  |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/krish.png){width="80"}   | Krish          | Bansal        | Lab helper: M 11:45AM - 1:00PM (Sec 3)  |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/caitrin.png){width="80"} | Caitrin        | Murphy        | Lab leader: M 1:25PM - 2:40PM (Sec 4)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/avery.png){width="80"}   | Avery          | Hodges        | Lab helper: M 1:25PM - 2:40PM (Sec 4)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/jon.png){width="80"}     | Jon            | Campbell      | Lab leader: M 1:25PM - 2:40PM (Sec 11)  |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/foxx.png){width="80"}    | Foxx           | Hart          | Lab helper: M 1:25PM - 2:40PM (Sec 11)  |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/netra.png){width="80"}   | Netra          | Mittal        | Lab leader: M 3:05PM - 4:20PM (Sec 5)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/alexa.png){width="80"}   | Alexa          | Fahrer        | Lab helper: M 3:05PM - 4:20PM (Sec 5)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/devin.png){width="80"}   | Devin          | Johnson       | Lab leader: M 4:40PM - 5:55PM (Sec 6)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/konnie.png){width="80"}  | Konnie         | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 6)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/li.png){width="80"}      | Li             | Fan           | Lab leader: M 4:40PM - 5:55PM (Sec 7)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/kelly.png){width="80"}   | Kelly          | Huang         | Lab helper: M 4:40PM - 5:55PM (Sec 7)   |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/leah.png){width="80"}    | Leah           | Johnson       |                                         |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/lisa.png){width="80"}    | Lisa           | Zhang         | Lecture helper                          |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/miles.png){width="80"}   | Miles          | King          | Lecture helper                          |
++---------------------------------------+----------------+---------------+-----------------------------------------+
+| ![](img/team/noah.png){width="80"}    | Noah           | Obuya         |                                         |
++---------------------------------------+----------------+---------------+-----------------------------------------+
 
 : {tbl-colwidths="\[15,15,20,50\]"}
 
@@ -72,4 +71,5 @@ For office hours, please see [STA 199 - Office Hours](https://docs.google.com/sp
 
 ![](img/team/mary.png){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mary Knox" width="120"}
 
-Dr. Mary Knox (she/her) is the course coordinator for this course. You can reach out to her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding missed work, extensions, etc. as well as registration questions.
+Dr. Mary Knox (she/her) is the course coordinator for this course.
+You can reach out to her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding missed work, extensions, etc. as well as registration questions.
