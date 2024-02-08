@@ -13,11 +13,11 @@ website:
   open-graph: true
   twitter-card:
     creator: "@minebocek"
-    image: "images/twitter-card.png"
+    image: "img/twitter-card.png"
 
   sidebar:
     background: "#3A5883" # Pantone Chambray Blue - Spring 2024, darkened to pass contrast checks
-    logo: "images/logo.png"
+    logo: "img/logo.png"
     pinned: true
     align: center
     tools:
