@@ -420,6 +420,33 @@ $\vspace{2cm}$
 
 ## Question 14
 
+Below is some code and its output.
+
+```{{r}}
+# label=plot blizzard
+
+ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
+labs(x="Performance rating", y = "Percent increase")
+```
+
+```{r}
+#| echo: false
+
+ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
+labs(x="Performance rating", y = "Percent increase")
+```
+
+Part 1: List at least 5 things that should be fixed or improved in the code.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+Part 2: What is the cause of the warning and what does it mean?
+
+
 ::: {.content-visible when-format="pdf"}
 {{< pagebreak >}}
 :::

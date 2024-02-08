@@ -36,7 +36,30 @@ editor_options:
 
 13. c, d, e, f.
 
-14. Part 1:
+14. Part 1: The following should be fixed:
+
+    -   There should be a `|` after `#` before `label`
+
+    -   There should be a `:` after label, not `=`
+
+    -   There shouldn't be a space in the chunk label, it should be `plot-blizzard`
+
+    -   There should be spaces after commas in the code
+
+    -   There should be spaces on both sides of `=` in the code
+
+    -   There should be a space before `+`
+
+    -   `geom_boxplot()` should be on the next line and indented
+
+    -   There should be a `+` at the end of the `geom_boxplot()` line
+
+    -   `labs()` should be indented
+
+    Part 2: The warning is caused by `NA` in the data.
+    It means that 39 observations were `NA`s and are not plotted/represented on the plot.
+
+15. Part 1:
 
     1.  Render: Run all of the code and render all of the text in the document and produce an output.
     2.  Commit: Take a snapshot of your changes in Git with an appropriate message.
@@ -44,5 +67,3 @@ editor_options:
 
     Part 2: c - Rendering or committing isn't sufficient to send your changes to your GitHub repository, a push is needed.
     A pull is also not needed to view the changes in the browser.
-
-15. 
