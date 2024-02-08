@@ -1,0 +1,48 @@
+---
+title: "Exam 1 Review"
+subtitle: "Suggested answers"
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+1.  b - The `blizzard_salary` dataset has 409 rows.
+    The `salary_type` variable is cateogorical.
+    The `percent_incr` variable is numerical and continuous.
+
+2.  Figure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.
+
+3.  c - It's a value higher than the median for hourly but lower than the mean for salaried.
+
+4.  b - There is more variability around the mean compared to the hourly distribution.
+
+5.  b - Pie charts and waffle charts are for categorical data only.
+
+6.  c - `mutate()` is used to create or modify a variable.
+
+7.  a - `"Poor", "Successful", "High", "Top"`
+
+8.  b - Option 2.
+    Shows the proportion of each performance rating for each salary type.
+
+9.  There may be some `NA`s in these two variables that are not visible in the plot.
+
+10. The proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.
+
+11. c - `filter(salary_type != "Hourly" & performance_rating == "Poor")` - There are 5 observations for **"not Hourly"** **"and"** Poor.
+
+12. a - `arrange()` - The result is arranged in increasing order of `annual_salary`, which is the default for `arrange()`.
+
+13. c, d, e, f.
+
+14. Part 1:
+
+    1.  Render: Run all of the code and render all of the text in the document and produce an output.
+    2.  Commit: Take a snapshot of your changes in Git with an appropriate message.
+    3.  Push: Send your changes off to GitHub.
+
+    Part 2: c - Rendering or committing isn't sufficient to send your changes to your GitHub repository, a push is needed.
+    A pull is also not needed to view the changes in the browser.
+
+15. 

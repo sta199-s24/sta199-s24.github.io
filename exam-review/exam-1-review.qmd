@@ -1,0 +1,471 @@
+---
+title: "Exam 1 Review"
+format:
+  html: default
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(openintro)
+library(scales)
+```
+
+```{r}
+#| label: blizzard-data-prep
+
+blizzard_salary <- blizzard_salary |>
+  mutate(
+    annual_salary = case_when(
+      salary_type == "week" ~ current_salary * 52,
+      salary_type == "hour" ~ current_salary * 40 * 52,
+      TRUE ~ current_salary
+    ),
+    performance_rating = if_else(performance_rating == "Developing", "Poor", performance_rating)
+  ) |>
+  filter(salary_type != "week") |>
+  mutate(
+    salary_type = if_else(salary_type == "hour", "Hourly", "Salaried")
+  ) |>
+  filter(!is.na(annual_salary)) |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation.
+(Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
+
+The name of the data frame used for this analysis is `blizzard_salary` and the variables are:
+
+-   `percent_incr`: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase to 21.5 (21.5% increase)
+
+-   `salary_type`: Type of salary, with levels `Hourly` and `Salaried`
+
+-   `annual_salary`: Annual salary, in USD, with values ranging from \$50,939 to \$216,856.
+
+-   `performance_rating`: Most recent review performance rating, with levels `Poor`, `Successful`, `High`, and `Top`.
+    The `Poor` level is the lowest rating and the `Top` level is the highest rating.
+
+The top ten rows of `blizzard_salary` are shown below:
+
+```{r}
+blizzard_salary |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+## Question 1
+
+Which of the following is [**correct**]{.underline}?
+
+a.  The `blizzard_salary` dataset has 399 rows.
+
+b.  Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.
+
+c.  The `salary_type` variable is numerical.
+
+d.  The `percent_incr` variable is numerical and discrete.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
+## Question 2
+
+@fig-blizzard-hist-1 and @fig-blizzard-hist-2 show the distributions of annual salaries of hourly and salaried workers.
+The two figures show the same data, with the facets organized across rows and across columns.
+Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers.
+Explain your reasoning.
+
+::: {#fig-blizzard-hist}
+```{r}
+#| label: fig-blizzard-hist-1
+#| fig-cap: Option 1
+#| fig-width: 10
+#| fig-asp: 0.5
+
+ggplot(blizzard_salary, aes(x = annual_salary)) +
+  geom_histogram(binwidth = 10000, color = "white") +
+  facet_wrap(~salary_type, ncol = 1) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
+  labs(
+    x = "Annual salary (in USD)",
+    y = "Count"
+  )
+```
+
+```{r}
+#| label: fig-blizzard-hist-2
+#| fig-cap: Option 2
+#| fig-width: 10
+#| fig-asp: 0.3
+
+ggplot(blizzard_salary, aes(x = annual_salary)) +
+  geom_histogram(binwidth = 10000, color = "white") +
+  facet_wrap(~salary_type, nrow = 1) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
+  labs(
+    x = "Annual salary (in USD)",
+    y = "Count"
+  )
+```
+
+Distribution of annual salaries of Blizzard employees
+:::
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+## Question 3
+
+Suppose your teammate wrote the following code as part of their analysis of the data.
+
+```{r}
+#| label: blizzard-summarize
+#| results: false
+
+blizzard_salary |>
+  group_by(salary_type) |>
+  summarize(
+    mean_annual_salary = mean(annual_salary),
+    median_annual_salary = median(annual_salary)
+  )
+```
+
+They then printed out the results shown below.
+Unfortunately one of the numbers got erased from the printout.
+It's indicated with `_____` below.
+
+```         
+# A tibble: 2 × 3
+  salary_type mean_annual_salary median_annual_salary
+  <chr>                    <dbl>                <dbl>
+1 Hourly                  63003.               54246.
+2 Salaried                90183.               _____
+```
+
+Which of the following is the best estimate for that erased value?
+
+a.  30,000
+
+b.  50,000
+
+c.  80,000
+
+d.  100,000
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+## Question 4
+
+Which distribution has a higher standard deviation?
+
+a.  Hourly workers
+
+b.  Salaried workers
+
+c.  Roughly the same
+
+## Question 5
+
+Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?
+
+```         
+I.   Box plot
+II.  Density plot
+III. Pie chart
+IV.  Waffle chart
+```
+
+a.  I
+
+b.  I and II
+
+c.  I, II, and III
+
+d.  III and IV
+
+## Questions 6 and 7
+
+Suppose you made the bar plot shown in @fig-performance-rating-1 to visualize the distribution of `performance_rating` and your teammate made the bar plot shown in @fig-performance-rating-2.
+
+```{r}
+#| label: fig-performance-rating
+#| layout-ncol: 2
+#| fig-cap: Distribution of performance rating
+#| fig-width: 5
+#| fig-asp: 0.5
+#| fig-subcap: 
+#|   - Option 1
+#|   - Option 2
+
+ggplot(blizzard_salary, aes(x = performance_rating)) +
+  geom_bar() +
+  labs(
+    x = "Performance rating", y = "Count",
+    title = "Performance rating of Blizzard employees"
+  )
+
+blizzard_salary |>
+  mutate(performance_rating = fct_relevel(performance_rating, "Poor", "Successful", "High", "Top")) |>
+  ggplot(aes(x = performance_rating)) +
+  geom_bar() +
+  labs(
+    x = "Performance rating", y = "Count",
+    title = "Performance rating of Blizzard employees"
+  )
+```
+
+You made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:
+
+```{r}
+#| eval: false
+#| echo: true
+
+blizzard_salary <- blizzard_salary |>
+  _1_(performance_rating = fct_relevel(performance_rating, _2_))
+```
+
+**Question 6:** What goes in the first blank?
+
+a.  `arrange()`
+
+b.  `filter()`
+
+c.  `mutate()`
+
+d.  `summarize()`
+
+**Question 7:** What goes in the second blank?
+
+a.  `"Poor", "Successful", "High", "Top"`
+
+b.  `"Successful", "High", "Top"`
+
+c.  `"Top", "High", "Successful", "Poor"`
+
+d.  `Poor, Successful, High, Top`
+
+::: {.content-visible when-format="pdf"}
+{{< pagebreak >}}
+:::
+
+## Questions 8, 9, and 10
+
+Finally, another teammate creates the following two plots.
+
+```{r}
+#| label: fig-salary-performance-rating
+#| layout-ncol: 2
+#| fig-cap: Distribution of salary type by performance rating
+#| fig-width: 5
+#| fig-asp: 0.5
+#| fig-subcap: 
+#|   - Option 1
+#|   - Option 2
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  ggplot(aes(x = salary_type, fill = fct_rev(performance_rating))) +
+  geom_bar() +
+  scale_fill_viridis_d() +
+  labs(
+    x = "Salary type",
+    y = "Count",
+    fill = "Performance\nrating"
+  )
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  ggplot(aes(x = salary_type, fill = fct_rev(performance_rating))) +
+  geom_bar(position = "fill") +
+  scale_fill_viridis_d() +
+  labs(
+    x = "Salary type",
+    y = "Proportion",
+    fill = "Performance\nrating"
+  )
+```
+
+**Question 8:** Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type.
+In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+**Question 9:** A friend with a keen eye points out that the number of observations in @fig-salary-performance-rating-1 seems lower than the total number of observations in `blizzard_salary`.
+What might be going on here?
+Explain your reasoning.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+**Question 10:** Below are the proportions of performance ratings for hourly and salaried workers.
+Place these values in the corresponding segments in @fig-salary-performance-rating-2.
+
+```{r}
+#| label: salary-type-perfecormance-table
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  count(salary_type, performance_rating) |>
+  pivot_wider(names_from = salary_type, values_from = n, values_fill = 0) |>
+  mutate(across(-performance_rating, ~ .x / sum(.x)))
+```
+
+::: {.content-visible when-format="pdf"}
+{{< pagebreak >}}
+:::
+
+## Questions 11 and 12
+
+The table below shows the distribution of `salary_type` and `performance_rating`.
+
+```{r}
+blizzard_salary |>
+  count(salary_type, performance_rating) |>
+  pivot_wider(names_from = performance_rating, values_from = n) |>
+  select(salary_type, Poor, Successful, High, Top, `NA`)
+```
+
+The pipeline below produces a data frame with a fewer number of rows than `blizzard_salary`.
+
+```{r}
+#| eval: false
+
+blizzard_salary |>
+  filter(salary_type _(1)_ "Hourly" _(2)_ performance_rating == "Poor") |>
+  _(3)_(annual_salary)
+```
+
+```{r}
+#| echo: false
+
+blizzard_salary |>
+  filter(salary_type != "Hourly" & performance_rating == "Poor") |>
+  arrange(annual_salary)
+```
+
+**Question 11:** Which of the following goes in blanks (1) and (2)?
+
+|     | \(1\) | \(2\) |
+|-----|:-----:|:-----:|
+| a\. | `!=`  |  `|`  |
+| b\. | `==`  |  `&`  |
+| c\. | `!=`  |  `&`  |
+| d\. | `==`  |  `|`  |
+
+**Question 12:** Which function or functions go into blank (3)?
+
+a.  `arrange()`
+
+b.  `mutate()`
+
+c.  `order()`
+
+d.  `sort()`
+
+## Question 13
+
+```{r}
+ggplot(blizzard_salary, aes(x = annual_salary, percent_incr)) +
+  geom_point() +
+  facet_wrap(~performance_rating)
+```
+
+**Question 13:** You're reviewing another team's work and they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers.
+
+> The relationship is positive, having a higher salary results in a higher percent increase.
+> There is one clear outlier.
+
+Which of the following is/are the most accurate and helpful) peer review note for this interpretation.
+Choose all that apply.
+
+a.  The interpretation is complete and perfect, no changes needed!
+
+b.  The interpretation doesn't mention the direction of the relationship.
+
+c.  The interpretation doesn't mention the form of the relationship, which is linear.
+
+d.  The interpretation doesn't mention the strength of the relationship, which is somewhat strong.
+
+e.  There isn't a clear outlier in the plot.
+    If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).
+
+f.  The interpretation is causal – we don't know if the cause of the high percent increase is higher annual salary based on observational data.
+    The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+## Question 14
+
+::: {.content-visible when-format="pdf"}
+{{< pagebreak >}}
+:::
+
+## Question 15
+
+You're working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git.
+You create a plot and write up a paragraph describing any patterns in it.
+Then, your teammate says "render, commit, and push".
+
+Part 1: What do they mean by each of these three steps.
+In 1-2 sentences for each, explain in your own words what they mean.
+
+1.  Render:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+2.  Commit:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+3.  Push:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+Part 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say "I still can't see your changes in our shared GitHub repo when I look at it in my web browser." Which of the following answers is the most accurate?
+
+a.  I rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.
+
+b.  I committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.
+
+c.  I didn't yet push my changes, it's expected that you are not seeing them on GitHub when you look at it in your web browser.
+    Wait until I push, and check again.
+
+d.  You need to pull to see my changes on GitHub in the web browser.
+
+## Bonus
+
+Pick a concept we introduced in class so far that you've been struggling with and explain it in your own words.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
