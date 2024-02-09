@@ -60,14 +60,21 @@ blizzard_salary |>
 ## Question 1
 
 Which of the following is [**correct**]{.underline}?
+Choose all that apply.
 
 a.  The `blizzard_salary` dataset has 399 rows.
 
-b.  Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.
+b.  The `blizzard_salary` dataset has 4 columns.
 
-c.  The `salary_type` variable is numerical.
+c.  Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.
 
 d.  The `percent_incr` variable is numerical and discrete.
+
+e.  The `salary_type` variable is numerical.
+
+f.  The `annual_salary` variable is numerical.
+
+g.  The `performance_rating` variable is categorical and ordinal.
 
 ::: {.content-visible when-format="pdf"}
 $\vspace{1cm}$
@@ -115,7 +122,6 @@ ggplot(blizzard_salary, aes(x = annual_salary)) +
 
 Distribution of annual salaries of Blizzard employees
 :::
-
 
 {{< pagebreak >}}
 
@@ -172,21 +178,25 @@ c.  Roughly the same
 ## Question 5
 
 Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?
+Choose all that apply.
 
-```         
-I.   Box plot
-II.  Density plot
-III. Pie chart
-IV.  Waffle chart
-```
+a\.
+Box plots
 
-a.  I
+b\.
+Density plots
 
-b.  I and II
+c\.
+Pie charts
 
-c.  I, II, and III
+d\.
+Waffle charts
 
-d.  III and IV
+e\.
+Histograms
+
+f\.
+Scatterplots
 
 {{< pagebreak >}}
 
@@ -228,10 +238,10 @@ You made your bar plot without transforming the data in any way, while your frie
 #| echo: true
 
 blizzard_salary <- blizzard_salary |>
-  _1_(performance_rating = fct_relevel(performance_rating, _2_))
+  _(1)_(performance_rating = fct_relevel(performance_rating, _(2)_))
 ```
 
-**Question 6:** What goes in the first blank?
+**Question 6:** What goes in the blank (1)?
 
 a.  `arrange()`
 
@@ -241,7 +251,7 @@ c.  `mutate()`
 
 d.  `summarize()`
 
-**Question 7:** What goes in the second blank?
+**Question 7:** What goes in the blank (2)?
 
 a.  `"Poor", "Successful", "High", "Top"`
 
@@ -293,7 +303,6 @@ blizzard_salary |>
 **Question 8:** Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type.
 In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?
 
-
 ::: {.content-visible when-format="pdf"}
 $\vspace{2cm}$
 :::
@@ -340,6 +349,7 @@ The pipeline below produces a data frame with a fewer number of rows than `blizz
 
 ```{r}
 #| eval: false
+#| echo: true
 
 blizzard_salary |>
   filter(salary_type _(1)_ "Hourly" _(2)_ performance_rating == "Poor") |>
@@ -363,7 +373,6 @@ blizzard_salary |>
 | c\. | `!=`  |  `&`  |
 | d\. | `==`  |  `|`  |
 
-
 ::: {.content-visible when-format="pdf"}
 $\vspace{1cm}$
 :::
@@ -385,7 +394,6 @@ $\vspace{1cm}$
 ## Question 13
 
 You're reviewing another team's work and they made the following visualization:
-
 
 ```{r}
 #| warning: false
@@ -453,7 +461,6 @@ $\vspace{5cm}$
 
 Part 2: What is the cause of the warning and what does it mean?
 
-
 {{< pagebreak >}}
 
 ## Question 15
@@ -497,4 +504,3 @@ d.  You need to pull to see my changes on GitHub in the web browser.
 ## Bonus
 
 Pick a concept we introduced in class so far that you've been struggling with and explain it in your own words.
-

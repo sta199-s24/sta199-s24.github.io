@@ -7,9 +7,13 @@ editor_options:
   chunk_output_type: console
 ---
 
-1.  b - The `blizzard_salary` dataset has 409 rows.
-    The `salary_type` variable is cateogorical.
-    The `percent_incr` variable is numerical and continuous.
+1.  b, c, f, g -
+
+    -   The `blizzard_salary` dataset has 409 rows.
+
+    -   The `percent_incr` variable is numerical and continuous.
+
+    -   The `salary_type` variable is categorical.
 
 2.  Figure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.
 
@@ -17,7 +21,8 @@ editor_options:
 
 4.  b - There is more variability around the mean compared to the hourly distribution.
 
-5.  b - Pie charts and waffle charts are for categorical data only.
+5.  a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only.
+    Scatterplots are for visualizing the relationship between two numerical variables.
 
 6.  c - `mutate()` is used to create or modify a variable.
 
