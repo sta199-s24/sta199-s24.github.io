@@ -412,12 +412,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Which of the following is <u><strong>correct</strong></u>?</p>
+<p>Which of the following is <u><strong>correct</strong></u>? Choose all that apply.</p>
 <ol type="a">
 <li><p>The <code>blizzard_salary</code> dataset has 399 rows.</p></li>
+<li><p>The <code>blizzard_salary</code> dataset has 4 columns.</p></li>
 <li><p>Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.</p></li>
-<li><p>The <code>salary_type</code> variable is numerical.</p></li>
 <li><p>The <code>percent_incr</code> variable is numerical and discrete.</p></li>
+<li><p>The <code>salary_type</code> variable is numerical.</p></li>
+<li><p>The <code>annual_salary</code> variable is numerical.</p></li>
+<li><p>The <code>performance_rating</code> variable is categorical and ordinal.</p></li>
 </ol>
 </section>
 <section id="question-2" class="level2">
@@ -491,17 +494,13 @@ Figure&nbsp;1: Distribution of annual salaries of Blizzard employees
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?</p>
-<pre><code>I.   Box plot
-II.  Density plot
-III. Pie chart
-IV.  Waffle chart</code></pre>
-<ol type="a">
-<li><p>I</p></li>
-<li><p>I and II</p></li>
-<li><p>I, II, and III</p></li>
-<li><p>III and IV</p></li>
-</ol>
+<p>Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers? Choose all that apply.</p>
+<p>a. Box plots</p>
+<p>b. Density plots</p>
+<p>c. Pie charts</p>
+<p>d. Waffle charts</p>
+<p>e. Histograms</p>
+<p>f. Scatterplots</p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="questions-6-and-7" class="level2">
@@ -544,17 +543,17 @@ Figure&nbsp;2: Distribution of performance rating
 </div>
 <p>You made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>blizzard_salary <span class="ot">&lt;-</span> blizzard_salary <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_1_</span>(<span class="at">performance_rating =</span> <span class="fu">fct_relevel</span>(performance_rating, _2_))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>blizzard_salary <span class="ot">&lt;-</span> blizzard_salary <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_</span>(<span class="dv">1</span>)<span class="fu">_</span>(<span class="at">performance_rating =</span> <span class="fu">fct_relevel</span>(performance_rating, <span class="fu">_</span>(<span class="dv">2</span>)_))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Question 6:</strong> What goes in the first blank?</p>
+<p><strong>Question 6:</strong> What goes in the blank (1)?</p>
 <ol type="a">
 <li><p><code>arrange()</code></p></li>
 <li><p><code>filter()</code></p></li>
 <li><p><code>mutate()</code></p></li>
 <li><p><code>summarize()</code></p></li>
 </ol>
-<p><strong>Question 7:</strong> What goes in the second blank?</p>
+<p><strong>Question 7:</strong> What goes in the blank (2)?</p>
 <ol type="a">
 <li><p><code>"Poor", "Successful", "High", "Top"</code></p></li>
 <li><p><code>"Successful", "High", "Top"</code></p></li>
@@ -629,6 +628,11 @@ Figure&nbsp;3: Distribution of salary type by performance rating
 </div>
 </div>
 <p>The pipeline below produces a data frame with a fewer number of rows than <code>blizzard_salary</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>blizzard_salary <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(salary_type <span class="fu">_</span>(<span class="dv">1</span>)_ <span class="st">"Hourly"</span> <span class="fu">_</span>(<span class="dv">2</span>)_ performance_rating <span class="sc">==</span> <span class="st">"Poor"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_</span>(<span class="dv">3</span>)<span class="fu">_</span>(annual_salary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
