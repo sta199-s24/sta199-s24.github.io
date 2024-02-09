@@ -138,7 +138,7 @@ Labs are due at 8 am ET on the indicated due date (generally the Monday after th
 ### Exams
 
 There will be two exams in this course.
-Each exam will include a closed-notes in-class component and an open-note take-home component.
+Each exam will include an in-class component (with a cheat sheet) and an open-note take-home component.
 Through these exams you have the opportunity to demonstrate what you’ve learned in the course thus far.
 The exams will focus on both conceptual understanding of the content and application through analysis and computational tasks.
 The content of the exam will be related to the content in videos and reading assignments, lectures, application exercises, and labs.
