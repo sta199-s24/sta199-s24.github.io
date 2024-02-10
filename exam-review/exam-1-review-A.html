@@ -346,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only. Scatterplots are for visualizing the relationship between two numerical variables.</p></li>
 <li><p>c - <code>mutate()</code> is used to create or modify a variable.</p></li>
 <li><p>a - <code>"Poor", "Successful", "High", "Top"</code></p></li>
-<li><p>b - Option 2. Shows the proportion of each performance rating for each salary type.</p></li>
+<li><p>b - Option 2. The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs.&nbsp;Hourly workers), we need the proportions, not the counts.</p></li>
 <li><p>There may be some <code>NA</code>s in these two variables that are not visible in the plot.</p></li>
 <li><p>The proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.</p></li>
 <li><p>c - <code>filter(salary_type != "Hourly" &amp; performance_rating == "Poor")</code> - There are 5 observations for <strong>“not Hourly”</strong> <strong>“and”</strong> Poor.</p></li>
