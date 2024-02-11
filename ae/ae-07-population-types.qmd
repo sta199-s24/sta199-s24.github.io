@@ -59,23 +59,19 @@ z <- c("1", "2", "three")
 survey_results <- tibble(cars = c(1, 2, "three"))
 survey_results
 ```
-
-```         
+      
 This is annoying because of that third survey taker who just had to go and type out the number instead of providing as a numeric value.
 So now you need to update the `cars` variable to be numeric.
-You do the following
-```
+You do the following:
 
 ```{r}
 #| label: survey-results-mutate-1
 
 # add code here
 ```
-
-```         
+       
 And now things are even more annoying because you get a warning `NAs introduced by coercion` that happened while computing `cars = as.numeric(cars)` and the response from the third survey taker is now an `NA` (you lost their data).
 Fix your `mutate()` call to avoid this warning.
-```
 
 ```{r}
 #| label: survey-results-mutate-2
