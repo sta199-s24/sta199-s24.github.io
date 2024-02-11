@@ -212,7 +212,7 @@ flights |>
 
 ## Exercise 8 - `mutate()`
 
--   Demo: In the code chunk below, `air_time` (minutes in the air) is converted to hours, and then new variable `mph` is created, corresponding to the miles per hour of the flight.
+-   Demo: Convert `air_time` (minutes in the air) to hours and then create a new variable, `mph`, the miles per hour of the flight.
 
 ```{r}
 #| label: calculate-mph
@@ -233,6 +233,20 @@ flights |>
 flights |>
   count(month) |>
   mutate(perc = n / sum(n) * 100)
+```
+
+-   Demo: Create a new variable, `rdu_bound`, which indicates whether the flight is to RDU or not.
+    Then, for each departure airport (`origin`), calculate what proportion of flights originating from that airport are to RDU.
+
+```{r}
+#| label: rdu-bound
+
+flights |>
+  mutate(rdu_bound = if_else(dest == "RDU", "Yes", "No")) |>
+  count(origin, rdu_bound) |>
+  group_by(origin) |>
+  mutate(prop = n / sum(n)) |>
+  filter(rdu_bound == "Yes")
 ```
 
 ## Exercise 9 - `summarize()`
