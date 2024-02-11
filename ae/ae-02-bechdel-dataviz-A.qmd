@@ -41,13 +41,6 @@ Let's read it from there and save it as an object called `bechdel`.
 bechdel <- read_csv("https://sta199-s24.github.io/data/bechdel.csv")
 ```
 
-::: callout-note
-This a modified version of the `bechdel` dataset from the previous application exercise.
-It's been modified to include some new variables derived from existing variables as well as to limit the scope of the data to movies released between 1990 and 2013.
-For now we're not going to discuss how these modifications were made (that's next week's topic) but if you're curious, you can find the data prep script in the `data/` folder of your repo.
-Don't spend too long trying to decipher it, wait till next week when you have the right tools to do so!
-:::
-
 ### Get to know the data
 
 We can use the `glimpse` function to get an overview (or "glimpse") of the data.

@@ -398,7 +398,7 @@ You're reviewing another team's work and they made the following visualization:
 ```{r}
 #| warning: false
 #| fig-width: 10
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 
 ggplot(blizzard_salary, aes(x = annual_salary, percent_incr)) +
   geom_point() +
