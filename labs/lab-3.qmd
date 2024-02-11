@@ -307,7 +307,7 @@ Refer back to the guidance provided in [Question 6] if you're not sure how to cr
 b\.
 In a single pipeline, filter your reshaped dataset to include only the `divisions_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with.
 Use a short but informative name.
-Then, in a new pipeline, find the `distinct()` countries in the data frame you created.
+Then, in a new pipeline, find the `distinct()` divisions in the data frame you created.
 
 ### Question 10
 
