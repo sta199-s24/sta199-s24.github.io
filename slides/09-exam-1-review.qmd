@@ -1,0 +1,455 @@
+---
+title: "Exam 1 review"
+subtitle: "Lecture 9"
+date: "February 13, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+library(ggthemes)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+Questions for/about the exam?
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Packages
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(openintro)
+```
+
+# Type coercion
+
+## Explicit vs. implicit type coercion
+
+-   Explicit type coercion: You ask R to change the type of a variable
+
+-   Implicit type coercion: R changes / makes assumptions for you about the type of a variable without you asking for it
+
+    -   This happens because in a vector, you can't have multiple types of values
+
+## Vectors {.smaller}
+
+::: incremental
+-   A vector is a collection of values
+
+    -   Atomic vectors can only contain values of the same type
+
+    -   Lists can contain values of different types
+
+-   Why do we care?
+    Because each column of a data frame is a vector.
+:::
+
+. . .
+
+```{r}
+#| code-line-numbers: "|2|3|4"
+
+df <- tibble(
+  x = c(1, 2, 3),          # numeric (double)
+  y = c("a", "b", "c"),    # character
+  z = c(TRUE, FALSE, TRUE) # logical
+)
+df
+```
+
+## Explicit coercion
+
+✅ From numeric to character
+
+```{r}
+#| code-line-numbers: "|2"
+
+df |>
+  mutate(x_new = as.character(x))
+```
+
+## Explicit coercion
+
+❌ From character to numeric
+
+```{r}
+#| code-line-numbers: "|2"
+
+df |>
+  mutate(y_new = as.numeric(y))
+```
+
+## Implicit coercion
+
+::: question
+Which of the column types were implicitly coerced?
+:::
+
+```{r}
+#| code-line-numbers: "|2|3"
+
+df <- tibble(
+  w = c(1, 2, 3),
+  x = c("a", "b", 4),
+  y = c("c", "d", NA),
+  z = c(5, 6, NA),
+)
+df
+```
+
+## Collecting data {.smaller}
+
+::: question
+Suppose you conduct a survey and ask students their student ID number and number of credits they're taking this semester. What is the type of each variable?
+:::
+
+. . .
+
+```{r}
+#| code-line-numbers: "|2|3"
+
+survey_raw <- tibble(
+  student_id = c(273674, 298765, 287129, "I don't remember"),
+  n_credits = c(4, 4.5, "I'm not sure yet", "2 - underloading")
+)
+survey_raw
+```
+
+## Cleaning data {.smaller}
+
+```{r}
+#| code-line-numbers: "|2|3"
+
+survey <- survey_raw |>
+  mutate(
+    student_id = if_else(student_id == "I don't remember", NA, student_id),
+    n_credits = case_when(
+      n_credits == "I'm not sure yet" ~ NA,
+      n_credits == "2 - underloading" ~ "2",
+      .default = n_credits
+    ),
+    n_credits = as.numeric(n_credits)
+  )
+survey
+```
+
+## Cleaning data -- alternative {.smaller}
+
+```{r}
+#| code-line-numbers: "|2|3"
+
+survey <- survey_raw |>
+  mutate(
+    student_id = parse_number(student_id),
+    n_credits = parse_number(n_credits)
+  )
+survey
+```
+
+## Recap: Type coercion
+
+::: incremental
+- If variables in a data frame have multiple types of values, R will coerce them into a single type, which may or may not be what you want.
+
+- If what R does by default is not what you want, you can use explicit coercion functions like `as.numeric()`, `as.character()`, etc. to turn them into the types you want them to be, which will generally also involve cleaning up the features of the data that caused the unwanted implicit coercion in the first place.
+:::
+
+# Aesthetic mappings
+
+## `openintro::loan50`
+
+```{r}
+loan50 |>
+  select(annual_income, interest_rate, homeownership)
+```
+
+## Aesthetic mappings
+
+::: question
+What will the following code result in?
+:::
+
+```{r}
+#| label: mapping
+#| fig-show: hide
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)
+) +
+  geom_point() +
+  scale_color_colorblind()
+```
+
+## Aesthetic mappings
+
+```{r}
+#| ref.label: mapping
+#| fig-width: 8
+#| fig-asp: 0.5
+```
+
+## Global mappings
+
+::: question
+What will the following code result in?
+:::
+
+```{r}
+#| label: mapping-global
+#| fig-show: hide
+#| warning: false
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)
+) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  scale_color_colorblind()
+```
+
+## Global mappings
+
+```{r}
+#| ref.label: mapping-global
+#| fig-width: 8
+#| fig-asp: 0.5
+#| warning: false
+```
+
+## Local mappings
+
+::: question
+What will the following code result in?
+:::
+
+```{r}
+#| label: mapping-local
+#| fig-show: hide
+#| warning: false
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate)
+) +
+  geom_point(aes(color = homeownership)) +
+  geom_smooth(se = FALSE) +
+  scale_color_colorblind()
+```
+
+## Local mappings
+
+```{r}
+#| ref.label: mapping-global
+#| fig-width: 8
+#| fig-asp: 0.5
+#| warning: false
+```
+
+## Mapping vs. setting
+
+::: question
+What will the following code result in?
+:::
+
+```{r}
+#| label: mapping-setting
+#| fig-show: hide
+#| warning: false
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate)
+) +
+  geom_point(aes(color = homeownership)) +
+  geom_smooth(color = "red", se = FALSE) +
+  scale_color_colorblind()
+```
+
+## Mapping vs. setting
+
+```{r}
+#| ref.label: mapping-setting
+#| fig-width: 8
+#| fig-asp: 0.5
+#| warning: false
+```
+
+## Recap: Aesthetic mappings
+
+::: incremental
+- Aesthetic mapping defined at the *global* level will be used by all `geom`s for which the aesthetic is defined. 
+
+- Aesthetic mapping defined at the *local* level will be used only by the `geom`s they're defined for.
+:::
+
+## Aside: Legends
+
+```{r}
+#| fig-width: 8
+#| fig-asp: 0.5
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)
+) +
+  geom_point() +
+  scale_color_colorblind()
+```
+
+## Aside: Legends {.smaller}
+
+```{r}
+#| fig-width: 8
+#| fig-asp: 0.5
+#| code-line-numbers: "|7"
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)
+) +
+  geom_point() +
+  scale_color_colorblind() +
+  labs(color = "Home ownership")
+```
+
+## Aside: Legends {.smaller}
+
+```{r}
+#| fig-width: 8
+#| fig-asp: 0.5
+#| code-line-numbers: "|8-9"
+
+ggplot(
+  loan50,
+  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)
+) +
+  geom_point() +
+  scale_color_colorblind() +
+  labs(
+    color = "Home ownership",
+    shape = "Home ownership"
+  )
+```
+
+
+# Factors
+
+## Factors
+
+- Factors are used for categorical variables -- variables that have a fixed and known set of possible values. 
+
+- They are also useful when you want to display character vectors in a non-alphabetical order.
+
+::: aside
+R4DS: <https://r4ds.hadley.nz/factors>.
+:::
+
+## Bar plot
+
+```{r}
+ggplot(loan50, aes(x = homeownership)) +
+  geom_bar()
+```
+
+## Bar plot - reordered
+
+```{r}
+loan50 |>
+  mutate(homeownership = fct_relevel(homeownership, "mortgage", "rent", "own")) |>
+  ggplot(aes(x = homeownership)) +
+  geom_bar()
+```
+
+## Frequency table
+
+```{r}
+loan50 |>
+  count(homeownership)
+```
+
+## Bar plot - reordered
+
+```{r}
+loan50 |>
+  mutate(homeownership = fct_relevel(homeownership, "own", "rent", "mortgage")) |>
+  count(homeownership)
+```
+
+## Under the hood
+
+```{r}
+class(loan50$homeownership)
+```
+
+. . .
+
+```{r}
+typeof(loan50$homeownership)
+```
+
+. . .
+
+```{r}
+levels(loan50$homeownership)
+```
+
+. . .
+
+```{r}
+str(loan50$homeownership)
+```
+
+## Recap: Factors
+
+::: incremental
+- The **forcats** package has a bunch of functions (that start with `fct_*()`) for dealing with factors and their levels: <https://forcats.tidyverse.org/reference/index.html>
+
+- Factors and the order of their levels are relevant for displays (tables, plots) and they'll be relevant for modeling (later in the course)
+
+- `factor` is a data **class**
+:::
+
+## Aside: `==`
+
+```{r}
+loan50 |>
+  mutate(homeownership_new = if_else(homeownership == "rent", "don't own", homeownership)) |>
+  distinct(homeownership, homeownership_new)
+```
+
+## Aside: `|`
+
+```{r}
+loan50 |>
+  mutate(homeownership_new = if_else(homeownership == "rent" | homeownership == "mortgage", "don't own", homeownership)) |>
+  distinct(homeownership, homeownership_new)
+```
+
+## Aside: `|`
+
+```{r}
+loan50 |>
+  mutate(homeownership_new = if_else(homeownership %in% c("rent", "mortgage"), "don't own", homeownership)) |>
+  distinct(homeownership, homeownership_new)
+```
+
+# Other questions?
