@@ -2902,7 +2902,7 @@
     "href": "slides/09-exam-1-review.html#local-mappings-1",
     "title": "Exam 1 review",
     "section": "Local mappings",
-    "text": "Local mappings\n\nggplot(\n  loan50,\n  aes(x = annual_income, y = interest_rate, color = homeownership, shape = homeownership)\n) +\n  geom_point() +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind()"
+    "text": "Local mappings\n\nggplot(\n  loan50,\n  aes(x = annual_income, y = interest_rate)\n) +\n  geom_point(aes(color = homeownership)) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind()"
   },
   {
     "objectID": "slides/09-exam-1-review.html#mapping-vs.-setting",

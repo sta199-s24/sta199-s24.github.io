@@ -739,9 +739,9 @@ row col expected           actual
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb26-2"><a></a>  loan50,</span>
-<span id="cb26-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> annual_income, <span class="at">y =</span> interest_rate, <span class="at">color =</span> homeownership, <span class="at">shape =</span> homeownership)</span>
+<span id="cb26-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> annual_income, <span class="at">y =</span> interest_rate)</span>
 <span id="cb26-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb26-5"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb26-5"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> homeownership)) <span class="sc">+</span></span>
 <span id="cb26-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb26-7"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
