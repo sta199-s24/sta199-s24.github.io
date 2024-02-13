@@ -265,7 +265,7 @@ ggplot(
 ## Local mappings
 
 ```{r}
-#| ref.label: mapping-global
+#| ref.label: mapping-local
 #| fig-width: 8
 #| fig-asp: 0.5
 #| warning: false
