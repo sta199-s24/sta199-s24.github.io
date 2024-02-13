@@ -38,6 +38,12 @@ library(tidyverse)
 library(openintro)
 ```
 
+## Announcements
+
+-   Exam format / flow
+
+-   Academic dishonesty / Duke Community Standard
+
 # Type coercion
 
 ## Explicit vs. implicit type coercion
@@ -117,7 +123,8 @@ df
 ## Collecting data {.smaller}
 
 ::: question
-Suppose you conduct a survey and ask students their student ID number and number of credits they're taking this semester. What is the type of each variable?
+Suppose you conduct a survey and ask students their student ID number and number of credits they're taking this semester.
+What is the type of each variable?
 :::
 
 . . .
@@ -166,9 +173,9 @@ survey
 ## Recap: Type coercion
 
 ::: incremental
-- If variables in a data frame have multiple types of values, R will coerce them into a single type, which may or may not be what you want.
+-   If variables in a data frame have multiple types of values, R will coerce them into a single type, which may or may not be what you want.
 
-- If what R does by default is not what you want, you can use explicit coercion functions like `as.numeric()`, `as.character()`, etc. to turn them into the types you want them to be, which will generally also involve cleaning up the features of the data that caused the unwanted implicit coercion in the first place.
+-   If what R does by default is not what you want, you can use explicit coercion functions like `as.numeric()`, `as.character()`, etc. to turn them into the types you want them to be, which will generally also involve cleaning up the features of the data that caused the unwanted implicit coercion in the first place.
 :::
 
 # Aesthetic mappings
@@ -296,9 +303,9 @@ ggplot(
 ## Recap: Aesthetic mappings
 
 ::: incremental
-- Aesthetic mapping defined at the *global* level will be used by all `geom`s for which the aesthetic is defined. 
+-   Aesthetic mapping defined at the *global* level will be used by all `geom`s for which the aesthetic is defined.
 
-- Aesthetic mapping defined at the *local* level will be used only by the `geom`s they're defined for.
+-   Aesthetic mapping defined at the *local* level will be used only by the `geom`s they're defined for.
 :::
 
 ## Aside: Legends
@@ -350,14 +357,13 @@ ggplot(
   )
 ```
 
-
 # Factors
 
 ## Factors
 
-- Factors are used for categorical variables -- variables that have a fixed and known set of possible values. 
+-   Factors are used for categorical variables -- variables that have a fixed and known set of possible values.
 
-- They are also useful when you want to display character vectors in a non-alphabetical order.
+-   They are also useful when you want to display character vectors in a non-alphabetical order.
 
 ::: aside
 R4DS: <https://r4ds.hadley.nz/factors>.
@@ -421,11 +427,11 @@ str(loan50$homeownership)
 ## Recap: Factors
 
 ::: incremental
-- The **forcats** package has a bunch of functions (that start with `fct_*()`) for dealing with factors and their levels: <https://forcats.tidyverse.org/reference/index.html>
+-   The **forcats** package has a bunch of functions (that start with `fct_*()`) for dealing with factors and their levels: <https://forcats.tidyverse.org/reference/index.html>
 
-- Factors and the order of their levels are relevant for displays (tables, plots) and they'll be relevant for modeling (later in the course)
+-   Factors and the order of their levels are relevant for displays (tables, plots) and they'll be relevant for modeling (later in the course)
 
-- `factor` is a data **class**
+-   `factor` is a data **class**
 :::
 
 ## Aside: `==`
