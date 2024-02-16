@@ -312,11 +312,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#merge-conflict-activity" id="toc-merge-conflict-activity" class="nav-link active" data-scroll-target="#merge-conflict-activity">Merge conflict activity</a>
+  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link active" data-scroll-target="#merge-conflicts">Merge conflicts</a></li>
+  <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
   <ul class="collapse">
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#lets-cause-a-merge-conflict" id="toc-lets-cause-a-merge-conflict" class="nav-link" data-scroll-target="#lets-cause-a-merge-conflict">Let’s cause a merge conflict!</a></li>
   </ul></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
   <li><a href="#tips-for-collaborating-via-github" id="toc-tips-for-collaborating-via-github" class="nav-link" data-scroll-target="#tips-for-collaborating-via-github">Tips for collaborating via GitHub</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/project/project-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -346,8 +348,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Working in teams includes using a shared GitHub repo for labs and projects. Sometimes things will go swimmingly, and sometimes you’ll run into <strong>merge conflicts</strong>.</p>
-<p>When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues. Merge conflicts happen when you merge branches that have competing renders, and Git needs your help to decide which changes to incorporate in the final merge.</p>
+<p>Data science is a collaborative discipline. Pretty much no data scientist works alone, so neither should you! In this course you’ll collaborate with teammates on the project.</p>
+<p>The first milestone of the project, today’s activity, will introduce you to the technical aspects of collaborating on a reproducible data science project that is version controlled by Git and hosted on GitHub in a repository shared by all teammates.</p>
+<p>Yes, this means you and all of your teammates will be pushing to the same repository! Sometimes things will go swimmingly, and sometimes you’ll run into <strong>merge conflicts</strong>.</p>
+<p>Today’s goal is to introduce you to the concept of merge conflicts and teach you how to resolve them when they inevitably occur.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The word “conflict” has a negative connotation. And, indeed, merge conflicts can be frustrating. But they serve to make sure no team member inadvertently writes another team member’s work. All changes that are in “conflict” with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.</p>
+</div>
+</div>
+<section id="merge-conflicts" class="level2">
+<h2 class="anchored" data-anchor-id="merge-conflicts">Merge conflicts</h2>
+<p>When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues. Merge conflicts happen when you merge branches that have competing changes, and Git needs your help to decide which changes to incorporate in the final merge.</p>
 <p>Our first task today is to walk you through a merge conflict! First, a bit of Git review:</p>
 <ul>
 <li>Pushing to a repo replaces the code on GitHub with the code you have on your computer.</li>
@@ -371,8 +391,9 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p>And at the bottom you see <code>some1alpha2numeric3string4</code> (well, it probably looks more like <code>28e7b2ceb39972085a0860892062810fb812a08f</code>).</p>
 <p>This is the <strong>hash</strong> (a unique identifier) of the render your collaborator made with the conflicting change.</p>
 <p>Your job is to <em>reconcile</em> the changes: edit the file so that it incorporates the best of both versions and delete the <code>&lt;&lt;&lt;</code>, <code>===</code>, and <code>&gt;&gt;&gt;</code> lines. Then you can stage and render the result.</p>
-<section id="merge-conflict-activity" class="level2">
-<h2 class="anchored" data-anchor-id="merge-conflict-activity">Merge conflict activity</h2>
+</section>
+<section id="activity" class="level2">
+<h2 class="anchored" data-anchor-id="activity">Activity</h2>
 <section id="setup" class="level3">
 <h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ul>
@@ -427,6 +448,10 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 </ul>
 <p><strong>Everyone:</strong> Pull, and observe the changes in your document.</p>
 </section>
+</section>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<p>We will evaluate the first milestone of your project based on your participation in this activity. Each team member who participates in the activity during the lab session will earn 5 points towards their project.</p>
 </section>
 <section id="tips-for-collaborating-via-github" class="level2">
 <h2 class="anchored" data-anchor-id="tips-for-collaborating-via-github">Tips for collaborating via GitHub</h2>
