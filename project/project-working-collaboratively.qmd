@@ -5,11 +5,28 @@ execute:
   eval: true
 ---
 
-Working in teams includes using a shared GitHub repo for labs and projects.
+Data science is a collaborative discipline.
+Pretty much no data scientist works alone, so neither should you!
+In this course you'll collaborate with teammates on the project.
+
+The first milestone of the project, today's activity, will introduce you to the technical aspects of collaborating on a reproducible data science project that is version controlled by Git and hosted on GitHub in a repository shared by all teammates.
+
+Yes, this means you and all of your teammates will be pushing to the same repository!
 Sometimes things will go swimmingly, and sometimes you'll run into **merge conflicts**.
 
+Today's goal is to introduce you to the concept of merge conflicts and teach you how to resolve them when they inevitably occur.
+
+::: callout-note
+The word "conflict" has a negative connotation.
+And, indeed, merge conflicts can be frustrating.
+But they serve to make sure no team member inadvertently writes another team member's work.
+All changes that are in "conflict" with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.
+:::
+
+## Merge conflicts
+
 When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues.
-Merge conflicts happen when you merge branches that have competing renders, and Git needs your help to decide which changes to incorporate in the final merge.
+Merge conflicts happen when you merge branches that have competing changes, and Git needs your help to decide which changes to incorporate in the final merge.
 
 Our first task today is to walk you through a merge conflict!
 First, a bit of Git review:
@@ -45,7 +62,7 @@ This is the **hash** (a unique identifier) of the render your collaborator made 
 Your job is to *reconcile* the changes: edit the file so that it incorporates the best of both versions and delete the `<<<`, `===`, and `>>>` lines.
 Then you can stage and render the result.
 
-## Merge conflict activity
+## Activity
 
 ### Setup
 
@@ -118,6 +135,11 @@ Also, everyone should go to their Terminal and type `git config pull.rebase fals
 -   If there is a merge conflict, fix it. If not, push your changes.
 
 **Everyone:** Pull, and observe the changes in your document.
+
+## Evaluation
+
+We will evaluate the first milestone of your project based on your participation in this activity.
+Each team member who participates in the activity during the lab session will earn 5 points towards their project.
 
 ## Tips for collaborating via GitHub
 
