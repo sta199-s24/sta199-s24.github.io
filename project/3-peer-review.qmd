@@ -1,0 +1,130 @@
+---
+title: "Peer review"
+subtitle: "Milestone 3"
+categories: "Project"
+---
+
+During the peer feedback process, you will be provided read-only access to your partner team's GitHub repo.
+You will provide your feedback in the form of GitHub issues to your partner team's GitHub repo.
+
+# Goals
+
+The goals of this milestone are as follows:
+
+-   Review others' project drafts as a team and provide feedback
+-   Post issues on GitHub using an issue template
+-   Learn from others' projects and improve your own project based on their strengths and weaknesses
+
+# Instructions
+
+Each team will review two other teams' project.
+As a team you should spend \~30 minutes on each team's project.
+
+-   Find the names of the teams whose projects you're reviewing below.
+    You should already have access to this team's repo.
+
+-   Each team member should go to the repo of the team you're reviewing.
+
+-   Then,
+
+    -   1-2 team members clone the team's project and renders it to check for reproducibility.
+
+    -   1-2 team members open the team's project in their browser and starts reading through the project draft.
+
+    -   1 team member opens an issue on the team's repo using the peer review template.
+
+    -   All team members discuss the project based on the prompts on the issue template and one team member records the feedback and submits the issue.
+
+-   To open an issue in the repo you're reviewing, click on New issue, and click on Get started for the Peer review issue.
+    Fill out this issue, answering the following questions:
+
+    -   Peer review by: \[NAME OF TEAM DOING THE REVIEW\]
+
+    -   Names of team members that participated in this review: \[FULL NAMES OF TEAM MEMBERS DOING THE REVIEW\]
+
+    -   Describe the goal of the project.
+
+    -   Describe the data used or collected, if any.
+        If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.
+
+    -   Describe the approaches, tools, and methods that will be used.
+
+    -   Provide constructive feedback on how the team might be able to improve their project.
+        Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.
+
+    -   What aspect of this project are you most interested in and would like to see highlighted in the presentation.
+
+    -   Were you able to reproduce the project by clicking on Render Website once you cloned it?
+        Were there any issues with reproducibility?
+
+    -   Provide constructive feedback on any issues with file and/or code organization.
+
+    -   What have you learned from this team's project that you are considering implementing in your own project?
+
+    -   (Optional) Any further comments or feedback?
+
+# Review pairings
+
+```{r}
+#| echo: false
+#| message: false
+#| cache: true
+#| eval: false
+
+library(tidyverse)
+library(gt)
+
+teams <- read_csv("https://raw.githubusercontent.com/sta199-f22-1/teams/main/teams.csv?token=GHSAT0AAAAAAB3EHE2PB3NHYYC3FJQO2I4EY4A7A6A") |> 
+  distinct(lab, team_name, team_name_github) |>
+  filter(team_name != "haj10")
+
+teams |>
+  select(-team_name_github) |>
+  group_by(lab) |>
+  mutate(
+    rev_1 = lag(team_name, default = team_name[n()]),
+    rev_2 = lag(rev_1, default = rev_1[n()])
+  ) |>
+  gt() |>
+  cols_label(
+    team_name = "Your team name",
+    rev_1 = "To review 1",
+    rev_2 = "To review 2"
+  )
+
+teams |>
+  select(-team_name) |>
+  group_by(lab) |>
+  mutate(
+    rev_1 = lag(team_name_github, default = team_name_github[n()]),
+    rev_2 = lag(rev_1, default = rev_1[n()])
+  ) |>
+  ungroup() |>
+  select(-lab) |>
+  write_csv(file = here::here("labs", "project-peer-review.csv"))
+```
+
+# Grading
+
+Peer reviews will be graded on the extent to which it comprehensively and constructively addresses the components of the reviewee's team's report.
+
+Only the team members participating in the review during the lab session are eligible for points for the peer review.
+If you're unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.
+
+-   0 points: No peer review
+
+-   1 point: Only one peer review issue open, feedback provided is not constructive or actionable
+
+-   2 points: Both peer review issues open, feedback provided is not constructive or actionable
+
+-   3 points: Both peer review issues open, feedback provided is not sufficiently thorough
+
+-   4 points: Both peer review issues open, one of the reviews is not sufficiently thorough
+
+-   5 points: Both peer review issues open, both reviews are constructive, actionable, and sufficiently thorough
+
+::: callout-note
+The feedback issue will come from one team member on GitHub since you can't collectively edit an issue.
+However it must represent the opinions of the entire team.
+It is not a single team member's responsibility to provide feedback, they're just the record keeper for the team.
+:::

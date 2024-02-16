@@ -74,9 +74,17 @@ website:
             text: Cheatsheets
       - section: "Project"
         contents:
-          - href: project/project-description.qmd
+          - href: project/description.qmd
             text: Description
-          - href: project/project-tips-resources.qmd
+          - href: project/1-working-collaboratively.qmd
+            text: Milestone 1
+          - href: project/2-proposal.qmd
+            text: Milestone 2
+          - href: project/3-peer-review.qmd
+            text: Milestone 3
+          - href: project/4-writeup-presentation.qmd
+            text: Milestone 4            
+          - href: project/tips-resources.qmd
             text: Tips + resources
       - section: "Labs"
         contents:

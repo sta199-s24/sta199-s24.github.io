@@ -1,8 +1,7 @@
 ---
 title: "Working collaboratively"
+subtitle: "Milestone 1"
 categories: "Project"
-execute:
-  eval: true
 ---
 
 Data science is a collaborative discipline.
@@ -14,14 +13,20 @@ The first milestone of the project, today's activity, will introduce you to the 
 Yes, this means you and all of your teammates will be pushing to the same repository!
 Sometimes things will go swimmingly, and sometimes you'll run into **merge conflicts**.
 
-Today's goal is to introduce you to the concept of merge conflicts and teach you how to resolve them when they inevitably occur.
-
 ::: callout-note
 The word "conflict" has a negative connotation.
 And, indeed, merge conflicts can be frustrating.
 But they serve to make sure no team member inadvertently writes another team member's work.
 All changes that are in "conflict" with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.
 :::
+
+# Goals
+
+The goals of this milestone are as follows:
+
+-   Pick a team name
+-   Collaborate on GitHub with your teammates and resolve merge conflicts when they inevitably occur
+-   Start thinking about your project proposal
 
 # Merge conflicts
 
@@ -148,14 +153,15 @@ Make sure the previous role has finished before moving on to the next step.
 
 Pull, and observe the changes in your document.
 
-# Evaluation
-
-We will evaluate the first milestone of your project based on your participation in this activity.
-Each team member who participates in the activity during the lab session will earn 5 points towards their project.
-
 # Tips for collaborating via GitHub
 
 -   **Always pull first before you start working.**
 -   Resolve a merge conflict (render and push) *before* continuing your work. Never do new work while resolving a merge conflict.
 -   Render, commit, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.
 -   If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don't let it linger and get bigger.
+
+
+# Grading
+
+We will evaluate the first milestone of your project based on your participation in this activity.
+Each team member who participates in the activity during the lab session will earn 5 points towards their project.
