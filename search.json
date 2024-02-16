@@ -1669,8 +1669,63 @@
     ]
   },
   {
-    "objectID": "project/project-description.html",
-    "href": "project/project-description.html",
+    "objectID": "project/4-writeup-presentation.html",
+    "href": "project/4-writeup-presentation.html",
+    "title": "Writeup and presentation",
+    "section": "",
+    "text": "The goals of this milestone are as follows:\n\n…\n\nYour written report must be completed in the report.qmd file and must be reproducible. All team members should contribute to the GitHub repository, with regular meaningful commits.\nBefore you finalize your write up, make sure the printing of code chunks is off with the option echo: false in the YAML.\nThe mandatory components of the report are below. You are free to add additional sections as necessary. The report, including visualizations, should be no more than 10 pages long (if it were to be printed). There is no minimum page requirement; however, you should comprehensively address all of the analysis in your report.\nTo check how many pages your report is, open it in your browser and go to File &gt; Print &gt; Save as PDF and review the number of pages.\nBe selective in what you include in your final write-up. The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis.\nYou are welcome to include an appendix with additional work at the end of the written report document; however, grading will largely be based on the content in the main body of the report. You should assume the reader will not see the material in the appendix unless prompted to view it in the main body of the report. The appendix should be neatly formatted and easy for the reader to navigate. It is not included in the 10-page limit.\n\n\n\n\nThis section includes an introduction to the project motivation, data, and research question. Describe the data and definitions of key variables. It should also include some exploratory data analysis. All of the EDA won’t fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.\n\n\nThe research question and motivation are clearly stated in the introduction, including citations for the data source and any external research. The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report. The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The explanatory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables. It incorporates appropriate visualizations and summary statistics.\n\n\n\n\nThis section includes a brief description of your analysis process. Explain the reasoning for the types of analyses you do, exploratory, inferential, or modeling. If you’ve chosen to do inference, make sure to include a justification for why that inferential approach is appropriate. If you’ve chosen to do modeling, describe the model(s) you’re fitting, predictor variables considered for the model including any interactions. Additionally, show how you arrived at the final model by describing the model selection process, interactions considered, variable transformations (if needed), assessment of conditions and diagnostics, and any other relevant considerations that were part of the model fitting process.\n\n\nThe analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to determine analyses types and addressed any concerns over appropriateness of analyses chosen.\n\n\n\n\nThis is where you will discuss your overall finding and describe the key results from your analysis. The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.\n\n\nThe analysis results are clearly assesses and interesting findings from the analysis are described. Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.\n\n\n\n\nIn this section you’ll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions. In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here. Lastly, this section will include ideas for future work.\n\n\nOverall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.\n\n\n\n\nThis is an assessment of the overall presentation and formatting of the written report.\n\n\nThe report neatly written and organized with clear section headers and appropriately sized figures with informative labels. Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted. All citations and links are properly formatted. If there is an appendix, it is reasonably organized and easy for the reader to find relevant information. All code, warnings, and messages are suppressed. The main body of the written report (not including the appendix) is no longer than 10 pages.\n\n\n\n\n\nThe written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion\n6 pts\n\n\nOrganization + formatting\n4 pts",
+    "crumbs": [
+      "Project",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "project/4-writeup-presentation.html#report-components",
+    "href": "project/4-writeup-presentation.html#report-components",
+    "title": "Writeup and presentation",
+    "section": "",
+    "text": "This section includes an introduction to the project motivation, data, and research question. Describe the data and definitions of key variables. It should also include some exploratory data analysis. All of the EDA won’t fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.\n\n\nThe research question and motivation are clearly stated in the introduction, including citations for the data source and any external research. The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report. The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The explanatory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables. It incorporates appropriate visualizations and summary statistics.\n\n\n\n\nThis section includes a brief description of your analysis process. Explain the reasoning for the types of analyses you do, exploratory, inferential, or modeling. If you’ve chosen to do inference, make sure to include a justification for why that inferential approach is appropriate. If you’ve chosen to do modeling, describe the model(s) you’re fitting, predictor variables considered for the model including any interactions. Additionally, show how you arrived at the final model by describing the model selection process, interactions considered, variable transformations (if needed), assessment of conditions and diagnostics, and any other relevant considerations that were part of the model fitting process.\n\n\nThe analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to determine analyses types and addressed any concerns over appropriateness of analyses chosen.\n\n\n\n\nThis is where you will discuss your overall finding and describe the key results from your analysis. The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.\n\n\nThe analysis results are clearly assesses and interesting findings from the analysis are described. Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.\n\n\n\n\nIn this section you’ll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions. In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here. Lastly, this section will include ideas for future work.\n\n\nOverall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.\n\n\n\n\nThis is an assessment of the overall presentation and formatting of the written report.\n\n\nThe report neatly written and organized with clear section headers and appropriately sized figures with informative labels. Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted. All citations and links are properly formatted. If there is an appendix, it is reasonably organized and easy for the reader to find relevant information. All code, warnings, and messages are suppressed. The main body of the written report (not including the appendix) is no longer than 10 pages.",
+    "crumbs": [
+      "Project",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "project/4-writeup-presentation.html#report-grading",
+    "href": "project/4-writeup-presentation.html#report-grading",
+    "title": "Writeup and presentation",
+    "section": "",
+    "text": "The written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion\n6 pts\n\n\nOrganization + formatting\n4 pts",
+    "crumbs": [
+      "Project",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "project/4-writeup-presentation.html#slides",
+    "href": "project/4-writeup-presentation.html#slides",
+    "title": "Writeup and presentation",
+    "section": "Slides",
+    "text": "Slides\nIn addition to the written report, your team will also create presentation slides and deliver presentation that summarize and showcase your project. Introduce your research question and data set, showcase visualizations, and discuss the primary conclusions. These slides should serve as a brief visual addition to your written report and will be graded for content and quality.\nYou can create your slides with any software you like (Keynote, PowerPoint, Google Slides, etc.). We recommend choosing an option that’s easy to collaborate with, e.g., Google Slides.\nYou can also use Quarto to make your slides! While we won’t be covering making slides with Quarto in the class, we would be happy to help you with it in office hours. It’s no different than writing other documents with Quarto, so the learning curve will not be steep!\nThe slide deck should have no more than 6 content slides + 1 title slide. Here is a suggested outline as you think through the slides; you do not have to use this exact format for the 6 slides.\n\nTitle Slide\nSlide 1: Introduce the topic and motivation\nSlide 2: Introduce the data\nSlide 3: Highlights from EDA\nSlide 4-5: Inference/modeling/other analysis\nSlide 6: Conclusions + future work",
+    "crumbs": [
+      "Project",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "project/4-writeup-presentation.html#presentation",
+    "href": "project/4-writeup-presentation.html#presentation",
+    "title": "Writeup and presentation",
+    "section": "Presentation",
+    "text": "Presentation\nPresentations will take place in class during the last lab of the semester. The presentation must be no longer than 5 minutes. You can choose to present live in class (recommended) or pre-record a video to be shown in class. Either way you must attend the lab session for the Q&A following your presentation.\nIf you choose to pre-record your presentation, you may use can use any platform that works best for your group to record your presentation. Below are a few resources on recording videos:\n\nRecording presentations in Zoom\nApple Quicktime for screen recording\nWindows 10 built-in screen recording functionality\nKap for screen recording\n\nOnce your video is ready, upload the video to Warpwire or another video platform (e.g., YouTube), then add a link to your video in your repo README.\nTo upload your video to Warpwire:\n\nClick the Warpwire tab in the course Sakai site.\nClick the “+” and select “Upload files”.\nLocate the video on your computer and click to upload.\nOnce you’ve uploaded the video to Warpwire, click to share the video and copy the video’s URL. You will need this when you post the video in the discussion forum.",
+    "crumbs": [
+      "Project",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "project/description.html",
+    "href": "project/description.html",
     "title": "Project description",
     "section": "",
     "text": "TL;DR: Ask a question you’re curious about and answer it with a dataset of your choice. This is your project in a nutshell.\nMay be too long, but please do read\nThe project for this class will consist of analysis on a dataset of your own choosing. The dataset may already exist, or you may collect your own data using a survey or by conducting an experiment. You can choose the data based on your teams’ interests or based on work in other courses or research projects. The goal of this project is for you to demonstrate proficiency in the techniques we have covered in this class (and beyond, if you like) and apply them to a novel dataset in a meaningful way.\nThe goal is not to do an exhaustive data analysis i.e., do not calculate every statistic and procedure you have learned for every variable, but rather let me know that you are proficient at asking meaningful questions and answering them with results of data analysis, that you are proficient in using R, and that you are proficient at interpreting and presenting the results. Focus on methods that help you begin to answer your research questions. You do not have to apply every statistical procedure we learned. Also, critique your own methods and provide suggestions for improving your analysis. Issues pertaining to the reliability and validity of your data, and appropriateness of the statistical analysis should be discussed here.\nThe project is very open ended. You should create some kind of compelling visualization(s) of this data in R. There is no limit on what tools or packages you may use but sticking to packages we learned in class is required. You do not need to visualize all of the data at once. A single high-quality visualization will receive a much higher grade than a large number of poor-quality visualizations. Also pay attention to your presentation. Neatness, coherency, and clarity will count. All analyses must be done in RStudio, using R, and all components of the project must be reproducible (with the exception of the presentation).\nYou will work on the project with your lab teams.\nThe four milestones for the final project are\n\nMilestone 1 - Working collaboratively\nMilestone 2 - Proposals, with three dataset ideas\nMilestone 3 - Peer review, on another team’s project\nMilestone 4 - Presentation with slides and a reproducible project writeup of your analysis, with a draft along the way.\n\nYou will not be submitting anything on Gradescope for the project. Submission of these deliverables will happen on GitHub and feedback will be provided as GitHub issues that you need to engage with and close. The collection of the documents in your GitHub repo will create a webpage for your project. To create the webpage go to the Build tab in RStudio, and click on Render Website.",
@@ -1680,107 +1735,8 @@
     ]
   },
   {
-    "objectID": "project/project-description.html#working-collaboratively-grading",
-    "href": "project/project-description.html#working-collaboratively-grading",
-    "title": "Project description",
-    "section": "Working collaboratively grading",
-    "text": "Working collaboratively grading\nEach team member taking part in the collaborative working activity will get 5 points towards their project.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#criteria-for-datasets",
-    "href": "project/project-description.html#criteria-for-datasets",
-    "title": "Project description",
-    "section": "Criteria for datasets",
-    "text": "Criteria for datasets\nThe data sets should meet the following criteria:\n\nAt least 500 observations\nAt least 8 columns\nAt least 6 of the columns must be useful and unique explanatory variables.\n\nIdentifier variables such as “name”, “social security number”, etc. are not useful explanatory variables.\nIf you have multiple columns with the same information (e.g. “state abbreviation” and “state name”), then they are not unique explanatory variables.\n\nYou may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.\nWe strongly recommend curating at least one of your datasets via web scraping.\n\nPlease ask a member of the teaching team if you’re unsure whether your data set meets the criteria.\nIf you set your hearts on a dataset that has fewer observations or variables than what’s suggested here, that might still be ok; use these numbers as guidance for a successful proposal, not as minimum requirements.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#resources-for-datasets",
-    "href": "project/project-description.html#resources-for-datasets",
-    "title": "Project description",
-    "section": "Resources for datasets",
-    "text": "Resources for datasets\nYou can find data wherever you like, but here are some recommendations to get you started. You shouldn’t feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.\n\nAwesome public datasets\nBikeshare data portal\nCDC\nData.gov\nData is Plural\nDurham Open Data Portal\nEdinburgh Open Data\nElection Studies\nEuropean Statistics\nCORGIS: The Collection of Really Great, Interesting, Situated Datasets\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nLos Angeles Open Data\nNHS Scotland Open Data\nNYC OpenData\nOpen access to Scotland’s official statistics\nPew Research\nPRISM Data Archive Project\nStatistics Canada\nTidyTuesday\nThe National Bureau of Economic Research\nUCI Machine Learning Repository\nUK Government Data\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#proposal-components",
-    "href": "project/project-description.html#proposal-components",
-    "title": "Project description",
-    "section": "Proposal components",
-    "text": "Proposal components\nFor each data set, include the following:\n\nIntroduction and data\nFor each data set:\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations.\nAddress ethical concerns about the data, if any.\n\n\n\nResearch question\nYour research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nWhat is your target population?\nIs the question original?\nCan the question be answered?\n\nFor each data set, include the following:\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nStatement on why this question is important.\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\n\n\nGlimpse of data\nFor each data set:\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#proposal-grading",
-    "href": "project/project-description.html#proposal-grading",
-    "title": "Project description",
-    "section": "Proposal grading",
-    "text": "Proposal grading\n\n\n\nTotal\n10 pts\n\n\n\n\nIntroduction and data\n3\n\n\nResearch question\n3\n\n\nGlimpse of data\n3\n\n\nWorkflow and formatting\n1\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#report-components",
-    "href": "project/project-description.html#report-components",
-    "title": "Project description",
-    "section": "Report components",
-    "text": "Report components\n\nIntroduction and data\nThis section includes an introduction to the project motivation, data, and research question. Describe the data and definitions of key variables. It should also include some exploratory data analysis. All of the EDA won’t fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.\n\nGrading criteria\nThe research question and motivation are clearly stated in the introduction, including citations for the data source and any external research. The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report. The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The explanatory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables. It incorporates appropriate visualizations and summary statistics.\n\n\n\nMethodology\nThis section includes a brief description of your analysis process. Explain the reasoning for the types of analyses you do, exploratory, inferential, or modeling. If you’ve chosen to do inference, make sure to include a justification for why that inferential approach is appropriate. If you’ve chosen to do modeling, describe the model(s) you’re fitting, predictor variables considered for the model including any interactions. Additionally, show how you arrived at the final model by describing the model selection process, interactions considered, variable transformations (if needed), assessment of conditions and diagnostics, and any other relevant considerations that were part of the model fitting process.\n\nGrading criteria\nThe analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to determine analyses types and addressed any concerns over appropriateness of analyses chosen.\n\n\n\nResults\nThis is where you will discuss your overall finding and describe the key results from your analysis. The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.\n\nGrading criteria\nThe analysis results are clearly assesses and interesting findings from the analysis are described. Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.\n\n\n\nDiscussion\nIn this section you’ll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions. In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here. Lastly, this section will include ideas for future work.\n\nGrading criteria\nOverall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.\n\n\n\nOrganization + formatting\nThis is an assessment of the overall presentation and formatting of the written report.\n\nGrading criteria\nThe report neatly written and organized with clear section headers and appropriately sized figures with informative labels. Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted. All citations and links are properly formatted. If there is an appendix, it is reasonably organized and easy for the reader to find relevant information. All code, warnings, and messages are suppressed. The main body of the written report (not including the appendix) is no longer than 10 pages.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#report-grading",
-    "href": "project/project-description.html#report-grading",
-    "title": "Project description",
-    "section": "Report grading",
-    "text": "Report grading\nThe written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion\n6 pts\n\n\nOrganization + formatting\n4 pts",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#slides",
-    "href": "project/project-description.html#slides",
-    "title": "Project description",
-    "section": "Slides",
-    "text": "Slides\nIn addition to the written report, your team will also create presentation slides and deliver presentation that summarize and showcase your project. Introduce your research question and data set, showcase visualizations, and discuss the primary conclusions. These slides should serve as a brief visual addition to your written report and will be graded for content and quality.\nYou can create your slides with any software you like (Keynote, PowerPoint, Google Slides, etc.). We recommend choosing an option that’s easy to collaborate with, e.g., Google Slides.\n\n\n\n\n\n\nNote\n\n\n\nYou can also use Quarto to make your slides! While we won’t be covering making slides with Quarto in the class, we would be happy to help you with it in office hours. It’s no different than writing other documents with Quarto, so the learning curve will not be steep!\n\n\nThe slide deck should have no more than 6 content slides + 1 title slide. Here is a suggested outline as you think through the slides; you do not have to use this exact format for the 6 slides.\n\nTitle Slide\nSlide 1: Introduce the topic and motivation\nSlide 2: Introduce the data\nSlide 3: Highlights from EDA\nSlide 4-5: Inference/modeling/other analysis\nSlide 6: Conclusions + future work",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#presentation",
-    "href": "project/project-description.html#presentation",
-    "title": "Project description",
-    "section": "Presentation",
-    "text": "Presentation\nPresentations will take place in class during the last lab of the semester. The presentation must be no longer than 5 minutes. You can choose to present live in class (recommended) or pre-record a video to be shown in class. Either way you must attend the lab session for the Q&A following your presentation.\nIf you choose to pre-record your presentation, you may use can use any platform that works best for your group to record your presentation. Below are a few resources on recording videos:\n\nRecording presentations in Zoom\nApple Quicktime for screen recording\nWindows 10 built-in screen recording functionality\nKap for screen recording\n\nOnce your video is ready, upload the video to Warpwire or another video platform (e.g., YouTube), then add a link to your video in your repo README.\nTo upload your video to Warpwire:\n\nClick the Warpwire tab in the course Sakai site.\nClick the “+” and select “Upload files”.\nLocate the video on your computer and click to upload.\nOnce you’ve uploaded the video to Warpwire, click to share the video and copy the video’s URL. You will need this when you post the video in the discussion forum.",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
-    "objectID": "project/project-description.html#reproducibility-organization",
-    "href": "project/project-description.html#reproducibility-organization",
+    "objectID": "project/description.html#reproducibility-organization",
+    "href": "project/description.html#reproducibility-organization",
     "title": "Project description",
     "section": "Reproducibility + organization",
     "text": "Reproducibility + organization\nAll written work (with exception of presentation slides) should be reproducible, and the GitHub repo should be neatly organized.\nPoints for reproducibility + organization will be based on the reproducibility of the written report and the organization of the project GitHub repo. The repo should be neatly organized as described above, there should be no extraneous files, all text in the README should be easily readable.",
@@ -1790,8 +1746,8 @@
     ]
   },
   {
-    "objectID": "project/project-description.html#teamwork",
-    "href": "project/project-description.html#teamwork",
+    "objectID": "project/description.html#teamwork",
+    "href": "project/description.html#teamwork",
     "title": "Project description",
     "section": "Teamwork",
     "text": "Teamwork\nYou will be asked to fill out a survey where you rate the contribution and teamwork of each team member by assigning a contribution percentage for each team member. Filling out the survey is a prerequisite for getting credit on the team member evaluation. If you are suggesting that an individual did less than half the expected contribution given your team size (e.g., for a team of four students, if a student contributed less than 12.5% of the total effort), please provide some explanation. If any individual gets an average peer score indicating that this was the case, their grade will be assessed accordingly and penalties may apply beyond the teamwork component of the grade.\nIf you have concerns with the teamwork and/or contribution from any team members, please email me by the project presentation deadline. You only need to email me if you have concerns. Otherwise, I will assume everyone on the team equally contributed and will receive full credit for the teamwork portion of the grade.",
@@ -1801,8 +1757,8 @@
     ]
   },
   {
-    "objectID": "project/project-description.html#grading-summary",
-    "href": "project/project-description.html#grading-summary",
+    "objectID": "project/description.html#grading-summary",
+    "href": "project/description.html#grading-summary",
     "title": "Project description",
     "section": "Grading summary",
     "text": "Grading summary\nGrading of the project will take into account the following:\n\nContent - What is the quality of research and/or policy question and relevancy of data to those questions?\nCorrectness - Are statistical procedures carried out and explained correctly?\nWriting and Presentation - What is the quality of the statistical presentation, writing, and explanations?\nCreativity and Critical Thought - Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?\n\nA general breakdown of scoring is as follows:\n\n90%-100%: Outstanding effort. Student understands how to apply all statistical concepts, can put the results into a cogent argument, can identify weaknesses in the argument, and can clearly communicate the results to others.\n80%-89%: Good effort. Student understands most of the concepts, puts together an adequate argument, identifies some weaknesses of their argument, and communicates most results clearly to others.\n70%-79%: Passing effort. Student has misunderstanding of concepts in several areas, has some trouble putting results together in a cogent argument, and communication of results is sometimes unclear.\n60%-69%: Struggling effort. Student is making some effort, but has misunderstanding of many concepts and is unable to put together a cogent argument. Communication of results is unclear.\nBelow 60%: Student is not making a sufficient effort.",
@@ -1812,8 +1768,8 @@
     ]
   },
   {
-    "objectID": "project/project-description.html#late-work-policy",
-    "href": "project/project-description.html#late-work-policy",
+    "objectID": "project/description.html#late-work-policy",
+    "href": "project/description.html#late-work-policy",
     "title": "Project description",
     "section": "Late work policy",
     "text": "Late work policy\nThere is no late work accepted on this project. Be sure to turn in your work early to avoid any technological mishaps.",
@@ -1823,11 +1779,15 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "project/3-peer-review.html",
+    "href": "project/3-peer-review.html",
+    "title": "Peer review",
     "section": "",
-    "text": "About this site"
+    "text": "During the peer feedback process, you will be provided read-only access to your partner team’s GitHub repo. You will provide your feedback in the form of GitHub issues to your partner team’s GitHub repo.\n\nGoals\nThe goals of this milestone are as follows:\n\nReview others’ project drafts as a team and provide feedback\nPost issues on GitHub using an issue template\nLearn from others’ projects and improve your own project based on their strengths and weaknesses\n\n\n\nInstructions\nEach team will review two other teams’ project. As a team you should spend ~30 minutes on each team’s project.\n\nFind the names of the teams whose projects you’re reviewing below. You should already have access to this team’s repo.\nEach team member should go to the repo of the team you’re reviewing.\nThen,\n\n1-2 team members clone the team’s project and renders it to check for reproducibility.\n1-2 team members open the team’s project in their browser and starts reading through the project draft.\n1 team member opens an issue on the team’s repo using the peer review template.\nAll team members discuss the project based on the prompts on the issue template and one team member records the feedback and submits the issue.\n\nTo open an issue in the repo you’re reviewing, click on New issue, and click on Get started for the Peer review issue. Fill out this issue, answering the following questions:\n\nPeer review by: [NAME OF TEAM DOING THE REVIEW]\nNames of team members that participated in this review: [FULL NAMES OF TEAM MEMBERS DOING THE REVIEW]\nDescribe the goal of the project.\nDescribe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.\nDescribe the approaches, tools, and methods that will be used.\nProvide constructive feedback on how the team might be able to improve their project. Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.\nWhat aspect of this project are you most interested in and would like to see highlighted in the presentation.\nWere you able to reproduce the project by clicking on Render Website once you cloned it? Were there any issues with reproducibility?\nProvide constructive feedback on any issues with file and/or code organization.\nWhat have you learned from this team’s project that you are considering implementing in your own project?\n(Optional) Any further comments or feedback?\n\n\n\n\nReview pairings\n\n\nGrading\nPeer reviews will be graded on the extent to which it comprehensively and constructively addresses the components of the reviewee’s team’s report.\nOnly the team members participating in the review during the lab session are eligible for points for the peer review. If you’re unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.\n\n0 points: No peer review\n1 point: Only one peer review issue open, feedback provided is not constructive or actionable\n2 points: Both peer review issues open, feedback provided is not constructive or actionable\n3 points: Both peer review issues open, feedback provided is not sufficiently thorough\n4 points: Both peer review issues open, one of the reviews is not sufficiently thorough\n5 points: Both peer review issues open, both reviews are constructive, actionable, and sufficiently thorough\n\n\n\n\n\n\n\nNote\n\n\n\nThe feedback issue will come from one team member on GitHub since you can’t collectively edit an issue. However it must represent the opinions of the entire team. It is not a single team member’s responsibility to provide feedback, they’re just the record keeper for the team.",
+    "crumbs": [
+      "Project",
+      "Milestone 3"
+    ]
   },
   {
     "objectID": "computing-troubleshooting.html",
@@ -1841,29 +1801,114 @@
     ]
   },
   {
-    "objectID": "project/project-working-collaboratively.html",
-    "href": "project/project-working-collaboratively.html",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "project/2-proposal.html",
+    "href": "project/2-proposal.html",
+    "title": "Proposal",
+    "section": "",
+    "text": "The goals of this milestone are as follows:\n\nDiscuss topics you’re interested in investigating and find data sets on those topics.\nIdentify 3 data sets you’re interested in potentially using for the project.\nGet these datasets into R.\nWrite up reasons and justifications for why you want to work with these datasets.\nReview your team contract.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback.",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/2-proposal.html#criteria-for-datasets",
+    "href": "project/2-proposal.html#criteria-for-datasets",
+    "title": "Proposal",
+    "section": "Criteria for datasets",
+    "text": "Criteria for datasets\nThe data sets should meet the following criteria:\n\nAt least 500 observations\nAt least 8 columns\nAt least 6 of the columns must be useful and unique explanatory variables.\n\nIdentifier variables such as “name”, “social security number”, etc. are not useful explanatory variables.\nIf you have multiple columns with the same information (e.g. “state abbreviation” and “state name”), then they are not unique explanatory variables.\n\nYou may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.\nWe strongly recommend curating at least one of your datasets via web scraping.\n\nPlease ask a member of the teaching team if you’re unsure whether your data set meets the criteria.\nIf you set your hearts on a dataset that has fewer observations or variables than what’s suggested here, that might still be ok; use these numbers as guidance for a successful proposal, not as minimum requirements.",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/2-proposal.html#resources-for-datasets",
+    "href": "project/2-proposal.html#resources-for-datasets",
+    "title": "Proposal",
+    "section": "Resources for datasets",
+    "text": "Resources for datasets\nYou can find data wherever you like, but here are some recommendations to get you started. You shouldn’t feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.\n\nAwesome public datasets\nBikeshare data portal\nCDC\nData.gov\nData is Plural\nDurham Open Data Portal\nEdinburgh Open Data\nElection Studies\nEuropean Statistics\nCORGIS: The Collection of Really Great, Interesting, Situated Datasets\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nLos Angeles Open Data\nNHS Scotland Open Data\nNYC OpenData\nOpen access to Scotland’s official statistics\nPew Research\nPRISM Data Archive Project\nStatistics Canada\nTidyTuesday\nThe National Bureau of Economic Research\nUCI Machine Learning Repository\nUK Government Data\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/2-proposal.html#introduction-and-data",
+    "href": "project/2-proposal.html#introduction-and-data",
+    "title": "Proposal",
+    "section": "Introduction and data",
+    "text": "Introduction and data\nFor each data set:\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations.\nAddress ethical concerns about the data, if any.",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/2-proposal.html#research-question",
+    "href": "project/2-proposal.html#research-question",
+    "title": "Proposal",
+    "section": "Research question",
+    "text": "Research question\nYour research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nWhat is your target population?\nIs the question original?\nCan the question be answered?\n\nFor each data set, include the following:\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nStatement on why this question is important.\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/2-proposal.html#glimpse-of-data",
+    "href": "project/2-proposal.html#glimpse-of-data",
+    "title": "Proposal",
+    "section": "Glimpse of data",
+    "text": "Glimpse of data\nFor each data set:\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.",
+    "crumbs": [
+      "Project",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "project/1-working-collaboratively.html",
+    "href": "project/1-working-collaboratively.html",
     "title": "Working collaboratively",
     "section": "",
-    "text": "Data science is a collaborative discipline. Pretty much no data scientist works alone, so neither should you! In this course you’ll collaborate with teammates on the project.\nThe first milestone of the project, today’s activity, will introduce you to the technical aspects of collaborating on a reproducible data science project that is version controlled by Git and hosted on GitHub in a repository shared by all teammates.\nYes, this means you and all of your teammates will be pushing to the same repository! Sometimes things will go swimmingly, and sometimes you’ll run into merge conflicts.\nToday’s goal is to introduce you to the concept of merge conflicts and teach you how to resolve them when they inevitably occur."
+    "text": "Data science is a collaborative discipline. Pretty much no data scientist works alone, so neither should you! In this course you’ll collaborate with teammates on the project.\nThe first milestone of the project, today’s activity, will introduce you to the technical aspects of collaborating on a reproducible data science project that is version controlled by Git and hosted on GitHub in a repository shared by all teammates.\nYes, this means you and all of your teammates will be pushing to the same repository! Sometimes things will go swimmingly, and sometimes you’ll run into merge conflicts.",
+    "crumbs": [
+      "Project",
+      "Milestone 1"
+    ]
   },
   {
-    "objectID": "project/project-working-collaboratively.html#setup",
-    "href": "project/project-working-collaboratively.html#setup",
+    "objectID": "project/1-working-collaboratively.html#setup",
+    "href": "project/1-working-collaboratively.html#setup",
     "title": "Working collaboratively",
     "section": "Setup",
-    "text": "Setup\n\nClone the project repo and open the about.qmd file.\nAssign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers."
+    "text": "Setup\n\nClone the project repo and open the about.qmd file.\nAssign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.",
+    "crumbs": [
+      "Project",
+      "Milestone 1"
+    ]
   },
   {
-    "objectID": "project/project-working-collaboratively.html#lets-cause-a-merge-conflict",
-    "href": "project/project-working-collaboratively.html#lets-cause-a-merge-conflict",
+    "objectID": "project/1-working-collaboratively.html#lets-cause-a-merge-conflict",
+    "href": "project/1-working-collaboratively.html#lets-cause-a-merge-conflict",
     "title": "Working collaboratively",
     "section": "Let’s cause a merge conflict!",
-    "text": "Let’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\n\nBefore starting\nEveryone should have the repo cloned and know which role number(s) they are.\nAlso, everyone should go to their Terminal and type git config pull.rebase false to set up their preferences for pulling.\n\n\nRole 1\n\nGo to about.qmd in your project repo. Change the [team name] to your actual team name.\nRender, commit, push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 2\n\nChange the team name to some other word.\nRender, commit, push. You should get an error.\nPull. Take a look at the document with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nRender.\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nCommit and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 3\n\nChange the a name of the first team member.\nRender, commit, push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 4\n\nChange the a name of the first team member to something other than what the previous team member did.\nRender, commit, push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 5\n\nChange the a name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing, the others should help verbally.\nRender and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?\nIf there is a merge conflict, fix it. If not, push your changes.\n\n\n\nEveryone\nPull, and observe the changes in your document."
+    "text": "Let’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\n\nBefore starting\nEveryone should have the repo cloned and know which role number(s) they are.\nAlso, everyone should go to their Terminal and type git config pull.rebase false to set up their preferences for pulling.\n\n\nRole 1\n\nGo to about.qmd in your project repo. Change the [team name] to your actual team name.\nRender, commit, push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 2\n\nChange the team name to some other word.\nRender, commit, push. You should get an error.\nPull. Take a look at the document with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nRender.\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nCommit and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 3\n\nChange the a name of the first team member.\nRender, commit, push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 4\n\nChange the a name of the first team member to something other than what the previous team member did.\nRender, commit, push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 5\n\nChange the a name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing, the others should help verbally.\nRender and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?\nIf there is a merge conflict, fix it. If not, push your changes.\n\n\n\nEveryone\nPull, and observe the changes in your document.",
+    "crumbs": [
+      "Project",
+      "Milestone 1"
+    ]
   },
   {
-    "objectID": "project/project-tips-resources.html",
-    "href": "project/project-tips-resources.html",
+    "objectID": "project/tips-resources.html",
+    "href": "project/tips-resources.html",
     "title": "Project tips + resources",
     "section": "",
     "text": "The project is very open ended. For instance, in creating a compelling visualization(s) of your data in R, there is no limit on what tools or packages you may use. You do not need to visualize all of the data at once. A single high quality visualization will receive a much higher grade than a large number of poor quality visualizations.\nBefore you finalize your write up, make sure the printing of code chunks is turned off with the option echo: false. In addition to code chunks, ensure all messages are turned off with the options warning: false and message: false.\nFinally, pay attention to details in your write-up and presentation. Neatness, coherency, and clarity will count.",
@@ -1873,8 +1918,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#suppress-code-and-warnings",
-    "href": "project/project-tips-resources.html#suppress-code-and-warnings",
+    "objectID": "project/tips-resources.html#suppress-code-and-warnings",
+    "href": "project/tips-resources.html#suppress-code-and-warnings",
     "title": "Project tips + resources",
     "section": "Suppress code and warnings",
     "text": "Suppress code and warnings\n\nInclude the following in the YAML of your report.qmd to suppress all code, warnings, and other messages.\n\nexecute:\n  echo: false\n  warning: false",
@@ -1884,8 +1929,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#headers",
-    "href": "project/project-tips-resources.html#headers",
+    "objectID": "project/tips-resources.html#headers",
+    "href": "project/tips-resources.html#headers",
     "title": "Project tips + resources",
     "section": "Headers",
     "text": "Headers\nUse headers to clearly label each section. Make sure there is a space between the previous line and the header. Use appropriate header levels.",
@@ -1895,8 +1940,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#references",
-    "href": "project/project-tips-resources.html#references",
+    "objectID": "project/tips-resources.html#references",
+    "href": "project/tips-resources.html#references",
     "title": "Project tips + resources",
     "section": "References",
     "text": "References\nInclude all references in a section called “References” at the end of the report. This course does not have specific requirements for formatting citations and references. Optional: Use Quarto’s citation support for generating your reference. See Citations & Footnotes on the Quarto documentation for more on that.",
@@ -1906,8 +1951,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#appendix",
-    "href": "project/project-tips-resources.html#appendix",
+    "objectID": "project/tips-resources.html#appendix",
+    "href": "project/tips-resources.html#appendix",
     "title": "Project tips + resources",
     "section": "Appendix",
     "text": "Appendix\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”. The items in the appendix should be properly labeled. The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix. We will not grade your appendix.",
@@ -1917,8 +1962,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#resize-figures",
-    "href": "project/project-tips-resources.html#resize-figures",
+    "objectID": "project/tips-resources.html#resize-figures",
+    "href": "project/tips-resources.html#resize-figures",
     "title": "Project tips + resources",
     "section": "Resize figures",
     "text": "Resize figures\nResize plots and figures, so you have more space for the narrative. Resize individual figures: Set fig-width and fig-height in chunk options, e.g.,\n#| echo: fenced\n#| label: plot1\n#| fig-height: 3\n#| fig-width: 5\nreplacing plot1 with a meaningful label and the height and width with values appropriate for your write up.\nResize all figures: Include the fig-height and fig-width options in the YAML header as shown below:\nexecute:\n  fig-height: 3\n  fig-width: 5\nReplace the height and width values with values appropriate for your write up.",
@@ -1928,8 +1973,8 @@
     ]
   },
   {
-    "objectID": "project/project-tips-resources.html#arranging-plots",
-    "href": "project/project-tips-resources.html#arranging-plots",
+    "objectID": "project/tips-resources.html#arranging-plots",
+    "href": "project/tips-resources.html#arranging-plots",
     "title": "Project tips + resources",
     "section": "Arranging plots",
     "text": "Arranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid.\nMore to be added soon…",
