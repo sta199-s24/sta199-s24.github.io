@@ -74,9 +74,9 @@ website:
             text: Cheatsheets
       - section: "Project"
         contents:
-          - href: project-description.qmd
+          - href: project/project-description.qmd
             text: Description
-          - href: project-tips-resources.qmd
+          - href: project/project-tips-resources.qmd
             text: Tips + resources
       - section: "Labs"
         contents:
