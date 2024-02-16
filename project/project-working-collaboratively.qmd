@@ -23,7 +23,7 @@ But they serve to make sure no team member inadvertently writes another team mem
 All changes that are in "conflict" with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.
 :::
 
-## Merge conflicts
+# Merge conflicts
 
 When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues.
 Merge conflicts happen when you merge branches that have competing changes, and Git needs your help to decide which changes to incorporate in the final merge.
@@ -62,14 +62,14 @@ This is the **hash** (a unique identifier) of the render your collaborator made 
 Your job is to *reconcile* the changes: edit the file so that it incorporates the best of both versions and delete the `<<<`, `===`, and `>>>` lines.
 Then you can stage and render the result.
 
-## Activity
+# Activity
 
-### Setup
+## Setup
 
 -   Clone the `project` repo and open the `about.qmd` file.
 -   Assign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.
 
-### Let's cause a merge conflict!
+## Let's cause a merge conflict!
 
 Our goal is to see two different types of merges: first we'll see a type of merge that git can't figure out on its own how to do on its own (a **merge conflict**) and requires human intervention, then another type of where that git can figure out how to do without human intervention.
 
@@ -79,18 +79,22 @@ Take turns in completing the exercise, only one member at a time.
 **Others should just watch, not doing anything on their own projects (this includes not even pulling changes!)** until they are instructed to.
 If you feel like you won't be able to resist the urge to touch your computer when it's not your turn, we recommend putting your hands in your pockets or sitting on them!
 
-**Before starting**: Everyone should have the repo cloned and know which role number(s) they are.
+### Before starting
+
+Everyone should have the repo cloned and know which role number(s) they are.
 
 Also, everyone should go to their Terminal and type `git config pull.rebase false` to set up their preferences for pulling.
 
-**Role 1:**
+### Role 1
 
 -   Go to `about.qmd` in your project repo. Change the `[team name]` to your actual team name.
 -   Render, commit, push.
 
-🛑 Make sure the previous role has finished before moving on to the next step.
+::: callout-important
+Make sure the previous role has finished before moving on to the next step.
+:::
 
-**Role 2:**
+### Role 2
 
 -   Change the team name to some other word.
 
@@ -109,39 +113,47 @@ Also, everyone should go to their Terminal and type `git config pull.rebase fals
 
 -   Commit and push.
 
-🛑 Make sure the previous role has finished before moving on to the next step.
+::: callout-important
+Make sure the previous role has finished before moving on to the next step.
+:::
 
-**Role 3:**
+### Role 3
 
 -   Change the a name of the first team member.
 -   Render, commit, push. You should get an error.
 -   Pull. No merge conflicts should occur, but you should see a message about merging.
 -   Now push.
 
-🛑 Make sure the previous role has finished before moving on to the next step.
+::: callout-important
+Make sure the previous role has finished before moving on to the next step.
+:::
 
-**Role 4:**
+### Role 4
 
 -   Change the a name of the first team member to something other than what the previous team member did.
 -   Render, commit, push. You should get an error.
 -   Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render, commit, and push.
 
-🛑 Make sure the previous role has finished before moving on to the next step.
+::: callout-important
+Make sure the previous role has finished before moving on to the next step.
+:::
 
-**Role 5:**
+### Role 5
 
 -   Change the a name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing, the others should help verbally.
 -   Render and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?
 -   If there is a merge conflict, fix it. If not, push your changes.
 
-**Everyone:** Pull, and observe the changes in your document.
+### Everyone
 
-## Evaluation
+Pull, and observe the changes in your document.
+
+# Evaluation
 
 We will evaluate the first milestone of your project based on your participation in this activity.
 Each team member who participates in the activity during the lab session will earn 5 points towards their project.
 
-## Tips for collaborating via GitHub
+# Tips for collaborating via GitHub
 
 -   **Always pull first before you start working.**
 -   Resolve a merge conflict (render and push) *before* continuing your work. Never do new work while resolving a merge conflict.
