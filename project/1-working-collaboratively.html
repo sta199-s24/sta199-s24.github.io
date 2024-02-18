@@ -339,22 +339,17 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
-  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a></li>
+  <li><a href="#team-name" id="toc-team-name" class="nav-link" data-scroll-target="#team-name">Team name</a></li>
+  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a>
+  <ul class="collapse">
   <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
   <ul class="collapse">
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#lets-cause-a-merge-conflict" id="toc-lets-cause-a-merge-conflict" class="nav-link" data-scroll-target="#lets-cause-a-merge-conflict">Let’s cause a merge conflict!</a>
-  <ul class="collapse">
-  <li><a href="#before-starting" id="toc-before-starting" class="nav-link" data-scroll-target="#before-starting">Before starting</a></li>
-  <li><a href="#role-1" id="toc-role-1" class="nav-link" data-scroll-target="#role-1">Role 1</a></li>
-  <li><a href="#role-2" id="toc-role-2" class="nav-link" data-scroll-target="#role-2">Role 2</a></li>
-  <li><a href="#role-3" id="toc-role-3" class="nav-link" data-scroll-target="#role-3">Role 3</a></li>
-  <li><a href="#role-4" id="toc-role-4" class="nav-link" data-scroll-target="#role-4">Role 4</a></li>
-  <li><a href="#role-5" id="toc-role-5" class="nav-link" data-scroll-target="#role-5">Role 5</a></li>
-  <li><a href="#everyone" id="toc-everyone" class="nav-link" data-scroll-target="#everyone">Everyone</a></li>
-  </ul></li>
+  <li><a href="#lets-cause-a-merge-conflict" id="toc-lets-cause-a-merge-conflict" class="nav-link" data-scroll-target="#lets-cause-a-merge-conflict">Let’s cause a merge conflict!</a></li>
   </ul></li>
   <li><a href="#tips-for-collaborating-via-github" id="toc-tips-for-collaborating-via-github" class="nav-link" data-scroll-target="#tips-for-collaborating-via-github">Tips for collaborating via GitHub</a></li>
+  </ul></li>
+  <li><a href="#team-contract" id="toc-team-contract" class="nav-link" data-scroll-target="#team-contract">Team contract</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/project/1-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -407,8 +402,13 @@ Note
 <ul>
 <li>Pick a team name</li>
 <li>Collaborate on GitHub with your teammates and resolve merge conflicts when they inevitably occur</li>
+<li>Discuss and write up your team contract</li>
 <li>Start thinking about your project proposal</li>
 </ul>
+</section>
+<section id="team-name" class="level1">
+<h1>Team name</h1>
+<p>Pick a team name. It can be straightforward, or it can be cheeky, but it must be <a href="https://www.merriam-webster.com/dictionary/SFW">SFW</a>. Let your TA know your team name asap. Once everyone’s team names are in, your project repos will be created (give your TA a couple of minutes), and then you can continue with the rest of your task.</p>
 </section>
 <section id="merge-conflicts" class="level1">
 <h1>Merge conflicts</h1>
@@ -436,31 +436,30 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p>And at the bottom you see <code>some1alpha2numeric3string4</code> (well, it probably looks more like <code>28e7b2ceb39972085a0860892062810fb812a08f</code>).</p>
 <p>This is the <strong>hash</strong> (a unique identifier) of the render your collaborator made with the conflicting change.</p>
 <p>Your job is to <em>reconcile</em> the changes: edit the file so that it incorporates the best of both versions and delete the <code>&lt;&lt;&lt;</code>, <code>===</code>, and <code>&gt;&gt;&gt;</code> lines. Then you can stage and render the result.</p>
-</section>
-<section id="activity" class="level1">
-<h1>Activity</h1>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<section id="activity" class="level2">
+<h2 class="anchored" data-anchor-id="activity">Activity</h2>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ul>
 <li>Clone the <code>project</code> repo and open the <code>about.qmd</code> file.</li>
 <li>Assign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.</li>
 </ul>
 </section>
-<section id="lets-cause-a-merge-conflict" class="level2">
-<h2 class="anchored" data-anchor-id="lets-cause-a-merge-conflict">Let’s cause a merge conflict!</h2>
+<section id="lets-cause-a-merge-conflict" class="level3">
+<h3 class="anchored" data-anchor-id="lets-cause-a-merge-conflict">Let’s cause a merge conflict!</h3>
 <p>Our goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a <strong>merge conflict</strong>) and requires human intervention, then another type of where that git can figure out how to do without human intervention.</p>
 <p>Doing this will require some tight choreography, so pay attention!</p>
 <p>Take turns in completing the exercise, only one member at a time. <strong>Others should just watch, not doing anything on their own projects (this includes not even pulling changes!)</strong> until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!</p>
-<section id="before-starting" class="level3">
-<h3 class="anchored" data-anchor-id="before-starting">Before starting</h3>
+<section id="before-starting" class="level4">
+<h4 class="anchored" data-anchor-id="before-starting">Before starting</h4>
 <p>Everyone should have the repo cloned and know which role number(s) they are.</p>
-<p>Also, everyone should go to their Terminal and type <code>git config pull.rebase false</code> to set up their preferences for pulling.</p>
+<p>Also, any teammates who haven’t done this before should go to their Terminal and type <code>git config pull.rebase false</code> to set up their preferences for pulling.</p>
 </section>
-<section id="role-1" class="level3">
-<h3 class="anchored" data-anchor-id="role-1">Role 1</h3>
+<section id="role-1" class="level4">
+<h4 class="anchored" data-anchor-id="role-1">Role 1</h4>
 <ul>
 <li>Go to <code>about.qmd</code> in your project repo. Change the <code>[team name]</code> to your actual team name.</li>
-<li>Render, commit, push.</li>
+<li>Render the project by clicking on Render in the Build tab, commit (all changed files), and push.</li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -476,14 +475,14 @@ Important
 </div>
 </div>
 </section>
-<section id="role-2" class="level3">
-<h3 class="anchored" data-anchor-id="role-2">Role 2</h3>
+<section id="role-2" class="level4">
+<h4 class="anchored" data-anchor-id="role-2">Role 2</h4>
 <ul>
 <li><p>Change the team name to some other word.</p></li>
-<li><p>Render, commit, push. You should get an error.</p></li>
-<li><p>Pull. Take a look at the document with the merge conflict.</p></li>
+<li><p>Render the project by clicking on Render in the Build tab, commit (all changed files), and push. You should get an error.</p></li>
+<li><p>Pull. Take a look at the document (<code>about.qmd</code>) with the merge conflict.</p></li>
 <li><p>Clear the merge conflict by editing the document to choose the correct/preferred change.</p></li>
-<li><p>Render.</p></li>
+<li><p>Render the project by clicking on Render in the Build tab.</p></li>
 <li><p><strong>Click the Stage checkbox</strong> for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.</p></li>
 <li><p>Commit and push.</p></li>
 </ul>
@@ -501,11 +500,11 @@ Important
 </div>
 </div>
 </section>
-<section id="role-3" class="level3">
-<h3 class="anchored" data-anchor-id="role-3">Role 3</h3>
+<section id="role-3" class="level4">
+<h4 class="anchored" data-anchor-id="role-3">Role 3</h4>
 <ul>
 <li>Change the a name of the first team member.</li>
-<li>Render, commit, push. You should get an error.</li>
+<li>Render the project by clicking on Render in the Build tab, commit, push. You should get an error.</li>
 <li>Pull. No merge conflicts should occur, but you should see a message about merging.</li>
 <li>Now push.</li>
 </ul>
@@ -523,12 +522,12 @@ Important
 </div>
 </div>
 </section>
-<section id="role-4" class="level3">
-<h3 class="anchored" data-anchor-id="role-4">Role 4</h3>
+<section id="role-4" class="level4">
+<h4 class="anchored" data-anchor-id="role-4">Role 4</h4>
 <ul>
 <li>Change the a name of the first team member to something other than what the previous team member did.</li>
-<li>Render, commit, push. You should get an error.</li>
-<li>Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render, commit, and push.</li>
+<li>Render the project by clicking on Render in the Build tab, commit, push. You should get an error.</li>
+<li>Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render the project by clicking on Render in the Build tab, commit, and push.</li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -544,28 +543,33 @@ Important
 </div>
 </div>
 </section>
-<section id="role-5" class="level3">
-<h3 class="anchored" data-anchor-id="role-5">Role 5</h3>
+<section id="role-5" class="level4">
+<h4 class="anchored" data-anchor-id="role-5">Role 5</h4>
 <ul>
 <li>Change the a name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing, the others should help verbally.</li>
-<li>Render and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?</li>
+<li>Render the project by clicking on Render in the Build tab and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?</li>
 <li>If there is a merge conflict, fix it. If not, push your changes.</li>
 </ul>
 </section>
-<section id="everyone" class="level3">
-<h3 class="anchored" data-anchor-id="everyone">Everyone</h3>
-<p>Pull, and observe the changes in your document.</p>
+<section id="everyone" class="level4">
+<h4 class="anchored" data-anchor-id="everyone">Everyone</h4>
+<p>Pull, and observe the changes in your project.</p>
 </section>
 </section>
 </section>
-<section id="tips-for-collaborating-via-github" class="level1">
-<h1>Tips for collaborating via GitHub</h1>
+<section id="tips-for-collaborating-via-github" class="level2">
+<h2 class="anchored" data-anchor-id="tips-for-collaborating-via-github">Tips for collaborating via GitHub</h2>
 <ul>
 <li><strong>Always pull first before you start working.</strong></li>
 <li>Resolve a merge conflict (render and push) <em>before</em> continuing your work. Never do new work while resolving a merge conflict.</li>
 <li>Render, commit, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.</li>
 <li>If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger.</li>
 </ul>
+</section>
+</section>
+<section id="team-contract" class="level1">
+<h1>Team contract</h1>
+<p>Go to your project repository and open <code>contract.qmd</code>. As the instructions suggest, pick a teammate to be the scribe. Discuss the prompts and write up your answers. Once done, click <em>Render</em> in the build tab, commit, and push.</p>
 </section>
 <section id="grading" class="level1">
 <h1>Grading</h1>
