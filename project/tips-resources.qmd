@@ -20,10 +20,11 @@ Neatness, coherency, and clarity will count.
 -   *Code*: In your write up your code should be hidden (`echo: false`) so that your document is neat and easy to read.
     However your document should include all your code such that if I re-render your qmd file I should be able to obtain the results you presented.
 
-```         
--   **Exception:** If you want to highlight something specific about a piece of code, you\'re welcome to show that portion.
-```
+    -   **Exception:** If you want to highlight something specific about a piece of code, you're welcome to show that portion.
 
+```{=html}
+<!-- -->
+```
 -   Merge conflicts will happen, issues will arise, and that's fine!
     Commit and push often, and ask questions when stuck.
 
