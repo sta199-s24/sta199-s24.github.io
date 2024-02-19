@@ -75,7 +75,7 @@ Instructions and grading criteria for this milestone are outlined in [Milestone 
 
 All written work (with exception of presentation slides) should be reproducible, and the GitHub repo should be neatly organized.
 
-Points for reproducibility + organization will be based on the reproducibility of the written report and the organization of the project GitHub repo.
+Points for reproducibility + organization will be based on the reproducibility of the write-up and the organization of the project GitHub repo.
 The repo should be neatly organized as described above, there should be no extraneous files, all text in the README should be easily readable.
 
 ## Teamwork
@@ -94,11 +94,11 @@ The grade breakdown is as follows:
 
 | Total                              | 100 pts |
 |------------------------------------|---------|
-| **Working collaboratively**        | 5 pts   |
-| **Project proposal**               | 10 pts  |
-| **Peer review**                    | 5 pts   |
-| **Final report**                   | 40 pts  |
-| **Slides + presentation**          | 25 pts  |
+| **M1: Working collaboratively**    | 5 pts   |
+| **M2: Project proposal**           | 10 pts  |
+| **M3: Peer review**                | 5 pts   |
+| **M4: Write-up**                   | 40 pts  |
+| **M4: Slides + presentation**      | 25 pts  |
 | **Reproducibility + organization** | 5 pts   |
 | **Teamwork**                       | 10 pts  |
 
