@@ -45,7 +45,7 @@ To create the webpage go to the Build tab in RStudio, and click on Render Websit
 # Working collaboratively
 
 For the first milestone of your project you'll practice a collaborative Git workflow with your team members.
-Instructions are outlined in [Milestone 1: Working collaboratively](/project/working-collaboratively.html).
+Instructions are outlined in [Milestone 1: Working collaboratively](/project/1-working-collaboratively.html).
 Each team member taking part in the collaborative working activity will get 5 points towards their project.
 
 # Proposal {#project-proposal}
@@ -55,7 +55,7 @@ There are two main purposes of the project proposal:
 -   To help you think about the project early, so you can get a head start on finding data, reading relevant literature, thinking about the questions you wish to answer, etc.
 -   To ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful for this project.
 
-Instructions and grading criteria for this milestone are outlined in [Milestone 2: Proposal](/project/proposal.html).
+Instructions and grading criteria for this milestone are outlined in [Milestone 2: Proposal](/project/2-proposal.html).
 
 # Peer review {#peer-review}
 
@@ -63,11 +63,11 @@ Critically reviewing others' work is a crucial part of the scientific process, a
 You will be assigned two teams to review.
 This feedback is intended to help you create a high quality final project, as well as give you experience reading and constructively critiquing the work of others.
 
-Instructions and grading criteria for this milestone are outlined in [Milestone 3: Peer review](/project/peer-review.html).
+Instructions and grading criteria for this milestone are outlined in [Milestone 3: Peer review](/project/3-peer-review.html).
 
 # Writeup and presentation
 
-Instructions and grading criteria for this milestone are outlined in [Milestone 4: Writeup + presentation](/project/peer-review.html).
+Instructions and grading criteria for this milestone are outlined in [Milestone 4: Writeup + presentation](/project/4-peer-review.html).
 
 # Other
 
