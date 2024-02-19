@@ -42,13 +42,13 @@ Submission of these deliverables will happen on GitHub and feedback will be prov
 The collection of the documents in your GitHub repo will create a webpage for your project.
 To create the webpage go to the Build tab in RStudio, and click on Render Website.
 
-# Working collaboratively
+# Milestone 1 - Working collaboratively
 
 For the first milestone of your project you'll practice a collaborative Git workflow with your team members.
 Instructions are outlined in [Milestone 1: Working collaboratively](/project/1-working-collaboratively.html).
 Each team member taking part in the collaborative working activity will get 5 points towards their project.
 
-# Proposal {#project-proposal}
+# Milestone 2 - Proposal {#project-proposal}
 
 There are two main purposes of the project proposal:
 
@@ -57,7 +57,7 @@ There are two main purposes of the project proposal:
 
 Instructions and grading criteria for this milestone are outlined in [Milestone 2: Proposal](/project/2-proposal.html).
 
-# Peer review {#peer-review}
+# Milestone 3 - Peer review {#peer-review}
 
 Critically reviewing others' work is a crucial part of the scientific process, and STA 199 is no exception.
 You will be assigned two teams to review.
@@ -65,7 +65,7 @@ This feedback is intended to help you create a high quality final project, as we
 
 Instructions and grading criteria for this milestone are outlined in [Milestone 3: Peer review](/project/3-peer-review.html).
 
-# Writeup and presentation
+# Milestone 4 - Writeup and presentation
 
 Instructions and grading criteria for this milestone are outlined in [Milestone 4: Writeup + presentation](/project/4-peer-review.html).
 
