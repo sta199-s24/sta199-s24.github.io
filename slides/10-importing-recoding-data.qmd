@@ -67,6 +67,8 @@ and a brief demo!
 
 -   Additionally there are points allocated to reproducibility and organization as well as teamwork (to be measured by within team peer evaluations three times throughout the semester).
 
+-   Most important thing you can do today for your project: Block off agreed times in your calendar!
+
 # Reading data into R
 
 ## Reading rectangular data
