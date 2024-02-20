@@ -40,9 +40,32 @@ library(openintro)
 
 ## Announcements
 
--   Exam format / flow
+-   If you missed lab yesterday, get in touch with your team ASAP!
+    Read over the team contract they developed and sign it.
 
--   Academic dishonesty / Duke Community Standard
+-   Start thinking about the datasets you'll include in your proposal.
+
+## Project workflow preview
+
+::: columns
+::: {.column width="50%"}
+![](images/project-repo.png)
+:::
+
+::: {.column width="50%"}
+![](images/project-website.png)
+:::
+:::
+
+and a brief demo!
+
+## Project grading
+
+-   Outlined at <https://sta199-s24.github.io/project/description.html#grading>.
+
+-   Each milestone has points associated with it.
+
+-   Additionally there are points allocated to reproducibility and organization as well as teamwork (to be measured by within team peer evaluations three times throughout the semester).
 
 # Reading data into R
 
@@ -73,10 +96,10 @@ What is the story in this visualization?
 ## Application exercise: `ae-08-data-import` {.smaller}
 
 ::: appex
-- Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
-- If there are any uncommitted files, commit them, and then click Pull.
-- Open the file called `ae-08-data-import.qmd` and render it.
-- Work on Part 1.
+-   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+-   If there are any uncommitted files, commit them, and then click Pull.
+-   Open the file called `ae-08-data-import.qmd` and render it.
+-   Work on Part 1.
 :::
 
 # Reading Excel files
@@ -88,7 +111,8 @@ What is the story in this visualization?
 . . .
 
 ::: question
-Are these data tidy? Why or why not?
+Are these data tidy?
+Why or why not?
 :::
 
 ## Sales data
@@ -102,7 +126,13 @@ What "data moves" do we need to go from the original, non-tidy data to this, tid
 ## Application exercise: `ae-08-data-import` {.smaller}
 
 ::: appex
-- Go back to your project called `ae`.
-- If there are any uncommitted files, commit them, and push.
-- Work on Part 2 in `ae-08-data-import.qmd`.
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Work on Part 2 in `ae-08-data-import.qmd`.
 :::
+
+# Wrap up
+
+## Exams
+
+![](images/exam-1-pass-back.png){fig-align="center" width="800"}
