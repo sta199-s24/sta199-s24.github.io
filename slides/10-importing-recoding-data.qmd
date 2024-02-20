@@ -1,0 +1,108 @@
+---
+title: "Importing and recoding data"
+subtitle: "Lecture 10"
+date: "February 20, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+library(ggthemes)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+Questions from prepare materials?
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Packages
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(openintro)
+```
+
+## Announcements
+
+-   Exam format / flow
+
+-   Academic dishonesty / Duke Community Standard
+
+# Reading data into R
+
+## Reading rectangular data
+
+-   Using [**readr**](https://readr.tidyverse.org/):
+    -   Most commonly: `read_csv()`
+    -   Maybe also: `read_tsv()`, `read_delim()`, etc.
+-   Using [**readxl**](https://readxl.tidyverse.org/): `read_excel()`
+-   Using [**googlesheets4**](https://googlesheets4.tidyverse.org/): `read_sheet()` -- We haven't covered this in the videos, but might be useful for your projects
+
+# Reading and writing CSV files
+
+## Age gap in Hollywood relationships {.smaller}
+
+::: columns
+::: {.column width="25%"}
+::: question
+What is the story in this visualization?
+:::
+:::
+
+::: {.column width="75%"}
+![](images/hollywood-ages.jpeg){fig-align="center" width="600"}
+:::
+:::
+
+## Application exercise: `ae-08-data-import` {.smaller}
+
+::: appex
+- Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called `ae`.
+- If there are any uncommitted files, commit them, and then click Pull.
+- Open the file called `ae-08-data-import.qmd` and render it.
+- Work on Part 1.
+:::
+
+# Reading Excel files
+
+## Sales data
+
+![](https://sta199-s24.github.io/images/sales-excel.png)
+
+. . .
+
+::: question
+Are these data tidy? Why or why not?
+:::
+
+## Sales data
+
+::: question
+What "data moves" do we need to go from the original, non-tidy data to this, tidy one?
+:::
+
+![](https://sta199-s24.github.io/images/sales-2.png){width="150"}
+
+## Application exercise: `ae-08-data-import` {.smaller}
+
+::: appex
+- Go back to your project called `ae`.
+- If there are any uncommitted files, commit them, and push.
+- Work on Part 2 in `ae-08-data-import.qmd`.
+:::
