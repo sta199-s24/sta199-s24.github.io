@@ -10,10 +10,13 @@ title: "Teaching team"
 Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM.
 Mine also works with RStudio as a Developer Educator.
 
++------------------------------------------------------------+--------------+
 | Office hours                                               | Location     |
-|------------------------------------------------------------|--------------|
++============================================================+==============+
 | Tuesdays and Thursdays 1-1:30 pm (immediately after class) | Bio Sci 111  |
++------------------------------------------------------------+--------------+
 | Thursdays 2-3 pm                                           | Old Chem 213 |
++------------------------------------------------------------+--------------+
 
 ## Teaching assistants
 
@@ -41,6 +44,8 @@ Mine also works with RStudio as a Developer Educator.
 | ![](img/team/jon.png){width="80"}     | Jon            | Campbell      | Lab leader: M 1:25PM - 2:40PM (Sec 11)  |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
 | ![](img/team/foxx.png){width="80"}    | Foxx           | Hart          | Lab helper: M 1:25PM - 2:40PM (Sec 11)  |
+|                                       |                |               |                                         |
+|                                       |                |               | Lecture helper (Tue)                    |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
 | ![](img/team/netra.png){width="80"}   | Netra          | Mittal        | Lab leader: M 3:05PM - 4:20PM (Sec 5)   |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
@@ -56,11 +61,11 @@ Mine also works with RStudio as a Developer Educator.
 +---------------------------------------+----------------+---------------+-----------------------------------------+
 | ![](img/team/leah.png){width="80"}    | Leah           | Johnson       |                                         |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
-| ![](img/team/lisa.png){width="80"}    | Lisa           | Zhang         | Lecture helper                          |
+| ![](img/team/lisa.png){width="80"}    | Lisa           | Zhang         | Lecture helper (Tue + Thur)             |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
-| ![](img/team/miles.png){width="80"}   | Miles          | King          | Lecture helper                          |
+| ![](img/team/miles.png){width="80"}   | Miles          | King          | Lecture helper (Tue + Thur)             |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
-| ![](img/team/noah.png){width="80"}    | Noah           | Obuya         |                                         |
+| ![](img/team/noah.png){width="80"}    | Noah           | Obuya         | Lecture helper (Thur)                   |
 +---------------------------------------+----------------+---------------+-----------------------------------------+
 
 : {tbl-colwidths="\[15,15,20,50\]"}
