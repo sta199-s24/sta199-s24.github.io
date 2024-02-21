@@ -1,0 +1,219 @@
+---
+title: "Lab 4 - Getting data into R"
+categories: "Lab"
+---
+
+# Introduction
+
+In this lab you'll build the data wrangling and visualization skills you've developed so far and data tidying and joining to your repertoire.
+
+::: callout-note
+This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs.
+If you have not yet done those, you should go back and review the previous labs before starting on this one.
+:::
+
+## Learning objectives
+
+By the end of the lab, you will...
+
+-   ...
+
+## Getting started
+
+Log in to RStudio, clone your `lab-3` repo from GitHub, open your `lab-3.qmd` document, and get started!
+
+::: {.callout-tip collapse="true"}
+## Click here if you prefer to see step-by-step instructions
+
+### Log in to RStudio
+
+-   Go to <https://cmgr.oit.duke.edu/containers> and log in with your Duke NetID and Password.
+-   Click `STA198-199` under My reservations to log into your container. You should now see the RStudio environment.
+
+### Clone the repo & start new RStudio project
+
+-   Go to the course organization at [github.com/sta199-s24](https://github.com/sta199-s24) organization on GitHub.
+    Click on the repo with the prefix **lab-3**.
+    It contains the starter documents you need to complete the lab.
+
+-   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
+    Click on the clipboard icon to copy the repo URL.
+
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+
+-   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+
+-   Click *lab-3.qmd* to open the template Quarto file.
+    This is where you will write up your code and narrative for the lab.
+
+### First steps
+
+In `lab-3.qmd`, update the `author` field to your name, render your document and examine the changes.
+Then, in the Git pane, click on **Diff** to view your changes, add a commit message (e.g., "Added author name"), and click **Commit**.
+Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.
+:::
+
+::: callout-important
+If you run into any issues with the first steps outlined above, flag a TA for help before proceeding.
+:::
+
+## Packages
+
+In this lab we will work with the **tidyverse** package, which is a collection of packages for doing data analysis in a "tidy" way.
+
+```{r}
+#| eval: true
+#| message: false
+
+library(tidyverse)
+```
+
+**Render** the document which loads this package with the `library()` function.
+
+## Guidelines
+
+As we've discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.
+
+In addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF.
+Make sure that is the case, and add line breaks where the code is running off the page.[^1]
+
+[^1]: Remember, haikus not novellas when writing code!
+
+::: callout-note
+Continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.
+There will be periodic reminders in this assignment to remind you to **render, commit, and push** your changes to GitHub.
+You should have at least 3 commits with meaningful commit messages by the end of the assignment.
+:::
+
+# Questions
+
+## Part 1 - Getting data in from CSVs
+
+## Part 2 - Getting data in from Excel files
+
+## Part 3 - Scraping data in from web pages
+
+### Question X
+
+Please justify, using the tools we've learning in this course, if you are allowed to scrape data from each of the following websites:
+
+-   [www.espn.com](https://www.espn.com/)
+-   [twitter.com](https://twitter.com/)
+-   [www.rottentomatoes.com](https://www.rottentomatoes.com)
+
+### Question X
+
+Rotten Tomatoes is an American review aggregation website for film.
+They give percentage scores for movies based on how "good" the movies are.
+They provide 2 scores:
+
+|                              |                                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| ![](images/popcornlogos.png) | The audience score, denoted by a popcorn bucket                                                                   |
+| ![](images/tomatologos.png)  | The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film |
+
+We are going to investigate the relationship between the audience score and Tomatometer score between the Halloween movies.
+Please visit the following website to view the data we plan to scrape: <https://www.rottentomatoes.com/franchise/halloween>
+
+a.  Using `Selector Gadget`, scrape the `tomato_score` and `audience_score` and report the lengths of these vectors (using the `length()`) function.
+    *Hint:* Their lengths should be equal.
+
+b.  Next, run the following code:
+
+```{r}
+#| eval: false
+
+titles_years <- page |>
+  html_nodes(".franchise-media-list__h3") |>
+  html_text2()
+  
+halloween <- tibble(title_year = titles_years) |>
+  separate(title_year, into = c("title", "year"), sep= "\\(" )
+```
+
+In 2-3 sentences, describe what the above code is doing.
+Make sure to articulate each step of both of the pipelines.
+*Hint:* Print out `titles_years` and `halloween` to see what these objects look like.
+This will help figure out what the code is doing.
+You should also try running each line of the pipeline individually to see their outputs.
+
+c.  Add the columns `tomato_score` and `audience_score` from part (a) to your data frame called `halloween` that you created in part (b).
+
+d.  Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometer score.
+    In 2-3 sentences, comment on the relationship.
+    Your plot should include appropriate labels.
+
+## Part 4 - Ethics
+
+### Question X
+
+One current ethical discussion in data science involves the training of "Large Language Models" such as ChatGPT. These models are trained using massive corpora (document sets) that include large amounts of work that is covered under copyright law. Read the following two articles:
+
+- [Do Large Language Models Violate Copyright Law?](https://www.dykema.com/news-insights/do-large-language-models-violate-copyright-law.html)
+- [Reexamining "Fair Use" in the Age of AI](https://hai.stanford.edu/news/reexamining-fair-use-age-ai)
+
+Write a short paragraph (maximum 8 sentences) discussing the arguments on both sides of the discussion over copyright in training large language models. 
+
+### Question X
+
+Another major ethical discussion in data science resolves around discriminatory biases in machine learning models. These biases can have real-world impacts in lending, criminal justice, hiring, and more. Many of these algorithms are so-called “black boxes”, meaning the exact process they take from input to output is unclear. Read the following articles:
+
+- [Amazon scraps secret AI recruiting tool that showed bias against](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
+- [The Atlantic: The False Promise of Risk Assessment](https://www.theatlantic.com/technology/archive/2018/01/equivant-compas-algorithm/550646/)
+- [Machine Bias: Risk Assessments in Criminal Sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+
+Write a short paragraph (maximum 8 sentences) discussing the nature of biases in machine learning and in datasets, and any possible solutions that could help limit those biases.
+
+# Wrap-up
+
+## Submission
+
+Once you are finished with the lab, you will submit your final PDF document to Gradescope.
+
+::: callout-warning
+Before you wrap up the assignment, make sure all of your documents are updated on your GitHub repo.
+We will be checking these to make sure you have been practicing how to commit and push changes.
+
+You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
+:::
+
+To submit your assignment:
+
+-   Go to <http://www.gradescope.com> and click *Log in* in the top right corner.
+-   Click *School Credentials* $\rightarrow$ *Duke NetID* and log in using your NetID credentials.
+-   Click on your *STA 199* course.
+-   Click on the assignment, and you'll be prompted to submit it.
+-   Mark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be "checked").
+
+::: callout-important
+## Checklist
+
+Make sure you have:
+
+-   attempted all questions
+-   rendered your Quarto document
+-   committed and pushed everything to your GitHub repository such that the Git pane in RStudio is empty
+-   uploaded your PDF to Gradescope
+-   selected pages associated with each question on Gradescope
+:::
+
+## Grading
+
+The lab is graded out of a total of 50 points.
+
+You can earn up to 5 points on each question:
+
+-   5: Response shows excellent understanding and addresses all or almost all of the rubric items.
+
+-   4: Response shows good understanding and addresses most of the rubric items.
+
+-   3: Response shows understanding and addresses a majority of the rubric items.
+
+-   2: Response shows effort and misses many of the rubric items.
+
+-   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
+
+-   0: No attempt.
+

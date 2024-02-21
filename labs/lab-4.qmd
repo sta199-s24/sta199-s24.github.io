@@ -1,6 +1,4 @@
 ---
-title: "Lab 4 - TBA"
+title: "Lab 4 - Getting data into R"
 categories: "Lab"
 ---
-
-To be posted.
