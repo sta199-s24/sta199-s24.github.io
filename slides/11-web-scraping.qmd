@@ -33,7 +33,9 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 ## Announcements
 
--   
+-   Lab 4 on Monday
+
+-   Challenge: Resist the urge to ask a GPT before spending some time thinking!
 
 ## Reading The Chronicle
 
@@ -387,7 +389,7 @@ read_html(html) |> html_elements("div") |> html_text()
 
 ::: small
 | Selector            | Example         | Description                                        |
-|:-----------------|:-----------------|:-----------------------------------|
+|:-----------------|:-----------------|:----------------------------------|
 | .class              | `.title`        | Select all elements with class="title"             |
 | #id                 | `#name`         | Select all elements with id="name"                 |
 | element             | `p`             | Select all \<p\> elements                          |
