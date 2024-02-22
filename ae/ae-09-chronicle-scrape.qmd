@@ -1,0 +1,67 @@
+---
+title: "Opinion articles in The Chronicle"
+editor: visual
+---
+
+## Part 1 - Data scraping
+
+This will be done in the `chronicle-scrape.R` R script.
+Save the resulting data frame in the `data` folder.
+
+## Part 2 - Data analysis
+
+Let's start by loading the packages we will need:
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+```
+
+-   **Your turn (1 minute):** Load the data you saved into the `data` folder and name it `chronicle`.
+
+```{r}
+#| label: load-data
+#| message: false
+
+# add code here
+```
+
+-   **Your turn (3 minutes):** Who are the most prolific authors of the 100 most recent opinion articles in The Chronicle?
+
+```{r}
+#| label: union-title-abstract
+
+# add code here
+```
+
+-   **Demo:** Draw a line plot of the number of opinion articles published per day in The Chronicle.
+
+```{r}
+#| label: articles-per-day
+
+# add code here
+```
+
+-   **Demo:** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title?
+
+```{r}
+#| label: climate-title
+
+# add code here
+```
+
+-   **Your turn (5 minutes):** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title or abstract?
+
+```{r}
+#| label: climate-title-abstract
+
+# add code here
+```
+
+-   **Time permitting:** Come up with another question and try to answer it using the data.
+
+```{r}
+# add code here
+```

@@ -149,20 +149,25 @@ d.  Create an appropriate plot the assess the relationship between a movie's aud
 
 ### Question X
 
-One current ethical discussion in data science involves the training of "Large Language Models" such as ChatGPT. These models are trained using massive corpora (document sets) that include large amounts of work that is covered under copyright law. Read the following two articles:
+One current ethical discussion in data science involves the training of "Large Language Models" such as ChatGPT.
+These models are trained using massive corpora (document sets) that include large amounts of work that is covered under copyright law.
+Read the following two articles:
 
-- [Do Large Language Models Violate Copyright Law?](https://www.dykema.com/news-insights/do-large-language-models-violate-copyright-law.html)
-- [Reexamining "Fair Use" in the Age of AI](https://hai.stanford.edu/news/reexamining-fair-use-age-ai)
+-   [Do Large Language Models Violate Copyright Law?](https://www.dykema.com/news-insights/do-large-language-models-violate-copyright-law.html)
+-   [Reexamining "Fair Use" in the Age of AI](https://hai.stanford.edu/news/reexamining-fair-use-age-ai)
 
-Write a short paragraph (maximum 8 sentences) discussing the arguments on both sides of the discussion over copyright in training large language models. 
+Write a short paragraph (maximum 8 sentences) discussing the arguments on both sides of the discussion over copyright in training large language models.
 
 ### Question X
 
-Another major ethical discussion in data science resolves around discriminatory biases in machine learning models. These biases can have real-world impacts in lending, criminal justice, hiring, and more. Many of these algorithms are so-called “black boxes”, meaning the exact process they take from input to output is unclear. Read the following articles:
+Another major ethical discussion in data science resolves around discriminatory biases in machine learning models.
+These biases can have real-world impacts in lending, criminal justice, hiring, and more.
+Many of these algorithms are so-called “black boxes”, meaning the exact process they take from input to output is unclear.
+Read the following articles:
 
-- [Amazon scraps secret AI recruiting tool that showed bias against](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
-- [The Atlantic: The False Promise of Risk Assessment](https://www.theatlantic.com/technology/archive/2018/01/equivant-compas-algorithm/550646/)
-- [Machine Bias: Risk Assessments in Criminal Sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+-   [Amazon scraps secret AI recruiting tool that showed bias against](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
+-   [The Atlantic: The False Promise of Risk Assessment](https://www.theatlantic.com/technology/archive/2018/01/equivant-compas-algorithm/550646/)
+-   [Machine Bias: Risk Assessments in Criminal Sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
 
 Write a short paragraph (maximum 8 sentences) discussing the nature of biases in machine learning and in datasets, and any possible solutions that could help limit those biases.
 
@@ -216,4 +221,3 @@ You can earn up to 5 points on each question:
 -   1: Response does not show sufficient effort or understanding and/or is largely incomplete.
 
 -   0: No attempt.
-

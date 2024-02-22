@@ -1,0 +1,95 @@
+---
+title: "Opinion articles in The Chronicle"
+subtitle: "Suggested answers"
+categories: 
+  - Application exercise
+  - Answers
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Part 1 - Data scraping
+
+See [`chronicle-scrape.R`](https://github.com/sta199-f22-1/sta199-f22-1.github.io/blob/main/ae/_chronicle-scrape-A.R) for suggested scraping code.
+
+## Part 2 - Data analysis
+
+Let's start by loading the packages we will need:
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+```
+
+-   **Your turn (1 minute):** Load the data you saved into the `data` folder and name it `chronicle`.
+
+```{r}
+#| label: load-data
+#| message: false
+
+chronicle <- read_csv("data/chronicle.csv")
+```
+
+-   **Your turn (3 minutes):** Who are the most prolific authors of the 100 most recent opinion articles in The Chronicle?
+
+```{r}
+#| label: union-title-abstract
+
+chronicle |>
+  count(author, sort = TRUE)
+```
+
+-   **Demo:** Draw a line plot of the number of opinion articles published per day in The Chronicle.
+
+```{r}
+#| label: articles-per-day
+
+chronicle |>
+  count(date) |>
+  ggplot(aes(x = date, y = n, group = 1)) +
+  geom_line()
+```
+
+-   **Demo:** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title?
+
+```{r}
+#| label: climate-title
+
+chronicle |>
+  mutate(
+    title = str_to_lower(title),
+    climate = if_else(str_detect(title, "climate"), "mentioned", "not mentioned")
+    ) |>
+  count(climate) |>
+  mutate(prop = n / sum(n))
+```
+
+-   **Your turn (5 minutes):** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title or abstract?
+
+```{r}
+#| label: climate-title-abstract
+
+chronicle |>
+  mutate(
+    title = str_to_lower(title),
+    abstract = str_to_lower(abstract),
+    climate = if_else(
+      str_detect(title, "climate") | str_detect(abstract, "climate"), 
+      "mentioned", 
+      "not mentioned"
+      )
+    ) |>
+  count(climate) |>
+  mutate(prop = n / sum(n))
+```
+
+-   **Time permitting:** Come up with another question and try to answer it using the data.
+
+```{r}
+# add code here
+```
+
+-   Time permitting:
