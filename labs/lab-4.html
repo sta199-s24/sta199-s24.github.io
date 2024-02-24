@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -72,10 +106,41 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="STA 199 - Lab 4 - Getting data into R">
+<meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta property="og:site_name" content="STA 199">
 <meta name="twitter:title" content="STA 199 - Lab 4 - Getting data into R">
+<meta name="twitter:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta name="twitter:image" content="https://sta199-s24.github.io/labs/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -332,7 +397,49 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
+  </ul></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul class="collapse">
+  <li><a href="#part-1---scraping-data-from-web-pages" id="toc-part-1---scraping-data-from-web-pages" class="nav-link" data-scroll-target="#part-1---scraping-data-from-web-pages">Part 1 - Scraping data from web pages</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  </ul></li>
+  <li><a href="#part-2---data-cleaning" id="toc-part-2---data-cleaning" class="nav-link" data-scroll-target="#part-2---data-cleaning">Part 2 - Data cleaning</a>
+  <ul class="collapse">
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul></li>
+  <li><a href="#part-3---data-analysis" id="toc-part-3---data-analysis" class="nav-link" data-scroll-target="#part-3---data-analysis">Part 3 - Data analysis</a>
+  <ul class="collapse">
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  </ul></li>
+  <li><a href="#part-4---ethics" id="toc-part-4---ethics" class="nav-link" data-scroll-target="#part-4---ethics">Part 4 - Ethics</a>
+  <ul class="collapse">
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a>
+  <ul class="collapse">
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -359,10 +466,413 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In this lab you’ll build the data wrangling and visualization skills you’ve developed so far and data tidying and joining to your repertoire.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.</p>
+</div>
+</div>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>By the end of the lab, you will…</p>
+<ul>
+<li>Be able to scrape data from web pages using the <strong>rvest</strong> package</li>
+<li>Clean and analyze the data you have scraped</li>
+<li>Come up with your own questions about the data and answer them</li>
+<li>Be able to use the <strong>robotstxt</strong> package as well as read the Terms of Use/Service of a website to check if a website allows scraping</li>
+<li>Read articles on the ethics of AI tools and LLMs and reflect on the implications of these tools for society</li>
+</ul>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<p>Log in to RStudio, clone your <code>lab-4</code> repo from GitHub, open your <code>lab-4.qmd</code> document, and get started!</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Click here if you prefer to see step-by-step instructions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="log-in-to-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="log-in-to-rstudio">Log in to RStudio</h3>
+<ul>
+<li>Go to <a href="https://cmgr.oit.duke.edu/containers" class="uri">https://cmgr.oit.duke.edu/containers</a> and log in with your Duke NetID and Password.</li>
+<li>Click <code>STA198-199</code> under My reservations to log into your container. You should now see the RStudio environment.</li>
+</ul>
+</section>
+<section id="clone-the-repo-start-new-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="clone-the-repo-start-new-rstudio-project">Clone the repo &amp; start new RStudio project</h3>
+<ul>
+<li><p>Go to the course organization at <a href="https://github.com/sta199-s24">github.com/sta199-s24</a> organization on GitHub. Click on the repo with the prefix <strong>lab-3</strong>. It contains the starter documents you need to complete the lab.</p></li>
+<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
+<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
+<li><p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
+<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
+<li><p>Click <em>lab-3.qmd</em> to open the template Quarto file. This is where you will write up your code and narrative for the lab.</p></li>
+</ul>
+</section>
+<section id="first-steps" class="level3">
+<h3 class="anchored" data-anchor-id="first-steps">First steps</h3>
+<p>In <code>lab-3.qmd</code>, update the <code>author</code> field to your name, render your document and examine the changes. Then, in the Git pane, click on <strong>Diff</strong> to view your changes, add a commit message (e.g., “Added author name”), and click <strong>Commit</strong>. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>In this lab we will work with the following packages:</p>
+<ul>
+<li><strong>tidyverse</strong>: for tidy data wrangling and visualization</li>
+<li><strong>rvest</strong>: for data scraping</li>
+<li><strong>robotstxt</strong>: for checking the robots.txt files of websites for permission to scrape data</li>
+</ul>
+<p>Some of the later questions in the lab ask you to come up with your own questions about the data and answer them. If this requires additional packages, you should feel free to load them as well.</p>
+</section>
+<section id="guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
+<p>As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.</p>
+<p>In addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to <strong>render, commit, and push</strong> your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="questions" class="level1">
+<h1>Questions</h1>
+<section id="part-1---scraping-data-from-web-pages" class="level2">
+<h2 class="anchored" data-anchor-id="part-1---scraping-data-from-web-pages">Part 1 - Scraping data from web pages</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You do not need to do anything in your Quarto file for this question. All of the work for this question will be done in <code>lab-4-clubs-scrape.R</code>.</p>
+</div>
+</div>
+<p>Your task for this question is to scrape data on Duke Student Groups from <a href="https://dukegroups.com/club_signup?view=all" class="uri">https://dukegroups.com/club_signup?view=all</a>. Scroll down and click on load all groups.</p>
+<p>You will do this in <code>lab-4-clubs-scrape.R</code>, which gives some scaffolding for you to complete this task. The goal is to scrape information on</p>
+<ul>
+<li>Name of club: <code>names</code></li>
+<li>Link to club page: <code>urls</code></li>
+<li>Type of club: <code>club_types</code></li>
+<li>Resources of club: <code>resources</code></li>
+<li>Membership type of club: <code>membership_types</code></li>
+<li>Checkboxes that indicate the club is open / closed for joining: <code>membership_status</code></li>
+</ul>
+<p>The scheme shown in the image should also help you figure out which pieces of information come from which parts of the website.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clubs-scrape-scheme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+<p>You will scrape each of these as individual vectors, clean them up a bit, and then bring them together in a data frame (a <code>tibble</code>) and write it out to a CSV file called <code>clubs.csv</code> in the <code>data</code> folder of your project/repository.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are some hints for cleaning the data in the script provided for you. For example, some of the fields you scrape will have some extraneous characters in them like <code>\n</code>s, <code>\r</code>s, etc. Two examples are provided below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="st">"</span><span class="sc">\r</span><span class="st"> Academic Advising Center</span><span class="sc">\r</span><span class="st">"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"</span><span class="sc">\r\n\t\t\t\t\t\t\t\t</span><span class="st">https://dukegroups.com/AOTA/</span><span class="sc">\r\n\t\t\t\t\t\t\t</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To clean these up, first, we would want to <em>remove</em> the extraneous characters. The <strong>stringr</strong> package (which comes with the tidyverse) offers some great functions for dealing with such nuisance, see <a href="https://stringr.tidyverse.org/reference/index.html" class="uri">https://stringr.tidyverse.org/reference/index.html</a> for a full list. In this case, we can use the following steps:</p>
+<ul>
+<li><code>str_remove()</code> to remove the character(s) once or <code>str_remove_all()</code> to remove all occurences of the character(s) we don’t want</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>name <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_remove_all</span>(<span class="st">"</span><span class="sc">\r</span><span class="st">"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>url <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_remove_all</span>(<span class="st">"</span><span class="sc">\r</span><span class="st">"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_remove_all</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_remove_all</span>(<span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>str_trim()</code> for trimming white space at the beginning and end of text strings</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>name <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_remove_all</span>(<span class="st">"</span><span class="sc">\r</span><span class="st">"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_trim</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>These types of functions will be helpful for cleaning the data you scrape as well.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2---data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="part-2---data-cleaning">Part 2 - Data cleaning</h2>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Read the <code>clubs.csv</code> file you created in Question 2 into your Quarto document.</p>
+<p>The <code>club_type_detail</code> variable contains two pieces of information for most (though not all) clubs:</p>
+<ul>
+<li>Many of the entries are of the form <code>House/Quad Council - Housing &amp; Residence Life</code> or <code>Open Membership (DSG) - Faith, Religion, &amp; Spirituality</code>, where the piece before the hyphen (<code>-</code>) is <code>club_type</code> while the piece after the hyphen is <code>detail</code>.</li>
+<li>Some of the entries are of the form <code>Student Government</code> or <code>Student Affairs Unit</code>, basically just <code>club_type</code> but no <code>detail</code>.</li>
+</ul>
+<p>Separate the <code>club_type</code> variable into two, <code>club_type</code> and <code>detail</code>, and then trim any extraneous white space from the resulting variables, as needed. Save the resulting dataset with these two new variables as <code>clubs</code>, i.e., overwrite the data frame.</p>
+<p>Then, display the first 10 rows of the dataset, <code>relocate()</code>ing <code>club_type</code> and <code>detail</code> variables to the beginning of the dataset to make sure they appear in the output in your rendered document.</p>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Another variable that needs some cleaning up is <code>membership_status</code>. Currently it should either be <code>NA</code> or contain some text that says <code>"Select ... to register for this group"</code>. Recode this variable to say <code>"Closed"</code> if the current value is <code>NA</code> or <code>"Open"</code> otherwise. Save the resulting dataset with these two new variables as <code>clubs</code>, i.e., overwrite the data frame.</p>
+<p>Then, display the first 10 rows of the dataset, <code>relocate()</code>ing <code>membership_status</code> to the beginning of the dataset to make sure it appears in the output in your rendered document.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At this point you should have a <code>clubs</code> dataset with seven columns in the following order:</p>
+<ol type="1">
+<li><code>name</code></li>
+<li><code>resources</code></li>
+<li><code>club_type</code></li>
+<li><code>detail</code>: May be blank for some clubs</li>
+<li><code>membership_type</code></li>
+<li><code>membership_status</code>: with values <code>Open</code> and <code>Closed</code></li>
+<li><code>url</code></li>
+</ol>
+<p>If your dataset has a structure of columns different than what’s outlined above, go back to earlier exercises and review your answers.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="part-3---data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="part-3---data-analysis">Part 3 - Data analysis</h2>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Solve each of the following questions (parts) with a single pipeline.</p>
+<ol type="a">
+<li>Find the distinct <code>membership_type</code>s and the number of clubs with each type of membership.</li>
+<li>Find the number of clubs that have a Mission statement.</li>
+<li>Find the clubs that are <code>Greek</code> and mention <code>Faith</code> in their detail.</li>
+</ol>
+</section>
+<section id="question-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<p>Recreate the following table in a single pipeline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clubs-table.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>First, count the number of clubs that fall into each <code>club_type</code> and <code>membership_status</code>.</p></li>
+<li><p>Then, pivot the resulting data frame so the levels of <code>membership_status</code> are across two columns as opposed to in a single column.</p></li>
+<li><p>Read the documentation for the pivoting function you’re using to discover how you can replace <code>NA</code>s with 0s while pivoting the data.</p></li>
+<li><p>Create a new column <code>Total</code> that is the sum of <code>Closed</code> and <code>Open</code> columns.</p></li>
+<li><p>Use the <code>kable()</code> function (refer back to your take-home exam if you need a hint) to nicely format your table.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Ask a <em>simple</em> question of interest to you about student clubs at Duke that you can answer with these data. Then, answer your question in a single pipeline and a brief narrative describing your findings. If your question is too complex to answer in a single pipeline, go back and revise your question.</p>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Ask another question of interest to you about student clubs at Duke that you can answer with a visualization of these data. Then, answer your question, with a visualization and a brief narrative describing your findings.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are collaborating with classmates and brainstorming possible questions together, make sure the questions you choose are unique to you.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="part-4---ethics" class="level2">
+<h2 class="anchored" data-anchor-id="part-4---ethics">Part 4 - Ethics</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following two questions ask you to summarize articles on data science ethics. You are not allowed to use Chat GPT or similar tools in answering these questions – you must actually read the articles and summarize them yourself. Please be ethical, at a minimum when discussing ethics!</p>
+</div>
+</div>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>For each of the following websites, first determine whether you’re allowed to scrape data from them using tools we’ve learned in this course.</p>
+<p>Then, read (the relevant portions of their) Terms of Use/Service.</p>
+<ul>
+<li>ESPN: <a href="https://www.espn.com/">https://www.espn.com</a> / <a href="https://disneytermsofuse.com/english/#License-Grant-and-Restrictions" class="uri">https://disneytermsofuse.com/english/#License-Grant-and-Restrictions</a></li>
+<li>X/Twitter: <a href="https://twitter.com/">https://twitter.com</a> / <a href="https://twitter.com/en/tos" class="uri">https://twitter.com/en/tos</a></li>
+<li>Rotten Tomatoes: <a href="https://www.rottentomatoes.com/">https://www.rottentomatoes.com</a> / <a href="https://www.rottentomatoes.com/policies/terms-of-use" class="uri">https://www.rottentomatoes.com/policies/terms-of-use</a></li>
+</ul>
+<p>Finally, summarize your findings about whether you can or cannot scrape data from these websites in 1 sentence for each website. Additionally, quote the relevant sentence(s) from the Terms of Use/Service.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the Terms of Use/Service documents, it might be productive to search for keywords like “scrape” or “scraping” to find the relevant portions.</p>
+</div>
+</div>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>One current ethical discussion in data science involves the training of “Large Language Models” such as ChatGPT. These models are trained using massive corpora (document sets) that include large amounts of work that is covered under copyright law. Read the following two articles:</p>
+<ul>
+<li><a href="https://www.dykema.com/news-insights/do-large-language-models-violate-copyright-law.html">Do Large Language Models Violate Copyright Law?</a></li>
+<li><a href="https://hai.stanford.edu/news/reexamining-fair-use-age-ai">Reexamining “Fair Use” in the Age of AI</a></li>
+</ul>
+<p>Write a short paragraph (maximum 8 sentences) discussing the arguments on both sides of the discussion over copyright in training large language models.</p>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>Another major ethical discussion in data science resolves around discriminatory biases in machine learning models. These biases can have real-world impacts in lending, criminal justice, hiring, and more. Many of these algorithms are so-called “black boxes”, meaning the exact process they take from input to output is unclear. Read the following articles:</p>
+<ul>
+<li><a href="https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html">Amazon scraps secret AI recruiting tool that showed bias against</a></li>
+<li><a href="https://www.theatlantic.com/technology/archive/2018/01/equivant-compas-algorithm/550646/">The Atlantic: The False Promise of Risk Assessment</a></li>
+</ul>
+<p>Write a short paragraph (maximum 8 sentences) discussing the nature of biases in machine learning and in datasets, and any possible solutions that could help limit those biases.</p>
+</section>
+</section>
+</section>
+<section id="wrap-up" class="level1">
+<h1>Wrap-up</h1>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Once you are finished with the lab, you will submit your final PDF document to Gradescope.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.</p>
+<p>You must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.</p>
+</div>
+</div>
+<p>To submit your assignment:</p>
+<ul>
+<li>Go to <a href="http://www.gradescope.com" class="uri">http://www.gradescope.com</a> and click <em>Log in</em> in the top right corner.</li>
+<li>Click <em>School Credentials</em> <span class="math inline">\(\rightarrow\)</span> <em>Duke NetID</em> and log in using your NetID credentials.</li>
+<li>Click on your <em>STA 199</em> course.</li>
+<li>Click on the assignment, and you’ll be prompted to submit it.</li>
+<li>Mark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have:</p>
+<ul>
+<li>attempted all questions</li>
+<li>rendered your Quarto document</li>
+<li>committed and pushed everything to your GitHub repository such that the Git pane in RStudio is empty</li>
+<li>uploaded your PDF to Gradescope</li>
+<li>selected pages associated with each question on Gradescope</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>The lab is graded out of a total of 50 points.</p>
+<p>You can earn up to 5 points on each question:</p>
+<ul>
+<li><p>5: Response shows excellent understanding and addresses all or almost all of the rubric items.</p></li>
+<li><p>4: Response shows good understanding and addresses most of the rubric items.</p></li>
+<li><p>3: Response shows understanding and addresses a majority of the rubric items.</p></li>
+<li><p>2: Response shows effort and misses many of the rubric items.</p></li>
+<li><p>1: Response does not show sufficient effort or understanding and/or is largely incomplete.</p></li>
+<li><p>0: No attempt.</p></li>
+</ul>
 
 
+</section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Remember, haikus not novellas when writing code!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -914,7 +1424,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-4.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

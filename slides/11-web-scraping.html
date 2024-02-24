@@ -439,7 +439,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li></li>
+<li><p>Lab 4 on Monday</p></li>
+<li><p>Challenge: Resist the urge to ask a GPT before spending some time thinking!</p></li>
 </ul>
 </section>
 <section id="reading-the-chronicle" class="slide level2">
@@ -465,7 +466,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="analyzing-the-chronicle" class="slide level2">
 <h2>Analyzing The Chronicle</h2>
 
-<img data-src="11-web-scraping_files/figure-revealjs/chronicle-common-words-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-web-scraping_files/figure-html/chronicle-common-words-1.png" width="672" class="r-stretch"></section>
 <section id="reading-the-chronicle-2" class="slide level2">
 <h2>Reading The Chronicle</h2>
 <div class="question">
@@ -475,7 +476,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="analyzing-the-chronicle-1" class="slide level2">
 <h2>Analyzing The Chronicle</h2>
 
-<img data-src="11-web-scraping_files/figure-revealjs/chronicle-sentiments-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section>
+<img data-src="11-web-scraping_files/figure-html/chronicle-sentiments-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section>
 <section id="all-of-this-analysis-is-done-in-r" class="slide level2 centered">
 <h2>All of this analysis is done in R!</h2>
 <div class="hand">
@@ -811,7 +812,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
-<col style="width: 50%">
+<col style="width: 49%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1277,44 +1278,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
