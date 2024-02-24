@@ -1,5 +1,5 @@
 ---
-title: "Lab 4 - Getting data into R"
+title: "Lab 4 - Web scraping and ethics"
 categories: "Lab"
 ---
 
