@@ -66,6 +66,7 @@ In this lab we will work with the following packages:
 -   **tidyverse**: for tidy data wrangling and visualization
 -   **rvest**: for data scraping
 -   **robotstxt**: for checking the robots.txt files of websites for permission to scrape data
+-   **knitr:** for making a pretty table
 
 Some of the later questions in the lab ask you to come up with your own questions about the data and answer them.
 If this requires additional packages, you should feel free to load them as well.
