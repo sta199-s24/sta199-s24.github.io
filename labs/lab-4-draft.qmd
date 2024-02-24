@@ -20,7 +20,7 @@ By the end of the lab, you will...
 
 ## Getting started
 
-Log in to RStudio, clone your `lab-3` repo from GitHub, open your `lab-3.qmd` document, and get started!
+Log in to RStudio, clone your `lab-4` repo from GitHub, open your `lab-4.qmd` document, and get started!
 
 ::: {.callout-tip collapse="true"}
 ## Click here if you prefer to see step-by-step instructions
@@ -55,22 +55,16 @@ Then, in the Git pane, click on **Diff** to view your changes, add a commit mess
 Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.
 :::
 
-::: callout-important
-If you run into any issues with the first steps outlined above, flag a TA for help before proceeding.
-:::
-
 ## Packages
 
-In this lab we will work with the **tidyverse** package, which is a collection of packages for doing data analysis in a "tidy" way.
+In this lab we will work with the following packages:
 
-```{r}
-#| eval: true
-#| message: false
+- **tidyverse**: for tidy data wrangling and visualization
+- **rvest**: for data scraping
+- **robotstxt**: for checking the robots.txt files of websites for permission to scrape data
 
-library(tidyverse)
-```
-
-**Render** the document which loads this package with the `library()` function.
+Some of the later questions in the lab ask you to come up with your own questions about the data and answer them. 
+If this requires additional packages, you should feel free to load them as well.
 
 ## Guidelines
 
@@ -89,65 +83,179 @@ You should have at least 3 commits with meaningful commit messages by the end of
 
 # Questions
 
-## Part 1 - Getting data in from CSVs
+## Part 1 - Scraping data from web pages
 
-## Part 2 - Getting data in from Excel files
+### Question 1
 
-## Part 3 - Scraping data in from web pages
+::: callout-important
+You do not need to do anything in your Quarto file for this question.
+All of the work for this question will be done in `lab-4-clubs-scrape.R`.
+:::
 
-### Question X
+Your task for this question is to scrape data on Duke Student Groups from <https://dukegroups.com/club_signup?view=all>.
+Scroll down and click on load all groups.
 
-Please justify, using the tools we've learning in this course, if you are allowed to scrape data from each of the following websites:
+You will do this in `lab-4-clubs-scrape.R`, which gives some scaffolding for you to complete this task.
+The goal is to scrape information on
 
--   [www.espn.com](https://www.espn.com/)
--   [twitter.com](https://twitter.com/)
--   [www.rottentomatoes.com](https://www.rottentomatoes.com)
+-   Name of club: `names`
+-   Link to club page: `urls`
+-   Type of club: `club_types`
+-   Resources of club: `resources`
+-   Membership type of club: `membership_types`
+-   Checkboxes that indicate the club is open / closed for joining: `membership_status`
 
-### Question X
+You will scrape each of these as individual vectors, clean them up a bit, and then bring them together in a data frame (a `tibble`) and write it out to a CSV file called `clubs.csv` in the `data` folder of your project/repository.
 
-Rotten Tomatoes is an American review aggregation website for film.
-They give percentage scores for movies based on how "good" the movies are.
-They provide 2 scores:
+::: callout-tip
+## Hint
 
-|                              |                                                                                                                   |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| ![](images/popcornlogos.png) | The audience score, denoted by a popcorn bucket                                                                   |
-| ![](images/tomatologos.png)  | The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film |
-
-We are going to investigate the relationship between the audience score and Tomatometer score between the Halloween movies.
-Please visit the following website to view the data we plan to scrape: <https://www.rottentomatoes.com/franchise/halloween>
-
-a.  Using `Selector Gadget`, scrape the `tomato_score` and `audience_score` and report the lengths of these vectors (using the `length()`) function.
-    *Hint:* Their lengths should be equal.
-
-b.  Next, run the following code:
+There are some hints for cleaning the data in the script provided for you.
+For example, some of the fields you scrape will have some extraneous characters in them like `\n`s, `\r`s, etc.
+Two examples are provided below.
 
 ```{r}
-#| eval: false
-
-titles_years <- page |>
-  html_nodes(".franchise-media-list__h3") |>
-  html_text2()
-  
-halloween <- tibble(title_year = titles_years) |>
-  separate(title_year, into = c("title", "year"), sep= "\\(" )
+name <- "\r Academic Advising Center\r"
+url <- "\r\n\t\t\t\t\t\t\t\thttps://dukegroups.com/AOTA/\r\n\t\t\t\t\t\t\t"
 ```
 
-In 2-3 sentences, describe what the above code is doing.
-Make sure to articulate each step of both of the pipelines.
-*Hint:* Print out `titles_years` and `halloween` to see what these objects look like.
-This will help figure out what the code is doing.
-You should also try running each line of the pipeline individually to see their outputs.
+To clean these up, first, we would want to *remove* the extraneous characters.
+The **stringr** package (which comes with the tidyverse) offers some great functions for dealing with such nuisance, see <https://stringr.tidyverse.org/reference/index.html> for a full list.
+In this case, we can use the following steps:
 
-c.  Add the columns `tomato_score` and `audience_score` from part (a) to your data frame called `halloween` that you created in part (b).
+-   `str_remove()` to remove the character(s) once or `str_remove_all()` to remove all occurences of the character(s) we don't want
 
-d.  Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometer score.
-    In 2-3 sentences, comment on the relationship.
-    Your plot should include appropriate labels.
+```{r}
+name |>
+  str_remove_all("\r")
+url |>
+  str_remove_all("\r") |>
+  str_remove_all("\n") |>
+  str_remove_all("\t")
+```
+
+-   `str_trim()` for trimming white space at the beginning and end of text strings
+
+```{r}
+name |>
+  str_remove_all("\r") |>
+  str_trim()
+```
+
+These types of functions will be helpful for cleaning the data you scrape as well.
+:::
+
+## Part 2 - Data cleaning
+
+### Question 2
+
+Read the `clubs.csv` file you created in Question 2 into your Quarto document.
+
+The `club_type_detail` variable contains two pieces of information for most (though not all) clubs:
+
+-   Many of the entries are of the form `House/Quad Council - Housing & Residence Life` or `Open Membership (DSG) - Faith, Religion, & Spirituality`, where the piece before the hyphen (`-`) is `club_type` while the piece after the hyphen is `detail`.
+-   Some of the entries are of the form `Student Government` or `Student Affairs Unit`, basically just `club_type` but no `detail`.
+
+Separate the `club_type` variable into two, `club_type` and `detail`, and then trim any extraneous white space from the resulting variables, as needed.
+Save the resulting dataset with these two new variables as `clubs`, i.e., overwrite the data frame.
+
+Then, display the first 10 rows of the dataset, `relocate()`ing `club_type` and `detail` variables to the beginning of the dataset to make sure they appear in the output in your rendered document.
+
+### Question 3
+
+Another variable that needs some cleaning up is `membership_status`.
+Currently it should either be `NA` or contain some text that says `"Select ... to register for this group"`.
+Recode this variable to say `"Closed"` if the current value is `NA` or `"Open"` otherwise.
+Save the resulting dataset with these two new variables as `clubs`, i.e., overwrite the data frame.
+
+Then, display the first 10 rows of the dataset, `relocate()`ing `membership_status` to the beginning of the dataset to make sure it appears in the output in your rendered document.
+
+::: callout-warning
+At this point you should have a `clubs` dataset with seven columns in the following order:
+
+1.  `name`
+2.  `resources`
+3.  `club_type`
+4.  `detail`: May be blank for some clubs
+5.  `membership_type`
+6.  `membership_status`: with values `Open` and `Closed`
+7.  `url`
+
+If your dataset has a structure of columns different than what's outlined above, go back to earlier exercises and review your answers.
+:::
+
+## Part 3 - Data analysis
+
+### Question 4
+
+Solve each of the following questions (parts) with a single pipeline.
+
+a.  Find the distinct `membership_type`s and the number of clubs with each type of membership.
+b.  Find the number of clubs that have a Mission statement.
+c.  Find the clubs that are `Greek` and mention `Faith` in their detail.
+
+### Question 5
+
+Recreate the following table in a single pipeline.
+
+![](images/clubs-table.png){fig-align="center" width="400"}
+
+::: callout-tip
+## Hint
+
+-   First, count the number of clubs that fall into each `club_type` and `membership_status`.
+
+-   Then, pivot the resulting data frame so the levels of `membership_status` are across two columns as opposed to in a single column.
+
+-   Read the documentation for the pivoting function you're using to discover how you can replace `NA`s with 0s while pivoting the data.
+
+-   Create a new column `Total` that is the sum of `Closed` and `Open` columns.
+
+-   Use the `kable()` function (refer back to your take-home exam if you need a hint) to nicely format your table.
+:::
+
+### Question 6
+
+Ask a *simple* question of interest to you about student clubs at Duke that you can answer with these data.
+Then, answer your question in a single pipeline and a brief narrative describing your findings.
+If your question is too complex to answer in a single pipeline, go back and revise your question.
+
+### Question 7
+
+Ask another question of interest to you about student clubs at Duke that you can answer with a visualization of these data.
+Then, answer your question, with a visualization and a brief narrative describing your findings.
+
+::: callout-note
+If you are collaborating with classmates and brainstorming possible questions together, make sure the questions you choose are unique to you.
+:::
 
 ## Part 4 - Ethics
 
-### Question X
+::: callout-important
+The following two questions ask you to summarize articles on data science ethics.
+You are not allowed to use Chat GPT or similar tools in answering these questions – you must actually read the articles and summarize them yourself.
+Please be ethical, at a minimum when discussing ethics!
+:::
+
+### Question 8
+
+For each of the following websites, first determine whether you're allowed to scrape data from them using tools we've learned in this course.
+
+Then, read (the relevant portions of their) Terms of Use/Service.
+
+-   ESPN: [https://www.espn.com](https://www.espn.com/) / <https://disneytermsofuse.com/english/#License-Grant-and-Restrictions>
+-   X/Twitter: [https://twitter.com](https://twitter.com/) / <https://twitter.com/en/tos>
+-   Rotten Tomatoes: [https://www.rottentomatoes.com](https://www.rottentomatoes.com/) / <https://www.rottentomatoes.com/policies/terms-of-use>
+
+Finally, summarize your findings about whether you can or cannot scrape data from these websites in 1 sentence for each website. Additionally, quote the relevant sentence(s) from the Terms of Use/Service.
+
+::: callout-tip
+## Hint
+
+In the Terms of Use/Service documents, it might be productive to search for keywords like "scrape" or "scraping" to find the relevant portions.
+:::
+
+### Question 9
 
 One current ethical discussion in data science involves the training of "Large Language Models" such as ChatGPT.
 These models are trained using massive corpora (document sets) that include large amounts of work that is covered under copyright law.
@@ -158,7 +266,7 @@ Read the following two articles:
 
 Write a short paragraph (maximum 8 sentences) discussing the arguments on both sides of the discussion over copyright in training large language models.
 
-### Question X
+### Question 10
 
 Another major ethical discussion in data science resolves around discriminatory biases in machine learning models.
 These biases can have real-world impacts in lending, criminal justice, hiring, and more.
@@ -167,7 +275,6 @@ Read the following articles:
 
 -   [Amazon scraps secret AI recruiting tool that showed bias against](https://www.ml.cmu.edu/news/news-archive/2016-2020/2018/october/amazon-scraps-secret-artificial-intelligence-recruiting-engine-that-showed-biases-against-women.html)
 -   [The Atlantic: The False Promise of Risk Assessment](https://www.theatlantic.com/technology/archive/2018/01/equivant-compas-algorithm/550646/)
--   [Machine Bias: Risk Assessments in Criminal Sentencing](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
 
 Write a short paragraph (maximum 8 sentences) discussing the nature of biases in machine learning and in datasets, and any possible solutions that could help limit those biases.
 
