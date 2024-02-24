@@ -16,7 +16,11 @@ If you have not yet done those, you should go back and review the previous labs 
 
 By the end of the lab, you will...
 
--   ...
+-   Be able to scrape data from web pages using the **rvest** package
+-   Clean and analyze the data you have scraped
+-   Come up with your own questions about the data and answer them
+-   Be able to use the **robotstxt** package as well as read the Terms of Use/Service of a website to check if a website allows scraping
+-   Read articles on the ethics of AI tools and LLMs and reflect on the implications of these tools for society
 
 ## Getting started
 
@@ -59,11 +63,11 @@ Then, push the changes to your GitHub repository, and in your browser confirm th
 
 In this lab we will work with the following packages:
 
-- **tidyverse**: for tidy data wrangling and visualization
-- **rvest**: for data scraping
-- **robotstxt**: for checking the robots.txt files of websites for permission to scrape data
+-   **tidyverse**: for tidy data wrangling and visualization
+-   **rvest**: for data scraping
+-   **robotstxt**: for checking the robots.txt files of websites for permission to scrape data
 
-Some of the later questions in the lab ask you to come up with your own questions about the data and answer them. 
+Some of the later questions in the lab ask you to come up with your own questions about the data and answer them.
 If this requires additional packages, you should feel free to load them as well.
 
 ## Guidelines
@@ -247,7 +251,8 @@ Then, read (the relevant portions of their) Terms of Use/Service.
 -   X/Twitter: [https://twitter.com](https://twitter.com/) / <https://twitter.com/en/tos>
 -   Rotten Tomatoes: [https://www.rottentomatoes.com](https://www.rottentomatoes.com/) / <https://www.rottentomatoes.com/policies/terms-of-use>
 
-Finally, summarize your findings about whether you can or cannot scrape data from these websites in 1 sentence for each website. Additionally, quote the relevant sentence(s) from the Terms of Use/Service.
+Finally, summarize your findings about whether you can or cannot scrape data from these websites in 1 sentence for each website.
+Additionally, quote the relevant sentence(s) from the Terms of Use/Service.
 
 ::: callout-tip
 ## Hint
