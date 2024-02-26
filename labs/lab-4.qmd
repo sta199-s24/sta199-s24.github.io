@@ -158,7 +158,7 @@ These types of functions will be helpful for cleaning the data you scrape as wel
 
 ### Question 2
 
-Read the `clubs.csv` file you created in Question 2 into your Quarto document.
+Read the `clubs.csv` file you created in Question 1 into your Quarto document.
 
 The `club_type_detail` variable contains two pieces of information for most (though not all) clubs:
 
