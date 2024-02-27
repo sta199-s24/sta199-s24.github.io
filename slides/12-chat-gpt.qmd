@@ -648,10 +648,10 @@ csi
 ## Guidelines and best practices for using Chat GPT {.smaller}
 
 ::: incremental
-- Do not just copy-paste the prompt
-- Engineer the prompt until the response starts to look like code you're learning in the course
-- If the response is not correct, ask for a correction
-- If the response doesn't follow the guidelines, ask for a correction
-- Do not just copy-paste code from Chat GPT responses, run it line-by-line and edit as needed
-- Watch out for clear mistakes in the response: do not keep loading packages that are already loaded, use the base pipe `|>`, use tidyverse-based code, etc.
+-   Do [**not**]{.underline} just copy-paste the prompt – for appropriate academic conduct, for your own learning, and for getting to better results faster
+-   Engineer the prompt until the response starts to look like code you're learning in the course
+-   If the response is not correct, ask for a correction
+-   If the response doesn't follow the guidelines, ask for a correction
+-   Do not just copy-paste code from Chat GPT responses, run it line-by-line and edit as needed
+-   Watch out for clear mistakes in the response: do not keep loading packages that are already loaded, use the base pipe `|>`, use tidyverse-based code, etc.
 :::
