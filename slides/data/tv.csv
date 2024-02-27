@@ -1,0 +1,2267 @@
+season,title,year,month,day,av_rating,genre_1,genre_2,genre_3
+1,11.22.63,2016,3,10,8.489,Drama,Mystery,Sci-Fi
+1,12 Monkeys,2015,2,27,8.3407,Adventure,Drama,Mystery
+2,12 Monkeys,2016,5,30,8.8196,Adventure,Drama,Mystery
+3,12 Monkeys,2017,5,19,9.0369,Adventure,Drama,Mystery
+4,12 Monkeys,2018,6,26,9.1363,Adventure,Drama,Mystery
+1,13 Reasons Why,2017,3,31,8.437,Drama,Mystery,NA
+2,13 Reasons Why,2018,5,18,7.5089,Drama,Mystery,NA
+1,24,2002,2,16,8.5641,Action,Crime,Drama
+2,24,2003,2,9,8.7028,Action,Crime,Drama
+3,24,2004,2,9,8.7173,Action,Crime,Drama
+4,24,2005,3,8,8.561,Action,Crime,Drama
+5,24,2006,3,10,8.7828,Action,Crime,Drama
+6,24,2007,3,8,8.3522,Action,Crime,Drama
+7,24,2009,3,10,8.4922,Action,Crime,Drama
+8,24,2010,3,17,8.4744,Action,Crime,Drama
+1,24: Legacy,2017,3,5,7.2044,Action,Crime,Drama
+1,24: Live Another Day,2014,6,6,8.899,Action,Crime,Drama
+1,666 Park Avenue,2013,1,13,7.4737,Drama,Fantasy,Mystery
+1,7th Heaven,1996,8,26,7.7,Drama,Family,Romance
+10,7th Heaven,2006,5,8,6.3,Drama,Family,Romance
+1,8 Simple Rules,2002,9,17,7.5,Comedy,Drama,NA
+2,8 Simple Rules,2003,11,4,8.6,Comedy,Drama,NA
+3,8 Simple Rules,2004,11,12,8.4043,Comedy,Drama,NA
+1,9-1-1,2018,2,9,8.2746,Action,Drama,Thriller
+1,90210,2009,1,3,7.1735,Comedy,Drama,Romance
+2,90210,2009,11,10,7.4686,Comedy,Drama,Romance
+3,90210,2010,12,4,7.6858,Comedy,Drama,Romance
+4,90210,2011,12,1,6.8344,Comedy,Drama,Romance
+5,90210,2013,1,24,7.653,Comedy,Drama,Romance
+1,A Discovery of Witches,2018,9,24,8.8345,Drama,Fantasy,Romance
+1,A Gifted Man,2011,9,23,7.5,Drama,Fantasy,NA
+1,A Nero Wolfe Mystery,2001,4,29,8.5,Action,Drama,Mystery
+1,A Series of Unfortunate Events,2017,1,13,8.1052,Adventure,Comedy,Drama
+2,A Series of Unfortunate Events,2018,3,30,8.2873,Adventure,Comedy,Drama
+1,A.D. The Bible Continues,2015,4,19,8.0788,Drama,NA,NA
+25,ABC Afterschool Specials,1996,9,12,3.3,Adventure,Comedy,Drama
+1,APB,2017,3,15,7.5427,Crime,Drama,NA
+1,About a Boy,2014,3,28,7.6627,Comedy,Drama,Romance
+1,Absentia,2017,11,2,8.0752,Crime,Drama,Mystery
+1,Agatha Christie's Marple,2005,1,23,7.2669,Crime,Drama,Mystery
+2,Agatha Christie's Marple,2006,3,3,7.1339,Crime,Drama,Mystery
+3,Agatha Christie's Marple,2008,3,27,7.1943,Crime,Drama,Mystery
+4,Agatha Christie's Marple,2009,7,15,7.0746,Crime,Drama,Mystery
+5,Agatha Christie's Marple,2010,9,19,7.3715,Crime,Drama,Mystery
+6,Agatha Christie's Marple,2014,9,23,7.316,Crime,Drama,Mystery
+1,Agent X,2015,12,2,7.6673,Action,Drama,NA
+1,Agents of S.H.I.E.L.D.,2014,1,15,8.1977,Action,Adventure,Drama
+2,Agents of S.H.I.E.L.D.,2015,1,25,8.653,Action,Adventure,Drama
+3,Agents of S.H.I.E.L.D.,2016,1,30,8.7249,Action,Adventure,Drama
+4,Agents of S.H.I.E.L.D.,2017,1,22,8.84,Action,Adventure,Drama
+5,Agents of S.H.I.E.L.D.,2018,2,22,8.8967,Action,Adventure,Drama
+1,Agents of S.H.I.E.L.D.: Slingshot,2016,12,13,7.5153,Action,Adventure,Drama
+1,Alcatraz,2012,2,20,7.7857,Action,Crime,Drama
+1,Alias,2002,1,9,7.9015,Action,Drama,Mystery
+2,Alias,2003,1,19,7.482,Action,Drama,Mystery
+3,Alias,2004,1,21,7.3894,Action,Drama,Mystery
+4,Alias,2005,3,21,7.9627,Action,Drama,Mystery
+5,Alias,2006,2,3,7.5359,Action,Drama,Mystery
+1,Alias Grace,2017,11,3,8.0869,Biography,Crime,Drama
+1,Alice,2009,12,6,7.5523,Adventure,Drama,Fantasy
+1,All My Children,2007,6,8,7.4,Drama,Mystery,Romance
+1,Allegiance,2015,2,26,7.3705,Drama,Thriller,NA
+1,Ally McBeal,1997,11,13,7.4472,Comedy,Drama,Fantasy
+2,Ally McBeal,1999,2,8,8,Comedy,Drama,Fantasy
+3,Ally McBeal,2000,4,24,7.8437,Comedy,Drama,Fantasy
+4,Ally McBeal,2001,5,10,8.2,Comedy,Drama,Fantasy
+5,Ally McBeal,2002,5,20,7.9,Comedy,Drama,Fantasy
+1,Almost Human,2013,12,28,8.3369,Action,Crime,Drama
+1,Alpha House,2013,8,2,7.1,Comedy,Drama,NA
+1,Alphas,2011,8,16,7.6436,Action,Drama,Sci-Fi
+2,Alphas,2012,9,6,7.8699,Action,Drama,Sci-Fi
+1,Altered Carbon,2018,2,2,8.2753,Action,Drama,Sci-Fi
+1,American Crime,2015,4,9,8.7698,Crime,Drama,NA
+2,American Crime,2016,2,3,9.1438,Crime,Drama,NA
+3,American Crime,2017,4,2,8.9608,Crime,Drama,NA
+1,American Crime Story,2016,3,4,8.7267,Biography,Crime,Drama
+2,American Crime Story,2018,2,11,8.394,Biography,Crime,Drama
+1,American Gods,2017,5,24,8.0975,Drama,Fantasy,Mystery
+1,American Gothic,1995,9,22,7.8,Drama,Horror,Thriller
+1,American Gothic,2016,8,5,7.535,Crime,Drama,Mystery
+1,American Horror Story,2011,11,12,8.2659,Drama,Horror,Thriller
+2,American Horror Story,2012,12,2,8.5388,Drama,Horror,Thriller
+3,American Horror Story,2013,11,29,8.1845,Drama,Horror,Thriller
+4,American Horror Story,2014,11,25,8.2265,Drama,Horror,Thriller
+5,American Horror Story,2015,11,19,7.8947,Drama,Horror,Thriller
+6,American Horror Story,2016,10,15,7.8932,Drama,Horror,Thriller
+7,American Horror Story,2017,10,10,7.4122,Drama,Horror,Thriller
+8,American Horror Story,2018,9,26,8.6163,Drama,Horror,Thriller
+1,American Odyssey,2015,5,17,7.8294,Action,Drama,Thriller
+9,American Playhouse,1990,3,7,7.9,Comedy,Drama,Romance
+10,American Playhouse,1991,3,15,8.4,Comedy,Drama,Romance
+11,American Playhouse,1993,10,6,7.6,Comedy,Drama,Romance
+1,American Vandal,2017,9,15,8.1528,Comedy,Crime,Drama
+2,American Vandal,2018,9,14,8.2,Comedy,Crime,Drama
+1,And Then There Were None,2015,12,27,8.4921,Crime,Drama,Mystery
+1,Andromeda,2001,1,12,7.3562,Action,Adventure,Drama
+2,Andromeda,2002,1,1,7.6018,Action,Adventure,Drama
+3,Andromeda,2003,2,28,7.696,Action,Adventure,Drama
+1,Angel,2000,1,28,8.505,Action,Drama,Fantasy
+2,Angel,2001,1,14,8.6229,Action,Drama,Fantasy
+3,Angel,2002,1,5,7.736,Action,Drama,Fantasy
+4,Angel,2003,1,29,8.0542,Action,Drama,Fantasy
+5,Angel,2004,1,23,8.8922,Action,Drama,Fantasy
+1,Angels in America,2003,12,7,8.4,Drama,Fantasy,Romance
+1,Animal Kingdom,2016,7,12,8.5823,Crime,Drama,NA
+2,Animal Kingdom,2017,7,15,8.6925,Crime,Drama,NA
+3,Animal Kingdom,2018,7,10,8.6392,Crime,Drama,NA
+1,Aquarius,2015,6,23,7.5292,Biography,Crime,Drama
+2,Aquarius,2016,7,25,7.8702,Biography,Crime,Drama
+1,Are You Afraid of the Dark?,1993,4,17,9.1736,Drama,Family,Fantasy
+2,Are You Afraid of the Dark?,1993,8,10,9.235,Drama,Family,Fantasy
+3,Are You Afraid of the Dark?,1994,2,23,9.4349,Drama,Family,Fantasy
+4,Are You Afraid of the Dark?,1994,11,18,9.3097,Drama,Family,Fantasy
+5,Are You Afraid of the Dark?,1995,12,15,8.9533,Drama,Family,Fantasy
+6,Are You Afraid of the Dark?,1999,3,22,6.0237,Drama,Family,Fantasy
+7,Are You Afraid of the Dark?,2000,4,24,6.8306,Drama,Family,Fantasy
+1,Arrow: Blood Rush,2013,11,6,7.9,Action,Drama,Sci-Fi
+1,Ascension,2014,12,16,7.4302,Drama,Sci-Fi,NA
+1,Atlanta,2016,10,1,8.5587,Comedy,Drama,Music
+2,Atlanta,2018,4,5,8.896,Comedy,Drama,Music
+1,Atypical,2017,8,11,8.3326,Comedy,Drama,NA
+2,Atypical,2018,9,7,8.4773,Comedy,Drama,NA
+1,Awake,2012,4,10,8.2757,Drama,Fantasy,Mystery
+1,Awkward.,2011,8,25,7.8303,Comedy,Drama,Romance
+2,Awkward.,2012,8,6,7.7692,Comedy,Drama,Romance
+3,Awkward.,2013,8,15,7.8434,Comedy,Drama,Romance
+4,Awkward.,2014,7,18,7.9692,Comedy,Drama,Romance
+5,Awkward.,2016,1,11,7.8689,Comedy,Drama,Romance
+1,Baby Daddy,2012,7,27,8.0329,Comedy,Drama,Family
+2,Baby Daddy,2013,7,24,8.282,Comedy,Drama,Family
+3,Baby Daddy,2014,3,19,8.8466,Comedy,Drama,Family
+4,Baby Daddy,2015,3,16,8.9823,Comedy,Drama,Family
+5,Baby Daddy,2016,5,4,9.1413,Comedy,Drama,Family
+6,Baby Daddy,2017,5,22,8.9,Comedy,Drama,Family
+1,Babylon 5,1994,5,12,7.428,Action,Adventure,Drama
+2,Babylon 5,1995,3,10,8.0481,Action,Adventure,Drama
+3,Babylon 5,1996,4,18,8.462,Action,Adventure,Drama
+4,Babylon 5,1997,4,20,8.4828,Action,Adventure,Drama
+5,Babylon 5,1998,5,17,7.973,Action,Adventure,Drama
+1,Backstrom,2015,3,11,7.5481,Comedy,Crime,Drama
+1,Bag of Bones,2011,12,11,6.2,Drama,Horror,Mystery
+1,Ballers,2015,7,22,8.0642,Comedy,Drama,Sport
+2,Ballers,2016,8,19,8.3812,Comedy,Drama,Sport
+3,Ballers,2017,8,23,8.3598,Comedy,Drama,Sport
+4,Ballers,2018,8,9,8.1247,Comedy,Drama,Sport
+1,Band of Brothers,2001,10,4,8.6848,Action,Drama,History
+1,Banshee,2013,2,11,8.4863,Action,Crime,Drama
+2,Banshee,2014,2,10,8.7367,Action,Crime,Drama
+3,Banshee,2015,2,9,9.1633,Action,Crime,Drama
+4,Banshee,2016,4,25,8.892,Action,Crime,Drama
+1,Barbarians Rising,2016,6,6,7.4,Action,Documentary,Drama
+1,Barry,2018,4,9,8.3481,Comedy,Crime,Drama
+1,Baskets,2016,2,21,7.8945,Comedy,Drama,NA
+2,Baskets,2017,2,16,8.2559,Comedy,Drama,NA
+3,Baskets,2018,1,26,7.6,Comedy,Drama,NA
+1,Bates Motel,2013,4,18,8.3858,Drama,Horror,Mystery
+2,Bates Motel,2014,4,3,8.5949,Drama,Horror,Mystery
+3,Bates Motel,2015,4,9,8.7558,Drama,Horror,Mystery
+4,Bates Motel,2016,4,11,8.932,Drama,Horror,Mystery
+5,Bates Motel,2017,3,23,9.0583,Drama,Horror,Mystery
+1,Battle Creek,2015,4,14,8.484,Comedy,Crime,Drama
+1,Battlestar Galactica,2003,12,8,8.5469,Action,Adventure,Drama
+1,Battlestar Galactica,2005,2,18,7.9444,Action,Adventure,Drama
+2,Battlestar Galactica,2005,11,12,7.866,Action,Adventure,Drama
+3,Battlestar Galactica,2006,12,25,7.9459,Action,Adventure,Drama
+4,Battlestar Galactica,2008,9,27,8.4363,Action,Adventure,Drama
+1,Battlestar Galactica: The Resistance,2006,9,19,5.3299,Drama,Sci-Fi,NA
+1,Believe,2014,4,25,8.1682,Drama,Fantasy,Sci-Fi
+1,Betrayal,2013,9,29,7.3,Drama,NA,NA
+1,Better Call Saul,2015,3,6,8.9657,Crime,Drama,NA
+2,Better Call Saul,2016,3,17,8.7525,Crime,Drama,NA
+3,Better Call Saul,2017,5,13,8.9852,Crime,Drama,NA
+4,Better Call Saul,2018,9,6,8.8911,Crime,Drama,NA
+1,Better Things,2016,10,9,7.8763,Comedy,Drama,NA
+2,Better Things,2017,10,17,8.39,Comedy,Drama,NA
+1,"Beverly Hills, 90210",1991,1,15,6.7713,Drama,Romance,NA
+2,"Beverly Hills, 90210",1991,11,6,6.6737,Drama,Romance,NA
+3,"Beverly Hills, 90210",1993,1,17,6.5842,Drama,Romance,NA
+6,"Beverly Hills, 90210",1995,11,8,7.8,Drama,Romance,NA
+1,Beyond,2017,1,29,8.1274,Drama,Fantasy,Mystery
+1,Big Little Lies,2017,3,11,8.6825,Crime,Drama,Mystery
+1,Big Love,2006,4,16,7.7039,Drama,NA,NA
+2,Big Love,2007,7,19,7.9148,Drama,NA,NA
+3,Big Love,2009,2,15,7.832,Drama,NA,NA
+5,Big Love,2011,2,16,8.1403,Drama,NA,NA
+1,Billions,2016,2,26,8.3838,Drama,NA,NA
+2,Billions,2017,3,29,8.8221,Drama,NA,NA
+3,Billions,2018,4,29,8.6774,Drama,NA,NA
+1,Birds of Prey,2002,10,9,7.1,Action,Adventure,Drama
+1,Black Box,2014,4,27,7.9044,Drama,NA,NA
+1,Black Lightning,2018,3,3,7.3444,Action,Drama,Sci-Fi
+1,Black Mirror,2011,12,11,8.2334,Drama,Sci-Fi,Thriller
+2,Black Mirror,2013,8,3,8.1643,Drama,Sci-Fi,Thriller
+3,Black Mirror,2016,10,21,8.3515,Drama,Sci-Fi,Thriller
+4,Black Mirror,2017,12,29,7.9251,Drama,Sci-Fi,Thriller
+1,Blade: The Series,2006,7,5,6.6435,Action,Drama,Fantasy
+1,Bleak House,2005,12,13,8.3528,Drama,NA,NA
+1,Blindspot,2016,1,27,8.1367,Action,Crime,Drama
+2,Blindspot,2017,1,10,8.1356,Action,Crime,Drama
+3,Blindspot,2018,2,4,8.0905,Action,Crime,Drama
+1,Blood & Oil,2015,10,11,7.3521,Crime,Drama,Romance
+1,Bloodline,2015,3,20,8.4232,Drama,Thriller,NA
+2,Bloodline,2016,5,27,8.5788,Drama,Thriller,NA
+3,Bloodline,2017,5,26,6.5883,Drama,Thriller,NA
+1,Blossom,1990,7,5,6.8,Comedy,Drama,Family
+1,Blue Bloods,2011,1,9,7.9416,Crime,Drama,NA
+2,Blue Bloods,2012,1,13,8.0138,Crime,Drama,NA
+3,Blue Bloods,2013,1,14,8.0972,Crime,Drama,NA
+4,Blue Bloods,2014,1,8,8.2605,Crime,Drama,NA
+5,Blue Bloods,2015,1,7,8.0654,Crime,Drama,NA
+6,Blue Bloods,2016,1,7,7.9422,Crime,Drama,NA
+7,Blue Bloods,2017,1,4,7.6671,Crime,Drama,NA
+8,Blue Bloods,2018,1,13,7.8797,Crime,Drama,NA
+1,BoJack Horseman,2014,8,22,7.7871,Animation,Comedy,Drama
+2,BoJack Horseman,2015,6,30,8.044,Animation,Comedy,Drama
+3,BoJack Horseman,2016,7,22,8.3554,Animation,Comedy,Drama
+4,BoJack Horseman,2017,9,8,8.6384,Animation,Comedy,Drama
+5,BoJack Horseman,2018,9,14,9.4738,Animation,Comedy,Drama
+1,Boardwalk Empire,2010,10,27,8.4332,Crime,Drama,History
+2,Boardwalk Empire,2011,11,2,8.6492,Crime,Drama,History
+3,Boardwalk Empire,2012,10,20,8.7089,Crime,Drama,History
+4,Boardwalk Empire,2013,10,16,8.6249,Crime,Drama,History
+5,Boardwalk Empire,2014,9,30,8.7879,Crime,Drama,History
+1,Body of Proof,2011,4,22,7.5952,Crime,Drama,NA
+2,Body of Proof,2011,12,28,7.9168,Crime,Drama,NA
+3,Body of Proof,2013,4,4,7.8281,Crime,Drama,NA
+1,Bodyguard,2018,9,6,8.5294,Crime,Drama,Thriller
+1,Bones,2006,1,22,7.9742,Comedy,Crime,Drama
+2,Bones,2006,12,30,8.1183,Comedy,Crime,Drama
+3,Bones,2008,1,10,8.0683,Comedy,Crime,Drama
+4,Bones,2009,1,19,7.9163,Comedy,Crime,Drama
+5,Bones,2010,1,16,8.0668,Comedy,Crime,Drama
+6,Bones,2011,1,25,8.0539,Comedy,Crime,Drama
+7,Bones,2012,2,15,8.0424,Comedy,Crime,Drama
+8,Bones,2013,1,13,7.7111,Comedy,Crime,Drama
+9,Bones,2014,1,9,7.7742000000000004,Comedy,Crime,Drama
+10,Bones,2015,2,8,7.6415,Comedy,Crime,Drama
+11,Bones,2016,2,23,8.0754,Comedy,Crime,Drama
+12,Bones,2017,2,7,7.9464,Comedy,Crime,Drama
+1,Bonnie & Clyde,2013,12,8,6.9,Biography,Crime,Drama
+1,Bored to Death,2009,10,14,7.5747,Comedy,Crime,Drama
+2,Bored to Death,2010,10,20,7.8315,Comedy,Crime,Drama
+3,Bored to Death,2011,11,6,7.6955,Comedy,Crime,Drama
+1,Bosch,2015,1,6,8.5871,Crime,Drama,NA
+2,Bosch,2016,3,11,8.7918,Crime,Drama,NA
+3,Bosch,2017,4,21,8.8512,Crime,Drama,NA
+1,Boss,2011,11,14,8.0329,Crime,Drama,NA
+2,Boss,2012,9,17,8.1415,Crime,Drama,NA
+1,Boston Legal,2004,12,17,8.26,Comedy,Crime,Drama
+2,Boston Legal,2006,1,27,8.1129,Comedy,Crime,Drama
+3,Boston Legal,2007,1,19,8.2236,Comedy,Crime,Drama
+4,Boston Legal,2008,1,12,7.7656,Comedy,Crime,Drama
+5,Boston Legal,2008,11,2,8.0657,Comedy,Crime,Drama
+1,Boy Meets World,1994,1,3,8.0282,Comedy,Drama,Family
+2,Boy Meets World,1994,12,30,7.9785,Comedy,Drama,Family
+3,Boy Meets World,1996,1,6,8.1101,Comedy,Drama,Family
+4,Boy Meets World,1997,1,1,8.2971,Comedy,Drama,Family
+5,Boy Meets World,1998,1,19,8.4547,Comedy,Drama,Family
+6,Boy Meets World,1998,12,29,8.2947,Comedy,Drama,Family
+7,Boy Meets World,2000,1,10,8.3795,Comedy,Drama,Family
+1,BrainDead,2016,7,31,8.1956,Comedy,Drama,Horror
+1,Breaking Bad,2008,2,15,8.711,Crime,Drama,Thriller
+2,Breaking Bad,2009,4,19,8.7655,Crime,Drama,Thriller
+3,Breaking Bad,2010,5,2,8.7466,Crime,Drama,Thriller
+4,Breaking Bad,2011,8,28,9.1069,Crime,Drama,Thriller
+5,Breaking Bad,2013,2,20,9.554,Crime,Drama,Thriller
+1,Breaking Bad: Original Minisodes,2009,2,17,7.4767,Comedy,Crime,Drama
+1,Breakout Kings,2011,4,13,7.7707,Crime,Drama,Thriller
+2,Breakout Kings,2012,4,3,8.037,Crime,Drama,Thriller
+1,Brockmire,2017,4,10,7.9341,Comedy,Drama,Sport
+1,Broken at Love,2012,9,19,7.6871,Drama,Romance,Sport
+1,Brooklyn South,1997,10,13,7,Crime,Drama,NA
+1,Brotherhood,2006,7,9,7.7,Crime,Drama,NA
+1,Brothers & Sisters,2006,12,5,8.0272,Drama,NA,NA
+5,Brothers & Sisters,2011,5,8,9.1,Drama,NA,NA
+1,Buffy the Vampire Slayer,1997,4,14,7.9629,Action,Drama,Fantasy
+2,Buffy the Vampire Slayer,1997,12,31,8.4191,Action,Drama,Fantasy
+3,Buffy the Vampire Slayer,1999,1,29,8.6233,Action,Drama,Fantasy
+4,Buffy the Vampire Slayer,2000,1,19,8.2205,Action,Drama,Fantasy
+5,Buffy the Vampire Slayer,2001,1,12,8.3028,Action,Drama,Fantasy
+6,Buffy the Vampire Slayer,2002,1,29,8.1008,Action,Drama,Fantasy
+7,Buffy the Vampire Slayer,2003,1,18,8.046,Action,Drama,Fantasy
+1,Bull,2017,1,28,5.2053,Comedy,Crime,Drama
+2,Bull,2017,12,31,5.9668,Comedy,Crime,Drama
+1,Bunheads,2012,6,11,7.9,Comedy,Drama,NA
+1,Burn Notice,2007,8,8,8.2375,Action,Crime,Drama
+2,Burn Notice,2008,10,30,8.4619,Action,Crime,Drama
+3,Burn Notice,2009,10,10,8.4393,Action,Crime,Drama
+4,Burn Notice,2010,8,26,8.4131,Action,Crime,Drama
+5,Burn Notice,2011,9,8,8.2586,Action,Crime,Drama
+6,Burn Notice,2012,9,17,8.5064,Action,Crime,Drama
+7,Burn Notice,2013,7,23,8.7325,Action,Crime,Drama
+1,C.B. Strike,2017,10,30,8.0609,Crime,Drama,Mystery
+2,C.B. Strike,2018,2,28,8.1089,Crime,Drama,Mystery
+13,CBS Schoolbreak Special,1995,12,19,6.5,Drama,Family,Romance
+1,CSI: Crime Scene Investigation,2001,1,20,8.3223,Crime,Drama,Mystery
+2,CSI: Crime Scene Investigation,2002,1,10,8.2584,Crime,Drama,Mystery
+3,CSI: Crime Scene Investigation,2003,1,15,8.3032,Crime,Drama,Mystery
+4,CSI: Crime Scene Investigation,2004,1,18,8.3278,Crime,Drama,Mystery
+5,CSI: Crime Scene Investigation,2005,1,24,8.3801,Crime,Drama,Mystery
+6,CSI: Crime Scene Investigation,2006,1,16,8.2087,Crime,Drama,Mystery
+7,CSI: Crime Scene Investigation,2007,1,14,8.4267,Crime,Drama,Mystery
+8,CSI: Crime Scene Investigation,2008,1,7,8.0688,Crime,Drama,Mystery
+9,CSI: Crime Scene Investigation,2009,1,27,7.7956,Crime,Drama,Mystery
+10,CSI: Crime Scene Investigation,2010,1,23,7.6927,Crime,Drama,Mystery
+11,CSI: Crime Scene Investigation,2011,1,7,7.4897,Crime,Drama,Mystery
+12,CSI: Crime Scene Investigation,2012,1,9,8.1063,Crime,Drama,Mystery
+13,CSI: Crime Scene Investigation,2013,1,14,7.6904,Crime,Drama,Mystery
+14,CSI: Crime Scene Investigation,2014,1,4,7.5664,Crime,Drama,Mystery
+15,CSI: Crime Scene Investigation,2014,12,9,7.471,Crime,Drama,Mystery
+1,CSI: Cyber,2015,4,14,6.4579,Crime,Drama,Mystery
+2,CSI: Cyber,2015,12,20,7.1268,Crime,Drama,Mystery
+1,CSI: Miami,2003,1,12,7.3119,Action,Crime,Drama
+2,CSI: Miami,2004,1,18,7.2545,Action,Crime,Drama
+3,CSI: Miami,2005,1,14,7.248,Action,Crime,Drama
+4,CSI: Miami,2006,1,16,7.1958,Action,Crime,Drama
+5,CSI: Miami,2007,1,11,7.3535,Action,Crime,Drama
+6,CSI: Miami,2008,1,10,7.6672,Action,Crime,Drama
+7,CSI: Miami,2009,1,17,7.836,Action,Crime,Drama
+8,CSI: Miami,2010,1,15,7.6145,Action,Crime,Drama
+9,CSI: Miami,2011,1,17,7.5484,Action,Crime,Drama
+10,CSI: Miami,2011,12,30,7.5757,Action,Crime,Drama
+1,CSI: NY,2005,1,15,7.4294,Action,Crime,Drama
+2,CSI: NY,2006,1,18,7.5394,Action,Crime,Drama
+3,CSI: NY,2007,1,6,7.7906,Action,Crime,Drama
+4,CSI: NY,2008,1,11,7.8755,Action,Crime,Drama
+5,CSI: NY,2009,1,24,8.1069,Action,Crime,Drama
+6,CSI: NY,2010,1,14,8.0376,Action,Crime,Drama
+7,CSI: NY,2011,1,8,7.9156,Action,Crime,Drama
+8,CSI: NY,2012,1,2,7.9273,Action,Crime,Drama
+9,CSI: NY,2012,12,7,7.87,Action,Crime,Drama
+1,Californication,2007,9,20,8.2775,Comedy,Drama,NA
+2,Californication,2008,11,5,8.2268,Comedy,Drama,NA
+3,Californication,2009,11,4,8.3316,Comedy,Drama,NA
+4,Californication,2011,2,16,8.1737,Comedy,Drama,NA
+5,Californication,2012,2,18,7.8448,Comedy,Drama,NA
+6,Californication,2013,2,25,7.6177,Comedy,Drama,NA
+7,Californication,2014,5,21,7.5632,Comedy,Drama,NA
+1,Call the Midwife,2012,2,3,8.5787,Drama,History,NA
+2,Call the Midwife,2013,2,16,8.7565,Drama,History,NA
+3,Call the Midwife,2014,4,10,8.9397,Drama,History,NA
+4,Call the Midwife,2015,2,13,8.7706,Drama,History,NA
+5,Call the Midwife,2016,3,22,8.7901,Drama,History,NA
+6,Call the Midwife,2017,2,9,8.5121,Drama,History,NA
+7,Call the Midwife,2018,3,25,8.4023,Drama,History,NA
+1,Carlos,2010,10,12,7.7409,Biography,Crime,Drama
+1,Carnivàle,2003,10,22,7.9264,Drama,Fantasy,Mystery
+2,Carnivàle,2005,2,16,8.5342,Drama,Fantasy,Mystery
+1,Castle,2009,4,9,8.1838,Comedy,Crime,Drama
+2,Castle,2010,1,12,8.4813,Comedy,Crime,Drama
+3,Castle,2011,1,12,8.5497,Comedy,Crime,Drama
+4,Castle,2012,1,6,8.6687,Comedy,Crime,Drama
+5,Castle,2013,1,20,8.6541,Comedy,Crime,Drama
+6,Castle,2014,1,9,8.4742,Comedy,Crime,Drama
+7,Castle,2015,1,15,8.4301,Comedy,Crime,Drama
+8,Castle,2016,1,28,8.0475,Comedy,Crime,Drama
+1,Castle Rock,2018,8,13,8.4047,Drama,Fantasy,Horror
+1,Casual,2015,11,1,7.973,Comedy,Drama,NA
+2,Casual,2016,6,7,7.929,Comedy,Drama,NA
+1,Chance,2016,11,13,8.5971,Drama,Mystery,Thriller
+2,Chance,2017,11,1,8.9725,Drama,Mystery,Thriller
+1,Channel Zero,2016,10,28,7.6614,Drama,Horror,Mystery
+2,Channel Zero,2017,10,4,7.8323,Drama,Horror,Mystery
+3,Channel Zero,2018,2,22,7.7958,Drama,Horror,Mystery
+1,Charmed,1999,6,29,8.1748,Drama,Fantasy,Mystery
+2,Charmed,2000,1,25,8.1675,Drama,Fantasy,Mystery
+3,Charmed,2001,1,23,8.4704,Drama,Fantasy,Mystery
+4,Charmed,2002,1,19,8.4435,Drama,Fantasy,Mystery
+5,Charmed,2003,1,16,8.1948,Drama,Fantasy,Mystery
+6,Charmed,2004,1,14,7.8187,Drama,Fantasy,Mystery
+7,Charmed,2005,1,12,8.0384,Drama,Fantasy,Mystery
+8,Charmed,2006,1,12,8.0038,Drama,Fantasy,Mystery
+1,Chase,2010,9,20,7.4,Action,Crime,Drama
+1,Chasing Life,2014,6,10,8.3,Drama,Family,Romance
+8,Cheers,1990,1,8,7.7298,Comedy,Drama,NA
+9,Cheers,1990,12,28,7.6353,Comedy,Drama,NA
+10,Cheers,1992,1,2,7.7525,Comedy,Drama,NA
+11,Cheers,1993,1,30,7.9578,Comedy,Drama,NA
+1,Chesapeake Shores,2016,9,7,8.7553,Drama,Family,NA
+1,Chicago Fire,2013,1,22,8.3141,Action,Drama,NA
+2,Chicago Fire,2014,1,13,8.6971,Action,Drama,NA
+3,Chicago Fire,2015,1,12,8.6095,Action,Drama,NA
+4,Chicago Fire,2016,1,24,8.6481,Action,Drama,NA
+5,Chicago Fire,2017,1,25,8.8944,Action,Drama,NA
+6,Chicago Fire,2018,1,31,8.7518,Action,Drama,NA
+1,Chicago Justice,2017,3,27,8.2531,Crime,Drama,NA
+1,Chicago Med,2016,2,18,6.1248,Drama,NA,NA
+2,Chicago Med,2017,1,18,5.7814,Drama,NA,NA
+3,Chicago Med,2018,2,8,4.5872,Drama,NA,NA
+1,Chicago P.D.,2014,3,13,7.6807,Action,Crime,Drama
+2,Chicago P.D.,2015,1,18,7.7688,Action,Crime,Drama
+3,Chicago P.D.,2016,1,20,8.5349,Action,Crime,Drama
+4,Chicago P.D.,2017,1,18,8.7036,Action,Crime,Drama
+5,Chicago P.D.,2018,1,16,8.7741,Action,Crime,Drama
+1,Childhood's End,2015,12,15,7.4915,Drama,Sci-Fi,Thriller
+1,Children of Dune,2003,3,16,7.292,Adventure,Drama,Fantasy
+1,Chosen,2013,1,17,7.5066,Action,Drama,Thriller
+1,Chuck,2007,11,11,8.3499,Action,Comedy,Drama
+2,Chuck,2009,1,12,8.8237,Action,Comedy,Drama
+3,Chuck,2010,3,14,8.9672,Action,Comedy,Drama
+4,Chuck,2011,1,13,8.645,Action,Comedy,Drama
+5,Chuck,2011,12,18,8.6545,Action,Comedy,Drama
+1,Claws,2017,6,25,8.3401,Comedy,Crime,Drama
+1,Cloak & Dagger,2018,7,2,7.3755,Action,Adventure,Drama
+1,Close to Home,2005,12,18,7.969,Drama,NA,NA
+1,Cobra Kai,2018,5,2,8.7041,Action,Comedy,Drama
+1,Code Black,2015,12,9,9.2223,Drama,NA,NA
+2,Code Black,2016,11,28,9.2572,Drama,NA,NA
+3,Code Black,2018,6,7,8.8821,Drama,NA,NA
+1,Cold Case,2004,1,6,7.8677,Crime,Drama,Mystery
+2,Cold Case,2005,1,18,8.1686,Crime,Drama,Mystery
+3,Cold Case,2006,1,23,8.0707,Crime,Drama,Mystery
+4,Cold Case,2007,1,26,8.2792,Crime,Drama,Mystery
+5,Cold Case,2007,12,17,8.1029,Crime,Drama,Mystery
+6,Cold Case,2008,12,13,8.056,Crime,Drama,Mystery
+7,Cold Case,2010,5,2,8.6,Crime,Drama,Mystery
+1,Collateral,2018,2,28,7.2418,Crime,Drama,Mystery
+1,Colony,2016,2,14,8.204,Action,Adventure,Drama
+2,Colony,2017,2,23,8.2788,Action,Adventure,Drama
+3,Colony,2018,6,13,8.3492,Action,Adventure,Drama
+9,Columbo,1990,3,2,7.3775,Crime,Drama,Mystery
+10,Columbo,1991,2,18,7.4214,Crime,Drama,Mystery
+11,Columbo,1992,5,7,6.9367,Crime,Drama,Mystery
+12,Columbo,1994,1,23,7.3355,Crime,Drama,Mystery
+13,Columbo,1999,2,25,7.1983,Crime,Drama,Mystery
+1,Coma,2012,9,3,5.9816,Drama,Mystery,Sci-Fi
+1,Complications,2015,6,18,8.4,Crime,Drama,Thriller
+1,Condor,2018,7,11,8.0051,Action,Drama,Thriller
+1,Constantine,2014,12,15,8.2636,Drama,Fantasy,Horror
+1,Containment,2016,6,3,8.1607,Drama,NA,NA
+1,Conviction,2016,11,25,7.8225,Drama,NA,NA
+1,Copper,2012,9,19,7.66,Action,Drama,NA
+2,Copper,2013,6,23,8,Action,Drama,NA
+1,Counterpart,2018,2,18,8.3969,Drama,Sci-Fi,Thriller
+1,Covert Affairs,2010,8,16,7.7118,Action,Crime,Drama
+2,Covert Affairs,2011,8,27,7.9109,Action,Crime,Drama
+3,Covert Affairs,2012,9,13,8.2638,Action,Crime,Drama
+4,Covert Affairs,2013,9,15,8.3539,Action,Crime,Drama
+5,Covert Affairs,2014,8,23,8.2527,Action,Crime,Drama
+1,Criminal Minds,2006,1,6,7.1505,Crime,Drama,Mystery
+2,Criminal Minds,2007,1,2,7.3645,Crime,Drama,Mystery
+3,Criminal Minds,2008,1,9,7.2622,Crime,Drama,Mystery
+4,Criminal Minds,2009,1,20,7.2227,Crime,Drama,Mystery
+5,Criminal Minds,2010,1,14,7.029,Crime,Drama,Mystery
+6,Criminal Minds,2011,1,13,6.9783,Crime,Drama,Mystery
+7,Criminal Minds,2012,1,20,6.95,Crime,Drama,Mystery
+8,Criminal Minds,2013,1,21,6.9653,Crime,Drama,Mystery
+9,Criminal Minds,2014,1,12,6.9501,Crime,Drama,Mystery
+10,Criminal Minds,2015,1,14,6.8802,Crime,Drama,Mystery
+11,Criminal Minds,2016,1,9,6.7903,Crime,Drama,Mystery
+12,Criminal Minds,2017,1,21,7.0573,Crime,Drama,Mystery
+13,Criminal Minds,2018,1,10,7.4787,Crime,Drama,Mystery
+14,Criminal Minds,2018,10,3,9,Crime,Drama,Mystery
+1,Criminal Minds: Beyond Borders,2016,4,12,6.6454,Crime,Drama,Mystery
+2,Criminal Minds: Beyond Borders,2017,4,7,7.2422,Crime,Drama,Mystery
+1,Criminal Minds: Suspect Behavior,2011,4,3,7.7139,Crime,Drama,Mystery
+1,Crisis,2014,5,3,8.05,Action,Drama,Thriller
+1,Crossbones,2014,7,5,7.5589,Adventure,Drama,NA
+1,Crossing Jordan,2001,10,20,7.7185,Crime,Drama,Mystery
+4,Crossing Jordan,2004,11,14,8.8,Crime,Drama,Mystery
+5,Crossing Jordan,2005,11,27,8.5,Crime,Drama,Mystery
+1,Crusade,1999,7,4,7.1831,Action,Adventure,Drama
+1,Cult,2013,2,19,7.0164,Drama,Mystery,Thriller
+1,Da Vinci's Demons,2013,5,8,8.3328,Adventure,Biography,Drama
+2,Da Vinci's Demons,2014,4,23,8.6821,Adventure,Biography,Drama
+3,Da Vinci's Demons,2015,10,24,8.0721,Adventure,Biography,Drama
+1,Dallas,2012,7,8,8.1986,Drama,Romance,NA
+2,Dallas,2013,2,19,8.439,Drama,Romance,NA
+3,Dallas,2014,5,14,8.7194,Drama,Romance,NA
+1,Damages,2007,9,7,8.3947,Crime,Drama,Mystery
+2,Damages,2009,2,19,8.3601,Crime,Drama,Mystery
+3,Damages,2010,3,8,8.18,Crime,Drama,Mystery
+4,Damages,2011,8,12,8.0621,Crime,Drama,Mystery
+5,Damages,2012,8,16,8.4696,Crime,Drama,Mystery
+1,Damien,2016,4,7,8.0055,Drama,Horror,NA
+1,Damnation,2017,12,14,8.1678,Crime,Drama,Western
+1,Dante's Cove,2005,10,7,6.5,Drama,Horror,Mystery
+1,Daredevil,2015,4,10,8.903,Action,Crime,Drama
+2,Daredevil,2016,3,18,9.0946,Action,Crime,Drama
+1,Daria,1997,5,8,8.086,Animation,Comedy,Drama
+2,Daria,1998,5,12,8.2167,Animation,Comedy,Drama
+3,Daria,1999,5,7,7.8758,Animation,Comedy,Drama
+4,Daria,2000,5,26,8.0735,Animation,Comedy,Drama
+5,Daria,2001,4,1,8.3472,Animation,Comedy,Drama
+1,Dark Angel,2001,1,30,7.4536,Action,Drama,Mystery
+2,Dark Angel,2002,1,27,7.6823,Action,Drama,Mystery
+1,Dark Blue,2009,7,15,7.8,Action,Crime,Drama
+1,Dawson's Creek,1998,4,4,7.916,Drama,Romance,NA
+2,Dawson's Creek,1999,1,24,7.8589,Drama,Romance,NA
+3,Dawson's Creek,2000,1,18,7.849,Drama,Romance,NA
+4,Dawson's Creek,2001,1,22,7.7711,Drama,Romance,NA
+6,Dawson's Creek,2003,3,17,8.256,Drama,Romance,NA
+1,Day Break,2007,1,3,7.9389,Action,Drama,Sci-Fi
+1,Dead Like Me,2003,8,13,8.1508,Comedy,Drama,Fantasy
+2,Dead Like Me,2004,9,12,8.3786,Comedy,Drama,Fantasy
+1,Dead Set,2008,10,29,7.6048,Comedy,Drama,Horror
+1,Dead of Summer,2016,7,29,7.6195,Drama,Fantasy,Horror
+1,Deadwood,2004,4,29,8.4828,Crime,Drama,History
+2,Deadwood,2005,4,13,8.6125,Crime,Drama,History
+3,Deadwood,2006,7,19,8.6259,Crime,Drama,History
+1,Dear White People,2017,4,28,6.0591,Comedy,Drama,NA
+2,Dear White People,2018,5,4,5.4038,Comedy,Drama,NA
+1,Death Comes to Pemberley,2014,4,7,7.2867,Drama,Mystery,Romance
+1,Death Note,2007,2,13,7.0226,Animation,Crime,Drama
+1,Death in Paradise,2011,11,18,7.7066,Crime,Drama,Mystery
+2,Death in Paradise,2013,1,30,7.9139,Crime,Drama,Mystery
+3,Death in Paradise,2014,2,7,7.7386,Crime,Drama,Mystery
+4,Death in Paradise,2015,2,1,7.7028,Crime,Drama,Mystery
+5,Death in Paradise,2016,1,31,7.7663,Crime,Drama,Mystery
+6,Death in Paradise,2017,1,29,7.8847,Crime,Drama,Mystery
+7,Death in Paradise,2018,1,27,7.701,Crime,Drama,Mystery
+1,Deception,2013,1,7,7,Crime,Drama,Mystery
+1,Deception,2018,4,22,8.1843,Crime,Drama,Mystery
+1,Defiance,2013,5,23,7.5458,Action,Drama,Sci-Fi
+2,Defiance,2014,7,28,7.9473,Action,Drama,Sci-Fi
+3,Defiance,2015,7,17,8.216,Action,Drama,Sci-Fi
+1,Defying Gravity,2009,9,16,7.582,Drama,Sci-Fi,NA
+1,Dekalog,1990,4,13,8.2218,Drama,NA,NA
+1,Designated Survivor,2017,1,25,7.886,Action,Drama,Mystery
+2,Designated Survivor,2018,1,16,7.2162,Action,Drama,Mystery
+1,Desperate Housewives,2005,1,22,8.2361,Comedy,Drama,Mystery
+2,Desperate Housewives,2006,1,22,8.1469,Comedy,Drama,Mystery
+3,Desperate Housewives,2007,1,15,8.463,Comedy,Drama,Mystery
+4,Desperate Housewives,2008,1,18,8.5066,Comedy,Drama,Mystery
+5,Desperate Housewives,2009,1,23,8.3822,Comedy,Drama,Mystery
+6,Desperate Housewives,2010,1,13,8.1172,Comedy,Drama,Mystery
+7,Desperate Housewives,2011,1,17,8.1531,Comedy,Drama,Mystery
+8,Desperate Housewives,2012,1,18,8.226,Comedy,Drama,Mystery
+1,Devious Maids,2013,8,5,8.308,Comedy,Drama,Mystery
+2,Devious Maids,2014,6,1,8.3504,Comedy,Drama,Mystery
+3,Devious Maids,2015,7,13,8.6202,Comedy,Drama,Mystery
+4,Devious Maids,2016,6,30,8.8316,Comedy,Drama,Mystery
+1,Dexter,2006,11,8,8.9229,Crime,Drama,Mystery
+2,Dexter,2007,11,7,8.9288,Crime,Drama,Mystery
+3,Dexter,2008,11,5,8.6281,Crime,Drama,Mystery
+4,Dexter,2009,11,4,9.1477,Crime,Drama,Mystery
+5,Dexter,2010,11,3,8.7322,Crime,Drama,Mystery
+6,Dexter,2011,11,9,8.4439,Crime,Drama,Mystery
+7,Dexter,2012,11,7,8.9068,Crime,Drama,Mystery
+8,Dexter,2013,8,9,6.9488,Crime,Drama,Mystery
+7,Diagnosis Murder,2000,2,10,4.1,Crime,Drama,Mystery
+1,Diamond Geezer,2005,3,20,8,Action,Crime,Drama
+1,Dietland,2018,6,7,7.1789,Comedy,Drama,NA
+1,Dig,2015,4,5,7.9366,Drama,Mystery,Thriller
+1,Dimension 404,2017,4,12,6.5279,Adventure,Comedy,Drama
+1,Dirt,2007,2,13,7.9303,Drama,NA,NA
+1,Dirty Sexy Money,2007,10,30,7.3579,Drama,NA,NA
+2,Dirty Sexy Money,2008,10,11,7.3665,Drama,NA,NA
+1,Divorce,2016,11,18,7.5212,Comedy,Drama,NA
+1,Do No Harm,2013,1,31,7.3,Drama,NA,NA
+1,Doc,2001,3,11,6.8,Drama,Family,Romance
+1,Doctor Thorne,2016,5,20,7.2,Drama,NA,NA
+1,Doctor Who,2006,4,22,8.1082,Adventure,Drama,Family
+2,Doctor Who,2006,11,6,8.0744,Adventure,Drama,Family
+3,Doctor Who,2007,5,26,8.4135,Adventure,Drama,Family
+4,Doctor Who,2008,6,3,8.4946,Adventure,Drama,Family
+5,Doctor Who,2010,5,20,8.3283,Adventure,Drama,Family
+6,Doctor Who,2011,6,25,8.2744,Adventure,Drama,Family
+7,Doctor Who,2012,12,30,7.9833,Adventure,Drama,Family
+8,Doctor Who,2014,9,30,7.8951,Adventure,Drama,Family
+9,Doctor Who,2015,10,9,8.366,Adventure,Drama,Family
+10,Doctor Who,2017,5,12,7.9045,Adventure,Drama,Family
+11,Doctor Who,2018,5,17,7.6999,Adventure,Drama,Family
+1,Dollhouse,2009,4,13,8.1103,Drama,Mystery,Sci-Fi
+2,Dollhouse,2009,11,29,8.4045,Drama,Mystery,Sci-Fi
+1,Dominion,2014,7,13,7.8745,Action,Drama,Fantasy
+2,Dominion,2015,8,20,8.2729,Action,Drama,Fantasy
+1,Doubt,2017,6,30,2.7039,Drama,NA,NA
+1,Downton Abbey,2011,1,18,8.5187,Drama,Romance,NA
+2,Downton Abbey,2012,1,28,8.5522,Drama,Romance,NA
+3,Downton Abbey,2013,1,26,8.4051,Drama,Romance,NA
+4,Downton Abbey,2014,1,26,8.207,Drama,Romance,NA
+5,Downton Abbey,2015,2,1,8.4253,Drama,Romance,NA
+6,Downton Abbey,2015,11,22,8.7084,Drama,Romance,NA
+1,"Dr. Quinn, Medicine Woman",1993,1,1,7.8,Drama,Family,Western
+1,Dracula,2013,12,8,8.0942,Drama,Horror,Romance
+1,Drop Dead Diva,2009,8,22,7.861,Comedy,Drama,NA
+3,Drop Dead Diva,2011,6,19,8.1898,Comedy,Drama,NA
+4,Drop Dead Diva,2012,6,6,7.8,Comedy,Drama,NA
+5,Drop Dead Diva,2013,6,23,8.5,Comedy,Drama,NA
+1,Dune,2000,12,4,7.0902,Adventure,Drama,Fantasy
+1,Dynasty,2018,1,5,8.6317,Drama,NA,NA
+1,ER,1995,1,9,7.9252,Drama,Romance,NA
+2,ER,1996,1,11,7.7742000000000004,Drama,Romance,NA
+3,ER,1997,1,15,7.7301,Drama,Romance,NA
+4,ER,1998,1,15,7.7973,Drama,Romance,NA
+5,ER,1999,1,14,7.8334,Drama,Romance,NA
+6,ER,2000,1,21,7.8549,Drama,Romance,NA
+7,ER,2001,1,22,7.8439,Drama,Romance,NA
+8,ER,2002,1,12,7.7852,Drama,Romance,NA
+9,ER,2003,1,11,7.7735,Drama,Romance,NA
+10,ER,2004,1,13,7.8932,Drama,Romance,NA
+11,ER,2005,1,18,7.7911,Drama,Romance,NA
+12,ER,2006,1,7,7.7615,Drama,Romance,NA
+13,ER,2007,1,11,7.7234,Drama,Romance,NA
+14,ER,2007,12,24,7.7694,Drama,Romance,NA
+15,ER,2009,1,1,7.7185,Drama,Romance,NA
+1,EZ Streets,1996,10,27,8.9,Crime,Drama,Romance
+1,Eastbound & Down,2009,3,4,8.1084,Comedy,Drama,Sport
+2,Eastbound & Down,2010,10,16,8.1237,Comedy,Drama,Sport
+3,Eastbound & Down,2012,3,16,8.1105,Comedy,Drama,Sport
+4,Eastbound & Down,2013,10,23,8.5425,Comedy,Drama,Sport
+1,Eastwick,2009,9,26,7.456,Drama,Fantasy,NA
+1,Ed,2000,12,20,5.8,Comedy,Drama,NA
+1,"Eerie, Indiana",1991,9,15,7.8,Adventure,Comedy,Drama
+1,El Chapo,2017,5,7,8.0166,Crime,Drama,NA
+2,El Chapo,2017,10,25,7.9875,Crime,Drama,NA
+1,Elementary,2013,1,19,8.2943,Crime,Drama,Mystery
+2,Elementary,2014,1,12,8.1906,Crime,Drama,Mystery
+3,Elementary,2015,2,3,8.2303,Crime,Drama,Mystery
+4,Elementary,2016,2,11,8.2231,Crime,Drama,Mystery
+5,Elementary,2017,1,26,8.0232,Crime,Drama,Mystery
+6,Elementary,2018,7,10,8.2116,Crime,Drama,Mystery
+1,Eleventh Hour,2008,10,16,7.2063,Crime,Drama,Mystery
+1,Eli Stone,2008,2,7,7.7413,Comedy,Drama,Fantasy
+1,Elizabeth I,2006,4,24,7.9928,Biography,Drama,History
+1,Emerald City,2017,1,28,8.0579,Adventure,Drama,Fantasy
+1,Emma,2009,11,11,7.9446,Comedy,Drama,Romance
+1,Empire,2015,2,13,8.3255,Drama,Music,NA
+2,Empire,2016,1,8,8.1744,Drama,Music,NA
+3,Empire,2017,1,26,7.5549,Drama,Music,NA
+4,Empire,2017,11,1,8.0126,Drama,Music,NA
+1,Enlightened,2011,11,10,7.694,Comedy,Drama,NA
+2,Enlightened,2013,2,6,8.4743,Comedy,Drama,NA
+1,Entourage,2004,8,12,8.111,Comedy,Drama,NA
+2,Entourage,2005,7,20,8.5531,Comedy,Drama,NA
+3,Entourage,2006,11,11,8.6245,Comedy,Drama,NA
+4,Entourage,2007,7,25,8.4921,Comedy,Drama,NA
+5,Entourage,2008,10,15,8.5783,Comedy,Drama,NA
+6,Entourage,2009,8,21,8.3233,Comedy,Drama,NA
+7,Entourage,2010,8,4,8.1566,Comedy,Drama,NA
+8,Entourage,2011,8,17,8.2854,Comedy,Drama,NA
+1,Erased,2016,2,15,8.5013,Animation,Drama,Fantasy
+1,Eureka,2006,8,25,7.9565,Adventure,Comedy,Drama
+2,Eureka,2007,8,21,7.841,Adventure,Comedy,Drama
+3,Eureka,2009,5,5,7.9129,Adventure,Comedy,Drama
+4,Eureka,2011,2,28,8.0644,Adventure,Comedy,Drama
+5,Eureka,2012,6,3,8.3299,Adventure,Comedy,Drama
+2,Everwood,2003,9,22,6.1,Drama,NA,NA
+1,Extant,2014,8,14,7.291,Drama,Sci-Fi,Thriller
+2,Extant,2015,8,5,7.4825,Drama,Sci-Fi,Thriller
+1,Eye Candy,2015,2,12,8.3987,Crime,Drama,Mystery
+1,F Is for Family,2015,12,18,7.9735,Animation,Comedy,Drama
+2,F Is for Family,2017,5,30,8.1123,Animation,Comedy,Drama
+1,FBI,2018,9,28,7.1153,Crime,Drama,Mystery
+1,Fairly Legal,2011,1,23,7.8428,Comedy,Drama,NA
+1,Faking It,2014,5,16,8.632,Comedy,Drama,Romance
+2,Faking It,2015,3,21,8.7298,Comedy,Drama,Romance
+3,Faking It,2016,3,22,8.3607,Comedy,Drama,Romance
+1,Falling Skies,2011,7,13,7.4768,Action,Adventure,Drama
+2,Falling Skies,2012,7,14,8.0411,Action,Adventure,Drama
+3,Falling Skies,2013,7,4,7.9686,Action,Adventure,Drama
+4,Falling Skies,2014,7,29,7.6965,Action,Adventure,Drama
+5,Falling Skies,2015,7,29,7.5706,Action,Adventure,Drama
+1,Falling Water,2016,11,10,7.5475,Drama,Mystery,Sci-Fi
+1,Famous in Love,2017,4,19,8.2863,Drama,Romance,NA
+1,Fargo,2014,5,16,9.094,Crime,Drama,Thriller
+2,Fargo,2015,11,12,9.1114,Crime,Drama,Thriller
+3,Fargo,2017,5,20,8.6596,Crime,Drama,Thriller
+1,Farscape,1999,7,23,7.6435,Adventure,Drama,Sci-Fi
+2,Farscape,2000,7,26,7.6777,Adventure,Drama,Sci-Fi
+3,Farscape,2001,8,4,7.8073,Adventure,Drama,Sci-Fi
+4,Farscape,2002,10,28,7.5873,Adventure,Drama,Sci-Fi
+1,Fear the Walking Dead,2015,9,14,7.5791,Drama,Horror,Sci-Fi
+2,Fear the Walking Dead,2016,7,12,7.2095,Drama,Horror,Sci-Fi
+3,Fear the Walking Dead,2017,8,15,7.4823,Drama,Horror,Sci-Fi
+4,Fear the Walking Dead,2018,7,8,7.4229,Drama,Horror,Sci-Fi
+1,Fear the Walking Dead: Flight 462,2015,10,4,7.0896,Drama,Horror,Sci-Fi
+1,Fearless,2017,6,12,7.9,Crime,Drama,Mystery
+1,Feed the Beast,2016,6,17,7.8093,Crime,Drama,NA
+1,Felicity,1998,9,29,8.3,Drama,Romance,NA
+1,Feud,2017,3,31,8.8497,Biography,Drama,NA
+1,Finding Carter,2014,8,3,7.5528,Drama,NA,NA
+2,Finding Carter,2015,3,31,7.3,Drama,NA,NA
+1,Firefly,2002,12,30,8.6716,Adventure,Drama,Sci-Fi
+1,Flaked,2016,3,11,7.6796,Comedy,Drama,NA
+2,Flaked,2017,6,2,7.6282,Comedy,Drama,NA
+1,Flash Gordon,2007,8,17,4.8625,Action,Adventure,Drama
+1,Flashforward,2010,1,29,8.1153,Drama,Mystery,Sci-Fi
+1,Flesh and Bone,2015,11,6,8.4351,Drama,NA,NA
+1,For The People,2018,3,27,7.5,Drama,NA,NA
+1,Forever,2014,12,30,8.8899,Crime,Drama,Fantasy
+1,Freaks and Geeks,2000,3,15,8.805,Comedy,Drama,NA
+1,Frequency,2016,11,25,8.0335,Drama,Fantasy,Mystery
+1,Friday Night Lights,2007,1,4,7.0093,Drama,Sport,NA
+2,Friday Night Lights,2007,12,1,7.6077,Drama,Sport,NA
+3,Friday Night Lights,2008,11,12,8.4095,Drama,Sport,NA
+4,Friday Night Lights,2009,12,20,8.6724,Drama,Sport,NA
+5,Friday Night Lights,2010,12,19,8.7262,Drama,Sport,NA
+1,Friends from College,2017,7,14,6.8751,Comedy,Drama,NA
+1,Fringe,2009,1,4,8.2275,Drama,Mystery,Sci-Fi
+2,Fringe,2010,1,16,8.4464,Drama,Mystery,Sci-Fi
+3,Fringe,2011,1,16,8.5189,Drama,Mystery,Sci-Fi
+4,Fringe,2012,1,27,8.4401,Drama,Mystery,Sci-Fi
+5,Fringe,2012,11,23,8.7508,Drama,Mystery,Sci-Fi
+1,From the Earth to the Moon,1998,4,24,6.7856,Action,Drama,History
+3,Full House,1990,1,7,7.371,Comedy,Drama,Family
+4,Full House,1990,12,20,7.5753,Comedy,Drama,Family
+5,Full House,1992,1,18,7.1779,Comedy,Drama,Family
+6,Full House,1993,1,2,7.2591,Comedy,Drama,Family
+7,Full House,1993,12,11,7.1325,Comedy,Drama,Family
+8,Full House,1995,1,16,7.0448,Comedy,Drama,Family
+1,GLOW,2017,6,23,8.0219,Comedy,Drama,Sport
+2,GLOW,2018,6,29,8.5137,Comedy,Drama,Sport
+1,Game of Silence,2016,4,28,8.0979,Drama,NA,NA
+1,Game of Thrones,2011,5,18,9.1268,Action,Adventure,Drama
+2,Game of Thrones,2012,5,2,9.0852,Action,Adventure,Drama
+3,Game of Thrones,2013,5,2,9.2876,Action,Adventure,Drama
+4,Game of Thrones,2014,5,9,9.4282,Action,Adventure,Drama
+5,Game of Thrones,2015,5,13,9.1323,Action,Adventure,Drama
+6,Game of Thrones,2016,5,25,9.4943,Action,Adventure,Drama
+7,Game of Thrones,2017,8,6,9.3014,Action,Adventure,Drama
+1,Gang Related,2014,7,3,8.5149,Action,Crime,Drama
+1,Generation Kill,2008,8,3,8.5224,Drama,War,NA
+1,Generation War,2013,3,18,8.163,Action,Drama,History
+1,Genius,2017,5,26,8.3801,Biography,Drama,History
+2,Genius,2018,5,20,7.6855,Biography,Drama,History
+1,Ghost Wars,2017,11,5,7.4723,Drama,Fantasy,Horror
+1,Ghost Whisperer,2006,1,3,7.5819,Drama,Fantasy,NA
+2,Ghost Whisperer,2007,1,2,7.5037,Drama,Fantasy,NA
+3,Ghost Whisperer,2008,1,6,7.5974,Drama,Fantasy,NA
+4,Ghost Whisperer,2009,1,16,7.6091,Drama,Fantasy,NA
+5,Ghost Whisperer,2010,1,8,7.8727,Drama,Fantasy,NA
+1,Ghoul,2018,8,24,7.9,Drama,Fantasy,Horror
+1,Gilmore Girls,2001,1,13,8.3601,Comedy,Drama,NA
+2,Gilmore Girls,2002,1,20,8.3987,Comedy,Drama,NA
+3,Gilmore Girls,2003,1,26,8.3926,Comedy,Drama,NA
+4,Gilmore Girls,2004,1,14,8.4503,Comedy,Drama,NA
+5,Gilmore Girls,2005,1,11,8.3792,Comedy,Drama,NA
+6,Gilmore Girls,2006,1,8,8.2182,Comedy,Drama,NA
+7,Gilmore Girls,2007,1,13,7.9985,Comedy,Drama,NA
+1,Gilmore Girls: A Year in the Life,2016,11,25,8.3718,Comedy,Drama,NA
+1,Girl Meets World,2014,10,19,8.2312,Comedy,Drama,Family
+2,Girl Meets World,2015,8,30,8.3482,Comedy,Drama,Family
+3,Girl Meets World,2016,9,11,8.2113,Comedy,Drama,Family
+1,Girls,2012,5,16,7.3999,Comedy,Drama,NA
+2,Girls,2013,2,13,7.4477,Comedy,Drama,NA
+3,Girls,2014,2,13,7.4117,Comedy,Drama,NA
+4,Girls,2015,2,16,7.3132,Comedy,Drama,NA
+5,Girls,2016,3,22,7.9589,Comedy,Drama,NA
+6,Girls,2017,3,15,7.7528,Comedy,Drama,NA
+1,Glee,2010,1,5,8.6951,Comedy,Drama,Music
+2,Glee,2011,1,20,8.6476,Comedy,Drama,Music
+3,Glee,2012,1,29,8.6066,Comedy,Drama,Music
+4,Glee,2013,1,14,8.2433,Comedy,Drama,Music
+5,Glee,2014,2,2,8.4054,Comedy,Drama,Music
+6,Glee,2015,2,13,8.6775,Comedy,Drama,Music
+1,God Friended Me,2018,10,3,8.071,Comedy,Drama,NA
+1,Godless,2017,11,22,8.4053,Drama,Western,NA
+1,Goliath,2016,10,14,8.5282,Drama,NA,NA
+2,Goliath,2018,6,15,7.4785,Drama,NA,NA
+1,Gomorrah,2014,5,23,8.4043,Crime,Drama,Thriller
+2,Gomorrah,2016,5,27,8.3611,Crime,Drama,Thriller
+3,Gomorrah,2017,12,4,8.309,Crime,Drama,Thriller
+1,Good Behavior,2016,12,13,8.4665,Crime,Drama,Mystery
+2,Good Behavior,2017,11,15,8.5169,Crime,Drama,Mystery
+1,Good Girls,2018,2,26,7.9,Comedy,Crime,Drama
+1,Good Luck Charlie,2010,4,4,8.2,Comedy,Drama,Family
+4,Good Luck Charlie,2014,2,16,8.6,Comedy,Drama,Family
+1,Good Witch,2015,3,24,8.0314,Comedy,Drama,Fantasy
+2,Good Witch,2015,10,24,8.4,Comedy,Drama,Fantasy
+3,Good Witch,2016,10,22,8.4,Comedy,Drama,Fantasy
+4,Good Witch,2017,10,22,7.5,Comedy,Drama,Fantasy
+1,Gossip Girl,2007,12,28,7.6462,Drama,Romance,NA
+2,Gossip Girl,2008,12,30,7.8331,Drama,Romance,NA
+3,Gossip Girl,2010,1,8,7.6309,Drama,Romance,NA
+4,Gossip Girl,2011,1,4,7.5314,Drama,Romance,NA
+5,Gossip Girl,2012,1,18,7.3279,Drama,Romance,NA
+6,Gossip Girl,2012,11,13,7.6584,Drama,Romance,NA
+1,Gotham,2015,1,2,8.3012,Action,Crime,Drama
+2,Gotham,2016,1,17,8.7267,Action,Crime,Drama
+3,Gotham,2017,1,19,8.4649,Action,Crime,Drama
+4,Gotham,2018,1,16,8.6719,Action,Crime,Drama
+1,Graceland,2013,7,23,8.4502,Action,Crime,Drama
+2,Graceland,2014,7,28,8.5502,Action,Crime,Drama
+3,Graceland,2015,7,4,8.5176,Action,Crime,Drama
+1,Greek,2007,7,25,7.4932,Comedy,Drama,NA
+4,Greek,2011,3,7,9.4,Comedy,Drama,NA
+1,Grey's Anatomy,2005,4,24,8.486,Drama,Romance,NA
+2,Grey's Anatomy,2006,1,16,8.7868,Drama,Romance,NA
+3,Grey's Anatomy,2007,1,18,8.3451,Drama,Romance,NA
+4,Grey's Anatomy,2008,1,10,8.0167,Drama,Romance,NA
+5,Grey's Anatomy,2009,1,15,8.9359,Drama,Romance,NA
+6,Grey's Anatomy,2010,1,16,8.5097,Drama,Romance,NA
+7,Grey's Anatomy,2011,1,9,7.3107,Drama,Romance,NA
+8,Grey's Anatomy,2012,1,16,8.6265,Drama,Romance,NA
+9,Grey's Anatomy,2013,1,23,8.2577,Drama,Romance,NA
+10,Grey's Anatomy,2014,1,16,7.2621,Drama,Romance,NA
+11,Grey's Anatomy,2015,1,31,7.3174,Drama,Romance,NA
+12,Grey's Anatomy,2016,2,6,8.5268,Drama,Romance,NA
+13,Grey's Anatomy,2017,1,23,7.5594,Drama,Romance,NA
+14,Grey's Anatomy,2018,1,29,8.6014,Drama,Romance,NA
+15,Grey's Anatomy,2018,9,29,8.2666,Drama,Romance,NA
+1,Grimm,2012,2,11,8.2762,Drama,Fantasy,Horror
+2,Grimm,2012,12,29,8.5517,Drama,Fantasy,Horror
+3,Grimm,2014,2,1,8.7073,Drama,Fantasy,Horror
+4,Grimm,2015,2,3,8.7208,Drama,Fantasy,Horror
+5,Grimm,2016,2,21,8.5377,Drama,Fantasy,Horror
+6,Grimm,2017,2,17,8.6292,Drama,Fantasy,Horror
+1,Guilt,2016,6,13,7.6,Drama,NA,NA
+1,Gunpowder,2017,11,29,7.5,Drama,History,NA
+1,Gypsy,2017,6,30,7.6622,Drama,Thriller,NA
+1,Halt and Catch Fire,2014,7,2,8.246,Drama,NA,NA
+2,Halt and Catch Fire,2015,7,1,8.3179,Drama,NA,NA
+3,Halt and Catch Fire,2016,9,16,8.4143,Drama,NA,NA
+4,Halt and Catch Fire,2017,9,17,8.6686,Drama,NA,NA
+1,Hand of God,2015,7,24,7.2763,Crime,Drama,NA
+2,Hand of God,2017,3,10,8.1111,Crime,Drama,NA
+1,Hannibal,2013,5,11,8.667,Crime,Drama,Horror
+2,Hannibal,2014,4,11,9.2883,Crime,Drama,Horror
+3,Hannibal,2015,7,17,9.052,Crime,Drama,Horror
+1,Hap and Leonard,2016,3,17,7.9484,Crime,Drama,Thriller
+2,Hap and Leonard,2017,4,3,8.2276,Crime,Drama,Thriller
+1,Happyish,2015,4,29,6.9795,Comedy,Drama,NA
+1,Harper's Island,2009,5,28,7.659,Drama,Horror,Mystery
+1,Harrow,2018,3,9,7.8,Drama,NA,NA
+1,Harry's Law,2011,1,20,7.7161,Comedy,Crime,Drama
+1,Hart of Dixie,2012,1,11,7.9998,Comedy,Drama,Romance
+2,Hart of Dixie,2013,1,13,8.0901,Comedy,Drama,Romance
+3,Hart of Dixie,2014,2,2,8.0124,Comedy,Drama,Romance
+4,Hart of Dixie,2015,2,11,8.723,Comedy,Drama,Romance
+1,Haters Back Off!,2016,10,14,7.5318,Comedy,Drama,Romance
+1,Hatfields & McCoys,2012,5,29,8.1617,Drama,History,Romance
+1,Hawaii Five-0,2011,1,4,8.3425,Action,Crime,Drama
+2,Hawaii Five-0,2011,12,31,8.4298,Action,Crime,Drama
+3,Hawaii Five-0,2013,1,15,8.2003,Action,Crime,Drama
+4,Hawaii Five-0,2014,1,8,8.3449,Action,Crime,Drama
+5,Hawaii Five-0,2015,1,19,8.3125,Action,Crime,Drama
+6,Hawaii Five-0,2016,1,22,8.1672,Action,Crime,Drama
+7,Hawaii Five-0,2017,1,11,7.9759,Action,Crime,Drama
+8,Hawaii Five-0,2018,1,21,7.6242,Action,Crime,Drama
+9,Hawaii Five-0,2018,9,28,8.2,Action,Crime,Drama
+1,Heartbeat,2016,3,28,8.1117,Comedy,Drama,Romance
+1,Heartland,2007,10,17,8.158,Drama,Family,NA
+4,Heartland,2011,1,16,8.6525,Drama,Family,NA
+5,Heartland,2011,9,18,8.9,Drama,Family,NA
+1,Hellcats,2010,9,8,7.5,Comedy,Drama,NA
+1,Hercules: The Legendary Journeys,1995,2,27,7.2526,Action,Adventure,Drama
+2,Hercules: The Legendary Journeys,1996,1,4,7.1916,Action,Adventure,Drama
+3,Hercules: The Legendary Journeys,1997,1,14,7.2886,Action,Adventure,Drama
+4,Hercules: The Legendary Journeys,1997,12,29,6.9898,Action,Adventure,Drama
+5,Hercules: The Legendary Journeys,1999,1,6,7.2231,Action,Adventure,Drama
+6,Hercules: The Legendary Journeys,1999,10,17,7.4119,Action,Adventure,Drama
+1,Here and Now,2018,3,6,7.566,Comedy,Drama,NA
+1,Heroes,2007,1,3,8.4818,Drama,Fantasy,Sci-Fi
+2,Heroes,2007,10,29,7.8981,Drama,Fantasy,Sci-Fi
+3,Heroes,2009,1,4,7.6512,Drama,Fantasy,Sci-Fi
+4,Heroes,2009,11,24,7.4616,Drama,Fantasy,Sci-Fi
+1,Heroes Reborn,2015,11,8,7.7635,Drama,Fantasy,Sci-Fi
+1,Heroes and Villains,2007,11,11,7.5618,Documentary,Drama,NA
+1,Hey Arnold!,1996,11,12,8.4119,Animation,Comedy,Drama
+5,Hey Arnold!,2002,11,11,8.8,Animation,Comedy,Drama
+1,High Maintenance,2016,10,3,8.084,Comedy,Drama,NA
+2,High Maintenance,2018,2,12,8.4997,Comedy,Drama,NA
+1,Homeland,2011,11,9,8.4248,Crime,Drama,Mystery
+2,Homeland,2012,11,7,8.682,Crime,Drama,Mystery
+3,Homeland,2013,11,6,8.2983,Crime,Drama,Mystery
+4,Homeland,2014,11,7,8.392,Crime,Drama,Mystery
+5,Homeland,2015,11,11,8.429,Crime,Drama,Mystery
+6,Homeland,2017,2,27,8.1587,Crime,Drama,Mystery
+7,Homeland,2018,3,21,8.3374,Crime,Drama,Mystery
+1,Homicide: Life on the Street,1993,2,25,8.3121,Crime,Drama,Mystery
+2,Homicide: Life on the Street,1994,1,6,8.6524,Crime,Drama,Mystery
+3,Homicide: Life on the Street,1994,12,2,8.8058,Crime,Drama,Mystery
+4,Homicide: Life on the Street,1995,12,1,9.1,Crime,Drama,Mystery
+6,Homicide: Life on the Street,1997,12,5,9.6,Crime,Drama,Mystery
+1,Horace and Pete,2016,3,1,8.6142,Comedy,Drama,NA
+1,Hostages,2013,11,12,7.624,Drama,Mystery,Thriller
+1,Hotel Beau Séjour,2017,1,8,7.4,Crime,Drama,Mystery
+1,Hotel Room,1993,1,8,7.3095,Drama,Mystery,NA
+1,Houdini,2014,9,1,7.8,Biography,Drama,NA
+1,House,2005,2,17,8.6372,Drama,Mystery,NA
+2,House,2006,2,2,8.6887,Drama,Mystery,NA
+3,House,2007,1,22,8.692,Drama,Mystery,NA
+4,House,2008,1,2,9.0595,Drama,Mystery,NA
+5,House,2009,1,12,8.7248,Drama,Mystery,NA
+6,House,2010,1,17,8.813,Drama,Mystery,NA
+7,House,2011,1,26,8.4639,Drama,Mystery,NA
+8,House,2012,2,1,8.4848,Drama,Mystery,NA
+1,House of Cards,2013,2,1,8.5615,Drama,NA,NA
+2,House of Cards,2014,2,14,8.9269,Drama,NA,NA
+3,House of Cards,2015,2,27,8.6182,Drama,NA,NA
+4,House of Cards,2016,3,4,8.8505,Drama,NA,NA
+5,House of Cards,2017,5,30,8.4187,Drama,NA,NA
+1,House of Lies,2012,2,18,7.3035,Comedy,Drama,NA
+2,House of Lies,2013,2,25,7.174,Comedy,Drama,NA
+3,House of Lies,2014,2,22,7.321,Comedy,Drama,NA
+4,House of Lies,2015,2,6,7.4086,Comedy,Drama,NA
+5,House of Lies,2016,6,12,8,Comedy,Drama,NA
+1,How to Get Away with Murder,2014,12,7,8.7374,Crime,Drama,Mystery
+2,How to Get Away with Murder,2015,12,12,8.9206,Crime,Drama,Mystery
+3,How to Get Away with Murder,2016,12,4,8.7582,Crime,Drama,Mystery
+4,How to Get Away with Murder,2017,12,14,8.7836,Crime,Drama,Mystery
+5,How to Get Away with Murder,2018,9,30,8.6119,Crime,Drama,Mystery
+1,How to Make It in America,2010,2,21,7.214,Comedy,Drama,NA
+2,How to Make It in America,2011,10,2,8.1,Comedy,Drama,NA
+1,Huff,2004,11,7,8.6,Comedy,Drama,NA
+1,Hung,2009,8,5,7.5411,Comedy,Drama,NA
+2,Hung,2010,8,4,7.2474,Comedy,Drama,NA
+3,Hung,2011,11,2,7.5019,Comedy,Drama,NA
+1,Hunters,2016,4,14,7.0429,Crime,Drama,Sci-Fi
+1,Hustle,2004,3,16,8.2727,Crime,Drama,Mystery
+2,Hustle,2005,4,7,8.3666,Crime,Drama,Mystery
+3,Hustle,2006,3,25,8.4443,Crime,Drama,Mystery
+4,Hustle,2007,5,5,8.0545,Crime,Drama,Mystery
+5,Hustle,2009,1,25,8.5,Crime,Drama,Mystery
+8,Hustle,2012,2,17,8.9,Crime,Drama,Mystery
+1,Hysteria,2014,8,28,7,Drama,Mystery,NA
+1,I'm Dying Up Here,2017,6,14,7.2484,Comedy,Drama,NA
+1,Il commissario Montalbano,1999,5,9,7.6114,Crime,Drama,Mystery
+2,Il commissario Montalbano,2000,5,5,7.5,Crime,Drama,Mystery
+4,Il commissario Montalbano,2002,11,6,7.618,Crime,Drama,Mystery
+3,Il commissario Montalbano,2003,3,31,7.3946,Crime,Drama,Mystery
+9,Il commissario Montalbano,2013,4,15,7.4,Crime,Drama,Mystery
+1,Imposters,2017,3,10,8.3871,Comedy,Drama,Mystery
+1,In Plain Sight,2008,6,4,7.7558,Crime,Drama,Mystery
+1,In Treatment,2008,2,26,8.411,Drama,NA,NA
+2,In Treatment,2009,4,5,7.9,Drama,NA,NA
+1,In the Dark,2017,7,11,7.2,Crime,Drama,Mystery
+1,Incorporated,2016,12,30,7.8942,Crime,Drama,Sci-Fi
+1,Innocent,2018,3,22,7.5,Crime,Drama,Mystery
+1,Insatiable,2018,8,10,7.4208,Comedy,Drama,Thriller
+1,Inspector Lewis,2008,1,6,8.0401,Crime,Drama,Mystery
+2,Inspector Lewis,2008,3,5,7.9361,Crime,Drama,Mystery
+3,Inspector Lewis,2009,8,5,7.8454,Crime,Drama,Mystery
+4,Inspector Lewis,2010,9,15,7.7816,Crime,Drama,Mystery
+5,Inspector Lewis,2011,9,21,7.9013,Crime,Drama,Mystery
+6,Inspector Lewis,2012,7,5,7.7897,Crime,Drama,Mystery
+7,Inspector Lewis,2013,4,4,7.8951,Crime,Drama,Mystery
+8,Inspector Lewis,2014,10,21,7.9191,Crime,Drama,Mystery
+9,Inspector Lewis,2015,10,23,7.7168,Crime,Drama,Mystery
+1,Instinct,2018,5,11,7.5945,Crime,Drama,Mystery
+1,Intelligence,2014,2,17,8.2028,Action,Drama,Sci-Fi
+1,Into the Badlands,2015,12,2,8.4627,Action,Adventure,Drama
+2,Into the Badlands,2017,4,19,8.4198,Action,Adventure,Drama
+3,Into the Badlands,2018,5,19,8.3568,Action,Adventure,Drama
+1,Into the West,2005,6,24,8.4205,Adventure,Drama,History
+1,Invasion,2006,1,30,7.5525,Drama,Horror,Mystery
+1,JAG,1995,11,13,7.977,Action,Crime,Drama
+2,JAG,1997,1,3,7.9,Action,Crime,Drama
+3,JAG,1997,10,28,8.2,Action,Crime,Drama
+8,JAG,2003,4,25,8.1552,Action,Crime,Drama
+10,JAG,2005,4,29,9,Action,Crime,Drama
+1,Jane Eyre,2007,1,24,8.4217,Drama,Romance,NA
+1,Jean-Claude Van Johnson,2017,9,25,8.1191,Action,Comedy,Drama
+1,Jericho,2007,1,7,8.1838,Action,Drama,Mystery
+2,Jericho,2008,3,4,8.5589,Action,Drama,Mystery
+1,Jessica Jones,2015,11,20,8.5321,Action,Crime,Drama
+2,Jessica Jones,2018,3,8,7.9765,Action,Crime,Drama
+1,John Adams,2008,3,31,8.3472,Biography,Drama,History
+1,John Doe,2002,9,20,8.8,Drama,Mystery,Sci-Fi
+1,John from Cincinnati,2007,6,10,7.4,Drama,NA,NA
+1,Justified,2010,4,27,8.3391,Action,Crime,Drama
+2,Justified,2011,3,23,8.6967,Action,Crime,Drama
+3,Justified,2012,2,28,8.7207,Action,Crime,Drama
+4,Justified,2013,2,19,8.6216,Action,Crime,Drama
+5,Justified,2014,2,21,8.6514,Action,Crime,Drama
+6,Justified,2015,3,3,9.11,Action,Crime,Drama
+1,Karen Sisco,2004,3,31,9,Crime,Drama,NA
+1,Keeping Up with the Kardashians,2007,10,14,4.4,Drama,Reality-TV,NA
+6,Keeping Up with the Kardashians,2011,10,10,3.9,Drama,Reality-TV,NA
+1,Kevin (Probably) Saves the World,2017,12,6,8.532,Comedy,Drama,Fantasy
+1,Kidding,2018,9,17,7.7526,Comedy,Drama,NA
+1,Killer Women,2014,1,7,7,Drama,Western,NA
+1,Killing Eve,2018,5,2,8.7662,Drama,Thriller,NA
+1,King & Maxwell,2013,7,1,8.1937,Crime,Drama,NA
+1,King of the Hill,1997,3,10,7.8807,Animation,Comedy,Drama
+2,King of the Hill,1998,1,15,7.8153,Animation,Comedy,Drama
+3,King of the Hill,1999,1,28,7.8768,Animation,Comedy,Drama
+4,King of the Hill,2000,1,26,7.9562,Animation,Comedy,Drama
+5,King of the Hill,2001,1,27,7.8449,Animation,Comedy,Drama
+6,King of the Hill,2002,3,14,7.7969,Animation,Comedy,Drama
+7,King of the Hill,2003,1,18,7.5517,Animation,Comedy,Drama
+8,King of the Hill,2004,2,9,7.7366,Animation,Comedy,Drama
+9,King of the Hill,2005,2,3,7.7511,Animation,Comedy,Drama
+10,King of the Hill,2006,3,29,7.6015,Animation,Comedy,Drama
+11,King of the Hill,2007,3,25,7.5879,Animation,Comedy,Drama
+12,King of the Hill,2008,1,6,7.504,Animation,Comedy,Drama
+13,King of the Hill,2009,6,2,7.4113,Animation,Comedy,Drama
+1,Kingdom,2014,11,8,8.6946,Drama,NA,NA
+2,Kingdom,2016,1,31,8.8817,Drama,NA,NA
+3,Kingdom,2017,7,3,9.3769,Drama,NA,NA
+1,Kingdom Hospital,2004,3,3,7.2,Drama,Fantasy,Horror
+1,Kings,2009,5,19,8.2294,Drama,Sci-Fi,NA
+1,Klondike,2014,1,20,7.6481,Adventure,Drama,Western
+1,Knightfall,2018,1,6,7.7873,Action,Adventure,Drama
+1,Kojak,2005,3,25,6.4,Crime,Drama,Mystery
+1,Krypton,2018,4,21,7.9505,Action,Adventure,Drama
+1,Kyle XY,2006,7,27,8.4142,Drama,Mystery,Romance
+2,Kyle XY,2007,10,18,8.0643,Drama,Mystery,Romance
+3,Kyle XY,2009,2,12,8.2169,Drama,Mystery,Romance
+4,L.A. Law,1990,4,5,9.4,Drama,NA,NA
+5,L.A. Law,1991,3,21,9.3,Drama,NA,NA
+1,La forêt,2017,5,30,7.2,Crime,Drama,NA
+1,Labyrinth,2013,9,18,6.5041,Adventure,Drama,Fantasy
+1,Las Vegas,2003,12,30,7.6512,Crime,Drama,NA
+2,Las Vegas,2004,12,31,7.9404,Crime,Drama,NA
+3,Las Vegas,2006,2,8,8.5041,Crime,Drama,NA
+4,Las Vegas,2007,3,9,8.5,Crime,Drama,NA
+5,Las Vegas,2007,12,7,7.9,Crime,Drama,NA
+1,Las chicas del cable,2017,4,28,8.3336,Drama,NA,NA
+2,Las chicas del cable,2017,12,25,9.3,Drama,NA,NA
+1,Last Resort,2012,11,20,8.1728,Action,Drama,Mystery
+1,Law & Order,1990,12,31,7.7681,Crime,Drama,Mystery
+2,Law & Order,1992,1,4,7.6378,Crime,Drama,Mystery
+3,Law & Order,1993,1,27,7.8001,Crime,Drama,Mystery
+4,Law & Order,1994,1,13,7.7862,Crime,Drama,Mystery
+5,Law & Order,1995,1,13,7.8145,Crime,Drama,Mystery
+6,Law & Order,1996,2,2,8.0147,Crime,Drama,Mystery
+7,Law & Order,1997,2,14,7.9033,Crime,Drama,Mystery
+8,Law & Order,1998,1,22,7.8276,Crime,Drama,Mystery
+9,Law & Order,1999,2,9,7.8844,Crime,Drama,Mystery
+10,Law & Order,2000,1,30,7.8219,Crime,Drama,Mystery
+11,Law & Order,2001,2,4,7.6977,Crime,Drama,Mystery
+12,Law & Order,2002,1,14,7.5681,Crime,Drama,Mystery
+13,Law & Order,2003,1,24,7.8888,Crime,Drama,Mystery
+14,Law & Order,2004,1,12,7.7953,Crime,Drama,Mystery
+15,Law & Order,2005,1,30,7.723,Crime,Drama,Mystery
+16,Law & Order,2006,1,29,7.8681,Crime,Drama,Mystery
+17,Law & Order,2007,1,16,7.615,Crime,Drama,Mystery
+18,Law & Order,2008,3,2,7.847,Crime,Drama,Mystery
+19,Law & Order,2009,2,17,7.7893,Crime,Drama,Mystery
+20,Law & Order,2010,1,28,7.8286,Crime,Drama,Mystery
+1,Law & Order True Crime,2017,10,20,8.014,Crime,Drama,Mystery
+1,Law & Order: Criminal Intent,2002,1,14,8.2734,Crime,Drama,Mystery
+2,Law & Order: Criminal Intent,2003,1,22,8.3589,Crime,Drama,Mystery
+3,Law & Order: Criminal Intent,2004,1,13,8.2236,Crime,Drama,Mystery
+4,Law & Order: Criminal Intent,2005,1,21,8.2017,Crime,Drama,Mystery
+5,Law & Order: Criminal Intent,2006,1,20,8.2542,Crime,Drama,Mystery
+6,Law & Order: Criminal Intent,2007,1,3,8.2259,Crime,Drama,Mystery
+7,Law & Order: Criminal Intent,2008,4,3,8.2866,Crime,Drama,Mystery
+8,Law & Order: Criminal Intent,2009,6,9,8.0613,Crime,Drama,Mystery
+9,Law & Order: Criminal Intent,2010,6,9,7.9033,Crime,Drama,Mystery
+10,Law & Order: Criminal Intent,2011,5,31,8.166,Crime,Drama,Mystery
+1,Law & Order: LA,2010,9,29,7,Crime,Drama,Mystery
+1,Law & Order: Special Victims Unit,2000,1,14,8.7941,Crime,Drama,Mystery
+2,Law & Order: Special Victims Unit,2001,1,23,8.8658,Crime,Drama,Mystery
+3,Law & Order: Special Victims Unit,2002,1,12,8.9148,Crime,Drama,Mystery
+4,Law & Order: Special Victims Unit,2003,1,18,8.9431,Crime,Drama,Mystery
+5,Law & Order: Special Victims Unit,2004,1,14,8.9025,Crime,Drama,Mystery
+6,Law & Order: Special Victims Unit,2005,1,14,8.9446,Crime,Drama,Mystery
+7,Law & Order: Special Victims Unit,2006,1,1,8.9437,Crime,Drama,Mystery
+8,Law & Order: Special Victims Unit,2006,12,31,8.8934,Crime,Drama,Mystery
+9,Law & Order: Special Victims Unit,2007,12,29,8.8891,Crime,Drama,Mystery
+10,Law & Order: Special Victims Unit,2009,1,6,8.9351,Crime,Drama,Mystery
+11,Law & Order: Special Victims Unit,2010,1,21,8.886,Crime,Drama,Mystery
+12,Law & Order: Special Victims Unit,2011,1,6,8.9302,Crime,Drama,Mystery
+13,Law & Order: Special Victims Unit,2012,1,13,8.7952,Crime,Drama,Mystery
+14,Law & Order: Special Victims Unit,2013,1,18,8.8197,Crime,Drama,Mystery
+15,Law & Order: Special Victims Unit,2014,1,18,8.4387,Crime,Drama,Mystery
+16,Law & Order: Special Victims Unit,2015,1,18,6.5898,Crime,Drama,Mystery
+17,Law & Order: Special Victims Unit,2016,1,14,8.6406,Crime,Drama,Mystery
+18,Law & Order: Special Victims Unit,2017,2,2,8.001,Crime,Drama,Mystery
+19,Law & Order: Special Victims Unit,2018,1,30,8.706,Crime,Drama,Mystery
+20,Law & Order: Special Victims Unit,2018,9,29,8.6219,Crime,Drama,Mystery
+1,Legend of the Seeker,2009,2,6,8.2869,Action,Adventure,Drama
+2,Legend of the Seeker,2010,2,15,8.2691,Action,Adventure,Drama
+1,Legends,2014,9,12,8.0988,Action,Crime,Drama
+2,Legends,2015,12,7,8.0656,Action,Crime,Drama
+1,Legends of Tomorrow,2016,3,20,8.2099,Action,Adventure,Drama
+2,Legends of Tomorrow,2017,1,7,8.4779,Action,Adventure,Drama
+3,Legends of Tomorrow,2018,1,8,8.4117,Action,Adventure,Drama
+1,Legion,2017,3,4,8.8574,Action,Drama,Sci-Fi
+2,Legion,2018,5,11,8.6326,Action,Drama,Sci-Fi
+2,Les petits meurtres d'Agatha Christie,2015,6,12,7.7622,Comedy,Crime,Drama
+1,Lethal Weapon,2016,12,17,8.4095,Action,Crime,Drama
+2,Lethal Weapon,2018,1,9,8.4781,Action,Crime,Drama
+3,Lethal Weapon,2018,10,2,6.1025,Action,Crime,Drama
+1,Lie to Me,2009,3,19,8.0063,Crime,Drama,Mystery
+2,Lie to Me,2010,3,25,8.0356,Crime,Drama,Mystery
+3,Lie to Me,2010,12,1,7.7384,Crime,Drama,Mystery
+1,Life,2007,11,1,8.1343,Crime,Drama,Mystery
+2,Life,2009,1,29,8.1964,Crime,Drama,Mystery
+1,Life Sentence,2018,3,21,7.9,Comedy,Drama,NA
+1,Life Unexpected,2010,2,4,8.1955,Drama,NA,NA
+1,Life on Mars,2009,1,14,7.6918,Crime,Drama,Mystery
+1,Limitless,2015,12,31,8.2422,Comedy,Crime,Drama
+1,Little Dorrit,2009,3,29,7.8928,Drama,Mystery,Romance
+1,Liv and Maddie,2013,7,19,7.2,Comedy,Drama,Family
+1,Lois & Clark: The New Adventures of Superman,1994,1,3,7.7003,Adventure,Comedy,Drama
+2,Lois & Clark: The New Adventures of Superman,1995,1,3,7.5895,Adventure,Comedy,Drama
+3,Lois & Clark: The New Adventures of Superman,1996,1,7,7.292,Adventure,Comedy,Drama
+4,Lois & Clark: The New Adventures of Superman,1997,1,18,7.3914,Adventure,Comedy,Drama
+1,London Spy,2015,11,23,7.9799,Crime,Drama,Mystery
+1,Longmire,2012,7,5,8.5659,Action,Crime,Drama
+2,Longmire,2013,7,10,8.7731,Action,Crime,Drama
+3,Longmire,2014,7,3,8.9994,Action,Crime,Drama
+4,Longmire,2015,9,10,9.1341,Action,Crime,Drama
+5,Longmire,2016,9,23,8.9106,Action,Crime,Drama
+6,Longmire,2017,11,17,8.9863,Action,Crime,Drama
+1,Looking,2014,2,12,8.4055,Comedy,Drama,Romance
+2,Looking,2015,2,16,8.7929,Comedy,Drama,Romance
+1,Lost,2005,1,16,8.8407,Adventure,Drama,Fantasy
+2,Lost,2006,1,21,8.7068,Adventure,Drama,Fantasy
+3,Lost,2007,2,15,8.7549,Adventure,Drama,Fantasy
+4,Lost,2008,3,29,8.9385,Adventure,Drama,Fantasy
+5,Lost,2009,3,16,8.8167,Adventure,Drama,Fantasy
+6,Lost,2010,3,24,8.5542,Adventure,Drama,Fantasy
+1,Lost in Space,2018,4,13,7.5986,Adventure,Drama,Family
+1,Lost: Missing Pieces,2007,12,14,7.4951,Drama,Fantasy,Sci-Fi
+1,Louie,2010,8,3,8.0731,Comedy,Drama,NA
+2,Louie,2011,8,4,8.3307,Comedy,Drama,NA
+3,Louie,2012,8,10,8.417,Comedy,Drama,NA
+4,Louie,2014,5,26,8.6123,Comedy,Drama,NA
+5,Louie,2015,5,2,8.4584,Comedy,Drama,NA
+1,Love,2016,2,19,8.0288,Comedy,Drama,Romance
+2,Love,2017,3,10,7.9952,Comedy,Drama,Romance
+3,Love,2018,2,28,7.9039,Comedy,Drama,Romance
+1,Love Reinvented,1996,12,3,4.8,Comedy,Drama,NA
+1,Low Winter Sun,2013,9,3,7.6951,Crime,Drama,NA
+1,Lucifer,2016,3,8,8.787,Crime,Drama,Fantasy
+2,Lucifer,2017,1,5,8.9474,Crime,Drama,Fantasy
+3,Lucifer,2018,1,29,8.955,Crime,Drama,Fantasy
+1,Luck,2012,2,25,7.7391,Drama,Sport,NA
+1,Luis Miguel: La Serie,2018,5,13,8.3,Biography,Drama,Music
+1,Luke Cage,2016,9,30,8.205,Action,Crime,Drama
+2,Luke Cage,2018,6,22,7.7703,Action,Crime,Drama
+1,MI-5,2002,5,23,7.8744,Drama,Thriller,NA
+2,MI-5,2003,7,7,8.1919,Drama,Thriller,NA
+3,MI-5,2004,11,11,8.3822,Drama,Thriller,NA
+4,MI-5,2005,10,15,8.396,Drama,Thriller,NA
+5,MI-5,2006,10,8,8.2769,Drama,Thriller,NA
+6,MI-5,2007,11,7,8.4209,Drama,Thriller,NA
+7,MI-5,2008,11,11,8.5888,Drama,Thriller,NA
+8,MI-5,2009,11,22,8.2466,Drama,Thriller,NA
+9,MI-5,2010,11,1,8.5238,Drama,Thriller,NA
+10,MI-5,2011,10,5,8.461,Drama,Thriller,NA
+1,MacGyver,2016,12,22,7.321,Action,Adventure,Drama
+2,MacGyver,2018,1,9,8.163,Action,Adventure,Drama
+1,Mad Dogs,2015,12,15,8.0304,Comedy,Crime,Drama
+1,Mad Men,2007,9,1,8.2259,Drama,NA,NA
+2,Mad Men,2008,9,9,8.3119,Drama,NA,NA
+3,Mad Men,2009,9,27,8.6255,Drama,NA,NA
+4,Mad Men,2010,9,5,8.8468,Drama,NA,NA
+5,Mad Men,2012,4,29,8.7263,Drama,NA,NA
+6,Mad Men,2013,5,12,8.4031,Drama,NA,NA
+7,Mad Men,2014,10,29,8.813,Drama,NA,NA
+1,Madam Secretary,2015,1,4,7.4701,Drama,NA,NA
+2,Madam Secretary,2016,1,17,7.6385,Drama,NA,NA
+3,Madam Secretary,2017,1,24,7.4252,Drama,NA,NA
+4,Madam Secretary,2018,1,22,7.3776,Drama,NA,NA
+5,Madam Secretary,2018,10,7,7.5,Drama,NA,NA
+1,Magic City,2012,4,30,7.5228,Crime,Drama,NA
+2,Magic City,2013,7,12,8.109,Crime,Drama,NA
+1,Major Crimes,2012,9,16,8.4115,Crime,Drama,Mystery
+2,Major Crimes,2013,9,19,8.6247,Crime,Drama,Mystery
+3,Major Crimes,2014,9,26,8.6381,Crime,Drama,Mystery
+4,Major Crimes,2015,10,17,8.4832,Crime,Drama,Mystery
+5,Major Crimes,2016,10,20,8.4596,Crime,Drama,Mystery
+6,Major Crimes,2017,12,5,8.3822,Crime,Drama,Mystery
+1,Manhattan,2014,9,6,8.2458,Drama,History,War
+2,Manhattan,2015,11,15,8.1818,Drama,History,War
+1,Manhunt: Unabomber,2017,8,19,8.3432,Crime,Drama,NA
+1,Maniac,2018,9,21,7.9711,Comedy,Drama,Sci-Fi
+1,Manifest,2018,9,27,8.1478,Drama,Mystery,NA
+1,Marco Polo,2014,12,12,8.178,Adventure,Drama,History
+2,Marco Polo,2016,7,1,8.3082,Adventure,Drama,History
+1,Mars,2016,12,1,7.6509,Adventure,Drama,Sci-Fi
+30,Masterpiece Classic,2000,11,12,7.4,Drama,Romance,NA
+37,Masterpiece Classic,2007,2,4,6.6,Drama,Romance,NA
+1,Masters of Science Fiction,2007,9,21,6.341,Drama,Sci-Fi,NA
+1,Masters of Sex,2013,11,6,8.3027,Drama,Romance,NA
+2,Masters of Sex,2014,8,20,8.2584,Drama,Romance,NA
+3,Masters of Sex,2015,8,19,7.997,Drama,Romance,NA
+4,Masters of Sex,2016,10,12,8.2766,Drama,Romance,NA
+7,Matlock,1992,11,5,7.6,Crime,Drama,Mystery
+1,Mayans M.C.,2018,9,21,8.0138,Crime,Drama,Thriller
+1,Medium,2005,3,5,7.938,Crime,Drama,Fantasy
+2,Medium,2006,1,9,8.0378,Crime,Drama,Fantasy
+3,Medium,2007,2,18,8.079,Crime,Drama,Fantasy
+4,Medium,2008,3,7,8.1446,Crime,Drama,Fantasy
+5,Medium,2009,4,4,8.2591,Crime,Drama,Fantasy
+6,Medium,2010,2,6,8.1507,Crime,Drama,Fantasy
+7,Medium,2010,11,22,7.4392,Crime,Drama,Fantasy
+1,Men at Work,2012,5,24,6.5,Comedy,Drama,Romance
+1,Men in Trees,2006,9,12,7.7,Comedy,Drama,Romance
+1,Mercy Street,2016,1,24,7.6621,Drama,History,NA
+1,Merlin,2009,7,21,8.1447,Adventure,Drama,Fantasy
+2,Merlin,2010,3,21,8.2924,Adventure,Drama,Fantasy
+3,Merlin,2011,1,5,8.4208,Adventure,Drama,Fantasy
+4,Merlin,2011,11,12,8.5633,Adventure,Drama,Fantasy
+5,Merlin,2013,3,11,8.4864,Adventure,Drama,Fantasy
+1,"Midnight, Texas",2017,8,14,8.0993,Drama,Fantasy,Mystery
+1,Midsomer Murders,1998,5,19,7.7264,Crime,Drama,Mystery
+2,Midsomer Murders,1999,5,22,7.9226,Crime,Drama,Mystery
+3,Midsomer Murders,2000,1,21,7.7642,Crime,Drama,Mystery
+4,Midsomer Murders,2001,7,10,7.5329,Crime,Drama,Mystery
+5,Midsomer Murders,2002,7,21,7.6566,Crime,Drama,Mystery
+6,Midsomer Murders,2003,1,17,7.6304,Crime,Drama,Mystery
+7,Midsomer Murders,2004,2,28,7.6294,Crime,Drama,Mystery
+8,Midsomer Murders,2005,2,10,7.4137,Crime,Drama,Mystery
+9,Midsomer Murders,2006,5,20,7.7447,Crime,Drama,Mystery
+10,Midsomer Murders,2007,6,17,7.5104,Crime,Drama,Mystery
+11,Midsomer Murders,2008,7,10,7.4447,Crime,Drama,Mystery
+12,Midsomer Murders,2009,10,21,7.6068,Crime,Drama,Mystery
+13,Midsomer Murders,2010,9,10,7.2938,Crime,Drama,Mystery
+14,Midsomer Murders,2011,7,25,7.3161,Crime,Drama,Mystery
+15,Midsomer Murders,2012,9,9,7.3327,Crime,Drama,Mystery
+16,Midsomer Murders,2014,1,21,7.5946,Crime,Drama,Mystery
+17,Midsomer Murders,2015,2,8,7.5352,Crime,Drama,Mystery
+18,Midsomer Murders,2016,1,24,7.1664,Crime,Drama,Mystery
+19,Midsomer Murders,2017,1,18,7.3916,Crime,Drama,Mystery
+1,Mildred Pierce,2011,4,3,7.8845,Drama,NA,NA
+1,Millennium,1997,1,6,7.7527,Crime,Drama,Horror
+2,Millennium,1998,2,3,8.0394,Crime,Drama,Horror
+3,Millennium,1999,1,4,7.5655,Crime,Drama,Horror
+1,Mindhunter,2017,10,13,8.4384,Crime,Drama,Thriller
+1,Minority Report,2015,10,24,7.0903,Action,Crime,Drama
+1,Missing,2012,4,15,7.5996,Action,Drama,Thriller
+1,Mistresses,2013,7,21,8.227,Drama,Romance,Thriller
+2,Mistresses,2014,7,18,8.6198,Drama,Romance,Thriller
+1,Mob City,2013,12,11,7.9813,Crime,Drama,Mystery
+1,Mom,2013,12,23,7.8155,Comedy,Drama,Romance
+2,Mom,2015,1,26,7.9803,Comedy,Drama,Romance
+3,Mom,2016,2,4,7.925,Comedy,Drama,Romance
+4,Mom,2017,1,27,7.9034,Comedy,Drama,Romance
+5,Mom,2018,2,5,7.962,Comedy,Drama,Romance
+1,Monk,2002,8,23,8.1285,Comedy,Crime,Drama
+2,Monk,2003,10,31,8.1762,Comedy,Crime,Drama
+3,Monk,2004,10,22,8.3614,Comedy,Crime,Drama
+4,Monk,2005,11,7,8.3134,Comedy,Crime,Drama
+5,Monk,2006,10,11,8.1287,Comedy,Crime,Drama
+6,Monk,2007,10,3,8.2252,Comedy,Crime,Drama
+7,Monk,2008,11,15,8.0104,Comedy,Crime,Drama
+8,Monk,2009,10,11,8.4862,Comedy,Crime,Drama
+1,Moonlight,2007,12,29,8.1371,Drama,Fantasy,Horror
+1,Mosaic,2018,1,24,7.3318,Crime,Drama,Mystery
+1,Mozart in the Jungle,2014,11,21,8.0611,Comedy,Drama,Music
+2,Mozart in the Jungle,2015,12,30,8.0674,Comedy,Drama,Music
+3,Mozart in the Jungle,2016,12,9,8.2822,Comedy,Drama,Music
+4,Mozart in the Jungle,2018,2,16,7.9837,Comedy,Drama,Music
+1,Mr Inbetween,2018,9,25,7.7,Crime,Drama,NA
+1,Mr. Robot,2015,7,26,8.9189,Crime,Drama,Thriller
+2,Mr. Robot,2016,8,13,8.8299,Crime,Drama,Thriller
+3,Mr. Robot,2017,11,11,9.28,Crime,Drama,Thriller
+1,Murder Rooms: Mysteries of the Real Sherlock Holmes,2001,5,20,7.9152,Crime,Drama,Mystery
+1,Murder in the First,2014,7,10,8.045,Crime,Drama,Mystery
+2,Murder in the First,2015,7,1,7.9516,Crime,Drama,Mystery
+6,"Murder, She Wrote",1990,1,7,7.8654,Crime,Drama,Mystery
+7,"Murder, She Wrote",1991,1,28,8.0488,Crime,Drama,Mystery
+8,"Murder, She Wrote",1991,12,26,7.929,Crime,Drama,Mystery
+9,"Murder, She Wrote",1993,1,6,7.7838,Crime,Drama,Mystery
+10,"Murder, She Wrote",1993,12,22,7.9222,Crime,Drama,Mystery
+11,"Murder, She Wrote",1994,12,22,7.7644,Crime,Drama,Mystery
+12,"Murder, She Wrote",1996,1,7,8.016,Crime,Drama,Mystery
+1,Murdoch Mysteries,2008,3,1,7.8668,Crime,Drama,Mystery
+2,Murdoch Mysteries,2009,3,11,8.1021,Crime,Drama,Mystery
+3,Murdoch Mysteries,2010,5,2,8.1963,Crime,Drama,Mystery
+4,Murdoch Mysteries,2011,7,20,8.1534,Crime,Drama,Mystery
+5,Murdoch Mysteries,2012,7,2,8.009,Crime,Drama,Mystery
+6,Murdoch Mysteries,2013,2,2,8.0601,Crime,Drama,Mystery
+7,Murdoch Mysteries,2013,12,26,8.0573,Crime,Drama,Mystery
+8,Murdoch Mysteries,2015,1,2,8.106,Crime,Drama,Mystery
+9,Murdoch Mysteries,2015,12,2,8.1476,Crime,Drama,Mystery
+10,Murdoch Mysteries,2017,1,20,8.5,Crime,Drama,Mystery
+11,Murdoch Mysteries,2017,10,19,8.957,Crime,Drama,Mystery
+1,Mushi-Shi,2005,10,29,7.8793,Animation,Drama,Fantasy
+1,My Own Worst Enemy,2008,10,13,7.3,Action,Drama,Thriller
+1,My So-Called Life,1994,11,3,8.5152,Comedy,Drama,Romance
+1,Mystery!: Cadfael,1994,6,8,7.9289,Crime,Drama,Mystery
+2,Mystery!: Cadfael,1996,6,2,8.2044,Crime,Drama,Mystery
+3,Mystery!: Cadfael,1997,8,15,7.7977,Crime,Drama,Mystery
+1,NCIS: Los Angeles,2010,1,18,7.7813,Crime,Drama,Mystery
+2,NCIS: Los Angeles,2010,12,29,7.9905,Crime,Drama,Mystery
+3,NCIS: Los Angeles,2012,1,11,8.0907,Crime,Drama,Mystery
+4,NCIS: Los Angeles,2013,1,19,7.8533,Crime,Drama,Mystery
+5,NCIS: Los Angeles,2014,1,12,8.0364,Crime,Drama,Mystery
+6,NCIS: Los Angeles,2015,1,15,8.1956,Crime,Drama,Mystery
+7,NCIS: Los Angeles,2016,1,9,8.5187,Crime,Drama,Mystery
+8,NCIS: Los Angeles,2017,1,17,8.2669,Crime,Drama,Mystery
+9,NCIS: Los Angeles,2018,1,20,7.925,Crime,Drama,Mystery
+10,NCIS: Los Angeles,2018,9,30,8.7,Crime,Drama,Mystery
+1,NCIS: New Orleans,2015,1,12,7.8887,Crime,Drama,NA
+2,NCIS: New Orleans,2016,1,11,8.2544,Crime,Drama,NA
+3,NCIS: New Orleans,2017,1,21,7.9093,Crime,Drama,NA
+4,NCIS: New Orleans,2018,1,13,7.8578,Crime,Drama,NA
+1,NYPD Blue,1993,9,30,8.3153,Crime,Drama,Mystery
+4,NYPD Blue,1997,4,22,4.7,Crime,Drama,Mystery
+1,Narcos,2015,8,28,8.7387,Biography,Crime,Drama
+2,Narcos,2016,9,2,8.87,Biography,Crime,Drama
+3,Narcos,2017,9,1,8.6975,Biography,Crime,Drama
+1,Nashville,2013,1,26,7.5194,Drama,Music,Romance
+2,Nashville,2014,1,10,7.5211,Drama,Music,Romance
+3,Nashville,2015,1,13,7.6215,Drama,Music,Romance
+4,Nashville,2016,1,17,8.3066,Drama,Music,Romance
+5,Nashville,2017,1,31,8.58,Drama,Music,Romance
+1,Necessary Roughness,2011,6,29,7.7,Comedy,Drama,Romance
+1,Neon Genesis Evangelion,1996,6,20,8.2508,Action,Animation,Drama
+1,New Amsterdam,2008,3,4,7.4,Crime,Drama,Sci-Fi
+1,New Amsterdam,2018,9,28,8.3226,Drama,NA,NA
+1,Nikita,2011,1,4,8.5907,Action,Crime,Drama
+2,Nikita,2012,1,15,8.7792,Action,Crime,Drama
+3,Nikita,2013,2,12,8.6161,Action,Crime,Drama
+4,Nikita,2013,12,9,8.9584,Action,Crime,Drama
+1,Nip/Tuck,2003,9,6,8.1847,Drama,NA,NA
+2,Nip/Tuck,2004,8,13,8.4286,Drama,NA,NA
+3,Nip/Tuck,2005,11,7,8.1588,Drama,NA,NA
+4,Nip/Tuck,2006,10,21,8.0191,Drama,NA,NA
+5,Nip/Tuck,2008,5,9,7.9022,Drama,NA,NA
+6,Nip/Tuck,2009,12,22,7.559,Drama,NA,NA
+1,No Ordinary Family,2011,1,9,7.5296,Action,Comedy,Drama
+1,No Tomorrow,2016,10,22,7.5293,Comedy,Drama,Romance
+1,North & South,2004,11,24,7.7259,Drama,Romance,NA
+1,Northern Exposure,1990,8,5,8.1603,Comedy,Drama,Fantasy
+2,Northern Exposure,1991,4,29,8.7038,Comedy,Drama,Fantasy
+3,Northern Exposure,1992,1,2,8.5038,Comedy,Drama,Fantasy
+4,Northern Exposure,1992,9,28,8.7,Comedy,Drama,Fantasy
+1,Notorious,2016,10,16,7.1446,Drama,Thriller,NA
+1,Numb3rs,2005,3,17,7.6124,Crime,Drama,Mystery
+2,Numb3rs,2006,1,24,7.4207,Crime,Drama,Mystery
+3,Numb3rs,2007,1,6,7.6431,Crime,Drama,Mystery
+4,Numb3rs,2008,1,14,7.7832,Crime,Drama,Mystery
+5,Numb3rs,2009,1,21,7.8794,Crime,Drama,Mystery
+6,Numb3rs,2009,12,8,7.9738,Crime,Drama,Mystery
+1,Nurse Jackie,2009,7,16,7.7691,Comedy,Drama,NA
+2,Nurse Jackie,2010,4,29,7.8425,Comedy,Drama,NA
+3,Nurse Jackie,2011,5,7,7.6652,Comedy,Drama,NA
+4,Nurse Jackie,2012,5,10,8.1776,Comedy,Drama,NA
+5,Nurse Jackie,2013,5,15,8.1126,Comedy,Drama,NA
+6,Nurse Jackie,2014,5,21,8.2912,Comedy,Drama,NA
+7,Nurse Jackie,2015,5,20,8.1931,Comedy,Drama,NA
+1,October Road,2007,3,15,7.4,Comedy,Drama,Romance
+1,Of Kings and Prophets,2016,3,8,7.1,Drama,NA,NA
+1,Off the Map,2011,3,4,8.2733,Action,Adventure,Drama
+1,Olive Kitteridge,2014,11,2,8.6563,Drama,NA,NA
+1,Once Upon a Time in Wonderland,2013,12,29,8.1278,Adventure,Drama,Fantasy
+1,One Mississippi,2016,6,23,7.5914,Comedy,Drama,NA
+1,One Tree Hill,2004,1,15,8.7466,Drama,Romance,Sport
+2,One Tree Hill,2005,1,14,8.7198,Drama,Romance,Sport
+3,One Tree Hill,2006,1,19,9.0502,Drama,Romance,Sport
+4,One Tree Hill,2007,1,20,9.0517,Drama,Romance,Sport
+5,One Tree Hill,2008,3,7,8.8716,Drama,Romance,Sport
+6,One Tree Hill,2008,12,29,8.7702,Drama,Romance,Sport
+7,One Tree Hill,2009,12,26,8.5481,Drama,Romance,Sport
+8,One Tree Hill,2011,1,5,8.6115,Drama,Romance,Sport
+9,One Tree Hill,2012,2,22,8.9767,Drama,Romance,Sport
+1,Orange Is the New Black,2013,7,11,8.2135,Comedy,Crime,Drama
+2,Orange Is the New Black,2014,6,6,8.4899,Comedy,Crime,Drama
+3,Orange Is the New Black,2015,6,11,8.1735,Comedy,Crime,Drama
+4,Orange Is the New Black,2016,6,17,8.7284,Comedy,Crime,Drama
+5,Orange Is the New Black,2017,6,9,8.2242,Comedy,Crime,Drama
+6,Orange Is the New Black,2018,7,27,8.0487,Comedy,Crime,Drama
+1,Outcast,2016,7,7,8.1042,Drama,Horror,NA
+2,Outcast,2017,5,5,7.8797,Drama,Horror,NA
+1,Outlander,2014,12,30,8.9231,Drama,Fantasy,Romance
+2,Outlander,2016,5,21,9.0162,Drama,Fantasy,Romance
+3,Outlander,2017,10,26,9.1098,Drama,Fantasy,Romance
+1,Outsiders,2016,3,8,8.6833,Drama,NA,NA
+2,Outsiders,2017,3,4,7.5989,Drama,NA,NA
+1,Over the Garden Wall,2014,11,5,8.6265,Adventure,Animation,Drama
+1,Oz,1997,8,1,8.6195,Crime,Drama,Thriller
+2,Oz,1998,8,6,8.2769,Crime,Drama,Thriller
+3,Oz,1999,8,7,8.5393,Crime,Drama,Thriller
+4,Oz,2000,11,3,8.6132,Crime,Drama,Thriller
+5,Oz,2002,1,23,8.6023,Crime,Drama,Thriller
+6,Oz,2003,1,29,8.5751,Crime,Drama,Thriller
+1,Ozark,2017,7,21,8.4032,Crime,Drama,Thriller
+2,Ozark,2018,8,31,8.6442,Crime,Drama,Thriller
+3,Pacific Blue,1997,9,28,8.5,Action,Crime,Drama
+1,Pan Am,2011,11,28,7.5403,Drama,History,Romance
+1,Parade's End,2013,2,26,7.7655,Action,Drama,Romance
+1,Paranoia Agent,2004,3,20,7.9016,Animation,Drama,Horror
+1,Paranoid,2016,10,16,7.4228,Crime,Drama,Mystery
+1,Parenthood,1990,11,13,9.6824,Comedy,Drama,NA
+1,Parenthood,2010,4,13,8.0582,Comedy,Drama,NA
+2,Parenthood,2010,12,26,8.3195,Comedy,Drama,NA
+3,Parenthood,2011,12,10,8.5942,Comedy,Drama,NA
+4,Parenthood,2012,11,5,8.7012,Comedy,Drama,NA
+5,Parenthood,2013,12,26,8.4906,Comedy,Drama,NA
+6,Parenthood,2014,11,18,9.0003,Comedy,Drama,NA
+1,Patrick Melrose,2018,5,26,8.5468,Drama,NA,NA
+1,Patriot,2017,1,7,8.5462,Comedy,Drama,Thriller
+1,Peaky Blinders,2014,9,30,8.674,Crime,Drama,NA
+2,Peaky Blinders,2014,10,19,8.9451,Crime,Drama,NA
+3,Peaky Blinders,2016,5,31,9.0339,Crime,Drama,NA
+4,Peaky Blinders,2017,12,18,9.1801,Crime,Drama,NA
+1,Penny Dreadful,2014,6,2,8.3828,Drama,Fantasy,Horror
+2,Penny Dreadful,2015,6,3,8.697,Drama,Fantasy,Horror
+3,Penny Dreadful,2016,5,28,8.6343,Drama,Fantasy,Horror
+1,Perception,2012,8,13,8.0559,Crime,Drama,Mystery
+2,Perception,2013,9,28,8.1669,Crime,Drama,Mystery
+3,Perception,2014,10,2,8.2832,Crime,Drama,Mystery
+1,Person of Interest,2012,1,14,8.8468,Action,Crime,Drama
+2,Person of Interest,2013,1,10,9.0027,Action,Crime,Drama
+3,Person of Interest,2014,1,10,9.2324,Action,Crime,Drama
+4,Person of Interest,2015,1,7,9.1942,Action,Crime,Drama
+5,Person of Interest,2016,5,24,9.3189,Action,Crime,Drama
+1,Persons Unknown,2010,7,26,7.0199,Drama,Mystery,Thriller
+1,Picnic at Hanging Rock,2018,5,25,6.9563,Drama,Mystery,Romance
+1,Pitch,2016,10,24,8.1811,Drama,Sport,NA
+1,Poldark,2015,7,14,8.6481,Drama,History,Romance
+2,Poldark,2016,10,14,8.6603,Drama,History,Romance
+3,Poldark,2017,8,3,8.539,Drama,History,Romance
+4,Poldark,2018,7,4,8.6542,Drama,History,Romance
+1,Political Animals,2012,8,1,8.471,Drama,NA,NA
+34,Polizeiruf 110,2005,2,20,7.5,Crime,Drama,NA
+39,Polizeiruf 110,2010,5,2,7.2,Crime,Drama,NA
+40,Polizeiruf 110,2011,9,6,7.3595,Crime,Drama,NA
+44,Polizeiruf 110,2015,6,28,7,Crime,Drama,NA
+1,Pose,2018,6,17,8.7996,Drama,NA,NA
+1,Power,2014,7,5,8.2843,Crime,Drama,NA
+2,Power,2015,7,11,8.8138,Crime,Drama,NA
+3,Power,2016,8,18,8.6727,Crime,Drama,NA
+4,Power,2017,7,27,9.0388,Crime,Drama,NA
+5,Power,2018,8,1,8.7658,Crime,Drama,NA
+1,Powers,2015,4,10,7.6134,Action,Crime,Drama
+2,Powers,2016,5,31,7.9019,Action,Crime,Drama
+1,Preacher,2016,7,3,8.334,Adventure,Drama,Fantasy
+2,Preacher,2017,7,31,8.0839,Adventure,Drama,Fantasy
+3,Preacher,2018,7,25,8.4945,Adventure,Drama,Fantasy
+1,Pretty Little Liars,2010,11,4,8.285,Drama,Mystery,Romance
+2,Pretty Little Liars,2011,10,31,8.5024,Drama,Mystery,Romance
+3,Pretty Little Liars,2012,10,25,8.4803,Drama,Mystery,Romance
+4,Pretty Little Liars,2013,10,26,8.2632,Drama,Mystery,Romance
+5,Pretty Little Liars,2014,11,2,8.1185,Drama,Mystery,Romance
+6,Pretty Little Liars,2015,10,25,7.0538,Drama,Mystery,Romance
+7,Pretty Little Liars,2016,12,23,7.5756,Drama,Mystery,Romance
+1,Pride and Prejudice,1995,10,11,8.2608,Drama,Romance,NA
+1,Prime Suspect,1991,4,7,8.2894,Crime,Drama,Mystery
+1,Prime Suspect,2011,9,25,7.4208,Crime,Drama,Thriller
+1,Prime Suspect 1973,2017,4,10,8.0406,Crime,Drama,Thriller
+1,Prison Break,2005,12,26,8.9562,Action,Crime,Drama
+2,Prison Break,2006,12,4,8.7033,Action,Crime,Drama
+3,Prison Break,2007,11,26,8.5015,Action,Crime,Drama
+4,Prison Break,2008,12,28,8.3589,Action,Crime,Drama
+5,Prison Break,2017,5,2,8.5332,Action,Crime,Drama
+1,Private Practice,2007,10,23,7.8024,Comedy,Drama,Romance
+2,Private Practice,2009,1,7,7.9617000000000004,Comedy,Drama,Romance
+3,Private Practice,2010,1,14,8.1641,Comedy,Drama,Romance
+4,Private Practice,2011,1,26,8.1172,Comedy,Drama,Romance
+5,Private Practice,2012,1,22,8.1677,Comedy,Drama,Romance
+6,Private Practice,2012,11,25,8.0903,Comedy,Drama,Romance
+1,Proof,2015,7,15,8.1561,Drama,Fantasy,Mystery
+1,Public Morals,2015,8,25,7.9639,Crime,Drama,NA
+1,Pure Genius,2016,12,12,5.1231,Drama,NA,NA
+1,Pushing Daisies,2007,11,3,8.3813,Comedy,Drama,Fantasy
+2,Pushing Daisies,2008,12,26,8.6548,Comedy,Drama,Fantasy
+1,Quantico,2016,1,21,6.9328,Crime,Drama,Mystery
+2,Quantico,2017,1,28,5.935,Crime,Drama,Mystery
+3,Quantico,2018,6,17,6.7935,Crime,Drama,Mystery
+2,Quantum Leap,1990,1,3,7.879,Action,Adventure,Drama
+3,Quantum Leap,1991,1,24,8.0266,Action,Adventure,Drama
+4,Quantum Leap,1992,1,7,7.883,Action,Adventure,Drama
+5,Quantum Leap,1993,1,2,7.9273,Action,Adventure,Drama
+1,Quarry,2016,10,2,8.629,Crime,Drama,Thriller
+1,Queen of the South,2016,8,4,8.4349,Action,Crime,Drama
+2,Queen of the South,2017,7,20,8.5137,Action,Crime,Drama
+3,Queen of the South,2018,7,2,8.7756,Action,Crime,Drama
+1,Queer as Folk,2001,2,25,8.8202,Drama,Romance,NA
+2,Queer as Folk,2002,4,24,8.6326,Drama,Romance,NA
+3,Queer as Folk,2003,4,29,8.125,Drama,Romance,NA
+4,Queer as Folk,2004,6,13,8.3812,Drama,Romance,NA
+5,Queer as Folk,2005,7,1,8.5353,Drama,Romance,NA
+1,R.L. Stine's The Haunting Hour,2011,1,1,7.5267,Drama,Family,Fantasy
+1,Raines,2007,3,15,7.9,Crime,Drama,Mystery
+1,Rake,2014,1,23,6.6,Comedy,Crime,Drama
+1,Ravenswood,2013,11,27,7.4472,Drama,Horror,NA
+1,Ray Donovan,2013,8,8,8.2678,Crime,Drama,NA
+2,Ray Donovan,2014,8,20,8.7409,Crime,Drama,NA
+3,Ray Donovan,2015,8,19,8.7966,Crime,Drama,NA
+4,Ray Donovan,2016,8,4,8.442,Crime,Drama,NA
+5,Ray Donovan,2017,9,18,8.0572,Crime,Drama,NA
+1,Reaper,2007,12,24,7.7195,Adventure,Comedy,Drama
+2,Reaper,2009,4,10,7.7527,Adventure,Comedy,Drama
+1,Rebel Highway,1994,8,26,4.9985,Drama,NA,NA
+1,Rectify,2013,5,3,8.3745,Drama,NA,NA
+2,Rectify,2014,7,20,8.6947,Drama,NA,NA
+3,Rectify,2015,7,26,8.8232,Drama,NA,NA
+4,Rectify,2016,11,27,8.9413,Drama,NA,NA
+1,Red Band Society,2014,11,18,8.432,Comedy,Drama,NA
+1,Reign,2014,2,3,8.1891,Drama,Fantasy,NA
+2,Reign,2015,1,16,7.8589,Drama,Fantasy,NA
+3,Reign,2016,2,12,7.8391,Drama,Fantasy,NA
+4,Reign,2017,4,7,8.1498,Drama,Fantasy,NA
+1,Rellik,2017,9,14,7.1132,Crime,Drama,Mystery
+1,Requiem,2018,2,19,7.3182,Drama,Fantasy,Mystery
+1,Rescue Me,2004,9,1,8.4924,Comedy,Drama,NA
+2,Rescue Me,2005,7,31,8.6582,Comedy,Drama,NA
+3,Rescue Me,2006,7,16,8.6975,Comedy,Drama,NA
+4,Rescue Me,2007,7,18,8.3436,Comedy,Drama,NA
+5,Rescue Me,2009,6,19,8.7877,Comedy,Drama,NA
+7,Rescue Me,2011,9,7,9.2,Comedy,Drama,NA
+1,Resurrection,2014,4,4,8.3508,Drama,Fantasy,NA
+2,Resurrection,2014,11,21,8.3952,Drama,Fantasy,NA
+1,Return to Lonesome Dove,1993,11,15,8.9671,Drama,Western,NA
+1,Revenge,2012,1,12,8.496,Drama,Mystery,Thriller
+2,Revenge,2013,1,17,8.5027,Drama,Mystery,Thriller
+3,Revenge,2014,1,15,8.6492,Drama,Mystery,Thriller
+4,Revenge,2015,1,14,8.6709,Drama,Mystery,Thriller
+1,Reverie,2018,7,4,7.5967,Drama,Sci-Fi,Thriller
+1,Revolution,2013,1,25,7.8649,Action,Adventure,Drama
+2,Revolution,2014,1,15,8.4017,Action,Adventure,Drama
+1,Ringer,2012,1,15,8.359,Crime,Drama,Mystery
+1,Rise,2018,4,27,8.1805,Drama,NA,NA
+1,River,2015,9,4,8.1449,Crime,Drama,Mystery
+1,Riverdale,2017,3,17,8.1809,Crime,Drama,Mystery
+2,Riverdale,2018,1,25,8.1855,Crime,Drama,Mystery
+3,Riverdale,2018,10,10,8.2,Crime,Drama,Mystery
+1,Rizzoli & Isles,2010,8,12,8.2402,Crime,Drama,Mystery
+2,Rizzoli & Isles,2011,9,21,8.2701,Crime,Drama,Mystery
+3,Rizzoli & Isles,2012,8,28,8.2342,Crime,Drama,Mystery
+4,Rizzoli & Isles,2013,9,25,8.1349,Crime,Drama,Mystery
+5,Rizzoli & Isles,2014,10,7,8.0163,Crime,Drama,Mystery
+6,Rizzoli & Isles,2015,10,5,8.0994,Crime,Drama,Mystery
+7,Rizzoli & Isles,2016,7,18,8.3151,Crime,Drama,Mystery
+1,Roadies,2016,7,26,8.1859,Comedy,Drama,Music
+1,Rogue,2013,4,3,7.1,Action,Crime,Drama
+1,Rookie Blue,2010,8,4,7.8793,Crime,Drama,NA
+2,Rookie Blue,2011,8,2,8.5727,Crime,Drama,NA
+3,Rookie Blue,2012,7,3,8.5605,Crime,Drama,NA
+4,Rookie Blue,2013,7,13,8.5738,Crime,Drama,NA
+5,Rookie Blue,2014,6,19,8.8,Crime,Drama,NA
+1,Room 104,2017,9,4,6.3765,Drama,Horror,Thriller
+1,Roots,2016,5,31,8.048,Drama,History,NA
+3,Roseanne,1991,1,15,7.8219,Comedy,Drama,NA
+4,Roseanne,1991,12,17,7.6784,Comedy,Drama,NA
+5,Roseanne,1993,1,1,7.9163,Comedy,Drama,NA
+6,Roseanne,1994,1,11,7.6121,Comedy,Drama,NA
+7,Roseanne,1995,1,18,7.2524,Comedy,Drama,NA
+8,Roseanne,1995,12,26,6.8837,Comedy,Drama,NA
+9,Roseanne,1997,1,1,5.8889,Comedy,Drama,NA
+10,Roseanne,2018,4,17,7.6066,Comedy,Drama,NA
+1,Rosemary's Baby,2014,5,13,6.6569,Drama,Horror,Mystery
+1,Rosewood,2015,12,17,7.7289,Crime,Drama,Mystery
+2,Rosewood,2017,3,3,8.65,Crime,Drama,Mystery
+1,Roswell,2000,1,27,8.0623,Drama,Mystery,Sci-Fi
+2,Roswell,2001,1,19,7.3889,Drama,Mystery,Sci-Fi
+3,Roswell,2002,1,23,7.2679,Drama,Mystery,Sci-Fi
+1,Royal Pains,2009,7,14,7.7056,Comedy,Drama,NA
+2,Royal Pains,2010,7,6,8.0261,Comedy,Drama,NA
+8,Royal Pains,2016,1,1,6.1,Comedy,Drama,NA
+1,Rubicon,2010,8,11,8.1542,Crime,Drama,Mystery
+1,Runaways,2017,12,10,7.5088,Action,Drama,Sci-Fi
+1,SEAL Team,2018,1,1,7.7997,Action,Drama,War
+1,SGU Stargate Universe,2010,1,30,7.6275,Drama,Sci-Fi,NA
+2,SGU Stargate Universe,2011,1,17,8.0488,Drama,Sci-Fi,NA
+1,SS-GB,2017,3,5,7.1583,Action,Drama,Sci-Fi
+1,Sahsiyet,2018,4,20,8.556,Crime,Drama,Mystery
+1,Salem,2014,6,1,7.9719,Drama,Fantasy,Thriller
+2,Salem,2015,5,17,8.0546,Drama,Fantasy,Thriller
+3,Salem,2016,12,14,7.8096,Drama,Fantasy,Thriller
+1,Salvation,2017,8,14,7.7433,Drama,Sci-Fi,Thriller
+2,Salvation,2018,8,6,8.0339,Drama,Sci-Fi,Thriller
+1,Sam & Cat,2013,8,24,8.0795,Comedy,Drama,Family
+1,Santa Barbara,1990,5,30,9.4,Drama,Romance,NA
+1,Satisfaction,2014,7,17,8.5,Drama,NA,NA
+1,Saving Grace,2007,7,23,8,Drama,Fantasy,NA
+1,Scandal,2012,4,26,8.0092,Drama,Thriller,NA
+2,Scandal,2013,1,20,8.4262,Drama,Thriller,NA
+3,Scandal,2014,1,5,8.3375,Drama,Thriller,NA
+4,Scandal,2015,1,18,8.0882,Drama,Thriller,NA
+5,Scandal,2016,1,20,7.8418,Drama,Thriller,NA
+6,Scandal,2017,3,29,7.8147,Drama,Thriller,NA
+7,Scandal,2017,12,11,7.4799,Drama,Thriller,NA
+1,Scorpion,2014,12,24,7.6894,Action,Crime,Drama
+2,Scorpion,2016,1,1,8.113,Action,Crime,Drama
+3,Scorpion,2017,1,13,7.9083,Action,Crime,Drama
+4,Scorpion,2017,12,26,7.8145,Action,Crime,Drama
+1,Scream: The TV Series,2015,7,31,7.9665,Crime,Drama,Horror
+2,Scream: The TV Series,2016,7,16,8.334,Crime,Drama,Horror
+1,Scrubs,2002,1,14,8.3733,Comedy,Drama,NA
+2,Scrubs,2003,1,1,8.2883,Comedy,Drama,NA
+3,Scrubs,2004,1,22,8.6398,Comedy,Drama,NA
+4,Scrubs,2004,12,30,8.387,Comedy,Drama,NA
+5,Scrubs,2006,3,5,8.6726,Comedy,Drama,NA
+6,Scrubs,2007,3,2,8.4249,Comedy,Drama,NA
+7,Scrubs,2008,1,26,8.2232,Comedy,Drama,NA
+8,Scrubs,2009,3,3,8.7016,Comedy,Drama,NA
+9,Scrubs,2010,1,8,6.42,Comedy,Drama,NA
+1,Search Party,2016,11,22,7.8811,Comedy,Crime,Drama
+1,Second Chance,2016,2,18,8.2758,Drama,Sci-Fi,NA
+1,Secret Diary of a Call Girl,2008,1,2,7.0812,Drama,NA,NA
+2,Secret Diary of a Call Girl,2009,2,1,7.887,Drama,NA,NA
+1,Secrets and Lies,2015,3,29,8.2594,Crime,Drama,NA
+2,Secrets and Lies,2016,11,6,8.1436,Crime,Drama,NA
+1,Sense8,2015,6,5,8.6815,Drama,Mystery,Sci-Fi
+2,Sense8,2017,5,27,9.1311,Drama,Mystery,Sci-Fi
+1,Seven Days,1998,10,7,7.7,Action,Drama,Sci-Fi
+1,Seven Seconds,2018,2,23,6.9,Crime,Drama,NA
+1,Sex and the City,1998,7,14,7.4074,Comedy,Drama,Romance
+2,Sex and the City,1999,8,4,7.5322,Comedy,Drama,Romance
+3,Sex and the City,2000,8,10,7.5314,Comedy,Drama,Romance
+4,Sex and the City,2001,9,10,7.4761,Comedy,Drama,Romance
+5,Sex and the City,2002,8,14,7.3769,Comedy,Drama,Romance
+6,Sex and the City,2003,10,12,7.6063,Comedy,Drama,Romance
+1,Shades of Blue,2016,2,14,8.1322,Crime,Drama,NA
+2,Shades of Blue,2017,4,14,8.6063,Crime,Drama,NA
+3,Shades of Blue,2018,6,24,8.2155,Crime,Drama,NA
+1,Shameless,2011,2,16,8.5794,Comedy,Drama,NA
+2,Shameless,2012,2,18,8.6178,Comedy,Drama,NA
+3,Shameless,2013,2,25,8.8773,Comedy,Drama,NA
+4,Shameless,2014,2,22,9.1156,Comedy,Drama,NA
+5,Shameless,2015,2,22,8.9492,Comedy,Drama,NA
+6,Shameless,2016,2,20,8.7381,Comedy,Drama,NA
+7,Shameless,2016,11,9,8.9098,Comedy,Drama,NA
+8,Shameless,2017,12,16,8.4991,Comedy,Drama,NA
+9,Shameless,2018,9,23,8.0299,Comedy,Drama,NA
+1,Shark,2007,1,1,8.1029,Crime,Drama,Mystery
+1,Sharp Objects,2018,7,22,8.5132,Crime,Drama,Mystery
+1,Sherlock,2010,12,24,8.7982,Crime,Drama,Mystery
+2,Sherlock,2012,5,13,9.3184,Crime,Drama,Mystery
+3,Sherlock,2014,1,24,9.0893,Crime,Drama,Mystery
+4,Sherlock,2016,10,6,8.3557,Crime,Drama,Mystery
+1,Shooter,2016,12,16,8.3486,Action,Drama,NA
+2,Shooter,2017,8,11,8.0087,Action,Drama,NA
+3,Shooter,2018,8,2,8.116,Action,Drama,NA
+1,Shots Fired,2017,3,22,7.3,Crime,Drama,NA
+1,Show Me a Hero,2015,8,23,8.3382,Drama,History,NA
+1,Shut Eye,2016,12,7,6.9678,Crime,Drama,Fantasy
+1,Siberia,2013,6,25,7,Adventure,Drama,Mystery
+6,Silk Stalkings,1996,11,24,7.9,Crime,Drama,Mystery
+1,Siren,2018,4,23,8.0936,Drama,Fantasy,NA
+1,Six,2017,2,11,7.7887,Action,Drama,History
+2,Six,2018,7,1,7.9045,Action,Drama,History
+1,Six Feet Under,2001,7,14,8.4018,Comedy,Drama,NA
+2,Six Feet Under,2002,4,14,8.2969,Comedy,Drama,NA
+3,Six Feet Under,2003,4,13,8.0903,Comedy,Drama,NA
+4,Six Feet Under,2004,7,27,8.0472,Comedy,Drama,NA
+5,Six Feet Under,2005,7,13,8.9258,Comedy,Drama,NA
+1,Skins,2007,2,22,8.4267,Drama,NA,NA
+2,Skins,2008,3,13,8.6237,Drama,NA,NA
+3,Skins,2009,2,22,8.0368,Drama,NA,NA
+4,Skins,2010,2,21,8.0659,Drama,NA,NA
+5,Skins,2011,2,20,7.4275,Drama,NA,NA
+6,Skins,2012,2,22,7.6992,Drama,NA,NA
+7,Skins,2013,7,18,7.8734,Drama,NA,NA
+1,Slasher,2016,3,22,7.3901,Drama,Horror,Mystery
+2,Slasher,2017,10,17,7.416,Drama,Horror,Mystery
+1,Sleeper Cell,2005,12,4,7.8,Crime,Drama,Thriller
+1,Sleepy Hollow,2013,11,13,7.9782,Adventure,Drama,Fantasy
+2,Sleepy Hollow,2014,12,3,7.6259,Adventure,Drama,Fantasy
+3,Sleepy Hollow,2016,1,7,7.7114,Adventure,Drama,Fantasy
+4,Sleepy Hollow,2017,2,13,7.7617,Adventure,Drama,Fantasy
+1,Smallville,2002,1,31,8.1488,Adventure,Drama,Romance
+2,Smallville,2003,1,13,8.4194,Adventure,Drama,Romance
+3,Smallville,2004,1,23,8.4797,Adventure,Drama,Romance
+4,Smallville,2005,1,13,8.4995,Adventure,Drama,Romance
+5,Smallville,2006,1,17,8.4414,Adventure,Drama,Romance
+6,Smallville,2007,1,16,8.4678,Adventure,Drama,Romance
+7,Smallville,2008,1,19,8.5069,Adventure,Drama,Romance
+8,Smallville,2009,1,8,8.498,Adventure,Drama,Romance
+9,Smallville,2010,1,18,8.5703,Adventure,Drama,Romance
+10,Smallville,2011,1,7,8.7124,Adventure,Drama,Romance
+1,Smash,2012,3,28,7.9397,Drama,Musical,NA
+2,Smash,2013,3,15,8.0516,Drama,Musical,NA
+1,Sneaky Pete,2016,11,15,8.4608,Crime,Drama,NA
+2,Sneaky Pete,2018,3,9,8.7466,Crime,Drama,NA
+1,Snowfall,2017,8,5,7.7179,Crime,Drama,NA
+2,Snowfall,2018,8,2,7.9,Crime,Drama,NA
+1,Somewhere Between,2017,7,24,6.6637,Drama,Sci-Fi,Thriller
+1,Sons of Anarchy,2008,10,15,8.4589,Crime,Drama,Thriller
+2,Sons of Anarchy,2009,10,20,8.8086,Crime,Drama,Thriller
+3,Sons of Anarchy,2010,10,19,8.6595,Crime,Drama,Thriller
+4,Sons of Anarchy,2011,10,21,8.872,Crime,Drama,Thriller
+5,Sons of Anarchy,2012,10,23,8.8271,Crime,Drama,Thriller
+6,Sons of Anarchy,2013,10,23,8.7854,Crime,Drama,Thriller
+7,Sons of Anarchy,2014,10,22,8.9179,Crime,Drama,Thriller
+1,Sons of Liberty,2015,1,26,8.1251,Drama,History,NA
+1,Southland,2009,4,30,8.0331,Crime,Drama,Thriller
+2,Southland,2010,3,19,8.5049,Crime,Drama,Thriller
+3,Southland,2011,2,4,8.3428,Crime,Drama,Thriller
+4,Southland,2012,2,17,8.3335,Crime,Drama,Thriller
+5,Southland,2013,3,16,8.5096,Crime,Drama,Thriller
+1,Space: Above and Beyond,1996,2,19,8.2302,Drama,Sci-Fi,NA
+1,Sports Night,1998,9,22,8.1681,Comedy,Drama,Sport
+1,Stalker,2014,12,28,8.0798,Crime,Drama,Thriller
+1,Star,2016,12,14,6.7,Drama,Music,Musical
+1,Star Trek: Deep Space Nine,1993,3,25,7.0936,Action,Adventure,Drama
+2,Star Trek: Deep Space Nine,1994,1,27,7.4069,Action,Adventure,Drama
+3,Star Trek: Deep Space Nine,1995,1,29,7.5075,Action,Adventure,Drama
+4,Star Trek: Deep Space Nine,1996,2,2,7.8226,Action,Adventure,Drama
+5,Star Trek: Deep Space Nine,1997,2,2,7.7635,Action,Adventure,Drama
+6,Star Trek: Deep Space Nine,1998,2,4,7.7814,Action,Adventure,Drama
+7,Star Trek: Deep Space Nine,1999,1,31,7.7268,Action,Adventure,Drama
+1,Star Trek: Discovery,2017,11,25,7.644,Action,Adventure,Drama
+1,Star Trek: Enterprise,2002,1,18,7.4088,Action,Adventure,Drama
+2,Star Trek: Enterprise,2003,1,16,7.5814,Action,Adventure,Drama
+3,Star Trek: Enterprise,2004,1,17,7.8402,Action,Adventure,Drama
+4,Star Trek: Enterprise,2005,1,24,7.8673,Action,Adventure,Drama
+1,Star-Crossed,2014,3,31,8.922,Drama,Romance,Sci-Fi
+1,Stargate SG-1,1997,11,2,7.7624,Action,Adventure,Drama
+2,Stargate SG-1,1998,10,25,7.9423,Action,Adventure,Drama
+3,Stargate SG-1,1999,10,26,8.0396,Action,Adventure,Drama
+4,Stargate SG-1,2000,10,14,8.121,Action,Adventure,Drama
+5,Stargate SG-1,2001,11,26,7.973,Action,Adventure,Drama
+6,Stargate SG-1,2002,10,30,8.0128,Action,Adventure,Drama
+7,Stargate SG-1,2003,10,30,8.0862,Action,Adventure,Drama
+8,Stargate SG-1,2004,11,15,8.1376,Action,Adventure,Drama
+9,Stargate SG-1,2005,11,11,7.8714,Action,Adventure,Drama
+10,Stargate SG-1,2006,12,31,8.234,Action,Adventure,Drama
+1,Stargate: Atlantis,2004,11,23,7.9845,Action,Adventure,Drama
+2,Stargate: Atlantis,2005,11,12,7.9303,Action,Adventure,Drama
+3,Stargate: Atlantis,2006,12,24,8.0255,Action,Adventure,Drama
+4,Stargate: Atlantis,2007,12,18,8.1029,Action,Adventure,Drama
+5,Stargate: Atlantis,2008,10,4,7.9907,Action,Adventure,Drama
+1,State of Affairs,2015,1,1,7.6099,Drama,Thriller,NA
+1,Station 19,2018,4,16,6.9797,Action,Drama,Romance
+1,Still Star-Crossed,2017,7,12,2.9117,Drama,NA,NA
+1,Strange Angel,2018,6,14,7.6,Drama,Mystery,NA
+1,Strange Luck,1995,9,15,9,Drama,Mystery,Thriller
+1,Stranger Things,2016,7,15,8.8542,Drama,Fantasy,Horror
+2,Stranger Things,2017,10,27,8.4858,Drama,Fantasy,Horror
+1,Studio 60 on the Sunset Strip,2007,1,25,8.52,Comedy,Drama,NA
+1,Succession,2018,7,4,8.0931,Drama,NA,NA
+1,Suits,2011,7,31,8.5879,Comedy,Drama,NA
+2,Suits,2012,10,2,8.8026,Comedy,Drama,NA
+3,Suits,2013,11,6,8.8124,Comedy,Drama,NA
+4,Suits,2014,10,4,9.0095,Comedy,Drama,NA
+5,Suits,2015,10,9,9.3501,Comedy,Drama,NA
+6,Suits,2016,10,20,8.8941,Comedy,Drama,NA
+7,Suits,2017,11,11,8.4893,Comedy,Drama,NA
+8,Suits,2018,8,18,7.9305,Comedy,Drama,NA
+1,Summerland,2004,6,1,8,Drama,NA,NA
+1,Sunset Beat,1990,4,21,4.4,Drama,NA,NA
+1,Supergirl,2016,1,17,7.873,Action,Adventure,Drama
+2,Supergirl,2017,1,29,7.8593,Action,Adventure,Drama
+3,Supergirl,2018,2,11,7.7416,Action,Adventure,Drama
+1,Supernatural,2006,1,3,8.4951,Drama,Fantasy,Horror
+2,Supernatural,2007,1,16,8.8329,Drama,Fantasy,Horror
+3,Supernatural,2008,1,11,8.7794,Drama,Fantasy,Horror
+4,Supernatural,2009,1,8,8.9288,Drama,Fantasy,Horror
+5,Supernatural,2010,1,9,9.075,Drama,Fantasy,Horror
+6,Supernatural,2011,1,14,8.7457,Drama,Fantasy,Horror
+7,Supernatural,2012,1,15,8.6528,Drama,Fantasy,Horror
+8,Supernatural,2013,1,20,8.5307,Drama,Fantasy,Horror
+9,Supernatural,2014,1,26,8.4372,Drama,Fantasy,Horror
+10,Supernatural,2015,1,29,8.5588,Drama,Fantasy,Horror
+11,Supernatural,2016,1,28,8.9331,Drama,Fantasy,Horror
+12,Supernatural,2017,2,5,8.5149,Drama,Fantasy,Horror
+13,Supernatural,2018,1,29,8.8816,Drama,Fantasy,Horror
+1,Sweetbitter,2018,5,6,7.7,Drama,NA,NA
+1,Switched at Birth,2011,11,6,8.3964,Drama,Family,Romance
+2,Switched at Birth,2013,3,27,8.9658,Drama,Family,Romance
+1,TURN: Washington's Spies,2014,5,7,8.6618,Drama,History,War
+2,TURN: Washington's Spies,2015,5,8,9.0911,Drama,History,War
+3,TURN: Washington's Spies,2016,5,26,9.2022,Drama,History,War
+4,TURN: Washington's Spies,2017,7,14,9.1314,Drama,History,War
+1,Take Two,2018,8,2,8.2517,Comedy,Crime,Drama
+1,Taken,2002,12,7,7.7978,Drama,Sci-Fi,NA
+1,Teen Wolf,2011,7,8,8.5459,Action,Comedy,Drama
+2,Teen Wolf,2012,7,6,8.8664,Action,Comedy,Drama
+3,Teen Wolf,2013,10,28,9.0827,Action,Comedy,Drama
+4,Teen Wolf,2014,7,31,8.8985,Action,Comedy,Drama
+5,Teen Wolf,2015,10,30,8.8157,Action,Comedy,Drama
+6,Teen Wolf,2017,4,26,8.8966,Action,Comedy,Drama
+1,Ten Days in the Valley,2017,10,1,6.4,Drama,NA,NA
+1,Terminator: The Sarah Connor Chronicles,2008,2,8,7.8637,Action,Drama,Sci-Fi
+2,Terminator: The Sarah Connor Chronicles,2008,12,22,8.0501,Action,Drama,Sci-Fi
+1,Terriers,2010,10,25,7.849,Crime,Drama,Mystery
+1,Texas Rising,2015,6,2,7.4318,Drama,Western,NA
+1,The 100,2014,4,30,8.1387,Drama,Mystery,Sci-Fi
+2,The 100,2015,1,1,8.7143,Drama,Mystery,Sci-Fi
+3,The 100,2016,3,20,7.2041,Drama,Mystery,Sci-Fi
+4,The 100,2017,3,27,8.4482,Drama,Mystery,Sci-Fi
+5,The 100,2018,6,2,9.0654,Drama,Mystery,Sci-Fi
+1,The 4400,2004,7,26,7.7792,Drama,Mystery,Sci-Fi
+2,The 4400,2005,7,18,7.7139,Drama,Mystery,Sci-Fi
+3,The 4400,2006,7,15,7.6813,Drama,Mystery,Sci-Fi
+4,The 4400,2007,7,30,7.8276,Drama,Mystery,Sci-Fi
+1,The Affair,2014,11,14,8.0839,Drama,NA,NA
+2,The Affair,2015,11,11,8.267,Drama,NA,NA
+3,The Affair,2016,12,25,7.5078,Drama,NA,NA
+4,The Affair,2018,7,18,8.4134,Drama,NA,NA
+1,The Alienist,2018,2,22,8.1063,Drama,Mystery,NA
+1,The Americans,2013,3,15,8.3796,Crime,Drama,Mystery
+2,The Americans,2014,4,9,8.3946,Crime,Drama,Mystery
+3,The Americans,2015,3,11,8.5822,Crime,Drama,Mystery
+4,The Americans,2016,4,27,8.6061,Crime,Drama,Mystery
+5,The Americans,2017,4,18,8.3003,Crime,Drama,Mystery
+6,The Americans,2018,4,28,9.2232,Crime,Drama,Mystery
+1,The Arrangement,2017,3,5,7.5,Drama,NA,NA
+1,The Astronaut Wives Club,2015,6,25,8.1333,Drama,NA,NA
+1,The Bastard Executioner,2015,10,12,7.6438,Drama,NA,NA
+1,The Bible,2013,3,17,7.7113,Action,Documentary,Drama
+1,The Big C,2010,10,4,8.071,Comedy,Drama,NA
+2,The Big C,2011,8,5,8.1482,Comedy,Drama,NA
+3,The Big C,2012,5,6,7.8251,Comedy,Drama,NA
+4,The Big C,2013,5,2,8.9461,Comedy,Drama,NA
+1,The Black Donnellys,2007,3,26,8.3567,Crime,Drama,NA
+1,The Blacklist,2014,1,11,8.3851,Crime,Drama,Mystery
+2,The Blacklist,2015,1,22,8.3825,Crime,Drama,Mystery
+3,The Blacklist,2016,1,24,8.531,Crime,Drama,Mystery
+4,The Blacklist,2017,1,21,8.1895,Crime,Drama,Mystery
+5,The Blacklist,2018,1,19,8.4026,Crime,Drama,Mystery
+1,The Blacklist: Redemption,2017,3,19,7.9925,Action,Crime,Drama
+1,The Bold Type,2017,8,2,8.7055,Drama,NA,NA
+2,The Bold Type,2018,6,14,8.1484,Drama,NA,NA
+1,The Booth at the End,2011,7,11,7.7,Drama,Mystery,NA
+1,The Borgias,2011,4,24,7.9655,Crime,Drama,History
+2,The Borgias,2012,5,11,8.3097,Crime,Drama,History
+3,The Borgias,2013,5,15,8.1817,Crime,Drama,History
+1,The Brave,2017,11,13,8.3832,Action,Drama,Thriller
+1,The Bridge,2013,8,21,7.9923,Crime,Drama,Mystery
+2,The Bridge,2014,8,20,7.9283,Crime,Drama,Mystery
+1,The Cape,1996,9,9,7.7,Action,Drama,NA
+1,The Cape,2011,2,4,7.1332,Action,Drama,NA
+1,The Case-Book of Sherlock Holmes,1991,3,10,7.8935,Crime,Drama,Mystery
+2,The Case-Book of Sherlock Holmes,1993,5,6,7.4,Crime,Drama,Mystery
+3,The Case-Book of Sherlock Holmes,1994,2,3,6.7455,Crime,Drama,Mystery
+1,The Casual Vacancy,2015,4,7,7.2677,Drama,NA,NA
+1,The Catch,2016,4,23,7.9548,Crime,Drama,Romance
+2,The Catch,2017,4,20,7.6728,Crime,Drama,Romance
+1,The Chi,2018,1,7,8,Drama,NA,NA
+1,The Chicago Code,2011,2,26,7.8298,Action,Crime,Drama
+1,The Client List,2012,4,25,7.2496,Drama,NA,NA
+2,The Client List,2013,3,10,7.8,Drama,NA,NA
+1,The Closer,2005,7,25,8.4395,Crime,Drama,Mystery
+2,The Closer,2006,8,11,8.5265,Crime,Drama,Mystery
+3,The Closer,2007,8,8,8.5123,Crime,Drama,Mystery
+4,The Closer,2008,10,13,8.4451,Crime,Drama,Mystery
+5,The Closer,2009,8,15,8.4455,Crime,Drama,Mystery
+6,The Closer,2010,9,28,8.385,Crime,Drama,Mystery
+7,The Closer,2011,12,19,8.472,Crime,Drama,Mystery
+1,The Confession,2011,3,14,8.3,Action,Crime,Drama
+1,The Corner,2000,4,23,8.5538,Crime,Drama,NA
+1,The Crimson Field,2015,1,9,8.0049,Drama,War,NA
+1,The Critic,1994,1,26,8.6,Animation,Comedy,Drama
+1,The Crossing,2018,4,25,7.7816,Adventure,Drama,Sci-Fi
+1,The Crown,2016,11,4,8.6831,Drama,History,NA
+2,The Crown,2017,12,8,8.7604,Drama,History,NA
+1,The Dead Zone,2002,7,29,7.4109,Drama,Fantasy,Mystery
+2,The Dead Zone,2003,4,10,8.2952,Drama,Fantasy,Mystery
+1,The Deuce,2017,10,2,8.286,Drama,NA,NA
+2,The Deuce,2018,9,19,8.1559,Drama,NA,NA
+4,The District,2003,10,18,8.6761,Comedy,Crime,Drama
+1,The Durrells in Corfu,2016,5,14,8.009,Biography,Comedy,Drama
+2,The Durrells in Corfu,2017,4,23,7.9,Biography,Comedy,Drama
+1,The Event,2011,1,18,7.3038,Crime,Drama,Mystery
+1,The Exorcist,2016,10,30,8.4688,Drama,Horror,Thriller
+2,The Exorcist,2017,11,5,8.5158,Drama,Horror,Thriller
+1,The Expanse,2016,1,4,8.261,Drama,Mystery,Sci-Fi
+2,The Expanse,2017,3,8,8.7227,Drama,Mystery,Sci-Fi
+3,The Expanse,2018,5,24,9.1892,Drama,Mystery,Sci-Fi
+1,The Family,2016,4,2,8.4118,Drama,Mystery,NA
+1,The Finder,2012,3,4,7.96,Comedy,Crime,Drama
+1,The First,2018,9,14,6.914,Drama,Sci-Fi,NA
+1,The Five,2016,4,29,7.9849,Crime,Drama,Mystery
+1,The Flash,2015,1,29,8.953,Action,Adventure,Drama
+2,The Flash,2016,1,28,8.8014,Action,Adventure,Drama
+3,The Flash,2017,1,27,8.2708,Action,Adventure,Drama
+4,The Flash,2018,1,28,7.7634,Action,Adventure,Drama
+5,The Flash,2018,10,9,8.5,Action,Adventure,Drama
+1,The Following,2013,3,11,7.6836,Crime,Drama,Mystery
+2,The Following,2014,3,9,7.7402,Crime,Drama,Mystery
+3,The Following,2015,4,13,7.5106,Crime,Drama,Mystery
+1,The Fosters,2013,10,31,7.6663,Drama,Romance,NA
+2,The Fosters,2014,11,4,7.3121,Drama,Romance,NA
+3,The Fosters,2015,11,3,6.98,Drama,Romance,NA
+4,The Fosters,2016,10,11,6.8895,Drama,Romance,NA
+5,The Fosters,2017,8,8,8.3009,Drama,Romance,NA
+1,The Fugitive Chronicles,2010,4,1,9.2,Crime,Drama,NA
+1,The Gates,2010,7,4,7.1732,Crime,Drama,Fantasy
+1,The Get Down,2017,1,29,8.5379,Drama,Music,Musical
+1,The Gifted,2017,11,14,8.1769,Action,Drama,Fantasy
+2,The Gifted,2018,9,28,7.8267,Action,Drama,Fantasy
+1,The Girlfriend Experience,2016,4,10,7.6777,Drama,NA,NA
+2,The Girlfriend Experience,2017,11,7,6.799,Drama,NA,NA
+1,The Glades,2010,8,15,7.5565,Action,Crime,Drama
+2,The Glades,2011,7,10,7.7349,Action,Crime,Drama
+3,The Glades,2012,6,3,7.7,Action,Crime,Drama
+4,The Glades,2013,7,11,8.1295,Action,Crime,Drama
+6,The Golden Girls,1990,12,29,7.8619,Comedy,Drama,NA
+7,The Golden Girls,1991,12,15,8.1142,Comedy,Drama,NA
+1,The Good Doctor,2017,12,16,8.0166,Drama,NA,NA
+2,The Good Doctor,2018,9,27,8.5886,Drama,NA,NA
+1,The Good Fight,2017,3,16,8.3061,Crime,Drama,NA
+2,The Good Fight,2018,4,15,8.3906,Crime,Drama,NA
+1,The Good Place,2016,11,6,8.4569,Comedy,Drama,Fantasy
+2,The Good Place,2017,11,21,8.6044,Comedy,Drama,Fantasy
+3,The Good Place,2018,10,7,8.0346,Comedy,Drama,Fantasy
+1,The Good Wife,2010,1,17,7.9569,Crime,Drama,Mystery
+2,The Good Wife,2011,1,20,8.1038,Crime,Drama,Mystery
+3,The Good Wife,2012,1,3,8.1484,Crime,Drama,Mystery
+4,The Good Wife,2013,1,9,8.0686,Crime,Drama,Mystery
+5,The Good Wife,2014,1,19,8.6433,Crime,Drama,Mystery
+6,The Good Wife,2015,1,11,8.1264,Crime,Drama,Mystery
+7,The Good Wife,2016,1,13,7.8073,Crime,Drama,Mystery
+1,The Great Train Robbery,2013,12,18,7.6064,Biography,Crime,Drama
+1,The Guardian,2001,10,2,8.2617,Crime,Drama,NA
+1,The Handmaid's Tale,2017,5,15,8.5404,Drama,Sci-Fi,NA
+2,The Handmaid's Tale,2018,5,30,8.6874,Drama,Sci-Fi,NA
+1,The Heavy Water War: Stopping Hitler's Atomic Bomb,2015,3,22,7.8346,Drama,History,War
+1,The Honourable Woman,2014,8,17,7.8468,Drama,Thriller,NA
+1,The Huntress,2000,3,7,6.2,Action,Crime,Drama
+1,The Innocents,2018,8,24,6.7,Drama,Romance,Sci-Fi
+1,The Kill Point,2007,7,22,7.8,Action,Crime,Drama
+1,The Killing,2011,5,8,8.2201,Crime,Drama,Mystery
+2,The Killing,2012,5,6,8.3926,Crime,Drama,Mystery
+3,The Killing,2013,7,3,8.6211,Crime,Drama,Mystery
+4,The Killing,2014,8,1,8.8251,Crime,Drama,Mystery
+1,The Kingdom,1994,12,4,8.0295,Comedy,Drama,Fantasy
+2,The Kingdom,1997,11,11,7.7996,Comedy,Drama,Fantasy
+1,The Knick,2014,9,13,8.5754,Drama,NA,NA
+2,The Knick,2015,11,15,8.7271,Drama,NA,NA
+1,The L Word,2004,2,29,7.929,Drama,Romance,NA
+2,The L Word,2005,4,3,7.7052,Drama,Romance,NA
+3,The L Word,2006,2,15,7.9171,Drama,Romance,NA
+4,The L Word,2007,2,14,7.9493,Drama,Romance,NA
+5,The L Word,2008,2,11,7.8995,Drama,Romance,NA
+6,The L Word,2009,2,8,7.1419,Drama,Romance,NA
+1,The Last Man on Earth,2015,3,31,7.625,Action,Comedy,Drama
+2,The Last Man on Earth,2016,1,13,7.8111,Action,Comedy,Drama
+3,The Last Man on Earth,2017,1,19,7.5344,Action,Comedy,Drama
+4,The Last Man on Earth,2018,1,18,7.4967,Action,Comedy,Drama
+1,The Last Post,2017,10,1,7.5,Drama,History,Romance
+1,The Last Ship,2014,7,23,8.4383,Action,Drama,Sci-Fi
+2,The Last Ship,2015,7,26,8.8961,Action,Drama,Sci-Fi
+3,The Last Ship,2016,7,27,8.91,Action,Drama,Sci-Fi
+4,The Last Ship,2017,9,7,8.3815,Action,Drama,Sci-Fi
+5,The Last Ship,2018,9,16,7.9254,Action,Drama,Sci-Fi
+1,The Last Tycoon,2017,6,12,8.1227,Drama,NA,NA
+1,The Leftovers,2014,7,31,8.6438,Drama,Fantasy,Mystery
+2,The Leftovers,2015,11,4,9.2501,Drama,Fantasy,Mystery
+3,The Leftovers,2017,5,10,9.2791,Drama,Fantasy,Mystery
+1,The Lizzie Borden Chronicles,2015,4,28,7.3059,Crime,Drama,Horror
+1,The Loch,2017,7,5,7.5209,Crime,Drama,Mystery
+1,The Long Road Home,2017,11,7,7.9342,Action,Biography,Drama
+1,The Looming Tower,2018,3,18,8.1676,Drama,History,NA
+1,The Lying Game,2011,8,18,7.7214,Drama,Mystery,NA
+2,The Lying Game,2013,3,12,8.7,Drama,Mystery,NA
+1,The Magicians,2016,2,26,8.212,Drama,Fantasy,NA
+2,The Magicians,2017,3,8,8.4019,Drama,Fantasy,NA
+3,The Magicians,2018,2,22,8.8653,Drama,Fantasy,NA
+1,The Man in the High Castle,2015,10,17,8.2423,Drama,Sci-Fi,Thriller
+2,The Man in the High Castle,2016,12,16,8.5998,Drama,Sci-Fi,Thriller
+3,The Man in the High Castle,2018,10,5,8.3794,Drama,Sci-Fi,Thriller
+1,The Marvelous Mrs. Maisel,2017,10,27,8.482,Comedy,Drama,NA
+1,The Mentalist,2009,1,17,8.1053,Crime,Drama,Mystery
+2,The Mentalist,2010,1,20,8.1977,Crime,Drama,Mystery
+3,The Mentalist,2011,1,18,8.31,Crime,Drama,Mystery
+4,The Mentalist,2012,1,16,8.2263,Crime,Drama,Mystery
+5,The Mentalist,2013,1,11,8.2447,Crime,Drama,Mystery
+6,The Mentalist,2014,1,21,8.3736,Crime,Drama,Mystery
+7,The Mentalist,2015,1,12,8.3758,Crime,Drama,Mystery
+1,The Messengers,2015,6,1,7.8609,Drama,Fantasy,Mystery
+1,The Miniaturist,2017,12,26,7.6077,Drama,Mystery,NA
+1,The Mist,2017,7,21,6.467,Drama,Horror,Sci-Fi
+1,The Mob Doctor,2012,10,25,7.5605,Crime,Drama,Mystery
+1,The New Edition Story,2017,1,25,8.7434,Biography,Drama,Music
+1,The Newsroom,2012,7,25,8.5712,Drama,NA,NA
+2,The Newsroom,2013,8,12,8.4815,Drama,NA,NA
+3,The Newsroom,2014,11,26,9.0598,Drama,NA,NA
+1,The Night Of,2016,8,1,8.8462,Crime,Drama,NA
+1,The Night Shift,2014,6,20,5.7516,Drama,Romance,NA
+2,The Night Shift,2015,4,5,5.6409,Drama,Romance,NA
+3,The Night Shift,2016,7,11,5.4557,Drama,Romance,NA
+4,The Night Shift,2017,7,26,4.4073,Drama,Romance,NA
+1,The O.C.,2003,12,22,8.3388,Comedy,Drama,Romance
+2,The O.C.,2005,2,18,8.1232,Comedy,Drama,Romance
+3,The O.C.,2006,1,23,7.7194,Comedy,Drama,Romance
+4,The O.C.,2006,12,30,7.9342,Comedy,Drama,Romance
+1,The OA,2016,12,16,8.2288,Drama,Fantasy,Mystery
+1,The Originals,2014,1,18,9.0787,Drama,Fantasy,Horror
+2,The Originals,2015,1,21,9.0434,Drama,Fantasy,Horror
+3,The Originals,2016,1,27,9.1468,Drama,Fantasy,Horror
+4,The Originals,2017,5,4,9.0221,Drama,Fantasy,Horror
+5,The Originals,2018,6,25,8.8019,Drama,Fantasy,Horror
+1,The Orville,2017,10,20,7.9811,Adventure,Comedy,Drama
+1,The Outer Limits,1995,5,25,7.275,Drama,Fantasy,Horror
+2,The Outer Limits,1996,4,18,7.7872,Drama,Fantasy,Horror
+3,The Outer Limits,1997,4,12,7.3958,Drama,Fantasy,Horror
+4,The Outer Limits,1998,6,6,7.3438,Drama,Fantasy,Horror
+5,The Outer Limits,1999,5,8,7.3442,Drama,Fantasy,Horror
+6,The Outer Limits,2000,4,9,7.4247,Drama,Fantasy,Horror
+7,The Outer Limits,2001,6,29,7.6593,Drama,Fantasy,Horror
+1,The Outsiders,1990,3,25,8.9,Drama,NA,NA
+1,The Pacific,2010,4,14,8.1046,Action,Adventure,Drama
+1,The Path,2016,4,24,8.2217,Drama,NA,NA
+2,The Path,2017,2,27,7.8244,Drama,NA,NA
+1,The Pillars of the Earth,2010,8,9,7.8627,Drama,History,Romance
+1,The Playboy Club,2011,9,19,6.7,Crime,Drama,NA
+1,The Player,2015,10,22,7.9293,Action,Crime,Drama
+1,The Pretender,1996,9,19,8.1,Drama,Mystery,Sci-Fi
+1,The Purge,2018,9,18,6.6697,Action,Drama,Horror
+1,The Real O'Neals,2016,4,10,7.9376,Comedy,Drama,Musical
+2,The Real O'Neals,2016,11,8,7.8701,Comedy,Drama,Musical
+1,The Red Road,2014,3,16,8.1198,Drama,NA,NA
+2,The Red Road,2015,4,2,8.3,Drama,NA,NA
+1,The Red Tent,2014,12,7,7.2411,Adventure,Drama,History
+1,The Resident,2018,3,13,7.2082,Drama,NA,NA
+2,The Resident,2018,9,24,8.5,Drama,NA,NA
+1,The Returned,2013,1,17,8.1341,Drama,Fantasy,Horror
+1,The Returned,2015,4,9,7.5896,Drama,Fantasy,Horror
+2,The Returned,2015,10,10,7.6523,Drama,Fantasy,Horror
+1,The Riches,2007,3,19,7.7,Comedy,Crime,Drama
+1,The Royals,2015,4,15,8.3742,Drama,NA,NA
+2,The Royals,2015,12,16,8.7109,Drama,NA,NA
+3,The Royals,2016,12,4,8.6,Drama,NA,NA
+1,The Secret Circle,2012,1,4,8.1746,Drama,Fantasy,Horror
+1,The Secret Life of the American Teenager,2008,9,3,7.1,Comedy,Drama,Family
+1,The Shield,2002,4,23,7.8691,Crime,Drama,Thriller
+2,The Shield,2003,2,14,7.7389,Crime,Drama,Thriller
+3,The Shield,2004,4,30,7.9408,Crime,Drama,Thriller
+4,The Shield,2005,4,28,6.9117,Crime,Drama,Thriller
+5,The Shield,2006,2,13,7.4931,Crime,Drama,Thriller
+6,The Shield,2007,5,4,7.7227,Crime,Drama,Thriller
+7,The Shield,2008,10,14,8.1117,Crime,Drama,Thriller
+1,The Shining,1997,4,28,6.5607,Drama,Fantasy,Horror
+1,The Sinner,2017,8,26,8.3454,Crime,Drama,Mystery
+2,The Sinner,2018,8,24,8.0195,Crime,Drama,Mystery
+1,The Slap,2015,2,21,7.5779,Drama,NA,NA
+1,The Son,2017,5,3,7.8279,Drama,Western,NA
+1,The Sopranos,1999,2,21,8.7453,Crime,Drama,NA
+2,The Sopranos,2000,2,27,8.761,Crime,Drama,NA
+3,The Sopranos,2001,4,8,8.8828,Crime,Drama,NA
+4,The Sopranos,2002,10,27,8.4073,Crime,Drama,NA
+5,The Sopranos,2004,4,18,8.7864,Crime,Drama,NA
+6,The Sopranos,2006,10,1,8.7718,Crime,Drama,NA
+1,The Staircase,2018,6,8,7.3882,Crime,Documentary,Drama
+1,The Stand,1994,5,10,7.3232,Adventure,Drama,Fantasy
+1,The Strain,2014,8,24,8.1389,Drama,Horror,Thriller
+2,The Strain,2015,8,23,8.0231,Drama,Horror,Thriller
+3,The Strain,2016,9,28,8.2981,Drama,Horror,Thriller
+4,The Strain,2017,8,16,8.4179,Drama,Horror,Thriller
+1,The Take,2009,6,21,8.0172,Crime,Drama,Thriller
+1,The Terror,2018,4,27,8.4718,Adventure,Drama,History
+1,The Tomorrow People,2014,1,20,8.398,Action,Drama,Sci-Fi
+1,The Unit,2006,4,15,7.816,Action,Drama,Thriller
+2,The Unit,2007,1,7,7.8486,Action,Drama,Thriller
+3,The Unit,2007,10,31,8.0822,Action,Drama,Thriller
+4,The Unit,2009,1,9,8.0752,Action,Drama,Thriller
+1,The Unusuals,2009,4,8,7.4,Comedy,Drama,NA
+1,The Vampire Diaries,2010,1,9,8.4816,Drama,Fantasy,Horror
+2,The Vampire Diaries,2011,1,4,8.7551,Drama,Fantasy,Horror
+3,The Vampire Diaries,2012,1,7,8.8092,Drama,Fantasy,Horror
+4,The Vampire Diaries,2013,1,26,8.7218,Drama,Fantasy,Horror
+5,The Vampire Diaries,2014,1,19,8.3912,Drama,Fantasy,Horror
+6,The Vampire Diaries,2015,1,16,8.4253,Drama,Fantasy,Horror
+7,The Vampire Diaries,2016,1,26,8.4884,Drama,Fantasy,Horror
+8,The Vampire Diaries,2017,1,2,8.768,Drama,Fantasy,Horror
+1,The Walking Dead,2010,11,17,8.7018,Drama,Horror,Sci-Fi
+2,The Walking Dead,2011,12,29,8.5113,Drama,Horror,Sci-Fi
+3,The Walking Dead,2013,1,6,8.5037,Drama,Horror,Sci-Fi
+4,The Walking Dead,2014,1,5,8.4808,Drama,Horror,Sci-Fi
+5,The Walking Dead,2015,1,4,8.5695,Drama,Horror,Sci-Fi
+6,The Walking Dead,2016,1,6,8.307,Drama,Horror,Sci-Fi
+7,The Walking Dead,2017,1,11,7.7381,Drama,Horror,Sci-Fi
+8,The Walking Dead,2018,1,17,7.019,Drama,Horror,Sci-Fi
+1,The Walking Dead: Webisodes,2011,10,3,6.9703,Drama,Horror,Sci-Fi
+2,The Walking Dead: Webisodes,2012,10,1,7.6255,Drama,Horror,Sci-Fi
+3,The Walking Dead: Webisodes,2013,10,1,7.6607,Drama,Horror,Sci-Fi
+1,The West Wing,1999,12,14,8.6148,Drama,NA,NA
+2,The West Wing,2001,1,11,8.8406,Drama,NA,NA
+3,The West Wing,2002,1,12,8.3295,Drama,NA,NA
+4,The West Wing,2003,1,12,8.2863,Drama,NA,NA
+5,The West Wing,2004,1,15,8.0183,Drama,NA,NA
+6,The West Wing,2005,1,16,8.1152,Drama,NA,NA
+7,The West Wing,2006,1,22,8.3636,Drama,NA,NA
+1,The Whispers,2015,7,15,7.8569,Drama,Horror,Mystery
+1,The Whispers,2015,7,15,7.8569,Drama,Horror,Mystery
+1,The White Princess,2017,4,25,8.0524,Drama,NA,NA
+1,The White Queen,2013,8,11,7.793,Drama,History,Romance
+1,The Wire,2002,7,18,8.3227,Crime,Drama,Thriller
+2,The Wire,2003,7,12,8.2375,Crime,Drama,Thriller
+3,The Wire,2004,11,1,8.4161,Crime,Drama,Thriller
+4,The Wire,2006,10,25,8.3944,Crime,Drama,Thriller
+5,The Wire,2008,2,6,8.4093,Crime,Drama,Thriller
+3,The Wonder Years,1990,1,26,8.6288,Comedy,Drama,Family
+4,The Wonder Years,1991,2,7,8.5049,Comedy,Drama,Family
+5,The Wonder Years,1992,1,15,8.2673,Comedy,Drama,Family
+6,The Wonder Years,1992,12,26,8.3043,Comedy,Drama,Family
+1,The X-Files,1994,1,4,7.9288,Drama,Mystery,Sci-Fi
+2,The X-Files,1995,1,11,8.1062,Drama,Mystery,Sci-Fi
+3,The X-Files,1996,1,12,8.2933,Drama,Mystery,Sci-Fi
+4,The X-Files,1997,1,22,8.2685,Drama,Mystery,Sci-Fi
+5,The X-Files,1998,2,4,8.4239,Drama,Mystery,Sci-Fi
+6,The X-Files,1999,2,9,8.418,Drama,Mystery,Sci-Fi
+7,The X-Files,2000,2,14,7.9099,Drama,Mystery,Sci-Fi
+8,The X-Files,2001,2,7,8.1097,Drama,Mystery,Sci-Fi
+9,The X-Files,2002,2,22,7.7807,Drama,Mystery,Sci-Fi
+10,The X-Files,2016,2,5,7.6359,Drama,Mystery,Sci-Fi
+11,The X-Files,2018,2,9,7.6945,Drama,Mystery,Sci-Fi
+1,Third Watch,2000,2,17,4.55,Action,Crime,Drama
+6,Third Watch,2005,5,6,9.4,Action,Crime,Drama
+1,Thirteen,2016,4,5,7.6324,Crime,Drama,Mystery
+1,This Is Us,2016,12,14,8.6908,Comedy,Drama,Romance
+2,This Is Us,2017,12,12,8.6115,Comedy,Drama,Romance
+3,This Is Us,2018,10,2,8.7253,Comedy,Drama,Romance
+1,Threat Matrix,2003,10,2,8.4,Drama,Mystery,Thriller
+1,Three Rivers,2009,10,25,8.7008,Drama,NA,NA
+1,Threshold,2005,9,17,7.6068,Action,Drama,Sci-Fi
+1,Time After Time,2017,3,13,7.6621,Drama,Sci-Fi,NA
+1,Timeless,2016,12,9,8.3006,Action,Adventure,Drama
+2,Timeless,2018,4,18,8.6145,Action,Adventure,Drama
+1,Titanic,2012,4,14,6.5,Drama,NA,NA
+1,Togetherness,2015,2,8,7.9146,Comedy,Drama,Romance
+2,Togetherness,2016,3,16,7.9601,Comedy,Drama,Romance
+1,Tom Clancy's Jack Ryan,2018,8,31,8.5237,Action,Drama,Thriller
+1,Torchwood,2006,11,26,7.5437,Action,Drama,Sci-Fi
+2,Torchwood,2008,2,23,7.9913,Action,Drama,Sci-Fi
+3,Torchwood,2009,7,22,8.9243,Action,Drama,Sci-Fi
+4,Torchwood,2011,8,8,7.6151,Action,Drama,Sci-Fi
+1,Touch,2012,4,24,8.1376,Drama,Mystery,Sci-Fi
+2,Touch,2013,3,18,8.1008,Drama,Mystery,Sci-Fi
+5,Touched by an Angel,1998,11,15,9.6,Drama,Family,Fantasy
+1,Touching Evil,2004,3,12,8.3,Crime,Drama,Thriller
+1,Training Day,2017,2,19,7.2311,Action,Crime,Drama
+1,Transparent,2014,9,2,7.6071,Comedy,Drama,NA
+2,Transparent,2015,12,9,7.8074,Comedy,Drama,NA
+3,Transparent,2016,9,23,7.8169,Comedy,Drama,NA
+4,Transparent,2017,9,22,7.5694,Comedy,Drama,NA
+1,Treme,2010,5,14,8.3513,Drama,Music,NA
+2,Treme,2011,5,29,8.3278,Drama,Music,NA
+3,Treme,2012,10,26,8.1682,Drama,Music,NA
+4,Treme,2013,12,15,8.3918,Drama,Music,NA
+1,Tru Calling,2004,2,10,8.0805,Adventure,Drama,Fantasy
+2,Tru Calling,2005,5,6,8.3651,Adventure,Drama,Fantasy
+1,True Blood,2008,10,15,8.2664,Drama,Fantasy,Mystery
+2,True Blood,2009,7,28,8.4773,Drama,Fantasy,Mystery
+3,True Blood,2010,7,27,8.293,Drama,Fantasy,Mystery
+4,True Blood,2011,8,3,8.2633,Drama,Fantasy,Mystery
+5,True Blood,2012,7,18,8.0424,Drama,Fantasy,Mystery
+6,True Blood,2013,7,17,7.9957,Drama,Fantasy,Mystery
+7,True Blood,2014,7,23,6.9127,Drama,Fantasy,Mystery
+1,True Detective,2014,2,9,9.3313,Crime,Drama,Mystery
+2,True Detective,2015,7,15,8.1878,Crime,Drama,Mystery
+1,True Justice,2011,9,25,5.4891,Action,Crime,Drama
+2,True Justice,2012,4,1,5.2427,Action,Crime,Drama
+1,Trust,2018,4,24,8.0511,Biography,Crime,Drama
+1,Trust Me,2017,8,8,7.4,Drama,Thriller,NA
+1,Twin Peaks,1990,4,29,8.7429,Crime,Drama,Mystery
+2,Twin Peaks,1991,1,11,8.4187,Crime,Drama,Mystery
+1,Twin Peaks,2017,7,9,8.6322,Crime,Drama,Fantasy
+1,Twisted,2013,6,14,8.1733,Drama,Mystery,Thriller
+1,Tyrant,2014,7,25,8.2124,Action,Drama,Thriller
+2,Tyrant,2015,7,24,8.5412,Action,Drama,Thriller
+3,Tyrant,2016,8,10,7.8453,Action,Drama,Thriller
+1,Ugly Betty,2007,1,16,8.1145,Comedy,Drama,Romance
+2,Ugly Betty,2008,1,8,7.8154,Comedy,Drama,Romance
+3,Ugly Betty,2008,10,12,7.8659,Comedy,Drama,Romance
+4,Ugly Betty,2010,1,30,8.779,Comedy,Drama,Romance
+1,UnREAL,2015,6,29,8.0246,Drama,NA,NA
+2,UnREAL,2016,7,6,8.1849,Drama,NA,NA
+3,UnREAL,2018,2,26,8.067,Drama,NA,NA
+1,Unbreakable Kimmy Schmidt,2015,3,6,7.9135,Comedy,Drama,NA
+2,Unbreakable Kimmy Schmidt,2016,4,15,7.9508,Comedy,Drama,NA
+3,Unbreakable Kimmy Schmidt,2017,5,19,7.887,Comedy,Drama,NA
+4,Unbreakable Kimmy Schmidt,2018,5,30,7.6073,Comedy,Drama,NA
+1,Under the Dome,2013,8,5,7.3375,Drama,Mystery,Sci-Fi
+2,Under the Dome,2014,8,11,7.0715,Drama,Mystery,Sci-Fi
+3,Under the Dome,2015,7,30,6.7417,Drama,Mystery,Sci-Fi
+1,Underground,2016,4,9,7.8398,Adventure,Drama,History
+2,Underground,2017,3,8,7.9338,Adventure,Drama,History
+1,Unforgettable,2011,12,31,7.8657,Crime,Drama,Mystery
+2,Unforgettable,2013,11,29,8.1395,Crime,Drama,Mystery
+3,Unforgettable,2014,8,2,7.9384,Crime,Drama,Mystery
+4,Unforgettable,2015,12,28,8.7564,Crime,Drama,Mystery
+1,United States of Tara,2009,2,25,7.7551,Comedy,Drama,Romance
+2,United States of Tara,2010,5,2,8.0229,Comedy,Drama,Romance
+3,United States of Tara,2011,5,22,7.9989,Comedy,Drama,Romance
+1,V,2010,2,28,7.6665,Drama,Sci-Fi,Thriller
+2,V,2011,2,9,7.6531,Drama,Sci-Fi,Thriller
+1,Valor,2017,10,25,6.6775,Drama,NA,NA
+1,Van Helsing,2016,10,28,7.2371,Action,Drama,Fantasy
+2,Van Helsing,2017,11,15,7.5868,Action,Drama,Fantasy
+1,Vanity Fair,2018,9,6,8.1564,Drama,NA,NA
+1,Vegas,2012,10,9,7.6939,Action,Crime,Drama
+1,Veronica Mars,2005,1,24,7.2391,Crime,Drama,Mystery
+2,Veronica Mars,2006,1,19,6.9283,Crime,Drama,Mystery
+3,Veronica Mars,2007,1,18,7.2217,Crime,Drama,Mystery
+1,Victorious,2010,8,27,8.2163,Comedy,Drama,Family
+2,Victorious,2011,6,21,7.989,Comedy,Drama,Family
+3,Victorious,2012,3,5,7.7301,Comedy,Drama,Family
+4,Victorious,2012,12,8,7.8806,Comedy,Drama,Family
+1,Vikings,2013,3,31,8.1187,Action,Adventure,Drama
+2,Vikings,2014,3,30,8.5729,Action,Adventure,Drama
+3,Vikings,2015,3,22,8.5339,Action,Adventure,Drama
+4,Vikings,2016,8,10,8.5089,Action,Adventure,Drama
+5,Vikings,2017,12,24,8.1513,Action,Adventure,Drama
+1,Vinyl,2016,3,16,8.1104,Drama,Music,NA
+1,Waco,2018,2,14,8.5083,Crime,Drama,History
+34,Walt Disney's Wonderful World of Color,1990,1,30,7.7353,Adventure,Biography,Drama
+1,War & Peace,2016,1,23,8.092,Drama,History,Romance
+1,Warehouse 13,2009,8,14,7.8246,Drama,Mystery,Sci-Fi
+2,Warehouse 13,2010,8,20,7.9666,Drama,Mystery,Sci-Fi
+3,Warehouse 13,2011,8,29,8.1278,Drama,Mystery,Sci-Fi
+4,Warehouse 13,2013,1,30,8.1565,Drama,Mystery,Sci-Fi
+5,Warehouse 13,2014,5,1,8.1722,Drama,Mystery,Sci-Fi
+1,Wayward Pines,2015,6,18,8.3693,Drama,Mystery,Sci-Fi
+2,Wayward Pines,2016,6,25,7.5091,Drama,Mystery,Sci-Fi
+1,Weeds,2005,9,8,7.9288,Comedy,Crime,Drama
+2,Weeds,2006,9,21,8.1724,Comedy,Crime,Drama
+3,Weeds,2007,10,1,7.9479,Comedy,Crime,Drama
+4,Weeds,2008,7,29,7.943,Comedy,Crime,Drama
+5,Weeds,2009,7,20,7.6852,Comedy,Crime,Drama
+6,Weeds,2010,10,2,7.7861,Comedy,Crime,Drama
+7,Weeds,2011,8,9,7.507,Comedy,Crime,Drama
+8,Weeds,2012,8,11,7.4982,Comedy,Crime,Drama
+1,Wentworth,2013,6,1,8.5448,Crime,Drama,NA
+2,Wentworth,2014,6,27,9.0832,Crime,Drama,NA
+3,Wentworth,2015,5,15,9.233,Crime,Drama,NA
+4,Wentworth,2016,6,17,9.2945,Crime,Drama,NA
+5,Wentworth,2017,5,12,9.0844,Crime,Drama,NA
+1,Westworld,2016,11,2,8.8012,Drama,Mystery,Sci-Fi
+2,Westworld,2018,5,23,8.2761,Drama,Mystery,Sci-Fi
+1,When Calls the Heart,2014,2,15,9.3765,Drama,NA,NA
+2,When Calls the Heart,2015,5,18,9.3873,Drama,NA,NA
+3,When Calls the Heart,2016,3,7,9.3239,Drama,NA,NA
+4,When Calls the Heart,2017,3,13,9.064,Drama,NA,NA
+5,When Calls the Heart,2018,3,7,8.6355,Drama,NA,NA
+1,When We Rise,2017,2,12,8.6802,Drama,NA,NA
+1,White Collar,2009,12,28,8.1278,Comedy,Crime,Drama
+2,White Collar,2010,10,29,8.2254,Comedy,Crime,Drama
+3,White Collar,2011,9,26,8.1453,Comedy,Crime,Drama
+4,White Collar,2012,10,21,7.9585,Comedy,Crime,Drama
+5,White Collar,2013,12,6,8.0702,Comedy,Crime,Drama
+6,White Collar,2014,11,27,8.7027,Comedy,Crime,Drama
+1,Wicked City,2015,11,3,7.0194,Crime,Drama,NA
+1,Wilfred,2011,7,30,7.9318,Comedy,Drama,Mystery
+2,Wilfred,2012,8,3,7.8376,Comedy,Drama,Mystery
+3,Wilfred,2013,7,22,7.9584,Comedy,Drama,Mystery
+4,Wilfred,2014,7,19,8.2149,Comedy,Drama,Mystery
+1,Will,2017,7,10,7.4,Drama,NA,NA
+1,Wings,1990,4,19,7.6,Comedy,Drama,NA
+1,Wisdom of the Crowd,2017,10,18,7.5409,Crime,Drama,Thriller
+1,Witches of East End,2013,11,7,8.1791,Drama,Fantasy,NA
+2,Witches of East End,2014,8,24,8.1452,Drama,Fantasy,NA
+1,Without a Trace,2002,12,23,7.8624,Crime,Drama,Mystery
+2,Without a Trace,2003,11,18,8.4064,Crime,Drama,Mystery
+3,Without a Trace,2005,5,12,7.1,Crime,Drama,Mystery
+4,Without a Trace,2006,2,6,7.7624,Crime,Drama,Mystery
+1,Wizards of Waverly Place,2008,2,6,7.4621,Comedy,Drama,Family
+2,Wizards of Waverly Place,2009,2,14,7.668,Comedy,Drama,Family
+3,Wizards of Waverly Place,2010,1,15,7.7568,Comedy,Drama,Family
+4,Wizards of Waverly Place,2011,5,3,7.8918,Comedy,Drama,Family
+1,Wolf Hall,2015,2,19,8.1332,Biography,Drama,History
+1,Wonderfalls,2004,7,31,8.4967,Comedy,Drama,Fantasy
+1,World Without End,2012,10,8,7.0142,Drama,History,Romance
+1,Wynonna Earp,2016,5,13,8.7387,Action,Drama,Fantasy
+2,Wynonna Earp,2017,7,17,9.068,Action,Drama,Fantasy
+3,Wynonna Earp,2018,7,6,8.6064,Action,Drama,Fantasy
+1,X-Men: Evolution,2000,12,10,7.3609,Action,Animation,Drama
+1,XIII: The Series,2012,6,29,6.9,Action,Crime,Drama
+1,Xena: Warrior Princess,1996,1,12,7.6673,Action,Adventure,Drama
+2,Xena: Warrior Princess,1997,1,16,7.8023,Action,Adventure,Drama
+3,Xena: Warrior Princess,1998,1,9,7.9777,Action,Adventure,Drama
+4,Xena: Warrior Princess,1999,1,16,7.6438,Action,Adventure,Drama
+5,Xena: Warrior Princess,2000,1,20,7.7623,Action,Adventure,Drama
+6,Xena: Warrior Princess,2001,1,28,7.7979,Action,Adventure,Drama
+1,Yellowstone,2018,7,23,8.6479,Drama,Western,NA
+1,You,2018,9,20,8.6492,Crime,Drama,Thriller
+1,You Me Her,2016,4,23,8.029,Comedy,Drama,Romance
+1,You're the Worst,2014,8,17,8.2147,Comedy,Drama,Romance
+2,You're the Worst,2015,10,22,8.3227,Comedy,Drama,Romance
+3,You're the Worst,2016,10,11,8.2949,Comedy,Drama,Romance
+4,You're the Worst,2017,10,11,8.0812,Comedy,Drama,Romance
+1,Young & Hungry,2014,7,26,8.2418,Comedy,Drama,Romance
+2,Young & Hungry,2015,6,27,8.4897,Comedy,Drama,Romance
+3,Young & Hungry,2016,2,3,8.8,Comedy,Drama,Romance
+1,Your Lie in April,2014,12,16,7.406,Animation,Drama,Music
+1,Z Nation,2014,10,24,7.6906,Action,Comedy,Drama
+2,Z Nation,2015,10,30,8.1554,Action,Comedy,Drama
+3,Z Nation,2016,11,2,8.2791,Action,Comedy,Drama
+4,Z Nation,2017,11,2,8.0534,Action,Comedy,Drama
+1,Z: The Beginning of Everything,2015,11,5,7.0981,Biography,Drama,NA
+1,Zero Hour,2013,2,16,7.0887,Drama,Fantasy,Thriller
+2,Zoey 101,2006,3,10,7,Comedy,Drama,Family
+3,Zoey 101,2008,1,4,8.3,Comedy,Drama,Family
+4,Zoey 101,2008,5,2,8.7,Comedy,Drama,Family
+1,Zoo,2015,8,9,7.8649,Drama,Mystery,Sci-Fi
+2,Zoo,2016,8,5,7.905,Drama,Mystery,Sci-Fi
+3,Zoo,2017,7,31,7.4132,Drama,Mystery,Sci-Fi
+1,iZombie,2015,4,28,8.4296,Comedy,Crime,Drama
+2,iZombie,2016,1,7,8.5641,Comedy,Crime,Drama
+3,iZombie,2017,5,16,8.4077,Comedy,Crime,Drama
+4,iZombie,2018,4,13,8.1214,Comedy,Crime,Drama

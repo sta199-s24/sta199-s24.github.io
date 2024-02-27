@@ -1,0 +1,657 @@
+---
+title: "Web scraping wrap-up + Chat GPT"
+subtitle: "Lecture 12"
+date: "February 27, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+-   Open your `lab-4` project, save and commit any pending changes, and push them to GitHub
+-   Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+-   Fill out TEAMMATES survey to provide feedback to your teammates (and to let us know how things are going)
+-   Fill out the (optional) midterm course evaluation
+-   A note on AE scores -- they will continue to be updated!
+
+## Lab 4 update
+
+**Pull** changes, see that Question 1 in `lab-4.qmd` is updated with the following code chunk:
+
+```{{r}}
+#| file: lab-4-clubs-scrape.R
+#| eval: false
+```
+
+Render `lab-4.qmd` and commit and push your changes.
+
+# From last time -- Application exercise
+
+## Goal
+
+::: columns
+::: {.column width="50%"}
+-   Scrape data and organize it in a tidy format in R
+-   Perform light text parsing to clean data
+-   Summarize and visualize the data
+:::
+
+::: {.column width="50%"}
+![](images/chronicle-data.png){fig-align="center"}
+:::
+:::
+
+## `ae-09`
+
+::: appex
+-   Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called ae.
+-   If there are any uncommitted files, commit them, and then click Pull.
+-   Open the file called `chronicle-scrape.R` and follow along.
+:::
+
+## Recap
+
+-   Use the SelectorGadget identify tags for elements you want to grab
+-   Use rvest to first read the whole page (into R) and then parse the object you've read in to the elements you're interested in
+-   Put the components together in a data frame (a tibble) and analyze it like you analyze any other data
+
+## A new R workflow {.smaller}
+
+-   When working in a Quarto document, your analysis is re-run each time you knit
+
+-   If web scraping in a Quarto document, you'd be re-scraping the data each time you knit, which is undesirable (and not *nice*)!
+
+-   An alternative workflow:
+
+    -   Use an R script to save your code
+    -   Saving interim data scraped using the code in the script as CSV or RDS files
+    -   Use the saved data in your analysis in your Quarto document
+
+# Web scraping considerations
+
+## Ethics: "Can you?" vs "Should you?"
+
+![](images/ok-cupid-1.png){fig-align="center" width="800"}
+
+::: aside
+Source: Brian Resnick, [Researchers just released profile data on 70,000 OkCupid users without permission](https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release), Vox.
+:::
+
+## "Can you?" vs "Should you?"
+
+![](images/ok-cupid-2.png){fig-align="center" width="699"}
+
+## Challenges: Unreliable formatting
+
+![](images/unreliable-formatting.png){fig-align="center" width="699"}
+
+::: aside
+[alumni.duke.edu/news/notable-alumni](https://alumni.duke.edu/news/notable-alumni)
+:::
+
+## Challenges: Data broken into many pages
+
+![](images/many-pages.png){fig-align="center"}
+
+## Workflow: Screen scraping vs. APIs
+
+Two different scenarios for web scraping:
+
+-   Screen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy)
+
+-   Web APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files
+
+## Workflow: Scraping from many pages {.smaller}
+
+-   So far you've learned to scrape data from a single page
+
+-   If you wanted to scrape data from multiple, similarly structured web pages (e.g., scrape the text and other metadata for each opinion article on The Chronicle):
+
+    -   Write the code to scrape one page
+
+    -   Turn it into a function that takes the webpage URL as an argument and returns the scraped, structured data
+
+    -   Map the function over the list of URLs of interest
+
+# The 🐘 in the room: Chat GPT
+
+## Using Chat GPT
+
+::: question
+How are you using Chat GPT for this class?
+:::
+
+## Example 1 - From Lab 4 {.smaller}
+
+::: question
+Another variable that needs some cleaning up is `membership_status`.
+Currently it should either be `NA` or contain some text that says `"Select ... to register for this group"`.
+Recode this variable to say `"Closed"` if the current value is `NA` or `"Open"` otherwise.
+Save the resulting dataset with these two new variables as `clubs`, i.e., overwrite the data frame.
+
+Then, display the first 10 rows of the dataset, `relocate()`ing `membership_status` to the beginning of the dataset to make sure it appears in the output in your rendered document.
+:::
+
+## Sample data {.xsmall}
+
+```{r}
+#| output-location: slide
+
+df <- tribble(
+  ~club, ~membership_status,
+  1, "Select AI Competition Club's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  2, NA,
+  3, "Select Black Pre-Law Society at Duke's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  4, NA,
+  5, NA,
+  6, "Select Duke Women's Flag Football Team's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  7, NA,
+  8, NA,
+  9, NA,
+  10, "Select Latino Medical Student Association's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  11, NA,
+  12, "Select Native American/Indigenous Student Alliance's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  13, NA,
+  14, NA,
+  15, NA,
+  16, NA,
+  17, NA,
+  18, NA,
+  19, "Select Society of Women Engineers's group. Select the group and click on the Join button at the bottom of the page to register for this group",
+  20, NA,
+  21, NA
+)
+
+df
+```
+
+## Chat GPT - Take 1 prompt {.smaller}
+
+::: question
+What is wrong with this promopt?
+:::
+
+> Another variable that needs some cleaning up is `membership_status`.
+> Currently it should either be `NA` or contain some text that says `"Select ... to register for this group"`.
+> Recode this variable to say `"Closed"` if the current value is `NA` or `"Open"` otherwise.
+> Save the resulting dataset with these two new variables as `clubs`, i.e., overwrite the data frame.
+>
+> Then, display the first 10 rows of the dataset, `relocate()`ing `membership_status` to the beginning of the dataset to make sure it appears in the output in your rendered document.
+
+## Chat GPT - Take 1 response {.smaller}
+
+::: question
+Explain what the following code does.
+:::
+
+> Certainly!
+> To achieve this in R, you can follow these steps:
+>
+> ``` r
+> # Assuming your dataset is named 'clubs'
+> # Recode membership_status variable
+> clubs$membership_status <- ifelse(is.na(clubs$membership_status), "Closed", "Open")
+>
+> # Relocate membership_status to the beginning of the dataset
+> clubs <- clubs[c("membership_status", setdiff(names(clubs), "membership_status"))]
+>
+> # Display the first 10 rows of the dataset
+> head(clubs, 10)
+> ```
+>
+> Make sure to replace 'clubs' with the actual name of your dataset.
+> This code will recode the `membership_status` variable as per your instructions, then move it to the beginning of the dataset and display the first 10 rows.
+
+## Chat GPT - Take 1 code {.smaller}
+
+```{r}
+#| error: true
+
+# Assuming your dataset is named 'clubs'
+# Recode membership_status variable
+clubs$membership_status <- ifelse(is.na(clubs$membership_status), "Closed", "Open")
+
+# Relocate membership_status to the beginning of the dataset
+clubs <- clubs[c("membership_status", setdiff(names(clubs), "membership_status"))]
+
+# Display the first 10 rows of the dataset
+head(clubs, 10)
+```
+
+## Chat GPT - Take 1 code + edit {.smaller}
+
+```{r}
+clubs <- df
+
+# Assuming your dataset is named 'clubs'
+# Recode membership_status variable
+clubs$membership_status <- ifelse(is.na(clubs$membership_status), "Closed", "Open")
+
+# Relocate membership_status to the beginning of the dataset
+clubs <- clubs[c("membership_status", setdiff(names(clubs), "membership_status"))]
+
+# Display the first 10 rows of the dataset
+head(clubs, 10)
+```
+
+## Chat GPT - Take 2 prompt
+
+> Can you suggest an alternate solution in R?
+
+## Chat GPT - Take 2 response {.xsmall}
+
+::: question
+Explain what the following code does.
+:::
+
+> Certainly!
+> An alternate solution can use the `mutate` and `relocate` functions from the `dplyr` package.
+> Here's an alternative code:
+>
+> ``` r
+> library(dplyr)
+>
+> # Assuming your dataset is named 'clubs'
+> clubs <- clubs %>%
+>   mutate(membership_status = ifelse(is.na(membership_status), "Closed", "Open")) %>%
+>   relocate(membership_status, .before = 1)
+>
+> # Display the first 10 rows of the dataset
+> head(clubs, 10)
+> ```
+>
+> This code achieves the same result but uses the `mutate` function from the `dplyr` package for variable recoding and the `relocate` function to move the `membership_status` variable to the beginning of the dataset.
+> Make sure to replace 'clubs' with the actual name of your dataset.
+
+## Chat GPT - Take 2 code {.smaller}
+
+```{r}
+#| include: false
+
+clubs <- df
+```
+
+```{r}
+library(dplyr)
+
+# Assuming your dataset is named 'clubs'
+clubs <- clubs %>%
+  mutate(membership_status = ifelse(is.na(membership_status), "Closed", "Open")) %>%
+  relocate(membership_status, .before = 1)
+
+# Display the first 10 rows of the dataset
+head(clubs, 10)
+```
+
+## Chat GPT - Take 3 prompt
+
+> Can you suggest a tidyverse-based solution?
+
+## Chat GPT - Take 3 response {.xsmall}
+
+> Certainly!
+> If you want to stick to the tidyverse, you can use the `mutate` and `slice_head` functions from the `dplyr` package along with the `forcats` package for factor manipulation.
+> Here's a tidyverse-based solution:
+>
+> ``` r
+> library(dplyr)
+> library(forcats)
+>
+> # Assuming your dataset is named 'clubs'
+> clubs <- clubs %>%
+>   mutate(membership_status = fct_recode(membership_status, Closed = "NA", Open = "Select ... to register for this group")) %>%
+>   slice_head(n = 10) %>%
+>   relocate(membership_status, .before = 1)
+>
+> # Display the first 10 rows of the dataset
+> clubs
+> ```
+>
+> This code uses `fct_recode` from the `forcats` package to recode the levels of the `membership_status` variable.
+> The `slice_head` function is then used to select the first 10 rows, and `relocate` is used to move the `membership_status` variable to the beginning of the dataset.
+> Make sure to replace 'clubs' with the actual name of your dataset.
+
+## Chat GPT - Take 3 code {.xsmall}
+
+```{r}
+#| include: false
+
+clubs <- df
+```
+
+```{r}
+#| error: true
+
+library(dplyr)
+library(forcats)
+
+# Assuming your dataset is named 'clubs'
+clubs <- clubs %>%
+  mutate(membership_status = fct_recode(membership_status, Closed = "NA", Open = "Select ... to register for this group")) %>%
+  slice_head(n = 10) %>%
+  relocate(membership_status, .before = 1)
+
+# Display the first 10 rows of the dataset
+clubs
+```
+
+## Chat GPT - Take 4 prompt
+
+> The text "Select ... to register for this group" can vary for each group.
+> For example, it can be ""Select blah blah to register for this group" or it can be "Select la di da to register for this group". Can you suggest a tidyverse-based solution that would capture all of possible options for the ... in this text?
+
+## Chat GPT - Take 4 response {.xsmall}
+
+::: question
+Explain what the following code does.
+:::
+
+> Certainly!
+> If the text "Select ... to register for this group" varies for each group, you can use the `str_detect` function from the `stringr` package to identify those cases.
+> Here's a tidyverse-based solution:
+>
+> ``` r
+> library(dplyr)
+> library(stringr)
+>
+> # Assuming your dataset is named 'clubs'
+> clubs <- clubs %>%
+>   mutate(membership_status = ifelse(str_detect(membership_status, "Select .* to register for this group"), "Open", "Closed")) %>%
+>   relocate(membership_status, .before = 1)
+>
+> # Display the first 10 rows of the dataset
+> head(clubs, 10)
+> ```
+>
+> This code uses `str_detect` to check if the `membership_status` contains the pattern "Select ... to register for this group".
+> If it does, it sets the status to "Open"; otherwise, it sets it to "Closed".
+> Make sure to replace 'clubs' with the actual name of your dataset.
+
+## Chat GPT - Take 4 code {.smaller}
+
+```{r}
+#| include: false
+
+clubs <- df
+```
+
+```{r}
+library(dplyr)
+library(stringr)
+
+# Assuming your dataset is named 'clubs'
+clubs <- clubs %>%
+  mutate(membership_status = ifelse(str_detect(membership_status, "Select .* to register for this group"), "Open", "Closed")) %>%
+  relocate(membership_status, .before = 1)
+
+# Display the first 10 rows of the dataset
+head(clubs, 10)
+```
+
+## Chat GPT - Take 5 prompt
+
+::: question
+What is different about this prompt?
+:::
+
+> Let's try again.
+> Can you write a tidyverse-based solution where membership status is recoded as Closed if the current value is NA and Open if the current value is anything else.
+> Then, using the relocate() function, the membership status is moved to be the first column in the output.
+
+## Chat GPT - Take 5 response {.xsmall}
+
+::: question
+Explain what the following code does.
+:::
+
+> Certainly!
+> My apologies for the confusion.
+> Here's a tidyverse-based solution that recodes the membership status and moves it to be the first column using the `dplyr` package:
+>
+> ``` r
+> library(dplyr)
+>
+> # Assuming your dataset is named 'clubs'
+> clubs <- clubs %>%
+>   mutate(membership_status = if_else(is.na(membership_status), "Closed", "Open")) %>%
+>   relocate(membership_status, .before = 1)
+>
+> # Display the first 10 rows of the dataset
+> head(clubs, 10)
+> ```
+>
+> This code uses the `mutate` function to recode `membership_status` as "Closed" if it's NA and "Open" otherwise.
+> Then, the `relocate` function is used to move `membership_status` to be the first column in the dataset.
+> Make sure to replace 'clubs' with the actual name of your dataset.
+
+## Chat GPT - Take 5 code {.xsmall}
+
+```{r}
+#| include: false
+
+clubs <- df
+```
+
+```{r}
+library(dplyr)
+
+# Assuming your dataset is named 'clubs'
+clubs <- clubs %>%
+  mutate(membership_status = if_else(is.na(membership_status), "Closed", "Open")) %>%
+  relocate(membership_status, .before = 1)
+
+# Display the first 10 rows of the dataset
+head(clubs, 10)
+```
+
+## Chat GPT - Take 5 code + edit {.smaller}
+
+```{r}
+#| include: false
+
+clubs <- df
+```
+
+```{r}
+clubs |>
+  mutate(membership_status = if_else(is.na(membership_status), "Closed", "Open"))
+```
+
+## Chat GPT - Take 5 code + edit {.smaller}
+
+```{r}
+clubs |>
+  mutate(membership_status = if_else(is.na(membership_status), "Closed", "Open")) |>
+  relocate(membership_status)
+```
+
+## Chat GPT - Take 5 code + edit {.smaller}
+
+```{r}
+clubs <- clubs |>
+  mutate(membership_status = if_else(is.na(membership_status), "Closed", "Open")) |>
+  relocate(membership_status)
+
+clubs
+```
+
+## Example 2 {.smaller}
+
+::: question
+Each CSI franchise includes a number of series, each with the character string `"CSI"` (in capital letters) in their title.
+Using this information, create a new data frame called `csi` that only has titles from the CSI-verse and all of the columns from `tv` for these titles.
+Then, display the first 10 rows of `csi`.
+**Note:** The titles and seasons included in the dataset may not be all CSI titles and titles that have ever aired.
+:::
+
+## Chat GPT - Take 1 prompt
+
+> Each CSI franchise includes a number of series, each with the character string `"CSI"` (in capital letters) in their title.
+> Using this information, create a new data frame called `csi` that only has titles from the CSI-verse and all of the columns from `tv` for these titles.
+> Then, display the first 10 rows of `csi`.
+> **Note:** The titles and seasons included in the dataset may not be all CSI titles and titles that have ever aired.
+
+## Chat GPT - Take 1 response {.xsmall}
+
+> Certainly!
+> To filter the `tv` data frame to include only titles from the CSI-verse, you can use the `filter` function from the `dplyr` package.
+> Here's the code:
+>
+> ``` r
+> library(dplyr)
+>
+> # Assuming your dataset is named 'tv'
+> csi <- tv %>%
+>   filter(str_detect(title, "CSI", case_insensitive = TRUE))
+>
+> # Display the first 10 rows of the 'csi' data frame
+> head(csi, 10)
+> ```
+>
+> This code uses the `filter` function to select rows where the `title` column contains the string "CSI" (case-insensitive).
+> The resulting data frame, `csi`, will include only titles from the CSI-verse along with all the columns from the original `tv` data frame.
+> Make sure to replace 'tv' with the actual name of your dataset.
+
+## Chat GPT - Take 1 code {.xsmall}
+
+::: question
+What is wrong with the following code?
+:::
+
+```{r}
+#| message: false
+
+tv <- read_csv("data/tv.csv")
+```
+
+```{r}
+#| error: true
+
+library(dplyr)
+
+# Assuming your dataset is named 'tv'
+csi <- tv %>%
+  filter(str_detect(title, "CSI", case_insensitive = TRUE))
+
+# Display the first 10 rows of the 'csi' data frame
+head(csi, 10)
+```
+
+## Chat GPT - Take 2 prompt
+
+> str_detect doesn't have a case_insensitive argument, can you try again?
+
+## Chat GPT - Take 2 response {.xsmall}
+
+> You are correct, and I appreciate your understanding.
+> The `str_detect` function itself doesn't have a `case_insensitive` argument.
+> Instead, you can use the `str_which` function along with the `case_insensitive` argument in the `filter` function.
+> Here's the corrected code:
+>
+> ``` r
+> library(dplyr)
+>
+> # Assuming your dataset is named 'tv'
+> csi <- tv %>%
+>   filter(str_detect(title, "CSI", ignore_case = TRUE))
+>
+> # Display the first 10 rows of the 'csi' data frame
+> head(csi, 10)
+> ```
+>
+> This code uses `str_detect` within the `filter` function and includes the `ignore_case = TRUE` argument to perform a case-insensitive search.
+> The resulting `csi` data frame will contain only titles from the CSI-verse along with all the columns from the original `tv` data frame.
+> Make sure to replace 'tv' with the actual name of your dataset.
+
+## Chat GPT - Take 2 code {.smaller}
+
+```{r}
+#| error: true
+
+library(dplyr)
+
+# Assuming your dataset is named 'tv'
+csi <- tv %>%
+  filter(str_detect(title, "CSI", ignore_case = TRUE))
+
+# Display the first 10 rows of the 'csi' data frame
+head(csi, 10)
+```
+
+## Chat GPT - Take 3 prompt
+
+> str_detect doesn't have an ignore_case argument either, can you try again?
+
+## Chat GPT - Take 3 response {.xsmall}
+
+> I apologize for the oversight.
+> It seems there was a mistake in my responses.
+> To perform a case-insensitive search, you can use the `stringi` package along with `stri_detect_regex`.
+> Here's the corrected code:
+>
+> ``` r
+> library(dplyr)
+> library(stringi)
+>
+> # Assuming your dataset is named 'tv'
+> csi <- tv %>%
+>   filter(stri_detect_regex(title, "CSI", case_insensitive = TRUE))
+>
+> # Display the first 10 rows of the 'csi' data frame
+> head(csi, 10)
+> ```
+>
+> This code uses `stri_detect_regex` from the `stringi` package within the `filter` function, and it includes the `case_insensitive = TRUE` argument for a case-insensitive search.
+> The resulting `csi` data frame will contain only titles from the CSI-verse along with all the columns from the original `tv` data frame.
+> Make sure to replace 'tv' with the actual name of your dataset.
+
+## Let's go back to Take 1 {.smaller}
+
+and edit it a bit:
+
+```{r}
+tv |>
+  filter(str_detect(title, "CSI"))
+```
+
+## Let's go back to Take 1 {.smaller}
+
+```{r}
+csi <- tv |>
+  filter(str_detect(title, "CSI"))
+
+csi
+```
+
+## Guidelines and best practices for using Chat GPT {.smaller}
+
+::: incremental
+- Do not just copy-paste the prompt
+- Engineer the prompt until the response starts to look like code you're learning in the course
+- If the response is not correct, ask for a correction
+- If the response doesn't follow the guidelines, ask for a correction
+- Do not just copy-paste code from Chat GPT responses, run it line-by-line and edit as needed
+- Watch out for clear mistakes in the response: do not keep loading packages that are already loaded, use the base pipe `|>`, use tidyverse-based code, etc.
+:::
