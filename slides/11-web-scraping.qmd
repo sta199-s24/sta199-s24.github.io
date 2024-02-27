@@ -389,7 +389,7 @@ read_html(html) |> html_elements("div") |> html_text()
 
 ::: small
 | Selector            | Example         | Description                                        |
-|:------------------|:------------------|:----------------------------------|
+|:--------------------|:----------------|:---------------------------------------------------|
 | .class              | `.title`        | Select all elements with class="title"             |
 | #id                 | `#name`         | Select all elements with id="name"                 |
 | element             | `p`             | Select all \<p\> elements                          |
