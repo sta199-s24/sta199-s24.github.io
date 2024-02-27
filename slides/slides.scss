@@ -20,17 +20,18 @@ details>summary {
   font-size: 0.75em;
 }
 
-#title-slide .subtitle {
+.reveal #title-slide .subtitle {
   color: #3A5883;
-  font-weight: bold
+  font-weight: bold;
+  text-align: left;
 }
 
-#title-slide .author {
-  text-align: right;
+.reveal #title-slide .author {
+  text-align: left;
 }
 
-#title-slide .institute {
-  text-align: right;
+.reveal #title-slide .institute {
+  text-align: left;
 }
 
 .small {
@@ -71,10 +72,6 @@ details>summary {
 
 .reveal pre code {
   width: 1100px;
-}
-
-.reveal .center {
-  text-align: center;
 }
 
 .reveal .hand {
