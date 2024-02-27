@@ -1,7 +1,7 @@
 ---
-title: "Importing and recoding data"
-subtitle: "Lecture 10"
-date: "February 20, 2024"
+title: "Web scraping"
+subtitle: "Lecture 11"
+date: "February 22, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
@@ -389,7 +389,7 @@ read_html(html) |> html_elements("div") |> html_text()
 
 ::: small
 | Selector            | Example         | Description                                        |
-|:-----------------|:-----------------|:----------------------------------|
+|:------------------|:------------------|:----------------------------------|
 | .class              | `.title`        | Select all elements with class="title"             |
 | #id                 | `#name`         | Select all elements with id="name"                 |
 | element             | `p`             | Select all \<p\> elements                          |
