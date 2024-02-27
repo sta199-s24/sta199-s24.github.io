@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-02-20">
-  <title>STA 199 - Importing and recoding data</title>
+  <meta name="dcterms.date" content="2024-02-22">
+  <title>STA 199 - Web scraping</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Importing and recoding data">
-<meta property="og:description" content="Lecture 10">
+<meta property="og:title" content="STA 199 - Web scraping">
+<meta property="og:description" content="Lecture 11">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Importing and recoding data">
-<meta name="twitter:description" content="Lecture 10">
+<meta name="twitter:title" content="STA 199 - Web scraping">
+<meta name="twitter:description" content="Lecture 11">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +402,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Importing and recoding data</h1>
-  <p class="subtitle">Lecture 10</p>
+  <h1 class="title">Web scraping</h1>
+  <p class="subtitle">Lecture 11</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,7 +416,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-02-20</p>
+  <p class="date">2024-02-22</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
@@ -466,7 +466,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="analyzing-the-chronicle" class="slide level2">
 <h2>Analyzing The Chronicle</h2>
 
-<img data-src="11-web-scraping_files/figure-html/chronicle-common-words-1.png" width="672" class="r-stretch"></section>
+<img data-src="11-web-scraping_files/figure-revealjs/chronicle-common-words-1.png" width="960" class="r-stretch"></section>
 <section id="reading-the-chronicle-2" class="slide level2">
 <h2>Reading The Chronicle</h2>
 <div class="question">
@@ -476,7 +476,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="analyzing-the-chronicle-1" class="slide level2">
 <h2>Analyzing The Chronicle</h2>
 
-<img data-src="11-web-scraping_files/figure-html/chronicle-sentiments-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section>
+<img data-src="11-web-scraping_files/figure-revealjs/chronicle-sentiments-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section>
 <section id="all-of-this-analysis-is-done-in-r" class="slide level2 centered">
 <h2>All of this analysis is done in R!</h2>
 <div class="hand">
@@ -810,9 +810,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="small">
 <table>
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 49%">
+<col style="width: 23%">
+<col style="width: 18%">
+<col style="width: 57%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1278,6 +1278,44 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
