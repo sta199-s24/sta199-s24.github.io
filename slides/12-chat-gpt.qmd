@@ -35,6 +35,7 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 -   Fill out TEAMMATES survey to provide feedback to your teammates (and to let us know how things are going)
 -   Fill out the (optional) midterm course evaluation
 -   A note on AE scores -- they will continue to be updated!
+-   Yet another survey: The Campus Culture Survey – UG participation is very low, help lift it up!
 
 ## Lab 4 update
 
