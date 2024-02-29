@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-02-08">
-  <title>STA 199 - Data types and classes</title>
+  <meta name="dcterms.date" content="2024-02-29">
+  <title>STA 199 - Data science ethics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,13 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Data types and classes">
-<meta property="og:description" content="Lecture 8">
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+<meta property="og:title" content="STA 199 - Data science ethics">
+<meta property="og:description" content="Lecture 13">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Data types and classes">
-<meta name="twitter:description" content="Lecture 8">
+<meta name="twitter:title" content="STA 199 - Data science ethics">
+<meta name="twitter:description" content="Lecture 13">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +404,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data types and classes</h1>
-  <p class="subtitle">Lecture 8</p>
+  <h1 class="title">Data science ethics</h1>
+  <p class="subtitle">Lecture 13</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,7 +418,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-02-08</p>
+  <p class="date">2024-02-29</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
@@ -425,248 +427,430 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="while-you-wait-for-class-to-begin" class="slide level2">
 <h2>While you wait for class to begin…</h2>
+<div>
 <ul>
-<li><p>Go to your <code>ae</code> repo, click <em>Pull</em> to get today’s application exercise to get ready for later.</p></li>
-<li><p>Questions from the prepare materials?</p>
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe></li>
+<li>Open your <code>lab-4</code> project, save and commit any pending changes, and push them to GitHub</li>
+<li>Any questions from prepare materials?</li>
+</ul>
+</div>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</section>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
+<ul>
+<li>Fill out TEAMMATES survey to provide feedback to your teammates bu Sunday night (and to let us know how things are going)</li>
+<li>Submit AE 09 (the R script and the Quarto document) by Sunday night</li>
+<li>Submit Lab 4 by Monday morning</li>
+</ul>
+</section>
+<section id="questions-from-last-time" class="slide level2">
+<h2>Questions from last time</h2>
+<blockquote>
+<p>How do you do that keyboard shortcut where you like drag down text selecting?</p>
+</blockquote>
+<div class="fragment">
+<blockquote>
+<p>How do you know when to clean extra space after text if you cannot specifically see the spaces?</p>
+</blockquote>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Will there be a curve for the test?</p>
+</blockquote>
+</div>
+</section>
+<section id="guidelines-and-best-practices-for-using-chat-gpt" class="slide level2 smaller">
+<h2>Guidelines and best practices for using Chat GPT</h2>
+<ul>
+<li>Do <u><strong>not</strong></u> just copy-paste the prompt – for appropriate academic conduct, for your own learning, and for getting to better results faster</li>
+<li>Engineer the prompt until the response starts to look like code you’re learning in the course</li>
+<li>If the response is not correct, ask for a correction</li>
+<li>If the response doesn’t follow the guidelines, ask for a correction</li>
+<li>Do not just copy-paste code from Chat GPT responses, run it line-by-line and edit as needed</li>
+<li>Watch out for clear mistakes in the response: do not keep loading packages that are already loaded, use the base pipe <code>|&gt;</code>, use tidyverse-based code, etc.</li>
+</ul>
+</section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<p>Data science ethics:</p>
+<ul>
+<li><p>Misrepresentation</p></li>
+<li><p>Data privacy</p></li>
+<li><p>Algorithmic bias</p></li>
 </ul>
 </section></section>
 <section>
-<section id="questions-from-last-time" class="title-slide slide level1 center">
-<h1>Questions from last time</h1>
+<section id="misrepresentation" class="title-slide slide level1 center">
+<h1>Misrepresentation</h1>
 
 </section>
-<section id="pivoting-data" class="slide level2 smaller">
-<h2><strong>Pivoting data</strong></h2>
-<p>Suppose we have the following patient data:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>patients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 4
-  patient_id pulse_1 pulse_2 pulse_3
-  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 XYZ             70      85      73
-2 ABC             90      95     102
-3 DEF            100      80      70</code></pre>
-</div>
-</div>
-<p>And we want to know:</p>
-<ul>
-<li><p>Average pulse rate for each patient.</p></li>
-<li><p>Trends in pulse rates across measurements.</p></li>
-</ul>
-</section>
-<section id="pivoting-data-1" class="slide level2 smaller">
-<h2><strong>Pivoting data</strong></h2>
-<p>Suppose we have the following patient data:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>patients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 4
-  patient_id pulse_1 pulse_2 pulse_3
-  &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 XYZ             70      85      73
-2 ABC             90      95     102
-3 DEF            100      80      70</code></pre>
-</div>
-</div>
-<p>And we want to know:</p>
-<ul>
-<li><p>Average pulse rate for each patient.</p></li>
-<li><p>Trends in pulse rates across measurements.</p></li>
-</ul>
-<p>These require a <em>longer</em> format of the data where all pulse rates are in a single column and another column identifies the measurement number.</p>
-</section>
-<section id="pivoting-data-2" class="slide level2">
-<h2>Pivoting data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>patients_longer <span class="ot">&lt;-</span> patients <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb5-3"><a></a>    <span class="at">cols =</span> <span class="sc">!</span>patient_id,</span>
-<span id="cb5-4"><a></a>    <span class="at">names_to =</span> <span class="st">"measurement"</span>,</span>
-<span id="cb5-5"><a></a>    <span class="at">values_to =</span> <span class="st">"pulse_rate"</span></span>
-<span id="cb5-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="stand-your-ground" class="slide level2 smaller">
+<h2>Stand your ground</h2>
+<div class="question">
+<p>In 2005, the <a href="https://en.wikipedia.org/w/index.php?search=Florida%20legislature"><em>Florida legislature</em></a> passed the controversial <a href="https://en.wikipedia.org/wiki/Stand-your-ground_law">“Stand Your Ground” law</a> that broadened the situations in which citizens can use lethal force to protect themselves against perceived threats. Advocates believed that the new law would ultimately reduce crime; opponents feared an increase in the use of lethal force.</p>
 </div>
 </section>
-<section id="summarizing-pivoted-data" class="slide level2">
-<h2>Summarizing pivoted data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>patients_longer <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">group_by</span>(patient_id) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_pulse =</span> <span class="fu">mean</span>(pulse_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  patient_id mean_pulse
-  &lt;chr&gt;           &lt;dbl&gt;
-1 ABC              95.7
-2 DEF              83.3
-3 XYZ              76  </code></pre>
+<section id="stand-your-ground-1" class="slide level2 smaller">
+<h2>Stand your ground</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Question</a></li><li><a href="#tabset-1-2">Submit</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="question">
+<p>What does the visualization, published by <a href="http://static5.businessinsider.com/image/53038b556da8110e5ce82be7-604-756/florida%20gun%20deaths.jpg">Reuters</a> on February 16, 2014, say about the number of firearm murders in Florida over the years?</p>
 </div>
-</div>
-</section>
-<section id="visualizing-pivoted-data" class="slide level2">
-<h2>Visualizing pivoted data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb8-2"><a></a>  patients_longer, </span>
-<span id="cb8-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> measurement, <span class="at">y =</span> pulse_rate, <span class="at">group =</span> patient_id, <span class="at">color =</span> patient_id)</span>
-<span id="cb8-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb8-5"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="types-and-classes" class="title-slide slide level1 center">
-<h1>Types and classes</h1>
-
-</section>
-<section id="types-and-classes-1" class="slide level2">
-<h2>Types and classes</h2>
-<ul>
-<li><p>Type is how an object is stored in memory, e.g.,</p>
-<ul>
-<li><code>double</code>: a real number stored in double-precision floatint point format.</li>
-<li><code>integer</code>: an integer (positive or negative)</li>
-</ul></li>
-<li><p>Class is metadata about the object that can determine how common functions operate on that object, e.g.,</p>
-<ul>
-<li><code>factor</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="types-of-vectors" class="slide level2">
-<h2>Types of vectors</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>You’ll commonly encounter:</p>
-<ul>
-<li><code>logical</code></li>
-<li><code>integer</code></li>
-<li><code>double</code></li>
-<li><code>character</code></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p>You’ll less commonly encounter:</p>
-<ul>
-<li><code>list</code></li>
-<li><code>NULL</code></li>
-<li><code>complex</code></li>
-<li><code>raw</code></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="types-of-functions" class="slide level2">
-<h2>Types of functions</h2>
-<p>Yes, functions have types too, but you don’t need to worry about the differences in the context of doing data science.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">typeof</span>(mean) <span class="co"># regular function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "closure"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">typeof</span>(<span class="st">`</span><span class="at">$</span><span class="st">`</span>) <span class="co"># internal function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "special"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">typeof</span>(sum) <span class="co"># primitive function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "builtin"</code></pre>
-</div>
-</div>
-</section>
-<section id="factors" class="slide level2 smaller">
-<h2>Factors</h2>
-<p>A <code>factor</code> is a vector that can contain only predefined values. It is used to store categorical data.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"a"</span>))</span>
-<span id="cb15-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] a b b a
-Levels: a b</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "integer"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">attributes</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$levels
-[1] "a" "b"
-
-$class
-[1] "factor"</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/08/factor.png" class="quarto-figure quarto-figure-center" width="400"></p>
+<p><img data-src="images/stand-your-ground.png" class="quarto-figure quarto-figure-center" width="711"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_71e6fec4" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="data-privacy" class="title-slide slide level1 center">
+<h1>Data privacy</h1>
+
+</section>
+<section id="your-data" class="slide level2">
+<h2>“Your” data</h2>
+<ul>
+<li><p>Every time we use apps, websites, and devices, our data is being collected and used or sold to others.</p></li>
+<li><p>More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people.</p></li>
+</ul>
+</section>
+<section id="privacy-of-your-data" class="slide level2">
+<h2>Privacy of your data</h2>
+<div class="question">
+<p>What pieces of data have you left on the internet today? Think through everything you’ve logged into, clicked on, checked in, either actively or automatically, that might be tracking you. Do you know where that data is stored? Who it can be accessed by? Whether it’s shared with others?</p>
+</div>
+</section>
+<section id="sharing-your-data" class="slide level2 smaller">
+<h2>Sharing your data</h2>
+<div class="question">
+<p>What are you OK with sharing?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">Name</li>
+<li class="fragment">Age</li>
+<li class="fragment">Email</li>
+<li class="fragment">Phone Number</li>
+<li class="fragment">List of every video you watch</li>
+<li class="fragment">List of every video you comment on</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">How you type: speed, accuracy</li>
+<li class="fragment">How long you spend on different content</li>
+<li class="fragment">List of all your private messages (date, time, person sent to)</li>
+<li class="fragment">Info about your photos (how it was taken, where it was taken (GPS), when it was taken)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="what-does-google-thinkknow-about-you" class="slide level2">
+<h2>What does Google think/know about you?</h2>
+<div class="question">
+<p>Have you ever thought about why you’re seeing an ad on Google? Google it! Try to figure out if you have ad personalization on and how your ads are personalized.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_ec4405e9" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="your-browing-history" class="slide level2">
+<h2>Your browing history</h2>
+<div class="question">
+<p>Which of the following are you OK with your browsing history to be used towards?</p>
+</div>
+<div>
+<ul>
+<li class="fragment">For serving you targeted ads</li>
+<li class="fragment">To score you as a candidate for a job</li>
+<li class="fragment">To predict your race/ethnicity for voting purposes</li>
+</ul>
+</div>
+</section>
+<section id="who-else-gets-to-use-your-data" class="slide level2">
+<h2>Who else gets to use your data?</h2>
+<div class="question">
+<p>Suppose you create a profile on a social media site and share your personal information on your profile. Who else gets to use that data?</p>
+</div>
+<div>
+<ul>
+<li class="fragment">Companies the social media company has a connection to?</li>
+<li class="fragment">Companies the social media company sells your data to?</li>
+<li class="fragment">Researchers?</li>
+</ul>
+</div>
+</section>
+<section id="ok-cupid-data-breach" class="slide level2 xsmall">
+<h2>OK Cupid data breach</h2>
+<ul>
+<li>In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details</li>
+<li>Researchers didn’t release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g.&nbsp;usernames</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:60%;">
+<blockquote>
+<p>Some may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.</p>
+<p>Researchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær</p>
+</blockquote>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/okcupid-tweet.png" class="quarto-figure quarto-figure-center" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="algorithmic-bias" class="title-slide slide level1 center">
+<h1>Algorithmic bias</h1>
+
+</section>
+<section id="gettysburg-address" class="slide level2 smaller">
+<h2>Gettysburg address</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="question">
+<p>Randomly select 10 words from the Gettysburg Address and calculate the mean number of letters in these 10 words. Submit your answer at <a href="https://bit.ly/gburg-s24">bit.ly/bit.ly/gburg-s24</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bit.ly_gburg199.png" class="quarto-figure quarto-figure-center" width="150"></p>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/getty.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_1e261eb2" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="your-responses" class="slide level2">
+<h2>Your responses</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "Gettysburg address - Spring 2024 (Responses)".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range 'Form Responses 1'.</code></pre>
+</div>
+
+</div>
+<img data-src="13-ethics_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="comparison-to-truth" class="slide level2">
+<h2>Comparison to “truth”</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 rows containing missing values (`geom_vline()`).</code></pre>
+</div>
+
+</div>
+<img data-src="13-ethics_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="garbage-in-garbage-out" class="slide level2">
+<h2>Garbage in, garbage out</h2>
+<ul>
+<li>In statistical modeling and inference we talk about “garbage in, garbage out” – if you don’t have good (random, representative) data, results of your analysis will not be reliable or generalizable.</li>
+<li>Corollary: Bias in, bias out.</li>
+</ul>
+</section>
+<section id="google-translate" class="slide level2">
+<h2>Google translate</h2>
+<div class="question">
+<p>What might be the reason for Google’s gendered translation? How do ethics play into this situation?</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/google-translate.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://www.engadget.com/2018-12-07-google-remove-gender-bias-translations.html">Engadget - Google is working to remove gender bias in its translations</a></p>
+</div></aside></section>
+<section id="stochastic-parrots" class="slide level2 xxsmall">
+<h2>Stochastic parrots</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Excerpt</a></li><li><a href="#tabset-2-2">Question</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><a href="https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜</a> (Bender et. al., 2021)</p>
+<blockquote>
+<p>The past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.</p>
+</blockquote>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_bdff0ddf" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="question">
+<p>What is meant by “stochastic parrots” in the paper title?</p>
+</div>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section id="machine-bias" class="slide level2 smaller">
+<h2>Machine Bias</h2>
+<p>2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:</p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<blockquote>
+<p>In forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.</p>
+<ul>
+<li><p>The formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.</p></li>
+<li><p>White defendants were mislabeled as low risk more often than black defendants.</p></li>
+</ul>
+</blockquote>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/machine-bias.png" class="quarto-figure quarto-figure-center" width="800"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">ProPublica</a></p>
+</div></aside></section>
+<section id="risk-score-errors" class="slide level2">
+<h2>Risk score errors</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="question">
+<p>What is common among the defendants who were assigned a high/low risk score for reoffending?</p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/machine-bias-petty-theft-1.png" class="quarto-figure quarto-figure-center" width="300" height="250"> <img data-src="images/machine-bias-petty-theft-2.png" class="quarto-figure quarto-figure-center" width="300" height="180"></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/machine-bias-drug-posession-1.png" class="quarto-figure quarto-figure-center" width="300" height="250"> <img data-src="images/machine-bias-drug-posession-2.png" class="quarto-figure quarto-figure-center" width="300" height="180"></p>
+</div>
+</div>
+</section>
+<section id="risk-scores" class="slide level2">
+<h2>Risk scores</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="question">
+<p>How can an algorithm that doesn’t use race as input data be racist?</p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/machine-bias-risk-scores.png" class="quarto-figure quarto-figure-center" width="480"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="other-classes" class="slide level2">
-<h2>Other classes</h2>
-<p>Just a couple of examples…</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Date:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
-<span id="cb21-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-02-29"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "double"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">attributes</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$class
-[1] "Date"</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Date-time:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>now <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="st">"2024-02-08 11:45"</span>, <span class="at">tz =</span> <span class="st">"EST"</span>)</span>
-<span id="cb27-2"><a></a>now</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-02-08 11:45:00 EST"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">typeof</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "double"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">attributes</span>(now)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>$class
-[1] "POSIXct" "POSIXt" 
-
-$tzone
-[1] "EST"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="application-exercise" class="title-slide slide level1 center">
-<h1>Application exercise</h1>
-
+<section id="predicting-ethnicity" class="slide level2 xxsmall">
+<h2>Predicting ethnicity</h2>
+<p><a href="https://imai.fas.harvard.edu/research/race.html">Improving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record</a> (Imran and Khan, 2016)</p>
+<blockquote>
+<p>In both political behavior research and voting rights litigation, turnout and vote choice for different racial groups are often inferred using aggregate election results and racial composition. Over the past several decades, many statistical methods have been proposed to address this ecological inference problem. We propose an alternative method to reduce aggregation bias by predicting individual-level ethnicity from voter registration records. Building on the existing methodological literature, we use Bayes’s rule to combine the Census Bureau’s Surname List with various information from geocoded voter registration records. We evaluate the performance of the proposed methodology using approximately nine million voter registration records from Florida, where self-reported ethnicity is available. We find that it is possible to reduce the false positive rate among Black and Latino voters to 6% and 3%, respectively, while maintaining the true positive rate above 80%. Moreover, we use our predictions to estimate turnout by race and find that our estimates yields substantially less amounts of bias and root mean squared error than standard ecological inference estimates. We provide open-source software to implement the proposed methodology. The open-source software is available for implementing the proposed methodology.</p>
+</blockquote>
 </section>
-<section id="ae-07-population-types" class="slide level2">
-<h2><code>ae-07-population-types</code></h2>
-<div class="appex">
-<ul>
-<li><p>Go to the project navigator in RStudio (top right corner of your RStudio window) and open the project called <code>ae</code>.</p></li>
-<li><p>If there are any uncommitted files, commit them, and then click <strong>Pull</strong>.</p></li>
-<li><p>Open the file called <code>ae-07-population-types.qmd</code> and render it.</p></li>
-</ul>
+<section id="wru-package" class="slide level2">
+<h2><strong>wru</strong> package</h2>
+<p>The said “source software” is the wru package: <a href="https://github.com/kosukeimai/wru" class="uri">https://github.com/kosukeimai/wru</a>.</p>
+<div class="question">
+<p>Do you have any ethical concerns about installing this package?</p>
+</div>
+</section>
+<section id="wru-package-1" class="slide level2 smaller">
+<h2><strong>wru</strong> package</h2>
+<div class="question">
+<p>Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(wru)</span>
+<span id="cb4-2"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> voters, <span class="at">surname.only =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">select</span>(surname, <span class="fu">contains</span>(<span class="st">"pred"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      surname    pred.whi    pred.bla     pred.his    pred.asi    pred.oth
+1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906 0.084557725
+2        Imai 0.052645440 0.001334812 0.0558160072 0.719376581 0.170827160
+3      Rivera 0.043285692 0.008204605 0.9136195794 0.024316883 0.010573240
+4     Fifield 0.895405704 0.001911388 0.0337464844 0.011079323 0.057857101
+5        Zhou 0.006572555 0.001298962 0.0005388581 0.982365594 0.009224032
+6    Ratkovic 0.861236727 0.008212824 0.0095395642 0.011334635 0.109676251
+7     Johnson 0.543815322 0.344128607 0.0272403940 0.007405765 0.077409913
+8       Lopez 0.038939877 0.004920643 0.9318797791 0.012154125 0.012105576
+10 Wantchekon 0.330697188 0.194700665 0.4042849478 0.021379541 0.048937658
+9       Morse 0.866360147 0.044429853 0.0246568086 0.010219712 0.054333479</code></pre>
+</div>
+</div>
+</section>
+<section id="wru-package-2" class="slide level2 smaller">
+<h2><strong>wru</strong> package</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>me <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">surname =</span> <span class="st">"Rundel"</span>)</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> me, <span class="at">surname.only =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Predicting race for 2020</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown or uninitialised column: `state`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Proceeding with last name predictions...</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ All local files already up-to-date!</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  surname  pred.whi pred.bla pred.his pred.asi   pred.oth
+1  Rundel 0.9177967        0        0        0 0.08220329</code></pre>
+</div>
 </div>
 
 <div class="quarto-auto-generated-content">
