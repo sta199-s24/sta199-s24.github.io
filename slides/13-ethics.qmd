@@ -1,0 +1,415 @@
+---
+title: "Data science ethics"
+subtitle: "Lecture 13"
+date: "February 29, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+-   Open your `lab-4` project, save and commit any pending changes, and push them to GitHub
+-   Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+-   Fill out TEAMMATES survey to provide feedback to your teammates bu Sunday night (and to let us know how things are going)
+-   Submit AE 09 (the R script and the Quarto document) by Sunday night
+-   Submit Lab 4 by Monday morning
+
+## Questions from last time
+
+> How do you do that keyboard shortcut where you like drag down text selecting?
+
+. . .
+
+> How do you know when to clean extra space after text if you cannot specifically see the spaces?
+
+. . .
+
+> Will there be a curve for the test?
+
+## Guidelines and best practices for using Chat GPT {.smaller}
+
+-   Do [**not**]{.underline} just copy-paste the prompt – for appropriate academic conduct, for your own learning, and for getting to better results faster
+-   Engineer the prompt until the response starts to look like code you're learning in the course
+-   If the response is not correct, ask for a correction
+-   If the response doesn't follow the guidelines, ask for a correction
+-   Do not just copy-paste code from Chat GPT responses, run it line-by-line and edit as needed
+-   Watch out for clear mistakes in the response: do not keep loading packages that are already loaded, use the base pipe `|>`, use tidyverse-based code, etc.
+
+## Today
+
+Data science ethics:
+
+- Misrepresentation
+
+- Data privacy
+
+- Algorithmic bias
+
+# Misrepresentation
+
+## Stand your ground {.smaller}
+
+::: question
+In 2005, the [*Florida legislature*](https://en.wikipedia.org/w/index.php?search=Florida%20legislature) passed the controversial ["Stand Your Ground" law](https://en.wikipedia.org/wiki/Stand-your-ground_law) that broadened the situations in which citizens can use lethal force to protect themselves against perceived threats.
+Advocates believed that the new law would ultimately reduce crime; opponents feared an increase in the use of lethal force.
+:::
+
+## Stand your ground {.smaller}
+
+::: panel-tabset
+## Question
+
+::: question
+What does the visualization, published by [Reuters](http://static5.businessinsider.com/image/53038b556da8110e5ce82be7-604-756/florida%20gun%20deaths.jpg) on February 16, 2014, say about the number of firearm murders in Florida over the years?
+:::
+
+![](images/stand-your-ground.png){fig-align="center" width="711"}
+
+```{r}
+#| echo: false
+
+countdown(minutes = 3, left = 0, bottom = 0.1)
+```
+
+## Submit
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+# Data privacy
+
+## "Your" data
+
+-   Every time we use apps, websites, and devices, our data is being collected and used or sold to others.
+
+-   More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people.
+
+## Privacy of your data
+
+::: question
+What pieces of data have you left on the internet today?
+Think through everything you've logged into, clicked on, checked in, either actively or automatically, that might be tracking you.
+Do you know where that data is stored?
+Who it can be accessed by?
+Whether it's shared with others?
+:::
+
+## Sharing your data {.smaller}
+
+::: question
+What are you OK with sharing?
+:::
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   Name
+-   Age
+-   Email
+-   Phone Number
+-   List of every video you watch
+-   List of every video you comment on
+:::
+:::
+
+::: {.column width="50%"}
+::: incremental
+-   How you type: speed, accuracy
+-   How long you spend on different content
+-   List of all your private messages (date, time, person sent to)
+-   Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
+:::
+:::
+:::
+
+## What does Google think/know about you?
+
+::: question
+Have you ever thought about why you're seeing an ad on Google?
+Google it!
+Try to figure out if you have ad personalization on and how your ads are personalized.
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 3)
+```
+
+## Your browing history
+
+::: question
+Which of the following are you OK with your browsing history to be used towards?
+:::
+
+::: incremental
+-   For serving you targeted ads
+-   To score you as a candidate for a job
+-   To predict your race/ethnicity for voting purposes
+:::
+
+## Who else gets to use your data?
+
+::: question
+Suppose you create a profile on a social media site and share your personal information on your profile.
+Who else gets to use that data?
+:::
+
+::: incremental
+-   Companies the social media company has a connection to?
+-   Companies the social media company sells your data to?
+-   Researchers?
+:::
+
+## OK Cupid data breach {.xsmall}
+
+-   In 2016, researchers published data of 70,000 OkCupid users---including usernames, political leanings, drug usage, and intimate sexual details
+-   Researchers didn't release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames
+
+. . .
+
+::: columns
+::: {.column width="60%"}
+> Some may object to the ethics of gathering and releasing this data.
+> However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.
+>
+> Researchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær
+:::
+
+::: {.column width="40%"}
+![](images/okcupid-tweet.png){fig-align="center" width="500"}
+:::
+:::
+
+# Algorithmic bias
+
+## Gettysburg address {.smaller}
+
+::: columns
+::: {.column width="30%"}
+::: question
+Randomly select 10 words from the Gettysburg Address and calculate the mean number of letters in these 10 words.
+Submit your answer at [bit.ly/bit.ly/gburg-s24](https://bit.ly/gburg-s24).
+
+![](images/bit.ly_gburg199.png){fig-align="center" width="150"}
+:::
+:::
+
+::: {.column width="70%"}
+![](images/getty.jpg){fig-align="center"}
+:::
+:::
+
+```{r}
+#| echo: false
+
+countdown(minutes = 3, left = 0, bottom = 0.1)
+```
+
+## Your responses
+
+```{r}
+#| echo: false
+
+library(googlesheets4)
+library(tidyverse)
+gs4_deauth()
+gburg <- read_sheet("https://docs.google.com/spreadsheets/d/1It4d1yTzw17ocKwcbjs8gAGI6o0CHfcL5cW6xdMG1WM/edit?usp=sharing")
+names(gburg) <- c("timestamp", "avg")
+ggplot(
+  gburg,
+  aes(x = avg)
+) +
+  geom_histogram() +
+  labs(
+    x = "Submitted averages",
+    y = "Count"
+  )
+```
+
+## Comparison to "truth"
+
+```{r}
+#| echo: false
+
+ggplot(
+  gburg,
+  aes(x = avg)
+) +
+  geom_histogram() +
+  geom_vline(xintercept = 4.22, color = "#FF3E41", linewidth = 2) +
+  geom_vline(xintercept = mean(gburg$avg), color = "#325b74", linewidth = 2) +
+  labs(
+    x = "Submitted averages",
+    y = "Count"
+  )
+```
+
+## Garbage in, garbage out
+
+-   In statistical modeling and inference we talk about "garbage in, garbage out" -- if you don't have good (random, representative) data, results of your analysis will not be reliable or generalizable.
+-   Corollary: Bias in, bias out.
+
+## Google translate
+
+::: question
+What might be the reason for Google's gendered translation?
+How do ethics play into this situation?
+:::
+
+![](images/google-translate.png){fig-align="center"}
+
+::: aside
+Source: [Engadget - Google is working to remove gender bias in its translations](https://www.engadget.com/2018-12-07-google-remove-gender-bias-translations.html)
+:::
+
+## Stochastic parrots {.xxsmall}
+
+::: {.panel-tabset}
+
+## Excerpt
+
+[On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜](https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf) (Bender et. al., 2021)
+
+> The past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.
+
+```{r}
+#| echo: false
+
+countdown(minutes = 5)
+```
+
+## Question
+
+::: question
+What is meant by “stochastic parrots” in the paper title?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+## Machine Bias {.smaller}
+
+2016 ProPublica article on algorithm used for rating a defendant's risk of future crime:
+
+::: columns
+::: {.column width="70%"}
+> In forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.
+>
+> -   The formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.
+>
+> -   White defendants were mislabeled as low risk more often than black defendants.
+:::
+
+::: {.column width="30%"}
+![](images/machine-bias.png){fig-align="center" width="800"}
+:::
+:::
+
+::: aside
+Source: [ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+:::
+
+## Risk score errors
+
+::: columns
+::: {.column width="35%"}
+::: question
+What is common among the defendants who were assigned a high/low risk score for reoffending?
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+![](images/machine-bias-petty-theft-1.png){fig-align="center" width="300" height="250"} ![](images/machine-bias-petty-theft-2.png){fig-align="center" width="300" height="180"}
+:::
+
+::: {.column width="30%"}
+![](images/machine-bias-drug-posession-1.png){fig-align="center" width="300" height="250"} ![](images/machine-bias-drug-posession-2.png){fig-align="center" width="300" height="180"}
+:::
+:::
+
+## Risk scores
+
+::: columns
+::: {.column width="35%"}
+::: question
+How can an algorithm that doesn't use race as input data be racist?
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="60%"}
+![](images/machine-bias-risk-scores.png){fig-align="center" width="480"}
+:::
+:::
+
+## Predicting ethnicity {.xxsmall}
+
+[Improving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record](https://imai.fas.harvard.edu/research/race.html) (Imran and Khan, 2016)
+
+> In both political behavior research and voting rights litigation, turnout and vote choice for different racial groups are often inferred using aggregate election results and racial composition. Over the past several decades, many statistical methods have been proposed to address this ecological inference problem. We propose an alternative method to reduce aggregation bias by predicting individual-level ethnicity from voter registration records. Building on the existing methodological literature, we use Bayes’s rule to combine the Census Bureau’s Surname List with various information from geocoded voter registration records. We evaluate the performance of the proposed methodology using approximately nine million voter registration records from Florida, where self-reported ethnicity is available. We find that it is possible to reduce the false positive rate among Black and Latino voters to 6% and 3%, respectively, while maintaining the true positive rate above 80%. Moreover, we use our predictions to estimate turnout by race and find that our estimates yields substantially less amounts of bias and root mean squared error than standard ecological inference estimates. We provide open-source software to implement the proposed methodology. The open-source software is available for implementing the proposed methodology.
+
+## **wru** package
+
+The said “source software” is the wru package: <https://github.com/kosukeimai/wru>.
+
+::: question
+Do you have any ethical concerns about installing this package?
+:::
+
+## **wru** package {.smaller}
+
+::: question
+Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?
+:::
+
+```{r}
+#| cache: true
+#| message: false
+
+library(wru)
+predict_race(voter.file = voters, surname.only = TRUE) |>
+  select(surname, contains("pred"))
+```
+
+## **wru** package {.smaller}
+
+```{r}
+#| cache: true
+
+me <- tibble(surname = "Rundel")
+
+predict_race(voter.file = me, surname.only = TRUE)
+```
