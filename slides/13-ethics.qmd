@@ -214,7 +214,7 @@ Who else gets to use that data?
 Randomly select 10 words from the Gettysburg Address and calculate the mean number of letters in these 10 words.
 Submit your answer at [bit.ly/bit.ly/gburg-s24](https://bit.ly/gburg-s24).
 
-![](images/bit.ly_gburg199.png){fig-align="center" width="150"}
+![](images/bit.ly_gburg-s24.png){fig-align="center" width="150"}
 :::
 :::
 
