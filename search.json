@@ -3921,14 +3921,14 @@
     "href": "slides/13-ethics.html#your-responses",
     "title": "Data science ethics",
     "section": "Your responses",
-    "text": "Your responses\n\n\n✔ Reading from \"Gettysburg address - Spring 2024 (Responses)\".\n\n\n✔ Range 'Form Responses 1'.\n\n\n✖ Request failed [502]. Retry 1 happens in 6.6 seconds ...\n\n\n✖ Request failed [502]. Retry 2 happens in 13.2 seconds ..."
+    "text": "Your responses\n\n\n✔ Reading from \"Gettysburg address - Spring 2024 (Responses)\".\n\n\n✔ Range 'Form Responses 1'.\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
   },
   {
     "objectID": "slides/13-ethics.html#comparison-to-truth",
     "href": "slides/13-ethics.html#comparison-to-truth",
     "title": "Data science ethics",
     "section": "Comparison to “truth”",
-    "text": "Comparison to “truth”\n\n\nWarning: Removed 1 rows containing missing values (`geom_vline()`)."
+    "text": "Comparison to “truth”\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
   },
   {
     "objectID": "slides/13-ethics.html#garbage-in-garbage-out",
