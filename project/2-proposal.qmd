@@ -39,7 +39,7 @@ The data sets should meet the following criteria:
 
 -   You may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.
 
--   We strongly recommend curating at least one of your datasets via web scraping.
+-   You can curate one of your datasets via web scraping.
 
 **Please ask a member of the teaching team if you're unsure whether your data set meets the criteria.**
 
