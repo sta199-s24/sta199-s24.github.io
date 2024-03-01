@@ -433,26 +433,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercise-1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <p>For each of the character strings below, determine if the string is an proper code chunk label to use in a document <strong>when rendering to PDF</strong>. If not, explain why. You’re welcomed to try them out to check.</p>
-<ol type="a">
-<li><p>Chunk 1:</p>
-<!-- -->
-<pre><code>#| label: label with spaces</code></pre></li>
-<li><p>Chunk 2:</p>
-<!-- -->
-<pre><code>#| label: reaaaaaaaaaalllllllllyyyyy-long-label 
-#|        with-line-breaks</code></pre></li>
-<li><p>Chunk 3:</p></li>
-</ol>
-<pre><code>&lt;!-- --&gt;
-
-```         
-#| label: 1-label-starting-with-number
-```</code></pre>
-<ol start="4" type="a">
-<li><p>Chunk 4:</p>
-<!-- -->
-<pre><code>#| label: label-with-dashes</code></pre></li>
-</ol>
+<p>a. Chunk 1:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: reaaaaaaaaaalllllllllyyyyy-long-label</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">#|        with-line-breaks</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">1 + 1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>b. Chunk 2:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: 1-label-starting-with-number</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">1 + 1</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>c. Chunk 3:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: label with spaces</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">1 + 1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>d. Chunk 4:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: label-with-dashes</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">1 + 1</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
@@ -463,8 +476,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>error</code></p></li>
 <li><p><code>warning</code></p></li>
 <li><p><code>echo</code></p></li>
-</ul></li>
-<li><p>What do the chunk options <code>fig-height</code> and <code>fig-width</code> do – what do they do when they’re set in a single code chunk and what do they do when they’re set in the document YAML on top?</p></li>
+</ul>
+<p>To answer this question I recommend adding each of the chunk options, one at a time, and re-rendering the document with some sample code in the chunk.</p></li>
+<li><p>What do the chunk options <code>fig-height</code> and <code>fig-width</code> do – what do they do when they’re set in a single code chunk and what do they do when they’re set in the document YAML on top?</p>
+<p>To answer this question I recommend creating two code chunks with the same plotting code in them, re-rendering the document with different values for these chunk options in the chunk YAML and then different values in the document YAML.</p></li>
 </ol>
 </section>
 </section>
@@ -565,7 +580,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Part 5 - Ethics</h1>
 <section id="exercise-10" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-10">Exercise 10</h2>
-<p>To complete this exercise you will first need to watch the documentary Coded Bias. To do so, you either need to be on the Duke network or connected to the Duke VPN. Then go to <a href="https://find.library.duke.edu/catalog/DUKE009834953" class="uri">https://find.library.duke.edu/catalog/DUKE009834953</a> and click on “View Online”. Once you watch the video, write a one paragraph reflection highlighting at least one thing that you already knew about (from the course prep materials) and at least one thing you learned from the movie as well as any other aspects of the documentary that you found interesting / enlightening.</p>
+<p>To complete this exercise you will first need to watch the documentary Coded Bias. To do so, you either need to be on the Duke network or connected to the Duke VPN. Then go to <a href="https://find.library.duke.edu/catalog/DUKE009834953" class="uri">https://find.library.duke.edu/catalog/DUKE009834953</a> and click on “View Online”. Once you watch the video, write a reflection in 2-5 bullet points highlighting at least one thing that you already knew about (from the course prep materials) and at least one thing you learned from the movie as well as any other aspects of the documentary that you found interesting / enlightening.</p>
+<p>Reminder about Chat GPT usage.</p>
 <div class="render-commit-push">
 <p><br></p>
 <p>Render, commit, and push one last time. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
