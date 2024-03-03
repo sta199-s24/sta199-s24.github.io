@@ -1,5 +1,5 @@
 ---
-title: "Lab 5 - TBA"
+title: "Lab 5 - Potpourri"
 categories: "Lab"
 ---
 
