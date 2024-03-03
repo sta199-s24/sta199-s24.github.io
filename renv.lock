@@ -11,14 +11,14 @@
   "Packages": {
     "DBI": {
       "Package": "DBI",
-      "Version": "1.2.0",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "3e0051431dff9acfe66c23765e55c556"
+      "Hash": "164809cd72e1d5160b4cb3aa57f510fe"
     },
     "DT": {
       "Package": "DT",
@@ -80,6 +80,24 @@
       ],
       "Hash": "1a00d4828f33a9d690806e98bd17150c"
     },
+    "PL94171": {
+      "Package": "PL94171",
+      "Version": "1.1.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "dplyr",
+        "httr",
+        "readr",
+        "sf",
+        "stringr",
+        "tinytiger",
+        "withr"
+      ],
+      "Hash": "50b22cca63166eb6930cb1d0dd237049"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -110,6 +128,20 @@
         "utils"
       ],
       "Hash": "5ea2700d21e038ace58269ecdbeb9ec0"
+    },
+    "RcppArmadillo": {
+      "Package": "RcppArmadillo",
+      "Version": "0.12.8.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "847fc78bd9f83f55696b4b016482f7ed"
     },
     "Rttf2pt1": {
       "Package": "Rttf2pt1",
@@ -499,6 +531,16 @@
       ],
       "Hash": "6ea17a32294d8ca00455825ab0cf71b9"
     },
+    "datasauRus": {
+      "Package": "datasauRus",
+      "Version": "0.1.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "d272d768e65f7cf7e94ab5f327dabedd"
+    },
     "dbplyr": {
       "Package": "dbplyr",
       "Version": "2.4.0",
@@ -719,6 +761,22 @@
         "methods"
       ],
       "Hash": "47b5f30c720c23999b913a1a635cf0bb"
+    },
+    "furrr": {
+      "Package": "furrr",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "future",
+        "globals",
+        "lifecycle",
+        "purrr",
+        "rlang",
+        "vctrs"
+      ],
+      "Hash": "da7a4c32196cb2262a41dd5a25d486ff"
     },
     "future": {
       "Package": "future",
@@ -1495,6 +1553,23 @@
       ],
       "Hash": "8da17de8b15c89b574269fc414ff4e20"
     },
+    "piggyback": {
+      "Package": "piggyback",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "cli",
+        "fs",
+        "gh",
+        "glue",
+        "httr",
+        "jsonlite",
+        "lubridate",
+        "memoise"
+      ],
+      "Hash": "8bb22d293b2f482257d396883cfb2821"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
@@ -1685,7 +1760,7 @@
     },
     "readr": {
       "Package": "readr",
-      "Version": "2.1.4",
+      "Version": "2.1.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1704,7 +1779,7 @@
         "utils",
         "vroom"
       ],
-      "Hash": "b5047343b3825f37ad9d3b5d89aa1078"
+      "Hash": "9de96463d2117f6ac49980577939dfb3"
     },
     "readxl": {
       "Package": "readxl",
@@ -2112,7 +2187,7 @@
     },
     "tidyr": {
       "Package": "tidyr",
-      "Version": "1.3.0",
+      "Version": "1.3.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2131,7 +2206,7 @@
         "utils",
         "vctrs"
       ],
-      "Hash": "e47debdc7ce599b070c8e78e8ac0cfcf"
+      "Hash": "915fb7ce036c22a6a33b5a8adb712eb1"
     },
     "tidyselect": {
       "Package": "tidyselect",
@@ -2233,14 +2308,14 @@
     },
     "timechange": {
       "Package": "timechange",
-      "Version": "0.2.0",
+      "Version": "0.3.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
         "cpp11"
       ],
-      "Hash": "8548b44f79a35ba1791308b61e6012d7"
+      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8"
     },
     "tinytex": {
       "Package": "tinytex",
@@ -2251,6 +2326,21 @@
         "xfun"
       ],
       "Hash": "5ac22900ae0f386e54f1c307eca7d843"
+    },
+    "tinytiger": {
+      "Package": "tinytiger",
+      "Version": "0.0.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "curl",
+        "glue",
+        "rlang",
+        "sf"
+      ],
+      "Hash": "b9626abc932685108b4a29aa0b1817fb"
     },
     "tokenizers": {
       "Package": "tokenizers",
@@ -2466,6 +2556,33 @@
         "R"
       ],
       "Hash": "5d4545e140e36476f35f20d0ca87963e"
+    },
+    "wru": {
+      "Package": "wru",
+      "Version": "3.0.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "wru",
+      "RemoteUsername": "kosukeimai",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "c068e5648a430f84fa87e59ff3536f5a1d1a8c62",
+      "Requirements": [
+        "PL94171",
+        "R",
+        "Rcpp",
+        "RcppArmadillo",
+        "cli",
+        "dplyr",
+        "furrr",
+        "future",
+        "piggyback",
+        "purrr",
+        "rlang",
+        "tidyr",
+        "utils"
+      ],
+      "Hash": "9cd75d4c70fd417e7111f06df9eecc3b"
     },
     "xfun": {
       "Package": "xfun",
