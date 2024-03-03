@@ -213,7 +213,7 @@ b.  Using your table from part (a), calculate the proportion of individuals in t
 
 c.  Using your table from part (a), calculate the proportion of individuals in this sample who are 18-49 and planning to vote for Donald Trump.
 
-## Exercise 8
+## Exercise 9
 
 a.  Create an appropriate visualization to for the relationship between `age` and `vote`.
     Your plot should include appropriate labels.
