@@ -1,0 +1,392 @@
+---
+title: "The language of models"
+subtitle: "Lecture 14"
+date: "March 5, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+-   TEAMMATES survey to provide feedback to your teammates deadline extended to tonight (Tuesday, 3/5) till midnight
+-   Lab 5 due upon return from Spring Break, 8 am on Monday as usual -- help will be available on Ed over the break (though a bit more sporadically)
+-   Monday after Spring Break: All team members must be in lab to work on project proposal
+
+## Questions from last time
+
+> Are there universal standards for ethical data scraping?
+
+. . .
+
+> How will we be tested on data science ethics?
+
+## Goals
+
+-   What is a model?
+-   Why do we model?
+-   What is correlation?
+
+## Setup
+
+```{r}
+#| label: load-pkg
+
+library(tidyverse)
+library(gt)
+```
+
+# Prediction / classification
+
+## Let's drive a Tesla!
+
+{{< video https://www.youtube.com/embed/xvqQ4F7Yf2o start="150" width="900" height="600" >}}
+
+## Semi or garage? {.smaller}
+
+> i love how Tesla thinks the wall in my garage is a semi.
+> 😅
+
+![](images/tesla-get-wrong-1.png){fig-align="center" width="300"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how_tesla_thinks_the_wall_in_my_garage_is/)
+:::
+
+## Semi or garage? {.smaller}
+
+> New owner here.
+> Just parked in my garage.
+> Tesla thinks I crashed onto a semi.
+
+![](images/tesla-get-wrong-2.png){fig-align="center" width="300"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner_here_just_parked_in_my_garage_tesla/)
+:::
+
+## Car or trash?
+
+> Tesla calls Mercedes trash
+
+![](images/tesla-get-wrong-3.png){fig-align="center" width="500"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/tesla_calls_mercedes_trash/)
+:::
+
+# Description
+
+## Leisure, commute, physical activity and BP {.smaller}
+
+> [Relation Between Leisure Time, Commuting, and Occupational Physical Activity With Blood Pressure in 125,402 Adults: The Lifelines Cohort](https://www.ahajournals.org/doi/full/10.1161/JAHA.119.014313)
+>
+> Byambasukh, Oyuntugs, Harold Snieder, and Eva Corpeleijn.
+> "Relation between leisure time, commuting, and occupational physical activity with blood pressure in 125 402 adults: the lifelines cohort." *Journal of the American Heart Association* 9.4 (2020): e014313.
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Background:** Whether all domains of daily‐life moderate‐to‐vigorous physical activity (MVPA) are associated with lower blood pressure (BP) and how this association depends on age and body mass index remains unclear.
+
+**Methods and Results:** In the population‐based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health‐Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure‐time, and occupational PA.
+BP was assessed using the last 3 of 10 measurements after 10 minutes’ rest in the supine position.
+Hypertension was defined as systolic BP ≥140 mm Hg and/or diastolic BP ≥90 mm Hg and/or use of antihypertensives.
+In regression analysis, higher commuting and leisure‐time but not occupational MVPA related to lower BP and lower hypertension risk.
+Commuting‐and‐leisure‐time MVPA was associated with BP in a dose‐dependent manner.
+β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and finally −2.90 (−3.29 to −2.50) mm Hg systolic BP for the low, middle, and highest tertile of MVPA compared with “No MVPA” as the reference group after adjusting for age, sex, education, smoking and alcohol use.
+Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension.
+This association was age dependent.
+β Coefficients (95% CI) for the highest tertiles of commuting‐and‐leisure‐time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm Hg systolic BP in adults \<40, 40 to 60, and \>60 years, respectively.
+
+**Conclusions:** Higher commuting and leisure‐time but not occupational MVPA were significantly associated with lower BP and lower hypertension risk at all ages, but these associations were stronger in older adults.
+
+# Modeling
+
+## Modeling cars {.smaller}
+
+::: question
+-   What is the relationship between cars' weights and their mileage?
+-   What is your best guess for a car's MPG that weighs 3,500 pounds?
+:::
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Describe:** What is the relationship between cars' weights and their mileage?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#E34A6F")
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Predict:** What is your best guess for a car's MPG that weighs 3,500 pounds?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", se = FALSE, color = "darkgray", linetype = "dashed") +
+  geom_segment(
+    aes(x = 3.5, xend = 3.5, y = -Inf, yend = 18.5),
+    color = "#E34A6F"
+  ) +
+  geom_segment(
+    aes(x = -Inf, xend = 3.5, y = 18.5, yend = 18.5),
+    color = "#E34A6F"
+  )
+```
+
+## Modelling
+
+-   Use models to explain the relationship between variables and to make predictions
+-   For now we will focus on **linear** models (but there are *many* *many* other types of models too!)
+
+## Modelling vocabulary
+
+-   Predictor (explanatory variable)
+-   Outcome (response variable)
+-   Regression line
+    -   Slope
+    -   Intercept
+-   Correlation
+
+## Predictor (explanatory variable)
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  )
+```
+
+::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#E34A6F"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = wt)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.x = element_text(color = "#E34A6F", face = "bold", size = 16)
+  )
+```
+:::
+:::
+
+## Outcome (response variable)
+
+::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#E34A6F"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = mpg)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.y = element_text(color = "#E34A6F", face = "bold", size = 16)
+  )
+```
+:::
+:::
+
+## Regression line
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#E34A6F", linewidth = 1.5, se = FALSE)
+```
+
+## Regression line: slope
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  annotate(
+    geom = "segment",
+    x = 4, xend = 5, y = 16, yend = 16, 
+    linetype = "dashed", color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "segment",
+    x = 5, xend = 5, y = 16, yend = 10.6, 
+    color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "text",
+    x = 5.2, y = 13, label = "slope", 
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Regression line: intercept
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "gray", se = FALSE, fullrange = TRUE, linetype = "dashed") +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  scale_x_continuous(limits = c(0, 5.5)) +
+  annotate(
+    geom = "point",
+    shape = 1, size = 4, stroke = 2,
+    x = 0, y = 37.4, 
+    color = "#E34A6F"
+  ) +
+  annotate(
+    geom = "text",
+    label = "intercept",
+    x = 0.5, y = 37.4, 
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+```{r}
+#| echo: false
+
+r <- mtcars |>
+  summarize(cor = round(cor(mpg, wt), 2)) |>
+  pull()
+
+base +
+  stat_ellipse(geom = "polygon", color = "#E34A6F", fill = "#E34A6F30") +
+  annotate(
+    geom = "text",
+    x = 3.5, y = 27.5, 
+    label = paste("r =", r),
+    color = "#E34A6F", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+-   Ranges between -1 and 1.
+-   Same sign as the slope.
+
+![](images/15/corr-example.png){fig-align="center"}
+
+## Visualizing the model
+
+```{r}
+#| message: false
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+# Application exercise
+
+## Application exercise: `ae-10-modeling-fish` {.smaller}
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Work on `ae-10-modeling-fish.qmd`.
+:::
