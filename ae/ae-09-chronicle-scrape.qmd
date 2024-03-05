@@ -1,6 +1,5 @@
 ---
-title: "Opinion articles in The Chronicle"
-editor: visual
+title: "AE 09: Opinion articles in The Chronicle"
 ---
 
 ## Part 1 - Data scraping

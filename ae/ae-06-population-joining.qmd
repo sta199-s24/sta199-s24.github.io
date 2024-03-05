@@ -1,7 +1,5 @@
 ---
 title: "AE 06: Joining country populations with continents"
-categories: 
-  - Application exercise
 ---
 
 ## Goal

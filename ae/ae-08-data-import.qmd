@@ -1,7 +1,5 @@
 ---
 title: "AE 08: Data import"
-categories: 
-  - Application exercise
 ---
 
 ## Packages

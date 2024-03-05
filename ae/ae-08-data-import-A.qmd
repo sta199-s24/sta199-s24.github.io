@@ -6,6 +6,11 @@ categories:
   - Answers
 ---
 
+::: callout-important
+These are suggested answers.
+This document should be used as reference only, it's not designed to be an exhaustive key.
+:::
+
 ## Packages
 
 We will use the following two packages in this application exercise.

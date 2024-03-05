@@ -235,8 +235,7 @@ flights |>
   mutate(perc = n / sum(n) * 100)
 ```
 
--   Demo: Create a new variable, `rdu_bound`, which indicates whether the flight is to RDU or not.
-    Then, for each departure airport (`origin`), calculate what proportion of flights originating from that airport are to RDU.
+-   Demo: Create a new variable, `rdu_bound`, which indicates whether the flight is to RDU or not. Then, for each departure airport (`origin`), calculate what proportion of flights originating from that airport are to RDU.
 
 ```{r}
 #| label: rdu-bound

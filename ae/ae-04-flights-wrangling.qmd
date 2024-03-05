@@ -1,6 +1,5 @@
 ---
 title: "AE 04: NYC flights + data wrangling"
-editor: visual
 ---
 
 ```{r}

@@ -1,5 +1,5 @@
 ---
-title: "AE 03 - Duke Forest"
+title: "AE 03: Duke Forest"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise

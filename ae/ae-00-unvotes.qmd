@@ -1,8 +1,5 @@
 ---
 title: "UN Votes"
-author: "Mine Çetinkaya-Rundel"
-format: html
-editor: visual
 ---
 
 ## Introduction

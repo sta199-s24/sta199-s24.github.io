@@ -1,11 +1,15 @@
 ---
 title: "AE 07: Types and classes and populations"
+subtitle: "Suggested answers"
 categories: 
   - Application exercise
-editor: visual
-editor_options: 
-  chunk_output_type: console
+  - Answers
 ---
+
+::: callout-important
+These are suggested answers.
+This document should be used as reference only, it's not designed to be an exhaustive key.
+:::
 
 ## Packages
 

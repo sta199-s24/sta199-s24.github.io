@@ -1,8 +1,5 @@
 ---
 title: "AE 01: Meet the penguins"
-author: "Insert name"
-format: html
-editor: visual
 ---
 
 For this application exercise, we'll use the **tidyverse** and **palmerpenguins** packages.

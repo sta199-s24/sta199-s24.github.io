@@ -1,6 +1,5 @@
 ---
 title: "AE 05: Tidying StatSci Majors"
-editor: visual
 ---
 
 ## Goal

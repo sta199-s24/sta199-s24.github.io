@@ -1,13 +1,15 @@
 ---
-title: "Opinion articles in The Chronicle"
+title: "AE 09: Opinion articles in The Chronicle"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise
   - Answers
-editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
+
+::: callout-important
+These are suggested answers.
+This document should be used as reference only, it's not designed to be an exhaustive key.
+:::
 
 ## Part 1 - Data scraping
 

@@ -117,14 +117,11 @@ population_continent |>
   filter(is.na(continent))
 ```
 
--   **Think out loud:** Which continent do you think has the highest population?
-    Which do you think has the second highest?
-    The lowest?
+-   **Think out loud:** Which continent do you think has the highest population? Which do you think has the second highest? The lowest?
 
 Add your response here.
 
--   **Demo:** Create a new data frame called `population_summary` that contains a row for each continent and a column for the total population for that continent, in descending order of population.
-    Note that the function for calculating totals in R is `sum()`.
+-   **Demo:** Create a new data frame called `population_summary` that contains a row for each continent and a column for the total population for that continent, in descending order of population. Note that the function for calculating totals in R is `sum()`.
 
 ```{r}
 #| label: population-continents-sum
