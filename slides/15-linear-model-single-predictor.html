@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-03-05">
-  <title>STA 199 - The language of models</title>
+  <meta name="dcterms.date" content="2024-03-07">
+  <title>STA 199 - Linear regression with a single predictor</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -388,11 +388,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - The language of models">
-<meta property="og:description" content="Lecture 14">
+<meta property="og:title" content="STA 199 - Linear regression with a single predictor">
+<meta property="og:description" content="Lecture 15">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - The language of models">
-<meta name="twitter:description" content="Lecture 14">
+<meta name="twitter:title" content="STA 199 - Linear regression with a single predictor">
+<meta name="twitter:description" content="Lecture 15">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -402,8 +402,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">The language of models</h1>
-  <p class="subtitle">Lecture 14</p>
+  <h1 class="title">Linear regression with a single predictor</h1>
+  <p class="subtitle">Lecture 15</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,1216 +416,41 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-03-05</p>
+  <p class="date">2024-03-07</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
 <h1>Warm up</h1>
 
 </section>
-<section id="while-you-wait-for-class-to-begin" class="slide level2">
-<h2>While you wait for class to begin…</h2>
-<div>
-<p>Any questions from prepare materials?</p>
-</div>
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
-</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>TEAMMATES survey to provide feedback to your teammates deadline extended to tonight (Tuesday, 3/5) till midnight</li>
-<li>Lab 5 due upon return from Spring Break, 8 am on Monday as usual – help will be available on Ed over the break (though a bit more sporadically)</li>
-<li>Monday after Spring Break: All team members must be in lab to work on project proposal</li>
+<li>…</li>
 </ul>
 </section>
 <section id="questions-from-last-time" class="slide level2">
 <h2>Questions from last time</h2>
-<blockquote>
-<p>Are there universal standards for ethical data scraping?</p>
-</blockquote>
-<div class="fragment">
-<blockquote>
-<p>How will we be tested on data science ethics?</p>
-</blockquote>
-</div>
 </section>
 <section id="goals" class="slide level2">
 <h2>Goals</h2>
 <ul>
-<li>What is a model?</li>
-<li>Why do we model?</li>
-<li>What is correlation?</li>
+<li>Modeling with a single predictor</li>
+<li>Model parameters, estimates, and error terms</li>
+<li>Interpreting slopes and intercepts</li>
 </ul>
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(gt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(fivethirtyeight) <span class="co"># for the fandango dataset</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
-<section id="prediction-classification" class="title-slide slide level1 center">
-<h1>Prediction / classification</h1>
-
-</section>
-<section id="lets-drive-a-tesla" class="slide level2">
-<h2>Let’s drive a Tesla!</h2>
-<iframe data-external="1" src="https://www.youtube.com/embed/xvqQ4F7Yf2o?start=150" width="900" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</section>
-<section id="semi-or-garage" class="slide level2 smaller">
-<h2>Semi or garage?</h2>
-<blockquote>
-<p>i love how Tesla thinks the wall in my garage is a semi. 😅</p>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/tesla-get-wrong-1.png" class="quarto-figure quarto-figure-center" width="300"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how_tesla_thinks_the_wall_in_my_garage_is/">Reddit</a></p>
-</div></aside></section>
-<section id="semi-or-garage-1" class="slide level2 smaller">
-<h2>Semi or garage?</h2>
-<blockquote>
-<p>New owner here. Just parked in my garage. Tesla thinks I crashed onto a semi.</p>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/tesla-get-wrong-2.png" class="quarto-figure quarto-figure-center" width="300"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner_here_just_parked_in_my_garage_tesla/">Reddit</a></p>
-</div></aside></section>
-<section id="car-or-trash" class="slide level2">
-<h2>Car or trash?</h2>
-<blockquote>
-<p>Tesla calls Mercedes trash</p>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/tesla-get-wrong-3.png" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/tesla_calls_mercedes_trash/">Reddit</a></p>
-</div></aside></section></section>
-<section>
-<section id="description" class="title-slide slide level1 center">
-<h1>Description</h1>
-
-</section>
-<section id="leisure-commute-physical-activity-and-bp" class="slide level2 smaller">
-<h2>Leisure, commute, physical activity and BP</h2>
-<blockquote>
-<p><a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.119.014313">Relation Between Leisure Time, Commuting, and Occupational Physical Activity With Blood Pressure in 125,402 Adults: The Lifelines Cohort</a></p>
-<p>Byambasukh, Oyuntugs, Harold Snieder, and Eva Corpeleijn. “Relation between leisure time, commuting, and occupational physical activity with blood pressure in 125 402 adults: the lifelines cohort.” <em>Journal of the American Heart Association</em> 9.4 (2020): e014313.</p>
-</blockquote>
-</section>
-<section id="leisure-commute-physical-activity-and-bp-1" class="slide level2 smaller scrollable">
-<h2>Leisure, commute, physical activity and BP</h2>
-<p><strong>Background:</strong> Whether all domains of daily‐life moderate‐to‐vigorous physical activity (MVPA) are associated with lower blood pressure (BP) and how this association depends on age and body mass index remains unclear.</p>
-<p><strong>Methods and Results:</strong> In the population‐based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health‐Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure‐time, and occupational PA. BP was assessed using the last 3 of 10 measurements after 10&nbsp;minutes’ rest in the supine position. Hypertension was defined as systolic BP ≥140&nbsp;mm&nbsp;Hg and/or diastolic BP ≥90&nbsp;mm&nbsp;Hg and/or use of antihypertensives. In regression analysis, higher commuting and leisure‐time but not occupational MVPA related to lower BP and lower hypertension risk. Commuting‐and‐leisure‐time MVPA was associated with BP in a dose‐dependent manner. β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and finally −2.90 (−3.29 to −2.50) mm&nbsp;Hg systolic BP for the low, middle, and highest tertile of MVPA compared with “No MVPA” as the reference group after adjusting for age, sex, education, smoking and alcohol use. Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension. This association was age dependent. β Coefficients (95% CI) for the highest tertiles of commuting‐and‐leisure‐time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm&nbsp;Hg systolic BP in adults &lt;40, 40 to 60, and &gt;60&nbsp;years, respectively.</p>
-<p><strong>Conclusions:</strong> Higher commuting and leisure‐time but not occupational MVPA were significantly associated with lower BP and lower hypertension risk at all ages, but these associations were stronger in older adults.</p>
-</section></section>
-<section>
-<section id="modeling" class="title-slide slide level1 center">
-<h1>Modeling</h1>
-
-</section>
-<section id="modeling-cars" class="slide level2 smaller">
-<h2>Modeling cars</h2>
-<div class="question">
-<ul>
-<li>What is the relationship between cars’ weights and their mileage?</li>
-<li>What is your best guess for a car’s MPG that weighs 3,500 pounds?</li>
-</ul>
-</div>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section>
-<section id="modelling-cars" class="slide level2 smaller">
-<h2>Modelling cars</h2>
-<div class="question">
-<p><strong>Describe:</strong> What is the relationship between cars’ weights and their mileage?</p>
-</div>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-4-1.png" width="672" class="r-stretch"></section>
-<section id="modelling-cars-1" class="slide level2 smaller">
-<h2>Modelling cars</h2>
-<div class="question">
-<p><strong>Predict:</strong> What is your best guess for a car’s MPG that weighs 3,500 pounds?</p>
-</div>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-5-1.png" width="672" class="r-stretch"></section>
-<section id="modelling" class="slide level2">
-<h2>Modelling</h2>
-<ul>
-<li>Use models to explain the relationship between variables and to make predictions</li>
-<li>For now we will focus on <strong>linear</strong> models (but there are <em>many</em> <em>many</em> other types of models too!)</li>
-</ul>
-</section>
-<section id="modelling-vocabulary" class="slide level2">
-<h2>Modelling vocabulary</h2>
-<ul>
-<li>Predictor (explanatory variable)</li>
-<li>Outcome (response variable)</li>
-<li>Regression line
-<ul>
-<li>Slope</li>
-<li>Intercept</li>
-</ul></li>
-<li>Correlation</li>
-</ul>
-</section>
-<section id="predictor-explanatory-variable" class="slide level2">
-<h2>Predictor (explanatory variable)</h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<div class="cell">
-<div class="cell-output-display">
-<div id="uehkvuohtm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uehkvuohtm table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#uehkvuohtm thead, #uehkvuohtm tbody, #uehkvuohtm tfoot, #uehkvuohtm tr, #uehkvuohtm td, #uehkvuohtm th {
-  border-style: none;
-}
-
-#uehkvuohtm p {
-  margin: 0;
-  padding: 0;
-}
-
-#uehkvuohtm .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#uehkvuohtm .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#uehkvuohtm .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#uehkvuohtm .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#uehkvuohtm .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#uehkvuohtm .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#uehkvuohtm .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#uehkvuohtm .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#uehkvuohtm .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#uehkvuohtm .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#uehkvuohtm .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#uehkvuohtm .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#uehkvuohtm .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#uehkvuohtm .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#uehkvuohtm .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uehkvuohtm .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#uehkvuohtm .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#uehkvuohtm .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#uehkvuohtm .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uehkvuohtm .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#uehkvuohtm .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uehkvuohtm .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#uehkvuohtm .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uehkvuohtm .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uehkvuohtm .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uehkvuohtm .gt_left {
-  text-align: left;
-}
-
-#uehkvuohtm .gt_center {
-  text-align: center;
-}
-
-#uehkvuohtm .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#uehkvuohtm .gt_font_normal {
-  font-weight: normal;
-}
-
-#uehkvuohtm .gt_font_bold {
-  font-weight: bold;
-}
-
-#uehkvuohtm .gt_font_italic {
-  font-style: italic;
-}
-
-#uehkvuohtm .gt_super {
-  font-size: 65%;
-}
-
-#uehkvuohtm .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#uehkvuohtm .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#uehkvuohtm .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#uehkvuohtm .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#uehkvuohtm .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#uehkvuohtm .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#uehkvuohtm .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="header gt_col_headings">
-<th id="mpg" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">mpg</th>
-<th id="wt" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">wt</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg">21</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">2.62</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg">21</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">2.875</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg">22.8</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">2.32</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg">21.4</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">3.215</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg">18.7</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">3.44</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg">18.1</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">3.46</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg">...</td>
-<td class="gt_row gt_right" headers="wt" style="background-color: #E34A6F; color: #FFFFFF">...</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:70%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="14-language-of-models_files/figure-html/unnamed-chunk-8-1.png" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="outcome-response-variable" class="slide level2">
-<h2>Outcome (response variable)</h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<div class="cell">
-<div class="cell-output-display">
-<div id="fsfeoczcko" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fsfeoczcko table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#fsfeoczcko thead, #fsfeoczcko tbody, #fsfeoczcko tfoot, #fsfeoczcko tr, #fsfeoczcko td, #fsfeoczcko th {
-  border-style: none;
-}
-
-#fsfeoczcko p {
-  margin: 0;
-  padding: 0;
-}
-
-#fsfeoczcko .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#fsfeoczcko .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#fsfeoczcko .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#fsfeoczcko .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#fsfeoczcko .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#fsfeoczcko .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#fsfeoczcko .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#fsfeoczcko .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#fsfeoczcko .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#fsfeoczcko .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#fsfeoczcko .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#fsfeoczcko .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#fsfeoczcko .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#fsfeoczcko .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#fsfeoczcko .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#fsfeoczcko .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#fsfeoczcko .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#fsfeoczcko .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#fsfeoczcko .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#fsfeoczcko .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#fsfeoczcko .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#fsfeoczcko .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#fsfeoczcko .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#fsfeoczcko .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#fsfeoczcko .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#fsfeoczcko .gt_left {
-  text-align: left;
-}
-
-#fsfeoczcko .gt_center {
-  text-align: center;
-}
-
-#fsfeoczcko .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#fsfeoczcko .gt_font_normal {
-  font-weight: normal;
-}
-
-#fsfeoczcko .gt_font_bold {
-  font-weight: bold;
-}
-
-#fsfeoczcko .gt_font_italic {
-  font-style: italic;
-}
-
-#fsfeoczcko .gt_super {
-  font-size: 65%;
-}
-
-#fsfeoczcko .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#fsfeoczcko .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#fsfeoczcko .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#fsfeoczcko .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#fsfeoczcko .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#fsfeoczcko .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#fsfeoczcko .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-
-<table class="gt_table" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<thead>
-<tr class="header gt_col_headings">
-<th id="mpg" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">mpg</th>
-<th id="wt" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">wt</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">21</td>
-<td class="gt_row gt_right" headers="wt">2.62</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">21</td>
-<td class="gt_row gt_right" headers="wt">2.875</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">22.8</td>
-<td class="gt_row gt_right" headers="wt">2.32</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">21.4</td>
-<td class="gt_row gt_right" headers="wt">3.215</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">18.7</td>
-<td class="gt_row gt_right" headers="wt">3.44</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">18.1</td>
-<td class="gt_row gt_right" headers="wt">3.46</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_right" headers="mpg" style="background-color: #E34A6F; color: #FFFFFF">...</td>
-<td class="gt_row gt_right" headers="wt">...</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:70%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="14-language-of-models_files/figure-html/unnamed-chunk-10-1.png" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="regression-line" class="slide level2">
-<h2>Regression line</h2>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-11-1.png" width="672" class="r-stretch"></section>
-<section id="regression-line-slope" class="slide level2">
-<h2>Regression line: slope</h2>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-12-1.png" width="672" class="r-stretch"></section>
-<section id="regression-line-intercept" class="slide level2">
-<h2>Regression line: intercept</h2>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-13-1.png" width="672" class="r-stretch"></section>
-<section id="correlation" class="slide level2">
-<h2>Correlation</h2>
-
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-14-1.png" width="672" class="r-stretch"></section>
-<section id="correlation-1" class="slide level2">
-<h2>Correlation</h2>
-<ul>
-<li>Ranges between -1 and 1.</li>
-<li>Same sign as the slope.</li>
-</ul>
-
-<img data-src="images/corr-example.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="visualizing-the-model" class="slide level2">
-<h2>Visualizing the model</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="14-language-of-models_files/figure-html/unnamed-chunk-15-1.png" width="672" class="r-stretch"></section></section>
-<section>
-<section id="application-exercise" class="title-slide slide level1 center">
-<h1>Application exercise</h1>
+<section id="from-last-time" class="title-slide slide level1 center">
+<h1>From last time</h1>
 
 </section>
 <section id="application-exercise-ae-10-modeling-fish" class="slide level2 smaller">
@@ -1634,7 +459,244 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <ul>
 <li>Go back to your project called <code>ae</code>.</li>
 <li>If there are any uncommitted files, commit them, and push.</li>
-<li>Work on <code>ae-10-modeling-fish.qmd</code>.</li>
+<li>Work on <code>ae-10-modeling-fish.qmd</code>, starting at <strong>Model summary</strong>.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="models-with-a-single-predictor" class="title-slide slide level1 center">
+<h1>Models with a single predictor</h1>
+
+</section>
+<section id="spurious-correlations" class="slide level2">
+<h2>Spurious correlations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/mozarella-ce-phd.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
+</div></aside></section>
+<section id="spurious-correlations-1" class="slide level2">
+<h2>Spurious correlations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pool-nick-cage.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
+</div></aside></section></section>
+<section>
+<section id="linear-regression-with-a-single-predictor" class="title-slide slide level1 center">
+<h1>Linear regression with a single predictor</h1>
+
+</section>
+<section id="data-prep" class="slide level2">
+<h2>Data prep</h2>
+<ul>
+<li>Rename Rotten Tomatoes columns as <code>critics</code> and <code>audience</code></li>
+<li>Rename the dataset as <code>movie_scores</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>movie_scores <span class="ot">&lt;-</span> fandango <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">rename</span>(</span>
+<span id="cb2-3"><a></a>    <span class="at">critics =</span> rottentomatoes, </span>
+<span id="cb2-4"><a></a>    <span class="at">audience =</span> rottentomatoes_user</span>
+<span id="cb2-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-overview" class="slide level2">
+<h2>Data overview</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>movie_scores <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">select</span>(critics, audience)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 146 × 2
+   critics audience
+     &lt;int&gt;    &lt;int&gt;
+ 1      74       86
+ 2      85       80
+ 3      80       90
+ 4      18       84
+ 5      14       28
+ 6      63       62
+ 7      42       53
+ 8      86       64
+ 9      99       82
+10      89       87
+# ℹ 136 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="data-visualization" class="slide level2">
+<h2>Data visualization</h2>
+
+<img data-src="15-linear-model-single-predictor_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="regression-model-1" class="slide level2">
+<h2>Regression model</h2>
+<p>A <strong>regression model</strong> is a function that describes the relationship between the outcome, <span class="math inline">\(Y\)</span>, and the predictor, <span class="math inline">\(X\)</span>.</p>
+<p><span class="math display">\[\begin{aligned} Y &amp;= \color{black}{\textbf{Model}} + \text{Error} \\[8pt]
+&amp;= \color{black}{\mathbf{f(X)}} + \epsilon \\[8pt]
+&amp;= \color{black}{\boldsymbol{\mu_{Y|X}}} + \epsilon \end{aligned}\]</span></p>
+</section>
+<section id="regression-model" class="slide level2">
+<h2>Regression model</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span class="math display">\[
+\begin{aligned} Y &amp;= \color{#325b74}{\textbf{Model}} + \text{Error} \\[8pt]
+&amp;= \color{#325b74}{\mathbf{f(X)}} + \epsilon \\[8pt]
+&amp;= \color{#325b74}{\boldsymbol{\mu_{Y|X}}} + \epsilon
+\end{aligned}
+\]</span></p>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="15-linear-model-single-predictor_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="simple-linear-regression" class="slide level2 smaller">
+<h2>Simple linear regression</h2>
+<p>Use <strong>simple linear regression</strong> to model the relationship between a quantitative outcome (<span class="math inline">\(Y\)</span>) and a single quantitative predictor (<span class="math inline">\(X\)</span>): <span class="math display">\[\Large{Y = \beta_0 + \beta_1 X + \epsilon}\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\beta_1\)</span>: True slope of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li class="fragment"><span class="math inline">\(\beta_0\)</span>: True intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li class="fragment"><span class="math inline">\(\epsilon\)</span>: Error (residual)</li>
+</ul>
+</div>
+</section>
+<section id="simple-linear-regression-1" class="slide level2">
+<h2>Simple linear regression</h2>
+<p><span class="math display">\[\Large{\hat{Y} = b_0 + b_1 X}\]</span></p>
+<ul>
+<li><span class="math inline">\(b_1\)</span>: Estimated slope of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li><span class="math inline">\(b_0\)</span>: Estimated intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li>No error term!</li>
+<li>These <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span></li>
+</ul>
+</section>
+<section id="choosing-values-for-b_1-and-b_0" class="slide level2">
+<h2>Choosing values for <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span></h2>
+
+<img data-src="15-linear-model-single-predictor_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="residuals" class="slide level2">
+<h2>Residuals</h2>
+
+<img data-src="15-linear-model-single-predictor_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p><span class="math display">\[\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}\]</span></p>
+</section>
+<section id="least-squares-line" class="slide level2 smaller">
+<h2>Least squares line</h2>
+<ul>
+<li>The residual for the <span class="math inline">\(i^{th}\)</span> observation is</li>
+</ul>
+<p><span class="math display">\[e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i\]</span></p>
+<ul>
+<li>The <strong>sum of squared</strong> residuals is</li>
+</ul>
+<p><span class="math display">\[e^2_1 + e^2_2 + \dots + e^2_n\]</span></p>
+<ul>
+<li>The <strong>least squares line</strong> is the one that <strong>minimizes the sum of squared residuals</strong></li>
+</ul>
+</section>
+<section id="least-squares-line-1" class="slide level2">
+<h2>Least squares line</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>movies_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">fit</span>(audience <span class="sc">~</span> critics, <span class="at">data =</span> movie_scores)</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="fu">tidy</span>(movies_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)   32.3      2.34        13.8 4.03e-28
+2 critics        0.519    0.0345      15.0 2.70e-31</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="slope-and-intercept" class="title-slide slide level1 center">
+<h1>Slope and intercept</h1>
+
+</section>
+<section id="properties-of-least-squares-regression" class="slide level2">
+<h2>Properties of least squares regression</h2>
+<div>
+<ul>
+<li class="fragment"><p>The regression line goes through the center of mass point (the coordinates corresponding to average <span class="math inline">\(X\)</span> and average <span class="math inline">\(Y\)</span>): <span class="math inline">\(b_0 = \bar{Y} - b_1~\bar{X}\)</span></p></li>
+<li class="fragment"><p>Slope has the same sign as the correlation coefficient: <span class="math inline">\(b_1 = r \frac{s_Y}{s_X}\)</span></p></li>
+<li class="fragment"><p>Sum of the residuals is zero: <span class="math inline">\(\sum_{i = 1}^n \epsilon_i = 0\)</span></p></li>
+<li class="fragment"><p>Residuals and <span class="math inline">\(X\)</span> values are uncorrelated</p></li>
+</ul>
+</div>
+</section>
+<section id="interpreting-the-slope" class="slide level2 smaller">
+<h2>Interpreting the slope</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Question</a></li><li><a href="#tabset-1-2">Submit</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="poll">
+<p>The slope of the model for predicting audience score from critics score is 0.519. Which of the following is the best interpretation of this value?</p>
+</div>
+<ol type="a">
+<li>For every one point increase in the critics score, the audience score goes up by 0.519 points, on average.</li>
+<li>For every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average.</li>
+<li>For every one point increase in the critics score, the audience score goes up by 0.519 points.</li>
+<li>For every one point increase in the audience score, the critics score goes up by 0.519 points, on average.</li>
+</ol>
+</div>
+<div id="tabset-1-2">
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section id="interpreting-slope-intercept" class="slide level2">
+<h2>Interpreting slope &amp; intercept</h2>
+<p><span class="math display">\[\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}\]</span></p>
+<div>
+<ul>
+<li class="fragment"><strong>Slope:</strong> For every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average.</li>
+<li class="fragment"><strong>Intercept:</strong> If the critics score is 0 points, we expect the audience score to be 32.3 points.</li>
+</ul>
+</div>
+</section>
+<section id="is-the-intercept-meaningful" class="slide level2">
+<h2>Is the intercept meaningful?</h2>
+<p>✅ The intercept is meaningful in context of the data if</p>
+<ul>
+<li>the predictor can feasibly take values equal to or near zero or</li>
+<li>the predictor has values near zero in the observed data</li>
+</ul>
+<div class="fragment">
+<p>🛑 Otherwise, it might not be meaningful!</p>
+</div>
+</section></section>
+<section>
+<section id="application-exercise" class="title-slide slide level1 center">
+<h1>Application exercise</h1>
+
+</section>
+<section id="application-exercise-ae-11-penguins-modeling" class="slide level2">
+<h2>Application exercise: <code>ae-11-penguins-modeling</code></h2>
+<div class="appex">
+<ul>
+<li>Go back to your project called <code>ae</code>.</li>
+<li>If there are any uncommitted files, commit them, and push.</li>
+<li>Pull, and then work on <code>ae-11-penguins-modeling.qmd</code>.</li>
 </ul>
 </div>
 
@@ -1857,6 +919,44 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
