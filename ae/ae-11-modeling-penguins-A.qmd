@@ -1,0 +1,199 @@
+---
+title: "AE 10: Modelling penguins"
+subtitle: "Suggested answers"
+categories: 
+  - Application exercise
+  - Answers
+fig-width: 7
+fig-asp: 0.618
+---
+
+In this application exercise we will be studying penguins.
+The data can be found in the **palmerpenguins** package and we will use **tidyverse** and **tidymodels** for data exploration and modeling, respectively.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(palmerpenguins)
+```
+
+Please read the following context and take a `glimpse` at the data set before we get started.
+
+> This data set comprising various measurements of three different penguin species, namely Adelie, Gentoo, and Chinstrap.
+> The rigorous study was conducted in the islands of the Palmer Archipelago, Antarctica.
+> These data were collected from 2007 to 2009 by Dr. Kristen Gorman with the Palmer Station Long Term Ecological Research Program, part of the US Long Term Ecological Research Network.
+> The data set is called `penguins`.
+
+```{r}
+#| label: glimpse-penguins
+
+glimpse(penguins)
+```
+
+Our goal is to understand better how various body measurements and attributes of penguins relate to their body mass.
+First, we are going to investigate the relationship between a penguins' flipper lengths and their body masses.
+
+-   **Question:** Based on our research focus, which variable is the response variable?
+
+Body mass.
+
+-   **Demo:** Visualize the relationship between flipper length and body mass of penguins.
+
+```{r}
+#| label: plot-bm-fl
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+```
+
+# Correlation
+
+-   **Your turn (5 minutes):**
+    -   What is correlation?
+        What values can correlation take?
+
+        *Strength and direction of a linear relationship. It's bounded by -1 and 1.*
+
+    -   Are you good at guessing correlation?
+        Give it a try!
+        <https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html>
+-   **Demo:** What is the correlation between flipper length and body mass of penguins?
+
+```{r}
+#| label: correlation
+
+# option 1
+penguins |>
+  summarize(r = cor(flipper_length_mm, body_mass_g, use = "complete.obs"))
+
+# option 2
+penguins |>
+  drop_na(flipper_length_mm, body_mass_g) |>
+  summarize(r = cor(flipper_length_mm, body_mass_g))
+```
+
+# Defining, fitting, and summarizing a model
+
+-   **Demo:** Write the population model below that explains the relationship between body mass and flipper length.
+
+$$
+\widehat{body~mass} = \beta_0 + \beta_1 \times flipper~length
+$$
+
+-   **Demo:** Fit the linear regression model and display the results. Write the estimated model output below.
+
+```{r}
+#| label: fit-bm-fl
+
+bm_fl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(bm_fl_fit)
+```
+
+$$
+\widehat{body~mass} = -5781 + 49.7 \times flipper~length
+$$
+
+-   **Your turn:** Interpret the slope and the intercept in the context of the data.
+
+    -   Intercept: Penguins with 0 flipper length are expected, on average, to weigh 5,781 grams.
+
+    -   Slopes: For each additional millimeter of a penguin;s flipper length, the weight of their penguin is expected to be higher, on average, by 49.7 grams.
+
+-   **Your turn:** Recreate the visualization from above, this time adding a regression line to the visualization `geom_smooth(method = "lm")`.
+
+```{r}
+#| label: plot-bm-fl-line
+
+ggplot(penguins,
+       aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+-   **Your turn:** What is the estimated body mass for a penguin with a flipper length of 210?
+
+```{r}
+#| label: predict-210
+
+bm_fl_fit |>
+  predict(new_data = tibble(flipper_length_mm = 210))
+```
+
+-   **Demo:** What is the estimated body mass for a penguin with a flipper length of 100?
+
+But we shouldn't do this prediction based on this model since 100 mm is outside of the range of the data (extrapolation).
+
+```{r}
+#| label: predict-100
+
+bm_fl_fit |>
+  predict(new_data = tibble(flipper_length_mm = 100))
+```
+
+# Another model
+
+-   **Demo:** A different researcher wants to look at body weight of penguins based on the island they were recorded on. How are the variables involved in this analysis different?
+
+Predictor is categorical.
+
+-   **Demo:** Make an appropriate visualization to investigate this relationship below. Additionally, calculate the mean body mass by island.
+
+```{r}
+#| label: plot-bm-island
+
+ggplot(penguins, aes(x = island, y = body_mass_g)) +
+  geom_boxplot()
+```
+
+```{r}
+#| label: mean-bm-island
+
+penguins |>
+  group_by(island) |>
+  summarize(mean_bm = mean(body_mass_g, na.rm = TRUE))
+```
+
+-   **Demo:** Change the geom of your previous plot to `geom_point()`. Use this plot to think about how R models these data.
+
+```{r}
+#| label: plot-bm-island-points
+
+ggplot(penguins, aes(x = island, y = body_mass_g)) +
+  geom_point()
+```
+
+-   **Your turn:** Fit the linear regression model and display the results. Write the estimated model output below.
+
+```{r}
+#| label: fit-bm-island
+
+bm_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ island, data = penguins)
+
+tidy(bm_island_fit)
+```
+
+-   **Demo:** Interpret each coefficient in context of the problem.
+
+    -   Intercept: Penguins from Biscoe island are expected to weigh, on average, 4,716 grams.
+
+    -   Slopes:
+
+        -   Penguins from Dream island are expected to weigh, on average, 1,003 grams less than those from Biscoe island.
+
+        -   Penguins from Torgersen island are expected to weigh, on average, 1,010 grams less than those from Biscoe island.
+
+-   **Demo:** What is the estimated body weight of a penguin on Biscoe island?
+    What are the estimated body weights of penguins on Dream and Torgersen islands?
+
+```{r}
+#| label: predict-bm-island
+
+bm_island_fit |>
+  predict(new_data = tibble(island = c("Biscoe", "Dream", "Torgersen")))
+```

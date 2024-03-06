@@ -1,0 +1,296 @@
+---
+title: "Linear regression with a single predictor"
+subtitle: "Lecture 15"
+date: "March 7, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## Announcements
+
+-   ...
+
+## Questions from last time
+
+
+
+## Goals
+
+-   Modeling with a single predictor
+-   Model parameters, estimates, and error terms
+-   Interpreting slopes and intercepts
+
+## Setup
+
+```{r}
+#| label: load-pkg
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(fivethirtyeight) # for the fandango dataset
+```
+
+# From last time
+
+## Application exercise: `ae-10-modeling-fish` {.smaller}
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Work on `ae-10-modeling-fish.qmd`, starting at **Model summary**.
+:::
+
+# Models with a single predictor
+
+## Spurious correlations
+
+![](images/mozarella-ce-phd.png){fig-align="center"}
+
+::: aside
+Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
+:::
+
+## Spurious correlations
+
+![](images/pool-nick-cage.png){fig-align="center"}
+
+::: aside
+Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
+:::
+
+# Linear regression with a single predictor
+
+## Data prep
+
+-   Rename Rotten Tomatoes columns as `critics` and `audience`
+-   Rename the dataset as `movie_scores`
+
+```{r data-prep}
+#| echo: true
+
+movie_scores <- fandango |>
+  rename(
+    critics = rottentomatoes, 
+    audience = rottentomatoes_user
+  )
+```
+
+## Data overview
+
+```{r data-overview}
+#| echo: true
+
+movie_scores |>
+  select(critics, audience)
+```
+
+## Data visualization
+
+```{r}
+#| echo: false
+
+ggplot(movie_scores, 
+       aes(x = critics, y = audience)) +
+  geom_point(alpha = 0.5) + 
+  labs(
+    x = "Critics Score" , 
+    y = "Audience Score"
+    )
+```
+
+## Regression model {#regression-model-1}
+
+A **regression model** is a function that describes the relationship between the outcome, $Y$, and the predictor, $X$.
+
+$$\begin{aligned} Y &= \color{black}{\textbf{Model}} + \text{Error} \\[8pt]
+&= \color{black}{\mathbf{f(X)}} + \epsilon \\[8pt]
+&= \color{black}{\boldsymbol{\mu_{Y|X}}} + \epsilon \end{aligned}$$
+
+## Regression model
+
+::: columns
+::: {.column width="30%"}
+$$
+\begin{aligned} Y &= \color{#325b74}{\textbf{Model}} + \text{Error} \\[8pt]
+&= \color{#325b74}{\mathbf{f(X)}} + \epsilon \\[8pt]
+&= \color{#325b74}{\boldsymbol{\mu_{Y|X}}} + \epsilon 
+\end{aligned}
+$$
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+#| message: false
+
+m <- lm(audience ~ critics, data = movie_scores)
+ggplot(data = movie_scores, 
+       mapping = aes(x = critics, y = audience)) +
+  geom_point(alpha = 0.5) + 
+  geom_smooth(method = "lm", color = "#325b74", se = FALSE, linewidth = 1.5) +
+  labs(x = "X", y = "Y") +
+  theme_minimal() +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks.x = element_blank(), 
+    axis.ticks.y = element_blank()
+    )
+```
+:::
+:::
+
+## Simple linear regression {.smaller}
+
+Use **simple linear regression** to model the relationship between a quantitative outcome ($Y$) and a single quantitative predictor ($X$): $$\Large{Y = \beta_0 + \beta_1 X + \epsilon}$$
+
+::: incremental
+-   $\beta_1$: True slope of the relationship between $X$ and $Y$
+-   $\beta_0$: True intercept of the relationship between $X$ and $Y$
+-   $\epsilon$: Error (residual)
+:::
+
+## Simple linear regression
+
+$$\Large{\hat{Y} = b_0 + b_1 X}$$
+
+-   $b_1$: Estimated slope of the relationship between $X$ and $Y$
+-   $b_0$: Estimated intercept of the relationship between $X$ and $Y$
+-   No error term!
+-   These $b_1$ and $b_0$
+
+## Choosing values for $b_1$ and $b_0$
+
+```{r}
+#| echo: false
+#| message: false
+
+ggplot(data = movie_scores, 
+       mapping = aes(x = critics, y = audience)) +
+  geom_point(alpha = 0.4) + 
+  geom_abline(intercept = 32.3155, slope = 0.5187, color = "#325b74", linewidth = 1.5) +
+  geom_abline(intercept = 25, slope = 0.7, color = "gray") +
+  geom_abline(intercept = 21, slope = 0.9, color = "gray") +
+  geom_abline(intercept = 35, slope = 0.3, color = "gray") +
+  labs(x = "Critics Score", y = "Audience Score")
+```
+
+## Residuals
+
+```{r}
+#| message: false
+#| echo: false
+#| fig-align: center
+
+ggplot(data = movie_scores, mapping = aes(x = critics, y = audience)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", color = "#325b74", se = FALSE, linewidth = 1.5) +
+  geom_segment(aes(x = critics, xend = critics, y = audience, yend = predict(m)), color = "steel blue") +
+  labs(x = "Critics Score", y = "Audience Score") +
+  theme(legend.position = "none")
+```
+
+$$\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}$$
+
+## Least squares line {.smaller}
+
+-   The residual for the $i^{th}$ observation is
+
+$$e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i$$
+
+-   The **sum of squared** residuals is
+
+$$e^2_1 + e^2_2 + \dots + e^2_n$$
+
+-   The **least squares line** is the one that **minimizes the sum of squared residuals**
+
+## Least squares line
+
+```{r}
+movies_fit <- linear_reg() |>
+  fit(audience ~ critics, data = movie_scores)
+
+tidy(movies_fit)
+```
+
+# Slope and intercept
+
+## Properties of least squares regression
+
+::: incremental
+-   The regression line goes through the center of mass point (the coordinates corresponding to average $X$ and average $Y$): $b_0 = \bar{Y} - b_1~\bar{X}$
+
+-   Slope has the same sign as the correlation coefficient: $b_1 = r \frac{s_Y}{s_X}$
+
+-   Sum of the residuals is zero: $\sum_{i = 1}^n \epsilon_i = 0$
+
+-   Residuals and $X$ values are uncorrelated
+:::
+
+## Interpreting the slope {.smaller}
+
+::: {.panel-tabset}
+
+## Question
+
+::: poll
+The slope of the model for predicting audience score from critics score is 0.519.
+Which of the following is the best interpretation of this value?
+:::
+
+a.  For every one point increase in the critics score, the audience score goes up by 0.519 points, on average.
+b.  For every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average.
+c.  For every one point increase in the critics score, the audience score goes up by 0.519 points.
+d.  For every one point increase in the audience score, the critics score goes up by 0.519 points, on average.
+
+## Submit
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+## Interpreting slope & intercept
+
+$$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
+
+::: incremental
+-   **Slope:** For every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average.
+-   **Intercept:** If the critics score is 0 points, we expect the audience score to be 32.3 points.
+:::
+
+## Is the intercept meaningful?
+
+✅ The intercept is meaningful in context of the data if
+
+-   the predictor can feasibly take values equal to or near zero or
+-   the predictor has values near zero in the observed data
+
+. . .
+
+🛑 Otherwise, it might not be meaningful!
+
+# Application exercise
+
+## Application exercise: `ae-11-penguins-modeling`
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Pull, and then work on `ae-11-penguins-modeling.qmd`.
+:::

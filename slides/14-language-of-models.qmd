@@ -369,7 +369,7 @@ base +
 -   Ranges between -1 and 1.
 -   Same sign as the slope.
 
-![](images/15/corr-example.png){fig-align="center"}
+![](images/corr-example.png){fig-align="center"}
 
 ## Visualizing the model
 
