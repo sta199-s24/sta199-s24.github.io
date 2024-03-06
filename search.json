@@ -3931,7 +3931,14 @@
     "href": "slides/15-linear-model-single-predictor.html#questions-from-last-time",
     "title": "Linear regression with a single predictor",
     "section": "Questions from last time",
-    "text": "Questions from last time\n\nCan you iterate using a function with multiple variables?\n\nYes, a function can have multiple inputs (just like, for example, the *_join() functions we’ve used take at least two inputs – the two data frames to be joined). We won’t cover writing functions in detail in this class but R4DS - Chp 25 is a good resource for getting started, and STA 323 goes into this topic deeper.\n\n\nCan you get special permission to scrape (if so, how common is this?)\n\nProbably not? They would just give you the data! Or access to an API where you can fetch the data from.\n\n\n\nDo we have to use OpenIntro for data modelling?\n\nYes, I recommend the readings from the OpenIntro book for modeling, where relevant they’re linked from the prepare materials."
+    "text": "Questions from last time\n\nCan you iterate using a function with multiple variables?\n\nYes, a function can have multiple inputs (just like, for example, the *_join() functions we’ve used take at least two inputs – the two data frames to be joined). We won’t cover writing functions in detail in this class but R4DS - Chp 25 is a good resource for getting started, and STA 323 goes into this topic deeper.\n\n\nCan you get special permission to scrape (if so, how common is this?)\n\nProbably not? They would just give you the data! Or access to an API where you can fetch the data from."
+  },
+  {
+    "objectID": "slides/15-linear-model-single-predictor.html#questions-from-last-time-1",
+    "href": "slides/15-linear-model-single-predictor.html#questions-from-last-time-1",
+    "title": "Linear regression with a single predictor",
+    "section": "Questions from last time",
+    "text": "Questions from last time\n\nDo we have to use OpenIntro for data modelling?\n\nYes, I recommend the readings from the OpenIntro book for modeling, where relevant they’re linked from the prepare materials."
   },
   {
     "objectID": "slides/15-linear-model-single-predictor.html#goals",
@@ -4015,7 +4022,7 @@
     "href": "slides/15-linear-model-single-predictor.html#simple-linear-regression-1",
     "title": "Linear regression with a single predictor",
     "section": "Simple linear regression",
-    "text": "Simple linear regression\n\\[\\Large{\\hat{Y} = b_0 + b_1 X}\\]\n\n\\(b_1\\): Estimated slope of the relationship between \\(X\\) and \\(Y\\)\n\\(b_0\\): Estimated intercept of the relationship between \\(X\\) and \\(Y\\)\nNo error term!\nThese \\(b_1\\) and \\(b_0\\)"
+    "text": "Simple linear regression\n\\[\\Large{\\hat{Y} = b_0 + b_1 X}\\]\n\n\\(b_1\\): Estimated slope of the relationship between \\(X\\) and \\(Y\\)\n\\(b_0\\): Estimated intercept of the relationship between \\(X\\) and \\(Y\\)\nNo error term!"
   },
   {
     "objectID": "slides/15-linear-model-single-predictor.html#choosing-values-for-b_1-and-b_0",
