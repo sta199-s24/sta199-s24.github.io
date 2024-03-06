@@ -260,7 +260,7 @@ d.  Calculate the proportions of individuals in this sample who are planning to 
 
 ## Question 9
 
-a.  Starting with your `survey_proportions` data frame from the previous exercise, re-create the following visualization that displays relationship between `age` and `vote`.
+a.  Re-create the following visualization that displays relationship between `age` and `vote`.
 
     ![](images/surveyusa-trump-biden.png){width="500"}
 
