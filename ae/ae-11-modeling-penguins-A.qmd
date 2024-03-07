@@ -80,7 +80,7 @@ penguins |>
 -   **Demo:** Write the population model below that explains the relationship between body mass and flipper length.
 
 $$
-\widehat{body~mass} = \beta_0 + \beta_1 \times flipper~length
+body~mass = \beta_0 + \beta_1 \times flipper~length + \epsilon
 $$
 
 -   **Demo:** Fit the linear regression model and display the results. Write the estimated model output below.
