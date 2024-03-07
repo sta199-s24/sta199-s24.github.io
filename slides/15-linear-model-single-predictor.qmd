@@ -22,7 +22,8 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 ## Announcements
 
--   ...
+-   We did not finish AE 10 last time, answers are posted for review. Today's AE 11 will review much of the material we didn't get to in AE 10.
+-   The midsemester course feedback survey is open until Sunday midnight. It's on Canvas \> Quizzes, anonymous and optional but participation much appreciated!
 
 ## Questions from last time {.smaller}
 
@@ -61,16 +62,6 @@ library(tidyverse)
 library(tidymodels)
 library(fivethirtyeight) # for the fandango dataset
 ```
-
-# From last time
-
-## Application exercise: `ae-10-modeling-fish` {.smaller}
-
-::: appex
--   Go back to your project called `ae`.
--   If there are any uncommitted files, commit them, and push.
--   Work on `ae-10-modeling-fish.qmd`, starting at **Model summary**.
-:::
 
 # Models with a single predictor
 
@@ -127,7 +118,7 @@ ggplot(movie_scores,
   labs(
     x = "Critics Score" , 
     y = "Audience Score"
-    )
+  )
 ```
 
 ## Regression model {#regression-model-1}
