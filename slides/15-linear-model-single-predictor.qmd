@@ -29,7 +29,7 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 > Can you iterate using a function with multiple variables?
 
-Yes, a function can have multiple inputs (just like, for example, the `*_join()` functions we've used take at least two inputs – the two data frames to be joined).
+Yes, a function can have multiple inputs (just like, for example, the `*_join()` functions we've used take at least two inputs -- the two data frames to be joined).
 We won't cover writing functions in detail in this class but [R4DS - Chp 25](https://r4ds.hadley.nz/functions) is a good resource for getting started, and STA 323 goes into this topic deeper.
 
 . . .
@@ -41,6 +41,8 @@ They would just give you the data!
 Or access to an API where you can fetch the data from.
 
 . . .
+
+## Questions from last time {.smaller}
 
 > Do we have to use OpenIntro for data modelling?
 
@@ -63,7 +65,7 @@ library(tidymodels)
 library(fivethirtyeight) # for the fandango dataset
 ```
 
-# Models with a single predictor
+# Correlation vs. causation
 
 ## Spurious correlations
 
@@ -179,7 +181,6 @@ $$\Large{\hat{Y} = b_0 + b_1 X}$$
 -   $b_1$: Estimated slope of the relationship between $X$ and $Y$
 -   $b_0$: Estimated intercept of the relationship between $X$ and $Y$
 -   No error term!
--   These $b_1$ and $b_0$
 
 ## Choosing values for $b_1$ and $b_0$
 
