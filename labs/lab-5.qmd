@@ -165,7 +165,9 @@ Make sure that you commit and push all changed documents and your Git pane is co
 
 The data frame you will be working with in this part is called `datasaurus_dozen` and it's in the **datasauRus** package.
 This single data frame contains 13 datasets, designed to show us why data visualization is important and how summary statistics alone can be misleading.
-The different datasets are marked by the `dataset` variable.
+The different datasets are marked by the `dataset` variable, as shown in @fig-datasaurus.
+
+![The \`datasaurus_dozen\` data frame stacks 13 datasets on top of each other. This figure shows the first three datasets.](images/datasaurus-dozen.png){#fig-datasaurus fig-align="center" width="432"}
 
 ::: callout-note
 If it's confusing that the data frame is called `datasaurus_dozen` when it contains 13 datasets, you're not alone!
