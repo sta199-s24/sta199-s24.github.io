@@ -1,0 +1,19 @@
+{
+  "hash": "07cc4559b23465d0082a5a75e16f3129",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Linear regression with a multiple predictors\"\nsubtitle: \"Lecture 16\"\ndate: \"March 19, 2024\"\nformat: \n  revealjs:\n    footer: \"[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)\"\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n# Warm up\n\n\n\n::: {.cell}\n\n:::\n\n\n\n## Announcements\n\n-   Project milestone 2 - proposals due Mon, Mar 25\n\n-   Exam 2:\n\n    -   In class: April 11\n    -   Take home: April 11-15\n\n# Midsemester survey feedback\n\nn = 26\n\n## Pace - course\n\n![](images/midsemester-survey/plot-pace-engagement-1.png)\n\n## Pace - lecture\n\n![](images/midsemester-survey/plot-pace-engagement-2.png)\n\n## Engagement\n\n![](images/midsemester-survey/plot-pace-engagement-3.png)\n\n## Resources\n\n![](images/midsemester-survey/plot-resources-1.png)\n\n## Learning\n\n![](images/midsemester-survey/plot-resources-2.png)\n\n## Class time\n\n![](images/midsemester-survey/plots-q6-q7-1.png)\n\n## Difficulty\n\n![](images/midsemester-survey/plots-q6-q7-2.png)\n\n## Feedback\n\n-   Generally very positive feedback about TAs!\n\n-   Enjoy interactive lectures, want more time on AEs / live coding\n\n-   Rubric for assessments / grading\n\n-   Challenging topic list\n\n# Linear regression with a multiple predictors\n\n## Goals {.smaller}\n\n-   Recap modeling with a single predictor\n\n-   Fit and interpret models with multiple predictors\n\n-   Distinguish between additive and interaction models\n\n## Application exercise: `ae-12-modeling-penguins-multi` {.smaller}\n\n::: appex\n-   Go back to your project called `ae`.\n-   If there are any uncommitted files, commit them, and push.\n-   Work on `ae-12-modeling-penguins-multi.qmd`.\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

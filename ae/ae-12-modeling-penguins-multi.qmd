@@ -1,0 +1,245 @@
+---
+title: "AE 12: Modeling penguins with multiple predictors"
+categories: 
+  - Application exercise
+---
+
+In this application exercise we will be studying penguins.
+The data can be found in the **palmerpenguins** package and we will use **tidyverse** and **tidymodels** for data exploration and modeling, respectively.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(palmerpenguins)
+```
+
+Please read the following context and take a `glimpse` at the data set before we get started.
+
+> This data set comprising various measurements of three different penguin species, namely Adelie, Gentoo, and Chinstrap.
+> The rigorous study was conducted in the islands of the Palmer Archipelago, Antarctica.
+> These data were collected from 2007 to 2009 by Dr. Kristen Gorman with the Palmer Station Long Term Ecological Research Program, part of the US Long Term Ecological Research Network.
+> The data set is called `penguins`.
+
+```{r}
+#| label: glimpse-penguins
+
+glimpse(penguins)
+```
+
+Our goal is to understand better how various body measurements and attributes of penguins relate to their body mass.
+
+# Body mass vs. flipper length
+
+The regression model for body mass vs. flipper length is as follows.
+
+```{r}
+#| label: fit-bm-fl
+
+bm_fl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(bm_fl_fit)
+```
+
+And here is the model visualized:
+
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm")
+```
+
+-   **Demo:** What is the estimated body mass for a penguin with a flipper length of 210?
+
+```{r}
+#| label: predict-210
+#| eval: false
+
+penguin_210 <- tibble(flipper_length_mm = ___)
+
+predict(___, new_data = ___)
+```
+
+-   **Your turn:** What is the estimated body mass for a penguin with a flipper length of 100?
+
+```{r}
+#| label: predict-100
+
+# add code here
+```
+
+# Body mass vs. island
+
+-   **Demo:** A different researcher wants to look at body weight of penguins based on the island they were recorded on. How are the variables involved in this analysis different?
+
+*Add response here.*
+
+-   **Demo:** Make an appropriate visualization to investigate this relationship below. Additionally, calculate the mean body mass by island.
+
+```{r}
+#| label: plot-bm-island
+
+# add code here
+```
+
+```{r}
+#| label: mean-bm-island
+
+# add code here
+```
+
+-   **Demo:** Change the geom of your previous plot to `geom_point()`. Use this plot to think about how R models these data.
+
+```{r}
+#| label: plot-bm-island-points
+
+# add code here
+```
+
+-   **Your turn:** Fit the linear regression model and display the results. Write the estimated model output below.
+
+```{r}
+#| label: fit-bm-island
+
+# add code here
+```
+
+-   **Demo:** Interpret each coefficient in context of the problem.
+
+*Add response here.*
+
+-   **Demo:** What is the estimated body weight of a penguin on Biscoe island? What are the estimated body weights of penguins on Dream and Torgersen islands?
+
+```{r}
+#| label: predict-bm-island
+
+# add code here
+```
+
+# Body mass vs. flipper length and island
+
+Next, we will expand our understanding of models by continuing to learn about penguins.
+So far, we modeled body mass by flipper length, and in a separate model, modeled body mass by island.
+Could it be possible that the estimated body mass of a penguin changes by both their flipper length AND by the island they are on?
+
+-   **Demo:** Fit a model to predict body mass from flipper length and island. Display the summary output and write out the estimate regression equation below.
+
+```{r}
+#| label: fit-bm-fl-island
+
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+```
+
+$$
+add~math~text~here
+$$
+
+## Additive vs. interaction models
+
+-   **Your turn:** Run the two chunks of code below and create two separate plots. How are the two plots different than each other? Which plot does the model we fit above represent?
+
+```{r}
+#| label: plots
+#| layout-ncol: 2
+#| echo: false
+
+# Plot A
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = body_mass_g,
+           color = island)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(title = "Plot A - Interaction model") +
+  theme(legend.position = "bottom")
+
+# Plot B
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+ggplot(bm_fl_island_aug, 
+       aes(x = flipper_length_mm, y = body_mass_g,
+           color = island)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(title = "Plot B - Additive model") +
+  theme(legend.position = "bottom")
+```
+
+*Add response here.*
+
+-   **Your turn:** Interpret the slope coefficient for flipper length in the context of the data and the research question.
+
+*Add response here.*
+
+-   **Demo:** Predict the body mass of a Dream island penguin with a flipper length of 200 mm.
+
+```{r}
+#| label: predict-bm-fl-island
+
+# add code here
+```
+
+-   **Review:** Look back at Plot B. What assumption does the additive model make about the slopes between flipper length and body mass for each of the three islands?
+
+The additive model assumes the same slope between body mass and flipper length for all three islands.
+
+-   **Demo:** Now fit the interaction model represented in Plot A and write the estimated regression model.
+
+```{r}
+#| label: fit-bm-fl-island-int
+
+# add code here
+```
+
+$$
+add~math~text~here
+$$
+
+-   **Review:** What does modeling body mass with an interaction effect get us that without doing so does not?
+
+The interaction effect allows us to model the rate of change in estimated body mass as flipper length increases as different in the three islands.
+
+-   **Your turn:** Predict the body mass of a Dream island penguin with a flipper length of 200 mm.
+
+```{r}
+#| label: predict-bm-island-int
+
+# add code here
+```
+
+## Choosing a model
+
+Rule of thumb: **Occam's Razor** - Don't overcomplicate the situation!
+We prefer the *simplest* best model.
+
+```{r}
+#| label: glance
+
+# add code here
+```
+
+-   **Review:** What is R-squared? What is adjusted R-squared?
+
+R-squared is the percent variability in the response that is explained by our model.
+(Can use when models have same number of variables for model selection)
+
+Adjusted R-squared is similar, but has a penalty for the number of variables in the model.
+(Should use for model selection when models have different numbers of variables).
+
+# Your turn
+
+-   Now, explore body mass, and it's relationship to bill length and flipper length.
+    Brainstorm: How could we visualize this?
+
+-   Fit the additive model.
+    Interpret the slope for flipper in context of the data and the research question.
+
+```{r}
+#| label: add-label-here
+
+# add code here
+```
+
+*Add response here.*
