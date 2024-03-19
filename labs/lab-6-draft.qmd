@@ -112,7 +112,9 @@ b.  Then, visualize the relationship between divergence_time and `transformed_pa
 
 ## Question 6
 
-*Which variable is the strongest individual predictor of parasite similarity between species?* To answer this question, begin by fitting a linear regression model to each pair of variables.
+*Which variable is the strongest individual predictor of parasite similarity between species?*
+
+To answer this question, begin by fitting a linear regression model to each pair of variables.
 Do not report the model outputs in a tidy format but save each one as `dt_model`, `dist_model`, `BM_model`, and `prec_model`, respectively.
 
 -   `divergence_time` and `transformed_parsim`
