@@ -112,6 +112,9 @@ a.  Using mutate, create a new variable `transformed_parsim` that is calculated 
 b.  Then, visualize the relationship between divergence_time and `transformed_parsim`.
     Add a regression line to your visualization.
 
+c.  Write a 1-2 sentence description of what you observe in the visualization.
+
+
 ## Question 6
 
 *Which variable is the strongest individual predictor of parasite similarity between species?*
@@ -133,7 +136,6 @@ a.  Report the slops for each of these models.
 b.  To answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity?
     Why or why not?
 
-c.  Write a 1-2 sentence description of what you observe in the visualization.
 
 ## Question 7
 
