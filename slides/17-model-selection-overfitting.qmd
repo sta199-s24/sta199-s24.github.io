@@ -5,8 +5,6 @@ date: "March 21, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
-editor_options: 
-  chunk_output_type: console
 ---
 
 # Warm up
@@ -29,7 +27,6 @@ Any questions from prepare materials?
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
 ## Project proposals
 
 ::: task
@@ -54,9 +51,9 @@ Continue work on `ae-12-modeling-penguins-multi.qmd`.
 
 ## Goals
 
-- Review prediction and interpretation of model results
-- Review main and interaction effects models
-- Discuss model selection further
+-   Review prediction and interpretation of model results
+-   Review main and interaction effects models
+-   Discuss model selection further
 
 ## Application exercise: `ae-13-modeling-loans` {.smaller}
 
@@ -68,8 +65,8 @@ Continue work on `ae-12-modeling-penguins-multi.qmd`.
 
 ## Recap
 
-- What is the practical difference between a model with parallel and non-parallel lines?
+-   What is the practical difference between a model with parallel and non-parallel lines?
 
-- What is the definition of R-squared?
+-   What is the definition of R-squared?
 
-- Why do we choose models based on adjusted R-squared and not R-squared?
+-   Why do we choose models based on adjusted R-squared and not R-squared?
