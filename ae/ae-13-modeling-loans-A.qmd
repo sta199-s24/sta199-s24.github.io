@@ -1,0 +1,251 @@
+---
+title: "Modelling loan interest rates"
+subtitle: "Suggested answers"
+categories: 
+  - Application exercise
+  - Answers
+editor: visual
+---
+
+In this application exercise we will be studying loan interest rates.
+The dataset is one you've come across before in your reading -- the dataset about loans from the peer-to-peer lender, Lending Club, from the **openintro** package.
+We will use **tidyverse** and **tidymodels** for data exploration and modeling, respectively.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+```
+
+Before we use the dataset, we'll make a few transformations to it.
+
+-   **Your turn:** Review the code below with your neighbor and write a summary of the data transformation pipeline.
+
+*Add response here.*
+
+```{r}
+#| label: data-prep
+
+loans <- loans_full_schema |>
+  mutate(
+    credit_util = total_credit_utilized / total_credit_limit,
+    bankruptcy = as.factor(if_else(public_record_bankrupt == 0, 0, 1)),
+    verified_income = droplevels(verified_income),
+    homeownership = str_to_title(homeownership),
+    homeownership = fct_relevel(homeownership, "Rent", "Mortgage", "Own")
+  ) |>
+  rename(credit_checks = inquiries_last_12m) |>
+  select(
+    interest_rate, loan_amount, verified_income, 
+    debt_to_income, credit_util, bankruptcy, term, 
+    credit_checks, issue_month, homeownership
+  )
+```
+
+Here is a glimpse at the data:
+
+```{r}
+#| label: glimpse-loans
+
+glimpse(loans)
+```
+
+# Get to know the data
+
+-   **Your turn:** What is a typical interest rate in this dataset?
+    What are some attributes of a typical loan and a typical borrower.
+    Give yourself no more than 5 minutes for this exploration and share 1-2 findings.
+
+```{r}
+#| label: explore-loans
+#| layout-ncol: 2
+#| warning: false
+
+ggplot(loans, aes(x = interest_rate)) +
+  geom_histogram(binwidth = 1)
+
+ggplot(loans, aes(x = loan_amount)) +
+  geom_histogram(binwidth = 5000)
+
+ggplot(loans, aes(x = term)) +
+  geom_bar()
+
+ggplot(loans, aes(x = issue_month)) +
+  geom_bar()
+```
+
+```{r}
+#| label: explore-borrowers
+#| layout-ncol: 2
+#| warning: false
+
+ggplot(loans, aes(x = credit_util)) +
+  geom_histogram(binwidth = 0.1)
+
+ggplot(loans, aes(x = verified_income)) +
+  geom_bar()
+
+ggplot(loans, aes(x = debt_to_income)) +
+  geom_histogram(binwidth = 10)
+
+ggplot(loans, aes(x = bankruptcy)) +
+  geom_bar()
+
+ggplot(loans, aes(x = credit_checks)) +
+  geom_bar()
+
+ggplot(loans, aes(x = homeownership)) +
+  geom_bar()
+```
+
+# Interest rate vs. credit utilization ratio
+
+The regression model for interest rate vs. credit utilization is as follows.
+
+```{r}
+#| label: rate-util-fit
+
+rate_util_fit <- linear_reg() |>
+  fit(interest_rate ~ credit_util, data = loans)
+
+tidy(rate_util_fit)
+```
+
+And here is the model visualized:
+
+```{r}
+#| label: rate-util-plot
+#| warning: false
+
+ggplot(loans, aes(x = credit_util, y = interest_rate)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm")
+```
+
+-   **Your turn:** Interpret the intercept and the slope.
+
+Intercept: Borrowers with 0 credit utilization are predicted, on average, to get an interest rate of 10.5%.
+
+Slope: For each additional point credit utilization is higher, interest rate is predicted to be higher, on average, by 4.73%.
+
+# Interest rate vs. homeownership
+
+Next we predict interest rates from homeownership, which is a categorical predictor with three levels:
+
+```{r}
+levels(loans$homeownership)
+```
+
+-   **Demo:** Fit the linear regression model to predict interest rate from homeownership and display a tidy summary of the model. Write the estimated model output below.
+
+```{r}
+#| label: rate-home-fit
+
+rate_home_fit <- linear_reg() |>
+  fit(interest_rate ~ homeownership, data = loans)
+
+tidy(rate_home_fit)
+```
+
+-   **Your turn:** Interpret each coefficient in context of the problem.
+
+    -   Intercept: Loan applicants who rent are predicted to receive an interest rate of 12.9%, on average.
+
+    -   Slopes:
+
+        -   The model predicts that loan applicants who have a mortgage for their home receive 0.866% lower interest rate than those who rent their home, on average.
+
+        -   The model predicts that loan applicants who own their home receive 0.611% lower interest rate than those who rent their home, on average.
+
+# Interest rate vs. credit utilization and homeownership
+
+## Main effects model
+
+-   **Demo:** Fit a model to predict interest rate from credit utilization and homeownership, **without** an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.
+
+```{r}
+#| label: rate-util-home-fit
+
+rate_util_home_fit <- linear_reg() |>
+  fit(interest_rate ~ credit_util + homeownership, data = loans)
+
+tidy(rate_util_home_fit)
+```
+
+$$
+\widehat{interest~rate} = 9.93 + 5.34 \times credit~util + 0.696 \times Mortgage - 0.128 \times Own
+$$
+
+-   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.
+    -   Rent: $\widehat{interest~rate} = 9.93 + 5.34 \times credit~util$
+    -   Mortgage: $\widehat{interest~rate} = 10.626 + 5.34 \times credit~util$
+    -   Own: $\widehat{interest~rate} = 10.058 + 5.34 \times credit~util$
+-   **Question:** How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?
+
+The same.
+
+## Interaction effects model
+
+-   **Demo:** Fit a model to predict interest rate from credit utilization and homeownership, **with** an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.
+
+```{r}
+#| label: rate-util-home-int-fit
+
+rate_util_home_int_fit <- linear_reg() |>
+  fit(interest_rate ~ credit_util * homeownership, data = loans)
+
+tidy(rate_util_home_int_fit)
+```
+
+$$
+\widehat{interest~rate} = 9.44 + 6.20 \times credit~util + 1.39 \times Mortgage + 0.697 \times Own - 1.64 \times credit_util:Mortgage - 1.06 \times credit_util:Own
+$$
+
+-   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.
+    -   Rent: $\widehat{interest~rate} = 9.44 + 6.20 \times credit~util$
+    -   Mortgage: $\widehat{interest~rate} = 10.83 + 4.56 \times credit~util$
+    -   Own: $\widehat{interest~rate} = 10.137 + 5.14 \times credit~util$
+-   **Question:** How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?
+
+Different.
+
+## Choosing a model
+
+Rule of thumb: **Occam's Razor** - Don't overcomplicate the situation!
+We prefer the *simplest* best model.
+
+```{r}
+#| label: glance
+
+glance(rate_util_home_fit)
+glance(rate_util_home_int_fit)
+```
+
+-   **Review:** What is R-squared? What is adjusted R-squared?
+
+R-squared is the percent variability in the response that is explained by our model.
+(Can use when models have same number of variables for model selection)
+
+Adjusted R-squared is similar, but has a penalty for the number of variables in the model.
+(Should use for model selection when models have different numbers of variables).
+
+-   **Question:** Based on the adjusted $R^2$s of these two models, which one do we prefer?
+
+The interaction effects model, though just barely.
+
+# Another model to consider
+
+-   **Your turn:** Let's add one more model to the variable -- issue month. Should we add this variable to the interaction effects model from earlier?
+
+```{r}
+#| label: new-fit
+
+linear_reg() |>
+  fit(interest_rate ~ credit_util * homeownership + issue_month, data = loans) |>
+  glance()
+```
+
+No, the adjusted R-squared goes down.

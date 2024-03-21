@@ -1,0 +1,17 @@
+{
+  "hash": "026584a3409cceee7d38d1f9a4933bb0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Model selection and overfitting\"\nsubtitle: \"Lecture 17\"\ndate: \"March 21, 2024\"\nformat: \n  revealjs:\n    footer: \"[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)\"\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n# Warm up\n\n\n\n::: {.cell}\n\n:::\n\n\n\n## While you wait for class to begin...\n\n::: nonincremental\nAny questions from prepare materials?\n:::\n\n\n\n```{=html}\n<iframe allowfullscreen frameborder=\"0\" height=\"100%\" mozallowfullscreen style=\"min-width: 500px; min-height: 355px\" src=\"https://app.wooclap.com/STA199S24?from=status-bar?\" width=\"100%\"></iframe>\n```\n\n\n\n## Project proposals\n\n::: task\nAny questions?\n:::\n\n# From last time\n\n## Application exercise: `ae-12-modeling-penguins-multi` {.smaller}\n\n::: appex\nContinue work on `ae-12-modeling-penguins-multi.qmd`.\n:::\n\n**Goals:**\n\n-   Recap modeling with a single predictor\n-   Fit and interpret models with multiple predictors\n-   Distinguish between additive and interaction models\n\n# Model selection and overfitting\n\n## Goals\n\n- Review prediction and interpretation of model results\n- Review main and interaction effects models\n- Discuss model selection further\n\n## Application exercise: `ae-13-modeling-loans` {.smaller}\n\n::: appex\n-   Go to your project called `ae`.\n-   If there are any uncommitted files, commit them, and push.\n-   Work on `ae-13-modeling-loans.qmd`.\n:::\n\n## Recap\n\n- What is the practical difference between a model with parallel and non-parallel lines?\n\n- What is the definition of R-squared?\n\n- Why do we choose models based on adjusted R-squared and not R-squared?\n",
+    "supporting": [
+      "17-model-selection-overfitting_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
