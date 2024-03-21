@@ -74,17 +74,19 @@ Subsequent columns describe metrics that compare the species:
 
 The data are available in `parasites.csv` in your `data` folder.
 
-To get started, load the data and save the data frame as `parasites`.
+
 
 ## Question 3
 
-Let’s start by examining the relationship between `divergence_time` and `parsim`.
+Let’s start by reading in the `parasites` data and examining the relationship between `divergence_time` and `parsim`.
 
-a.  Based on the goals of the analysis, what is the response variable?
+a.  Load the data and save the data frame as `parasites`.
 
-b.  Visualize the relationship between the two variables.
+b.  Based on the goals of the analysis, what is the response variable?
 
-c.  Use the visualization to describe the relationship between the two variables.
+c.  Visualize the relationship between the two variables.
+
+d.  Use the visualization to describe the relationship between the two variables.
 
 ## Question 4
 
@@ -110,6 +112,9 @@ a.  Using mutate, create a new variable `transformed_parsim` that is calculated 
 b.  Then, visualize the relationship between divergence_time and `transformed_parsim`.
     Add a regression line to your visualization.
 
+c.  Write a 1-2 sentence description of what you observe in the visualization.
+
+
 ## Question 6
 
 *Which variable is the strongest individual predictor of parasite similarity between species?*
@@ -131,7 +136,6 @@ a.  Report the slops for each of these models.
 b.  To answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity?
     Why or why not?
 
-c.  Write a 1-2 sentence description of what you observe in the visualization.
 
 ## Question 7
 
@@ -177,9 +181,6 @@ a.  **Data:** For our analysis, we will only be working with data from 2007.
     Below, filter the data set so only values from the year 2007 are shown.
     Save this data set as `gapminder_07` and use it for the remainder of this exercise and the following.
 
-    ::: callout-note
-    NOTE to Betsy: Alternatively we can just subset the data to cut down on the work a bit.
-    :::
 
 b.  **Visualization:** We are interested in learning more about GDP, and we’ll start with exploring the relationship between life expectancy and GDP.
     Create two visualizations:
@@ -191,14 +192,10 @@ b.  **Visualization:** We are interested in learning more about GDP, and we’ll
     First describe the relationship between each pair of the variables.
     Then, comment on which relationship would be better modeled using a linear model, and explain your reasoning.
 
-c.  **Model fitting and interpretation:**
+c.  **Model fitting:**
 
     -   Fit a linear model predicting log gross domestic product from life expectancy.
         Display the tidy summary.
-
-    -   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
-
-    -   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
 
 d.  **Model evaluation:**
 
@@ -217,7 +214,7 @@ a.  **Justification:** Create a scatter plot of `gdpPercap_log` vs. `lifeExp`, 
 
 b.  **Model fitting and interpretation:**
 
-    -   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `gdpPercap_log` from life expectancy and continent (with Americas as the baseline level).
+    -   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `gdpPercap_log` from life expectancy and continent (with Africas as the baseline level).
         Display a tidy summary of the model output.
 
     -   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
