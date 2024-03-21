@@ -212,7 +212,7 @@ a.  **Justification:** Create a scatter plot of `gdpPercap_log` vs. `lifeExp`, 
 
 b.  **Model fitting and interpretation:**
 
-    -   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `gdpPercap_log` from life expectancy and continent (with Americas as the baseline level).
+    -   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `gdpPercap_log` from life expectancy and continent (with Africas as the baseline level).
         Display a tidy summary of the model output.
 
     -   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
