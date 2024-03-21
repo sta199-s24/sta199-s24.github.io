@@ -459,11 +459,11 @@ window.Quarto = {
 <li><p><code>parsim</code>: a measure of parasite similarity (proportion of parasites shared between species, ranges from 0 to 1.)</p></li>
 </ul>
 <p>The data are available in <code>parasites.csv</code> in your <code>data</code> folder.</p>
-<p>To get started, load the data and save the data frame as <code>parasites</code>.</p>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Let’s start by examining the relationship between <code>divergence_time</code> and <code>parsim</code>.</p>
+<p>Let’s start by reading in the <code>parasites</code> data and examining the relationship between <code>divergence_time</code> and <code>parsim</code>.</p>
 <ol type="a">
+<li><p>Load the data and save the data frame as <code>parasites</code>.</p></li>
 <li><p>Based on the goals of the analysis, what is the response variable?</p></li>
 <li><p>Visualize the relationship between the two variables.</p></li>
 <li><p>Use the visualization to describe the relationship between the two variables.</p></li>
@@ -528,31 +528,16 @@ window.Quarto = {
 <section id="question-8" class="level2">
 <h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <ol type="a">
-<li><p><strong>Data:</strong> For our analysis, we will only be working with data from 2007. Below, filter the data set so only values from the year 2007 are shown. Save this data set as <code>gapminder_07</code> and use it for the remainder of this exercise and the following.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>NOTE to Betsy: Alternatively we can just subset the data to cut down on the work a bit.</p>
-</div>
-</div></li>
+<li><p><strong>Data:</strong> For our analysis, we will only be working with data from 2007. Below, filter the data set so only values from the year 2007 are shown. Save this data set as <code>gapminder_07</code> and use it for the remainder of this exercise and the following.</p></li>
 <li><p><strong>Visualization:</strong> We are interested in learning more about GDP, and we’ll start with exploring the relationship between life expectancy and GDP. Create two visualizations:</p>
 <ul>
 <li><p>Scatter plot of <code>gdpPercap</code> vs.&nbsp;<code>lifeExp</code>.</p></li>
 <li><p>Scatter plot of <code>gdpPercap_log</code> vs.&nbsp;<code>lifeExp</code>, where <code>gdpPercap_log</code> is a new variable you add to the data set by taking the natural log of <code>gdpPercap</code>.</p></li>
 </ul>
 <p>First describe the relationship between each pair of the variables. Then, comment on which relationship would be better modeled using a linear model, and explain your reasoning.</p></li>
-<li><p><strong>Model fitting and interpretation:</strong></p>
+<li><p><strong>Model fitting:</strong></p>
 <ul>
-<li><p>Fit a linear model predicting log gross domestic product from life expectancy. Display the tidy summary.</p></li>
-<li><p>Interpret the <em>intercept</em> of the model, making sure that your interpretation is in the units of the original data (not on log scale).</p></li>
-<li><p>Interpret the <em>slope</em> of the model, making sure that your interpretation is in the units of the original data (not on log scale).</p></li>
+<li>Fit a linear model predicting log gross domestic product from life expectancy. Display the tidy summary.</li>
 </ul></li>
 <li><p><strong>Model evaluation:</strong></p>
 <ul>
