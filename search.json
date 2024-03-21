@@ -1997,14 +1997,14 @@
     "href": "labs/lab-6-draft.html#question-5",
     "title": "Lab 6 - Modeling I",
     "section": "Question 5",
-    "text": "Question 5\nSince parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)\n\nUsing mutate, create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame. Note: log() in R represents taking the nautral log.\nThen, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization."
+    "text": "Question 5\nSince parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)\n\nUsing mutate, create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame. Note: log() in R represents taking the nautral log.\nThen, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization.\nWrite a 1-2 sentence description of what you observe in the visualization."
   },
   {
     "objectID": "labs/lab-6-draft.html#question-6",
     "href": "labs/lab-6-draft.html#question-6",
     "title": "Lab 6 - Modeling I",
     "section": "Question 6",
-    "text": "Question 6\nWhich variable is the strongest individual predictor of parasite similarity between species?\nTo answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model, and prec_model, respectively.\n\ndivergence_time and transformed_parsim\ndistance and transformed_parsim\nBMdiff and transformed_parsim\nprecdiff and transformed_parsim\n\n\nReport the slops for each of these models. Use proper notation.\nTo answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?\nWrite a 1-2 sentence description of what you observe in the visualization."
+    "text": "Question 6\nWhich variable is the strongest individual predictor of parasite similarity between species?\nTo answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model, and prec_model, respectively.\n\ndivergence_time and transformed_parsim\ndistance and transformed_parsim\nBMdiff and transformed_parsim\nprecdiff and transformed_parsim\n\n\nReport the slops for each of these models. Use proper notation.\nTo answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?"
   },
   {
     "objectID": "labs/lab-6-draft.html#question-7",
