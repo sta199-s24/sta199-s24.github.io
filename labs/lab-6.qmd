@@ -28,8 +28,11 @@ c.  Now, fit a linear model that investigates the relationship between `weight` 
     Provide the tidy summary output below.
 
 d.  Write the estimated least squares regression line below using proper notation.
-    *Hint:* If you need to type an equation using proper notation, type your answers in-between `$$` and `$$`.
+
+    ::: callout-tip
+    If you need to type an equation using proper notation, type your answers in-between `$$` and `$$`.
     You may use `\hat{example}` to put a hat on a character.
+    :::
 
 ## Question 2
 
@@ -105,7 +108,10 @@ This will be better suited for fitting a regression model (and interpreting pred
 
 a.  Using mutate, create a new variable `transformed_parsim` that is calculated as `log(parsim/(1-parsim))`.
     Add this variable to your data frame.
-    Note: `log()` in R represents taking the **nautral log**.
+
+    ::: callout-note
+    `log()` in R represents the **nautral log**.
+    :::
 
 b.  Then, visualize the relationship between divergence_time and `transformed_parsim`.
     Add a regression line to your visualization.
