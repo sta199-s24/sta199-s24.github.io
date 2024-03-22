@@ -74,8 +74,6 @@ Subsequent columns describe metrics that compare the species:
 
 The data are available in `parasites.csv` in your `data` folder.
 
-
-
 ## Question 3
 
 Let’s start by reading in the `parasites` data and examining the relationship between `divergence_time` and `parsim`.
@@ -114,7 +112,6 @@ b.  Then, visualize the relationship between divergence_time and `transformed_pa
 
 c.  Write a 1-2 sentence description of what you observe in the visualization.
 
-
 ## Question 6
 
 *Which variable is the strongest individual predictor of parasite similarity between species?*
@@ -135,7 +132,6 @@ a.  Report the slops for each of these models.
 
 b.  To answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity?
     Why or why not?
-
 
 ## Question 7
 
@@ -181,7 +177,6 @@ a.  **Data:** For our analysis, we will only be working with data from 2007.
     Below, filter the data set so only values from the year 2007 are shown.
     Save this data set as `gapminder_07` and use it for the remainder of this exercise and the following.
 
-
 b.  **Visualization:** We are interested in learning more about GDP, and we’ll start with exploring the relationship between life expectancy and GDP.
     Create two visualizations:
 
@@ -194,8 +189,7 @@ b.  **Visualization:** We are interested in learning more about GDP, and we’ll
 
 c.  **Model fitting:**
 
-    -   Fit a linear model predicting log gross domestic product from life expectancy.
-        Display the tidy summary.
+    -   Fit a linear model predicting log gross domestic product from life expectancy. Display the tidy summary.
 
 d.  **Model evaluation:**
 
