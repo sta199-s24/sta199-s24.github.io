@@ -9,9 +9,13 @@ This lab will set you up for the computing workflow and give you an opportunity 
 
 # `Hello, World!`
 
-You may have heard/seen this phrase, `Hello, World!`, elsewhere before. It's usually the first thing you learn in programming – to learn to write a computer program to print this sentence to screen. Things will be different in this course, as it's not a programming, but a data science course. So, starting tomorrow in class, you'll learn to use a computer program (called R) to work with data.
+You may have heard/seen this phrase, `Hello, World!`, elsewhere before.
+It's usually the first thing you learn in programming – to learn to write a computer program to print this sentence to screen.
+Things will be different in this course, as it's not a programming, but a data science course.
+So, starting tomorrow in class, you'll learn to use a computer program (called R) to work with data.
 
-But today, we need to set you up for success! Let's first briefly review the components of the computational toolkit for the course:
+But today, we need to set you up for success!
+Let's first briefly review the components of the computational toolkit for the course:
 
 1.  R: The programming language you'll learn in this course.
 
@@ -24,7 +28,10 @@ R is the name of the programming language itself and RStudio is a convenient int
 3.  Quarto: The tool you'll use to create reproducible computational documents that contain both your narrative (i.e., words in English) and your code (i.e., code in R). Every piece of assignment you hand in will be a Quarto document.
 
 ::: callout-note
-You might be familiar with word processors like MS Word or Google Docs. We will not be using these in this class. Instead, the words you would write in such a document as well as the code will go into a Quarto document, and when you *render* the document (more on what this means later) you will get a document out that has your words, your code, and the output of that code. Everything in one place, beautifully formatted!
+You might be familiar with word processors like MS Word or Google Docs.
+We will not be using these in this class.
+Instead, the words you would write in such a document as well as the code will go into a Quarto document, and when you *render* the document (more on what this means later) you will get a document out that has your words, your code, and the output of that code.
+Everything in one place, beautifully formatted!
 :::
 
 4.  Git: Version control system.
@@ -42,34 +49,42 @@ Git is a version control system (like "Track Changes" features from Microsoft Wo
 Go to <https://cmgr.oit.duke.edu/containers> and under *Reservations available* click on *reserve STA 198-199* to reserve a container for yourself.
 
 ::: callout-note
-A container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.
+A container is a self-contained instance of RStudio for you, and you alone.
+You will do all of your computing in your container.
 :::
 
 Once you've reserved the container you'll see that it will show up under *My reservations*.
 
 To launch your container click on it under My reservations, then click *Login*, and then *Start*.[^1]
 
-[^1]: Yes, it's too many steps. I don't know why! But it works, and you'll get used to it. Trust me, it beats downloading and installing everything you need on your computers!
+[^1]: Yes, it's too many steps.
+    I don't know why!
+    But it works, and you'll get used to it.
+    Trust me, it beats downloading and installing everything you need on your computers!
 
 ## Create a GitHub account
 
-Go to <https://github.com/> and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.[^2]
+Go to <https://github.com/> and walk through the steps for creating an account.
+You do not have to use your Duke email address, but I recommend doing so.[^2]
 
 [^2]: GitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.
 
 ::: callout-note
-You'll need to choose a user name. I recommend reviewing the user name advice at <https://happygitwithr.com/github-acct#username-advice> before choosing a username.
+You'll need to choose a user name.
+I recommend reviewing the user name advice at <https://happygitwithr.com/github-acct#username-advice> before choosing a username.
 :::
 
 ::: {.callout-important collapse="true"}
 ## What if I already have a GitHub account?
 
-If you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.
+If you already have a GitHub account, you do not need to create a new one for this course.
+Just log in to that account to make sure you still remember your username and password.
 :::
 
 ## Set up your SSH key
 
-You will authenticate GitHub using SSH (Secure Shell Protocol – it doesn't really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
+You will authenticate GitHub using SSH (Secure Shell Protocol – it doesn't really matter what this means for the purpose of this course).
+Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
 
 ::: callout-note
 You only need to do this authentication process one time on a single system.
@@ -84,7 +99,9 @@ You can find more detailed instructions [here](https://github.com/DukeStatSci/gi
 
 ## Configure Git
 
-There is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.
+There is one more thing we need to do before getting started on the assignment.
+Specifically, we need to configure your git so that RStudio can communicate with GitHub.
+This requires two pieces of information: your name and email address.
 
 To do so, you will use the `use_git_config()` function from the `usethis` package.
 
