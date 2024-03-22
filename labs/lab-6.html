@@ -433,7 +433,20 @@ window.Quarto = {
 <li><p>Create a version of the <code>births14</code> data set dropping observations where there are <code>NA</code>s for <code>habit</code>. You can call this version <code>births14_habitgiven</code>.</p></li>
 <li><p>Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship between <code>weight</code> and <code>habit</code>. In 2-3 sentences, discuss the relationships observed.</p></li>
 <li><p>Now, fit a linear model that investigates the relationship between <code>weight</code> and <code>habit</code>. Provide the tidy summary output below.</p></li>
-<li><p>Write the estimated least squares regression line below using proper notation. <em>Hint:</em> If you need to type an equation using proper notation, type your answers in-between <code>$$</code> and <code>$$</code>. You may use <code>\hat{example}</code> to put a hat on a character.</p></li>
+<li><p>Write the estimated least squares regression line below using proper notation.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you need to type an equation using proper notation, type your answers in-between <code>$$</code> and <code>$$</code>. You may use <code>\hat{example}</code> to put a hat on a character.</p>
+</div>
+</div></li>
 </ol>
 </section>
 <section id="question-2" class="level2">
@@ -485,7 +498,20 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
 <p>Since <code>parsim</code> takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)</p>
 <ol type="a">
-<li><p>Using mutate, create a new variable <code>transformed_parsim</code> that is calculated as <code>log(parsim/(1-parsim))</code>. Add this variable to your data frame. Note: <code>log()</code> in R represents taking the <strong>nautral log</strong>.</p></li>
+<li><p>Using mutate, create a new variable <code>transformed_parsim</code> that is calculated as <code>log(parsim/(1-parsim))</code>. Add this variable to your data frame.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>log()</code> in R represents the <strong>nautral log</strong>.</p>
+</div>
+</div></li>
 <li><p>Then, visualize the relationship between divergence_time and <code>transformed_parsim</code>. Add a regression line to your visualization.</p></li>
 <li><p>Write a 1-2 sentence description of what you observe in the visualization.</p></li>
 </ol>
