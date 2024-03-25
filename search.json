@@ -3631,7 +3631,7 @@
     "href": "labs/lab-6.html#question-4",
     "title": "Lab 6 - Modeling I",
     "section": "Question 4",
-    "text": "Question 4\nNext, model this relationship.\n\nFit the model and write the estimated regression equation.\nInterpret the slope and the intercept in the context of the data.\nRecreate the visualization from Exercise 1, this time adding a regression line to the visualization.\nWhat do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?",
+    "text": "Question 4\nNext, model this relationship.\n\nFit the model and write the estimated regression equation.\nInterpret the slope and the intercept in the context of the data.\nRecreate the visualization from Question 3, this time adding a regression line to the visualization.\nWhat do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?",
     "crumbs": [
       "Labs",
       "Lab 6"
