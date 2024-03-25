@@ -97,7 +97,7 @@ a.  Fit the model and write the estimated regression equation.
 
 b.  Interpret the slope and the intercept in the context of the data.
 
-c.  Recreate the visualization from Exercise 1, this time adding a regression line to the visualization.
+c.  Recreate the visualization from Exercise 3, this time adding a regression line to the visualization.
 
 d.  What do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?
 
