@@ -33,9 +33,11 @@ Any questions from prepare materials?
 
 -   Project repos to be released back to you on Friday
 
+-   Status update emails in your inbox
+
 # Questions from last time {.smaller}
 
-## Can you review the `augment()` function?
+## Can you review the `augment()` function? {.smaller}
 
 The `augment()` function can be used to "augment" a data set (usually of new observations) with the model.
 
