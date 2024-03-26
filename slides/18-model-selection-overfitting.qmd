@@ -29,7 +29,9 @@ Any questions from prepare materials?
 ```
 ## Announcements
 
-...
+-   Read the feedback (including written feedback) on labs
+
+-   Project repos to be released back to you on Friday
 
 # Questions from last time {.smaller}
 
