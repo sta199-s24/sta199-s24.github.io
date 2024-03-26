@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <meta name="dcterms.date" content="2024-03-19">
-  <title>STA 199 - Linear regression with a multiple predictors</title>
+  <meta name="dcterms.date" content="2024-03-21">
+  <title>STA 199 - Linear regression with a multiple predictors II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -323,11 +323,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 - Linear regression with a multiple predictors">
-<meta property="og:description" content="Lecture 16">
+<meta property="og:title" content="STA 199 - Linear regression with a multiple predictors II">
+<meta property="og:description" content="Lecture 17">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Linear regression with a multiple predictors">
-<meta name="twitter:description" content="Lecture 16">
+<meta name="twitter:title" content="STA 199 - Linear regression with a multiple predictors II">
+<meta name="twitter:description" content="Lecture 17">
 <meta name="twitter:image" content="https://sta199-s24.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
@@ -337,8 +337,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Linear regression with a multiple predictors</h1>
-  <p class="subtitle">Lecture 16</p>
+  <h1 class="title">Linear regression with a multiple predictors II</h1>
+  <p class="subtitle">Lecture 17</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -351,86 +351,63 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
     </div>
 </div>
 
-  <p class="date">2024-03-19</p>
+  <p class="date">2024-03-21</p>
 </section>
 <section>
 <section id="warm-up" class="title-slide slide level1 center">
 <h1>Warm up</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li><p>Project milestone 2 - proposals due Mon, Mar 25</p></li>
-<li><p>Exam 2:</p>
-<ul>
-<li>In class: April 11</li>
-<li>Take home: April 11-15</li>
-</ul></li>
-</ul>
+<section id="while-you-wait-for-class-to-begin" class="slide level2">
+<h2>While you wait for class to begin…</h2>
+<div>
+<p>Any questions from prepare materials?</p>
+</div>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+</section>
+<section id="project-proposals" class="slide level2">
+<h2>Project proposals</h2>
+<div class="task">
+<p>Any questions?</p>
+</div>
 </section></section>
 <section>
-<section id="midsemester-survey-feedback" class="title-slide slide level1 center">
-<h1>Midsemester survey feedback</h1>
-<p>n = 26</p>
-</section>
-<section id="pace---course" class="slide level2">
-<h2>Pace - course</h2>
+<section id="from-last-time" class="title-slide slide level1 center">
+<h1>From last time</h1>
 
-<img data-src="images/midsemester-survey/plot-pace-engagement-1.png" class="r-stretch"></section>
-<section id="pace---lecture" class="slide level2">
-<h2>Pace - lecture</h2>
-
-<img data-src="images/midsemester-survey/plot-pace-engagement-2.png" class="r-stretch"></section>
-<section id="engagement" class="slide level2">
-<h2>Engagement</h2>
-
-<img data-src="images/midsemester-survey/plot-pace-engagement-3.png" class="r-stretch"></section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-
-<img data-src="images/midsemester-survey/plot-resources-1.png" class="r-stretch"></section>
-<section id="learning" class="slide level2">
-<h2>Learning</h2>
-
-<img data-src="images/midsemester-survey/plot-resources-2.png" class="r-stretch"></section>
-<section id="class-time" class="slide level2">
-<h2>Class time</h2>
-
-<img data-src="images/midsemester-survey/plots-q6-q7-1.png" class="r-stretch"></section>
-<section id="difficulty" class="slide level2">
-<h2>Difficulty</h2>
-
-<img data-src="images/midsemester-survey/plots-q6-q7-2.png" class="r-stretch"></section>
-<section id="feedback" class="slide level2">
-<h2>Feedback</h2>
-<ul>
-<li><p>Generally very positive feedback about TAs!</p></li>
-<li><p>Enjoy interactive lectures, want more time on AEs / live coding</p></li>
-<li><p>Rubric for assessments / grading</p></li>
-<li><p>Challenging topic list</p></li>
-</ul>
-</section></section>
-<section>
-<section id="linear-regression-with-a-multiple-predictors" class="title-slide slide level1 center">
-<h1>Linear regression with a multiple predictors</h1>
-
-</section>
-<section id="goals" class="slide level2 smaller">
-<h2>Goals</h2>
-<ul>
-<li><p>Recap modeling with a single predictor</p></li>
-<li><p>Fit and interpret models with multiple predictors</p></li>
-<li><p>Distinguish between additive and interaction models</p></li>
-</ul>
 </section>
 <section id="application-exercise-ae-12-modeling-penguins-multi" class="slide level2 smaller">
 <h2>Application exercise: <code>ae-12-modeling-penguins-multi</code></h2>
 <div class="appex">
+<p>Continue work on <code>ae-12-modeling-penguins-multi.qmd</code>.</p>
+</div>
+<p><strong>Goals:</strong></p>
 <ul>
-<li>Go back to your project called <code>ae</code>.</li>
+<li>Recap modeling with a single predictor</li>
+<li>Fit and interpret models with multiple predictors</li>
+<li>Distinguish between additive and interaction models</li>
+</ul>
+</section></section>
+<section>
+<section id="model-selection-and-overfitting" class="title-slide slide level1 center">
+<h1>Model selection and overfitting</h1>
+
+</section>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
+<ul>
+<li>Review prediction and interpretation of model results</li>
+<li>Review main and interaction effects models</li>
+<li>Discuss model selection further</li>
+</ul>
+</section>
+<section id="application-exercise-ae-13-modeling-loans" class="slide level2 smaller">
+<h2>Application exercise: <code>ae-13-modeling-loans</code></h2>
+<div class="appex">
+<ul>
+<li>Go to your project called <code>ae</code>.</li>
 <li>If there are any uncommitted files, commit them, and push.</li>
-<li>Work on <code>ae-12-modeling-penguins-multi.qmd</code>.</li>
+<li>Work on <code>ae-13-modeling-loans.qmd</code>.</li>
 </ul>
 </div>
 
