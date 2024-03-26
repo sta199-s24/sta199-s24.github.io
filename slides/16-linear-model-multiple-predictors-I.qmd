@@ -1,5 +1,5 @@
 ---
-title: "Linear regression with a multiple predictors"
+title: "Linear regression with a multiple predictors I"
 subtitle: "Lecture 16"
 date: "March 19, 2024"
 format: 

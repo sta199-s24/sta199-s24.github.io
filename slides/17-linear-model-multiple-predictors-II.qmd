@@ -1,5 +1,5 @@
 ---
-title: "Model selection and overfitting"
+title: "Linear regression with a multiple predictors II"
 subtitle: "Lecture 17"
 date: "March 21, 2024"
 format: 
@@ -62,11 +62,3 @@ Continue work on `ae-12-modeling-penguins-multi.qmd`.
 -   If there are any uncommitted files, commit them, and push.
 -   Work on `ae-13-modeling-loans.qmd`.
 :::
-
-## Recap
-
--   What is the practical difference between a model with parallel and non-parallel lines?
-
--   What is the definition of R-squared?
-
--   Why do we choose models based on adjusted R-squared and not R-squared?

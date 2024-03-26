@@ -1,0 +1,121 @@
+---
+title: "Model selection and overfitting"
+subtitle: "Lecture 18"
+date: "March 26, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+...
+
+# Questions from last time {.smaller}
+
+## Can you review the `augment()` function?
+
+The `augment()` function can be used to "augment" a data set (usually of new observations) with the model.
+
+::: incremental
+-   It calculates predictions, $\hat{y}$s, under the given model.
+
+-   It also calculates the residuals, $e$s, for each observation.
+
+-   It returns a data frame of the input data *augmented* with predicted values and residuals.
+:::
+
+## `augment()` - Setup
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+
+mtcars_fit <- linear_reg() |>
+  fit(mpg ~ disp + cyl, data = mtcars)
+
+tidy(mtcars_fit)
+```
+
+## `augment()` - Augment the original data {.smaller}
+
+```{r}
+augment(mtcars_fit, new_data = mtcars)
+```
+
+## `augment()` - Augment new data
+
+```{r}
+new_cars <- tibble(
+  mpg = c(23, 22), disp = c(150, 350), cyl = c(4, 6)
+)
+
+new_cars
+```
+
+. . .
+
+```{r}
+augment(mtcars_fit, new_data = new_cars)
+```
+
+## What is the difference between $R^2$ and adjusted $R^2$? {.smaller}
+
+-   $R^2$:
+
+    -   Proportion of variability in the outcome explained by the model.
+
+    -   Useful for quantifying the fit of a given model.
+
+. . .
+
+-   Adjusted $R^2$:
+
+    -   Proportion of variability in the outcome explained by the model, with a penalty added for the number of predictors in the model.
+
+    -   Useful for comparing models.
+
+# From last time
+
+## Application exercise: `ae-13-modeling-loans` {.smaller}
+
+::: appex
+-   Go to your project called `ae`.
+-   Continue working on `ae-13-modeling-loans.qmd`.
+:::
+
+**Goals:**
+
+-   Review prediction and interpretation of model results
+-   Review main and interaction effects models
+-   Discuss model selection further
+
+## Recap: `ae-13-modeling-loans`
+
+-   What is the practical difference between a model with parallel and non-parallel lines?
+
+-   What is the definition of R-squared?
+
+-   Why do we choose models based on adjusted R-squared and not R-squared?
