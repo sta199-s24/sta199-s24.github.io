@@ -30,9 +30,60 @@ Any questions from prepare materials?
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-## Announcements
+## Duke Community Standard {.smaller}
 
--   ...
+Duke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, respect, and accountability.
+Citizens of this community commit to reflect upon and uphold these principles in all academic and nonacademic endeavors, and to protect and promote a culture of integrity.
+
+To uphold the Duke Community Standard:
+
+-    I will not lie, cheat, or steal in my academic endeavors;
+-    I will conduct myself honorably in all my endeavors; and
+-    I will act if the Standard is compromised.
+
+<https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct>
+
+## Duke Community Standard {.smaller}
+
+"Duke University has high expectations for students’ scholarship and conduct. In accepting admission, students indicate their willingness to subscribe to and be governed by the rules and regulations of the university, which flow from the Duke Community Standard. These policies reflect the Duke Community Standard’s fundamental values—**honesty, fairness, respect, and accountability**. Undergraduates acknowledge the right of the university to take disciplinary action, including suspension or expulsion, for failure to abide by the regulations or for other conduct adjudged unsatisfactory or detrimental to the university community.  Students and groups may be held accountable for any violation of university policy that may or may not be included in this guide, whether on or off campus."
+
+<https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct>
+
+## Basic guidelines {.smaller}
+
+> Be a Good Human
+
+::: incremental
+-   Use electronic devices for things related to coursework only and in a way that does not distract your classmates
+
+    -   No videos on cell phones
+
+    -   No phone calls!
+
+-   Take off your headphones
+
+    -   If you need an accommodation for wearing headphones in class, reach out to SDAO to get this offcially approved
+
+-   Keep chatter to "your turn" portions or limited to clarification questions
+
+-   If you have a guest in class, make sure they are aware of the DCS and take responsibility for their behaviour
+:::
+
+## Announcements {.smaller}
+
+-   Peer eval 2 is due Sunday night, results will be published on Monday
+
+-   Lab 6 is due on Monday:
+
+    -   **Render your document.** If your code is running off the page so we can't see your entire code, we will not evaluate any of it.
+        The question will automatically receive a 0.
+        This is something you can and should verify before you turn in your work.
+
+    -   If you're using functions that are not introduced in the course materials, you **must cite your sources**.
+        Failure to do so is a violation of the Duke Community Standard and will be treated as such.
+
+-   Lab 7 will cover material from this week and next week.
+    Start to working through prepare materials between now and Monday.
 
 # From last time
 
@@ -232,7 +283,8 @@ tibble(
 
 -   Recall, the goal is to take values between -$\infty$ and $\infty$ and map them to probabilities.
 
--   We need the opposite of the link function... or the *inverse*
+-   We need the opposite of the link function...
+    or the *inverse*
 
 -   Taking the inverse of the logit function will map arbitrary real values back to the range \[0, 1\]
 
@@ -268,4 +320,3 @@ plot.function(sigmoid, from = 0, to = 20, n = 101,
 -   Generalized linear models allow us to fit models to predict non-continuous outcomes
 
 -   Predicting binary outcomes requires modeling the log-odds of success, where p = probability of success
-
