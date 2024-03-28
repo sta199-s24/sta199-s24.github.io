@@ -133,7 +133,7 @@ Do not report the model outputs in a tidy format but save each one as `dt_model`
 
 -   `precdiff` and `transformed_parsim`
 
-a.  Report the slops for each of these models.
+a.  Report the slopes for each of these models.
     Use proper notation.
 
 b.  To answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity?
