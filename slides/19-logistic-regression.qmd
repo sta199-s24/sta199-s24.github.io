@@ -1,0 +1,271 @@
+---
+title: "Logistic regression"
+subtitle: "Lecture 19"
+date: "March 28, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+-   ...
+
+# From last time
+
+## Recap: `ae-13-modeling-loans`
+
+-   What is the practical difference between a model with parallel and non-parallel lines?
+
+-   What is the definition of R-squared?
+
+-   Why do we choose models based on adjusted R-squared and not R-squared?
+
+## Predict interest rate...
+
+from credit utilization and homeownership
+
+```{r}
+#| include: false
+loans <- loans_full_schema |>
+  mutate(
+    credit_util = total_credit_utilized / total_credit_limit,
+    bankruptcy = as.factor(if_else(public_record_bankrupt == 0, 0, 1)),
+    verified_income = droplevels(verified_income),
+    homeownership = str_to_title(homeownership),
+    homeownership = fct_relevel(homeownership, "Rent", "Mortgage", "Own")
+  ) |>
+  rename(credit_checks = inquiries_last_12m) |>
+  select(
+    interest_rate, loan_amount, verified_income, 
+    debt_to_income, credit_util, bankruptcy, term, 
+    credit_checks, issue_month, homeownership
+  )
+```
+
+```{r}
+#| label: rate-util-home-fit
+rate_util_home_fit <- linear_reg() |>
+  fit(interest_rate ~ credit_util + homeownership, data = loans)
+```
+
+```{r}
+#| label: rate-util-home-tidy
+
+tidy(rate_util_home_fit)
+```
+
+## Intercept {.smaller}
+
+```{r}
+#| ref.label: rate-util-home-tidy
+#| echo: false
+```
+
+-   Intercept: Loan applicants who rent and have 0 credit utilization are predicted to receive an interest rate of 9.93%, on average.
+
+## Slopes {.smaller}
+
+```{r}
+#| ref.label: rate-util-home-tidy
+#| echo: false
+```
+
+::: incremental
+-   All else held constant, for each additional percent credit utilization is higher, interest rate is predicted to be higher, on average, by 0.0534%.
+
+-   All else held constant, the model predicts that loan applicants who have a mortgage for their home receive 0.696% higher interest rate than those who rent their home, on average.
+
+-   All else held constant, the model predicts that loan applicants who own their home receive 0.128% higher interest rate than those who rent their home, on average.
+:::
+
+# Transformations
+
+## Predict log(interest rate)
+
+```{r}
+#| label: rate-log-cc-fit
+rate_log_cc_fit <- linear_reg() |>
+  fit(log(interest_rate) ~ credit_checks, data = loans)
+
+tidy(rate_log_cc_fit)
+```
+
+## Model
+
+```{r}
+#| ref.label: rate-log-cc-fit
+#| echo: false
+```
+
+. . .
+
+$$
+\widehat{log(interest~rate)} = 2.37 + 0.00388 \times credit~checks
+$$
+
+## Slope
+
+```{r}
+#| ref.label: rate-log-cc-fit
+#| echo: false
+```
+
+. . .
+
+For each additional credit check, log of interest rate is predicted to be higher, on average, by 0.0236%.
+
+## Slope {.smaller}
+
+$$
+log(interest~rate_{x+1}) - log(interest~rate_{x}) =  0.0236
+$$
+
+. . .
+
+$$
+log(\frac{interest~rate_{x+1}}{interest~rate_{x}}) = 0.0236
+$$
+
+. . .
+
+$$
+e^{log(\frac{interest~rate_{x+1}}{interest~rate_{x}})} = e^0.0236
+$$
+
+. . .
+
+$$
+\frac{interest~rate_{x+1}}{interest~rate_{x}} = 1.024
+$$
+
+. . .
+
+For each additional credit check, interest rate is predicted to be higher, on average, by **a factor of 1.024**.
+
+# Logistic regression
+
+## What is logistic regression?
+
+::: columns
+::: {.column width="50%"}
+-   Similar to linear regression....
+    but
+
+-   Modeling tool when our response is categorical
+:::
+
+::: {.column width="50%"}
+![](images/logistic.png){fig-align="center"}
+:::
+:::
+
+## Modelling binary outcomes
+
+-   Variables with binary outcomes follow the **Bernouilli distribution**:
+
+    -   $y_i \sim Bern(p)$
+
+    -   $p$: Probability of success
+
+    -   $1-p$: Probability of failure
+
+-   We can't model $y$ directly, so instead we model $p$
+
+## Linear model
+
+$$
+p_i = \beta_o + \beta_1 \times X_1 + \cdots + \epsilon
+$$
+
+-   But remember that $p$ must be between 0 and 1
+
+-   We need a **link function** that transforms the linear model to have an appropriate range
+
+## Logit link function
+
+The **logit** function take values between 0 and 1 (probabilities) and maps them to values in the range negative infinity to positive infinity:
+
+$$
+logit(p) = log \bigg( \frac{p}{1 - p} \bigg)
+$$
+
+```{r}
+#| include: false
+
+library(tidyverse)
+
+tibble(
+  x = seq(0.001, 0.999, 0.001),
+  y = log(x / (1-x))
+) |>
+  ggplot(aes(x = x, y = y)) +
+  geom_smooth() +
+  scale_x_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
+  labs(x = "p", y = "logit(p)", title = "logit(p) vs. p")
+```
+
+## This isn't exactly what we need though.....
+
+-   Recall, the goal is to take values between -$\infty$ and $\infty$ and map them to probabilities.
+
+-   We need the opposite of the link function... or the *inverse*
+
+-   Taking the inverse of the logit function will map arbitrary real values back to the range \[0, 1\]
+
+## Generalized linear model
+
+-   We model the logit (log-odds) of $p$ :
+
+$$
+logit(p) = log \bigg( \frac{p}{1 - p} \bigg) = \beta_o + \beta_1 \times X1_i + \cdots + \epsilon 
+$$
+
+-   Then take the inverse to obtain the predicted $p$:
+
+$$
+p_i = \frac{e^{\beta_o + \beta_1 \times X1_i + \cdots + \epsilon}}{1 + e^{\beta_o + \beta_1 \times X1_i + \cdots + \epsilon}}
+$$
+
+## A logistic model visualized
+
+```{r}
+#| echo: false
+
+sigmoid = function(x) 1 / (1 + exp(-x + 10))
+plot.function(sigmoid, from = 0, to = 20, n = 101, 
+              ylab="P(Y = 1)", 
+              xlab = "X (predictor)", 
+              main = "Predicted probability Y = 1", 
+              lwd = 3)
+```
+
+## Takeaways
+
+-   Generalized linear models allow us to fit models to predict non-continuous outcomes
+
+-   Predicting binary outcomes requires modeling the log-odds of success, where p = probability of success
+

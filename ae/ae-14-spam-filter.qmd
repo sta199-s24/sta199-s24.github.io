@@ -1,0 +1,144 @@
+---
+title: "Building a spam filter"
+categories: 
+  - Application exercise
+---
+
+In this application exercise, we will
+
+-   Use logistic regression to fit a model for a binary response variable
+-   Fit a logistic regression model in R
+-   Use a logistic regression model for classification
+
+To illustrate logistic regression, we will build a spam filter from email data.
+
+The data come from incoming emails in David Diez's (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012.
+All personally identifiable information has been removed.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+```
+
+```{r}
+glimpse(email)
+```
+
+The variables we'll use in this analysis are
+
+-   `spam`: 1 if the email is spam, 0 otherwise
+-   `exclaim_mess`: The number of exclamation points in the email message
+
+**Goal:** Use the number of exclamation points in an email to predict whether or not it is spam.
+
+# Exploratory data analysis
+
+Let's start by taking a look at our data.
+Create an density plot to investigate the relationship between `spam` and `exclaim_mess`.
+Additionally, calculate the mean number of exclamation points for both spam and non-spam emails.
+
+```{r}
+# add code here
+```
+
+# Linear model -- a false start
+
+Suppose we try using a linear model to describe the relationship between the number of exclamation points and whether an email is spam.
+Write up a linear model that models spam by exclamation marks.
+
+```{r}
+# add code here
+```
+
+A visualization of a linear model is below.
+
+```{r linear-model}
+#| label: plot-linear-model
+
+ggplot(email, aes(x = exclaim_mess, y = as.numeric(spam), color = spam)) + 
+  geom_jitter(alpha = 0.5) + 
+  geom_smooth(method = "lm", se = FALSE, color = "black")
+```
+
+-   Is the linear model a good fit for the data? Why or why not?
+
+*Add response here.*
+
+# Logistic regression -- a different approach
+
+Let $p$ be the probability an email is spam (success).
+
+-   $\frac{p}{1-p}$: odds an email is spam (if p = 0.7, then the odds are 0.7/(1 - 0.7) = 2.33)
+-   $\log\Big(\frac{p}{1-p}\Big)$: "log-odds", i.e., the natural log, an email is spam
+
+The logistic regression model using the number of exclamation points as an explanatory variable is as follows:
+
+$$\log\Big(\frac{p}{1-p}\Big) = \beta_0 + \beta_1 \times exclaim\_mess$$
+
+The probability an email is spam can be calculated as:
+
+$$p = \frac{\exp\{\beta_0 + \beta_1 \times exclaim\_mess\}}{1 + \exp\{\beta_0 + \beta_1 \times exclaim\_mess\}}$$
+
+# Exercises
+
+## Exercise 1
+
+-   **Demo:** Fit the logistic regression model using the number of exclamation points to predict the probability an email is spam.
+
+```{r}
+log_fit <- logistic_reg() |>
+  fit(spam ~ exclaim_mess, data = email)
+
+tidy(log_fit)
+```
+
+-   **Your turn:** How does the code above differ from previous code we've used to fit regression models? Compare your summary output to the estimated model below.
+
+$$\log\Big(\frac{p}{1-p}\Big) = -2.27 - 0.000272 \times exclaim\_mess$$
+
+*Add response here.*
+
+## Exercise 2
+
+What is the probability the email is spam if it contains 10 exclamation points?
+Answer the question using the `predict()` function.
+
+We can use the predict function in R to produce the probability as well.
+
+```{r}
+#| label: pred-log-odds-2
+
+# add code here
+```
+
+## Exercise 3
+
+We have the probability an email is spam, but ultimately we want to use the probability to classify an email as spam or not spam.
+Therefore, we need to set a **decision-making threshold**, such that an email is classified as spam if the predicted probability is greater than the threshold and not spam otherwise.
+
+Suppose you are a data scientist working on a spam filter.
+You must determine how high the predicted probability must be before you think it would be reasonable to call it spam and put it in the junk folder (which the user is unlikely to check).
+
+**Your turn:** What are some trade offs you would consider as you set the decision-making threshold?
+Discuss with your neighbor.
+
+*Add response here.*
+
+```{r}
+log_aug <- augment(log_fit, email)
+
+ggplot(log_aug, aes(x = exclaim_mess, y = spam, color = .pred_class)) +
+  geom_jitter(alpha = 0.5)
+```
+
+## Exercise 4
+
+Fit a model with **all** variables in the dataset as predictors and receate the visualization above for this model.
+
+```{r}
+# add code here
+```
