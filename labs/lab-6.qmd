@@ -141,7 +141,7 @@ b.  To answer the question of interest, would it be useful to compare the slopes
 
 ## Question 7
 
-Now, what if calculated $R^2$ to help answer our question?
+Now, what if we calculated $R^2$ to help answer our question?
 To compare the explanatory power of each individual predictor, we will look at $R^2$ between the models.
 $R^2$ is a measure of how much of the variability in the response variable is explained by the model.
 
