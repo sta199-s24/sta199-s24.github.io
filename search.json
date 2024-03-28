@@ -3662,7 +3662,7 @@
     "href": "slides/19-logistic-regression.html#model",
     "title": "Logistic regression",
     "section": "Model",
-    "text": "Model\n\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic  p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)     2.39     0.00512     468.  0       \n2 credit_checks   0.0236   0.00166      14.2 2.39e-45\n\n\n\n\\[\n\\widehat{log(interest~rate)} = 2.37 + 0.00388 \\times credit~checks\n\\]"
+    "text": "Model\n\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic  p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)     2.39     0.00512     468.  0       \n2 credit_checks   0.0236   0.00166      14.2 2.39e-45\n\n\n\n\\[\n\\widehat{log(interest~rate)} = 2.39 + 0.0236 \\times credit~checks\n\\]"
   },
   {
     "objectID": "slides/19-logistic-regression.html#slope",
@@ -3676,7 +3676,7 @@
     "href": "slides/19-logistic-regression.html#slope-1",
     "title": "Logistic regression",
     "section": "Slope",
-    "text": "Slope\n\\[\nlog(interest~rate_{x+1}) - log(interest~rate_{x}) =  0.0236\n\\]\n\n\\[\nlog(\\frac{interest~rate_{x+1}}{interest~rate_{x}}) = 0.0236\n\\]\n\n\n\\[\ne^{log(\\frac{interest~rate_{x+1}}{interest~rate_{x}})} = e^0.0236\n\\]\n\n\n\\[\n\\frac{interest~rate_{x+1}}{interest~rate_{x}} = 1.024\n\\]\n\n\nFor each additional credit check, interest rate is predicted to be higher, on average, by a factor of 1.024."
+    "text": "Slope\n\\[\nlog(interest~rate_{x+1}) - log(interest~rate_{x}) =  0.0236\n\\]\n\n\\[\nlog(\\frac{interest~rate_{x+1}}{interest~rate_{x}}) = 0.0236\n\\]\n\n\n\\[\ne^{log(\\frac{interest~rate_{x+1}}{interest~rate_{x}})} = e^{0.0236}\n\\]\n\n\n\\[\n\\frac{interest~rate_{x+1}}{interest~rate_{x}} = 1.024\n\\]\n\n\nFor each additional credit check, interest rate is predicted to be higher, on average, by a factor of 1.024."
   },
   {
     "objectID": "slides/19-logistic-regression.html#what-is-logistic-regression",
