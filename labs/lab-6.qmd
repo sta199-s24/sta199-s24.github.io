@@ -151,7 +151,7 @@ Intuitively, if r=1 or −1, then $R^2$=1, indicating the model is a perfect fit
 If r≈0 then $R^2$≈0, indicating the model is a very bad fit for the data.
 
 You can calculate $R^2$ using the glance function.
-For example, you can calculate $R^2$ for dt_model using the code `glance(dt_model)$r.squared`.
+For example, you can calculate $R^2$ for `dt_model` using the code `glance(dt_model)$r.squared`.
 
 a.  Calculate and report $R^2$ for each model fit in the previous exercise.
 
