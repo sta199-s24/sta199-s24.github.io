@@ -133,7 +133,7 @@ Do not report the model outputs in a tidy format but save each one as `dt_model`
 
 -   `precdiff` and `transformed_parsim`
 
-a.  Report the slops for each of these models.
+a.  Report the slopes for each of these models.
     Use proper notation.
 
 b.  To answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity?
@@ -141,7 +141,7 @@ b.  To answer the question of interest, would it be useful to compare the slopes
 
 ## Question 7
 
-Now, what if calculated $R^2$ to help answer our question?
+Now, what if we calculated $R^2$ to help answer our question?
 To compare the explanatory power of each individual predictor, we will look at $R^2$ between the models.
 $R^2$ is a measure of how much of the variability in the response variable is explained by the model.
 
@@ -151,7 +151,7 @@ Intuitively, if r=1 or −1, then $R^2$=1, indicating the model is a perfect fit
 If r≈0 then $R^2$≈0, indicating the model is a very bad fit for the data.
 
 You can calculate $R^2$ using the glance function.
-For example, you can calculate $R^2$ for dt_model using the code `glance(dt_model)$r.squared`.
+For example, you can calculate $R^2$ for `dt_model` using the code `glance(dt_model)$r.squared`.
 
 a.  Calculate and report $R^2$ for each model fit in the previous exercise.
 
