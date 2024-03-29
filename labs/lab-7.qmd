@@ -1,5 +1,5 @@
 ---
-title: "Lab 7 - TBA"
+title: "Lab 7 - Modeling II"
 categories: "Lab"
 ---
 
