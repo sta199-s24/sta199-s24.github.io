@@ -1,0 +1,98 @@
+---
+title: "Lab 6 - Modeling II"
+categories: "Lab"
+---
+
+# Introduction
+
+In this lab you'll continue your practice of statistical modeling and then venture on to quantifying uncertainty.
+
+# Part 1 - Building a spam filter
+
+The data come from incoming emails in David Diez's (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012.
+All personally identifiable information has been removed.
+
+The outcome variable is `spam`, which takes the value `1` if the email is spam, `0` otherwise.
+
+## Question 1
+
+a\.
+Fit a logistic regression model predicting `spam` from `exclaim_mess` (the number of exclamation points in the email message).
+Then, display the tidy output of the model.
+
+b\.
+Using this model, predict the probability the email is spam if it contains 10 exclamation points.
+
+::: callout-tip
+Use the `predict()` or `augment()` function to make your prediction.
+:::
+
+## Question 2
+
+a\.
+Fit another logistic regression model predicting `spam` from `exclaim_mess` and `winner` (indicating whether “winner” appeared in the email.).
+Then, display the tidy output of the model.
+
+b\.
+Using this model, predict spam / not spam for all emails in the `openintro` dataset with `augment()`.
+Store the resulting data frame with an appropriate name.
+
+c\.
+Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:
+
+-   that are labelled as spam that are actually spam
+-   that are not labelled as spam that are actually spam
+-   that are labelled as spam that are actually not spam
+-   that are not labelled as spam that are actually not spam
+
+Store the resulting data frame with an appropriate name.
+
+d\.
+In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.
+
+## Question 3
+
+a\.
+Fit another logistic regression model predicting `spam` from `exclaim_mess` and another variable you think would be a good predictor.
+Provide a 1-sentence justification for why you chose this variable.
+Display the tidy output of the model.
+
+b\.
+Using this model, predict spam / not spam for all emails in the `openintro` dataset with `augment()`.
+Store the resulting data frame with an appropriate name.
+
+c\.
+Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:
+
+-   that are labelled as spam that are actually spam
+-   that are not labelled as spam that are actually spam
+-   that are labelled as spam that are actually not spam
+-   that are not labelled as spam that are actually not spam
+
+Store the resulting data frame with an appropriate name.
+
+d\.
+In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.
+
+e\.
+Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model is preferable and why.
+
+# Part 2 - Harassment at work
+
+## Question X
+
+In 2016, the GSS added a new question on harassment at work.
+The question is phrased as the following.
+
+Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?
+
+Answers to this question are stored in the `harass5` variable in our data set.
+
+a.  Create a subset of the data that only contains `Yes` and `No` answers for the harassment question.
+    How many responses chose each of these answers?
+
+b.  Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.
+
+c.  Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job.
+    Use 1000 iterations when creating your bootstrap distribution.
+    Interpret this interval in context of the data.
