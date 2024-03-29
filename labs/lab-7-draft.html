@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STA 199 - Lab 7 - Modeling II</title>
+<title>STA 199 - Lab 6 - Modeling II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../labs/lab-6.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,10 +71,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="STA 199 - Lab 7 - Modeling II">
+<meta property="og:title" content="STA 199 - Lab 6 - Modeling II">
 <meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Lab 7 - Modeling II">
+<meta name="twitter:title" content="STA 199 - Lab 6 - Modeling II">
 <meta name="twitter:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2024.">
 <meta name="twitter:image" content="https://sta199-s24.github.io/labs/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
@@ -91,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-0.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-7.html">Lab 7</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 6 - Modeling II</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -270,13 +269,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-0.html" class="sidebar-item-text sidebar-link">
@@ -321,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link active">
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
@@ -333,14 +332,30 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#part-1---building-a-spam-filter" id="toc-part-1---building-a-spam-filter" class="nav-link" data-scroll-target="#part-1---building-a-spam-filter">Part 1 - Building a spam filter</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul></li>
+  <li><a href="#part-2---harassment-at-work" id="toc-part-2---harassment-at-work" class="nav-link" data-scroll-target="#part-2---harassment-at-work">Part 2 - Harassment at work</a>
+  <ul class="collapse">
+  <li><a href="#question-x" id="toc-question-x" class="nav-link" data-scroll-target="#question-x">Question X</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-7-draft.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-0.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-7.html">Lab 7</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 7 - Modeling II</h1>
+<h1 class="title">Lab 6 - Modeling II</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Lab</div>
   </div>
@@ -360,9 +375,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To be posted.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In this lab you’ll continue your practice of statistical modeling and then venture on to quantifying uncertainty.</p>
+</section>
+<section id="part-1---building-a-spam-filter" class="level1">
+<h1>Part 1 - Building a spam filter</h1>
+<p>The data come from incoming emails in David Diez’s (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012. All personally identifiable information has been removed.</p>
+<p>The outcome variable is <code>spam</code>, which takes the value <code>1</code> if the email is spam, <code>0</code> otherwise.</p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>a. Fit a logistic regression model predicting <code>spam</code> from <code>exclaim_mess</code> (the number of exclamation points in the email message). Then, display the tidy output of the model.</p>
+<p>b. Using this model, predict the probability the email is spam if it contains 10 exclamation points.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <code>predict()</code> or <code>augment()</code> function to make your prediction.</p>
+</div>
+</div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>a. Fit another logistic regression model predicting <code>spam</code> from <code>exclaim_mess</code> and <code>winner</code> (indicating whether “winner” appeared in the email.). Then, display the tidy output of the model.</p>
+<p>b. Using this model, predict spam / not spam for all emails in the <code>openintro</code> dataset with <code>augment()</code>. Store the resulting data frame with an appropriate name.</p>
+<p>c. Using your data frame from the previous part, determine, in a single pipeline, and using <code>count()</code>, the numbers of emails:</p>
+<ul>
+<li>that are labelled as spam that are actually spam</li>
+<li>that are not labelled as spam that are actually spam</li>
+<li>that are labelled as spam that are actually not spam</li>
+<li>that are not labelled as spam that are actually not spam</li>
+</ul>
+<p>Store the resulting data frame with an appropriate name.</p>
+<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates.</p>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>a. Fit another logistic regression model predicting <code>spam</code> from <code>exclaim_mess</code> and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.</p>
+<p>b. Using this model, predict spam / not spam for all emails in the <code>openintro</code> dataset with <code>augment()</code>. Store the resulting data frame with an appropriate name.</p>
+<p>c. Using your data frame from the previous part, determine, in a single pipeline, and using <code>count()</code>, the numbers of emails:</p>
+<ul>
+<li>that are labelled as spam that are actually spam</li>
+<li>that are not labelled as spam that are actually spam</li>
+<li>that are labelled as spam that are actually not spam</li>
+<li>that are not labelled as spam that are actually not spam</li>
+</ul>
+<p>Store the resulting data frame with an appropriate name.</p>
+<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates.</p>
+<p>e. Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model is preferable and why.</p>
+</section>
+</section>
+<section id="part-2---harassment-at-work" class="level1">
+<h1>Part 2 - Harassment at work</h1>
+<section id="question-x" class="level2">
+<h2 class="anchored" data-anchor-id="question-x">Question X</h2>
+<p>In 2016, the GSS added a new question on harassment at work. The question is phrased as the following.</p>
+<p>Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?</p>
+<p>Answers to this question are stored in the <code>harass5</code> variable in our data set.</p>
+<ol type="a">
+<li><p>Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responses chose each of these answers?</p></li>
+<li><p>Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.</p></li>
+<li><p>Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Use 1000 iterations when creating your bootstrap distribution. Interpret this interval in context of the data.</p></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -896,15 +980,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../labs/lab-6.html" class="pagination-link  aria-label=" lab="" 6"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 6</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -913,7 +988,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-7.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-7-draft.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
