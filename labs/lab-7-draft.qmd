@@ -55,11 +55,7 @@ Fit a logistic regression model predicting `spam` from `exclaim_mess` (the numbe
 Then, display the tidy output of the model.
 
 b\.
-Using this model, predict the probability the email is spam if it contains 10 exclamation points.
-
-::: callout-tip
-Use the `predict()` or `augment()` function to make your prediction.
-:::
+Using this model and an R function like `predict()` or `augment()`, predict the probability the email is spam if it contains 10 exclamation points.
 
 ## Question 2
 
