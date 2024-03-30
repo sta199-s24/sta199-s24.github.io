@@ -1,5 +1,5 @@
 ---
-title: "Lab 6 - Modeling II"
+title: "Lab 7 - Modeling II"
 categories: "Lab"
 ---
 
