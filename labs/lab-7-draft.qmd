@@ -27,7 +27,8 @@ In addition, the code should all the code should be be able to be read (not run 
 Make sure that is the case, and add line breaks where the code is running off the page.
 
 ::: callout-important
-If your code is running off the page so we can’t see your entire code, we will not evaluate any of it.
+Render your document.
+If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question.
 The question will automatically receive a 0.
 This is something you can and should verify before you turn in your work.
 :::
