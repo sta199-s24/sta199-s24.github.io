@@ -7,6 +7,39 @@ categories: "Lab"
 
 In this lab you'll continue your practice of statistical modeling and then venture on to quantifying uncertainty.
 
+## Packages
+
+In this lab we will work with the **tidyverse** and **tidymodels** packages.
+
+```{r}
+#| eval: true
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+```
+
+## Guidelines
+
+Your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.
+
+In addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF.
+Make sure that is the case, and add line breaks where the code is running off the page.
+
+::: callout-important
+If your code is running off the page so we can’t see your entire code, we will not evaluate any of it.
+The question will automatically receive a 0.
+This is something you can and should verify before you turn in your work.
+:::
+
+You should have at least 3 commits with meaningful commit messages by the end of the assignment.
+
+Additionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.
+
+::: callout-important
+Failure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such.
+:::
+
 # Part 1 - Building a spam filter
 
 The data come from incoming emails in David Diez's (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012.
@@ -89,7 +122,13 @@ The data can be found in the `data` folder: `hotels.csv`.
 
 ## Question 4
 
-Conduct EDA and write up 5 bullet points of findings...
+Explore attributes of bookings and summarize your findings in 5 bullet points.
+You must provide a visualization or summary supporting each finding.
+
+::: callout-note
+This is not meant to be an exhaustive exploration.
+We anticipate a wide variety of answers to this question.
+:::
 
 ## Question 5
 
@@ -124,12 +163,13 @@ Clearly indicate which option you choose.
 The podcast or video must be *at least 30 minutes* to count towards the statistics experience.
 A few suggestions are below:
 
+-   [posit::conf 2023 talks](https://youtube.com/playlist?list=PL9HYL-VRX0oRFZslRGHwHuwea7SvAATHp&si=95wk_4q3-mex9hhT)
 -   [rstudio::conf 2022 talks](https://www.youtube.com/watch?v=u1Gzxg8Pd08&list=PL9HYL-VRX0oTOwqzVtL_q5T8MNrzn0mdH)
 -   [rstudio::global 2021 talks](https://www.rstudio.com/resources/rstudioglobal-2021/)
 -   [rstudio::conf 2020 talks](https://www.rstudio.com/resources/rstudioconf-2020/)
 -   [Stats + Stories Podcast](https://statsandstories.net/)
--   [Causal Inference Podcast](https://casualinfer.libsyn.com/)
--   [FiveThirtyEight Model Talk](https://fivethirtyeight.com/tag/model-talk/)
+-   [Casual Inference Podcast](https://casualinfer.libsyn.com/)
+-   [Not So Standard Deviations](https://nssdeviations.com/)
 
 This list is not exhaustive.
 You may listen to other podcasts or watch other statistics/data science videos not included on this list.
@@ -141,12 +181,6 @@ This could include a professor, professional in industry, graduate student, etc.
 # Part 4 - Get creative
 
 ## Question 7
-
-Participate in this week's TidyTuesday challenge.
-
-The visualization should include features or customization that are beyond what we've done in class .
-
-## Question 8
 
 Your task is to make the following plot as ugly and as ineffective as possible.
 Change colors, axes, fonts, theme, or anything else you can think of in the code chunk below.
@@ -165,7 +199,7 @@ ggplot(
 
 # Part 5 - Harassment at work
 
-## Question 9
+## Question 8
 
 In 2016, the GSS added a new question on harassment at work.
 The question is phrased as the following.
@@ -175,7 +209,7 @@ Over the past five years, have you been harassed by your superiors or co-workers
 Answers to this question are stored in the `harass5` variable in our data set.
 
 a.  Create a subset of the data that only contains `Yes` and `No` answers for the harassment question.
-    How many responses chose each of these answers?
+    How many responsdents chose each of these answers?
 
 b.  Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.
 
@@ -183,6 +217,17 @@ c.  Calculate a 95% bootstrap confidence interval for the proportion of American
     Use 1000 iterations when creating your bootstrap distribution.
     Interpret this interval in context of the data.
 
-## Question 10
+# Part 6 - Data science assessment
 
-Hypothesis test question
+## Question 9
+
+::: callout-important
+This question is graded out of 10 points.
+:::
+
+Take a data science assessment at <https://duke.qualtrics.com/jfe/form/SV_bPZS3LIKoYA0fL8>.
+Your assessment will be graded out of 10 points, and those points will be added to your score for the remaining points on this lab.
+There are no additional penalties for wrong answers, so please answer all questions.
+
+Optionally, you can participate in the research study this assessment is a part of.
+I will not find out whether you participate in the study or not, your scores will be passed on to me by the research administrator regardless of your study participation.
