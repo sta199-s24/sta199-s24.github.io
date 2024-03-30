@@ -1554,84 +1554,84 @@
   {
     "objectID": "labs/lab-7-draft.html",
     "href": "labs/lab-7-draft.html",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "",
     "text": "In this lab you’ll continue your practice of statistical modeling and then venture on to quantifying uncertainty.\n\n\nIn this lab we will work with the tidyverse and tidymodels packages.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n\n\n\nYour plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.\n\n\n\n\n\n\nImportant\n\n\n\nRender your document. If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question. The question will automatically receive a 0. This is something you can and should verify before you turn in your work.\n\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nAdditionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.\n\n\n\n\n\n\nImportant\n\n\n\nFailure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such."
   },
   {
     "objectID": "labs/lab-7-draft.html#packages",
     "href": "labs/lab-7-draft.html#packages",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "",
     "text": "In this lab we will work with the tidyverse and tidymodels packages.\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
   },
   {
     "objectID": "labs/lab-7-draft.html#guidelines",
     "href": "labs/lab-7-draft.html#guidelines",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "",
     "text": "Your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.\n\n\n\n\n\n\nImportant\n\n\n\nRender your document. If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question. The question will automatically receive a 0. This is something you can and should verify before you turn in your work.\n\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nAdditionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.\n\n\n\n\n\n\nImportant\n\n\n\nFailure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-1",
     "href": "labs/lab-7-draft.html#question-1",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 1",
-    "text": "Question 1\na. Fit a logistic regression model predicting spam from exclaim_mess (the number of exclamation points in the email message). Then, display the tidy output of the model.\nb. Using this model, predict the probability the email is spam if it contains 10 exclamation points.\n\n\n\n\n\n\nTip\n\n\n\nUse the predict() or augment() function to make your prediction."
+    "text": "Question 1\na. Fit a logistic regression model predicting spam from exclaim_mess (the number of exclamation points in the email message). Then, display the tidy output of the model.\nb. Using this model and an R function like predict() or augment(), predict the probability the email is spam if it contains 10 exclamation points."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-2",
     "href": "labs/lab-7-draft.html#question-2",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 2",
     "text": "Question 2\na. Fit another logistic regression model predicting spam from exclaim_mess and winner (indicating whether “winner” appeared in the email.). Then, display the tidy output of the model.\nb. Using this model, predict spam / not spam for all emails in the openintro dataset with augment(). Store the resulting data frame with an appropriate name.\nc. Using your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name.\nd. In a single pipeline, and using mutate(), calculate the false positive and false negative rates."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-3",
     "href": "labs/lab-7-draft.html#question-3",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 3",
     "text": "Question 3\na. Fit another logistic regression model predicting spam from exclaim_mess and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.\nb. Using this model, predict spam / not spam for all emails in the openintro dataset with augment(). Store the resulting data frame with an appropriate name.\nc. Using your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name.\nd. In a single pipeline, and using mutate(), calculate the false positive and false negative rates.\ne. Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model is preferable and why."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-4",
     "href": "labs/lab-7-draft.html#question-4",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 4",
     "text": "Question 4\nExplore attributes of bookings and summarize your findings in 5 bullet points. You must provide a visualization or summary supporting each finding.\n\n\n\n\n\n\nNote\n\n\n\nThis is not meant to be an exhaustive exploration. We anticipate a wide variety of answers to this question."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-5",
     "href": "labs/lab-7-draft.html#question-5",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 5",
     "text": "Question 5\nUsing these data, we will try to answer the following question:\n\nDo we expect reservations earlier in the month or later in the month to be cancelled?\n\n\nExploration: In a single pipeline, calculate the mean arrival date (arrival_date_day_of_month) for both booking that were cancelled and that were not cancelled.\nJustification: In your own words, explain why we can not fit a linear model to model the relationship between if a hotel reservation was cancelled and the day of month for the booking.\nModel fitting and interpretation:\n\nFit the appropriate model and display a tidy summary of the model output.\nInterpret the slope coefficient in context of the data and the research question.\n\nEstimated model: Write out the estimated model using proper notation.\nPredicted: Calculate the probability that the hotel reservation is cancelled if it the arrival date date is on the 26th of the month. Based on this probability, would you predict this booking would be cancelled or not cancelled. Explain your reasoning for your classification."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-6",
     "href": "labs/lab-7-draft.html#question-6",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 6",
     "text": "Question 6\nYou have two options for this exercise. Clearly indicate which option you choose.\nOption 1: Listen to a podcast or watch a video about statistics and data science. The podcast or video must be at least 30 minutes to count towards the statistics experience. A few suggestions are below:\n\nposit::conf 2023 talks\nrstudio::conf 2022 talks\nrstudio::global 2021 talks\nrstudio::conf 2020 talks\nStats + Stories Podcast\nCasual Inference Podcast\nNot So Standard Deviations\n\nThis list is not exhaustive. You may listen to other podcasts or watch other statistics/data science videos not included on this list. Ask your professor if you are unsure whether a particular podcast or video will count towards the statistics experience.\nOption 2: Talk with someone who uses statistics in their daily work. This could include a professor, professional in industry, graduate student, etc."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-7",
     "href": "labs/lab-7-draft.html#question-7",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 7",
     "text": "Question 7\nYour task is to make the following plot as ugly and as ineffective as possible. Change colors, axes, fonts, theme, or anything else you can think of in the code chunk below. You can also search online for other themes, fonts, etc. that you want to tweak. Try to make it as ugly as possible, the sky is the limit!\nIn 2-3 sentences, explain why the plot you created is ugly (to you, at least) and ineffective.\n\nggplot(\n  penguins, \n  aes(x = flipper_length_mm, y = bill_length_mm, color = species)\n  ) + \n  geom_point()"
   },
   {
     "objectID": "labs/lab-7-draft.html#question-8",
     "href": "labs/lab-7-draft.html#question-8",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 8",
     "text": "Question 8\nIn 2016, the GSS added a new question on harassment at work. The question is phrased as the following.\nOver the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?\nAnswers to this question are stored in the harass5 variable in our data set.\n\nCreate a subset of the data that only contains Yes and No answers for the harassment question. How many responsdents chose each of these answers?\nDescribe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.\nCalculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Use 1000 iterations when creating your bootstrap distribution. Interpret this interval in context of the data."
   },
   {
     "objectID": "labs/lab-7-draft.html#question-9",
     "href": "labs/lab-7-draft.html#question-9",
-    "title": "Lab 6 - Modeling II",
+    "title": "Lab 7 - Modeling II",
     "section": "Question 9",
     "text": "Question 9\n\n\n\n\n\n\nImportant\n\n\n\nThis question is graded out of 10 points.\n\n\nTake a data science assessment at https://duke.qualtrics.com/jfe/form/SV_bPZS3LIKoYA0fL8. Your assessment will be graded out of 10 points, and those points will be added to your score for the remaining points on this lab. There are no additional penalties for wrong answers, so please answer all questions.\nOptionally, you can participate in the research study this assessment is a part of. I will not find out whether you participate in the study or not, your scores will be passed on to me by the research administrator regardless of your study participation."
   },
