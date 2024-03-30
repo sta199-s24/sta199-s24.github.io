@@ -370,7 +370,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
+  </ul></li>
   <li><a href="#part-1---building-a-spam-filter" id="toc-part-1---building-a-spam-filter" class="nav-link" data-scroll-target="#part-1---building-a-spam-filter">Part 1 - Building a spam filter</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
@@ -389,12 +393,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#part-4---get-creative" id="toc-part-4---get-creative" class="nav-link" data-scroll-target="#part-4---get-creative">Part 4 - Get creative</a>
   <ul class="collapse">
   <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
   </ul></li>
   <li><a href="#part-5---harassment-at-work" id="toc-part-5---harassment-at-work" class="nav-link" data-scroll-target="#part-5---harassment-at-work">Part 5 - Harassment at work</a>
   <ul class="collapse">
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  </ul></li>
+  <li><a href="#part-6---data-science-assessment" id="toc-part-6---data-science-assessment" class="nav-link" data-scroll-target="#part-6---data-science-assessment">Part 6 - Data science assessment</a>
+  <ul class="collapse">
   <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
-  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/labs/lab-7-draft.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -427,6 +433,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>In this lab you’ll continue your practice of statistical modeling and then venture on to quantifying uncertainty.</p>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>In this lab we will work with the <strong>tidyverse</strong> and <strong>tidymodels</strong> packages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
+<p>Your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.</p>
+<p>In addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your code is running off the page so we can’t see your entire code, we will not evaluate any of it. The question will automatically receive a 0. This is something you can and should verify before you turn in your work.</p>
+</div>
+</div>
+<p>You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
+<p>Additionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Failure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="part-1---building-a-spam-filter" class="level1">
 <h1>Part 1 - Building a spam filter</h1>
@@ -486,7 +533,20 @@ Tip
 <p>The data can be found in the <code>data</code> folder: <code>hotels.csv</code>.</p>
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Conduct EDA and write up 5 bullet points of findings…</p>
+<p>Explore attributes of bookings and summarize your findings in 5 bullet points. You must provide a visualization or summary supporting each finding.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is not meant to be an exhaustive exploration. We anticipate a wide variety of answers to this question.</p>
+</div>
+</div>
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
@@ -514,12 +574,13 @@ Tip
 <p>You have two options for this exercise. Clearly indicate which option you choose.</p>
 <p><strong>Option 1:</strong> Listen to a podcast or watch a video about statistics and data science. The podcast or video must be <em>at least 30 minutes</em> to count towards the statistics experience. A few suggestions are below:</p>
 <ul>
+<li><a href="https://youtube.com/playlist?list=PL9HYL-VRX0oRFZslRGHwHuwea7SvAATHp&amp;si=95wk_4q3-mex9hhT">posit::conf 2023 talks</a></li>
 <li><a href="https://www.youtube.com/watch?v=u1Gzxg8Pd08&amp;list=PL9HYL-VRX0oTOwqzVtL_q5T8MNrzn0mdH">rstudio::conf 2022 talks</a></li>
 <li><a href="https://www.rstudio.com/resources/rstudioglobal-2021/">rstudio::global 2021 talks</a></li>
 <li><a href="https://www.rstudio.com/resources/rstudioconf-2020/">rstudio::conf 2020 talks</a></li>
 <li><a href="https://statsandstories.net/">Stats + Stories Podcast</a></li>
-<li><a href="https://casualinfer.libsyn.com/">Causal Inference Podcast</a></li>
-<li><a href="https://fivethirtyeight.com/tag/model-talk/">FiveThirtyEight Model Talk</a></li>
+<li><a href="https://casualinfer.libsyn.com/">Casual Inference Podcast</a></li>
+<li><a href="https://nssdeviations.com/">Not So Standard Deviations</a></li>
 </ul>
 <p>This list is not exhaustive. You may listen to other podcasts or watch other statistics/data science videos not included on this list. Ask your professor if you are unsure whether a particular podcast or video will count towards the statistics experience.</p>
 <p><strong>Option 2:</strong> Talk with someone who uses statistics in their daily work. This could include a professor, professional in industry, graduate student, etc.</p>
@@ -529,38 +590,50 @@ Tip
 <h1>Part 4 - Get creative</h1>
 <section id="question-7" class="level2">
 <h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>Participate in this week’s TidyTuesday challenge.</p>
-<p>The visualization should include features or customization that are beyond what we’ve done in class .</p>
-</section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <p>Your task is to make the following plot as ugly and as ineffective as possible. Change colors, axes, fonts, theme, or anything else you can think of in the code chunk below. You can also search online for other themes, fonts, etc. that you want to tweak. Try to make it as ugly as possible, the sky is the limit!</p>
 <p>In 2-3 sentences, explain why the plot you created is <em>ugly</em> (to you, at least) and ineffective.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  penguins, </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm, <span class="at">color =</span> species)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  penguins, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm, <span class="at">color =</span> species)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="part-5---harassment-at-work" class="level1">
 <h1>Part 5 - Harassment at work</h1>
-<section id="question-9" class="level2">
-<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <p>In 2016, the GSS added a new question on harassment at work. The question is phrased as the following.</p>
 <p>Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?</p>
 <p>Answers to this question are stored in the <code>harass5</code> variable in our data set.</p>
 <ol type="a">
-<li><p>Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responses chose each of these answers?</p></li>
+<li><p>Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responsdents chose each of these answers?</p></li>
 <li><p>Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.</p></li>
 <li><p>Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Use 1000 iterations when creating your bootstrap distribution. Interpret this interval in context of the data.</p></li>
 </ol>
 </section>
-<section id="question-10" class="level2">
-<h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
-<p>Hypothesis test question</p>
+</section>
+<section id="part-6---data-science-assessment" class="level1">
+<h1>Part 6 - Data science assessment</h1>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This question is graded out of 10 points.</p>
+</div>
+</div>
+<p>Take a data science assessment at <a href="https://duke.qualtrics.com/jfe/form/SV_bPZS3LIKoYA0fL8" class="uri">https://duke.qualtrics.com/jfe/form/SV_bPZS3LIKoYA0fL8</a>. Your assessment will be graded out of 10 points, and those points will be added to your score for the remaining points on this lab. There are no additional penalties for wrong answers, so please answer all questions.</p>
+<p>Optionally, you can participate in the research study this assessment is a part of. I will not find out whether you participate in the study or not, your scores will be passed on to me by the research administrator regardless of your study participation.</p>
 
 
 </section>
