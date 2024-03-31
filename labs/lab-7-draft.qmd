@@ -60,7 +60,7 @@ Using this model and an R function like `predict()` or `augment()`, predict the 
 ## Question 2
 
 a\.
-Fit another logistic regression model predicting `spam` from `exclaim_mess` and `winner` (indicating whether “winner” appeared in the email.).
+Fit another logistic regression model predicting `spam` from `exclaim_mess`, `winner` (indicating whether “winner” appeared in the email), and `urgent_subj` (whether the word "urgent" is in the subject of the email).
 Then, display the tidy output of the model.
 
 b\.
