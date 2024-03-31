@@ -111,7 +111,7 @@ Based on the false positive and false negatives rates of this model, comment, in
 
 # Part 2 - Hotel cancellations
 
-For this exercise, we will explore hotel cancellations.
+For this exercise, we will work with hotel cancellations.
 The data describe the demand of two different types of hotels.
 Each observation represents a hotel booking between July 1, 2015 and August 31, 2017.
 Some bookings were cancelled (`is_canceled = 1`) and others were kept, i.e., the guests checked into the hotel (`is_canceled = 0`).
@@ -121,7 +121,7 @@ The data can be found in the `data` folder: `hotels.csv`.
 
 ## Question 4
 
-Explore attributes of bookings and summarize your findings in 5 bullet points.
+Read the data and then explore attributes of bookings and summarize your findings in 5 bullet points.
 You must provide a visualization or summary supporting each finding.
 
 ::: callout-note
