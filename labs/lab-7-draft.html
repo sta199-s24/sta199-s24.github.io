@@ -496,7 +496,7 @@ Important
 <li>that are not labelled as spam that are actually not spam</li>
 </ul>
 <p>Store the resulting data frame with an appropriate name.</p>
-<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates.</p>
+<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.</p>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
@@ -510,7 +510,7 @@ Important
 <li>that are not labelled as spam that are actually not spam</li>
 </ul>
 <p>Store the resulting data frame with an appropriate name.</p>
-<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates.</p>
+<p>d. In a single pipeline, and using <code>mutate()</code>, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.</p>
 <p>e. Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model is preferable and why.</p>
 </section>
 </section>
@@ -549,7 +549,6 @@ Note
 <li><p>Fit the appropriate model and display a tidy summary of the model output.</p></li>
 <li><p>Interpret the slope coefficient in context of the data and the research question.</p></li>
 </ul></li>
-<li><p><strong>Estimated model:</strong> Write out the estimated model using proper notation.</p></li>
 <li><p><strong>Predicted:</strong> Calculate the probability that the hotel reservation is cancelled if it the arrival date date is on the 26th of the month. Based on this probability, would you predict this booking would be cancelled or not cancelled. Explain your reasoning for your classification.</p></li>
 </ol>
 </section>
@@ -590,13 +589,15 @@ Note
 </section>
 <section id="part-5---harassment-at-work" class="level1">
 <h1>Part 5 - Harassment at work</h1>
+<p>The General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviors, and attributes. Hundreds of trends have been tracked since 1972. In addition, since the GSS adopted questions from earlier surveys, trends can be followed for up to 70 years. The GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest. Among the topics covered are civil liberties, crime and violence, inter-group tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events.</p>
+<p>The data for this part comes from the <code>gss16</code> data frame (containing data from the 2016 GSS) from the <strong>dsbox</strong> package.</p>
 <section id="question-8" class="level2">
 <h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <p>In 2016, the GSS added a new question on harassment at work. The question is phrased as the following.</p>
 <p>Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?</p>
 <p>Answers to this question are stored in the <code>harass5</code> variable in our data set.</p>
 <ol type="a">
-<li><p>Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responsdents chose each of these answers?</p></li>
+<li><p>Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many respondents chose each of these answers?</p></li>
 <li><p>Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.</p></li>
 <li><p>Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Use 1000 iterations when creating your bootstrap distribution. Interpret this interval in context of the data.</p></li>
 </ol>
