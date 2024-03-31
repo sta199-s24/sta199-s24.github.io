@@ -79,6 +79,7 @@ Store the resulting data frame with an appropriate name.
 
 d\.
 In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.
+In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
 
 ## Question 3
 
@@ -103,6 +104,7 @@ Store the resulting data frame with an appropriate name.
 
 d\.
 In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.
+In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
 
 e\.
 Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model is preferable and why.
@@ -143,9 +145,7 @@ Using these data, we will try to answer the following question:
 
     -   Interpret the slope coefficient in context of the data and the research question.
 
-(d) **Estimated model:** Write out the estimated model using proper notation.
-
-(e) **Predicted:** Calculate the probability that the hotel reservation is cancelled if it the arrival date date is on the 26th of the month.
+(d) **Predicted:** Calculate the probability that the hotel reservation is cancelled if it the arrival date date is on the 26th of the month.
     Based on this probability, would you predict this booking would be cancelled or not cancelled.
     Explain your reasoning for your classification.
 
@@ -196,6 +196,14 @@ ggplot(
 
 # Part 5 - Harassment at work
 
+The General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviors, and attributes.
+Hundreds of trends have been tracked since 1972.
+In addition, since the GSS adopted questions from earlier surveys, trends can be followed for up to 70 years.
+The GSS contains a standard core of demographic, behavioral, and attitudinal questions, plus topics of special interest.
+Among the topics covered are civil liberties, crime and violence, inter-group tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events.
+
+The data for this part comes from the `gss16` data frame (containing data from the 2016 GSS) from the **dsbox** package.
+
 ## Question 8
 
 In 2016, the GSS added a new question on harassment at work.
@@ -206,7 +214,7 @@ Over the past five years, have you been harassed by your superiors or co-workers
 Answers to this question are stored in the `harass5` variable in our data set.
 
 a.  Create a subset of the data that only contains `Yes` and `No` answers for the harassment question.
-    How many responsdents chose each of these answers?
+    How many respondents chose each of these answers?
 
 b.  Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.
 
