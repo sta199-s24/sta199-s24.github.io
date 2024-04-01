@@ -1,0 +1,218 @@
+---
+title: "Quantifying uncertainty with bootstrap intervals"
+subtitle: "Lecture 20"
+date: "April 2, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+## While you wait for class to begin...
+
+::: nonincremental
+Any questions from prepare materials?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+## Announcements
+
+-   ...
+
+# Quantifying uncertainty
+
+## Case study: Airbnb in Asheville, NC {.smaller}
+
+We have data on the price per guest (ppg) for a random sample of 50 Airbnb listings in 2020 for Asheville, NC. We are going to use these data to investigate what we would of expected to pay for an Airbnb in in Asheville, NC in June 2020.
+
+We have data on the price per guest (ppg) for a random sample of 50 Airbnb listings in 2020 for Asheville, NC. We are going to use these data to investigate what we would of expected to pay for an Airbnb in in Asheville, NC in June 2020.
+
+```{r}
+#| label: data
+#| message: false
+#| warning: false
+
+abb <- read_csv("data/asheville.csv")
+
+glimpse(abb)
+```
+
+## Terminology {.smaller}
+
+-   **Population parameter** - What we are interested in. Statistical measure that describes an entire population.
+
+-   **Sample statistic (point estimate)** - describes a sample. A piece of information you get from a fraction of the population.
+
+```{r}
+#| label: take-a-guess
+
+abb |> 
+  summarize(ppg_mean = mean(ppg))
+```
+
+## Catching a fish
+
+::: task
+Suppose you're fishing in a murky lake. Are you more likely to catch a fish using a spear or a net?
+:::
+
+. . .
+
+- Spear $\rightarrow$ point estimate
+- Net $\rightarrow$ interval estimate
+
+## Constructing confidence intervals
+
+Quantifying the variability of the sample statistics to help calculate a range of plausible values for the population parameter of interest:
+
+- Via simulation $\rightarrow$ using bootstrapping -- using a statistical procedure that re samples a single data set to create many simulated samples.
+
+- Via mathematical formulas $\rightarrow$ using the Central Limit Theorem
+
+## Bootstrapping, what?  {.smaller}
+
+- The term bootstrapping comes from the phrase "pulling oneself up by one's bootstraps", which is a metaphor for accomplishing an impossible task without any outside help.
+
+- Impossible task: estimating a population parameter using data from only the given sample.
+
+. . .
+
+::: callout-note
+Note: This notion of saying something about a population parameter using only information from an observed sample is the crux of statistical inference, it is not limited to bootstrapping.
+:::
+
+## Bootstrapping, how?
+
+- Resample with replacement from our data n times, where n is the sample size
+- Calculate the sample statistic of interest of the new, resampled (bootstrapped) sample and record the value
+- Do this entire process many many times to build the **bootstrap distribution**
+
+## Bootstrapping Airbnb rentals
+
+```{r}
+#| label: boot-dist-abb
+
+set.seed(25) 
+
+boot_dist_abb <- abb |>
+  specify(response = ppg) |>
+  generate(reps = 100, type = "bootstrap") |>
+  calculate(stat = "mean")
+```
+
+## The bootstrap distribution
+
+```{r}
+#| label: boot-dist-abb-glimpse
+
+glimpse(boot_dist_abb)
+```
+
+## Visualzing the bootstrap distribution {.smaller}
+
+::: task
+What do you expect the center of the bootstrap distribution to be? Why? Check your guess by visualizing the distribution.
+:::
+
+. . .
+
+```{r}
+#| label: boot-dist-abb-plot
+#| fig-width: 6
+#| fig-asp: 0.618
+
+ggplot(boot_dist_abb, aes(x = stat)) + 
+  geom_histogram(binwidth = 2)
+```
+
+## Calculating the bootstrap distribution
+
+```{r}
+#| label: boot-dist-abb-ci
+
+boot_dist_abb |>
+  summarize(
+    lower = quantile(stat, 0.025),
+    upper = quantile(stat, 0.975)
+  )
+```
+
+## Interpretation {.smaller}
+
+::: {.panel-tabset}
+
+### Think
+
+::: task
+Which of the following is the correct interpretation of the bootstrap interval?
+:::
+
+a. There is a 95% probability the true mean price per night for an Airbnb in Asheville is between $64.7 and $89.6.
+
+b. There is a 95% probability the price per night for an Airbnb in Asheville is between $64.7 and $89.6.
+
+c. We are 95% confident the true mean price per night for Airbnbs in Asheville is between $64.7 and $89.6.
+
+d. We are 95% confident the price per night for an Airbnb in Asheville is between $64.7 and $89.6.
+
+### Submit
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+## Leveraging tidymodels tools further
+
+Calculating the observed sample statistic:
+
+```{r}
+#| label: obs-stat-abb
+
+obs_stat_abb <- abb |>
+  specify(response = ppg) |>
+  calculate(stat = "mean")  
+```
+
+## Leveraging tidymodels tools further
+
+Calculating the interval:
+
+```{r}
+#| label: ci-95-abb
+
+ci_95_abb <- boot_dist_abb |>
+  get_confidence_interval(
+    point_estimate = obs_stat_abb, 
+    level = 0.95
+  )
+```
+
+## Leveraging tidymodels tools further
+
+Visualizing the interval:
+
+```{r}
+#| label: ci-95-abb-viz
+#| fig-width: 6
+#| fig-asp: 0.618
+
+visualize(boot_dist_abb) +
+  shade_confidence_interval(ci_95_abb)
+```
