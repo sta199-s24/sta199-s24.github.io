@@ -156,6 +156,14 @@ Using these data, we will try to answer the following question:
 
 You have two options for this exercise.
 Clearly indicate which option you choose.
+Then, summarize your experience as bullet points.
+
+Include the following on your slide:
+
+- Name and brief description of what you did.
+- Something you found new, interesting, or unexpected
+- How the talk/podcast/interview/etc. connects to something we’ve done in class.
+- Citation or link to web page for what you watched or who you interviewed.
 
 **Option 1:** Listen to a podcast or watch a video about statistics and data science.
 The podcast or video must be *at least 30 minutes* to count towards the statistics experience.
