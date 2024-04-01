@@ -45,6 +45,7 @@ Failure to cite outside resources used, including Large Language Models like Cha
 
 The data come from incoming emails in David Diez's (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012.
 All personally identifiable information has been removed.
+The dataset is called `email` and it's in the **openintro** package.
 
 The outcome variable is `spam`, which takes the value `1` if the email is spam, `0` otherwise.
 
