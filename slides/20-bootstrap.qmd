@@ -32,7 +32,8 @@ Any questions from prepare materials?
 ```
 ## Announcements
 
--   ...
+-   Lab 7 (last lab) is due Monday 4/8 at 8 am
+-   Have at least one team meeting this week to review feedback and make some progress on your lab for peer review after exam on Monday 4/15
 
 # Quantifying uncertainty
 
@@ -166,13 +167,13 @@ boot_dist_abb |>
 Which of the following is the correct interpretation of the bootstrap interval?
 :::
 
-a.  There is a 95% probability the true mean price per night for an Airbnb in Asheville is between \$64.7 and \$89.6.
+a.  There is a 95% probability the true mean price per guest for an Airbnb in Asheville is between \$64.7 and \$89.6.
 
-b.  There is a 95% probability the price per night for an Airbnb in Asheville is between \$64.7 and \$89.6.
+b.  There is a 95% probability the price per guest for an Airbnb in Asheville in this sample is between \$64.7 and \$89.6.
 
-c.  We are 95% confident the true mean price per night for Airbnbs in Asheville is between \$64.7 and \$89.6.
+c.  We are 95% confident the true mean price per guest for Airbnbs in Asheville is between \$64.7 and \$89.6.
 
-d.  We are 95% confident the price per night for an Airbnb in Asheville is between \$64.7 and \$89.6.
+d.  We are 95% confident the price per guest for an Airbnb in Asheville in this sample is between \$64.7 and \$89.6.
 
 ### Submit
 
