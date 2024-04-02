@@ -1,0 +1,15 @@
+{
+  "hash": "9dde1ba6e93036b4879e1ce30e7f17c1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AE 15: Modeling houses in Duke Forest\"\ncategories: \n  - Application exercise\n---\n\n\n\nIn this application exercise, we will\n\n-   use bootstrapping to quantify the uncertainty around a measure of center – median\n-   use bootstrapping to quantify the uncertainty around a measure of relationship – slope\n-   interpret confidence intervals\n\nThe dataset are on housing prices in Duke Forest – a dataset you've seen before!\nIt's called `duke_forest` and it's in the **openintro** package.\nAdditionally, we'll use **tidyverse** and **tidymodels** packages.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)\n```\n:::\n\n\n\n# Typical size of a house in Duke Forest\n\n## Exercise 1\n\nVisualize the distribution of sizes of houses in Duke Forest.\nWhat is the size of a typical house?\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n## Exercise 2\n\nConstruct a 95% confidence interval for the typical size of a house in Duke Forest.\nInterpret the interval in context of the data.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n*Add interpretation here.*\n\n## Exercise 3\n\nWithout calculating it – would a 90% confidence interval be wider or narrower?\nWhy?\n\n*Add response here.*\n\n## Exercise 4\n\nConstruct the 90% confidence interval and interpret it.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n*Add interpretation here.*\n\n# Relationship between price and size\n\nThe following model predicts price of a house in Duke Forest from its size.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndf_price_area_fit <- linear_reg() |>\n  fit(price ~ area, data = duke_forest)\n\ntidy(df_price_area_fit)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  <chr>          <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)  116652.   53302.       2.19 3.11e- 2\n2 area            159.      18.2      8.78 6.29e-14\n```\n\n\n:::\n:::\n\n\n\nThe slope can be interpreted as:\n\n> For each additional square feet, the model predicts that prices of houses in Duke Forest are higher by \\$159, on average.\n\n## Exercise 5\n\nQuantify the uncertainty around this slope using a 95% bootstrap confidence interval and interpret the interval in context of the data.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n*Add interpretation here.*\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
