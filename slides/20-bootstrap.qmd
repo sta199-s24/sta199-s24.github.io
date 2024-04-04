@@ -220,3 +220,13 @@ Visualizing the interval:
 visualize(boot_dist_abb) +
   shade_confidence_interval(ci_95_abb)
 ```
+
+# Application exercise
+
+## Application exercise: `ae-15-duke-forest-bootstrap` {.smaller}
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Work on `ae-15-duke-forest-bootstrap.qmd`.
+:::

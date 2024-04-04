@@ -1,0 +1,196 @@
+---
+title: "AE 16: Equality"
+subtitle: "Suggested answers"
+categories: 
+  - Application exercise
+  - Suggested answers
+fig-width: 6
+fig-asp: 0.618
+---
+
+In this application exercise, we'll do inference on two population proportions.
+
+# Packages
+
+We'll use the **tidyverse** and **tidymodels** packages.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+```
+
+# Data
+
+A September 16-19, 2023, asked North Carolina voters, among other issues, about issues of equality and women's progress.
+Specifically, one of the questions asked:
+
+> Which of these two statements come closest to your own views---even if neither is exactly right?
+>
+> -   The country has made most of the changes needed to give women equal rights with men.
+>
+> -   The country needs to continue to make changes to give women equal rights to men.
+
+The results of this survey are summarized [in this report](https://www.meredith.edu/meredith-poll/n-c-voter-opinions-on-abortion-law-women-leaders-and-other-current-issues/) and the data can be found in your `data` folder: `equality.csv`.
+
+# Hypotheses
+
+## Exercise 1
+
+The two populations of interest in this survey are 18-24 year olds and 25+ year olds.
+State the hypotheses for evaluating whether there is a discernible difference between the proportions of those who think "The country needs to continue to make changes to give women equal rights to men." (`need more changes`) in the two age groups.
+
+*Let* $p$ *= the true proportion of those who think "The country needs to continue to make changes to give women equal rights to men" among 18-24 year old NC voters and 25+ year old NC voters.*
+
+$H_0: p_{18-24} = p_{25+}$
+
+$H_A: p_{18-24} \ne p_{25+}$
+
+# Exploratory analysis
+
+## Exercise 2
+
+Load the data.
+
+```{r}
+#| label: load-data
+#| message: false
+
+equality <- read_csv("data/equality.csv")
+```
+
+## Exercise 3
+
+What proportion of 18-24 year olds think "The country needs to continue to make changes to give women equal rights to men"?
+What proportion of 25+ year olds?
+Calculate and visualize these proportions.
+
+```{r}
+#| label: sample-props
+#| fig-asp: 0.4
+
+equality |>
+  count(age, response) |>
+  group_by(age) |>
+  mutate(p_hat = n / sum(n))
+
+ggplot(equality, aes(y = age, fill = response)) +
+  geom_bar(position = "fill")
+```
+
+## Exercise 4
+
+Calculate the observed sample statistic, i.e., the difference between the proportions of respondents who think "The country needs to continue to make changes to give women equal rights to men" between the two age groups.
+
+```{r}
+#| label: sample-stat
+
+obs_stat <- equality |>
+  specify(response = response, explanatory = age, success = "Need more changes") |>
+  calculate(stat = "diff in props", order = c("18-24", "25+"))
+
+obs_stat
+```
+
+# Testing
+
+## Exercise 5
+
+What is the parameter of interest?
+
+*Difference between the proportions of those who think "The country needs to continue to make changes to give women equal rights to men" between 18-24 and 25+ year old NC voters.*
+
+## Exercise 6
+
+Explain how you can set up a simulation for this hypothesis test.
+
+*Add response here.*
+
+## Exercise 7
+
+Conduct the hypothesis test using randomization and visualize and report the p-value.
+
+```{r}
+#| label: null-dist
+
+set.seed(1234)
+
+null_dist <- equality |>
+  specify(response = response, explanatory = age, success = "Need more changes") |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute") |>
+  calculate(stat = "diff in props", order = c("18-24", "25+"))
+
+null_dist |>
+  get_p_value(obs_stat = obs_stat, direction = "two sided")
+
+null_dist |>
+  visualize() +
+  shade_p_value(obs_stat = obs_stat, direction = "two sided")
+```
+
+## Exercise 8
+
+What is the conclusion of the hypothesis test?
+
+*With a p-value of 0.018, which is smaller than the discernability level of 0.05, we reject the null hypothesis. The data provide convincing evidence that there is a difference between the proportions of those who think "The country needs to continue to make changes to give women equal rights to men".*
+
+## Exercise 9
+
+Interpret the p-value in the context of the data and the hypotheses.
+
+The probability of observing a difference in sample proportions of those who think *"The country needs to continue to make changes to give women equal rights to men" between a sample of* 67 *18-24 year olds and 661 25+ year olds of 0.158 or more (in either direction) is 0.018 if in fact the two population proportions are equal.*
+
+# Estimation
+
+## Exercise 10
+
+Estimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.
+
+```{r}
+#| label: bootstrap-ci
+
+set.seed(1234)
+
+boot_dist <- equality |>
+  specify(response = response, explanatory = age, success = "Need more changes") |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "diff in props", order = c("18-24", "25+"))
+
+ci <- boot_dist |>
+  get_ci()
+ci
+
+visualize(boot_dist) +
+  shade_ci(ci)
+```
+
+## Exercise 11
+
+Interpret the confidence interval in context of the data.
+
+*We are 95% confident that the proportion of 18-24 year old NC voters who think "The country needs to continue to make changes to give women equal rights to men" is 28.4% to 3.4% lower than 25+ year old NC voters who share this opinion.*
+
+## Exercise 12
+
+Describe how the simulation scheme for bootstrapping is different than that for the hypothesis test.
+
+*For bootstrapping we resample with replacement. For testing, we shuffle under the assumption of independence.*
+
+# Conceptual
+
+## Exercise 13
+
+What is $p$ vs. $\hat{p}$ vs. p-value.
+Explain generically as well as in the context of these data and research question.
+
+*Add response here.*
+
+## Exercise 14
+
+What is bootstrap distribution vs. null distribution?
+Explain generically as well as in the context of these data and research question.
+
+*Add response here.*

@@ -1,0 +1,15 @@
+{
+  "hash": "a1365ad963175e42b3848ffa38854ea5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AE 16: Issues candidates should talk more about\"\ncategories: \n  - Application exercise\nfig-width: 6\nfig-asp: 0.618\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n\nIn this application exercise, we'll do inference tables – categorical variables with many levels.\n\n# Packages\n\nWe'll use the **tidyverse** and **tidymodels** packages.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(ggthemes)\n```\n:::\n\n\n\n\n# Data\n\nA September 16-19, 2023, asked North Carolina voters, among other issues, about issues of equality and women's progress.\nSpecifically, one of the questions asked:\n\n> If you had to choose just one issue that you would like candidates to talk more about in the 2024 campaigns, what would that issue be?\n>\n> -   Economy\n>\n> -   Abortion/Reproductive rights\n>\n> -   Immigration\n>\n> -   Crime\n>\n> -   Gun rights/restrictions\n>\n> -   Something else\n>\n> -   Don't know\n\nThe survey also asked respondents' party affiliation:\n\n> What political party do you most identify with?\n>\n> -   Democrat\n>\n> -   Republican\n>\n> -   Unaffiliated\n>\n> -   Other\n\nThe results of this survey are summarized [in this report](https://www.meredith.edu/meredith-poll/n-c-voter-opinions-on-abortion-law-women-leaders-and-other-current-issues/) and the data can be found in your `data` folder: `candidate-talk.csv`.\n\n# Hypotheses\n\n## Exercise 1\n\nState the hypotheses for evaluating whether the issue of choice is independent of party affiliation.\n\n*Add response here.*\n\n# Data\n\n## Exercise 2\n\nLoad the data.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n\n## Exercise 3\n\nCreate a two-way table of the issues across parties and visualize the frequency distribution.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n\n## Exercise 4\n\nWhich do you think should be the explanatory variable and which the response variable?\nAccordingly, create a visualization that shows the correct conditional probabilities.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n\n# Testing\n\n## Exercise 5\n\nCalculate the observed sample statistic.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n\n## Exercise 6\n\nConduct the hypothesis test using randomization and visualize and report the p-value.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# add code here\n```\n:::\n\n\n\n\n## Exercise 7\n\nWhat is the conclusion of the hypothesis test?\n\n*Add response here.*\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
