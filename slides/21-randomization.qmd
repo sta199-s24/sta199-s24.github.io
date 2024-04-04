@@ -47,7 +47,7 @@ What is this visualization about?
 Review last part of `ae-15-duke-forest-bootstrap.qmd`.
 :::
 
-## Goals
+## Goals {.smaller}
 
 -   Review constructing confidence intervals via bootstrapping
 -   Hypothesis testing, p-values, and making conclusions
@@ -67,6 +67,7 @@ Review last part of `ae-15-duke-forest-bootstrap.qmd`.
 :::
 
 ```{r}
+#| label: boot-dist
 #| echo: false
 #| message: false
 #| fig-align: center
@@ -84,7 +85,7 @@ df |>
   ggplot(aes(x = stat)) +
   geom_dotplot(binwidth = 0.01) +
   theme(axis.text.y = element_blank()) +
-  labs(y = NULL)
+  labs(y = NULL, title = "Bootstrap distribution of the mean")
 ```
 
 ## Why do we construct confidence intervals?
@@ -95,9 +96,9 @@ To estimate plausible values of a parameter of interest, e.g., a slope ($\beta_1
 
 -   Bootstrapping is a statistical procedure that resamples(with replacement) a single data set to create many simulated samples.
 
--   We then use these simulated samples to quantify the uncertainty around the sample statistic we're interested in, e.g., a slope ($\b_1$), a mean ($\bar{x}$), a proportion ($\hat{p}$).
+-   We then use these simulated samples to quantify the uncertainty around the sample statistic we're interested in, e.g., a slope ($b_1$), a mean ($\bar{x}$), a proportion ($\hat{p}$).
 
-## What does each dot on the plot represent?
+## What does each dot on the plot represent? {.smaller}
 
 Note: The plot is of a bootstrap distribution of a sample mean.
 
@@ -106,34 +107,22 @@ Note: The plot is of a bootstrap distribution of a sample mean.
 -   Calculate the summary statistic of interest in each of these samples
 
 ```{r}
+#| ref.label: boot-dist
 #| echo: false
 #| message: false
-
-library(tidyverse)
-library(tidymodels)
-
-df <- tibble(x = rnorm(n = 100))
-df |>
-  specify(response = x) |>
-  generate(reps = 20, type = "bootstrap") |>
-  calculate(stat = "mean") |>
-  ggplot(aes(x = stat)) +
-  geom_dotplot(binwidth = 0.01) +
-  theme(axis.text.y = element_blank()) +
-  labs(y = NULL)
 ```
 
 ## Bootstrapping for categorical data
 
-- `specify(response = x, success = "success level")`
+-   `specify(response = x, success = "success level")`
 
-- `calculate(stat = "prop")`
+-   `calculate(stat = "prop")`
 
 ## Bootstrapping for other `stat`s
 
-- `calculate()` documentation: https://infer.tidymodels.org/reference/calculate.html
+-   `calculate()` documentation: [infer.tidymodels.org/reference/calculate.html](https://infer.tidymodels.org/reference/calculate.html)
 
-- **infer** pipelines: https://infer.tidymodels.org/articles/observed_stat_examples.html
+-   **infer** pipelines: [infer.tidymodels.org/articles/observed_stat_examples.html](https://infer.tidymodels.org/articles/observed_stat_examples.html)
 
 # Hypothesis testing
 
@@ -153,7 +142,7 @@ A hypothesis test is a statistical technique used to evaluate *competing claims*
 
 Note: Hypotheses are always at the population level!
 
-## Writing hypotheses
+## Writing hypotheses {.smaller}
 
 ::: question
 As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.
@@ -162,12 +151,13 @@ You are interested in evaluating if The Chronicle's claim is too high.
 What are your hypotheses?
 :::
 
-TO DO: add wooclap
-
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
+```
 ## Writing hypotheses
 
 ::: incremental
-= As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.
+As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.
 
 -   An article on The Chronicle suggests that the Duke students drink, on average, 1.2 cups of coffee.
     $\rightarrow H_0: \mu = 1.2$
@@ -185,6 +175,8 @@ Let's suppose you manage to take a random sample of 100 Duke students and ask th
 -   Assume yoi live in a world where null hypothesis is true: $\mu = 1.2$.
 
 -   Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: $P(\bar{x} < 1 | \mu = 1.2)$ = ?
+
+    -   Read: Probability that the sample mean is smaller than 1 given that the population mean is 1.2.
 
 # Application exercise
 
