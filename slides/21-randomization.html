@@ -387,7 +387,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>Review last part of <code>ae-15-duke-forest-bootstrap.qmd</code>.</p>
 </div>
 </section>
-<section id="goals" class="slide level2">
+<section id="goals" class="slide level2 smaller">
 <h2>Goals</h2>
 <ul>
 <li>Review constructing confidence intervals via bootstrapping</li>
@@ -415,7 +415,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </ul>
 </div>
 
-<img data-src="21-randomization_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="21-randomization_files/figure-revealjs/boot-dist-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="why-do-we-construct-confidence-intervals" class="slide level2">
 <h2>Why do we construct confidence intervals?</h2>
 <p>To estimate plausible values of a parameter of interest, e.g., a slope (<span class="math inline">\(\beta_1\)</span>), a mean (<span class="math inline">\(\mu\)</span>), a proportion (<span class="math inline">\(p\)</span>).</p>
@@ -424,10 +424,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>What is bootstrapping?</h2>
 <ul>
 <li><p>Bootstrapping is a statistical procedure that resamples(with replacement) a single data set to create many simulated samples.</p></li>
-<li><p>We then use these simulated samples to quantify the uncertainty around the sample statistic we’re interested in, e.g., a slope (<span class="math inline">\(\b_1\)</span>), a mean (<span class="math inline">\(\bar{x}\)</span>), a proportion (<span class="math inline">\(\hat{p}\)</span>).</p></li>
+<li><p>We then use these simulated samples to quantify the uncertainty around the sample statistic we’re interested in, e.g., a slope (<span class="math inline">\(b_1\)</span>), a mean (<span class="math inline">\(\bar{x}\)</span>), a proportion (<span class="math inline">\(\hat{p}\)</span>).</p></li>
 </ul>
 </section>
-<section id="what-does-each-dot-on-the-plot-represent" class="slide level2">
+<section id="what-does-each-dot-on-the-plot-represent" class="slide level2 smaller">
 <h2>What does each dot on the plot represent?</h2>
 <p>Note: The plot is of a bootstrap distribution of a sample mean.</p>
 <ul>
@@ -447,8 +447,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="bootstrapping-for-other-stats" class="slide level2">
 <h2>Bootstrapping for other <code>stat</code>s</h2>
 <ul>
-<li><p><code>calculate()</code> documentation: https://infer.tidymodels.org/reference/calculate.html</p></li>
-<li><p><strong>infer</strong> pipelines: https://infer.tidymodels.org/articles/observed_stat_examples.html</p></li>
+<li><p><code>calculate()</code> documentation: <a href="https://infer.tidymodels.org/reference/calculate.html">infer.tidymodels.org/reference/calculate.html</a></p></li>
+<li><p><strong>infer</strong> pipelines: <a href="https://infer.tidymodels.org/articles/observed_stat_examples.html">infer.tidymodels.org/articles/observed_stat_examples.html</a></p></li>
 </ul>
 </section></section>
 <section>
@@ -469,17 +469,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>Note: Hypotheses are always at the population level!</p>
 </div>
 </section>
-<section id="writing-hypotheses" class="slide level2">
+<section id="writing-hypotheses" class="slide level2 smaller">
 <h2>Writing hypotheses</h2>
 <div class="question">
 <p>As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day. An article on The Chronicle suggests that the Duke students drink, on average, 1.2 cups of coffee. You are interested in evaluating if The Chronicle’s claim is too high. What are your hypotheses?</p>
 </div>
-<p>TO DO: add wooclap</p>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 </section>
 <section id="writing-hypotheses-1" class="slide level2">
 <h2>Writing hypotheses</h2>
 <div>
-<p>= As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.</p>
+<p>As a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.</p>
 <ul>
 <li class="fragment"><p>An article on The Chronicle suggests that the Duke students drink, on average, 1.2 cups of coffee. <span class="math inline">\(\rightarrow H_0: \mu = 1.2\)</span></p></li>
 <li class="fragment"><p>You are interested in evaluating if The Chronicle’s too high. <span class="math inline">\(\rightarrow H_0: \mu &lt; 1.2\)</span></p></li>
@@ -494,7 +494,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Hypothesis testing “mindset”</h2>
 <ul>
 <li><p>Assume yoi live in a world where null hypothesis is true: <span class="math inline">\(\mu = 1.2\)</span>.</p></li>
-<li><p>Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: <span class="math inline">\(P(\bar{x} &lt; 1 | \mu = 1.2)\)</span> = ?</p></li>
+<li><p>Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: <span class="math inline">\(P(\bar{x} &lt; 1 | \mu = 1.2)\)</span> = ?</p>
+<ul>
+<li>Read: Probability that the sample mean is smaller than 1 given that the population mean is 1.2.</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
