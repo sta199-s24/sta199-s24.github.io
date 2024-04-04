@@ -2435,91 +2435,84 @@
     "href": "ae/ae-16-equality-randomization-A.html#exercise-2",
     "title": "AE 16: Equality",
     "section": "Exercise 2",
-    "text": "Exercise 2\nLoad the data.\n\nequality &lt;- read_csv(\"data/equality.csv\")"
+    "text": "Exercise 2\nWhat proportion of 18-24 year olds think “The country needs to continue to make changes to give women equal rights to men”? What proportion of 25+ year olds? Calculate and visualize these proportions.\n\nequality |&gt;\n  count(age, response) |&gt;\n  group_by(age) |&gt;\n  mutate(p_hat = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   age [2]\n  age   response              n p_hat\n  &lt;chr&gt; &lt;chr&gt;             &lt;int&gt; &lt;dbl&gt;\n1 18-24 Most changes done    32 0.478\n2 18-24 Need more changes    35 0.522\n3 25+   Most changes done   211 0.319\n4 25+   Need more changes   450 0.681\n\nggplot(equality, aes(y = age, fill = response)) +\n  geom_bar(position = \"fill\")"
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-3",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-3",
     "title": "AE 16: Equality",
     "section": "Exercise 3",
-    "text": "Exercise 3\nWhat proportion of 18-24 year olds think “The country needs to continue to make changes to give women equal rights to men”? What proportion of 25+ year olds? Calculate and visualize these proportions.\n\nequality |&gt;\n  count(age, response) |&gt;\n  group_by(age) |&gt;\n  mutate(p_hat = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   age [2]\n  age   response              n p_hat\n  &lt;chr&gt; &lt;chr&gt;             &lt;int&gt; &lt;dbl&gt;\n1 18-24 Most changes done    32 0.478\n2 18-24 Need more changes    35 0.522\n3 25+   Most changes done   211 0.319\n4 25+   Need more changes   450 0.681\n\nggplot(equality, aes(y = age, fill = response)) +\n  geom_bar(position = \"fill\")"
+    "text": "Exercise 3\nCalculate the observed sample statistic, i.e., the difference between the proportions of respondents who think “The country needs to continue to make changes to give women equal rights to men” between the two age groups.\n\nobs_stat &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nobs_stat\n\nResponse: response (factor)\nExplanatory: age (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.158"
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-4",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-4",
     "title": "AE 16: Equality",
     "section": "Exercise 4",
-    "text": "Exercise 4\nCalculate the observed sample statistic, i.e., the difference between the proportions of respondents who think “The country needs to continue to make changes to give women equal rights to men” between the two age groups.\n\nobs_stat &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nobs_stat\n\nResponse: response (factor)\nExplanatory: age (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.158"
+    "text": "Exercise 4\nWhat is the parameter of interest?\nDifference between the proportions of those who think “The country needs to continue to make changes to give women equal rights to men” between 18-24 and 25+ year old NC voters."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-5",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-5",
     "title": "AE 16: Equality",
     "section": "Exercise 5",
-    "text": "Exercise 5\nWhat is the parameter of interest?\nDifference between the proportions of those who think “The country needs to continue to make changes to give women equal rights to men” between 18-24 and 25+ year old NC voters."
+    "text": "Exercise 5\nExplain how you can set up a simulation for this hypothesis test.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-6",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-6",
     "title": "AE 16: Equality",
     "section": "Exercise 6",
-    "text": "Exercise 6\nExplain how you can set up a simulation for this hypothesis test.\nAdd response here."
+    "text": "Exercise 6\nConduct the hypothesis test using randomization and visualize and report the p-value.\n\nset.seed(1234)\n\nnull_dist &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nnull_dist |&gt;\n  get_p_value(obs_stat = obs_stat, direction = \"two sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.012\n\nnull_dist |&gt;\n  visualize() +\n  shade_p_value(obs_stat = obs_stat, direction = \"two sided\")"
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-7",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-7",
     "title": "AE 16: Equality",
     "section": "Exercise 7",
-    "text": "Exercise 7\nConduct the hypothesis test using randomization and visualize and report the p-value.\n\nset.seed(1234)\n\nnull_dist &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nnull_dist |&gt;\n  get_p_value(obs_stat = obs_stat, direction = \"two sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.012\n\nnull_dist |&gt;\n  visualize() +\n  shade_p_value(obs_stat = obs_stat, direction = \"two sided\")"
+    "text": "Exercise 7\nWhat is the conclusion of the hypothesis test?\nWith a p-value of 0.018, which is smaller than the discernability level of 0.05, we reject the null hypothesis. The data provide convincing evidence that there is a difference between the proportions of those who think “The country needs to continue to make changes to give women equal rights to men”."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-8",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-8",
     "title": "AE 16: Equality",
     "section": "Exercise 8",
-    "text": "Exercise 8\nWhat is the conclusion of the hypothesis test?\nWith a p-value of 0.018, which is smaller than the discernability level of 0.05, we reject the null hypothesis. The data provide convincing evidence that there is a difference between the proportions of those who think “The country needs to continue to make changes to give women equal rights to men”."
+    "text": "Exercise 8\nInterpret the p-value in the context of the data and the hypotheses.\nThe probability of observing a difference in sample proportions of those who think “The country needs to continue to make changes to give women equal rights to men” between a sample of 67 18-24 year olds and 661 25+ year olds of 0.158 or more (in either direction) is 0.018 if in fact the two population proportions are equal."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-9",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-9",
     "title": "AE 16: Equality",
     "section": "Exercise 9",
-    "text": "Exercise 9\nInterpret the p-value in the context of the data and the hypotheses.\nThe probability of observing a difference in sample proportions of those who think “The country needs to continue to make changes to give women equal rights to men” between a sample of 67 18-24 year olds and 661 25+ year olds of 0.158 or more (in either direction) is 0.018 if in fact the two population proportions are equal."
+    "text": "Exercise 9\nEstimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.\n\nset.seed(1234)\n\nboot_dist &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nci &lt;- boot_dist |&gt;\n  get_ci()\nci\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1   -0.288  -0.0279\n\nvisualize(boot_dist) +\n  shade_ci(ci)"
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-10",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-10",
     "title": "AE 16: Equality",
     "section": "Exercise 10",
-    "text": "Exercise 10\nEstimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.\n\nset.seed(1234)\n\nboot_dist &lt;- equality |&gt;\n  specify(response = response, explanatory = age, success = \"Need more changes\") |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"18-24\", \"25+\"))\n\nci &lt;- boot_dist |&gt;\n  get_ci()\nci\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1   -0.288  -0.0279\n\nvisualize(boot_dist) +\n  shade_ci(ci)"
+    "text": "Exercise 10\nInterpret the confidence interval in context of the data.\nWe are 95% confident that the proportion of 18-24 year old NC voters who think “The country needs to continue to make changes to give women equal rights to men” is 28.4% to 3.4% lower than 25+ year old NC voters who share this opinion."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-11",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-11",
     "title": "AE 16: Equality",
     "section": "Exercise 11",
-    "text": "Exercise 11\nInterpret the confidence interval in context of the data.\nWe are 95% confident that the proportion of 18-24 year old NC voters who think “The country needs to continue to make changes to give women equal rights to men” is 28.4% to 3.4% lower than 25+ year old NC voters who share this opinion."
+    "text": "Exercise 11\nDescribe how the simulation scheme for bootstrapping is different than that for the hypothesis test.\nFor bootstrapping we resample with replacement. For testing, we shuffle under the assumption of independence."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-12",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-12",
     "title": "AE 16: Equality",
     "section": "Exercise 12",
-    "text": "Exercise 12\nDescribe how the simulation scheme for bootstrapping is different than that for the hypothesis test.\nFor bootstrapping we resample with replacement. For testing, we shuffle under the assumption of independence."
+    "text": "Exercise 12\nWhat is \\(p\\) vs. \\(\\hat{p}\\) vs. p-value. Explain generically as well as in the context of these data and research question.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization-A.html#exercise-13",
     "href": "ae/ae-16-equality-randomization-A.html#exercise-13",
     "title": "AE 16: Equality",
     "section": "Exercise 13",
-    "text": "Exercise 13\nWhat is \\(p\\) vs. \\(\\hat{p}\\) vs. p-value. Explain generically as well as in the context of these data and research question.\nAdd response here."
-  },
-  {
-    "objectID": "ae/ae-16-equality-randomization-A.html#exercise-14",
-    "href": "ae/ae-16-equality-randomization-A.html#exercise-14",
-    "title": "AE 16: Equality",
-    "section": "Exercise 14",
-    "text": "Exercise 14\nWhat is bootstrap distribution vs. null distribution? Explain generically as well as in the context of these data and research question.\nAdd response here."
+    "text": "Exercise 13\nWhat is bootstrap distribution vs. null distribution? Explain generically as well as in the context of these data and research question.\nAdd response here."
   },
   {
     "objectID": "ae/ae-12-modeling-penguins-multi-A.html",
@@ -3327,91 +3320,84 @@
     "href": "ae/ae-16-equality-randomization.html#exercise-2",
     "title": "Equality",
     "section": "Exercise 2",
-    "text": "Exercise 2\nLoad the data.\n\n# add code here"
+    "text": "Exercise 2\nWhat proportion of 18-24 year olds think “The country needs to continue to make changes to give women equal rights to men”? What proportion of 25+ year olds? Calculate and visualize these proportions.\n\n# add code here"
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-3",
     "href": "ae/ae-16-equality-randomization.html#exercise-3",
     "title": "Equality",
     "section": "Exercise 3",
-    "text": "Exercise 3\nWhat proportion of 18-24 year olds think “The country needs to continue to make changes to give women equal rights to men”? What proportion of 25+ year olds? Calculate and visualize these proportions.\n\n# add code here"
+    "text": "Exercise 3\nCalculate the observed sample statistic, i.e., the difference between the proportions of respondents who think “The country needs to continue to make changes to give women equal rights to men” between the two age groups.\n\n# add code here"
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-4",
     "href": "ae/ae-16-equality-randomization.html#exercise-4",
     "title": "Equality",
     "section": "Exercise 4",
-    "text": "Exercise 4\nCalculate the observed sample statistic, i.e., the difference between the proportions of respondents who think “The country needs to continue to make changes to give women equal rights to men” between the two age groups.\n\n# add code here"
+    "text": "Exercise 4\nWhat is the parameter of interest?\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-5",
     "href": "ae/ae-16-equality-randomization.html#exercise-5",
     "title": "Equality",
     "section": "Exercise 5",
-    "text": "Exercise 5\nWhat is the parameter of interest?\nAdd response here."
+    "text": "Exercise 5\nExplain how you can set up a simulation for this hypothesis test.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-6",
     "href": "ae/ae-16-equality-randomization.html#exercise-6",
     "title": "Equality",
     "section": "Exercise 6",
-    "text": "Exercise 6\nExplain how you can set up a simulation for this hypothesis test.\nAdd response here."
+    "text": "Exercise 6\nConduct the hypothesis test using randomization and visualize and report the p-value.\n\n# add code here"
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-7",
     "href": "ae/ae-16-equality-randomization.html#exercise-7",
     "title": "Equality",
     "section": "Exercise 7",
-    "text": "Exercise 7\nConduct the hypothesis test using randomization and visualize and report the p-value.\n\n# add code here"
+    "text": "Exercise 7\nWhat is the conclusion of the hypothesis test?\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-8",
     "href": "ae/ae-16-equality-randomization.html#exercise-8",
     "title": "Equality",
     "section": "Exercise 8",
-    "text": "Exercise 8\nWhat is the conclusion of the hypothesis test?\nAdd response here."
+    "text": "Exercise 8\nInterpret the p-value in the context of the data and the hypotheses.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-9",
     "href": "ae/ae-16-equality-randomization.html#exercise-9",
     "title": "Equality",
     "section": "Exercise 9",
-    "text": "Exercise 9\nInterpret the p-value in the context of the data and the hypotheses.\nAdd response here."
+    "text": "Exercise 9\nEstimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.\n\n# add code here"
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-10",
     "href": "ae/ae-16-equality-randomization.html#exercise-10",
     "title": "Equality",
     "section": "Exercise 10",
-    "text": "Exercise 10\nEstimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.\n\n# add code here"
+    "text": "Exercise 10\nInterpret the confidence interval in context of the data.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-11",
     "href": "ae/ae-16-equality-randomization.html#exercise-11",
     "title": "Equality",
     "section": "Exercise 11",
-    "text": "Exercise 11\nInterpret the confidence interval in context of the data.\nAdd response here."
+    "text": "Exercise 11\nDescribe how the simulation scheme for bootstrapping is different than that for the hypothesis test.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-12",
     "href": "ae/ae-16-equality-randomization.html#exercise-12",
     "title": "Equality",
     "section": "Exercise 12",
-    "text": "Exercise 12\nDescribe how the simulation scheme for bootstrapping is different than that for the hypothesis test.\nAdd response here."
+    "text": "Exercise 12\nWhat is \\(p\\) vs. \\(\\hat{p}\\) vs. p-value. Explain generically as well as in the context of these data and research question.\nAdd response here."
   },
   {
     "objectID": "ae/ae-16-equality-randomization.html#exercise-13",
     "href": "ae/ae-16-equality-randomization.html#exercise-13",
     "title": "Equality",
     "section": "Exercise 13",
-    "text": "Exercise 13\nWhat is \\(p\\) vs. \\(\\hat{p}\\) vs. p-value. Explain generically as well as in the context of these data and research question.\nAdd response here."
-  },
-  {
-    "objectID": "ae/ae-16-equality-randomization.html#exercise-14",
-    "href": "ae/ae-16-equality-randomization.html#exercise-14",
-    "title": "Equality",
-    "section": "Exercise 14",
-    "text": "Exercise 14\nWhat is bootstrap distribution vs. null distribution? Explain generically as well as in the context of these data and research question.\nAdd response here."
+    "text": "Exercise 13\nWhat is bootstrap distribution vs. null distribution? Explain generically as well as in the context of these data and research question.\nAdd response here."
   },
   {
     "objectID": "ae/ae-05-majors-tidying.html",
