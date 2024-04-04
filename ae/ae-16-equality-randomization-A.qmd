@@ -50,18 +50,16 @@ $H_A: p_{18-24} \ne p_{25+}$
 
 # Exploratory analysis
 
-## Exercise 2
-
 Load the data.
 
 ```{r}
 #| label: load-data
 #| message: false
 
-equality <- read_csv("data/equality.csv")
+equality <- read_csv("https://sta199-s24.github.io/data/equality.csv")
 ```
 
-## Exercise 3
+## Exercise 2
 
 What proportion of 18-24 year olds think "The country needs to continue to make changes to give women equal rights to men"?
 What proportion of 25+ year olds?
@@ -80,7 +78,7 @@ ggplot(equality, aes(y = age, fill = response)) +
   geom_bar(position = "fill")
 ```
 
-## Exercise 4
+## Exercise 3
 
 Calculate the observed sample statistic, i.e., the difference between the proportions of respondents who think "The country needs to continue to make changes to give women equal rights to men" between the two age groups.
 
@@ -96,19 +94,19 @@ obs_stat
 
 # Testing
 
-## Exercise 5
+## Exercise 4
 
 What is the parameter of interest?
 
 *Difference between the proportions of those who think "The country needs to continue to make changes to give women equal rights to men" between 18-24 and 25+ year old NC voters.*
 
-## Exercise 6
+## Exercise 5
 
 Explain how you can set up a simulation for this hypothesis test.
 
 *Add response here.*
 
-## Exercise 7
+## Exercise 6
 
 Conduct the hypothesis test using randomization and visualize and report the p-value.
 
@@ -131,13 +129,13 @@ null_dist |>
   shade_p_value(obs_stat = obs_stat, direction = "two sided")
 ```
 
-## Exercise 8
+## Exercise 7
 
 What is the conclusion of the hypothesis test?
 
 *With a p-value of 0.018, which is smaller than the discernability level of 0.05, we reject the null hypothesis. The data provide convincing evidence that there is a difference between the proportions of those who think "The country needs to continue to make changes to give women equal rights to men".*
 
-## Exercise 9
+## Exercise 8
 
 Interpret the p-value in the context of the data and the hypotheses.
 
@@ -145,7 +143,7 @@ The probability of observing a difference in sample proportions of those who thi
 
 # Estimation
 
-## Exercise 10
+## Exercise 9
 
 Estimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.
 
@@ -167,13 +165,13 @@ visualize(boot_dist) +
   shade_ci(ci)
 ```
 
-## Exercise 11
+## Exercise 10
 
 Interpret the confidence interval in context of the data.
 
 *We are 95% confident that the proportion of 18-24 year old NC voters who think "The country needs to continue to make changes to give women equal rights to men" is 28.4% to 3.4% lower than 25+ year old NC voters who share this opinion.*
 
-## Exercise 12
+## Exercise 11
 
 Describe how the simulation scheme for bootstrapping is different than that for the hypothesis test.
 
@@ -181,14 +179,14 @@ Describe how the simulation scheme for bootstrapping is different than that for 
 
 # Conceptual
 
-## Exercise 13
+## Exercise 12
 
 What is $p$ vs. $\hat{p}$ vs. p-value.
 Explain generically as well as in the context of these data and research question.
 
 *Add response here.*
 
-## Exercise 14
+## Exercise 13
 
 What is bootstrap distribution vs. null distribution?
 Explain generically as well as in the context of these data and research question.

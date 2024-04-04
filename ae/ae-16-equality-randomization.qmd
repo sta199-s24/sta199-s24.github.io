@@ -44,18 +44,16 @@ State the hypotheses for evaluating whether there is a discernible difference be
 
 # Exploratory analysis
 
-## Exercise 2
-
 Load the data.
 
 ```{r}
 #| label: load-data
 #| message: false
 
-# add code here
+equality <- read_csv("https://sta199-s24.github.io/data/equality.csv")
 ```
 
-## Exercise 3
+## Exercise 2
 
 What proportion of 18-24 year olds think "The country needs to continue to make changes to give women equal rights to men"?
 What proportion of 25+ year olds?
@@ -68,7 +66,7 @@ Calculate and visualize these proportions.
 # add code here
 ```
 
-## Exercise 4
+## Exercise 3
 
 Calculate the observed sample statistic, i.e., the difference between the proportions of respondents who think "The country needs to continue to make changes to give women equal rights to men" between the two age groups.
 
@@ -80,19 +78,19 @@ Calculate the observed sample statistic, i.e., the difference between the propor
 
 # Testing
 
-## Exercise 5
+## Exercise 4
 
 What is the parameter of interest?
 
 *Add response here.*
 
-## Exercise 6
+## Exercise 5
 
 Explain how you can set up a simulation for this hypothesis test.
 
 *Add response here.*
 
-## Exercise 7
+## Exercise 6
 
 Conduct the hypothesis test using randomization and visualize and report the p-value.
 
@@ -102,13 +100,13 @@ Conduct the hypothesis test using randomization and visualize and report the p-v
 # add code here
 ```
 
-## Exercise 8
+## Exercise 7
 
 What is the conclusion of the hypothesis test?
 
 *Add response here.*
 
-## Exercise 9
+## Exercise 8
 
 Interpret the p-value in the context of the data and the hypotheses.
 
@@ -116,7 +114,7 @@ Interpret the p-value in the context of the data and the hypotheses.
 
 # Estimation
 
-## Exercise 10
+## Exercise 9
 
 Estimate the difference in population proportions of 18-24 year old NC voters and 25+ year old NC voters using a 95% bootstrap interval.
 
@@ -126,13 +124,13 @@ Estimate the difference in population proportions of 18-24 year old NC voters an
 # add code here
 ```
 
-## Exercise 11
+## Exercise 10
 
 Interpret the confidence interval in context of the data.
 
 *Add response here.*
 
-## Exercise 12
+## Exercise 11
 
 Describe how the simulation scheme for bootstrapping is different than that for the hypothesis test.
 
@@ -140,14 +138,14 @@ Describe how the simulation scheme for bootstrapping is different than that for 
 
 # Conceptual
 
-## Exercise 13
+## Exercise 12
 
 What is $p$ vs. $\hat{p}$ vs. p-value.
 Explain generically as well as in the context of these data and research question.
 
 *Add response here.*
 
-## Exercise 14
+## Exercise 13
 
 What is bootstrap distribution vs. null distribution?
 Explain generically as well as in the context of these data and research question.
