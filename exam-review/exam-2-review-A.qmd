@@ -1,0 +1,21 @@
+---
+title: "Exam 2 Review"
+subtitle: "Suggested answers"
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+1.  Take a random sample of size 25, with replacement, from the original sample. Calculate the proportion of students in this simulated sample who work 5 or more hours. Repeat this process 1000 times to build the bootstrap distribution. Take the middle 95% of this distribution to construct a 95% confidence interval for the true proportion of statistics majors who work 5 or more hours.
+2.  The exact 95% CI is (40%, 80%). Answers reasonably close to the upper and lower bounds would be accepted.
+3.  \(e\) None of the above. The correct interpretation is “We are 95% confident that 40% to 80% of statistics majors work at least 5 hours per week.”
+4.  \(c\) For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.
+5.  \$R^2\$ of `raise_2_fit` is higher than \$R^2\$ of `raise_1_fit` since `raise_2_fit` has one more predictor and \$R^2\$ always
+6.  The reference level of `performance_rating` is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.
+7.  \(a\) “Poor”, “Successful”, “High”, “Top”.
+8.  Choose Option 2 since it shows the proportions of employees with top, high, successful, and poor performance within each salary type, and is not affected by there being much fewer hourly paid employees. Proportions of employees with top and successful performance ratings are higher for employees paid hourly than salaried.
+9.  A parsimonious model is the simplest model with the best predictive performance.
+10. \(c\) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\\/(a) and (d).
+11. \(a\) and (d).
+12. \(c\) We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.

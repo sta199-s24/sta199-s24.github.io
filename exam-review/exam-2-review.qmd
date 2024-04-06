@@ -1,0 +1,373 @@
+---
+title: "Exam 2 Review"
+format:
+  html: default
+  pdf: default
+execute:
+  echo: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+library(scales)
+theme_set(theme_minimal(base_size = 12))
+```
+
+# Part 1 - Employment
+
+A large university knows that about 70% of the full-time students are employed at least 5 hours per week.
+The members of the Statistics Department wonder if the same proportion of their students work at least 5 hours per week.
+They randomly sample 25 majors and find that 15 of the students (60%) work 5 or more hours each week.
+
+## Question 1
+
+Describe how you can set up a simulation to estimate the proportion of statistics majors who work 5 or more hours each week based on this sample.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+## Question 2
+
+A bootstrap distribution with 1000 simulations is shown below.
+Approximate the bounds of the 95% confidence interval based on this distribution.
+
+```{r}
+#| fig-asp: 0.5
+students <- tibble(
+  work = c(rep("work", 15), rep("do not work", 10))
+)
+    
+set.seed(23456)
+
+boot_dist <- students |>
+  specify(response = work, success = "work") |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(stat = "prop")
+
+ggplot(boot_dist, aes(x = stat)) + 
+  geom_histogram(binwidth = 0.05, color = "white") +
+  labs(
+    title = "Simulation-Based Bootstrap Distribution",
+    x = "stat",
+    y = "count"
+  ) +
+  scale_x_continuous(breaks = seq(0.30, 0.9, 0.05))
+```
+
+## Question 3
+
+Suppose the lower bound of the confidence interval from the previous question is L and the upper bound is U.
+Which of the following is correct?
+
+a\.
+Between L to U of statistics majors work at least 5 hours per week.
+
+b\.
+95% of the time the true proportion of statistics majors who work at least 5 hours per week is between L and U.
+
+c\.
+Between L and U of random samples of 25 statistics majors are expected to yield confidence intervals that contain the true proportion of statistics majors who work at least 5 hours per week.
+
+d\.
+95% of random samples of 25 statistics majors will yield confidence intervals between L and U.
+
+e\.
+None of the above.
+
+{{< pagebreak >}}
+
+# Part 2 - Blizzard
+
+```{r}
+#| label: blizzard-data-prep
+
+blizzard_salary <- blizzard_salary |>
+  mutate(
+    annual_salary = case_when(
+      salary_type == "week" ~ current_salary * 52,
+      salary_type == "hour" ~ current_salary * 40 * 52,
+      TRUE ~ current_salary
+    ),
+    performance_rating = if_else(performance_rating == "Developing", "Poor", performance_rating)
+  ) |>
+  filter(salary_type != "week") |>
+  mutate(
+    salary_type = if_else(salary_type == "hour", "Hourly", "Salaried")
+  ) |>
+  filter(!is.na(annual_salary)) |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation.
+(Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
+
+The name of the data frame used for this analysis is `blizzard_salary` and the variables are:
+
+-   `percent_incr`: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase to 21.5 (21.5% increase)
+
+-   `salary_type`: Type of salary, with levels `Hourly` and `Salaried`
+
+-   `annual_salary`: Annual salary, in USD, with values ranging from \$50,939 to \$216,856.
+
+-   `performance_rating`: Most recent review performance rating, with levels `Poor`, `Successful`, `High`, and `Top`.
+    The `Poor` level is the lowest rating and the `Top` level is the highest rating.
+
+The top ten rows of `blizzard_salary` are shown below:
+
+```{r}
+blizzard_salary |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+## Question 4
+
+Next, you fit a model for predicting raises (`percent_incr`) from salaries (`annual_salary`).
+We'll call this model `raise_1_fit`.
+A tidy output of the model is shown below.
+
+```{r}
+#| label: raise-salary-fit
+
+raise_1_fit <- linear_reg() |>
+  fit(percent_incr ~ annual_salary, data = blizzard_salary)
+
+tidy(raise_1_fit)
+```
+
+Which of the following is the best interpretation of the slope coefficient?
+
+a.  For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.
+b.  For every additional \$1,000 of annual salary, the raise goes up by 0.0155%.
+c.  For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.
+d.  For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.
+
+## Question 5
+
+You then fit a model for predicting raises (`percent_incr`) from salaries (`annual_salary`) and performance ratings (`performance_rating`).
+We'll call this model `raise_2_fit`.
+Which of the following is definitely true based on the information you have so far?
+
+a.  Intercept of `raise_2_fit` is higher than intercept of `raise_1_fit`.
+b.  Slope of `raise_2_fit` is higher than RMSE of `raise_1_fit`.
+c.  Adjusted $R^2$ of `raise_2_fit` is higher than adjusted $R^2$ of `raise_1_fit`.
+d.  $R^2$ of `raise_2_fit` is higher $R^2$ of `raise_1_fit`.
+
+## Question 6
+
+The tidy model output for the `raise_2_fit` model you fit is shown below.
+
+```{r}
+#| label: raise-salary-rating-fit
+
+raise_2_fit <- linear_reg() |>
+  fit(percent_incr ~ annual_salary + performance_rating, data = blizzard_salary)
+
+tidy(raise_2_fit)
+```
+
+When your teammate sees this model output, they remark "The coefficient for `performance_ratingSuccessful` is negative, that's weird. I guess it means that people who get successful performance ratings get lower raises." How would you respond to your teammate?
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+## Question 7
+
+Ultimately, your teammate decides they don't like the negative slope coefficients in the model output you created (not that there's anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.
+
+```{r}
+blizzard_salary <- blizzard_salary |>
+  mutate(performance_rating = fct_relevel(performance_rating, "Poor", "Successful", "High", "Top"))
+
+raise_2_fit <- linear_reg() |>
+  fit(percent_incr ~ annual_salary + performance_rating, data = blizzard_salary)
+
+tidy(raise_2_fit)
+```
+
+Unfortunately they didn't write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work.
+They remember using the `fct_relevel()` function and doing something like the following:
+
+```{r}
+#| eval: false
+
+blizzard_salary <- blizzard_salary |>
+  mutate(performance_rating = fct_relevel(performance_rating, ___))
+```
+
+What should they put in the blanks to get the same model output as above?
+
+a.  "Poor", "Successful", "High", "Top"
+b.  "Successful", "High", "Top"
+c.  "Top", "High", "Successful", "Poor"
+d.  Poor, Successful, High, Top
+
+## Question 8
+
+Suppose we fit a model to predict `percent_incr` from `annual_salary` and `salary_type`.
+A tidy output of the model is shown below.
+
+```{r}
+#| label: raise-salary-type-fit
+
+raise_3_fit <- linear_reg() |>
+  fit(percent_incr ~ annual_salary + salary_type, data = blizzard_salary)
+
+tidy(raise_3_fit)
+```
+
+Which of the following visualizations represent this model?
+Explain your reasoning.
+
+```{r}
+#| label: fig-raise-salary-type
+#| warning: false
+#| layout-ncol: 2
+#| fig-cap: |
+#|   Visualizations of the relationship between percent increase, annual 
+#|   salary, and salary type
+#| fig-subcap:
+#|   - Option 1
+#|   - Option 2
+#|   - Option 3
+#|   - Option 4
+
+ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
+  geom_point(aes(shape = salary_type), alpha = 0.4) +
+  geom_smooth(aes(linetype = salary_type), method = "lm", se = FALSE, fullrange = TRUE) +
+  labs(
+    x = "Annual salary",
+    y = "Percent increase",
+    color = "Salary type",
+    linetype = "Salary type",
+    shape = "Salary type"
+  ) +
+  scale_x_continuous(labels = label_dollar()) +
+  scale_y_continuous(labels = label_percent(scale = 1)) +
+  theme(legend.position = "top")
+
+ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
+  geom_point(aes(shape = salary_type), alpha = 0.4) +
+  geom_smooth(aes(linetype = salary_type), se = FALSE, fullrange = TRUE) +
+  labs(
+    x = "Annual salary",
+    y = "Percent increase"
+  ) +
+  scale_x_continuous(labels = label_dollar()) +
+  scale_y_continuous(labels = label_percent(scale = 1)) +
+  theme(legend.position = "top")
+
+ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
+  geom_point(aes(shape = salary_type), alpha = 0.4, show.legend = FALSE) +
+  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#E87d72", linewidth = 1, linetype = "solid") +
+  geom_abline(intercept = 1.24+0.913, slope = 0.0000137, color = "#56bcc2", linewidth = 1, linetype = "dashed") +
+  labs(
+    x = "Annual salary",
+    y = "Percent increase",
+  ) +
+  scale_x_continuous(labels = label_dollar()) +
+  scale_y_continuous(labels = label_percent(scale = 1))
+
+ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
+  geom_point(alpha = 0.4, show.legend = FALSE) +
+  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#56bcc2", linewidth = 1, linetype = "dashed") +
+  geom_abline(intercept = 1.24+0.913, slope = 0.0000137,  color = "#E87d72", linewidth = 1) +
+  labs(
+    x = "Annual salary",
+    y = "Percent increase",
+  ) +
+  scale_x_continuous(labels = label_dollar()) +
+  scale_y_continuous(labels = label_percent(scale = 1))
+```
+
+::: {.content-visible when-format="pdf"}
+{{< pagebreak >}}
+:::
+
+## Question 9
+
+Define the term parsimonious model.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+{{< pagebreak >}}
+
+## Question 10
+
+Suppose you now fit a model to predict the natural log of percent increase, `log(percent_incr)`, from performance rating.
+The model is called `raise_4_fit`.
+
+```{r}
+raise_4_fit <- linear_reg() |>
+  fit(log(percent_incr+0.0001) ~ performance_rating, data = blizzard_salary)
+```
+
+You're provided the following:
+
+```{r}
+#| echo: true
+tidy(raise_4_fit) |>
+  select(term, estimate) |>
+  mutate(exp_estimate = exp(estimate))
+```
+
+Based on this, which of the following is true?
+
+a\.
+The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.
+
+b\.
+The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.
+
+c\.
+The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.
+
+d\.
+The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating.
+
+# Part 3 - Miscellaneous
+
+## Question 11
+
+Which of the following is the definiton of a regression model?
+Select all that apply.
+
+a\.
+$\hat{y} = \beta_0 + \beta_1 X_1$
+
+b\.
+$y = \beta_0 + \beta_1 X_1$
+
+c\.
+$\hat{y} = \beta_0 + \beta_1 X_1 + \epsilon$
+
+d\.
+$y = \beta_0 + \beta_1 X_1 + \epsilon$
+
+## Question 12
+
+**Choose the best answer.**
+
+A survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550).
+A valid interpretation of this interval is
+
+a.  95% of all teens who text send between 1450 and 1550 text messages per month.
+b.  If a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.
+c.  We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.
+d.  We are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550.
+
+{{< pagebreak >}}
+
+## Bonus
+
+Pick a concept we introduced in class so far that you've been struggling with and explain it in your own words.
