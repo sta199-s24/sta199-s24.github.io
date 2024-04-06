@@ -241,8 +241,8 @@ Explain your reasoning.
 #|   - Option 4
 
 ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
-  geom_point(aes(shape = salary_type), alpha = 0.4) +
-  geom_smooth(aes(linetype = salary_type), method = "lm", se = FALSE, fullrange = TRUE) +
+  geom_point(aes(shape = salary_type), alpha = 0.5, size = 2) +
+  geom_smooth(aes(linetype = salary_type), method = "lm", se = FALSE, fullrange = TRUE, linewidth = 1.5) +
   labs(
     x = "Annual salary",
     y = "Percent increase",
@@ -255,8 +255,8 @@ ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_
   theme(legend.position = "top")
 
 ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
-  geom_point(aes(shape = salary_type), alpha = 0.4) +
-  geom_smooth(aes(linetype = salary_type), se = FALSE, fullrange = TRUE) +
+  geom_point(aes(shape = salary_type), alpha = 0.5, size = 2) +
+  geom_smooth(aes(linetype = salary_type), se = FALSE, fullrange = TRUE, linewidth = 1.5) +
   labs(
     x = "Annual salary",
     y = "Percent increase"
@@ -266,9 +266,9 @@ ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_
   theme(legend.position = "top")
 
 ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
-  geom_point(aes(shape = salary_type), alpha = 0.4, show.legend = FALSE) +
-  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#E87d72", linewidth = 1, linetype = "solid") +
-  geom_abline(intercept = 1.24+0.913, slope = 0.0000137, color = "#56bcc2", linewidth = 1, linetype = "dashed") +
+  geom_point(aes(shape = salary_type), alpha = 0.5, size = 2, show.legend = FALSE) +
+  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#E87d72", linewidth = 1.5, linetype = "solid") +
+  geom_abline(intercept = 1.24+0.913, slope = 0.0000137, color = "#56bcc2", linewidth = 1.5, linetype = "dashed") +
   labs(
     x = "Annual salary",
     y = "Percent increase",
@@ -277,9 +277,9 @@ ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_
   scale_y_continuous(labels = label_percent(scale = 1))
 
 ggplot(blizzard_salary, aes(x = annual_salary, y = percent_incr, color = salary_type)) +
-  geom_point(alpha = 0.4, show.legend = FALSE) +
-  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#56bcc2", linewidth = 1, linetype = "dashed") +
-  geom_abline(intercept = 1.24+0.913, slope = 0.0000137,  color = "#E87d72", linewidth = 1) +
+  geom_point(alpha = 0.5, size = 2, show.legend = FALSE) +
+  geom_abline(intercept = 1.24, slope = 0.0000137, color = "#56bcc2", linewidth = 1.5, linetype = "dashed") +
+  geom_abline(intercept = 1.24+0.913, slope = 0.0000137,  color = "#E87d72", linewidth = 1.5) +
   labs(
     x = "Annual salary",
     y = "Percent increase",
