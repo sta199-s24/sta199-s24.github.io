@@ -17,7 +17,18 @@ The goals of this milestone are as follows:
 
 # Instructions
 
-Each team will review two other teams' project.
+## Part 1
+
+Make progress on your own project.
+As a team you should spend \~30 minutes on this.
+
+- Make sure you choose the dataset you want to work with from your proposal.
+- Write up a plan for what you're doing with it.
+- Include any work you've done so far on it.
+
+## Part 2
+
+Review one other team's project.
 As a team you should spend \~30 minutes on each team's project.
 
 -   Find the names of the teams whose projects you're reviewing below.
