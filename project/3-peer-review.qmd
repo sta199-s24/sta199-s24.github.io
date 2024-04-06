@@ -19,12 +19,19 @@ The goals of this milestone are as follows:
 
 ## Part 1
 
-Make progress on your own project.
-As a team you should spend \~30 minutes on this.
+During the first \~30 minutes, make progress on your own project.
 
-- Make sure you choose the dataset you want to work with from your proposal.
-- Write up a plan for what you're doing with it.
-- Include any work you've done so far on it.
+-   Review the feedback from your TA.
+
+-   Choose the dataset you want to work with.
+
+-   Make progress on your analysis and write-up in `index.qmd`:
+
+    -   At a minimum, write a plan that peers can give feedback on.
+
+    -   Time permitting, start the analysis.
+
+-   Render the project, commit and push all your changes.
 
 ## Part 2
 
