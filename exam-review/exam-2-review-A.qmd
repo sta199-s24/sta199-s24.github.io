@@ -11,10 +11,29 @@ editor_options:
 2.  The exact 95% CI is (40%, 80%). Answers reasonably close to the upper and lower bounds would be accepted.
 3.  \(e\) None of the above. The correct interpretation is “We are 95% confident that 40% to 80% of statistics majors work at least 5 hours per week.”
 4.  \(c\) For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.
-5.  \$R^2\$ of `raise_2_fit` is higher than \$R^2\$ of `raise_1_fit` since `raise_2_fit` has one more predictor and \$R^2\$ always
+5.  \$R\^2\$ of `raise_2_fit` is higher than \$R\^2\$ of `raise_1_fit` since `raise_2_fit` has one more predictor and \$R\^2\$ always
 6.  The reference level of `performance_rating` is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.
 7.  \(a\) “Poor”, “Successful”, “High”, “Top”.
-8.  Choose Option 2 since it shows the proportions of employees with top, high, successful, and poor performance within each salary type, and is not affected by there being much fewer hourly paid employees. Proportions of employees with top and successful performance ratings are higher for employees paid hourly than salaried.
+8.  Option 3. It's a linear model with no interaction effect, so parallel lines. And since the slope for `salary_typeSalaried` is positive, its intercept is higher. The equations of the lines are as follows:
+    -   Hourly:
+
+        $$
+        \begin{align*}
+        \widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+        &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 0 \\
+        &= 1.24 + 0.0000137 \times annual\_salary
+        \end{align*}
+        $$
+
+    -   Salaried:
+
+        $$
+        \begin{align*}
+        \widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+        &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 1 \\
+        &= 2.153 + 0.0000137 \times annual\_salary
+        \end{align*}
+        $$
 9.  A parsimonious model is the simplest model with the best predictive performance.
 10. \(c\) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\\/(a) and (d).
 11. \(a\) and (d).
