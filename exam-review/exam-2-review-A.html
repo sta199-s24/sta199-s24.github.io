@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="STA 199 - Exam 2 Review">
 <meta property="og:description" content="Suggested answers">
@@ -365,7 +394,25 @@ ul.task-list li input[type="checkbox"] {
 <li>$R^2$ of <code>raise_2_fit</code> is higher than $R^2$ of <code>raise_1_fit</code> since <code>raise_2_fit</code> has one more predictor and $R^2$ always</li>
 <li>The reference level of <code>performance_rating</code> is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.</li>
 <li>(a) “Poor”, “Successful”, “High”, “Top”.</li>
-<li>Choose Option 2 since it shows the proportions of employees with top, high, successful, and poor performance within each salary type, and is not affected by there being much fewer hourly paid employees. Proportions of employees with top and successful performance ratings are higher for employees paid hourly than salaried.</li>
+<li>Option 3. It’s a linear model with no interaction effect, so parallel lines. And since the slope for <code>salary_typeSalaried</code> is positive, its intercept is higher. The equations of the lines are as follows:
+<ul>
+<li><p>Hourly:</p>
+<p><span class="math display">\[
+\begin{align*}
+\widehat{percent\_incr} &amp;= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+&amp;= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 0 \\
+&amp;= 1.24 + 0.0000137 \times annual\_salary
+\end{align*}
+\]</span></p></li>
+<li><p>Salaried:</p>
+<p><span class="math display">\[
+\begin{align*}
+\widehat{percent\_incr} &amp;= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+&amp;= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 1 \\
+&amp;= 2.153 + 0.0000137 \times annual\_salary
+\end{align*}
+\]</span></p></li>
+</ul></li>
 <li>A parsimonious model is the simplest model with the best predictive performance.</li>
 <li>(c) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\/(a) and (d).</li>
 <li>(a) and (d).</li>
