@@ -29,7 +29,7 @@ editor_options:
 7.  a - `"Poor", "Successful", "High", "Top"`
 
 8.  b - Option 2.
-    The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. 
+    The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type.
     In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs. Hourly workers), we need the proportions, not the counts.
 
 9.  There may be some `NA`s in these two variables that are not visible in the plot.

@@ -36,6 +36,10 @@ blizzard_salary <- blizzard_salary |>
   select(percent_incr, salary_type, annual_salary, performance_rating)
 ```
 
+::: callout-note
+Suggested answers can be found [here](/exam-review/exam-1-review-A.qmd), but resist the urge to peek before you go through it yourself.
+:::
+
 In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation.
 (Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
 

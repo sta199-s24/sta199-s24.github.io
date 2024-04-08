@@ -104,7 +104,13 @@ website:
             text: Lab 6             
           - href: labs/lab-7.qmd
             text: Lab 7 
-          
+      - section: "Exam review"
+        contents:
+          - href: exam-review/exam-1-review.qmd
+            text: Exam 1
+          - href: exam-review/exam-2-review.qmd
+            text: Exam 2
+            
   page-footer:
     right: 'This page is built with [{{< fa heart >}}]{style="color: #FFBE98;"} and [Quarto](https://quarto.org/).'
     left: "&copy; Copyright 2024, Mine Çetinkaya-Rundel"

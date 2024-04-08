@@ -20,6 +20,10 @@ library(scales)
 theme_set(theme_minimal(base_size = 12))
 ```
 
+::: callout-note
+Suggested answers can be found [here](/exam-review/exam-2-review-A.qmd), but resist the urge to peek before you go through it yourself.
+:::
+
 # Part 1 - Employment
 
 A large university knows that about 70% of the full-time students are employed at least 5 hours per week.
