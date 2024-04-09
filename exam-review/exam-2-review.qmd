@@ -202,6 +202,7 @@ They remember using the `fct_relevel()` function and doing something like the fo
 
 ```{r}
 #| eval: false
+#| echo: true
 
 blizzard_salary <- blizzard_salary |>
   mutate(performance_rating = fct_relevel(performance_rating, ___))
