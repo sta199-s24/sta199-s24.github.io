@@ -3603,14 +3603,7 @@
     "href": "slides/22-exam-2-review.html#announcements",
     "title": "Exam 2 review",
     "section": "Announcements",
-    "text": "Announcements\n\nExam format / flow\nAcademic dishonesty / Duke Community Standard"
-  },
-  {
-    "objectID": "slides/22-exam-2-review.html#packages",
-    "href": "slides/22-exam-2-review.html#packages",
-    "title": "Exam 2 review",
-    "section": "Packages",
-    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+    "text": "Announcements\nSame as Exam 1!\n\nExam format / flow\nAsking questions during exam / office hours"
   },
   {
     "objectID": "slides/22-exam-2-review.html#application-exercise-ae-16-equality-randomization",
