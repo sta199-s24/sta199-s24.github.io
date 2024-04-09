@@ -1,0 +1,19 @@
+{
+  "hash": "fbacb9cc129a599e5620f5bdb7a7cb8d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Exam 2 review\"\nsubtitle: \"Lecture 22\"\ndate: \"April 9, 2024\"\nformat: \n  revealjs:\n    footer: \"[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)\"\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n# Warm up\n\n\n\n::: {.cell}\n\n:::\n\n\n\n# Warm up\n\n## Announcements\n\n-   Exam format / flow\n\n-   Academic dishonesty / Duke Community Standard\n\n## Packages\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(tidymodels)\n```\n:::\n\n\n\n# Application exercise\n\n## Application exercise: `ae-16-equality-randomization` {.smaller}\n\n::: appex\n-   Go back to your project called `ae`.\n-   If there are any uncommitted files, commit them, and push.\n-   Then pull and work on `ae-16-equality-randomization.qmd`.\n:::\n\n## Recap of AE {.smaller}\n\n-   A hypothesis test is a statistical technique used to evaluate competing claims (null and alternative hypotheses) using data.\n-   We simulate a null distribution using our original data.\n-   We use our sample statistic and direction of the alternative hypothesis to calculate the p-value.\n-   We use the p-value to determine conclusions about the alternative hypotheses.\n\n# Questions\n\n## Questions {.smaller}\n\n::: incremental\n- Do we need to know functions and iteration for the exam? Since we didn’t work very much with them after the HW videos.\n\n- When we run bootstrapping simulations for different types of statistics (proportions, means, medians, slopes, etc), are there any differences in the methodology? Or does it all rely on calculating sample statistics for many simulations and then taking the middle 90 or 95% as a confidence interval estimate for that statistic.\n\n- How do you determine whether a relationship is nonlinear without visualization?\n\n- Could you go over how logistic regression works again? Especially how a log(p/1-p) transformation of binary data creates a linear model?\n\n- When do you use logarithmic functions in linear regression, rather than a logistic regression?\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,73 @@
+---
+title: "Exam 2 review"
+subtitle: "Lecture 22"
+date: "April 9, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+library(ggthemes)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+# Warm up
+
+## Announcements
+
+-   Exam format / flow
+
+-   Academic dishonesty / Duke Community Standard
+
+## Packages
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+```
+
+# Application exercise
+
+## Application exercise: `ae-16-equality-randomization` {.smaller}
+
+::: appex
+-   Go back to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push.
+-   Then pull and work on `ae-16-equality-randomization.qmd`.
+:::
+
+## Recap of AE {.smaller}
+
+-   A hypothesis test is a statistical technique used to evaluate competing claims (null and alternative hypotheses) using data.
+-   We simulate a null distribution using our original data.
+-   We use our sample statistic and direction of the alternative hypothesis to calculate the p-value.
+-   We use the p-value to determine conclusions about the alternative hypotheses.
+
+# Questions
+
+## Questions {.smaller}
+
+::: incremental
+- Do we need to know functions and iteration for the exam? Since we didn’t work very much with them after the HW videos.
+
+- When we run bootstrapping simulations for different types of statistics (proportions, means, medians, slopes, etc), are there any differences in the methodology? Or does it all rely on calculating sample statistics for many simulations and then taking the middle 90 or 95% as a confidence interval estimate for that statistic.
+
+- How do you determine whether a relationship is nonlinear without visualization?
+
+- Could you go over how logistic regression works again? Especially how a log(p/1-p) transformation of binary data creates a linear model?
+
+- When do you use logarithmic functions in linear regression, rather than a logistic regression?
+:::
