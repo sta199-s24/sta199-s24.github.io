@@ -25,19 +25,11 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 ## Announcements
 
+Same as Exam 1!
+
 -   Exam format / flow
 
--   Academic dishonesty / Duke Community Standard
-
-## Packages
-
-```{r}
-#| label: load-packages
-#| message: false
-
-library(tidyverse)
-library(tidymodels)
-```
+-   Asking questions during exam / office hours 
 
 # Application exercise
 
