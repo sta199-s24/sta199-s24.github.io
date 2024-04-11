@@ -163,7 +163,7 @@ As a researcher, you are interested in the average number of cups of coffee Duke
     $\rightarrow H_0: \mu = 1.2$
 
 -   You are interested in evaluating if The Chronicle's too high.
-    $\rightarrow H_0: \mu < 1.2$
+    $\rightarrow H_A: \mu < 1.2$
 :::
 
 ## Collecting data
