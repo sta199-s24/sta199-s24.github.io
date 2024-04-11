@@ -3360,7 +3360,7 @@
     "href": "slides/21-randomization.html#writing-hypotheses-1",
     "title": "Making decisions with randomization tests",
     "section": "Writing hypotheses",
-    "text": "Writing hypotheses\n\nAs a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.\n\nAn article on The Chronicle suggests that the Duke students drink, on average, 1.2 cups of coffee. \\(\\rightarrow H_0: \\mu = 1.2\\)\nYou are interested in evaluating if The Chronicle’s too high. \\(\\rightarrow H_0: \\mu &lt; 1.2\\)"
+    "text": "Writing hypotheses\n\nAs a researcher, you are interested in the average number of cups of coffee Duke students drink in a day.\n\nAn article on The Chronicle suggests that the Duke students drink, on average, 1.2 cups of coffee. \\(\\rightarrow H_0: \\mu = 1.2\\)\nYou are interested in evaluating if The Chronicle’s too high. \\(\\rightarrow H_A: \\mu &lt; 1.2\\)"
   },
   {
     "objectID": "slides/21-randomization.html#collecting-data",
