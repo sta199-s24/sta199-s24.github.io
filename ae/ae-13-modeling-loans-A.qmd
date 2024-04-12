@@ -176,7 +176,7 @@ tidy(rate_util_home_fit)
 ```
 
 $$
-\widehat{interest~rate} = 9.93 + 5.34 \times credit~util + 0.696 \times Mortgage - 0.128 \times Own
+\widehat{interest~rate} = 9.93 + 5.34 \times credit~util + 0.696 \times Mortgage + 0.128 \times Own
 $$
 
 -   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.

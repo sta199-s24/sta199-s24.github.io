@@ -65,7 +65,7 @@ Fit another logistic regression model predicting `spam` from `exclaim_mess`, `wi
 Then, display the tidy output of the model.
 
 b\.
-Using this model, predict spam / not spam for all emails in the `openintro` dataset with `augment()`.
+Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`.
 Store the resulting data frame with an appropriate name.
 
 c\.
@@ -90,7 +90,7 @@ Provide a 1-sentence justification for why you chose this variable.
 Display the tidy output of the model.
 
 b\.
-Using this model, predict spam / not spam for all emails in the `openintro` dataset with `augment()`.
+Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`.
 Store the resulting data frame with an appropriate name.
 
 c\.
@@ -160,10 +160,10 @@ Then, summarize your experience in no more than 10 bullet points.
 
 Include the following on your summary:
 
-- Name and brief description of what you did.
-- Something you found new, interesting, or unexpected
-- How the talk/podcast/interview/etc. connects to something we’ve done in class.
-- Citation or link to web page for what you watched or who you interviewed.
+-   Name and brief description of what you did.
+-   Something you found new, interesting, or unexpected
+-   How the talk/podcast/interview/etc. connects to something we’ve done in class.
+-   Citation or link to web page for what you watched or who you interviewed.
 
 **Option 1:** Listen to a podcast or watch a video about statistics and data science.
 The podcast or video must be *at least 30 minutes* to count towards the statistics experience.
