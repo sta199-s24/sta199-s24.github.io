@@ -131,15 +131,11 @@ If you're unable to make it to lab in person, you should arrange to virtually co
 
 -   0 points: No peer review
 
--   1 point: Only one peer review issue open, feedback provided is not constructive or actionable
+-   1 point: Feedback provided is not constructive or actionable
 
--   2 points: Both peer review issues open, feedback provided is not constructive or actionable
+-   2-4 points: Feedback provided is not sufficiently thorough
 
--   3 points: Both peer review issues open, feedback provided is not sufficiently thorough
-
--   4 points: Both peer review issues open, one of the reviews is not sufficiently thorough
-
--   5 points: Both peer review issues open, both reviews are constructive, actionable, and sufficiently thorough
+-   5 points: Peer review is constructive, actionable, and sufficiently thorough
 
 ::: callout-note
 The feedback issue will come from one team member on GitHub since you can't collectively edit an issue.
