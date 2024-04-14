@@ -2,6 +2,8 @@
 title: "Peer review"
 subtitle: "Milestone 3"
 categories: "Project"
+execute:
+  echo: false
 ---
 
 During the peer feedback process, you will be provided read-only access to your partner team's GitHub repo.
@@ -84,43 +86,84 @@ As a team you should spend \~30 minutes on each team's project.
 # Review pairings
 
 ```{r}
-#| echo: false
 #| message: false
-#| cache: true
-#| eval: false
-
 library(tidyverse)
 library(gt)
+library(googlesheets4)
+gs4_deauth()
 
-teams <- read_csv("https://raw.githubusercontent.com/sta199-f22-1/teams/main/teams.csv?token=GHSAT0AAAAAAB3EHE2PB3NHYYC3FJQO2I4EY4A7A6A") |> 
-  distinct(lab, team_name, team_name_github) |>
-  filter(team_name != "haj10")
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/15vBETwwne7qjZ7EpGvpdk_yZ0zFd07N4cuihF6LpkhY/edit#gid=0") |>
+  mutate(team_to_review = paste0("[", team_to_review, "](", url, ")")) |>
+  select(-url)
 
-teams |>
-  select(-team_name_github) |>
-  group_by(lab) |>
-  mutate(
-    rev_1 = lag(team_name, default = team_name[n()]),
-    rev_2 = lag(rev_1, default = rev_1[n()])
-  ) |>
-  gt() |>
-  cols_label(
-    team_name = "Your team name",
-    rev_1 = "To review 1",
-    rev_2 = "To review 2"
-  )
-
-teams |>
-  select(-team_name) |>
-  group_by(lab) |>
-  mutate(
-    rev_1 = lag(team_name_github, default = team_name_github[n()]),
-    rev_2 = lag(rev_1, default = rev_1[n()])
-  ) |>
-  ungroup() |>
-  select(-lab) |>
-  write_csv(file = here::here("labs", "project-peer-review.csv"))
+make_pairing_table <- function(df, section_no) {
+  df |>
+    filter(section == section_no) |>
+    gt() |>
+    fmt_markdown(
+      columns = team_to_review
+    ) |>
+    cols_align(
+      align = "center",
+      columns = section
+    ) |>
+    cols_label(
+      section = "Lab section",
+      your_team_name = "Your team name",
+      team_to_review = "Team to review"
+    )
+}
 ```
+
+::: panel-tabset
+## L1 - 8:30 am
+
+```{r}
+make_pairing_table(teams, 1)
+```
+
+## L2 - 10:05 am
+
+```{r}
+make_pairing_table(teams, 2)
+```
+
+## L3 - 11:45 am
+
+```{r}
+make_pairing_table(teams, 3)
+```
+
+## L4 - 1:25 pm
+
+```{r}
+make_pairing_table(teams, 4)
+```
+
+## L11 - 1:25 pm
+
+```{r}
+make_pairing_table(teams, 11)
+```
+
+## L5 - 3:05 pm
+
+```{r}
+make_pairing_table(teams, 5)
+```
+
+## L6 - 4:40 pm
+
+```{r}
+make_pairing_table(teams, 6)
+```
+
+## L7 - 4:40 pm
+
+```{r}
+make_pairing_table(teams, 7)
+```
+:::
 
 # Grading
 
