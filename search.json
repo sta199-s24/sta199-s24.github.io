@@ -6357,7 +6357,7 @@
     "href": "project/3-peer-review.html#part-1",
     "title": "Peer review",
     "section": "Part 1",
-    "text": "Part 1\nDuring the first ~30 minutes, make progress on your own project.\n\nReview the feedback from your TA.\nChoose the dataset you want to work with.\nMake progress on your analysis and write-up in index.qmd:\n\nAt a minimum, write a plan that peers can give feedback on.\nTime permitting, start the analysis.\n\nRender the project, commit and push all your changes.",
+    "text": "Part 1\nDuring the first ~30 minutes, make progress on your own project.\n\nReview the feedback from your TA.\nChoose the dataset you want to work with.\nMake progress on your analysis and write-up in index.qmd:\n\nAt a minimum, write a plan that peers can give feedback on.\nTime permitting, start the analysis.\n\nRender the project, commit and push all your changes.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you always render before you commit and push. If you don’t render first, you’re going to end up with merge conflicts that are difficult to resolve in auxiliary files created during the render process.",
     "crumbs": [
       "Project",
       "Milestone 3"
