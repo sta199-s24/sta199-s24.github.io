@@ -35,6 +35,11 @@ During the first \~30 minutes, make progress on your own project.
 
 -   Render the project, commit and push all your changes.
 
+::: callout-important
+Make sure you always render before you commit and push. 
+If you don't render first, you're going to end up with merge conflicts that are difficult to resolve in auxiliary files created during the render process.
+:::
+
 ## Part 2
 
 Review one other team's project.
