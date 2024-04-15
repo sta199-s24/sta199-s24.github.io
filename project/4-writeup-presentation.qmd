@@ -145,7 +145,7 @@ Once your video is ready, upload the video to Warpwire or another video platform
 
 To upload your video to Warpwire:
 
--   Click the Warpwire tab in the course Sakai site.
+-   Click the Warpwire tab in the course Canvas site.
 -   Click the "+" and select "Upload files".
 -   Locate the video on your computer and click to upload.
 -   Once you've uploaded the video to Warpwire, click to share the video and copy the video's URL. You will need this when you post the video in the discussion forum.
