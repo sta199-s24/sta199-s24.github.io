@@ -67,7 +67,7 @@ Instructions and grading criteria for this milestone are outlined in [Milestone 
 
 # Milestone 4 - Writeup and presentation
 
-Instructions and grading criteria for this milestone are outlined in [Milestone 4: Writeup + presentation](/project/4-peer-review.html).
+Instructions and grading criteria for this milestone are outlined in [Milestone 4: Writeup + presentation](/project/4-writeup-presentation.html).
 
 # Other
 
