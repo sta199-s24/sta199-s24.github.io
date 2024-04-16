@@ -11,17 +11,15 @@ editor_options:
 
 # Warm up
 
-```{r}
-#| echo: false
-#| message: false
+## While you wait for class to begin...
 
-library(countdown)
-library(tidyverse)
-library(ggthemes)
-ggplot2::theme_set(theme_gray(base_size = 16))
+::: task
+Any questions about the project?
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
-# Warm up
 
 ## Announcements {.smaller}
 
@@ -32,12 +30,12 @@ ggplot2::theme_set(theme_gray(base_size = 16))
     ::: incremental
     -   Project presentations next Monday in lab -- all team members must be present.
 
-    -   Project write-up and final repo due 11:59pm Mon, April 22 -- you will lose access to your repo at this time.
+    -   Project write-up and final repo due 8 am Wed, April 24 (you get an extra day!) -- you will lose access to your repo at this time.
 
     -   Remaining application exercises due on the usual schedule.
     :::
 
-## Project
+## Project {.smaller}
 
 -   Review peer evaluations left by your peers, implement updates as you see fit, close the issue once you review them.
 
@@ -45,26 +43,28 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 -   Schedule at least one team meting between today and your presentation to practice your presentation together.
 
+::: task
+Any project questions?
+:::
+
 # Effective communication
-
-## What's going on in this plot?
-
-![](images/24/covid-plot.png){fig-align="center"}
 
 ## Take A Sad Plot & Make It Better
 
-![](images/24/sad-plot-to-better.gif)
+![](images/sad-plot-to-better.gif)
 
-Source: [https://alison.netlify.app/rlm-sad-plot-better](alison.netlify.app/rlm-sad-plot-better)\
+::: aside
+Source: [https://alison.netlify.app/rlm-sad-plot-better](alison.netlify.app/rlm-sad-plot-better)
+:::
 
 # Application exercise
 
-## `ae-20`
+## Application exercise: `ae-17-effective-dataviz` {.smaller}
 
 ::: appex
--   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-20` (repo name will be suffixed with your GitHub name).
--   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
--   You should have already pushed updates on Tuesday, so you should be good for submission.
+-   Go to your project called `ae`.
+-   If there are any uncommitted files, commit them, and push. Then pull.
+-   Work on `ae-17-effective-dataviz.qmd`.
 :::
 
 ## Recap {.smaller}
@@ -80,4 +80,3 @@ Source: [https://alison.netlify.app/rlm-sad-plot-better](alison.netlify.app/rlm-
 -   Communicate your main message directly in the plot labels
 -   Simplify before you call it done (a.k.a. "Before you leave the house, look in the mirror and take one thing off")
 :::
-
