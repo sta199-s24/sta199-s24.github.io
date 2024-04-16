@@ -4,13 +4,9 @@ subtitle: "Milestone 4"
 categories: "Project"
 ---
 
-# Goals
+# Expectations
 
-The goals of this milestone are as follows:
-
--   ...
-
-Your written report must be completed in the `report.qmd` file and must be reproducible.
+Your written report must be completed in the `index.qmd` file and must be reproducible.
 All team members should contribute to the GitHub repository, with regular meaningful commits.
 
 Before you finalize your write up, make sure the printing of code chunks is off with the option `echo: false` in the YAML.
@@ -149,7 +145,7 @@ Once your video is ready, upload the video to Warpwire or another video platform
 
 To upload your video to Warpwire:
 
--   Click the Warpwire tab in the course Sakai site.
+-   Click the Warpwire tab in the course Canvas site.
 -   Click the "+" and select "Upload files".
 -   Locate the video on your computer and click to upload.
 -   Once you've uploaded the video to Warpwire, click to share the video and copy the video's URL. You will need this when you post the video in the discussion forum.
