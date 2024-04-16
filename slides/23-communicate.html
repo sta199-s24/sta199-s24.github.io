@@ -353,15 +353,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 
   <p class="date">2024-04-17</p>
 </section>
+<section>
 <section id="warm-up" class="title-slide slide level1 center">
 <h1>Warm up</h1>
 
 </section>
-
-<section>
-<section id="warm-up-1" class="title-slide slide level1 center">
-<h1>Warm up</h1>
-
+<section id="while-you-wait-for-class-to-begin" class="slide level2">
+<h2>While you wait for class to begin…</h2>
+<div class="task">
+<p>Any questions about the project?</p>
+</div>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 </section>
 <section id="announcements" class="slide level2 smaller">
 <h2>Announcements</h2>
@@ -371,47 +373,47 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div>
 <ul>
 <li class="fragment"><p>Project presentations next Monday in lab – all team members must be present.</p></li>
-<li class="fragment"><p>Project write-up and final repo due 11:59pm Mon, April 22 – you will lose access to your repo at this time.</p></li>
+<li class="fragment"><p>Project write-up and final repo due 8 am Wed, April 24 (you get an extra day!) – you will lose access to your repo at this time.</p></li>
 <li class="fragment"><p>Remaining application exercises due on the usual schedule.</p></li>
 </ul>
 </div></li>
 </ul>
 </section>
-<section id="project" class="slide level2">
+<section id="project" class="slide level2 smaller">
 <h2>Project</h2>
 <ul>
 <li><p>Review peer evaluations left by your peers, implement updates as you see fit, close the issue once you review them.</p></li>
 <li><p>Have a clear plan for who is doing what, open issues on your repo, and assign them to individuals who can then close the issues as they finish a task.</p></li>
 <li><p>Schedule at least one team meting between today and your presentation to practice your presentation together.</p></li>
 </ul>
+<div class="task">
+<p>Any project questions?</p>
+</div>
 </section></section>
 <section>
 <section id="effective-communication" class="title-slide slide level1 center">
 <h1>Effective communication</h1>
 
 </section>
-<section id="whats-going-on-in-this-plot" class="slide level2">
-<h2>What’s going on in this plot?</h2>
-
-<img data-src="images/24/covid-plot.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="take-a-sad-plot-make-it-better" class="slide level2">
 <h2>Take A Sad Plot &amp; Make It Better</h2>
+<p><img data-src="images/sad-plot-to-better.gif"></p>
 
-<img data-src="images/24/sad-plot-to-better.gif" class="r-stretch"><p>Source: <a href="alison.netlify.app/rlm-sad-plot-better">https://alison.netlify.app/rlm-sad-plot-better</a><br>
-</p>
-</section></section>
+<aside><div>
+<p>Source: <a href="alison.netlify.app/rlm-sad-plot-better">https://alison.netlify.app/rlm-sad-plot-better</a></p>
+</div></aside></section></section>
 <section>
 <section id="application-exercise" class="title-slide slide level1 center">
 <h1>Application exercise</h1>
 
 </section>
-<section id="ae-20" class="slide level2">
-<h2><code>ae-20</code></h2>
+<section id="application-exercise-ae-17-effective-dataviz" class="slide level2 smaller">
+<h2>Application exercise: <code>ae-17-effective-dataviz</code></h2>
 <div class="appex">
 <ul>
-<li>Go to the course <a href="https://github.com/sta199-f22-1">GitHub org</a> and find your <code>ae-20</code> (repo name will be suffixed with your GitHub name).</li>
-<li>Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</li>
-<li>You should have already pushed updates on Tuesday, so you should be good for submission.</li>
+<li>Go to your project called <code>ae</code>.</li>
+<li>If there are any uncommitted files, commit them, and push. Then pull.</li>
+<li>Work on <code>ae-17-effective-dataviz.qmd</code>.</li>
 </ul>
 </div>
 </section>
@@ -650,44 +652,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
