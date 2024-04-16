@@ -1,0 +1,83 @@
+---
+title: "Communicating data science results effectively"
+subtitle: "Lecture 23"
+date: "April 17, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Warm up
+
+```{r}
+#| echo: false
+#| message: false
+
+library(countdown)
+library(tidyverse)
+library(ggthemes)
+ggplot2::theme_set(theme_gray(base_size = 16))
+```
+
+# Warm up
+
+## Announcements {.smaller}
+
+-   My office hours this week: Office hours today 1:30 - 2:30 pm today
+
+-   Remaining due dates:
+
+    ::: incremental
+    -   Project presentations next Monday in lab -- all team members must be present.
+
+    -   Project write-up and final repo due 11:59pm Mon, April 22 -- you will lose access to your repo at this time.
+
+    -   Remaining application exercises due on the usual schedule.
+    :::
+
+## Project
+
+-   Review peer evaluations left by your peers, implement updates as you see fit, close the issue once you review them.
+
+-   Have a clear plan for who is doing what, open issues on your repo, and assign them to individuals who can then close the issues as they finish a task.
+
+-   Schedule at least one team meting between today and your presentation to practice your presentation together.
+
+# Effective communication
+
+## What's going on in this plot?
+
+![](images/24/covid-plot.png){fig-align="center"}
+
+## Take A Sad Plot & Make It Better
+
+![](images/24/sad-plot-to-better.gif)
+
+Source: [https://alison.netlify.app/rlm-sad-plot-better](alison.netlify.app/rlm-sad-plot-better)\
+
+# Application exercise
+
+## `ae-20`
+
+::: appex
+-   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-20` (repo name will be suffixed with your GitHub name).
+-   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
+-   You should have already pushed updates on Tuesday, so you should be good for submission.
+:::
+
+## Recap {.smaller}
+
+::: incremental
+-   Represent percentages as parts of a whole
+-   Place variables representing time on the x-axis when possible
+-   Pay attention to data types, e.g., represent time as time on a continuous scale, not years as levels of a categorical variable
+-   Prefer direct labeling over legends
+-   Use accessible colors
+-   Use color to draw attention
+-   Pick a purpose and label, color, annotate for that purpose
+-   Communicate your main message directly in the plot labels
+-   Simplify before you call it done (a.k.a. "Before you leave the house, look in the mirror and take one thing off")
+:::
+

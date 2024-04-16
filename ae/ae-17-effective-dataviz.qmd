@@ -1,0 +1,170 @@
+---
+title: "Trends instructional staff employees in universities"
+categories: 
+  - Application exercise
+---
+
+The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals.
+[This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains the following image.
+What trends are apparent in this visualization?
+
+![](https://sta199-s24.github.io/images/staff-employment.png){fig-align="center"}
+
+## Packages
+
+```{r}
+#| label: packages
+#| message: false
+library(tidyverse)
+library(scales)
+library(ggthemes)
+```
+
+## Data
+
+Each row in this dataset represents a faculty type, and the columns are the years for which we have data.
+The values are percentage of hires of that type of faculty for each year.
+
+```{r}
+#| label: load-data-staff
+#| message: false
+staff <- read_csv("https://sta199-s24.github.io/data/instructional-staff.csv")
+staff
+```
+
+## Recreate
+
+-   **Your turn (10 minutes):** Recreate the visualization above. Try to match as many of the elements as possible. Hint: You might need to reshape your data first.
+
+```{r}
+#| label: reshape-data
+# add code here
+```
+
+```{r}
+#| label: recreate-plot
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Represent percentages as parts of a whole
+
+-   **Demo:** Recreate the previous visualization where the percentages are represented as parts of a whole.
+
+```{r}
+#| label: percentages
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Place time on x-axis
+
+-   **Demo:** Convert the visualization to a line plot with time on the x-axis.
+
+```{r}
+#| label: time-on-x
+#| fig-asp: 0.5
+#| fig-with: 12.0
+# add code here
+```
+
+## Pay attention to variable types
+
+-   **Question:** What is wrong with the x-axis of the plot above? How can you fix it?
+
+*Add response here.*
+
+-   **Your turn:** Implement the fix for the x-axis of the plot.
+
+```{r}
+#| label: var-type
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Use an accessible color scale
+
+-   **Question:** What do we mean by an accessible color scale? What types of color vision deficiencies are there?
+
+*Add response here.*
+
+-   **Demo:** What does the plot look like to people with various color vision deficiencies?
+
+-   **Demo:** Remake the plot with an accessible color scale.
+
+```{r}
+#| label: accessible color scale
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Use direct labeling
+
+-   **Demo:** Remove the legend and add labels for each line at the end of the line (where `x` is the `max(x)` recorded).
+
+```{r}
+#| label: direct-labelling
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Use color to draw attention
+
+-   **Demo:** Redo the line plot where Part-time Faculty is red and the rest are gray.
+
+```{r}
+# label: recode
+# add code here
+```
+
+```{r}
+#| label: color-attention
+#| fig-asp: 0.5
+#| fig-width: 12.0
+
+# add code here
+```
+
+## Pick a purpose
+
+```{r}
+#| label: purpose
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Use labels to communicate the message
+
+```{r}
+#| label: communicate-message
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Simplify
+
+```{r}
+#| label: simplify
+#| fig-asp: 0.5
+#| fig-width: 12.0
+# add code here
+```
+
+## Summary
+
+-   Represent percentages as parts of a whole
+-   Place variables representing time on the x-axis when possible
+-   Pay attention to data types, e.g., represent time as time on a continuous scale, not years as levels of a categorical variable
+-   Prefer direct labeling over legends
+-   Use accessible colors
+-   Use color to draw attention
+-   Pick a purpose and label, color, annotate for that purpose
+-   Communicate your main message directly in the plot labels
+-   Simplify before you call it done (a.k.a. "Before you leave the house, look in the mirror and take one thing off")
