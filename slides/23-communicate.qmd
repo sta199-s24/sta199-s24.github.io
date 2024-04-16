@@ -20,7 +20,6 @@ Any questions about the project?
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
 ## Announcements {.smaller}
 
 -   My office hours this week: Office hours today 1:30 - 2:30 pm today
@@ -34,6 +33,15 @@ Any questions about the project?
 
     -   Remaining application exercises due on the usual schedule.
     :::
+
+## "Extra credit"
+
+-   Put any additional time into your project, MUCH HIGHER return on investment than any extra credit I can offer
+
+-   But...
+    AEs in class on Thursday and next Tuesday will be just you checking in saying you're here.
+    You'll get to practice pull, commit, render, push, but no real content needed.
+    So that's two AEs you can get credit for simply by being here and doing no additional work than pull, commit (a tiny change), render, push during class.
 
 ## Project {.smaller}
 
