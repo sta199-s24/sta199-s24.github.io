@@ -8,6 +8,28 @@ categories: "Lab"
 In this lab you'll start your practice of statistical modeling.
 You'll fit models, interpret model output, and make decisions about your data and research question based on the model results.
 
+## Guidelines
+
+Your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.
+
+In addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF.
+Make sure that is the case, and add line breaks where the code is running off the page.
+
+::: callout-important
+Render your document.
+If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question.
+The question will automatically receive a 0.
+This is something you can and should verify before you turn in your work.
+:::
+
+You should have at least 3 commits with meaningful commit messages by the end of the assignment.
+
+Additionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.
+
+::: callout-important
+Failure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such.
+:::
+
 # Part 1 - Smoking during pregnancy
 
 ## Question 1
