@@ -5354,7 +5354,18 @@
     "href": "labs/lab-6.html",
     "title": "Lab 6 - Modeling I",
     "section": "",
-    "text": "In this lab you’ll start your practice of statistical modeling. You’ll fit models, interpret model output, and make decisions about your data and research question based on the model results.",
+    "text": "In this lab you’ll start your practice of statistical modeling. You’ll fit models, interpret model output, and make decisions about your data and research question based on the model results.\n\n\nYour plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.\n\n\n\n\n\n\nImportant\n\n\n\nRender your document. If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question. The question will automatically receive a 0. This is something you can and should verify before you turn in your work.\n\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nAdditionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.\n\n\n\n\n\n\nImportant\n\n\n\nFailure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such.",
+    "crumbs": [
+      "Labs",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "labs/lab-6.html#guidelines",
+    "href": "labs/lab-6.html#guidelines",
+    "title": "Lab 6 - Modeling I",
+    "section": "",
+    "text": "Your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nIn addition, the code should all the code should be be able to be read (not run off the page) when you render to PDF. Make sure that is the case, and add line breaks where the code is running off the page.\n\n\n\n\n\n\nImportant\n\n\n\nRender your document. If your code is running off the page for a given question such that we can’t see your entire code, we will not evaluate any of the code for that question. The question will automatically receive a 0. This is something you can and should verify before you turn in your work.\n\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nAdditionally, if you’re using functions that are not introduced in the course materials, you must cite your sources.\n\n\n\n\n\n\nImportant\n\n\n\nFailure to cite outside resources used, including Large Language Models like Chat GPT, is a violation of the Duke Community Standard and will be treated as such.",
     "crumbs": [
       "Labs",
       "Lab 6"
