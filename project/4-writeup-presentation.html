@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STA 199 - Writeup and presentation</title>
+<title>STA 199 - Write-up and presentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="STA 199 - Writeup and presentation">
+<meta property="og:title" content="STA 199 - Write-up and presentation">
 <meta property="og:description" content="Milestone 4">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="STA 199 - Writeup and presentation">
+<meta name="twitter:title" content="STA 199 - Write-up and presentation">
 <meta name="twitter:description" content="Milestone 4">
 <meta name="twitter:image" content="https://sta199-s24.github.io/project/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
@@ -361,9 +361,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#expectations" id="toc-expectations" class="nav-link active" data-scroll-target="#expectations">Expectations</a>
+  <li><a href="#write-up" id="toc-write-up" class="nav-link active" data-scroll-target="#write-up">Write-up</a>
   <ul class="collapse">
-  <li><a href="#report-components" id="toc-report-components" class="nav-link" data-scroll-target="#report-components">Report components</a>
+  <li><a href="#expectations" id="toc-expectations" class="nav-link" data-scroll-target="#expectations">Expectations</a></li>
+  <li><a href="#components" id="toc-components" class="nav-link" data-scroll-target="#components">Components</a>
   <ul class="collapse">
   <li><a href="#introduction-and-data" id="toc-introduction-and-data" class="nav-link" data-scroll-target="#introduction-and-data">Introduction and data</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
@@ -371,12 +372,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   <li><a href="#organization-formatting" id="toc-organization-formatting" class="nav-link" data-scroll-target="#organization-formatting">Organization + formatting</a></li>
   </ul></li>
-  <li><a href="#report-grading" id="toc-report-grading" class="nav-link" data-scroll-target="#report-grading">Report grading</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul></li>
   <li><a href="#presentation-slides" id="toc-presentation-slides" class="nav-link" data-scroll-target="#presentation-slides">Presentation + slides</a>
   <ul class="collapse">
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
   <li><a href="#presentation" id="toc-presentation" class="nav-link" data-scroll-target="#presentation">Presentation</a></li>
+  <li><a href="#grading-1" id="toc-grading-1" class="nav-link" data-scroll-target="#grading-1">Grading</a>
+  <ul class="collapse">
+  <li><a href="#slides-1" id="toc-slides-1" class="nav-link" data-scroll-target="#slides-1">Slides</a></li>
+  <li><a href="#presentation-1" id="toc-presentation-1" class="nav-link" data-scroll-target="#presentation-1">Presentation</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/edit/main/project/4-writeup-presentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s24/sta199-s24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -386,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/description.html">Project</a></li><li class="breadcrumb-item"><a href="../project/4-writeup-presentation.html">Milestone 4</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Writeup and presentation</h1>
+<h1 class="title">Write-up and presentation</h1>
 <p class="subtitle lead">Milestone 4</p>
   <div class="quarto-categories">
     <div class="quarto-category">Project</div>
@@ -407,16 +413,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="expectations" class="level1">
-<h1>Expectations</h1>
+<section id="write-up" class="level1">
+<h1>Write-up</h1>
+<section id="expectations" class="level2">
+<h2 class="anchored" data-anchor-id="expectations">Expectations</h2>
 <p>Your written report must be completed in the <code>index.qmd</code> file and must be reproducible. All team members should contribute to the GitHub repository, with regular meaningful commits.</p>
 <p>Before you finalize your write up, make sure the printing of code chunks is off with the option <code>echo: false</code> in the YAML.</p>
 <p>The mandatory components of the report are below. You are free to add additional sections as necessary. The report, including visualizations, should be no more than 10 pages long (if it were to be printed)<strong>.</strong> There is no minimum page requirement; however, you should comprehensively address all of the analysis in your report.</p>
 <p>To check how many pages your report is, open it in your browser and go to File &gt; Print &gt; Save as PDF and review the number of pages.</p>
 <p>Be selective in what you include in your final write-up. The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis.</p>
 <p>You are welcome to include an appendix with additional work at the end of the written report document; however, grading will largely be based on the content in the main body of the report. You should assume the reader will <strong><em>not</em></strong> see the material in the appendix unless prompted to view it in the main body of the report. The appendix should be neatly formatted and easy for the reader to navigate. It is not included in the 10-page limit.</p>
-<section id="report-components" class="level2">
-<h2 class="anchored" data-anchor-id="report-components">Report components</h2>
+</section>
+<section id="components" class="level2">
+<h2 class="anchored" data-anchor-id="components">Components</h2>
 <section id="introduction-and-data" class="level3">
 <h3 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h3>
 <p>This section includes an introduction to the project motivation, data, and research question. Describe the data and definitions of key variables. It should also include some exploratory data analysis. All of the EDA won’t fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.</p>
@@ -458,9 +467,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="report-grading" class="level2">
-<h2 class="anchored" data-anchor-id="report-grading">Report grading</h2>
-<p>The written report is worth 40 points, broken down as follows</p>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>The write-up is worth 40 points, broken down as follows:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -528,8 +537,51 @@ ul.task-list li input[type="checkbox"] {
 <li>Locate the video on your computer and click to upload.</li>
 <li>Once you’ve uploaded the video to Warpwire, click to share the video and copy the video’s URL. You will need this when you post the video in the discussion forum.</li>
 </ul>
+</section>
+<section id="grading-1" class="level2">
+<h2 class="anchored" data-anchor-id="grading-1">Grading</h2>
+<p>The presentation is worth 25 points, broken down as follows:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Total</th>
+<th>25 pts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Slides</strong></td>
+<td>10 pts</td>
+</tr>
+<tr class="even">
+<td><strong>Presentation</strong></td>
+<td>15 pts</td>
+</tr>
+</tbody>
+</table>
+<section id="slides-1" class="level3">
+<h3 class="anchored" data-anchor-id="slides-1">Slides</h3>
+<p>Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.?</p>
+</section>
+<section id="presentation-1" class="level3">
+<h3 class="anchored" data-anchor-id="presentation-1">Presentation</h3>
+<ul>
+<li>Time management: Did the team divide the time well amongst themselves or got cut off going over time?</li>
+<li>Professionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project?</li>
+<li>Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?</li>
+<li>Creativity and critical thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project?</li>
+<li>Content: Including, but not limited to the following:
+<ul>
+<li>Is the question well articulated in the presentation?</li>
+<li>Can the question be answered with the data?</li>
+<li>Does the analysis answer the question?</li>
+<li>Are the conclusion(s) made based on the analysis justifiable?</li>
+<li>Are the limitations carefully considered and articulated?</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
