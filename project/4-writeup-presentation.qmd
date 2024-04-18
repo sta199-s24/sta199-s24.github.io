@@ -117,7 +117,7 @@ You can also use Quarto to make your slides!
 While we won't be covering making slides with Quarto in the class, we would be happy to help you with it in office hours.
 It's no different than writing other documents with Quarto, so the learning curve will not be steep!
 
-The slide deck should have no more than 6 content slides + 1 title slide.
+The slide deck should be roughly 6 content slides + 1 title slide.
 Here is a *suggested* outline as you think through the slides; you [**do not**]{.underline} have to use this exact format for the 6 slides.
 
 -   Title Slide
