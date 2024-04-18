@@ -1,10 +1,12 @@
 ---
-title: "Writeup and presentation"
+title: "Write-up and presentation"
 subtitle: "Milestone 4"
 categories: "Project"
 ---
 
-# Expectations
+# Write-up
+
+## Expectations
 
 Your written report must be completed in the `index.qmd` file and must be reproducible.
 All team members should contribute to the GitHub repository, with regular meaningful commits.
@@ -25,7 +27,7 @@ You should assume the reader will ***not*** see the material in the appendix unl
 The appendix should be neatly formatted and easy for the reader to navigate.
 It is not included in the 10-page limit.
 
-## Report components
+## Components
 
 ### Introduction and data
 
@@ -90,9 +92,9 @@ If there is an appendix, it is reasonably organized and easy for the reader to f
 All code, warnings, and messages are suppressed.
 The main body of the written report (not including the appendix) is no longer than 10 pages.
 
-## Report grading
+## Grading
 
-The written report is worth 40 points, broken down as follows
+The write-up is worth 40 points, broken down as follows:
 
 | Total                         | 40 pts |
 |-------------------------------|--------|
@@ -149,3 +151,30 @@ To upload your video to Warpwire:
 -   Click the "+" and select "Upload files".
 -   Locate the video on your computer and click to upload.
 -   Once you've uploaded the video to Warpwire, click to share the video and copy the video's URL. You will need this when you post the video in the discussion forum.
+
+## Grading
+
+The presentation is worth 25 points, broken down as follows:
+
+| Total                         | 25 pts |
+|-------------------------------|--------|
+| **Slides**                    | 10 pts |
+| **Presentation**              | 15 pts |
+
+### Slides
+
+Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.?
+
+### Presentation
+
+- Time management: Did the team divide the time well amongst themselves or got cut off going over time?
+- Professionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project?
+- Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?
+- Creativity and critical thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project?
+- Content: Including, but not limited to the following:
+  - Is the question well articulated in the presentation?
+  - Can the question be answered with the data?
+  - Does the analysis answer the question?
+  - Are the conclusion(s) made based on the analysis justifiable?
+  - Are the limitations carefully considered and articulated?
+
