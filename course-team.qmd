@@ -8,7 +8,6 @@ title: "Teaching team"
 
 [**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University.
 Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM.
-Mine also works with RStudio as a Developer Educator.
 
 +------------------------------------------------------------+--------------+
 | Office hours                                               | Location     |
