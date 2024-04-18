@@ -13,6 +13,9 @@ format:
 
 ::: question
 Take the time to fill out course and TA evaluations!
+
+Want to nominate a TA as "TA of the Year"?
+Send an email to dus\@stat.duke.edu with your nomination.
 :::
 
 ## Before we get started {.smaller}
