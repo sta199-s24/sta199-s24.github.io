@@ -40,7 +40,7 @@ All of the EDA won't fit in the paper, so focus on the EDA for the response vari
 
 The research question and motivation are clearly stated in the introduction, including citations for the data source and any external research.
 The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report.
-The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The explanatory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables.
+The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The exploratory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables.
 It incorporates appropriate visualizations and summary statistics.
 
 ### Methodology
