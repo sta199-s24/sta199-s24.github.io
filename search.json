@@ -5904,21 +5904,7 @@
     "href": "slides/25-wrapup-shiny.html#anatomy-of-an-app",
     "title": "Wrap-up + Shiny",
     "section": "Anatomy of an App",
-    "text": "Anatomy of an App\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(),\n  \n  server = function(input, output, session) {\n  \n  }\n)"
-  },
-  {
-    "objectID": "slides/25-wrapup-shiny.html#sidebar-layout",
-    "href": "slides/25-wrapup-shiny.html#sidebar-layout",
-    "title": "Wrap-up + Shiny",
-    "section": "Sidebar layout",
-    "text": "Sidebar layout\n\n\n\n\n\n\n\nFrom Mastering Shiny"
-  },
-  {
-    "objectID": "slides/25-wrapup-shiny.html#multi-row-layout",
-    "href": "slides/25-wrapup-shiny.html#multi-row-layout",
-    "title": "Wrap-up + Shiny",
-    "section": "Multi-row layout",
-    "text": "Multi-row layout\n\n\n\n\n\n\n\nFrom Mastering Shiny"
+    "text": "Anatomy of an App\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(\n    # new (to you) widgets go here\n  ),\n  \n  server = function(input, output, session) {\n    # somewhat familiat (to you) code goes here\n  }\n)"
   },
   {
     "objectID": "slides/25-wrapup-shiny.html#shiny-widgets-gallery",

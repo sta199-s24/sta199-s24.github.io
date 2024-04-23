@@ -445,10 +445,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li><p>Finalize (render, commit, push) by 8 am tomorrow (Wednesday) morning</p></li>
 <li><p>Fill out last peer evaluations by Sunday</p></li>
 </ul>
-</section></section>
-<section id="awards" class="title-slide slide level1 center">
-<h1>Awards</h1>
-<!--
+<!-- 
+
+# Awards
 
 ## Best ugly plot - Honorable mentions
 
@@ -462,7 +461,7 @@ Gigi Dunn
 ::: {.column width="33%"}
 Erica Shen
 
-![](images/ugly-plots/HM-erica-shen){fig-align="center"}
+![](images/ugly-plots/HM-erica-shen.png){fig-align="center"}
 :::
 
 ::: {.column width="33%"}
@@ -492,28 +491,33 @@ Lina Leyhausen
 
 ## Most activity on Ed 🏆
 
-![](images/most-ed-activity/W-Allison-Jang.png){fig-align="center"}
+![](images/most-ed-activity/W-Alison-Jang.png){fig-align="center"}
 
 ## People's Choice - Honorable Mentions
 
-- Section 1 - Green Beans - Forest Fires: https://sta199-s24.github.io/project-team_e
+-   Section 1 - Green Beans - Forest Fires: <https://sta199-s24.github.io/project-green_beans/presentation.pdf>
 
-- Section 3 - Team E - Wine Analysis: https://sta199-s24.github.io/project-team_e
+-   Section 3 - Team E - Red Wine Quality: <https://sta199-s24.github.io/project-team_e/presentation.pdf>
 
-- Section 5 - Inside Investigators - Inside Investigators: https://sta199-s24.github.io/project-team_e
+-   Section 5 - Inside Investigators - NYC Crime: Perpetrator Demographics & Crime by Borough: <https://sta199-s24.github.io/project-inside_investigators>
 
 ## People's Choice 🏆
 
-Section 2 - Data Devils - Gender Pay Gap: https://sta199-s24.github.io/project-data_devils/ 
+Section 2 - Data Devils - Gender Pay Gap by Industry: <https://sta199-s24.github.io/project-data_devils/presentation.pdf>
+
+![](images/data-devils.png)
 
 -->
-</section>
-
+</section></section>
 <section>
-<section id="shiny" class="title-slide slide level1 center">
+<section id="shiny" class="title-slide slide level1 nostretch center">
 <h1>Shiny</h1>
-
-<img data-src="images/hex-shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hex-shiny.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
+</div>
+</section>
 <section id="shiny-1" class="slide level2">
 <h2>Shiny</h2>
 <blockquote>
@@ -549,39 +553,19 @@ Section 2 - Data Devils - Gender Pay Gap: https://sta199-s24.github.io/project-d
 <section id="anatomy-of-an-app" class="slide level2">
 <h2>Anatomy of an App</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|3-8|4|6-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(shiny)</span>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|3-11|4-6|8-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(shiny)</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a><span class="fu">shinyApp</span>(</span>
-<span id="cb1-4"><a></a>  <span class="at">ui =</span> <span class="fu">list</span>(),</span>
-<span id="cb1-5"><a></a>  </span>
-<span id="cb1-6"><a></a>  <span class="at">server =</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb1-4"><a></a>  <span class="at">ui =</span> <span class="fu">list</span>(</span>
+<span id="cb1-5"><a></a>    <span class="co"># new (to you) widgets go here</span></span>
+<span id="cb1-6"><a></a>  ),</span>
 <span id="cb1-7"><a></a>  </span>
-<span id="cb1-8"><a></a>  }</span>
-<span id="cb1-9"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a></a>  <span class="at">server =</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb1-9"><a></a>    <span class="co"># somewhat familiat (to you) code goes here</span></span>
+<span id="cb1-10"><a></a>  }</span>
+<span id="cb1-11"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="sidebar-layout" class="slide level2">
-<h2>Sidebar layout</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/layout-sidebar.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>From <a href="https://mastering-shiny.org/action-layout.html#page-with-sidebar">Mastering Shiny</a></p>
-</div></aside></section>
-<section id="multi-row-layout" class="slide level2">
-<h2>Multi-row layout</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/layout-fluidrow.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>From <a href="https://mastering-shiny.org/action-layout.html#multi-row">Mastering Shiny</a></p>
-</div></aside></section>
 <section id="shiny-widgets-gallery" class="slide level2">
 <h2>Shiny Widgets Gallery</h2>
 <div style="text-align: center">
