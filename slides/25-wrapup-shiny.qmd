@@ -1,0 +1,201 @@
+---
+title: "Wrap-up + Shiny"
+subtitle: "Lecture 25"
+date: "April 23, 2024"
+format: 
+  revealjs:
+    footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
+---
+
+# Warm up
+
+## While you wait for class to begin...
+
+::: question
+Take the time to fill out course and TA evaluations!
+
+Want to nominate a TA as "TA of the Year"?
+Send an email to dus\@stat.duke.edu with your nomination.
+:::
+
+## AE 19 - Last one!
+
+::: question
+-   Go to your `ae` repo, and pull.
+
+-   Make a change, any change, to `ae-19-last-ae.qmd`.
+    render, commit, and push.
+:::
+
+## Announcements
+
+-   Finalize (render, commit, push) by 8 am tomorrow (Wednesday) morning
+
+-   Fill out last peer evaluations by Sunday
+
+# Awards
+
+<!--
+
+## Best ugly plot - Honorable mentions
+
+::: columns
+::: {.column width="33%"}
+Gigi Dunn
+
+![](images/ugly-plots/HM-gigi-dunn.png){fig-align="center"}
+:::
+
+::: {.column width="33%"}
+Erica Shen
+
+![](images/ugly-plots/HM-erica-shen){fig-align="center"}
+:::
+
+::: {.column width="33%"}
+Harika Amineni
+
+![](images/ugly-plots/HM-harika-amineni.png){fig-align="center"}
+:::
+:::
+
+## Best ugly plot 🏆
+
+Lina Leyhausen
+
+![](images/ugly-plots/W-lina-leyhausen.png){fig-align="center"}
+
+## Most commits to project - Honorable mentions
+
+![](images/most-commits/HM.png){fig-align="center"}
+
+## Most commits to project 🏆
+
+![](images/most-commits/W-caroline-metz.png){fig-align="center"}
+
+## Most activity on Ed - Honorable mentions
+
+![](images/most-ed-activity/HM.png){fig-align="center"}
+
+## Most activity on Ed 🏆
+
+![](images/most-ed-activity/W-Allison-Jang.png){fig-align="center"}
+
+## People's Choice - Honorable Mentions
+
+- Section 1 - Green Beans - Forest Fires: https://sta199-s24.github.io/project-team_e
+
+- Section 3 - Team E - Wine Analysis: https://sta199-s24.github.io/project-team_e
+
+- Section 5 - Inside Investigators - Inside Investigators: https://sta199-s24.github.io/project-team_e
+
+## People's Choice 🏆
+
+Section 2 - Data Devils - Gender Pay Gap: https://sta199-s24.github.io/project-data_devils/ 
+
+-->
+
+# Shiny
+
+![](images/hex-shiny.png){fig-align="center" width="66%"}
+
+## Shiny
+
+> Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
+
+## Shiny App
+
+<br/>
+
+::: columns
+::: {.column .larger width="40%"}
+Server
+
+::: {style="border: 2px solid; border-radius: 5px; text-align:center; font-size: 90px; height: 250px"}
+`r fontawesome::fa("r-project")` + `r fontawesome::fa("server")`
+:::
+:::
+
+::: {.column width="20%"}
+::: {style="text-align: center; font-size: 90px; padding-top: 20px"}
+<br/>⇄
+:::
+:::
+
+::: {.column .larger width="40%"}
+Client / Browser
+
+::: {style="border: 2px solid; border-radius: 5px; text-align: center; height: 250px"}
+::: {style="font-size: 90px"}
+`r fontawesome::fa("file-code")`
+:::
+
+::: {style="font-size: 50px"}
+`r fontawesome::fa("html5")` + `r fontawesome::fa("js")` + `r fontawesome::fa("css3")`
+:::
+:::
+:::
+:::
+
+## Anatomy of an App
+
+```{r shiny-anatomy}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "|3-8|4|6-8"
+library(shiny)
+
+shinyApp(
+  ui = list(),
+  
+  server = function(input, output, session) {
+  
+  }
+)
+```
+
+## Sidebar layout
+
+![](images/layout-sidebar.png){fig-align="center" width="60%"}
+
+::: aside
+From [Mastering Shiny](https://mastering-shiny.org/action-layout.html#page-with-sidebar)
+:::
+
+## Multi-row layout
+
+![](images/layout-fluidrow.png){fig-align="center" width="60%"}
+
+::: aside
+From [Mastering Shiny](https://mastering-shiny.org/action-layout.html#multi-row)
+:::
+
+## Shiny Widgets Gallery
+
+::: {style="text-align: center"}
+<https://shiny.posit.co/r/gallery/widgets/widget-gallery/>
+:::
+
+<iframe data-src="https://gallery.shinyapps.io/081-widgets-gallery/" width="100%" height="500px" style="border:1px solid;border-radius: 5px;" data-external="1">
+
+</iframe>
+
+## A brief widget tour
+
+::: {style="text-align: center"}
+[rundel.shinyapps.io/widgets/](https://rundel.shinyapps.io/widgets/)
+:::
+
+<iframe data-src="https://rundel.shinyapps.io/widgets/" width="100%" height="500px" style="border:1px solid;border-radius: 5px;" data-external="1">
+
+</iframe>
+
+## Live demo
+
+Let's make a weather app!
+
+Go to <https://github.com/sta199-s24/shiny-demo> to follow along.
+
+::: callout-note
+If you want to code along, click on the "Use this template" button to create a copy of this repo for yourself, clone it in RStudio, and code along as usual.
+:::
