@@ -12,7 +12,6 @@ format:
 ```{r}
 #| echo: false
 #| message: false
-
 library(countdown)
 library(tidyverse)
 ggplot2::theme_set(theme_gray(base_size = 16))

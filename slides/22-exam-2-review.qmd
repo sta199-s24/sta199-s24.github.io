@@ -5,8 +5,6 @@ date: "April 9, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
-editor_options: 
-  chunk_output_type: console
 ---
 
 # Warm up
@@ -29,7 +27,7 @@ Same as Exam 1!
 
 -   Exam format / flow
 
--   Asking questions during exam / office hours 
+-   Asking questions during exam / office hours
 
 # Application exercise
 
@@ -53,13 +51,16 @@ Same as Exam 1!
 ## Questions {.smaller}
 
 ::: incremental
-- Do we need to know functions and iteration for the exam? Since we didn’t work very much with them after the HW videos.
+-   Do we need to know functions and iteration for the exam?
+    Since we didn’t work very much with them after the HW videos.
 
-- When we run bootstrapping simulations for different types of statistics (proportions, means, medians, slopes, etc), are there any differences in the methodology? Or does it all rely on calculating sample statistics for many simulations and then taking the middle 90 or 95% as a confidence interval estimate for that statistic.
+-   When we run bootstrapping simulations for different types of statistics (proportions, means, medians, slopes, etc), are there any differences in the methodology?
+    Or does it all rely on calculating sample statistics for many simulations and then taking the middle 90 or 95% as a confidence interval estimate for that statistic.
 
-- How do you determine whether a relationship is nonlinear without visualization?
+-   How do you determine whether a relationship is nonlinear without visualization?
 
-- Could you go over how logistic regression works again? Especially how a log(p/1-p) transformation of binary data creates a linear model?
+-   Could you go over how logistic regression works again?
+    Especially how a log(p/1-p) transformation of binary data creates a linear model?
 
-- When do you use logarithmic functions in linear regression, rather than a logistic regression?
+-   When do you use logarithmic functions in linear regression, rather than a logistic regression?
 :::

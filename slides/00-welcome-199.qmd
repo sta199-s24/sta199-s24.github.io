@@ -9,7 +9,6 @@ format: revealjs
 
 ```{r}
 #| echo: false
-
 library(countdown)
 ```
 

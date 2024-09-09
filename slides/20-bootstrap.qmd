@@ -5,8 +5,6 @@ date: "April 2, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730)"
-editor_options: 
-  chunk_output_type: console
 ---
 
 # Warm up

@@ -5,8 +5,6 @@ date: "February 1, 2024"
 format: 
   revealjs:
     footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/) &nbsp;·&nbsp; [❓ Ask on Ed](https://edstem.org/us/courses/50730/discussion/4241121)"
-editor_options: 
-  chunk_output_type: console
 ---
 
 # Warm up
@@ -133,7 +131,7 @@ df
 :::
 
 ::: {.column .fragment width="50%"}
-> **Do something, save result, _not_ overwriting original**
+> **Do something, save result, *not* overwriting original**
 
 ```{r}
 #| code-line-numbers: "5-7"
@@ -153,7 +151,7 @@ df_new
 
 ::: columns
 ::: {.column .fragment width="50%"}
-> **Do something, save result, overwriting original _when you shouldn't_**
+> **Do something, save result, overwriting original *when you shouldn't***
 
 ```{r}
 #| code-line-numbers: "5-8"
@@ -170,7 +168,7 @@ df
 :::
 
 ::: {.column .fragment width="50%"}
-> **Do something, save result, _not_ overwriting original _when you shouldn't_**
+> **Do something, save result, *not* overwriting original *when you shouldn't***
 
 ```{r}
 #| code-line-numbers: "5-8"
@@ -192,7 +190,7 @@ df_summary
 ::: columns
 ::: {.column .fragment width="50%"}
 > **Do something, save result, overwriting original**\
-> **_data frame_**
+> ***data frame***
 
 ```{r}
 #| code-line-numbers: "5-7"
@@ -209,7 +207,7 @@ df
 
 ::: {.column .fragment width="50%"}
 > **Do something, save result, overwriting original**\
-> **_column_**
+> ***column***
 
 ```{r}
 #| code-line-numbers: "5-7"
@@ -227,13 +225,13 @@ df
 
 # Data tidying
 
-## Tidy data 
+## Tidy data
 
 > "Tidy datasets are easy to manipulate, model and visualise, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table."
-> 
+>
 > Tidy Data, https://vita.had.co.nz/papers/tidy-data.pdf
 
-. . . 
+. . .
 
 **Note:** "easy to manipulate" = "straightforward to manipulate"
 
@@ -269,7 +267,6 @@ Determine what each row and each column of the data frame should be.
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-
 # Application exercise
 
 ## `ae-05-majors-tidying`
