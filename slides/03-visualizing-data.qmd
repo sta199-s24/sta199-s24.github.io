@@ -21,14 +21,6 @@ ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 ```
-## Questions from last time {.smaller}
-
--   ...
-
-## Announcements
-
--   ...
-
 # From last time
 
 ```{r}
@@ -198,8 +190,9 @@ ggplot(
 
 ## Multiple geoms + aesthetics
 
-::: columns
+::: columns 
 ::: {.column width="50%"}
+
 ```{r}
 #| label: penguins-violin-6
 #| fig-show: hide
@@ -220,6 +213,7 @@ ggplot(
   ) +
   scale_color_colorblind()
 ```
+
 :::
 
 ::: {.column width="50%"}
@@ -230,12 +224,8 @@ ggplot(
 #| fig-asp: 0.8
 ```
 :::
-:::---
-title: "Visualizing various types of data"
-subtitle: "Lecture 3"
-date: "January 23, 2024"
-format: revealjs
----
+
+:::
 
 # Warm up
 

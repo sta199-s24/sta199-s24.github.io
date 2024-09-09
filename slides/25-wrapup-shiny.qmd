@@ -33,9 +33,37 @@ Send an email to dus\@stat.duke.edu with your nomination.
 
 -   Fill out last peer evaluations by Sunday
 
-<!-- 
-
 # Awards
+
+## People's Choice - Honorable Mentions
+
+-   Section 1 - Green Beans - Forest Fires: <https://sta199-s24.github.io/project-green_beans/presentation.pdf>
+
+-   Section 3 - Team E - Red Wine Quality: <https://sta199-s24.github.io/project-team_e/presentation.pdf>
+
+-   Section 5 - Inside Investigators - NYC Crime: Perpetrator Demographics & Crime by Borough: <https://sta199-s24.github.io/project-inside_investigators>
+
+## People's Choice 🏆
+
+Section 2 - Data Devils - Gender Pay Gap by Industry: <https://sta199-s24.github.io/project-data_devils/presentation.pdf>
+
+![](images/data-devils.png)
+
+## Most commits to project - Honorable mentions
+
+![](images/most-commits/HM.png){fig-align="center"}
+
+## Most commits to project 🏆
+
+![](images/most-commits/W-caroline-metz.png){fig-align="center"}
+
+## Most activity on Ed - Honorable mentions
+
+![](images/most-ed-activity/HM.png){fig-align="center"}
+
+## Most activity on Ed 🏆
+
+![](images/most-ed-activity/W-Alison-Jang.png){fig-align="center"}
 
 ## Best ugly plot - Honorable mentions
 
@@ -64,38 +92,6 @@ Harika Amineni
 Lina Leyhausen
 
 ![](images/ugly-plots/W-lina-leyhausen.png){fig-align="center"}
-
-## Most commits to project - Honorable mentions
-
-![](images/most-commits/HM.png){fig-align="center"}
-
-## Most commits to project 🏆
-
-![](images/most-commits/W-caroline-metz.png){fig-align="center"}
-
-## Most activity on Ed - Honorable mentions
-
-![](images/most-ed-activity/HM.png){fig-align="center"}
-
-## Most activity on Ed 🏆
-
-![](images/most-ed-activity/W-Alison-Jang.png){fig-align="center"}
-
-## People's Choice - Honorable Mentions
-
--   Section 1 - Green Beans - Forest Fires: <https://sta199-s24.github.io/project-green_beans/presentation.pdf>
-
--   Section 3 - Team E - Red Wine Quality: <https://sta199-s24.github.io/project-team_e/presentation.pdf>
-
--   Section 5 - Inside Investigators - NYC Crime: Perpetrator Demographics & Crime by Borough: <https://sta199-s24.github.io/project-inside_investigators>
-
-## People's Choice 🏆
-
-Section 2 - Data Devils - Gender Pay Gap by Industry: <https://sta199-s24.github.io/project-data_devils/presentation.pdf>
-
-![](images/data-devils.png)
-
--->
 
 # Shiny {.nostretch}
 

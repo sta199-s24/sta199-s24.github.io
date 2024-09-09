@@ -13,7 +13,7 @@ editor: visual
 execute:
   freeze: auto
   echo: true
-  warning: true
+  warning: false
 knitr:
   opts_chunk: 
     R.options:
