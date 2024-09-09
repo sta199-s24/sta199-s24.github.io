@@ -427,38 +427,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>While you wait…</h2>
 <p><strong>Questions from the prepare materials?</strong></p>
 <iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
-</section>
-<section id="questions-from-last-time" class="slide level2 smaller">
-<h2>Questions from last time</h2>
-<ul>
-<li>…</li>
-</ul>
-</section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>…</li>
-</ul>
 </section></section>
 <section>
 <section id="from-last-time" class="title-slide slide level1 center">
 <h1>From last time</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ────────────────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     
-── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="violin-plots" class="slide level2">
@@ -466,23 +442,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb4-2"><a></a>  penguins,</span>
-<span id="cb4-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb4-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb4-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
-<span id="cb4-6"><a></a>    )</span>
-<span id="cb4-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-8"><a></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb2-2"><a></a>  penguins,</span>
+<span id="cb2-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb2-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb2-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
+<span id="cb2-6"><a></a>    )</span>
+<span id="cb2-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb2-8"><a></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -499,30 +469,18 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb7-2"><a></a>  penguins,</span>
-<span id="cb7-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb7-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb7-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
-<span id="cb7-6"><a></a>    )</span>
-<span id="cb7-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb7-8"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb7-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb3-2"><a></a>  penguins,</span>
+<span id="cb3-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb3-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb3-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
+<span id="cb3-6"><a></a>    )</span>
+<span id="cb3-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb3-8"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb3-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -539,30 +497,18 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb12-2"><a></a>  penguins,</span>
-<span id="cb12-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb12-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb12-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
-<span id="cb12-6"><a></a>    )</span>
-<span id="cb12-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb12-8"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb12-9"><a></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb4-2"><a></a>  penguins,</span>
+<span id="cb4-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb4-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb4-5"><a></a>    <span class="at">y =</span> body_mass_g</span>
+<span id="cb4-6"><a></a>    )</span>
+<span id="cb4-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -579,31 +525,19 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb17-2"><a></a>  penguins,</span>
-<span id="cb17-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb17-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb17-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
-<span id="cb17-6"><a></a>    <span class="at">color =</span> species</span>
-<span id="cb17-7"><a></a>    )</span>
-<span id="cb17-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb17-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb17-10"><a></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb5-2"><a></a>  penguins,</span>
+<span id="cb5-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb5-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb5-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
+<span id="cb5-6"><a></a>    <span class="at">color =</span> species</span>
+<span id="cb5-7"><a></a>    )</span>
+<span id="cb5-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb5-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb5-10"><a></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -620,34 +554,22 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="11-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb22-2"><a></a>  penguins,</span>
-<span id="cb22-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb22-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb22-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
-<span id="cb22-6"><a></a>    <span class="at">color =</span> species</span>
-<span id="cb22-7"><a></a>    )</span>
-<span id="cb22-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb22-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb22-10"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb22-11"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb22-12"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
-<span id="cb22-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="11-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb6-2"><a></a>  penguins,</span>
+<span id="cb6-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb6-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb6-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
+<span id="cb6-6"><a></a>    <span class="at">color =</span> species</span>
+<span id="cb6-7"><a></a>    )</span>
+<span id="cb6-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb6-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb6-10"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb6-11"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb6-12"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb6-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -661,38 +583,26 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="multiple-geoms-aesthetics-2" class="slide level2">
 <h2>Multiple geoms + aesthetics</h2>
-<p>::: columns ::: {.column width=“50%”}</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb27-2"><a></a>  penguins,</span>
-<span id="cb27-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb27-4"><a></a>    <span class="at">x =</span> species,</span>
-<span id="cb27-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
-<span id="cb27-6"><a></a>    <span class="at">color =</span> species</span>
-<span id="cb27-7"><a></a>    )</span>
-<span id="cb27-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb27-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb27-10"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb27-11"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb27-12"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
-<span id="cb27-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb27-14"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
-</div>
-<p>:::</p>
+<div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_ydensity()`).</code></pre>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb7-2"><a></a>  penguins,</span>
+<span id="cb7-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb7-4"><a></a>    <span class="at">x =</span> species,</span>
+<span id="cb7-5"><a></a>    <span class="at">y =</span> body_mass_g,</span>
+<span id="cb7-6"><a></a>    <span class="at">color =</span> species</span>
+<span id="cb7-7"><a></a>    )</span>
+<span id="cb7-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-9"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb7-10"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb7-11"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-12"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb7-13"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-14"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
@@ -702,10 +612,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 </div>
-<p>:::— title: “Visualizing various types of data” subtitle: “Lecture 3” date: “January 23, 2024” format: revealjs</p>
-</section>
-<section class="slide level2">
-
+</div>
 </section></section>
 <section>
 <section id="warm-up-1" class="title-slide slide level1 center">
@@ -717,7 +624,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p><strong>Questions from the prepare materials?</strong></p>
 <iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA199S24?from=status-bar?" width="100%"></iframe>
 </section>
-<section id="questions-from-last-time-1" class="slide level2 smaller">
+<section id="questions-from-last-time" class="slide level2 smaller">
 <h2>Questions from last time</h2>
 <ul>
 <li><p><strong>Is there any code in the videos that is not in the readings?</strong> Yes and no. There is no substantial functionality introduced in the videos that is not also in the readings, however the examples in the videos are different than the ones in the reading.</p></li>
@@ -725,7 +632,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li><p><strong>Could you please clarify what situations it would be appropriate to use each geom function?</strong> Today’s topic! And think about it as “what plot should I make for which type of variable”.</p></li>
 </ul>
 </section>
-<section id="announcements-1" class="slide level2">
+<section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
 <li>AEs this week should be submitted by midnight on Sunday. To “submit”, commit and push at least once to your <code>ae</code> repo for each application exercise this week.</li>
@@ -759,8 +666,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>The formula is (almost) always as follows:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
-<span id="cb32-2"><a></a>  <span class="fu">geom_XXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">geom_XXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Aesthetic attributes of a geometries (color, size, transparency, etc.) can be <strong>map</strong>ped to variables in the data or <strong>set</strong> by the user, e.g.&nbsp;<code>color = binary</code> vs.&nbsp;<code>color = "pink"</code>.</li>
@@ -814,11 +721,11 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="column" style="width:70%;">
 <div style="font-size: 20px;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb33-2"><a></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb33-3"><a></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb33-4"><a></a></span>
-<span id="cb33-5"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-2"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb9-3"><a></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 8
    species island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year
@@ -867,9 +774,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb35-2"><a></a>  penguins</span>
-<span id="cb35-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb11-2"><a></a>  penguins</span>
+<span id="cb11-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -889,10 +796,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb36-2"><a></a>  penguins,</span>
-<span id="cb36-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb36-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb12-2"><a></a>  penguins,</span>
+<span id="cb12-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb12-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -912,26 +819,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb37-2"><a></a>  penguins,</span>
-<span id="cb37-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb37-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb37-5"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb13-2"><a></a>  penguins,</span>
+<span id="cb13-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb13-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -948,22 +843,16 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb42-2"><a></a>  penguins,</span>
-<span id="cb42-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb42-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb42-5"><a></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb42-6"><a></a>    <span class="at">binwidth =</span> <span class="dv">250</span></span>
-<span id="cb42-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb14-2"><a></a>  penguins,</span>
+<span id="cb14-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb14-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb14-5"><a></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb14-6"><a></a>    <span class="at">binwidth =</span> <span class="dv">250</span></span>
+<span id="cb14-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -980,27 +869,21 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="8-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb45-2"><a></a>  penguins,</span>
-<span id="cb45-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb45-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb45-5"><a></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb45-6"><a></a>    <span class="at">binwidth =</span> <span class="dv">250</span></span>
-<span id="cb45-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb45-8"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb45-9"><a></a>    <span class="at">title =</span> <span class="st">"Weights of penguins"</span>,</span>
-<span id="cb45-10"><a></a>    <span class="at">x =</span> <span class="st">"Weight (grams)"</span>,</span>
-<span id="cb45-11"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
-<span id="cb45-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="8-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb15-2"><a></a>  penguins,</span>
+<span id="cb15-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb15-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb15-5"><a></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb15-6"><a></a>    <span class="at">binwidth =</span> <span class="dv">250</span></span>
+<span id="cb15-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb15-8"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb15-9"><a></a>    <span class="at">title =</span> <span class="st">"Weights of penguins"</span>,</span>
+<span id="cb15-10"><a></a>    <span class="at">x =</span> <span class="st">"Weight (grams)"</span>,</span>
+<span id="cb15-11"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
+<span id="cb15-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1017,9 +900,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb48-2"><a></a>  penguins</span>
-<span id="cb48-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb16-2"><a></a>  penguins</span>
+<span id="cb16-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -1039,10 +922,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb49-2"><a></a>  penguins,</span>
-<span id="cb49-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb49-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb17-2"><a></a>  penguins,</span>
+<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb17-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -1062,20 +945,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb50-2"><a></a>  penguins,</span>
-<span id="cb50-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> body_mass_g)</span>
-<span id="cb50-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb50-5"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb18-2"><a></a>  penguins,</span>
+<span id="cb18-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> body_mass_g)</span>
+<span id="cb18-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-5"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1092,20 +969,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb53-2"><a></a>  penguins,</span>
-<span id="cb53-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb53-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb53-5"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb19-2"><a></a>  penguins,</span>
+<span id="cb19-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb19-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb19-5"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1122,24 +993,18 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56" data-code-line-numbers="6-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb56-2"><a></a>  penguins,</span>
-<span id="cb56-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb56-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb56-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb56-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb56-7"><a></a>    <span class="at">x =</span> <span class="st">"Weight (grams)"</span>,</span>
-<span id="cb56-8"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span></span>
-<span id="cb56-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="6-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb20-2"><a></a>  penguins,</span>
+<span id="cb20-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb20-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb20-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb20-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-7"><a></a>    <span class="at">x =</span> <span class="st">"Weight (grams)"</span>,</span>
+<span id="cb20-8"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span></span>
+<span id="cb20-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1156,9 +1021,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb59-2"><a></a>  penguins</span>
-<span id="cb59-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb21-2"><a></a>  penguins</span>
+<span id="cb21-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -1178,10 +1043,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb60-2"><a></a>  penguins,</span>
-<span id="cb60-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb60-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb22-2"><a></a>  penguins,</span>
+<span id="cb22-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb22-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -1201,20 +1066,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb61-2"><a></a>  penguins,</span>
-<span id="cb61-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb61-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb61-5"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb23-2"><a></a>  penguins,</span>
+<span id="cb23-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb23-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1231,22 +1090,16 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb64-2"><a></a>  penguins,</span>
-<span id="cb64-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb64-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb64-5"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb64-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span></span>
-<span id="cb64-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb24-2"><a></a>  penguins,</span>
+<span id="cb24-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb24-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb24-5"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb24-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span></span>
+<span id="cb24-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1263,23 +1116,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb67-2"><a></a>  penguins,</span>
-<span id="cb67-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb67-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb67-5"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb67-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
-<span id="cb67-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span></span>
-<span id="cb67-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb25-2"><a></a>  penguins,</span>
+<span id="cb25-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb25-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb25-5"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb25-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
+<span id="cb25-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span></span>
+<span id="cb25-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1296,24 +1143,18 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70" data-code-line-numbers="8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb70-2"><a></a>  penguins,</span>
-<span id="cb70-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb70-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb70-5"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb70-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
-<span id="cb70-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span>,</span>
-<span id="cb70-8"><a></a>    <span class="at">color =</span> <span class="st">"darkorchid3"</span></span>
-<span id="cb70-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb26-2"><a></a>  penguins,</span>
+<span id="cb26-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb26-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb26-5"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb26-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
+<span id="cb26-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span>,</span>
+<span id="cb26-8"><a></a>    <span class="at">color =</span> <span class="st">"darkorchid3"</span></span>
+<span id="cb26-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1330,25 +1171,19 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb73-2"><a></a>  penguins,</span>
-<span id="cb73-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
-<span id="cb73-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb73-5"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb73-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
-<span id="cb73-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span>,</span>
-<span id="cb73-8"><a></a>    <span class="at">color =</span> <span class="st">"darkorchid3"</span>,</span>
-<span id="cb73-9"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
-<span id="cb73-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb27-2"><a></a>  penguins,</span>
+<span id="cb27-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)</span>
+<span id="cb27-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb27-5"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb27-6"><a></a>    <span class="at">fill =</span> <span class="st">"darkslategray1"</span>,</span>
+<span id="cb27-7"><a></a>    <span class="at">linewidth =</span> <span class="dv">2</span>,</span>
+<span id="cb27-8"><a></a>    <span class="at">color =</span> <span class="st">"darkorchid3"</span>,</span>
+<span id="cb27-9"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
+<span id="cb27-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1370,9 +1205,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:70%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1382,9 +1214,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1394,9 +1223,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1441,23 +1267,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79" data-code-line-numbers="|2|3-6|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb79-2"><a></a>  penguins,</span>
-<span id="cb79-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb79-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
-<span id="cb79-5"><a></a>    <span class="at">y =</span> species</span>
-<span id="cb79-6"><a></a>    )</span>
-<span id="cb79-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb79-8"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="|2|3-6|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb28-2"><a></a>  penguins,</span>
+<span id="cb28-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb28-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
+<span id="cb28-5"><a></a>    <span class="at">y =</span> species</span>
+<span id="cb28-6"><a></a>    )</span>
+<span id="cb28-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb28-8"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1474,23 +1294,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb82" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb82-2"><a></a>  penguins,</span>
-<span id="cb82-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb82-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
-<span id="cb82-5"><a></a>    <span class="at">color =</span> species</span>
-<span id="cb82-6"><a></a>    )</span>
-<span id="cb82-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb82-8"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb29-2"><a></a>  penguins,</span>
+<span id="cb29-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb29-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
+<span id="cb29-5"><a></a>    <span class="at">color =</span> species</span>
+<span id="cb29-6"><a></a>    )</span>
+<span id="cb29-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb29-8"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1507,24 +1321,18 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb85" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb85-2"><a></a>  penguins,</span>
-<span id="cb85-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb85-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
-<span id="cb85-5"><a></a>    <span class="at">color =</span> species,</span>
-<span id="cb85-6"><a></a>    <span class="at">fill =</span> species</span>
-<span id="cb85-7"><a></a>    )</span>
-<span id="cb85-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb85-9"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb30-2"><a></a>  penguins,</span>
+<span id="cb30-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb30-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
+<span id="cb30-5"><a></a>    <span class="at">color =</span> species,</span>
+<span id="cb30-6"><a></a>    <span class="at">fill =</span> species</span>
+<span id="cb30-7"><a></a>    )</span>
+<span id="cb30-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb30-9"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1541,26 +1349,20 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb88" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb88-2"><a></a>  penguins,</span>
-<span id="cb88-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb88-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
-<span id="cb88-5"><a></a>    <span class="at">color =</span> species,</span>
-<span id="cb88-6"><a></a>    <span class="at">fill =</span> species</span>
-<span id="cb88-7"><a></a>    )</span>
-<span id="cb88-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb88-9"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb88-10"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
-<span id="cb88-11"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb31-2"><a></a>  penguins,</span>
+<span id="cb31-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb31-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
+<span id="cb31-5"><a></a>    <span class="at">color =</span> species,</span>
+<span id="cb31-6"><a></a>    <span class="at">fill =</span> species</span>
+<span id="cb31-7"><a></a>    )</span>
+<span id="cb31-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb31-9"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb31-10"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
+<span id="cb31-11"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1577,29 +1379,23 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb91" data-code-line-numbers="12-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb91-2"><a></a>  penguins,</span>
-<span id="cb91-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb91-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
-<span id="cb91-5"><a></a>    <span class="at">color =</span> species,</span>
-<span id="cb91-6"><a></a>    <span class="at">fill =</span> species</span>
-<span id="cb91-7"><a></a>    )</span>
-<span id="cb91-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb91-9"><a></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb91-10"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
-<span id="cb91-11"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb91-12"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb91-13"><a></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span></span>
-<span id="cb91-14"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="12-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb32-2"><a></a>  penguins,</span>
+<span id="cb32-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb32-4"><a></a>    <span class="at">x =</span> body_mass_g,</span>
+<span id="cb32-5"><a></a>    <span class="at">color =</span> species,</span>
+<span id="cb32-6"><a></a>    <span class="at">fill =</span> species</span>
+<span id="cb32-7"><a></a>    )</span>
+<span id="cb32-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb32-9"><a></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb32-10"><a></a>    <span class="at">alpha =</span> <span class="fl">0.5</span></span>
+<span id="cb32-11"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb32-12"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb32-13"><a></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span></span>
+<span id="cb32-14"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure>
