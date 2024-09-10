@@ -17,7 +17,6 @@ library(countdown)
 library(tidyverse)
 library(ggthemes)
 library(tidytext)
-library(textdata)
 ggplot2::theme_set(theme_gray(base_size = 16))
 ```
 
@@ -75,10 +74,10 @@ chronicle <- read_csv("data/chronicle.csv")
 #| label: chronicle-common-words
 #| echo: false
 #| message: false
-
+stop_words <- read_csv("data/stop-words.csv")
 chronicle |>
   tidytext::unnest_tokens(word, title) |>
-  anti_join(tidytext::stop_words) |>
+  anti_join(stop_words) |>
   count(word, sort = TRUE) |>
   slice_head(n = 20) |>
   mutate(word = fct_reorder(word, n)) |>
@@ -116,11 +115,11 @@ Somewhere in between?
 #| fig-asp: 0.75
 #| fig-width: 7
 #| fig-align: center
-
+afinn_sentiments <- read_csv("data/afinn-sentiments.csv")
 chronicle |>
   tidytext::unnest_tokens(word, abstract) |>
-  anti_join(tidytext::stop_words) |>
-  left_join(tidytext::get_sentiments("afinn")) |> 
+  anti_join(stop_words) |>
+  left_join(afinn_sentiments) |> 
   group_by(author, title) |>
   summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = "drop") |>
   group_by(author) |>
