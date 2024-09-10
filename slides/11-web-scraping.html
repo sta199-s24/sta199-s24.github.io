@@ -487,84 +487,86 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Common words in The Chronicle titles</h2>
 <p>Code for the earlier plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2-3|4|5|6|7-20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>chronicle <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a></a>  <span class="fu">anti_join</span>(tidytext<span class="sc">::</span>stop_words) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-5"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-6"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">|&gt;</span></span>
-<span id="cb1-7"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> word, <span class="at">x =</span> n, <span class="at">fill =</span> <span class="fu">log</span>(n))) <span class="sc">+</span></span>
-<span id="cb1-8"><a></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1-9"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb1-10"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-11"><a></a>    <span class="at">x =</span> <span class="st">"Number of mentions"</span>,</span>
-<span id="cb1-12"><a></a>    <span class="at">y =</span> <span class="st">"Word"</span>,</span>
-<span id="cb1-13"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces"</span>,</span>
-<span id="cb1-14"><a></a>    <span class="at">subtitle =</span> <span class="st">"Common words in the 500 most recent opinion pieces"</span>,</span>
-<span id="cb1-15"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Feb 21, 2024"</span></span>
-<span id="cb1-16"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb1-17"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-18"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
-<span id="cb1-19"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
-<span id="cb1-20"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2-3|4|5|6|7-20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>stop_words <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/stop-words.csv"</span>)</span>
+<span id="cb1-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> word, <span class="at">x =</span> n, <span class="at">fill =</span> <span class="fu">log</span>(n))) <span class="sc">+</span></span>
+<span id="cb1-9"><a></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-10"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-12"><a></a>    <span class="at">x =</span> <span class="st">"Number of mentions"</span>,</span>
+<span id="cb1-13"><a></a>    <span class="at">y =</span> <span class="st">"Word"</span>,</span>
+<span id="cb1-14"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces"</span>,</span>
+<span id="cb1-15"><a></a>    <span class="at">subtitle =</span> <span class="st">"Common words in the 500 most recent opinion pieces"</span>,</span>
+<span id="cb1-16"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Feb 21, 2024"</span></span>
+<span id="cb1-17"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb1-18"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-19"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb1-20"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb1-21"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="avg-sentiment-scores-of-abstracts" class="slide level2 smaller">
 <h2>Avg sentiment scores of abstracts</h2>
 <p>Code for the earlier plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2-4|5-19|20|21|22-27|28-33|34-52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>chronicle <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, abstract) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">anti_join</span>(tidytext<span class="sc">::</span>stop_words) <span class="sc">|&gt;</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">left_join</span>(tidytext<span class="sc">::</span><span class="fu">get_sentiments</span>(<span class="st">"afinn"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-5"><a></a>  <span class="fu">group_by</span>(author, title) <span class="sc">|&gt;</span></span>
-<span id="cb2-6"><a></a>  <span class="fu">summarize</span>(<span class="at">total_sentiment =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-7"><a></a>  <span class="fu">group_by</span>(author) <span class="sc">|&gt;</span></span>
-<span id="cb2-8"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb2-9"><a></a>    <span class="at">n_articles =</span> <span class="fu">n</span>(),</span>
-<span id="cb2-10"><a></a>    <span class="at">avg_sentiment =</span> <span class="fu">mean</span>(total_sentiment, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb2-11"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-12"><a></a>  <span class="fu">filter</span>(n_articles <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(author)) <span class="sc">|&gt;</span></span>
-<span id="cb2-13"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_sentiment)) <span class="sc">|&gt;</span></span>
-<span id="cb2-14"><a></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">49</span><span class="sc">:</span><span class="dv">58</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-15"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-16"><a></a>    <span class="at">author =</span> <span class="fu">fct_reorder</span>(author, avg_sentiment),</span>
-<span id="cb2-17"><a></a>    <span class="at">neg_pos =</span> <span class="fu">if_else</span>(avg_sentiment <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"neg"</span>, <span class="st">"pos"</span>),</span>
-<span id="cb2-18"><a></a>    <span class="at">label_position =</span> <span class="fu">if_else</span>(neg_pos <span class="sc">==</span> <span class="st">"neg"</span>, <span class="fl">0.25</span>, <span class="sc">-</span><span class="fl">0.25</span>)</span>
-<span id="cb2-19"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-20"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> author, <span class="at">x =</span> avg_sentiment)) <span class="sc">+</span></span>
-<span id="cb2-21"><a></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neg_pos), <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb2-22"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb2-23"><a></a>    <span class="fu">aes</span>(<span class="at">x =</span> label_position, <span class="at">label =</span> author, <span class="at">color =</span> neg_pos),</span>
-<span id="cb2-24"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)),</span>
-<span id="cb2-25"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-26"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
-<span id="cb2-27"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb2-28"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb2-29"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_sentiment, <span class="dv">1</span>)),</span>
-<span id="cb2-30"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fl">1.25</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">10</span>)),</span>
-<span id="cb2-31"><a></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
-<span id="cb2-32"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
-<span id="cb2-33"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb2-34"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
-<span id="cb2-35"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
-<span id="cb2-36"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">minor_breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb2-37"><a></a>  <span class="fu">scale_y_discrete</span>(<span class="at">breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb2-38"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb2-39"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-40"><a></a>    <span class="at">x =</span> <span class="st">"negative  ←     Average sentiment score (AFINN)     →  positive"</span>,</span>
-<span id="cb2-41"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb2-42"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces</span><span class="sc">\n</span><span class="st">Average sentiment scores of abstracts by author"</span>,</span>
-<span id="cb2-43"><a></a>    <span class="at">subtitle =</span> <span class="st">"Top 10 average positive and negative scores"</span>,</span>
-<span id="cb2-44"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Feb 21, 2024"</span></span>
-<span id="cb2-45"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb2-46"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb2-47"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb2-48"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb2-49"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="st">"lines"</span>)),</span>
-<span id="cb2-50"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb2-51"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
-<span id="cb2-52"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2-4|5-19|20|21|22-27|28-33|34-52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>afinn_sentiments <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/afinn-sentiments.csv"</span>)</span>
+<span id="cb2-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, abstract) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a></a>  <span class="fu">left_join</span>(afinn_sentiments) <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a></a>  <span class="fu">group_by</span>(author, title) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a></a>  <span class="fu">summarize</span>(<span class="at">total_sentiment =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a></a>  <span class="fu">group_by</span>(author) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb2-10"><a></a>    <span class="at">n_articles =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-11"><a></a>    <span class="at">avg_sentiment =</span> <span class="fu">mean</span>(total_sentiment, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-12"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-13"><a></a>  <span class="fu">filter</span>(n_articles <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(author)) <span class="sc">|&gt;</span></span>
+<span id="cb2-14"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_sentiment)) <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">49</span><span class="sc">:</span><span class="dv">58</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-17"><a></a>    <span class="at">author =</span> <span class="fu">fct_reorder</span>(author, avg_sentiment),</span>
+<span id="cb2-18"><a></a>    <span class="at">neg_pos =</span> <span class="fu">if_else</span>(avg_sentiment <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"neg"</span>, <span class="st">"pos"</span>),</span>
+<span id="cb2-19"><a></a>    <span class="at">label_position =</span> <span class="fu">if_else</span>(neg_pos <span class="sc">==</span> <span class="st">"neg"</span>, <span class="fl">0.25</span>, <span class="sc">-</span><span class="fl">0.25</span>)</span>
+<span id="cb2-20"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-21"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> author, <span class="at">x =</span> avg_sentiment)) <span class="sc">+</span></span>
+<span id="cb2-22"><a></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neg_pos), <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb2-23"><a></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb2-24"><a></a>    <span class="fu">aes</span>(<span class="at">x =</span> label_position, <span class="at">label =</span> author, <span class="at">color =</span> neg_pos),</span>
+<span id="cb2-25"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)),</span>
+<span id="cb2-26"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-27"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb2-28"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb2-29"><a></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb2-30"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_sentiment, <span class="dv">1</span>)),</span>
+<span id="cb2-31"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fl">1.25</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">10</span>)),</span>
+<span id="cb2-32"><a></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb2-33"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb2-34"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb2-35"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb2-36"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb2-37"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">minor_breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-38"><a></a>  <span class="fu">scale_y_discrete</span>(<span class="at">breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-39"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb2-40"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-41"><a></a>    <span class="at">x =</span> <span class="st">"negative  ←     Average sentiment score (AFINN)     →  positive"</span>,</span>
+<span id="cb2-42"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb2-43"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces</span><span class="sc">\n</span><span class="st">Average sentiment scores of abstracts by author"</span>,</span>
+<span id="cb2-44"><a></a>    <span class="at">subtitle =</span> <span class="st">"Top 10 average positive and negative scores"</span>,</span>
+<span id="cb2-45"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Feb 21, 2024"</span></span>
+<span id="cb2-46"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb2-47"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb2-48"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-49"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb2-50"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="st">"lines"</span>)),</span>
+<span id="cb2-51"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-52"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb2-53"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="where-is-the-data-coming-from" class="slide level2 smaller">
@@ -811,8 +813,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <table>
 <colgroup>
 <col style="width: 23%">
-<col style="width: 18%">
-<col style="width: 57%">
+<col style="width: 23%">
+<col style="width: 53%">
 </colgroup>
 <thead>
 <tr class="header">

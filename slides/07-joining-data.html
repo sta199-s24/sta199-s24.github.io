@@ -654,9 +654,6 @@ and performance in this course?”</p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">left_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
      id value_x value_y
@@ -676,10 +673,7 @@ and performance in this course?”</p>
 <p><img data-src="images/right-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">right_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">right_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
      id value_x value_y
@@ -699,10 +693,7 @@ and performance in this course?”</p>
 <p><img data-src="images/full-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">full_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">full_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id value_x value_y
@@ -723,10 +714,7 @@ and performance in this course?”</p>
 <p><img data-src="images/inner-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">inner_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">inner_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id value_x value_y
@@ -745,10 +733,7 @@ and performance in this course?”</p>
 <p><img data-src="images/semi-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">semi_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">semi_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
      id value_x
@@ -767,10 +752,7 @@ and performance in this course?”</p>
 <p><img data-src="images/anti-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">anti_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(id)`</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">anti_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
      id value_x
@@ -800,16 +782,13 @@ and performance in this course?”</p>
 <section id="attempt-1" class="slide level2">
 <h2>Attempt 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb31-2"><a></a></span>
-<span id="cb31-3"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb31-4"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
+<span id="cb25-4"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb25-5"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(year, tailnum)`</code></pre>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   origin capacity
@@ -823,14 +802,11 @@ and performance in this course?”</p>
 <section id="attempt-2" class="slide level2">
 <h2>Attempt 2</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">left_join</span>(flights, planes) <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(year, tailnum)`</code></pre>
-</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   origin capacity
@@ -844,12 +820,12 @@ and performance in this course?”</p>
 <section id="attempt-3" class="slide level2">
 <h2>Attempt 3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">left_join</span>(</span>
-<span id="cb37-2"><a></a>  flights, planes,</span>
-<span id="cb37-3"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"tailnum"</span> <span class="ot">=</span> <span class="st">"tailnum"</span>)</span>
-<span id="cb37-4"><a></a>) <span class="sc">|&gt;</span></span>
-<span id="cb37-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
-<span id="cb37-6"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">left_join</span>(</span>
+<span id="cb29-2"><a></a>  flights, planes,</span>
+<span id="cb29-3"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"tailnum"</span> <span class="ot">=</span> <span class="st">"tailnum"</span>)</span>
+<span id="cb29-4"><a></a>) <span class="sc">|&gt;</span></span>
+<span id="cb29-5"><a></a>  <span class="fu">group_by</span>(origin) <span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a></a>  <span class="fu">summarize</span>(<span class="at">capacity =</span> <span class="fu">sum</span>(seats, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">

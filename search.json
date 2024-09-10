@@ -886,7 +886,7 @@
     "href": "slides/09-exam-1-review.html#explicit-coercion-1",
     "title": "Exam 1 review",
     "section": "Explicit coercion",
-    "text": "Explicit coercion\n❌ From character to numeric\n\ndf |&gt;\n  mutate(y_new = as.numeric(y))\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `y_new = as.numeric(y)`.\nCaused by warning:\n! NAs introduced by coercion\n\n\n# A tibble: 3 × 4\n      x y     z     y_new\n  &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt; &lt;dbl&gt;\n1     1 a     TRUE     NA\n2     2 b     FALSE    NA\n3     3 c     TRUE     NA"
+    "text": "Explicit coercion\n❌ From character to numeric\n\ndf |&gt;\n  mutate(y_new = as.numeric(y))\n\n# A tibble: 3 × 4\n      x y     z     y_new\n  &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt; &lt;dbl&gt;\n1     1 a     TRUE     NA\n2     2 b     FALSE    NA\n3     3 c     TRUE     NA"
   },
   {
     "objectID": "slides/09-exam-1-review.html#implicit-coercion",
@@ -914,7 +914,7 @@
     "href": "slides/09-exam-1-review.html#cleaning-data-alternative",
     "title": "Exam 1 review",
     "section": "Cleaning data – alternative",
-    "text": "Cleaning data – alternative\n\nsurvey &lt;- survey_raw |&gt;\n  mutate(\n    student_id = parse_number(student_id),\n    n_credits = parse_number(n_credits)\n  )\n\nWarning: There were 2 warnings in `mutate()`.\nThe first warning was:\nℹ In argument: `student_id = parse_number(student_id)`.\nCaused by warning:\n! 1 parsing failure.\nrow col expected           actual\n  4  -- a number I don't remember\nℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.\n\nsurvey\n\n# A tibble: 4 × 2\n  student_id n_credits\n       &lt;dbl&gt;     &lt;dbl&gt;\n1     273674       4  \n2     298765       4.5\n3     287129      NA  \n4         NA       2"
+    "text": "Cleaning data – alternative\n\nsurvey &lt;- survey_raw |&gt;\n  mutate(\n    student_id = parse_number(student_id),\n    n_credits = parse_number(n_credits)\n  )\nsurvey\n\n# A tibble: 4 × 2\n  student_id n_credits\n       &lt;dbl&gt;     &lt;dbl&gt;\n1     273674       4  \n2     298765       4.5\n3     287129      NA  \n4         NA       2"
   },
   {
     "objectID": "slides/09-exam-1-review.html#recap-type-coercion",
@@ -1152,7 +1152,7 @@
     "href": "slides/05-grammar-of-data-wrangling.html#stricter-subsetting",
     "title": "Grammar of data wrangling",
     "section": "Stricter subsetting",
-    "text": "Stricter subsetting\n\ntibbledata.frame\n\n\nWarning + NULL if variable not found.\n\nflights$apple\n\nWarning: Unknown or uninitialised column: `apple`.\n\n\nNULL\n\n\n\n\nOnly NULL if variable not found.\n\ncars$apple\n\nNULL"
+    "text": "Stricter subsetting\n\ntibbledata.frame\n\n\nWarning + NULL if variable not found.\n\nflights$apple\n\nNULL\n\n\n\n\nOnly NULL if variable not found.\n\ncars$apple\n\nNULL"
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#dplyr",
@@ -1453,42 +1453,42 @@
     "href": "slides/07-joining-data.html#left_join",
     "title": "Joining data",
     "section": "left_join()",
-    "text": "left_join()\n\n\n\n\n\nleft_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;"
+    "text": "left_join()\n\n\n\n\n\nleft_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;"
   },
   {
     "objectID": "slides/07-joining-data.html#right_join",
     "href": "slides/07-joining-data.html#right_join",
     "title": "Joining data",
     "section": "right_join()",
-    "text": "right_join()\n\n\n\n\n\nright_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4"
+    "text": "right_join()\n\n\n\n\n\nright_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4"
   },
   {
     "objectID": "slides/07-joining-data.html#full_join",
     "href": "slides/07-joining-data.html#full_join",
     "title": "Joining data",
     "section": "full_join()",
-    "text": "full_join()\n\n\n\n\n\nfull_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4"
+    "text": "full_join()\n\n\n\n\n\nfull_join(x, y)\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4"
   },
   {
     "objectID": "slides/07-joining-data.html#inner_join",
     "href": "slides/07-joining-data.html#inner_join",
     "title": "Joining data",
     "section": "inner_join()",
-    "text": "inner_join()\n\n\n\n\n\ninner_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2"
+    "text": "inner_join()\n\n\n\n\n\ninner_join(x, y)\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2"
   },
   {
     "objectID": "slides/07-joining-data.html#semi_join",
     "href": "slides/07-joining-data.html#semi_join",
     "title": "Joining data",
     "section": "semi_join()",
-    "text": "semi_join()\n\n\n\n\n\nsemi_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 2 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2"
+    "text": "semi_join()\n\n\n\n\n\nsemi_join(x, y)\n\n# A tibble: 2 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2"
   },
   {
     "objectID": "slides/07-joining-data.html#anti_join",
     "href": "slides/07-joining-data.html#anti_join",
     "title": "Joining data",
     "section": "anti_join()",
-    "text": "anti_join()\n\n\n\n\n\nanti_join(x, y)\n\nJoining with `by = join_by(id)`\n\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
+    "text": "anti_join()\n\n\n\n\n\nanti_join(x, y)\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
   },
   {
     "objectID": "slides/07-joining-data.html#nycflights13-airport-capacity",
@@ -1502,14 +1502,14 @@
     "href": "slides/07-joining-data.html#attempt-1",
     "title": "Joining data",
     "section": "Attempt 1",
-    "text": "Attempt 1\n\nlibrary(nycflights13)\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(capacity = sum(seats))\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 JFK          NA\n3 LGA          NA"
+    "text": "Attempt 1\n\nlibrary(nycflights13)\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(capacity = sum(seats))\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR          NA\n2 JFK          NA\n3 LGA          NA"
   },
   {
     "objectID": "slides/07-joining-data.html#attempt-2",
     "href": "slides/07-joining-data.html#attempt-2",
     "title": "Joining data",
     "section": "Attempt 2",
-    "text": "Attempt 2\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(capacity = sum(seats, na.rm = TRUE))\n\n\n\nJoining with `by = join_by(year, tailnum)`\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR      345268\n2 JFK      179412\n3 LGA       89686"
+    "text": "Attempt 2\n\nleft_join(flights, planes) |&gt;\n  group_by(origin) |&gt;\n  summarize(capacity = sum(seats, na.rm = TRUE))\n\n\n\n# A tibble: 3 × 2\n  origin capacity\n  &lt;chr&gt;     &lt;int&gt;\n1 EWR      345268\n2 JFK      179412\n3 LGA       89686"
   },
   {
     "objectID": "slides/07-joining-data.html#attempt-3",
@@ -5019,49 +5019,49 @@
     "href": "slides/04-dataviz-overview.html#bivariate-analysis",
     "title": "Data visualization overview",
     "section": "Bivariate analysis",
-    "text": "Bivariate analysis\n\nPlotCode\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Side-by-side box plots\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_boxplot(alpha = 0.5, show.legend = FALSE) +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Species\",\n    title = \"Side-by-side box plots\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n# Density plots\nggplot(penguins, aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.5) +\n  theme(legend.position = \"bottom\") +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Density\",\n    fill = \"Species\", title = \"Density plots\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_density()`)."
+    "text": "Bivariate analysis\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Side-by-side box plots\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_boxplot(alpha = 0.5, show.legend = FALSE) +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Species\",\n    title = \"Side-by-side box plots\"\n  )\n\n\n# Density plots\nggplot(penguins, aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.5) +\n  theme(legend.position = \"bottom\") +\n  scale_fill_colorblind() +\n  labs(\n    x = \"Body mass (grams)\", y = \"Density\",\n    fill = \"Species\", title = \"Density plots\"\n  )"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#violin-plots",
     "href": "slides/04-dataviz-overview.html#violin-plots",
     "title": "Data visualization overview",
     "section": "Violin plots",
-    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`)."
+    "text": "Violin plots\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms",
     "href": "slides/04-dataviz-overview.html#multiple-geoms",
     "title": "Data visualization overview",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_point()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-1",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-1",
     "title": "Data visualization overview",
     "section": "Multiple geoms",
-    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Multiple geoms\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-1",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  )"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
     "href": "slides/04-dataviz-overview.html#multiple-geoms-aesthetics-2",
     "title": "Data visualization overview",
     "section": "Multiple geoms + aesthetics",
-    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`)."
+    "text": "Multiple geoms + aesthetics\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = species,\n    y = body_mass_g,\n    color = species\n    )\n  ) +\n  geom_violin() +\n  geom_jitter() +\n  theme(\n    legend.position = \"none\"\n  ) +\n  scale_color_colorblind()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#bechdel",
@@ -5075,7 +5075,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result",
     "title": "Data visualization overview",
     "section": "ROI by test result",
-    "text": "ROI by test result\n\nWhat about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot()\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
+    "text": "ROI by test result\n\nWhat about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot()"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#movies-with-high-roi",
@@ -5089,7 +5089,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result-1",
     "title": "Data visualization overview",
     "section": "ROI by test result",
-    "text": "ROI by test result\n\nZoom in: What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15))\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
+    "text": "ROI by test result\n\nZoom in: What about this plot makes it difficult to evaluate how ROI varies by Bechdel test result?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15))"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#sneak-preview",
@@ -5117,7 +5117,7 @@
     "href": "slides/04-dataviz-overview.html#roi-by-test-result-zoom-in",
     "title": "Data visualization overview",
     "section": "ROI by test result – zoom in",
-    "text": "ROI by test result – zoom in\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15)) +\n  geom_vline(xintercept = 4.21, linetype = \"dashed\")\n\nWarning: Removed 15 rows containing non-finite values (`stat_boxplot()`)."
+    "text": "ROI by test result – zoom in\n\nWhat does this plot say about return-on-investment on movies that pass the Bechdel test?\n\n\nggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +\n  geom_boxplot() +\n  coord_cartesian(xlim = c(0, 15)) +\n  geom_vline(xintercept = 4.21, linetype = \"dashed\")"
   },
   {
     "objectID": "slides/04-dataviz-overview.html#ae-03-duke-forest",
@@ -5201,7 +5201,7 @@
     "href": "slides/08-data-types-classes.html#other-classes",
     "title": "Data types and classes",
     "section": "Other classes",
-    "text": "Other classes\nJust a couple of examples…\n\n\nDate:\n\ntoday &lt;- Sys.Date()\ntoday\n\n[1] \"2024-02-29\"\n\ntypeof(today)\n\n[1] \"double\"\n\nattributes(today)\n\n$class\n[1] \"Date\"\n\n\n\nDate-time:\n\nnow &lt;- as.POSIXct(\"2024-02-08 11:45\", tz = \"EST\")\nnow\n\n[1] \"2024-02-08 11:45:00 EST\"\n\ntypeof(now)\n\n[1] \"double\"\n\nattributes(now)\n\n$class\n[1] \"POSIXct\" \"POSIXt\" \n\n$tzone\n[1] \"EST\""
+    "text": "Other classes\nJust a couple of examples…\n\n\nDate:\n\ntoday &lt;- Sys.Date()\ntoday\n\n[1] \"2024-09-10\"\n\ntypeof(today)\n\n[1] \"double\"\n\nattributes(today)\n\n$class\n[1] \"Date\"\n\n\n\nDate-time:\n\nnow &lt;- as.POSIXct(\"2024-02-08 11:45\", tz = \"EST\")\nnow\n\n[1] \"2024-02-08 11:45:00 EST\"\n\ntypeof(now)\n\n[1] \"double\"\n\nattributes(now)\n\n$class\n[1] \"POSIXct\" \"POSIXt\" \n\n$tzone\n[1] \"EST\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#ae-07-population-types",
@@ -5712,7 +5712,7 @@
     "href": "slides/12-chat-gpt.html#chat-gpt---take-3-code",
     "title": "Web scraping wrap-up + Chat GPT",
     "section": "Chat GPT - Take 3 code",
-    "text": "Chat GPT - Take 3 code\n\nlibrary(dplyr)\nlibrary(forcats)\n\n# Assuming your dataset is named 'clubs'\nclubs &lt;- clubs %&gt;%\n  mutate(membership_status = fct_recode(membership_status, Closed = \"NA\", Open = \"Select ... to register for this group\")) %&gt;%\n  slice_head(n = 10) %&gt;%\n  relocate(membership_status, .before = 1)\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `membership_status = fct_recode(membership_status, Closed = \"NA\", Open =\n  \"Select ... to register for this group\")`.\nCaused by warning:\n! Unknown levels in `f`: NA, Select ... to register for this group\n\n# Display the first 10 rows of the dataset\nclubs\n\n# A tibble: 10 × 2\n   membership_status                                                                  club\n   &lt;fct&gt;                                                                             &lt;dbl&gt;\n 1 Select AI Competition Club's group. Select the group and click on the Join butto…     1\n 2 &lt;NA&gt;                                                                                  2\n 3 Select Black Pre-Law Society at Duke's group. Select the group and click on the …     3\n 4 &lt;NA&gt;                                                                                  4\n 5 &lt;NA&gt;                                                                                  5\n 6 Select Duke Women's Flag Football Team's group. Select the group and click on th…     6\n 7 &lt;NA&gt;                                                                                  7\n 8 &lt;NA&gt;                                                                                  8\n 9 &lt;NA&gt;                                                                                  9\n10 Select Latino Medical Student Association's group. Select the group and click on…    10"
+    "text": "Chat GPT - Take 3 code\n\nlibrary(dplyr)\nlibrary(forcats)\n\n# Assuming your dataset is named 'clubs'\nclubs &lt;- clubs %&gt;%\n  mutate(membership_status = fct_recode(membership_status, Closed = \"NA\", Open = \"Select ... to register for this group\")) %&gt;%\n  slice_head(n = 10) %&gt;%\n  relocate(membership_status, .before = 1)\n\n# Display the first 10 rows of the dataset\nclubs\n\n# A tibble: 10 × 2\n   membership_status                                                                  club\n   &lt;fct&gt;                                                                             &lt;dbl&gt;\n 1 Select AI Competition Club's group. Select the group and click on the Join butto…     1\n 2 &lt;NA&gt;                                                                                  2\n 3 Select Black Pre-Law Society at Duke's group. Select the group and click on the …     3\n 4 &lt;NA&gt;                                                                                  4\n 5 &lt;NA&gt;                                                                                  5\n 6 Select Duke Women's Flag Football Team's group. Select the group and click on th…     6\n 7 &lt;NA&gt;                                                                                  7\n 8 &lt;NA&gt;                                                                                  8\n 9 &lt;NA&gt;                                                                                  9\n10 Select Latino Medical Student Association's group. Select the group and click on…    10"
   },
   {
     "objectID": "slides/12-chat-gpt.html#chat-gpt---take-4-prompt",
@@ -5922,14 +5922,14 @@
     "href": "slides/11-web-scraping.html#common-words-in-the-chronicle-titles",
     "title": "Web scraping",
     "section": "Common words in The Chronicle titles",
-    "text": "Common words in The Chronicle titles\nCode for the earlier plot:\n\nchronicle |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(tidytext::stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Chronicle - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Chronicle on Feb 21, 2024\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )"
+    "text": "Common words in The Chronicle titles\nCode for the earlier plot:\n\nstop_words &lt;- read_csv(\"data/stop-words.csv\")\nchronicle |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Chronicle - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Chronicle on Feb 21, 2024\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )"
   },
   {
     "objectID": "slides/11-web-scraping.html#avg-sentiment-scores-of-abstracts",
     "href": "slides/11-web-scraping.html#avg-sentiment-scores-of-abstracts",
     "title": "Web scraping",
     "section": "Avg sentiment scores of abstracts",
-    "text": "Avg sentiment scores of abstracts\nCode for the earlier plot:\n\nchronicle |&gt;\n  tidytext::unnest_tokens(word, abstract) |&gt;\n  anti_join(tidytext::stop_words) |&gt;\n  left_join(tidytext::get_sentiments(\"afinn\")) |&gt; \n  group_by(author, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(author) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(author)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 49:58)) |&gt;\n  mutate(\n    author = fct_reorder(author, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = author, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = author, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Chronicle - Opinion pieces\\nAverage sentiment scores of abstracts by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Chronicle on Feb 21, 2024\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
+    "text": "Avg sentiment scores of abstracts\nCode for the earlier plot:\n\nafinn_sentiments &lt;- read_csv(\"data/afinn-sentiments.csv\")\nchronicle |&gt;\n  tidytext::unnest_tokens(word, abstract) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(author, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(author) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(author)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 49:58)) |&gt;\n  mutate(\n    author = fct_reorder(author, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = author, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = author, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Chronicle - Opinion pieces\\nAverage sentiment scores of abstracts by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Chronicle on Feb 21, 2024\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
   },
   {
     "objectID": "slides/11-web-scraping.html#where-is-the-data-coming-from",
@@ -6804,14 +6804,14 @@
     "href": "slides/13-ethics.html#your-responses",
     "title": "Data science ethics",
     "section": "Your responses",
-    "text": "Your responses\n\n\n✔ Reading from \"Gettysburg address - Spring 2024 (Responses)\".\n\n\n✔ Range 'Form Responses 1'.\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Your responses"
   },
   {
     "objectID": "slides/13-ethics.html#comparison-to-truth",
     "href": "slides/13-ethics.html#comparison-to-truth",
     "title": "Data science ethics",
     "section": "Comparison to “truth”",
-    "text": "Comparison to “truth”\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Comparison to “truth”"
   },
   {
     "objectID": "slides/13-ethics.html#garbage-in-garbage-out",
@@ -6881,7 +6881,7 @@
     "href": "slides/13-ethics.html#wru-package-2",
     "title": "Data science ethics",
     "section": "wru package",
-    "text": "wru package\n\nme &lt;- tibble(surname = \"Rundel\")\n\npredict_race(voter.file = me, surname.only = TRUE)\n\nPredicting race for 2020\n\n\nWarning: Unknown or uninitialised column: `state`.\n\n\nProceeding with last name predictions...\n\n\nℹ All local files already up-to-date!\n\n\n  surname  pred.whi pred.bla pred.his pred.asi   pred.oth\n1  Rundel 0.9177967        0        0        0 0.08220329\n\n\n\n\n\n\n🔗 sta199-s24.github.io  ·  ❓ Ask on Ed"
+    "text": "wru package\n\nme &lt;- tibble(surname = \"Rundel\")\n\npredict_race(voter.file = me, surname.only = TRUE)\n\n  surname  pred.whi pred.bla pred.his pred.asi   pred.oth\n1  Rundel 0.9177967        0        0        0 0.08220329\n\n\n\n\n\n\n🔗 sta199-s24.github.io  ·  ❓ Ask on Ed"
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#while-you-wait",

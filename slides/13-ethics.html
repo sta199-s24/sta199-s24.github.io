@@ -503,7 +503,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_eb105633" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
+<div class="countdown" id="timer_1f327e23" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -570,7 +570,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_682dff38" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_1e6f33f3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -653,7 +653,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ec35022a" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
+<div class="countdown" id="timer_628772ad" data-update-every="1" tabindex="0" style="bottom:0.1;left:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -662,27 +662,11 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="your-responses" class="slide level2">
 <h2>Your responses</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Reading from "Gettysburg address - Spring 2024 (Responses)".</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Range 'Form Responses 1'.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
 
-</div>
 <img data-src="13-ethics_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="comparison-to-truth" class="slide level2">
 <h2>Comparison to “truth”</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
 
-</div>
 <img data-src="13-ethics_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="garbage-in-garbage-out" class="slide level2">
 <h2>Garbage in, garbage out</h2>
@@ -717,7 +701,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </blockquote>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_afae5634" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_12cee9a6" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -811,9 +795,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(wru)</span>
-<span id="cb5-2"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> voters, <span class="at">surname.only =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">select</span>(surname, <span class="fu">contains</span>(<span class="st">"pred"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(wru)</span>
+<span id="cb1-2"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> voters, <span class="at">surname.only =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">select</span>(surname, <span class="fu">contains</span>(<span class="st">"pred"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      surname    pred.whi    pred.bla     pred.his    pred.asi    pred.oth
 1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906 0.084557725
@@ -832,21 +816,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="wru-package-2" class="slide level2 smaller">
 <h2><strong>wru</strong> package</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>me <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">surname =</span> <span class="st">"Rundel"</span>)</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> me, <span class="at">surname.only =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Predicting race for 2020</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Unknown or uninitialised column: `state`.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Proceeding with last name predictions...</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ All local files already up-to-date!</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>me <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">surname =</span> <span class="st">"Rundel"</span>)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> me, <span class="at">surname.only =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  surname  pred.whi pred.bla pred.his pred.asi   pred.oth
 1  Rundel 0.9177967        0        0        0 0.08220329</code></pre>

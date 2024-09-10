@@ -796,16 +796,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb17-5"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
 <span id="cb17-6"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">fct_recode</span>(membership_status, <span class="at">Closed =</span> <span class="st">"NA"</span>, <span class="at">Open =</span> <span class="st">"Select ... to register for this group"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb17-7"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-8"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: There was 1 warning in `mutate()`.
-ℹ In argument: `membership_status = fct_recode(membership_status, Closed = "NA", Open =
-  "Select ... to register for this group")`.
-Caused by warning:
-! Unknown levels in `f`: NA, Select ... to register for this group</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
-<span id="cb19-2"><a></a>clubs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-8"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb17-9"><a></a></span>
+<span id="cb17-10"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
+<span id="cb17-11"><a></a>clubs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 2
    membership_status                                                                  club
@@ -836,32 +830,32 @@ Caused by warning:
 </div>
 <blockquote>
 <p>Certainly! If the text “Select … to register for this group” varies for each group, you can use the <code>str_detect</code> function from the <code>stringr</code> package to identify those cases. Here’s a tidyverse-based solution:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb21-2"><a></a><span class="fu">library</span>(stringr)</span>
-<span id="cb21-3"><a></a></span>
-<span id="cb21-4"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
-<span id="cb21-5"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
-<span id="cb21-6"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(membership_status, <span class="st">"Select .* to register for this group"</span>), <span class="st">"Open"</span>, <span class="st">"Closed"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb21-7"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
-<span id="cb21-8"><a></a></span>
-<span id="cb21-9"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
-<span id="cb21-10"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb19-2"><a></a><span class="fu">library</span>(stringr)</span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
+<span id="cb19-5"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
+<span id="cb19-6"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(membership_status, <span class="st">"Select .* to register for this group"</span>), <span class="st">"Open"</span>, <span class="st">"Closed"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb19-7"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb19-8"><a></a></span>
+<span id="cb19-9"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
+<span id="cb19-10"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This code uses <code>str_detect</code> to check if the <code>membership_status</code> contains the pattern “Select … to register for this group”. If it does, it sets the status to “Open”; otherwise, it sets it to “Closed”. Make sure to replace ‘clubs’ with the actual name of your dataset.</p>
 </blockquote>
 </section>
 <section id="chat-gpt---take-4-code" class="slide level2 smaller">
 <h2>Chat GPT - Take 4 code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb22-2"><a></a><span class="fu">library</span>(stringr)</span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
-<span id="cb22-5"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
-<span id="cb22-6"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(membership_status, <span class="st">"Select .* to register for this group"</span>), <span class="st">"Open"</span>, <span class="st">"Closed"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb22-7"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
-<span id="cb22-8"><a></a></span>
-<span id="cb22-9"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
-<span id="cb22-10"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb20-2"><a></a><span class="fu">library</span>(stringr)</span>
+<span id="cb20-3"><a></a></span>
+<span id="cb20-4"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
+<span id="cb20-5"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(membership_status, <span class="st">"Select .* to register for this group"</span>), <span class="st">"Open"</span>, <span class="st">"Closed"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb20-7"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb20-8"><a></a></span>
+<span id="cb20-9"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
+<span id="cb20-10"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 2
    membership_status  club
@@ -895,30 +889,30 @@ Caused by warning:
 </div>
 <blockquote>
 <p>Certainly! My apologies for the confusion. Here’s a tidyverse-based solution that recodes the membership status and moves it to be the first column using the <code>dplyr</code> package:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb24-2"><a></a></span>
-<span id="cb24-3"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
-<span id="cb24-4"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
-<span id="cb24-5"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb24-6"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
-<span id="cb24-7"><a></a></span>
-<span id="cb24-8"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
-<span id="cb24-9"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb22-2"><a></a></span>
+<span id="cb22-3"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
+<span id="cb22-4"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb22-7"><a></a></span>
+<span id="cb22-8"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
+<span id="cb22-9"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This code uses the <code>mutate</code> function to recode <code>membership_status</code> as “Closed” if it’s NA and “Open” otherwise. Then, the <code>relocate</code> function is used to move <code>membership_status</code> to be the first column in the dataset. Make sure to replace ‘clubs’ with the actual name of your dataset.</p>
 </blockquote>
 </section>
 <section id="chat-gpt---take-5-code" class="slide level2 xsmall">
 <h2>Chat GPT - Take 5 code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb25-2"><a></a></span>
-<span id="cb25-3"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
-<span id="cb25-4"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
-<span id="cb25-5"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb25-6"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
-<span id="cb25-7"><a></a></span>
-<span id="cb25-8"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
-<span id="cb25-9"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb23-2"><a></a></span>
+<span id="cb23-3"><a></a><span class="co"># Assuming your dataset is named 'clubs'</span></span>
+<span id="cb23-4"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">%&gt;%</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">relocate</span>(membership_status, <span class="at">.before =</span> <span class="dv">1</span>)</span>
+<span id="cb23-7"><a></a></span>
+<span id="cb23-8"><a></a><span class="co"># Display the first 10 rows of the dataset</span></span>
+<span id="cb23-9"><a></a><span class="fu">head</span>(clubs, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 2
    membership_status  club
@@ -939,8 +933,8 @@ Caused by warning:
 <section id="chat-gpt---take-5-code-edit" class="slide level2 smaller">
 <h2>Chat GPT - Take 5 code + edit</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>clubs <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>clubs <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 21 × 2
     club membership_status
@@ -962,9 +956,9 @@ Caused by warning:
 <section id="chat-gpt---take-5-code-edit-1" class="slide level2 smaller">
 <h2>Chat GPT - Take 5 code + edit</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>clubs <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb29-3"><a></a>  <span class="fu">relocate</span>(membership_status)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>clubs <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a></a>  <span class="fu">relocate</span>(membership_status)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 21 × 2
    membership_status  club
@@ -986,11 +980,11 @@ Caused by warning:
 <section id="chat-gpt---take-5-code-edit-2" class="slide level2 smaller">
 <h2>Chat GPT - Take 5 code + edit</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb31-3"><a></a>  <span class="fu">relocate</span>(membership_status)</span>
-<span id="cb31-4"><a></a></span>
-<span id="cb31-5"><a></a>clubs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>clubs <span class="ot">&lt;-</span> clubs <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a></a>  <span class="fu">mutate</span>(<span class="at">membership_status =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(membership_status), <span class="st">"Closed"</span>, <span class="st">"Open"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb29-3"><a></a>  <span class="fu">relocate</span>(membership_status)</span>
+<span id="cb29-4"><a></a></span>
+<span id="cb29-5"><a></a>clubs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 21 × 2
    membership_status  club
@@ -1025,14 +1019,14 @@ Caused by warning:
 <h2>Chat GPT - Take 1 response</h2>
 <blockquote>
 <p>Certainly! To filter the <code>tv</code> data frame to include only titles from the CSI-verse, you can use the <code>filter</code> function from the <code>dplyr</code> package. Here’s the code:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb33-2"><a></a></span>
-<span id="cb33-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
-<span id="cb33-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
-<span id="cb33-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb33-6"><a></a></span>
-<span id="cb33-7"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
-<span id="cb33-8"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb31-2"><a></a></span>
+<span id="cb31-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
+<span id="cb31-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
+<span id="cb31-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb31-6"><a></a></span>
+<span id="cb31-7"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
+<span id="cb31-8"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This code uses the <code>filter</code> function to select rows where the <code>title</code> column contains the string “CSI” (case-insensitive). The resulting data frame, <code>csi</code>, will include only titles from the CSI-verse along with all the columns from the original <code>tv</code> data frame. Make sure to replace ‘tv’ with the actual name of your dataset.</p>
 </blockquote>
 </section>
@@ -1042,22 +1036,22 @@ Caused by warning:
 <p>What is wrong with the following code?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>tv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/tv.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>tv <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/tv.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb35-2"><a></a></span>
-<span id="cb35-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
-<span id="cb35-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
-<span id="cb35-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb33-2"><a></a></span>
+<span id="cb33-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
+<span id="cb33-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
+<span id="cb33-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `filter()`:
 ℹ In argument: `str_detect(title, "CSI", case_insensitive = TRUE)`.
 Caused by error in `str_detect()`:
 ! unused argument (case_insensitive = TRUE)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
-<span id="cb37-2"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
+<span id="cb35-2"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in eval(expr, envir, enclos): object 'csi' not found</code></pre>
 </div>
@@ -1073,33 +1067,33 @@ Caused by error in `str_detect()`:
 <h2>Chat GPT - Take 2 response</h2>
 <blockquote>
 <p>You are correct, and I appreciate your understanding. The <code>str_detect</code> function itself doesn’t have a <code>case_insensitive</code> argument. Instead, you can use the <code>str_which</code> function along with the <code>case_insensitive</code> argument in the <code>filter</code> function. Here’s the corrected code:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb39-2"><a></a></span>
-<span id="cb39-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
-<span id="cb39-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
-<span id="cb39-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb39-6"><a></a></span>
-<span id="cb39-7"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
-<span id="cb39-8"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb37-2"><a></a></span>
+<span id="cb37-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
+<span id="cb37-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
+<span id="cb37-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb37-6"><a></a></span>
+<span id="cb37-7"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
+<span id="cb37-8"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This code uses <code>str_detect</code> within the <code>filter</code> function and includes the <code>ignore_case = TRUE</code> argument to perform a case-insensitive search. The resulting <code>csi</code> data frame will contain only titles from the CSI-verse along with all the columns from the original <code>tv</code> data frame. Make sure to replace ‘tv’ with the actual name of your dataset.</p>
 </blockquote>
 </section>
 <section id="chat-gpt---take-2-code-1" class="slide level2 smaller">
 <h2>Chat GPT - Take 2 code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb40-2"><a></a></span>
-<span id="cb40-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
-<span id="cb40-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
-<span id="cb40-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb38-2"><a></a></span>
+<span id="cb38-3"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
+<span id="cb38-4"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
+<span id="cb38-5"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `filter()`:
 ℹ In argument: `str_detect(title, "CSI", ignore_case = TRUE)`.
 Caused by error in `str_detect()`:
 ! unused argument (ignore_case = TRUE)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
-<span id="cb42-2"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
+<span id="cb40-2"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in eval(expr, envir, enclos): object 'csi' not found</code></pre>
 </div>
@@ -1115,15 +1109,15 @@ Caused by error in `str_detect()`:
 <h2>Chat GPT - Take 3 response</h2>
 <blockquote>
 <p>I apologize for the oversight. It seems there was a mistake in my responses. To perform a case-insensitive search, you can use the <code>stringi</code> package along with <code>stri_detect_regex</code>. Here’s the corrected code:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb44-2"><a></a><span class="fu">library</span>(stringi)</span>
-<span id="cb44-3"><a></a></span>
-<span id="cb44-4"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
-<span id="cb44-5"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
-<span id="cb44-6"><a></a>  <span class="fu">filter</span>(<span class="fu">stri_detect_regex</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb44-7"><a></a></span>
-<span id="cb44-8"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
-<span id="cb44-9"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb42-2"><a></a><span class="fu">library</span>(stringi)</span>
+<span id="cb42-3"><a></a></span>
+<span id="cb42-4"><a></a><span class="co"># Assuming your dataset is named 'tv'</span></span>
+<span id="cb42-5"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">%&gt;%</span></span>
+<span id="cb42-6"><a></a>  <span class="fu">filter</span>(<span class="fu">stri_detect_regex</span>(title, <span class="st">"CSI"</span>, <span class="at">case_insensitive =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb42-7"><a></a></span>
+<span id="cb42-8"><a></a><span class="co"># Display the first 10 rows of the 'csi' data frame</span></span>
+<span id="cb42-9"><a></a><span class="fu">head</span>(csi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This code uses <code>stri_detect_regex</code> from the <code>stringi</code> package within the <code>filter</code> function, and it includes the <code>case_insensitive = TRUE</code> argument for a case-insensitive search. The resulting <code>csi</code> data frame will contain only titles from the CSI-verse along with all the columns from the original <code>tv</code> data frame. Make sure to replace ‘tv’ with the actual name of your dataset.</p>
 </blockquote>
 </section>
@@ -1131,8 +1125,8 @@ Caused by error in `str_detect()`:
 <h2>Let’s go back to Take 1</h2>
 <p>and edit it a bit:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>tv <span class="sc">|&gt;</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>tv <span class="sc">|&gt;</span></span>
+<span id="cb43-2"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 36 × 9
    season title                         year month   day av_rating genre_1 genre_2 genre_3
@@ -1154,10 +1148,10 @@ Caused by error in `str_detect()`:
 <section id="lets-go-back-to-take-1-1" class="slide level2 smaller">
 <h2>Let’s go back to Take 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>))</span>
-<span id="cb47-3"><a></a></span>
-<span id="cb47-4"><a></a>csi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>csi <span class="ot">&lt;-</span> tv <span class="sc">|&gt;</span></span>
+<span id="cb45-2"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"CSI"</span>))</span>
+<span id="cb45-3"><a></a></span>
+<span id="cb45-4"><a></a>csi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 36 × 9
    season title                         year month   day av_rating genre_1 genre_2 genre_3
