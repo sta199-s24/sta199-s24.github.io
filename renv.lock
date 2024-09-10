@@ -2600,6 +2600,19 @@
       ],
       "Hash": "213b6b8ed5afbf934843e6c3b090d418"
     },
+    "textdata": {
+      "Package": "textdata",
+      "Version": "0.4.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "fs",
+        "rappdirs",
+        "readr",
+        "tibble"
+      ],
+      "Hash": "305692af81f26a98600e68d84a90f06f"
+    },
     "textshaping": {
       "Package": "textshaping",
       "Version": "0.4.0",

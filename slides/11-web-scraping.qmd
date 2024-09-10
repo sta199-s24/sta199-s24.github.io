@@ -17,6 +17,7 @@ library(countdown)
 library(tidyverse)
 library(ggthemes)
 library(tidytext)
+library(textdata)
 ggplot2::theme_set(theme_gray(base_size = 16))
 ```
 
